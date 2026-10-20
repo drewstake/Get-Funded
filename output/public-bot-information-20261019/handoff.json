@@ -1,0 +1,54 @@
+{
+  "Status": "Strategy source stable; combined installation owned by Check bot stats for anomalies chat",
+  "Changes": [
+    "Shared executable public quotes",
+    "All seven trading types independent of private fair value",
+    "Maker and Reserve retain internal value",
+    "V21 idempotent adoption preserves economic state and exits"
+  ],
+  "OfflineTests": 147,
+  "OfflineFailures": 0,
+  "SourceManifest": "output/public-bot-information-20261019/candidate-manifest.json",
+  "NativeTests": "output/public-bot-information-20261019/studio-tests.json",
+  "Installed": false,
+  "Published": false,
+  "Note": "Studio preflight revealed older V19 sources; originals were backed up. No installed modules or datastores were mutated. BotRefreshTests checkpoint assertion was updated from 20 to 21.",
+  "NativeTestsPassed": 34,
+  "NativeFailures": 0,
+  "SourceChangesSinceValidation": [],
+  "OneHourSmokeTest": {
+    "Seed": 19381,
+    "Seconds": 3600,
+    "TwoSidedFraction": 1,
+    "Audit": {
+      "CashError": 0,
+      "EquityError": -4.6435161493718624e-08,
+      "Hash": 328068715,
+      "Inventory": {
+        "BG": 0,
+        "BT": 0,
+        "BX": 0
+      },
+      "Trades": 11402,
+      "Volume": 23035
+    },
+    "Elapsed": 104.86244820000138,
+    "Liquidity": {
+      "Bots": 72,
+      "ClosedContracts": 3416,
+      "Closes": 1723,
+      "Depleted": 0,
+      "FillContracts": 6943,
+      "Losses": 1510,
+      "MinReturn": -0.1129666666666686,
+      "Negative": 72,
+      "PassiveContracts": 4887,
+      "Paused": 0,
+      "Pnl": -579972.4999999958,
+      "Positive": 0,
+      "UnprotectedSamples": 2,
+      "Wins": 180
+    }
+  },
+  "LiquidityTuningOwner": "Check bot stats for anomalies; current follow-up tuning is separate from this validated source manifest"
+}

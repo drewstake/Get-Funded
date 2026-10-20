@@ -1,0 +1,27 @@
+[
+  {
+    "Bytes": 949,
+    "Matches": true,
+    "Name": "NumberInput"
+  },
+  {
+    "Bytes": 2419,
+    "Matches": true,
+    "Name": "TradeProtection"
+  },
+  {
+    "Bytes": 148489,
+    "Matches": true,
+    "Name": "TerminalUI"
+  },
+  {
+    "Bytes": 47784,
+    "Matches": true,
+    "Name": "MarketEngine"
+  },
+  {
+    "Bytes": 4100,
+    "Matches": true,
+    "Name": "AmountInputTests"
+  }
+]

@@ -1,0 +1,754 @@
+{
+  "Books": {
+    "BT": {
+      "BidLevels": 10,
+      "Last": 18703.75,
+      "Fair": 18703.75,
+      "Orders": 165,
+      "AskLevels": 9
+    },
+    "BX": {
+      "BidLevels": 19,
+      "Last": 5230.25,
+      "Fair": 5194.75,
+      "Orders": 79,
+      "AskLevels": 2
+    },
+    "YM": {
+      "BidLevels": 2,
+      "Last": 39729,
+      "Fair": 39024,
+      "Orders": 4,
+      "AskLevels": 2
+    },
+    "BG": {
+      "BidLevels": 13,
+      "Last": 2140.8,
+      "Fair": 2140.6,
+      "Orders": 158,
+      "AskLevels": 9
+    },
+    "MNQ": {
+      "BidLevels": 5,
+      "Last": 18348.5,
+      "Fair": 18348,
+      "Orders": 18,
+      "AskLevels": 3
+    },
+    "RTY": {
+      "BidLevels": 5,
+      "Last": 2106,
+      "Fair": 2106.2000000000003,
+      "Orders": 21,
+      "AskLevels": 3
+    },
+    "MES": {
+      "BidLevels": 8,
+      "Last": 5411.75,
+      "Fair": 5411.25,
+      "Orders": 28,
+      "AskLevels": 8
+    },
+    "MYM": {
+      "BidLevels": 7,
+      "Last": 36402,
+      "Fair": 36399,
+      "Orders": 31,
+      "AskLevels": 7
+    },
+    "M2K": {
+      "BidLevels": 9,
+      "Last": 2193.4,
+      "Fair": 2193.7000000000003,
+      "Orders": 51,
+      "AskLevels": 10
+    }
+  },
+  "ReadAt": 1792040509,
+  "TopBots": [
+    {
+      "Id": "bot:BX:Momentum:12",
+      "Calls": 267
+    },
+    {
+      "Id": "bot:BX:Liquidity:16",
+      "Calls": 264
+    },
+    {
+      "Id": "bot:BX:Liquidity:20",
+      "Calls": 262
+    },
+    {
+      "Id": "bot:ES:Liquidity:10",
+      "Calls": 261
+    },
+    {
+      "Id": "bot:BX:Liquidity:24",
+      "Calls": 260
+    },
+    {
+      "Id": "bot:BX:Momentum:7",
+      "Calls": 260
+    },
+    {
+      "Id": "bot:BX:Liquidity:21",
+      "Calls": 259
+    },
+    {
+      "Id": "bot:ES:Liquidity:5",
+      "Calls": 259
+    },
+    {
+      "Id": "bot:BX:Liquidity:23",
+      "Calls": 259
+    },
+    {
+      "Id": "bot:ES:Liquidity:14",
+      "Calls": 258
+    },
+    {
+      "Id": "bot:ES:Liquidity:6",
+      "Calls": 258
+    },
+    {
+      "Id": "bot:BX:Momentum:11",
+      "Calls": 258
+    }
+  ],
+  "WallSeconds": 6.288623700034805,
+  "Success": true,
+  "TriggeredPositions": {
+    "BX:Protective:Stop loss": 3,
+    "BG:Value:Take profit": 4,
+    "BX:Protective:Take profit": 1,
+    "BX:Value:Margin liquidation": 1,
+    "BX:Value:Stop loss": 8,
+    "BX:Scalper:Stop loss": 14,
+    "BX:Value:Take profit": 1,
+    "BX:Reversion:Take profit": 2,
+    "BX:Reversion:Stop loss": 6,
+    "BX:Whale:Stop loss": 1,
+    "BX:Maker:Margin liquidation": 3,
+    "BX:Liquidity:Stop loss": 15,
+    "MYM:Momentum:Take profit": 1,
+    "BX:Momentum:Stop loss": 4
+  },
+  "Restored": true,
+  "PendingStops": 0,
+  "Groups": [
+    {
+      "Key": "BX:Liquidity:Stop loss",
+      "Calls": 3884,
+      "Statuses": {
+        "No liquidity": 3858,
+        "Working": 26
+      },
+      "FilledContracts": 0,
+      "ZeroFills": 3884,
+      "Rejected": 0
+    },
+    {
+      "Key": "BX:Scalper:Stop loss",
+      "Calls": 3584,
+      "Statuses": {
+        "No liquidity": 3584
+      },
+      "FilledContracts": 0,
+      "ZeroFills": 3584,
+      "Rejected": 0
+    },
+    {
+      "Key": "BX:Value:Stop loss",
+      "Calls": 2048,
+      "Statuses": {
+        "No liquidity": 2048
+      },
+      "FilledContracts": 0,
+      "ZeroFills": 2048,
+      "Rejected": 0
+    },
+    {
+      "Key": "BX:Reversion:Stop loss",
+      "Calls": 1536,
+      "Statuses": {
+        "No liquidity": 1536
+      },
+      "FilledContracts": 0,
+      "ZeroFills": 1536,
+      "Rejected": 0
+    },
+    {
+      "Key": "BX:Momentum:Stop loss",
+      "Calls": 1041,
+      "Statuses": {
+        "Partial / IOC": 5,
+        "No liquidity": 1027,
+        "Working": 9
+      },
+      "FilledContracts": 5,
+      "ZeroFills": 1036,
+      "Rejected": 0
+    },
+    {
+      "Key": "BX:Maker:Margin liquidation",
+      "Calls": 770,
+      "Statuses": {
+        "No liquidity": 770
+      },
+      "FilledContracts": 0,
+      "ZeroFills": 770,
+      "Rejected": 0
+    },
+    {
+      "Key": "BX:Protective:Stop loss",
+      "Calls": 768,
+      "Statuses": {
+        "No liquidity": 768
+      },
+      "FilledContracts": 0,
+      "ZeroFills": 768,
+      "Rejected": 0
+    },
+    {
+      "Key": "BX:Value:Margin liquidation",
+      "Calls": 256,
+      "Statuses": {
+        "No liquidity": 256
+      },
+      "FilledContracts": 0,
+      "ZeroFills": 256,
+      "Rejected": 0
+    },
+    {
+      "Key": "BX:Whale:Stop loss",
+      "Calls": 256,
+      "Statuses": {
+        "No liquidity": 256
+      },
+      "FilledContracts": 0,
+      "ZeroFills": 256,
+      "Rejected": 0
+    },
+    {
+      "Key": "BT:Maker:Ordinary",
+      "Calls": 150,
+      "Statuses": {
+        "Filled": 20,
+        "Working": 130
+      },
+      "FilledContracts": 164,
+      "ZeroFills": 130,
+      "Rejected": 0
+    },
+    {
+      "Key": "BX:Maker:Ordinary",
+      "Calls": 140,
+      "Statuses": {
+        "No liquidity": 11,
+        "Working": 129
+      },
+      "FilledContracts": 0,
+      "ZeroFills": 140,
+      "Rejected": 0
+    },
+    {
+      "Key": "BG:Maker:Ordinary",
+      "Calls": 98,
+      "Statuses": {
+        "Filled": 1,
+        "Working": 97
+      },
+      "FilledContracts": 15,
+      "ZeroFills": 97,
+      "Rejected": 0
+    },
+    {
+      "Key": "BT:Reserve:Ordinary",
+      "Calls": 73,
+      "Statuses": {
+        "Working": 73
+      },
+      "FilledContracts": 0,
+      "ZeroFills": 73,
+      "Rejected": 0
+    },
+    {
+      "Key": "MNQ:Maker:Ordinary",
+      "Calls": 60,
+      "Statuses": {
+        "Filled": 10,
+        "Working": 50
+      },
+      "FilledContracts": 116,
+      "ZeroFills": 48,
+      "Rejected": 0
+    },
+    {
+      "Key": "BT:Liquidity:Ordinary",
+      "Calls": 59,
+      "Statuses": {
+        "Filled": 36,
+        "Working": 23
+      },
+      "FilledContracts": 65,
+      "ZeroFills": 23,
+      "Rejected": 0
+    },
+    {
+      "Key": "M2K:Value:Ordinary",
+      "Calls": 55,
+      "Statuses": {
+        "Filled": 25,
+        "Working": 30
+      },
+      "FilledContracts": 63,
+      "ZeroFills": 30,
+      "Rejected": 0
+    },
+    {
+      "Key": "BG:Reserve:Ordinary",
+      "Calls": 54,
+      "Statuses": {
+        "Working": 54
+      },
+      "FilledContracts": 0,
+      "ZeroFills": 54,
+      "Rejected": 0
+    },
+    {
+      "Key": "YM:Momentum:Ordinary",
+      "Calls": 52,
+      "Statuses": {
+        "Filled": 9,
+        "Partial / IOC": 4,
+        "No liquidity": 15,
+        "Working": 24
+      },
+      "FilledContracts": 29,
+      "ZeroFills": 39,
+      "Rejected": 0
+    },
+    {
+      "Key": "BG:Liquidity:Ordinary",
+      "Calls": 52,
+      "Statuses": {
+        "Filled": 24,
+        "Working": 28
+      },
+      "FilledContracts": 42,
+      "ZeroFills": 28,
+      "Rejected": 0
+    },
+    {
+      "Key": "M2K:Maker:Ordinary",
+      "Calls": 49,
+      "Statuses": {
+        "Filled": 6,
+        "Working": 43
+      },
+      "FilledContracts": 73,
+      "ZeroFills": 43,
+      "Rejected": 0
+    },
+    {
+      "Key": "MES:Momentum:Ordinary",
+      "Calls": 48,
+      "Statuses": {
+        "Filled": 26,
+        "Working": 22
+      },
+      "FilledContracts": 32,
+      "ZeroFills": 22,
+      "Rejected": 0
+    },
+    {
+      "Key": "MYM:Maker:Ordinary",
+      "Calls": 45,
+      "Statuses": {
+        "Working": 45
+      },
+      "FilledContracts": 0,
+      "ZeroFills": 45,
+      "Rejected": 0
+    },
+    {
+      "Key": "MNQ:Momentum:Ordinary",
+      "Calls": 32,
+      "Statuses": {
+        "Filled": 14,
+        "Working": 18
+      },
+      "FilledContracts": 21,
+      "ZeroFills": 18,
+      "Rejected": 0
+    },
+    {
+      "Key": "BT:Reversion:Ordinary",
+      "Calls": 31,
+      "Statuses": {
+        "Filled": 21,
+        "Working": 10
+      },
+      "FilledContracts": 32,
+      "ZeroFills": 10,
+      "Rejected": 0
+    },
+    {
+      "Key": "BG:Momentum:Ordinary",
+      "Calls": 30,
+      "Statuses": {
+        "Filled": 18,
+        "Working": 12
+      },
+      "FilledContracts": 29,
+      "ZeroFills": 12,
+      "Rejected": 0
+    },
+    {
+      "Key": "BX:Reserve:Ordinary",
+      "Calls": 30,
+      "Statuses": {
+        "Working": 30
+      },
+      "FilledContracts": 0,
+      "ZeroFills": 30,
+      "Rejected": 0
+    },
+    {
+      "Key": "MYM:Momentum:Ordinary",
+      "Calls": 30,
+      "Statuses": {
+        "Filled": 14,
+        "Working": 16
+      },
+      "FilledContracts": 30,
+      "ZeroFills": 16,
+      "Rejected": 0
+    },
+    {
+      "Key": "M2K:Protective:Ordinary",
+      "Calls": 30,
+      "Statuses": {
+        "Filled": 11,
+        "Working": 19
+      },
+      "FilledContracts": 16,
+      "ZeroFills": 19,
+      "Rejected": 0
+    },
+    {
+      "Key": "M2K:Momentum:Ordinary",
+      "Calls": 29,
+      "Statuses": {
+        "Filled": 13,
+        "Working": 16
+      },
+      "FilledContracts": 18,
+      "ZeroFills": 16,
+      "Rejected": 0
+    },
+    {
+      "Key": "M2K:Liquidity:Ordinary",
+      "Calls": 29,
+      "Statuses": {
+        "Filled": 12,
+        "Working": 17
+      },
+      "FilledContracts": 19,
+      "ZeroFills": 17,
+      "Rejected": 0
+    },
+    {
+      "Key": "BX:Momentum:Ordinary",
+      "Calls": 27,
+      "Statuses": {
+        "Filled": 1,
+        "No liquidity": 9,
+        "Working": 17
+      },
+      "FilledContracts": 2,
+      "ZeroFills": 26,
+      "Rejected": 0
+    },
+    {
+      "Key": "MYM:Liquidity:Ordinary",
+      "Calls": 26,
+      "Statuses": {
+        "Filled": 13,
+        "Working": 13
+      },
+      "FilledContracts": 15,
+      "ZeroFills": 13,
+      "Rejected": 0
+    },
+    {
+      "Key": "BT:Value:Ordinary",
+      "Calls": 26,
+      "Statuses": {
+        "Filled": 7,
+        "Working": 19
+      },
+      "FilledContracts": 12,
+      "ZeroFills": 19,
+      "Rejected": 0
+    },
+    {
+      "Key": "BT:Momentum:Ordinary",
+      "Calls": 26,
+      "Statuses": {
+        "Filled": 15,
+        "Working": 11
+      },
+      "FilledContracts": 27,
+      "ZeroFills": 11,
+      "Rejected": 0
+    },
+    {
+      "Key": "BX:Liquidity:Ordinary",
+      "Calls": 23,
+      "Statuses": {
+        "No liquidity": 4,
+        "Working": 19
+      },
+      "FilledContracts": 0,
+      "ZeroFills": 23,
+      "Rejected": 0
+    },
+    {
+      "Key": "MES:Maker:Ordinary",
+      "Calls": 22,
+      "Statuses": {
+        "Working": 22
+      },
+      "FilledContracts": 0,
+      "ZeroFills": 22,
+      "Rejected": 0
+    },
+    {
+      "Key": "BG:Protective:Ordinary",
+      "Calls": 17,
+      "Statuses": {
+        "Filled": 6,
+        "Working": 11
+      },
+      "FilledContracts": 18,
+      "ZeroFills": 11,
+      "Rejected": 0
+    },
+    {
+      "Key": "BG:Reversion:Ordinary",
+      "Calls": 16,
+      "Statuses": {
+        "Filled": 9,
+        "Working": 7
+      },
+      "FilledContracts": 15,
+      "ZeroFills": 7,
+      "Rejected": 0
+    },
+    {
+      "Key": "BT:Protective:Ordinary",
+      "Calls": 15,
+      "Statuses": {
+        "Filled": 9,
+        "Working": 6
+      },
+      "FilledContracts": 10,
+      "ZeroFills": 6,
+      "Rejected": 0
+    },
+    {
+      "Key": "BX:Whale:Ordinary",
+      "Calls": 12,
+      "Statuses": {
+        "Filled": 6,
+        "No liquidity": 5,
+        "Working": 1
+      },
+      "FilledContracts": 50,
+      "ZeroFills": 6,
+      "Rejected": 0
+    },
+    {
+      "Key": "MYM:Whale:Ordinary",
+      "Calls": 11,
+      "Statuses": {
+        "Filled": 9,
+        "Working": 2
+      },
+      "FilledContracts": 68,
+      "ZeroFills": 2,
+      "Rejected": 0
+    },
+    {
+      "Key": "M2K:Whale:Ordinary",
+      "Calls": 11,
+      "Statuses": {
+        "Filled": 9,
+        "Working": 2
+      },
+      "FilledContracts": 46,
+      "ZeroFills": 2,
+      "Rejected": 0
+    },
+    {
+      "Key": "MNQ:Whale:Ordinary",
+      "Calls": 9,
+      "Statuses": {
+        "Filled": 7,
+        "Working": 2
+      },
+      "FilledContracts": 33,
+      "ZeroFills": 2,
+      "Rejected": 0
+    },
+    {
+      "Key": "BG:Value:Ordinary",
+      "Calls": 7,
+      "Statuses": {
+        "Filled": 1,
+        "Working": 6
+      },
+      "FilledContracts": 1,
+      "ZeroFills": 6,
+      "Rejected": 0
+    },
+    {
+      "Key": "RTY:Maker:Ordinary",
+      "Calls": 7,
+      "Statuses": {
+        "Working": 7
+      },
+      "FilledContracts": 0,
+      "ZeroFills": 7,
+      "Rejected": 0
+    },
+    {
+      "Key": "BT:Whale:Ordinary",
+      "Calls": 7,
+      "Statuses": {
+        "Filled": 5,
+        "Working": 2
+      },
+      "FilledContracts": 45,
+      "ZeroFills": 2,
+      "Rejected": 0
+    },
+    {
+      "Key": "MES:Liquidity:Ordinary",
+      "Calls": 6,
+      "Statuses": {
+        "Working": 6
+      },
+      "FilledContracts": 0,
+      "ZeroFills": 6,
+      "Rejected": 0
+    },
+    {
+      "Key": "RTY:Momentum:Ordinary",
+      "Calls": 6,
+      "Statuses": {
+        "Filled": 2,
+        "Working": 4
+      },
+      "FilledContracts": 2,
+      "ZeroFills": 4,
+      "Rejected": 0
+    },
+    {
+      "Key": "BG:Whale:Ordinary",
+      "Calls": 6,
+      "Statuses": {
+        "Filled": 5,
+        "Working": 1
+      },
+      "FilledContracts": 48,
+      "ZeroFills": 1,
+      "Rejected": 0
+    },
+    {
+      "Key": "MNQ:Protective:Ordinary",
+      "Calls": 5,
+      "Statuses": {
+        "Filled": 3,
+        "Working": 2
+      },
+      "FilledContracts": 7,
+      "ZeroFills": 2,
+      "Rejected": 0
+    },
+    {
+      "Key": "M2K:Reversion:Ordinary",
+      "Calls": 4,
+      "Statuses": {
+        "Filled": 2,
+        "Working": 2
+      },
+      "FilledContracts": 3,
+      "ZeroFills": 2,
+      "Rejected": 0
+    },
+    {
+      "Key": "BX:Reversion:Take profit",
+      "Calls": 4,
+      "Statuses": {
+        "Working": 4
+      },
+      "FilledContracts": 0,
+      "ZeroFills": 4,
+      "Rejected": 0
+    },
+    {
+      "Key": "MYM:Momentum:Take profit",
+      "Calls": 4,
+      "Statuses": {
+        "Filled": 1,
+        "Working": 3
+      },
+      "FilledContracts": 1,
+      "ZeroFills": 3,
+      "Rejected": 0
+    },
+    {
+      "Key": "MYM:Value:Ordinary",
+      "Calls": 3,
+      "Statuses": {
+        "Working": 3
+      },
+      "FilledContracts": 0,
+      "ZeroFills": 3,
+      "Rejected": 0
+    },
+    {
+      "Key": "BG:Value:Take profit",
+      "Calls": 1,
+      "Statuses": {
+        "Working": 1
+      },
+      "FilledContracts": 0,
+      "ZeroFills": 1,
+      "Rejected": 0
+    },
+    {
+      "Key": "BT:Reversion:Stop loss",
+      "Calls": 1,
+      "Statuses": {
+        "Filled": 1
+      },
+      "FilledContracts": 18,
+      "ZeroFills": 0,
+      "Rejected": 0
+    },
+    {
+      "Key": "BX:Value:Take profit",
+      "Calls": 1,
+      "Statuses": {
+        "Working": 1
+      },
+      "FilledContracts": 0,
+      "ZeroFills": 1,
+      "Rejected": 0
+    }
+  ],
+  "Note": "Read-only investigation of running Studio simulation. Temporary probes restored their wrappers and were removed. Profiling adds measurement overhead."
+}

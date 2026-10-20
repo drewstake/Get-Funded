@@ -1,0 +1,146 @@
+{
+  "ServerScriptService.MarketReign.BotFairnessTests": {
+    "File": "src/BotFairnessTests.luau",
+    "Hash": "f254ac66bfb5addc98d8e930c5a8b092d000664defa9195455b067bbda731ee5",
+    "ExpectedHash": false,
+    "ClassName": "ModuleScript"
+  },
+  "ServerScriptService.MarketReign.BotLiquidity": {
+    "File": "src/BotLiquidity.luau",
+    "Hash": "d0bb95793515cffd2f649e07be1ded12f03ed348ee6f3ca9a6fee9f6a2d702a1",
+    "ExpectedHash": false,
+    "ClassName": "ModuleScript"
+  },
+  "ServerScriptService.MarketReign.BotPopulationTests": {
+    "File": "src/BotPopulationTests.luau",
+    "Hash": "dedd7b987c3f0dc634f87a52f80772121ea1add2316474d3f5058c30d00b2f1c",
+    "ExpectedHash": "b482abeef1b8bca9c33bc652f24049e4e84f01537cb90fc85bf7371e69af5499",
+    "ClassName": "ModuleScript"
+  },
+  "ServerScriptService.MarketReign.BotPublicInformationTests": {
+    "File": "src/BotPublicInformationTests.luau",
+    "Hash": "7ca977e392b2f0dce2774016ee5e87c30e9d17ff351357f3a7d0dc8ee0751b39",
+    "ExpectedHash": false,
+    "ClassName": "ModuleScript"
+  },
+  "ServerScriptService.MarketReign.BotRefreshTests": {
+    "File": "src/BotRefreshTests.luau",
+    "Hash": "743f61ea93ac4101d3d0dcc0a86f826b1e2ace373e5f6527a511f523aa8a10b7",
+    "ExpectedHash": "e9b94775b25b493c9bc992843b95fa6322ecfe5ae2a88bedf46e659471e4df0b",
+    "ClassName": "ModuleScript"
+  },
+  "ServerScriptService.MarketReign.BotSignals": {
+    "File": "src/BotSignals.luau",
+    "Hash": "08bbfb0dc76db7fc2097f4219dbebccce738faaa65f932d6b9b756a71b3fc3a3",
+    "ExpectedHash": "c35794afe246d39486eec772a50da8b0d68ceb456b058e111627f8025c82de1c",
+    "ClassName": "ModuleScript"
+  },
+  "ServerScriptService.MarketReign.BotSignalsTests": {
+    "File": "src/BotSignalsTests.luau",
+    "Hash": "fb0b2d228a178dabdc9cff615e16f6749979369ef8a677fb5e105721bb4dc2fe",
+    "ExpectedHash": "03664ded512890765e50cf28648ce7d67bb93e0024eee4507e76875df4955bd4",
+    "ClassName": "ModuleScript"
+  },
+  "ServerScriptService.MarketReign.BotStatsTests": {
+    "File": "src/BotStatsTests.luau",
+    "Hash": "a959ccb874f67697850c6a255bd62c8572a14dd888c580e3063dea3cc2a630e2",
+    "ExpectedHash": "e868077e11f23143747f3ef4f3ee3ed9be7057c85154cda1a7ae6ebce919e931",
+    "ClassName": "ModuleScript"
+  },
+  "ServerScriptService.MarketReign.MakerLiquidityTests": {
+    "File": "src/MakerLiquidityTests.luau",
+    "Hash": "902f82ca4b0dc713d3f70b227c5c6e5a35f4626a54b1ae8899fa83e84e42376e",
+    "ExpectedHash": "1c955067f4f1f15d40f89cccdc1c4d5c501c59d77b42e0b9a0753fbe969a531d",
+    "ClassName": "ModuleScript"
+  },
+  "ReplicatedStorage.MarketReign.MarketConfig": {
+    "File": "src/MarketConfig.luau",
+    "Hash": "b42d2b9ee547de6d19fb642f204de4a685677de4e35fa1ce995c2300cfa4a9f1",
+    "ExpectedHash": "e469c046fd60fbf416dfb1079b6167ca9a9f9649f96be714e2afc39ec8b0ee8f",
+    "ClassName": "ModuleScript"
+  },
+  "ServerScriptService.MarketReign.MarketEngine": {
+    "File": "src/MarketEngine.luau",
+    "Hash": "5501907a618c07c249f1dc2b5b23fd27e5579e8ec55610c82684e5237848105e",
+    "ExpectedHash": "f5a25d6fb3f7241cb5a48e21da97048320703af787c52e972a4b5ed894338f4c",
+    "ClassName": "ModuleScript"
+  },
+  "ServerScriptService.MarketReign.Participants": {
+    "File": "src/Participants.luau",
+    "Hash": "c657626f69a22d0d09d02083a3cb7ca1973cefea28e0e242520e4c88773353f7",
+    "ExpectedHash": "b9677f43e8c45881910670bd3bdbcdce925a69698b6f4555373df12ce53b6423",
+    "ClassName": "ModuleScript"
+  },
+  "ServerScriptService.MarketReign.WorldCheckpoint": {
+    "File": "src/WorldCheckpoint.luau",
+    "Hash": "41b77681840588f33e7679998a277747f2942d73f8c6aa5cbdc9a81f4d04b6bf",
+    "ExpectedHash": "1da1e5ca4b957c0ee5c7f52c0a7dc743e682124dd82bdef82e430485f49a6427",
+    "ClassName": "ModuleScript"
+  },
+  "ServerScriptService.MarketReign.PlayerExecution": {
+    "File": "src/PlayerExecution.luau",
+    "Hash": "61cf77a95458f2b0b7a40ecfb7e58c6ef4f866f9943e9f4c0940a682867c8298",
+    "ExpectedHash": "6c9be5f007f93d0151980fd497aa6bd705f30ff8c8164a8be354b37eedc6bfb3",
+    "ClassName": "ModuleScript"
+  },
+  "ServerScriptService.MarketReign.OrderFlowMarket": {
+    "File": "src/OrderFlowMarket.luau",
+    "Hash": "0e898051baf4ef0fa34fe2025d82cb4a995ff553728b911ad996ceb85cfc793f",
+    "ExpectedHash": false,
+    "ClassName": "ModuleScript"
+  },
+  "ServerScriptService.MarketReign.OrderFlowMarketTests": {
+    "File": "src/OrderFlowMarketTests.luau",
+    "Hash": "e96f06ace178aa07af10e7dd4b65a59828e1e0591cee21d80e9b718969cf2e33",
+    "ExpectedHash": false,
+    "ClassName": "ModuleScript"
+  },
+  "ReplicatedStorage.MarketReign.MarketEventBanner": {
+    "File": "src/MarketEventBanner.luau",
+    "Hash": "4e0cac482fe6eae7c6c915cb7505d76cb2b7c6eceee03da59ced402902cac0b3",
+    "ExpectedHash": "cdf97afbbd631363c64640dc7aad098e4b1a38c078ab34b79e0d11a70685067a",
+    "ClassName": "ModuleScript"
+  },
+  "ReplicatedStorage.MarketReign.TerminalUI": {
+    "File": "src/TerminalUI.luau",
+    "Hash": "043fb894bfa3dcf8e4beee91d278f377d44d0582ae011c73e5d380f020628fdb",
+    "ExpectedHash": "26b0300c033dda335c2e431c38e9a2249b537c63e9880d5e3492854ec8e8590c",
+    "ClassName": "ModuleScript"
+  },
+  "ServerScriptService.MarketReign.BotExitRetryTests": {
+    "File": "src/BotExitRetryTests.luau",
+    "Hash": "630a2244e20b9562a43c235da70b144fc37c2694b890d16dfbf825797d4ca07a",
+    "ExpectedHash": "0ed2886bb83d72896c0ed00cac636e46d62c993bf4b5d0f951343a6a0a19d86c",
+    "ClassName": "ModuleScript"
+  },
+  "ServerScriptService.MarketReign.ExecutionIntegrityTests": {
+    "File": "src/ExecutionIntegrityTests.luau",
+    "Hash": "d1ea00d525f7df7b4362fdbe72009b54763c00538821a388c07ff2cdb935021d",
+    "ExpectedHash": "7f8083569eb49238cbfb23a0711548e56e1d41f55438fd28c7e3afc83683a729",
+    "ClassName": "ModuleScript"
+  },
+  "ServerScriptService.MarketReign.SharedDepthTests": {
+    "File": "src/SharedDepthTests.luau",
+    "Hash": "bc3234cbdf77a7168b576d4fd44e75d8888e60f9a84d468404dcd3972042a61e",
+    "ExpectedHash": "3faf414539ec91f5deb436584f03c56348e7f8d3402f037194589d51055c05df",
+    "ClassName": "ModuleScript"
+  },
+  "ServerScriptService.MarketReign.MarketTests": {
+    "File": "src/MarketTests.luau",
+    "Hash": "042d469bd912d1d1813e89ff8cd4a537bc6015b65761a7dd56ad9a982fad54bc",
+    "ExpectedHash": "0f04694bf39ddd8149a2d3a18093088c0704f2e9e3e8893dae8a2c4e5960a660",
+    "ClassName": "ModuleScript"
+  },
+  "ServerScriptService.MarketReign.MarketServer": {
+    "File": "src/MarketServer.server.luau",
+    "Hash": "f1384f970bce7b67dcc00233cf5bafa15bf6db7bb5c6bc53c7b9ac7b838b4365",
+    "ExpectedHash": "f0fdac8fedad0f05dd13f83464aed9648296b96058005650149c4f4099302b97",
+    "ClassName": "Script"
+  },
+  "ServerScriptService.MarketReign.ProtectiveOrdersTests": {
+    "File": "src/ProtectiveOrdersTests.luau",
+    "Hash": "f9e328b467eace9ab32a507eef474cbb872e5f78567958d6f223af11b5600de5",
+    "ExpectedHash": "a578e31885793d47df7e804e398aab50e51ad1829f98e2f74345659c9cb48567",
+    "ClassName": "ModuleScript"
+  }
+}

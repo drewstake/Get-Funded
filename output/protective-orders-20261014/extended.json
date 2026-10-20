@@ -1,0 +1,783 @@
+{
+  "SecurityTests": [
+    {
+      "Passed": true,
+      "Name": "F3: reply queues stay bounded by count and age for clients that never subscribe",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "S1: missing liquidity never fabricates fills, balances, or round-trip profit",
+      "Detail": "Passed"
+    }
+  ],
+  "TradeLimitsTests": [
+    {
+      "Passed": true,
+      "Name": "$5K trading account long 5 BT with default protection",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$5K trading account short 5 BT with default protection",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Existing exposure, mixed instruments, pending orders and cancellation reserve total capacity",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Both directions reserve worst-case entries; reduce-only exits do not reserve new exposure",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Below $5K the five-contract minimum remains; $0 equity still stops new entries",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "BX wide stops allow entry and dragging; depletion still liquidates 1",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "BX wide stops allow entry and dragging; depletion still liquidates -1",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "BT wide stops allow entry and dragging; depletion still liquidates 1",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "BT wide stops allow entry and dragging; depletion still liquidates -1",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "BG wide stops allow entry and dragging; depletion still liquidates 1",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "BG wide stops allow entry and dragging; depletion still liquidates -1",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$5K BX long reaches exactly 5 contracts; the 6th is rejected",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$5K BX short reaches exactly 5 contracts; the 6th is rejected",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$5K BT long reaches exactly 5 contracts; the 6th is rejected",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$5K BT short reaches exactly 5 contracts; the 6th is rejected",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$5K BG long reaches exactly 5 contracts; the 6th is rejected",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$5K BG short reaches exactly 5 contracts; the 6th is rejected",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Stop entries validate side, tick, band and account; they arm off-book and reserve the cap",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "A stop triggers on the trade that reaches it, fills at market with SL/TP, and reports once",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": false,
+      "Name": "A triggered stop waits for executable liquidity and never fabricates a fill",
+      "Detail": "ServerStorage.ProtectiveOrderValidation.TradeLimitsTests:195: Empty book fabricated a fill"
+    },
+    {
+      "Passed": true,
+      "Name": "Triggered stops re-validate the balance-based cap after closed losses",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Armed stops survive a checkpoint round trip off-book and still trigger",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Waiting player limits execute against incoming quantity and re-check capacity",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": false,
+      "Name": "A marketable player limit consumes finite liquidity and rests its residual",
+      "Detail": "ServerStorage.ProtectiveOrderValidation.TradeLimitsTests:248: assertion failed!"
+    },
+    {
+      "Passed": true,
+      "Name": "Invalid, fractional, infinite and oversized remote quantities are rejected",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Saved old margins/caps adopt current policy without changing player progress or exposure",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Closed balance determines capacity at every $1K boundary, with a minimum of five",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$10000 allows 10 BX contracts on side 1",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$10000 allows 10 BX contracts on side -1",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$10000 allows 10 BT contracts on side 1",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$10000 allows 10 BT contracts on side -1",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$10000 allows 10 BG contracts on side 1",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$10000 allows 10 BG contracts on side -1",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$50000 allows 50 BX contracts on side 1",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$50000 allows 50 BX contracts on side -1",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$50000 allows 50 BT contracts on side 1",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$50000 allows 50 BT contracts on side -1",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$50000 allows 50 BG contracts on side 1",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$50000 allows 50 BG contracts on side -1",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$101000 allows 101 BX contracts on side 1",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$101000 allows 101 BX contracts on side -1",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$101000 allows 101 BT contracts on side 1",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$101000 allows 101 BT contracts on side -1",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$101000 allows 101 BG contracts on side 1",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$101000 allows 101 BG contracts on side -1",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$250000 allows 250 BX contracts on side 1",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$250000 allows 250 BX contracts on side -1",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$250000 allows 250 BT contracts on side 1",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$250000 allows 250 BT contracts on side -1",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$250000 allows 250 BG contracts on side 1",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$250000 allows 250 BG contracts on side -1",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Realized profit/loss changes the cap immediately; open P&L does not",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "$50K reservations are shared across markets and are released on cancel",
+      "Detail": "Passed"
+    }
+  ],
+  "CapacityTests": [
+    {
+      "Passed": true,
+      "Name": "Billion-dollar balances retain buying power while spam shares one allowance",
+      "Detail": {
+        "Attempts": 40,
+        "Balance": 10000000000,
+        "SpamFills": 20000,
+        "AllowedHoldings": 10000000
+      }
+    },
+    {
+      "Passed": true,
+      "Name": "One-million-contract order fills progressively and closes without reversal",
+      "Detail": {
+        "Audit": {
+          "Inventory": {
+            "BT": 0,
+            "BX": 0,
+            "BG": 0
+          },
+          "CashError": 0,
+          "Volume": 2000000,
+          "EquityError": 0,
+          "Hash": 155863989,
+          "Trades": 400
+        },
+        "Realized": -50000000,
+        "Contracts": 1000000
+      }
+    },
+    {
+      "Passed": true,
+      "Name": "Thirty-two players get turns without draining the book",
+      "Detail": {
+        "Players": 32,
+        "FirstWindowContracts": 100000
+      }
+    },
+    {
+      "Passed": true,
+      "Name": "Ten-billion-dollar account can execute and close ten million gold contracts",
+      "Detail": {
+        "Audit": {
+          "Inventory": {
+            "BT": 0,
+            "BX": 0,
+            "BG": 0
+          },
+          "CashError": 0,
+          "Volume": 20000000,
+          "EquityError": -1.9073486328125e-05,
+          "Hash": 2028347482,
+          "Trades": 4000
+        },
+        "Contracts": 10000000
+      }
+    },
+    {
+      "Passed": true,
+      "Name": "Marketable limits, amendments and triggered large stops use paced execution",
+      "Detail": "Large limit/stop paths cannot bypass execution budgets or cross the resting book"
+    },
+    {
+      "Passed": true,
+      "Name": "Guard refuses adverse distant prices and cancellation releases only the order",
+      "Detail": "Orders wait at the independent fair-value guard; no fabricated fills"
+    },
+    {
+      "Passed": true,
+      "Name": "Remote limit quotes cannot pump a bot fill; voluntary queued closes can be cancelled",
+      "Detail": "Outlying player quotes cannot force prices; cancelled voluntary exits stay cancelled"
+    },
+    {
+      "Passed": true,
+      "Name": "Queued markets and limits survive restart with budgets and FIFO state",
+      "Detail": "Exact replay, saved allowances, cancellable/disconnect-safe queues"
+    },
+    {
+      "Passed": true,
+      "Name": "Pre-reserve saves gain institutions without changing existing accounts or history",
+      "Detail": "18 funded reserves added once; existing balances, tape and positions preserved"
+    }
+  ],
+  "ProtectiveOrdersTests": [
+    {
+      "Passed": true,
+      "Name": "-1: 307-contract target fills in thin liquidity with exhausted entry allowance",
+      "Detail": {
+        "Target": 5913,
+        "FirstFill": 9,
+        "FinalPosition": 0,
+        "Contracts": 307
+      }
+    },
+    {
+      "Passed": true,
+      "Name": "-1: partial TP keeps stop and stop closes only the residual",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "-1: saved working/partial targets retain FIFO and residual stop",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "1: 307-contract target fills in thin liquidity with exhausted entry allowance",
+      "Detail": {
+        "Target": 5966.5,
+        "FirstFill": 9,
+        "FinalPosition": 0,
+        "Contracts": 307
+      }
+    },
+    {
+      "Passed": true,
+      "Name": "1: partial TP keeps stop and stop closes only the residual",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "1: saved working/partial targets retain FIFO and residual stop",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Resting TP observes FIFO and a later ordinary order cannot trade through it",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Target resizing preserves prices, reduces quantity, and removes orphan orders on reversal",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Moving/cancelling a TP updates the book without printing a trade",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Legacy queued TP migrates without fills then ignores exhausted entry budget",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Fake protective fields and voluntary reduce-only orders cannot bypass entry budgets",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Protective exits retain actual-price safeguards and report the reason",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Disconnected TP leaves depth but can close against connected liquidity",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "A zero-liquidity market never fabricates a protective fill",
+      "Detail": "Passed"
+    }
+  ],
+  "SingleAccountTests": [
+    {
+      "Passed": true,
+      "Name": "Join and Start idempotently give one $10000 account; no wallet or purchases",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Open profit changes equity only; one small close banks profit without a title",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "25 break-even closes earn experience without a profitable-trade title",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Recovering lost profit never awards the same title again",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Long-term profit milestone requires lifetime net profit and persists",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Starting cash earns no profit titles; every profit goal unlocks at its advertised amount",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Existing $5000 single-account saves keep balances and titles; restart uses base plus earned bonuses",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Healthy reset and forged restart token cannot mint funds",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Equity zero cancels orders, liquidates and offers free restart",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "A manual close that depletes the account sends only the failure notice",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Restart preserves titles, lifetime losses, history and separates current run",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Repeated restart budgets survive rejoin and storage; archive stays bounded",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Position size, stop loss, take profit and all current markets work",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Current positions, orders, rewards and tutorial survive codec restore exactly",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Legacy migration closes all exposure and carries only selected net profit",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Migration loss, orphan accounts, and all-failed legacy profiles are safe",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Migration rejects future profile versions and missing ledgers",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Leaderboard ranks current balance while preserving lifetime profit",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Checkpoint size and corruption fail closed",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Capacity rejects starts and restarts without partial grants",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Stale order ownership and invalid payloads are rejected by engine",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Tutorial replay flags do not grant funds or rewards",
+      "Detail": "Passed"
+    }
+  ],
+  "DepthRealismTests": [
+    {
+      "Passed": true,
+      "Name": "Production reserve quotes vary by instrument and occupy consecutive ticks",
+      "Detail": {
+        "BT": {
+          "Bids": [
+            20,
+            26,
+            31,
+            31,
+            34
+          ],
+          "Asks": [
+            22,
+            24,
+            25,
+            33,
+            33
+          ]
+        },
+        "BX": {
+          "Bids": [
+            128,
+            169,
+            184,
+            185,
+            203
+          ],
+          "Asks": [
+            140,
+            175,
+            177,
+            220,
+            240
+          ]
+        },
+        "BG": {
+          "Bids": [
+            13,
+            19,
+            19,
+            23,
+            28
+          ],
+          "Asks": [
+            15,
+            17,
+            21,
+            23,
+            27
+          ]
+        }
+      }
+    },
+    {
+      "Passed": true,
+      "Name": "Cancelling and resubmitting cannot drain smaller production books",
+      "Detail": {
+        "BT": {
+          "RemainingContracts": 124,
+          "FilledAcross100Clicks": 13,
+          "InitialContracts": 137
+        },
+        "BX": {
+          "RemainingContracts": 857,
+          "FilledAcross100Clicks": 95,
+          "InitialContracts": 952
+        },
+        "BG": {
+          "RemainingContracts": 93,
+          "FilledAcross100Clicks": 10,
+          "InitialContracts": 103
+        }
+      }
+    },
+    {
+      "Passed": true,
+      "Name": "Thirty-two waiting players share the smaller production allowance",
+      "Detail": "All 32 players receive fills without exhausting displayed depth"
+    },
+    {
+      "Passed": true,
+      "Name": "Small quotes replenish through new finite orders after consumption",
+      "Detail": "Consumed quotes are replaced with small real orders; large capital stays off the displayed book"
+    },
+    {
+      "Passed": true,
+      "Name": "Old enormous quotes are withdrawn on restore without resetting positions or balances",
+      "Detail": "Balances, existing positions, player orders and trade history preserved; obsolete bot walls removed once"
+    },
+    {
+      "Passed": true,
+      "Name": "Actual production simulation remains finite, varied and deterministic",
+      "Detail": [
+        {
+          "Depth": {
+            "BT": {
+              "Total": 64720,
+              "Mean": 161.8,
+              "Max": 459,
+              "Empty": 0,
+              "Samples": 400
+            },
+            "BX": {
+              "Total": 106497,
+              "Mean": 266.2,
+              "Max": 713,
+              "Empty": 0,
+              "Samples": 400
+            },
+            "BG": {
+              "Total": 63693,
+              "Mean": 159.2,
+              "Max": 393,
+              "Empty": 0,
+              "Samples": 400
+            }
+          },
+          "Seed": 4141
+        },
+        {
+          "Depth": {
+            "BT": {
+              "Total": 49665,
+              "Mean": 124.1,
+              "Max": 397,
+              "Empty": 0,
+              "Samples": 400
+            },
+            "BX": {
+              "Total": 84735,
+              "Mean": 211.8,
+              "Max": 508,
+              "Empty": 0,
+              "Samples": 400
+            },
+            "BG": {
+              "Total": 64760,
+              "Mean": 161.9,
+              "Max": 435,
+              "Empty": 0,
+              "Samples": 400
+            }
+          },
+          "Seed": 73521
+        },
+        {
+          "Depth": {
+            "BT": {
+              "Total": 38742,
+              "Mean": 96.8,
+              "Max": 364,
+              "Empty": 0,
+              "Samples": 400
+            },
+            "BX": {
+              "Total": 77174,
+              "Mean": 192.9,
+              "Max": 585,
+              "Empty": 0,
+              "Samples": 400
+            },
+            "BG": {
+              "Total": 51963,
+              "Mean": 129.9,
+              "Max": 488,
+              "Empty": 0,
+              "Samples": 400
+            }
+          },
+          "Seed": 90871
+        }
+      ]
+    }
+  ],
+  "TradeAmendmentTests": "AssistantCommand:1: attempt to index function with 'Run'",
+  "TradePreferencesTests": [
+    {
+      "Passed": true,
+      "Name": "Unsaved profiles keep the existing $500/$1500 enabled defaults",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Both false switches and disabled amounts survive encoded save, new engine and rejoin",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Invalid or incomplete preferences fail atomically; another profile is unchanged",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Updating defaults never amends an open position or an existing working order",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": false,
+      "Name": "Take profit on long announces once only after execution",
+      "Detail": "ServerStorage.ProtectiveOrderValidation.TradePreferencesTests:69: A price trigger is not a fill"
+    },
+    {
+      "Passed": true,
+      "Name": "Stop loss on long announces once only after execution",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": false,
+      "Name": "Take profit on short announces once only after execution",
+      "Detail": "ServerStorage.ProtectiveOrderValidation.TradePreferencesTests:69: A price trigger is not a fill"
+    },
+    {
+      "Passed": true,
+      "Name": "Stop loss on short announces once only after execution",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Manual close has an execution identity; rejected close emits nothing",
+      "Detail": "Passed"
+    }
+  ]
+}

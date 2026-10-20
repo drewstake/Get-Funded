@@ -1,5 +1,6 @@
 -- Disposable exchanges only: close notifications must describe a whole position, not its last fill.
-local C=require(game.ReplicatedStorage.MarketReign.MarketConfig)
+local C=table.clone(require(game.ReplicatedStorage.MarketReign.MarketConfig))
+C.BotPopulation=nil -- This fixture intentionally has no autonomous population.
 local L=require(game.ReplicatedStorage.MarketReign.ProgressionConfig)
 local E=require(script.Parent.MarketEngine)
 local F=require(script.Parent.FundedAccounts)
@@ -108,20 +109,26 @@ function Tests.Run()
   f:TakeEvents(uid);f:Profile(uid).PendingTradeCloses=nil
   fill(e,id,"BX",-1,2,5827,true);closed(f,250,3);e:Audit()
  end)
- test("Reset discards an unfinished close result and never carries it into the next account",function()
+ test("Reset completes an unfinished close result before opening the next account",function()
   local e,f,id=fresh();fill(e,id,"BX",1,3,5825);fill(e,id,"BX",-1,1,5826,true)
   assert(f:Profile(uid).PendingTradeCloses and not f:TakeEvents(uid))
+  Liquidity.Offer(e,"BX",1,2,5825)
   assert(f:ResetAccount(uid,id));assert(not f:Profile(uid).PendingTradeCloses)
+  local event=closed(f,50,3);assert(event.Reason=="Account reset")
   id=f:Owner(uid);fill(e,id,"BX",1,1,5825);fill(e,id,"BX",-1,1,5824,true)
   closed(f,-50,1);e:Audit()
  end)
  for _,reason in ipairs({"Take profit","Stop loss"})do
   test(reason.." aggregates multiple exit prices and waits for the final fill",function()
    local e,f,id=fresh();fill(e,id,"BX",1,4,5825)
-   local p=e.Accounts[id].Positions.BX;p.Triggered=reason
+   local p=e.Accounts[id].Positions.BX
    local first=reason=="Take profit"and 5828 or 5822
-   if reason=="Take profit"then p.Target=first-1 end
-   Liquidity.Offer(e,"BX",1,1,first);e:AdvanceClock(e.Config.StepSeconds);e:ProcessPlayerOrders()
+   if reason=="Take profit"then
+    -- Add a target against an existing better bid, then fill the residual at its limit.
+    Liquidity.Offer(e,"BX",1,1,first)
+    assert(e:AmendProtection(id,{Contract="BX",OrderId=p.Id,Protection="Target",Price=first-1,Create=true,ExpectedQuantity=4}))
+   else p.Triggered=reason;Liquidity.Offer(e,"BX",1,1,first)end
+   e:AdvanceClock(e.Config.StepSeconds);e:ProcessPlayerOrders()
    assert(e.Accounts[id].Positions.BX and not f:TakeEvents(uid))
    Liquidity.Offer(e,"BX",1,3,first-1);e:AdvanceClock(e.Config.StepSeconds);e:ProcessPlayerOrders()
    local ev=closed(f,((first-5825)+3*(first-1-5825))*50,4);assert(ev.Reason==reason);e:Audit()

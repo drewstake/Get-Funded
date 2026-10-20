@@ -36,20 +36,24 @@ function Tests.Run()
  end
  test("Fresh markets retain makers, ordinary traders and whales alongside scalpers",function()
   local e=Engine.new(Default,4102)local p=Participants.new(e)
-  assert(Default.MakersPerInstrument==10 and Default.ParticipantsPerInstrument==36 and Default.WhalesPerInstrument==3)
+  assert(Default.MakersPerInstrument==60 and Default.ParticipantsPerInstrument==228 and Default.WhalesPerInstrument==12)
   for _,key in ipairs(Default.ContractOrder) do
    local makers,traders,whales,scalpers=0,0,0,0
    for _,a in ipairs(p.Agents) do if a.Key==key then
     if a.Kind=="Maker" then makers+=1 elseif a.Kind=="Whale" then whales+=1 elseif a.Kind=="Scalper" then scalpers+=1 elseif a.Kind~="Reserve"then traders+=1 end
    end end
-   assert(makers==10 and traders==36 and whales==3 and scalpers==Default.ScalpersPerInstrument,key.." population differs")
+   assert(makers==60 and traders==228 and whales==12 and scalpers==Default.ScalpersPerInstrument,key.." population differs")
   end
-  e:Audit();return "10 makers, 36 ordinary traders, 3 whales and 18 scalpers per active market"
+  e:Audit();return "60 makers, 228 ordinary traders, 12 whales and 72 scalpers per active market"
  end)
  test("Older worlds gain makers once, preserving the tape, accounts and retired markets",function()
+  local Default=clone(Default);Default.BotPopulation=nil;Default.MakersPerInstrument=10 -- Isolate historical maker upgrade.
+  Default.MarketRetirementVersion=nil
   local old=clone(Default);old.MakersPerInstrument=5;old.MakerPopulationVersion=nil
   old.Contracts.RTY=clone(old.LegacyContracts.RTY);table.insert(old.ContractOrder,"RTY")
+  old.Contracts.RTY.CloseOnly=nil -- Reconstruct the historical population before it closed.
   local e=Engine.new(old,4103)local p=Participants.new(e)
+  old.Contracts.RTY.CloseOnly=true
   local f=F.new(e,L,old);f:Start("makers");local id=f:Owner("makers")
   for _=1,240 do p:Step() end
   assert(e:Submit(id,{Contract="BX",Direction=1,Quantity=2,Type="Market",StopTicks=400,TargetTicks=500}))
@@ -86,6 +90,7 @@ function Tests.Run()
   return "15 makers added once; history, FIFO orders, positions, funds and retired participants preserved; deterministic restart and new quotes verified"
  end)
  test("Maker migration counts renamed agents and avoids occupied account ids",function()
+  local Default=clone(Default);Default.BotPopulation=nil;Default.MakersPerInstrument=10 -- Isolate historical maker upgrade.
   local old=clone(Default);old.MakersPerInstrument=5;old.MakerPopulationVersion=nil
   old.Contracts.ES=old.Contracts.BX;old.Contracts.BX=nil;old.ContractOrder[1]="ES"
   local e=Engine.new(old,4104)local p=Participants.new(e)
@@ -125,6 +130,7 @@ function Tests.Run()
   return {Step=e.Step,Trades=e.NextTrade,Hash=e.TradeHash,CompressedBytes=#encoded.Payload,RawBytes=encoded.RawBytes}
  end)
  test("Restored book retains FIFO, partial fills, cancellations, account funds and protection",function()
+  local Default=clone(Default);Default.BotPopulation=nil -- Intentionally empty scheduler.
   local e=Engine.new(Default,19)
   -- Player and participant limits share the same preserved FIFO.
   for _,id in ipairs({"a","b","c"})do e:AddAccount(id,1000000,500,0.8,false)end

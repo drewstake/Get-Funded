@@ -1,0 +1,142 @@
+--- a/src/TerminalUI.luau
++++ b/src/TerminalUI.luau
+@@ -732,7 +732,8 @@
+   local panel=frame(canvas,"AccountSummary",x,y,w,h,C.Bg);panel.BackgroundTransparency=1
+   local gap=mobile and 8 or 16;local cw=(w-gap*2)/3;local ch=h-8
+   for i,d in ipairs({{"Balance","BALANCE",Market.Money(sum.Equity)},{"Unrealized","OPEN PROFIT",Market.Signed(sum.Unrealized)}}) do
+-   local tile=button(panel,d[1].."Card","",(i-1)*(cw+gap),0,cw,ch,function()s.Overlay="Help";refresh()end,Color3.new(1,1,1))
++   local tile=frame(panel,d[1].."Card",(i-1)*(cw+gap),0,cw,ch,Color3.new(1,1,1))
++   round(tile);stroke(tile)
+    summarySurface(tile,d[1],mobile)
+    local labelH=mobile and 22 or 18;local valueH=mobile and 28 or 32
+    local contentY=math.floor((ch-labelH-4-valueH)/2)
+@@ -1362,7 +1363,7 @@
+    return
+   end
+   local pf=session.Portfolio
+-  local pw=math.min(w-28,s.Overlay=="Tools" and 470 or 460)
++  local pw=math.min(w-28,(s.Overlay=="Help"or s.Overlay=="Guide")and 560 or s.Overlay=="Tools"and 470 or 460)
+   local narrow=pw<380
+   local pad=narrow and 16 or 22;local iw=pw-pad*2
+   local function close()s.Overlay=nil;refresh()end
+@@ -1506,30 +1507,75 @@
+    popupButton(p,"ResetAccount","Reset Account",pad,vy+60,iw,48,function()
+     s.Overlay="ResetAccount";refresh()
+    end,"Pink",18)
++  elseif s.Overlay=="Info"then
++   local size=18
++   local bh=TextService:GetTextSize(s.Info or "",size,M,Vector2.new(iw-2,10000)).Y+12
++   local _,p=popupShell(w,h,pw,bh,"Trading terms","Help")
++   body(p,"Definition",s.Info or "",pad,0,iw,bh,size,C.Text)
+   else
+-   local info=s.Overlay=="Info"
+-   local sections=info and {{"Trading terms",s.Info}}or{
+-    {"Make your first trade","Start with "..whole(Ladder.StartingBalance).." in-game money. Choose a market and set quantity to 1. BUY to profit from a price rise; SELL to profit from a fall."},
+-    {"Know your numbers","Balance: live account value including open profit or loss, also called equity.\nOpen profit: profit or loss on open positions; it changes with prices.\nSettled balance: account value after closed trades. This sets your contract limit; open profits do not add contracts.\nRealized profit: net profit or loss from this account's closed trades.\nLifetime net profit: realized profit across all your accounts, including losses before restarts. Starting money never counts as profit."},
+-    {"Trade protection","Stop loss helps limit a loss. Take profit closes at your target. Switch each on to attach it to new orders. Dollar amounts cover your selected quantity and round to price ticks. Final fills can differ. Saving these settings does not change existing positions."},
+-    {"Build your record","Close trades, earn wins and reach lifetime net profit goals for titles. Meet all three goals for a rank. Each closing fill counts as one trade, including partial closes. Earned ranks and titles stay yours."},
+-    {"Restart after a loss","At $0 equity or below, your account fails and its positions close. Then restart free with "..whole((session.Portfolio or {}).StartingBalance or Ladder.StartingBalance)..". Current account stats start over; ranks, titles and lifetime totals stay. Losses still count. Repeated restarts may need a cooldown."},
+-    {"The market keeps moving","Open positions and orders stay active when you leave. Close positions and cancel pending orders if you want to stop trading."},
++   local size=18;local headingSize=narrow and 20 or 23
++   local function textHeight(value,width,fontSize)
++    return math.ceil(TextService:GetTextSize(value,fontSize or size,M,Vector2.new(width-2,10000)).Y)+8
++   end
++   local steps={
++    {"Pick your direction","Choose a market. Start with quantity 1.",C.Cyan},
++    {"Set your protection","Stop loss limits losses; take profit targets gains. Switch each on before trading. Fills can vary.",C.Green},
++    {"Close trades. Rank up.","Close to lock in your result. Build trades, wins and lifetime net profit to earn ranks and titles.",Color3.fromRGB(255,222,80)},
+    }
+-   local size=narrow and 14 or 15;local contentH=0
+-   for _,section in ipairs(sections)do
+-    section[3]=TextService:GetTextSize(section[2],size,M,Vector2.new(iw-2,10000)).Y+8
+-    contentH+=28+section[3]+16
+-   end
+-   local _,p=popupShell(w,h,pw,contentH+62,info and "Trading terms"or "How to play","Help")
++   local contentH=0
++   for i,step in ipairs(steps)do
++    step.TitleH=math.max(32,textHeight(step[1],iw-76,headingSize))
++    step.BodyH=textHeight(step[2],iw-28)
++    step.Height=14+step.TitleH+8+step.BodyH+14+(i==1 and 66 or 0)
++    contentH+=step.Height+12
++   end
++   local away="Positions and orders stay active offline. Close positions and cancel orders to stop trading."
++   local awayH=44+textHeight(away,iw-28)+12
++   contentH+=awayH+12+48+12
++   local details={
++    {"Your numbers","Balance includes open profit or loss. Open profit changes with prices until you close. Settled balance sets your contract limit; open profits add no contracts."},
++    {"A fresh start","At $0 balance, your account fails. Restart free with "..whole((session.Portfolio or {}).StartingBalance or Ladder.StartingBalance)..". Account stats reset; ranks, titles and lifetime totals stay. Losses still count. A cooldown may apply."},
++   }
++   if s.HelpDetails then
++    for _,detail in ipairs(details)do detail.Height=44+textHeight(detail[2],iw-28)+14;contentH+=detail.Height+12 end
++   end
++   local shell,p=popupShell(w,h,pw,contentH+66,"How to play","Help")
++   -- Keep the guided trade action visible even when the larger cards need scrolling.
++   p.Size=UDim2.fromOffset(pw,p.Size.Y.Offset-66);p.CanvasSize=UDim2.fromOffset(0,contentH)
+    local yy=0
+-   for i,section in ipairs(sections)do
+-    optionLabel(p,"Heading"..i,section[1],pad,yy,iw,24,18,C.Cyan)
+-    body(p,"Body"..i,section[2],pad,yy+28,iw,section[3],size,C.Text)
+-    yy+=28+section[3]+16
+-   end
+-   popupButton(p,"ReplayTutorial","Start guided trade",pad,contentH,iw,48,function()s.Screen="Trade";s.Nav="Trade";s.Overlay=nil;s.Sheet=false;s.Coach=1;s.CoachBase=nil;s.CoachDismissed=nil;refresh()end,"Cyan",18)
+-
++   for i,step in ipairs(steps)do
++    local card=frame(p,"Step"..i,pad,yy,iw,step.Height,Color3.fromRGB(3,24,70),44)
++    round(card,14);stroke(card,step[3]).Thickness=2
++    local badge=frame(card,"Number",14,14,36,32,step[3],45);round(badge,10)
++    text(badge,"Value",tostring(i),0,0,36,32,23,C.Bg,B,CENTER,46).TextStrokeTransparency=1
++    local title=body(card,"Heading",step[1],62,14,iw-76,step.TitleH,headingSize,step[3])
++    title.TextYAlignment=Enum.TextYAlignment.Center
++    local by=14+step.TitleH+8
++    body(card,"Body",step[2],14,by,iw-28,step.BodyH,size,C.Text)
++    if i==1 then
++     local directions=frame(card,"Directions",14,by+step.BodyH+4,iw-28,58,C.Bg,45);round(directions,10)
++     text(directions,"Buy","BUY  =  price up",12,2,iw-52,26,18,C.Green,B,nil,46)
++     text(directions,"Sell","SELL  =  price down",12,28,iw-52,26,18,C.Red,B,nil,46)
++    end
++    yy+=step.Height+12
++   end
++   local note=frame(p,"OfflineReminder",pad,yy,iw,awayH,Color3.fromRGB(3,24,70),44)
++   round(note,14);stroke(note,C.Blue).Thickness=2
++   optionLabel(note,"Heading","Before you leave",14,10,iw-28,28,20,C.Blue)
++   body(note,"Body",away,14,44,iw-28,awayH-56,size,C.Text)
++   yy+=awayH+12
++   popupButton(p,"HelpDetails",s.HelpDetails and "Less detail  -"or "Balances & restarts  +",pad,yy,iw,48,function()s.HelpDetails=not s.HelpDetails;refresh()end,"Navy",18)
++   yy+=60
++   if s.HelpDetails then
++    for i,detail in ipairs(details)do
++     local card=frame(p,"Detail"..i,pad,yy,iw,detail.Height,Color3.fromRGB(3,24,70),44);round(card,14);stroke(card,C.Border)
++     optionLabel(card,"Heading",detail[1],14,10,iw-28,28,20,C.Cyan)
++     body(card,"Body",detail[2],14,44,iw-28,detail.Height-58,size,C.Text)
++     yy+=detail.Height+12
++    end
++   end
++   local footer=frame(shell,"GuideAction",pad,shell.Size.Y.Offset-66,iw,60,Color3.fromRGB(3,30,83),44)
++   popupButton(footer,"ReplayTutorial","Start guided trade",0,6,iw,48,function()s.Screen="Trade";s.Nav="Trade";s.Overlay=nil;s.Sheet=false;s.Coach=1;s.CoachBase=nil;s.CoachDismissed=nil;refresh()end,"Green",20)
+   end
+  end
+  -- ── Funded journey: welcome, dashboard, guided first trade and celebrations ──────────────────
+@@ -1718,10 +1764,9 @@
+   round(panel,inline and 10 or 12);stroke(panel,Color3.fromRGB(26,88,186)).Thickness=1.5
+   tint(panel,Color3.fromRGB(6,46,120),Color3.fromRGB(3,28,80))
+   local _,_,progress=objective()
+-  local help=function()s.Overlay="Help";refresh()end
+   local cells={
+-   {"Balance","Balance",Market.Money(sum.Equity),C.Text,help},
+-   {"Unrealized","Open P&L",Market.Signed(sum.Unrealized),sum.Unrealized>=0 and SC.Green or SC.Red,help},
++   {"Balance","Balance",Market.Money(sum.Equity),C.Text},
++   {"Unrealized","Open P&L",Market.Signed(sum.Unrealized),sum.Unrealized>=0 and SC.Green or SC.Red},
+    {"Objective",failed and"Account failed"or"Next goal",failed and"Tap to restart"or stripGoal(),failed and SC.Red or C.Text,
+     function()if failed then openBlown(pf.Active)else navigate("Progress")end end},
+   }
+@@ -1733,7 +1778,9 @@
+    local goal=i==3
+    local cw=goal and w-cx or math.floor(w*shares[i])
+    if i>1 then local div=frame(panel,"Divider",cx,math.floor(h*.2),1,math.ceil(h*.6),Color3.fromRGB(44,104,200),4);div.BackgroundTransparency=.2 end
+-   local cell=button(panel,d[1].."Card","",cx,0,cw,h,d[5],false,C.Text,12,4)
++   local cell
++   if goal then cell=button(panel,d[1].."Card","",cx,0,cw,h,d[5],false,C.Text,12,4)
++   else cell=frame(panel,d[1].."Card",cx,0,cw,h,C.Panel,4);cell.BackgroundTransparency=1 end
+    if goal then cell:SetAttribute("Strip",true)end
+    local valueName=goal and"Amount"or d[1].."Value"
+    local tx,ty,tw

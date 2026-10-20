@@ -1,0 +1,145 @@
+{
+  "Status": "Installed in open Studio; workspace sources saved; no RBXL save or publication",
+  "OfflineTests": 156,
+  "OfflineFailures": 0,
+  "NativeTests": 150,
+  "NativeFailures": 0,
+  "BannerLayouts": [
+    {
+      "Direction": 1,
+      "Width": 390
+    },
+    {
+      "Direction": -1,
+      "Width": 390
+    },
+    {
+      "Direction": 1,
+      "Width": 844
+    },
+    {
+      "Direction": -1,
+      "Width": 844
+    },
+    {
+      "Direction": 1,
+      "Width": 1280
+    },
+    {
+      "Direction": -1,
+      "Width": 1280
+    }
+  ],
+  "SavedWorld": {
+    "ReplaySteps": 240,
+    "ToVersion": 22,
+    "FromVersion": 19,
+    "Audit": {
+      "Inventory": {
+        "BT": 0,
+        "BX": 0,
+        "BG": 0
+      },
+      "CashError": 1.0565854609012604e-06,
+      "Volume": 69463540,
+      "EquityError": -9.569339454174042e-07,
+      "Hash": 1197349300,
+      "Trades": 27681579
+    },
+    "Accounts": 398,
+    "CapitalAndPositionsPreserved": true,
+    "Participants": 390
+  },
+  "InstalledSourceCount": 24,
+  "DataStoreWrites": false,
+  "Published": false,
+  "RBXLSaved": false,
+  "Simulations": [
+    {
+      "Seed": 19381,
+      "Seconds": 3600,
+      "Markets": {
+        "BG": {
+          "Final": 23831,
+          "High": 23848,
+          "Initial": 23845,
+          "Low": 23831,
+          "Selloffs": 0,
+          "Surges": 0
+        },
+        "BT": {
+          "Final": 81941,
+          "High": 81947,
+          "Initial": 81943,
+          "Low": 81931,
+          "Selloffs": 0,
+          "Surges": 0
+        },
+        "BX": {
+          "Final": 23305,
+          "High": 23306,
+          "Initial": 23298,
+          "Low": 23298,
+          "Selloffs": 0,
+          "Surges": 0
+        }
+      },
+      "TwoSidedFraction": 1,
+      "Audit": {
+        "CashError": 0,
+        "EquityError": -5.4802512750029564e-08,
+        "Hash": 1530930228,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 8109,
+        "Volume": 18531
+      }
+    },
+    {
+      "Seed": 68473,
+      "Seconds": 3600,
+      "Markets": {
+        "BG": {
+          "Final": 23845,
+          "High": 23847,
+          "Initial": 23847,
+          "Low": 23832,
+          "Selloffs": 0,
+          "Surges": 0
+        },
+        "BT": {
+          "Final": 81934,
+          "High": 81945,
+          "Initial": 81941,
+          "Low": 81928,
+          "Selloffs": 0,
+          "Surges": 0
+        },
+        "BX": {
+          "Final": 23294,
+          "High": 23300,
+          "Initial": 23300,
+          "Low": 23294,
+          "Selloffs": 0,
+          "Surges": 0
+        }
+      },
+      "TwoSidedFraction": 1,
+      "Audit": {
+        "CashError": 5.587935447692871e-09,
+        "EquityError": 2.986053004860878e-08,
+        "Hash": 97631955,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 7075,
+        "Volume": 14438
+      }
+    }
+  ]
+}

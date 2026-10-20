@@ -1,6 +1,7 @@
 local Liquidity=require(script.Parent.TestLiquidity)
 -- Isolated engines and injected stores only; never accesses real player saves.
-local C=require(game.ReplicatedStorage.MarketReign.MarketConfig)
+local C=table.clone(require(game.ReplicatedStorage.MarketReign.MarketConfig))
+C.BotPopulation=nil -- Account fixture intentionally has no autonomous scheduler.
 local L=require(game.ReplicatedStorage.MarketReign.ProgressionConfig)
 local E=require(script.Parent.MarketEngine)
 local F=require(script.Parent.FundedAccounts)
@@ -126,7 +127,11 @@ function Tests.Run()
    level.Quantity=total;if total==0 then table.remove(side,i)end
   end end end
   local total,hash=e.TotalVolume,e.TradeHash
-  f:ResetPlayer("101");clean(e,"101");same(e.Accounts[otherId],other);same(f:Profile("102"),profile);same(e.Books,books)
+  f:ResetPlayer("101");clean(e,"101");same(e.Accounts[otherId],other);same(f:Profile("102"),profile)
+  -- Removing the target's limit invalidates exit liquidity without changing the tape.
+  assert(e.Books.BT.ExitLiquidityRevision>books.BT.ExitLiquidityRevision)
+  for key,book in pairs(books)do book.ExitLiquidityRevision=e.Books[key].ExitLiquidityRevision end
+  same(e.Books,books)
   assert(e.TotalVolume==total and e.TradeHash==hash and #e.PendingStops==0)
   for _,o in ipairs(e.OrderArchive)do assert(o.Owner~=id)end
   for _,o in pairs(e.Orders)do assert(o.Owner~=id)end

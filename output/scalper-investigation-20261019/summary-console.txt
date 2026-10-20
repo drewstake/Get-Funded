@@ -1,0 +1,335 @@
+{
+  "Scope": "Fresh current-source simulations, three new seeds, two simulated hours each. No refresh, funding changes or player trades. Variants change endogenous market paths; these are sensitivity experiments, not matched-trade causal decompositions.",
+  "SourceUnchanged": true,
+  "Variants": {
+    "baseline": {
+      "Seeds": [
+        19381,
+        68473,
+        91753
+      ],
+      "PnlBySeed": [
+        144332.5,
+        133112.5,
+        171065.0
+      ],
+      "MeanPnl": 149503.33333333285,
+      "ProfitableBotsBySeed": [
+        72,
+        72,
+        72
+      ],
+      "ClosingFills": 11748,
+      "Wins": 9199,
+      "Losses": 2065,
+      "Even": 484,
+      "ClosingFillWinRate": 0.7830268981954375,
+      "ProfitFactor": 4.529609623869686,
+      "PassiveEntryFraction": 0.06626763574176998,
+      "MakerEntryContractFraction": 0.8442200557103064,
+      "MeanMakerQuoteAgeAtAggressiveEntry": 28.92193289419514,
+      "MeanEntryFairEdgeTicks": 5.366599867985875,
+      "MeanRealizedPerClosedContract": 31.33827559553081,
+      "Styles": {
+        "Momentum": {
+          "MeanPnl": 61942.499999999585,
+          "ProfitableBotsBySeed": [
+            36,
+            36,
+            36
+          ],
+          "ClosingFillWinRate": 0.7199749137660709
+        },
+        "Reversion": {
+          "MeanPnl": 87560.83333333327,
+          "ProfitableBotsBySeed": [
+            36,
+            36,
+            36
+          ],
+          "ClosingFillWinRate": 0.8579143389199255
+        }
+      },
+      "MaxAbsoluteAuditError": 2.895103534683585e-07
+    },
+    "fair_makers": {
+      "Seeds": [
+        19381,
+        68473,
+        91753
+      ],
+      "PnlBySeed": [
+        102810.0,
+        84952.5,
+        86882.5
+      ],
+      "MeanPnl": 91548.33333333315,
+      "ProfitableBotsBySeed": [
+        71,
+        72,
+        71
+      ],
+      "ClosingFills": 8385,
+      "Wins": 6262,
+      "Losses": 1800,
+      "Even": 323,
+      "ClosingFillWinRate": 0.7468097793679189,
+      "ProfitFactor": 3.644788766493164,
+      "PassiveEntryFraction": 0.08107784431137724,
+      "MakerEntryContractFraction": 0.7738226177382261,
+      "MeanMakerQuoteAgeAtAggressiveEntry": 27.91079923882017,
+      "MeanEntryFairEdgeTicks": 1.1318095735537683,
+      "MeanRealizedPerClosedContract": 27.508813456889552,
+      "Styles": {
+        "Momentum": {
+          "MeanPnl": 46273.33333333308,
+          "ProfitableBotsBySeed": [
+            35,
+            36,
+            35
+          ],
+          "ClosingFillWinRate": 0.6719869706840391
+        },
+        "Reversion": {
+          "MeanPnl": 45275.00000000008,
+          "ProfitableBotsBySeed": [
+            36,
+            36,
+            36
+          ],
+          "ClosingFillWinRate": 0.9514476614699332
+        }
+      },
+      "MaxAbsoluteAuditError": 2.5353801902383566e-07
+    },
+    "fast_makers": {
+      "Seeds": [
+        19381,
+        68473,
+        91753
+      ],
+      "PnlBySeed": [
+        129072.5,
+        116992.5,
+        118910.0
+      ],
+      "MeanPnl": 121658.33333333337,
+      "ProfitableBotsBySeed": [
+        72,
+        71,
+        71
+      ],
+      "ClosingFills": 10348,
+      "Wins": 8000,
+      "Losses": 2014,
+      "Even": 334,
+      "ClosingFillWinRate": 0.7730962504831852,
+      "ProfitFactor": 3.9426712992889485,
+      "PassiveEntryFraction": 0.16535279805352798,
+      "MakerEntryContractFraction": 0.2495629734454341,
+      "MeanMakerQuoteAgeAtAggressiveEntry": 0.965173116089613,
+      "MeanEntryFairEdgeTicks": 1.7087728235773134,
+      "MeanRealizedPerClosedContract": 30.52426452099573,
+      "Styles": {
+        "Momentum": {
+          "MeanPnl": 55900.83333333331,
+          "ProfitableBotsBySeed": [
+            36,
+            35,
+            35
+          ],
+          "ClosingFillWinRate": 0.6878476084538376
+        },
+        "Reversion": {
+          "MeanPnl": 65757.50000000006,
+          "ProfitableBotsBySeed": [
+            36,
+            36,
+            36
+          ],
+          "ClosingFillWinRate": 0.9673637515842839
+        }
+      },
+      "MaxAbsoluteAuditError": 1.669541234150529e-07
+    },
+    "no_fair_filter": {
+      "Seeds": [
+        19381,
+        68473,
+        91753
+      ],
+      "PnlBySeed": [
+        87787.5,
+        81855.0,
+        91495.0
+      ],
+      "MeanPnl": 87045.83333333254,
+      "ProfitableBotsBySeed": [
+        67,
+        68,
+        69
+      ],
+      "ClosingFills": 13094,
+      "Wins": 8596,
+      "Losses": 3914,
+      "Even": 584,
+      "ClosingFillWinRate": 0.6564838857491981,
+      "ProfitFactor": 2.0618752488793803,
+      "PassiveEntryFraction": 0.1016754647693367,
+      "MakerEntryContractFraction": 0.7662897482351472,
+      "MeanMakerQuoteAgeAtAggressiveEntry": 28.41642350979575,
+      "MeanEntryFairEdgeTicks": 3.0295532764549344,
+      "MeanRealizedPerClosedContract": 16.379858879858766,
+      "Styles": {
+        "Momentum": {
+          "MeanPnl": 59045.83333333319,
+          "ProfitableBotsBySeed": [
+            36,
+            36,
+            36
+          ],
+          "ClosingFillWinRate": 0.7257097791798107
+        },
+        "Reversion": {
+          "MeanPnl": 27999.999999999345,
+          "ProfitableBotsBySeed": [
+            31,
+            32,
+            33
+          ],
+          "ClosingFillWinRate": 0.5915013325436779
+        }
+      },
+      "MaxAbsoluteAuditError": 1.409207470715046e-07
+    },
+    "public_fair": {
+      "Seeds": [
+        19381,
+        68473,
+        91753
+      ],
+      "PnlBySeed": [
+        21000.0,
+        26902.5,
+        29017.5
+      ],
+      "MeanPnl": 25640.00000000054,
+      "ProfitableBotsBySeed": [
+        36,
+        36,
+        35
+      ],
+      "ClosingFills": 7783,
+      "Wins": 4643,
+      "Losses": 2825,
+      "Even": 315,
+      "ClosingFillWinRate": 0.5965565977129641,
+      "ProfitFactor": 1.415327665459881,
+      "PassiveEntryFraction": 0.15455594002306805,
+      "MakerEntryContractFraction": 0.7776827704147071,
+      "MeanMakerQuoteAgeAtAggressiveEntry": 25.76949520535553,
+      "MeanEntryFairEdgeTicks": 1.9192173617532493,
+      "MeanRealizedPerClosedContract": 8.271224886584728,
+      "Styles": {
+        "Momentum": {
+          "MeanPnl": 53575.833333333845,
+          "ProfitableBotsBySeed": [
+            36,
+            36,
+            35
+          ],
+          "ClosingFillWinRate": 0.704350537969749
+        },
+        "Reversion": {
+          "MeanPnl": -27935.833333333303,
+          "ProfitableBotsBySeed": [
+            0,
+            0,
+            0
+          ],
+          "ClosingFillWinRate": 0.09197080291970802
+        }
+      },
+      "MaxAbsoluteAuditError": 1.2014061212539673e-07
+    },
+    "random_direction": {
+      "Seeds": [
+        19381,
+        68473,
+        91753
+      ],
+      "PnlBySeed": [
+        -90490.0,
+        -91977.5,
+        -93625.0
+      ],
+      "MeanPnl": -92030.83333333333,
+      "ProfitableBotsBySeed": [
+        3,
+        7,
+        5
+      ],
+      "ClosingFills": 13359,
+      "Wins": 5126,
+      "Losses": 7918,
+      "Even": 315,
+      "ClosingFillWinRate": 0.38371135564039227,
+      "ProfitFactor": 0.5253775965160884,
+      "PassiveEntryFraction": 0.25896084337349395,
+      "MakerEntryContractFraction": 0.7740184320161596,
+      "MeanMakerQuoteAgeAtAggressiveEntry": 20.79551741481202,
+      "MeanEntryFairEdgeTicks": -1.951245460537049,
+      "MeanRealizedPerClosedContract": -17.439992379984748,
+      "Styles": {
+        "Momentum": {
+          "MeanPnl": -49536.66666666686,
+          "ProfitableBotsBySeed": [
+            2,
+            2,
+            3
+          ],
+          "ClosingFillWinRate": 0.3802777388132978
+        },
+        "Reversion": {
+          "MeanPnl": -42494.166666666475,
+          "ProfitableBotsBySeed": [
+            1,
+            5,
+            2
+          ],
+          "ClosingFillWinRate": 0.38764044943820225
+        }
+      },
+      "MaxAbsoluteAuditError": 1.5560362953692675e-07
+    }
+  },
+  "VariantDefinitions": {
+    "baseline": "Current source, unchanged strategy and matching.",
+    "random_direction": "Keep original entry gates and exits; select buy/sell with an independent seeded coin flip after gates pass.",
+    "no_fair_filter": "Remove private-fair-distance predicates only from scalper reversal entries; retain observed-price turn conditions.",
+    "public_fair": "Replace private fair value with recent price-window range midpoint for scalper reversal entries only. This tests one proxy, not all public-price strategies.",
+    "fast_makers": "Maker minimum rest 18 -> 0.25 simulated seconds; reprice threshold 3 -> 1 tick. Pricing center and decision scheduling unchanged.",
+    "fair_makers": "Maker center uses current internal fair value instead of 83% last trade + 17% fair value. Inventory skew and rest/reprice rules unchanged."
+  },
+  "SourceEvidence": {
+    "PrivateFair": "src/BotSignals.luau:37",
+    "ScalperSignalsOverrideBiasNoise": "src/Participants.luau:331 and 335",
+    "MakerPricingCenter": "src/Participants.luau:240",
+    "MakerRestReprice": "src/MarketConfig.luau:15",
+    "RealizedPnl": "src/MarketEngine.luau:197",
+    "ExecutionAtRestingPrice": "src/MarketEngine.luau:402",
+    "PersistedBotHistoriesOmitted": "src/WorldCheckpoint.luau:81"
+  },
+  "Limitations": [
+    "Not a replay of the pasted report: the exact historical checkpoint was not supplied.",
+    "Aggregate counterparties at entry do not attribute every dollar of subsequent P&L to that counterparty.",
+    "Win rate counts closing fills, including partial closes; it is not a full-position roundtrip statistic.",
+    "Bot histories are stripped from durable checkpoints, so exact historical post-refresh win rates cannot be recovered from that checkpoint.",
+    "Local source text matched the corresponding connected Studio script text using length and rolling checksums; this does not prove the historical pasted snapshot used those same sources.",
+    "No game source, live balances, live orders, live configuration, or DataStore state was changed by this investigation."
+  ],
+  "FocusedTests": {
+    "Total": 27,
+    "Failures": 0
+  }
+}

@@ -1,4 +1,5 @@
-local C=require(game.ReplicatedStorage.MarketReign.MarketConfig)
+local C=table.clone(require(game.ReplicatedStorage.MarketReign.MarketConfig))
+C.BotPopulation=nil -- Account fixture intentionally has no autonomous scheduler.
 local L=require(game.ReplicatedStorage.MarketReign.ProgressionConfig)
 local E=require(script.Parent.MarketEngine)
 local F=require(script.Parent.FundedAccounts)
@@ -54,19 +55,20 @@ function Tests.Run()
   assert(f:Earned(p)==0 and f:_counts(p)==0);e:Audit()
   e,f=restore(e);p=f:Profile("101");assert(e.Accounts[p.Account].Balance==261000 and f:StartingBalance(p)==261000);e:Audit()
  end)
- test("Reset clears both directions and pending stops without trades, P&L or milestone progress",function()
+ test("Reset liquidates both directions, cancels pending entries and records closed trades",function()
   for _,side in ipairs({1,-1})do
    local e,f,a=fresh();local p=f:Profile("101");local held=open(e,a,side,2)
    held.Stop=held.Entry-side*2;held.Target=held.Entry+side*4
    assert(e:Submit(a.Id,{Contract="BT",Type="Limit",Direction=1,Quantity=1,Price=C.Contracts.BT.Last-100}))
    table.insert(e.PendingStops,{Owner=a.Id,Contract="BX",Position=held.Id})
    f:Depart("101",100);local id=a.Id;local trades=e.NextTrade
-   local stats=f:Stats("101");assert(f:ResetAccount("101",id));assert(not f:ResetAccount("101",id))
+   T.Offer(e,"BX",side,2,held.Entry)
+   assert(f:ResetAccount("101",id));assert(not f:ResetAccount("101",id))
    local nextA=e.Accounts[f:Owner("101")];assert(nextA.Balance==10000 and not next(nextA.Positions)and not next(nextA.OpenOrders))
-   assert(e.NextTrade==trades and f:Earned(p)==0 and f:_counts(p)==0 and not next(p.Awards))
+   assert(e.NextTrade>trades and f:Earned(p)==0 and f:_counts(p)==1 and not next(p.Awards))
    assert(not p.Absence and not p.AwaySummary)
    e:ProcessStops();e:AdvanceClock(.25);e:Audit()
-   e,f=restore(e);assert(not next(e.Accounts[f:Owner("101")].Positions));assert(f:_counts(f:Profile("101"))==0);e:Audit()
+   e,f=restore(e);assert(not next(e.Accounts[f:Owner("101")].Positions));assert(f:_counts(f:Profile("101"))==1);e:Audit()
   end
  end)
  test("Earned balance and permanent rank survive healthy resets; reset tokens and ownership are enforced",function()

@@ -1,0 +1,33 @@
+{
+  "Passed": true,
+  "Result": {
+    "Cases": 25,
+    "Passed": true,
+    "Labels": [
+      {
+        "Available": 106,
+        "Text": "TP 50 filled \u00b7 257 left",
+        "TextWidth": 89,
+        "Width": 320
+      },
+      {
+        "Available": 106,
+        "Text": "TP 50 filled \u00b7 257 left",
+        "TextWidth": 89,
+        "Width": 390
+      },
+      {
+        "Available": 106,
+        "Text": "TP 50 filled \u00b7 257 left",
+        "TextWidth": 89,
+        "Width": 844
+      },
+      {
+        "Available": 188,
+        "Text": "TAKE PROFIT 50 filled \u00b7 257 left",
+        "TextWidth": 136,
+        "Width": 1280
+      }
+    ]
+  }
+}

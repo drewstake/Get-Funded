@@ -1,0 +1,256 @@
+{
+  "Result": "Installed and validated in Studio; publication and public-server restart still required.",
+  "OfflineTests": 110,
+  "NativeTests": 110,
+  "Failures": 0,
+  "LiveBackupMigration": {
+    "AccountsAfter": 409,
+    "PlayersUnchanged": 16,
+    "RetiredEquityPreserved": true,
+    "ArchivedBots": 264,
+    "SourceVersion": 18,
+    "AccountsBefore": 673,
+    "CurrentMarketsPreserved": true,
+    "CheckpointVersion": 19,
+    "ExactRoundtrip": true,
+    "RawBytes": 4961982,
+    "ExactReplay": true,
+    "AuditAfter": {
+      "Inventory": {
+        "BT": 0,
+        "BX": 0,
+        "BG": 0
+      },
+      "CashError": 7.171183824539185e-07,
+      "Volume": 50888259,
+      "EquityError": -6.314367055892944e-07,
+      "Hash": 1535430557,
+      "Trades": 18787746
+    },
+    "CancelledOrders": 214,
+    "SettledPositions": 180,
+    "ReplaySeconds": 1.429854999994859,
+    "AgentsAfter": 390,
+    "ArchiveFrozen": true,
+    "AgentsBefore": 654,
+    "ReplaySteps": 240,
+    "PayloadBytes": 1259800,
+    "FundingEligible": 390,
+    "Success": true,
+    "SourceStep": 6207249,
+    "SettlementPrices": {
+      "RTY": 2315.1,
+      "YM": 43365,
+      "MES": 6248.5,
+      "MYM": 48003,
+      "M2K": 2272.4,
+      "MNQ": 21079
+    },
+    "BooksAfter": 3,
+    "AuditBefore": {
+      "Inventory": {
+        "BT": 0,
+        "BX": 0,
+        "BG": 0
+      },
+      "CashError": 6.94766640663147e-07,
+      "Volume": 50887939,
+      "EquityError": -6.388872861862183e-07,
+      "Hash": 2064871120,
+      "Trades": 18787547
+    },
+    "BooksBefore": 9
+  },
+  "StudioBackupMigration": {
+    "AccountsAfter": 398,
+    "PlayersUnchanged": 5,
+    "RetiredEquityPreserved": true,
+    "ArchivedBots": 264,
+    "SourceVersion": 18,
+    "AccountsBefore": 662,
+    "CurrentMarketsPreserved": true,
+    "CheckpointVersion": 19,
+    "ExactRoundtrip": true,
+    "RawBytes": 4949349,
+    "ExactReplay": true,
+    "AuditAfter": {
+      "Inventory": {
+        "BT": 0,
+        "BX": 0,
+        "BG": 0
+      },
+      "CashError": 1.071486622095108e-06,
+      "Volume": 67192479,
+      "EquityError": -7.632188498973846e-07,
+      "Hash": 1247755936,
+      "Trades": 26945723
+    },
+    "CancelledOrders": 261,
+    "SettledPositions": 188,
+    "ReplaySeconds": 2.1308870000066236,
+    "AgentsAfter": 390,
+    "ArchiveFrozen": true,
+    "AgentsBefore": 654,
+    "ReplaySteps": 240,
+    "PayloadBytes": 1282588,
+    "FundingEligible": 390,
+    "Success": true,
+    "SourceStep": 9499279,
+    "SettlementPrices": {
+      "RTY": 2042.5,
+      "YM": 40006,
+      "MES": 5142,
+      "MYM": 34241,
+      "M2K": 2137.6,
+      "MNQ": 17855
+    },
+    "BooksAfter": 3,
+    "AuditBefore": {
+      "Inventory": {
+        "BT": 0,
+        "BX": 0,
+        "BG": 0
+      },
+      "CashError": 1.077074557542801e-06,
+      "Volume": 67190495,
+      "EquityError": -7.855705916881561e-07,
+      "Hash": 626502989,
+      "Trades": 26945128
+    },
+    "BooksBefore": 9
+  },
+  "Benchmark": {
+    "Baseline": [
+      {
+        "Accounts": 673,
+        "Agents": 654,
+        "Books": 9,
+        "MaxMs": 17.69739994779229,
+        "MeanMs": 3.6818465499964077,
+        "P95Ms": 7.426199968904257
+      },
+      {
+        "Accounts": 673,
+        "Agents": 654,
+        "Books": 9,
+        "MaxMs": 19.52460000757128,
+        "MeanMs": 4.418836600001669,
+        "P95Ms": 8.867600001394749
+      },
+      {
+        "Accounts": 673,
+        "Agents": 654,
+        "Books": 9,
+        "MaxMs": 16.03679999243468,
+        "MeanMs": 4.1558246499917,
+        "P95Ms": 8.80369998048991
+      }
+    ],
+    "BaselineMedianMs": 4.1558246499917,
+    "Candidate": [
+      {
+        "Accounts": 409,
+        "Agents": 390,
+        "Books": 3,
+        "MaxMs": 8.837200002744794,
+        "MeanMs": 1.4088272000080906,
+        "P95Ms": 2.8581999940797687
+      },
+      {
+        "Accounts": 409,
+        "Agents": 390,
+        "Books": 3,
+        "MaxMs": 6.926000001840293,
+        "MeanMs": 1.3643644500116352,
+        "P95Ms": 2.9847999685443938
+      },
+      {
+        "Accounts": 409,
+        "Agents": 390,
+        "Books": 3,
+        "MaxMs": 9.048599982634187,
+        "MeanMs": 1.608855250000488,
+        "P95Ms": 3.6748999846167862
+      }
+    ],
+    "CandidateMedianMs": 1.4088272000080906,
+    "Rounds": 3,
+    "StepTimeReductionPercent": 66.09993638661092,
+    "Steps": 2000,
+    "Warmup": 200
+  },
+  "Playtest": {
+    "InitialStep": 9499279,
+    "FirstStopStep": 9502924,
+    "RestartStep": 9502924,
+    "FinalStep": 9504776,
+    "SimulatedMinutes": 22.904166666666665,
+    "Final": {
+      "NewClosingExecutions": 13036,
+      "Step": 9504776,
+      "ByMarket": {
+        "BT": 130,
+        "BX": 130,
+        "BG": 130
+      },
+      "Time": 2376194,
+      "Status": "Saved and lease released",
+      "Mode": "Stopped",
+      "RawBytes": 4929847,
+      "GameErrors": [],
+      "Participants": 390,
+      "Total": {
+        "CapitalAdjusted": -1799994597325.9597,
+        "Queued": 0,
+        "Active": 390,
+        "Realized": 37952.84154223734,
+        "Unrealized": -52665.34154205218,
+        "Contracts": 3700,
+        "Orders": 466,
+        "Allocation": 204000000,
+        "Retired": 0,
+        "Balance": 204037952.84154224,
+        "Count": 390,
+        "Equity": 203985287.50000015,
+        "Exits": 7,
+        "Pnl": -14712.499999812084,
+        "Positions": 290,
+        "Depleted": 0
+      },
+      "SettledPositions": 188,
+      "PayloadBytes": 1280212,
+      "Scope": "Studio",
+      "ArchivedBots": 264,
+      "LeaseUntil": 0,
+      "Audit": {
+        "Inventory": {
+          "BT": 0,
+          "BX": 0,
+          "BG": 0
+        },
+        "CashError": 1.0416842997074127e-06,
+        "Volume": 67227079,
+        "EquityError": -8.35862010717392e-07,
+        "Hash": 208720314,
+        "Trades": 26957556
+      },
+      "At": 1792380259,
+      "FundingEligible": 390,
+      "Version": 19,
+      "CapitalPreserved": true,
+      "ArchiveUnchanged": true,
+      "InitialStep": 9499279,
+      "CancelledOrders": 261,
+      "SaveSequence": 8863
+    }
+  },
+  "Sources": {
+    "EditMode": true,
+    "TemporaryObjects": [],
+    "VerifiedModules": 11
+  },
+  "Published": false,
+  "LiveDataStoreWritten": false,
+  "LocalRbxlSaved": false,
+  "StudioDataStoreSaved": true
+}

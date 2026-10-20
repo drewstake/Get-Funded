@@ -2,6 +2,7 @@
 -- transitions and a small palette of UI sounds. Presentation only; it never changes trading state.
 -- The GUI is rebuilt on refresh, so per-control state (hover, last press, selection) is remembered by
 -- the control's path. A rebuilt control continues its animation instead of snapping or replaying it.
+-- Calm mode (reduced motion) keeps colour and sheen feedback but drops scaling, bouncing and shaking.
 local TweenService=game:GetService("TweenService")
 local SoundService=game:GetService("SoundService")
 local UIS=game:GetService("UserInputService")
@@ -45,6 +46,10 @@ function FX:_sounds()
   s.SoundGroup=group s.Parent=folder self.Instances[name]=s
  end
  folder.Parent=SoundService
+end
+function FX:SetCalm(calm)
+ self.Calm=calm==true
+ if self.Root then self.Root:SetAttribute("ReducedMotion",self.Calm)end
 end
 function FX:SetSound(enabled,level)
  if enabled~=nil then self.Enabled=enabled==true end
@@ -151,8 +156,8 @@ function FX:Bind(b,opts)
  local function state(name,instant)
   if not b.Parent then return end
   local sc=scaleOf(b)
-  local target=name=="Down" and press or name=="Hover" and lift or 1
-  if instant then sc.Scale=target else
+  local target=self.Calm and 1 or name=="Down" and press or name=="Hover" and lift or 1
+  if instant or self.Calm then sc.Scale=target else
    self:Tween(sc,name=="Down" and QUICK or name=="Release" and BOUNCE or name=="Hover" and HOVER or SETTLE,{Scale=name=="Release" and lift or target})
   end
   if b.BackgroundTransparency<1 or opts.Sheen then
@@ -203,6 +208,7 @@ end
 -- Pops a control when it becomes selected (not when it is merely rebuilt while selected).
 function FX:Selected(o,selected)
  if self.Preview or not o.Parent then return end
+ if self.Calm then self:Mem(o:GetFullName()).Selected=selected;return end
  local m=self:Mem(o:GetFullName())
  local was=m.Selected m.Selected=selected
  if selected and was==false then
@@ -215,6 +221,7 @@ end
 -- A short bump when a displayed value changes (steppers). Frequent market readouts do not use this.
 function FX:Bump(o,value)
  if self.Preview or not o.Parent then return end
+ if self.Calm then self:Mem(o:GetFullName()).Value=value;return end
  local m=self:Mem(o:GetFullName())
  local was=m.Value m.Value=value
  if was~=nil and was~=value then
@@ -223,7 +230,7 @@ function FX:Bump(o,value)
 end
 function FX:Shake(o)
  if self.Preview or not o.Parent then return end
- if o:GetAttribute("FixedGeometry") then self:Ring(o,Color3.fromRGB(255,81,127));return end
+ if o:GetAttribute("FixedGeometry")or self.Calm then self:Ring(o,Color3.fromRGB(255,81,127));return end
  -- Establish the same anchor as Bind before capturing the rest position. A deferred Bind
  -- must never centre a control halfway through a shake and invalidate that saved position.
  centre(o)
@@ -244,7 +251,7 @@ end
 -- Popup entrance: scale from 90% with a light overshoot and fade the backdrop in.
 function FX:Open(dialog,backdrop,fromBottom)
  if self.Preview then return end
- if dialog and dialog.Parent then
+ if dialog and dialog.Parent and not self.Calm then
   if fromBottom then
    local target=dialog.Position dialog.Position=target+UDim2.fromOffset(0,math.min(80,dialog.AbsoluteSize.Y*.25))
    self:Tween(dialog,TweenInfo.new(.24,Enum.EasingStyle.Quint,Enum.EasingDirection.Out),{Position=target})
@@ -267,7 +274,7 @@ function FX:Ghost(items)
  for _,o in ipairs(items)do
   for _,d in ipairs(o:GetDescendants())do if d:IsA("GuiButton")or d:IsA("TextBox")then d.Active=false pcall(function()d.Interactable=false end)end end
   o.Parent=ghost
-  if o.Name~="OverlayBackdrop"and o.Name~="SheetBackdrop"then
+  if o.Name~="OverlayBackdrop"and o.Name~="SheetBackdrop"and not self.Calm then
    centre(o) self:Tween(scaleOf(o,"PopScale"),TweenInfo.new(.13,Enum.EasingStyle.Quad,Enum.EasingDirection.In),{Scale=.94})
   end
  end
@@ -301,7 +308,7 @@ function FX:Ring(o,color,radius)
 end
 function FX:Pulse(o)
  if self.Preview or not o or not o.Parent then return end
- if o:GetAttribute("FixedGeometry")then self:Ring(o,Color3.fromRGB(46,249,160));return end
+ if o:GetAttribute("FixedGeometry")or self.Calm then self:Ring(o,Color3.fromRGB(46,249,160));return end
  centre(o) local sc=scaleOf(o) sc.Scale=1.07 self:Tween(sc,BOUNCE,{Scale=1})
 end
 -- Looping decorations (loading dots, coach highlight) are stopped before each rebuild.

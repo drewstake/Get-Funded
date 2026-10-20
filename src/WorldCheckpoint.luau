@@ -21,7 +21,25 @@ local Encoding=game:GetService("EncodingService")
 -- must fail closed so they cannot discard an acknowledged summary or reset a granted bonus.
 -- V11 adds scalpers with their own entry/exit state. Older writers must not resume them as generic traders.
 -- V12 persists queued market/limit execution and aggregate budgets. Older matching engines must fail closed.
-local Checkpoint={Version=12,Readable={[1]=true,[2]=true,[3]=true,[4]=true,[5]=true,[6]=true,[7]=true,[8]=true,[9]=true,[10]=true,[11]=true,[12]=true}}
+-- V13 adds position-linked working targets and keeps stops on partially closed positions.
+-- Older engines must not resume these orders with the old OCO and entry-budget rules.
+-- V14 persists pending resets that must liquidate before granting a new account.
+-- Older builds must not discard this exposure or allow trading during liquidation.
+-- V15 records bot capital adjustments, exact populations and retiring obligations. Older writers fail closed.
+-- V16 applies one execution collar to all participants and persists request deduplication.
+-- Older writers must not restore a market and resume asymmetric executions.
+-- V17 persists bot P&L baselines and refresh receipts. Older engines must not settle
+-- refreshed positions against their strategy entries or discard the frozen P&L ledger.
+-- V18 persists the strategy-only policy and time-based signal histories. Older engines must
+-- not resume these checkpoints with different entry rules. This migration never funds bots.
+-- V19 archives settled legacy books and accounts outside the active simulation.
+-- Their cash/equity/volume remain in the audit ledger; older writers must fail closed.
+-- V20 removes private reversal signals and adds passive liquidity risk controls.
+-- Restore changes policy only; balances, live orders and positions are preserved until the next decision.
+-- V21 limits trading strategies to public data and retires saved private entry intent.
+-- V22 removes generated valuation and persists execution-derived price announcements.
+-- V23 expands funded populations without rewriting existing bots or recapitalizing losses.
+local Checkpoint={Version=23,Readable={[1]=true,[2]=true,[3]=true,[4]=true,[5]=true,[6]=true,[7]=true,[8]=true,[9]=true,[10]=true,[11]=true,[12]=true,[13]=true,[14]=true,[15]=true,[16]=true,[17]=true,[18]=true,[19]=true,[20]=true,[21]=true,[22]=true,[23]=true}}
 local function digest(raw)
  local bytes=Encoding:ComputeStringHash(raw,Enum.HashAlgorithm.Sha256)
  return (bytes:gsub(".",function(c)return string.format("%02x",string.byte(c))end))
@@ -59,25 +77,29 @@ local function rename(value,map,field)
  for key,v in pairs(value)do result[type(key)=="string"and map[key]or key]=rename(v,map,key)end
  return result
 end
-function Checkpoint.Capture(engine,population)
- local e={Accounts={},Books={},Orders={},Profiles=clone(engine.Profiles or {})}
- for _,key in ipairs({"Seed","Time","Step","NextOrder","NextPriority","NextTrade","TotalVolume","TradeHash","PendingStops","Execution"})do e[key]=clone(engine[key])end
+local function capture(engine,population,borrow)
+ local function take(value)return borrow and value or clone(value)end
+ local e={Accounts={},Books={},Orders={},Profiles=take(engine.Profiles or {}),MarketRetirement=take(engine.MarketRetirement)}
+ for _,key in ipairs({"Seed","Time","Step","NextOrder","NextPriority","NextTrade","TotalVolume","TradeHash","PendingStops","Execution","EligibilityRevision","RequestJournal","ExecutionDiagnostics","CloseNotificationErrors","LastCloseNotificationError"})do e[key]=take(engine[key])end
  for _,id in ipairs(engine.AccountOrder)do
-  local a=clone(engine.Accounts[id]);a.OpenOrders=nil
+  local a=borrow and table.clone(engine.Accounts[id])or clone(engine.Accounts[id]);a.OpenOrders=nil
   -- Bot histories are display-only; balances, cash ledger and inventory are retained exactly.
   if not a.Player then a.History={} a.Fills={}end
   table.insert(e.Accounts,a)
  end
  for _,key in ipairs(engine.Config.ContractOrder)do
   local book={}
-  for field,value in pairs(engine.Books[key])do if field~="Bids"and field~="Asks"and field~="Spec"then book[field]=clone(value)end end
+  for field,value in pairs(engine.Books[key])do if field~="Bids"and field~="Asks"and field~="Spec"then book[field]=take(value)end end
   e.Books[key]=book
  end
  local ids={}for id in pairs(engine.Orders)do table.insert(ids,id)end table.sort(ids)
- for _,id in ipairs(ids)do table.insert(e.Orders,clone(engine.Orders[id]))end
+ for _,id in ipairs(ids)do table.insert(e.Orders,take(engine.Orders[id]))end
  local p={RandomState=population.Random.State}
- for key,value in pairs(population)do if key~="Engine"and key~="Config"and key~="Random"then p[key]=clone(value)end end
- return {Version=Checkpoint.Version,Config=clone(engine.Config),Engine=e,Population=p}
+ for key,value in pairs(population)do if key~="Engine"and key~="Config"and key~="Random"then p[key]=take(value)end end
+ return {Version=Checkpoint.Version,Config=take(engine.Config),Engine=e,Population=p}
+end
+function Checkpoint.Capture(engine,population)
+ return capture(engine,population,false) -- Independently mutable fixture/checkpoint copy.
 end
 function Checkpoint.Restore(snapshot,currentConfig)
  assert(type(snapshot)=="table"and Checkpoint.Readable[snapshot.Version],"Unsupported saved market format")
@@ -85,9 +107,51 @@ function Checkpoint.Restore(snapshot,currentConfig)
  for old,name in pairs(map)do if old~=name then snapshot=rename(snapshot,map) break end end
  -- Preserve saved behavior except explicit, versioned migrations; presentation cadence may change.
  local config=clone(snapshot.Config)
+ local flow=currentConfig.OrderFlowMarket and currentConfig.OrderFlowMarket.Version or 0
+ assert((config.OrderFlowMarket and config.OrderFlowMarket.Version or 0)<=flow,'Cannot downgrade order-driven market policy')
+ if (config.OrderFlowMarket and config.OrderFlowMarket.Version or 0)<flow then
+  config.OrderFlowMarket=clone(currentConfig.OrderFlowMarket);config.Regimes=clone(currentConfig.Regimes);config.NewsFrequency=0
+ end
+ local information=currentConfig.BotInformationVersion or 0
+ assert((config.BotInformationVersion or 0)<=information,'Cannot downgrade bot information policy')
+ config.BotInformationVersion=information>0 and information or nil
+ local retirement=currentConfig.MarketRetirementVersion or 0
+ assert((config.MarketRetirementVersion or 0)<=retirement,'Cannot downgrade market retirement policy')
+ config.MarketRetirementVersion=retirement>0 and retirement or nil
+ local savedSignals=config.BotSignals and config.BotSignals.Version or 0
+ local currentSignals=currentConfig.BotSignals and currentConfig.BotSignals.Version or 0
+ assert(savedSignals<=currentSignals,"Cannot downgrade bot signal policy")
+ if savedSignals<currentSignals then config.BotSignals=clone(currentConfig.BotSignals)end
+ local savedLiquidity=config.BotLiquidity and config.BotLiquidity.Version or 0
+ local currentLiquidity=currentConfig.BotLiquidity and currentConfig.BotLiquidity.Version or 0
+ assert(savedLiquidity<=currentLiquidity,'Cannot downgrade bot liquidity policy')
+ if savedLiquidity<currentLiquidity then config.BotLiquidity=clone(currentConfig.BotLiquidity)end
+ local savedPolicy=snapshot.Population.PolicyVersion or 0
+ if savedPolicy>0 then
+  assert(config.BotPopulation and config.BotPopulation.Version==savedPolicy,"Inconsistent saved bot policy")
+  if currentConfig.BotPopulation and savedPolicy==currentConfig.BotPopulation.Version then
+   for _,kind in ipairs(currentConfig.BotPopulation.Order)do
+    assert(config.BotPopulation.Counts[kind]==currentConfig.BotPopulation.Counts[kind]
+     and config.BotPopulation.Capital[kind]==currentConfig.BotPopulation.Capital[kind],"Bot allocation changes require a policy version bump")
+   end
+  end
+ end
+ local upgradeBots=(snapshot.Population.PolicyVersion or 0)<(currentConfig.BotPopulation and currentConfig.BotPopulation.Version or 0)
+ assert((snapshot.Population.PolicyVersion or 0)<=(currentConfig.BotPopulation and currentConfig.BotPopulation.Version or 0),"Cannot downgrade bot population policy")
+ if upgradeBots then
+  if savedPolicy>=1 then
+   for _,kind in ipairs(currentConfig.BotPopulation.Order)do
+    assert(config.BotPopulation.Counts[kind]<=currentConfig.BotPopulation.Counts[kind]
+     and config.BotPopulation.Capital[kind]==currentConfig.BotPopulation.Capital[kind],"Population expansion must preserve existing allocation and funding")
+   end
+  end
+  for _,key in ipairs({"BotPopulation","MakersPerInstrument","ParticipantsPerInstrument","WhalesPerInstrument","ScalpersPerInstrument","Scalper","Reserve"})do config[key]=clone(currentConfig[key])end
+ end
  local upgradeReserves=(config.ReservePopulationVersion or 0)<(currentConfig.ReservePopulationVersion or 0)
  if upgradeReserves then config.Reserve=clone(currentConfig.Reserve);config.ReservePopulationVersion=currentConfig.ReservePopulationVersion end
  config.PlayerExecution=clone(currentConfig.PlayerExecution)
+ config.BotExitRetrySeconds=currentConfig.BotExitRetrySeconds
+ config.SimulationFrameBudgetMs=currentConfig.SimulationFrameBudgetMs
  local upgradeScalpers=(config.ScalperPopulationVersion or 0)<(currentConfig.ScalperPopulationVersion or 0)
  if upgradeScalpers then
   config.ScalpersPerInstrument=currentConfig.ScalpersPerInstrument
@@ -127,7 +191,8 @@ function Checkpoint.Restore(snapshot,currentConfig)
   if current then spec.Margin=current.Margin end
  end
  local data=snapshot.Engine local engine=Engine.new(config,data.Seed)
- for _,key in ipairs({"Time","Step","NextOrder","NextTrade","TotalVolume","TradeHash","PendingStops","Execution"})do engine[key]=clone(data[key])end
+ engine.MarketRetirement=clone(data.MarketRetirement)
+ for _,key in ipairs({"Time","Step","NextOrder","NextTrade","TotalVolume","TradeHash","PendingStops","Execution","EligibilityRevision","RequestJournal","ExecutionDiagnostics","CloseNotificationErrors","LastCloseNotificationError"})do engine[key]=clone(data[key])end
  engine.NextPriority=data.NextPriority or data.NextOrder
  for _,a in ipairs(data.Accounts)do
   local account=clone(a);account.OpenOrders={}
@@ -153,6 +218,9 @@ function Checkpoint.Restore(snapshot,currentConfig)
   if o.Type=="Limit"and not o.Queued and not(engine.Accounts[o.Owner].Player and snapshot.Version<9)then engine:_rest(engine.Books[o.Contract],o)end
  end
  local population=setmetatable({Engine=engine,Config=config},Participants)
+ -- Rebuilding FIFO is not a liquidity change. Keep saved retry deadlines valid;
+ -- subsequent migrations/protection repairs still invalidate affected books.
+ for key,fields in pairs(data.Books)do engine.Books[key].ExitLiquidityRevision=fields.ExitLiquidityRevision end
  for key,value in pairs(snapshot.Population)do if key~="RandomState"then population[key]=clone(value)end end
  population.Random=Participants.RNG.new(1);population.Random.State=snapshot.Population.RandomState
  assert(type(population.Random.State)=="number"and population.Random.State>0 and population.Random.State<2147483647,"Invalid saved random state")
@@ -190,9 +258,11 @@ function Checkpoint.Restore(snapshot,currentConfig)
   end
  end
  for _,key in ipairs(order) do if added[key] then population:AddMarket(key) end end
- if upgradeMakers then population:EnsureMakers(currentConfig.ContractOrder,config.MakersPerInstrument) end
- if upgradeScalpers then population:EnsureScalpers(currentConfig.ContractOrder,config.ScalpersPerInstrument) end
- if upgradeReserves then population:EnsureReserves(currentConfig.ContractOrder);population:RefreshReservePolicy()end
+ if not upgradeBots then
+  if upgradeMakers then population:EnsureMakers(currentConfig.ContractOrder,config.MakersPerInstrument) end
+  if upgradeScalpers then population:EnsureScalpers(currentConfig.ContractOrder,config.ScalpersPerInstrument) end
+  if upgradeReserves then population:EnsureReserves(currentConfig.ContractOrder);population:RefreshReservePolicy()end
+ end
  -- Lifetime trading stats (no format change): rebuilt once from saved history for older accounts,
  -- reconciled against the ledger for all others. Idempotent across repeated restores.
  local now=os.time()
@@ -200,9 +270,10 @@ function Checkpoint.Restore(snapshot,currentConfig)
  -- floating-point drift. Rebuild only tiny discrepancies from the existing capital/P&L ledger;
  -- larger differences still fail Audit. New settlement derives Balance from that ledger.
  for _,id in ipairs(engine.AccountOrder)do local a=engine.Accounts[id]
-  local gap=a.Balance-a.Base-a.Realized
-  if a.Base>=1e9 and math.abs(gap)<.005 then a.Balance=a.Base+a.Realized end
+  local gap=a.Balance-a.Base-(a.PnlBaseline or 0)-a.Realized
+  if a.Base>=1e9 and math.abs(gap)<.005 then a.Balance=a.Base+(a.PnlBaseline or 0)+a.Realized end
  end
+ require(script.Parent.BotPopulation).Apply(population)
  for _,id in ipairs(engine.AccountOrder) do local a=engine.Accounts[id] if a.Player then TradeStats.Reconcile(engine,a,now) end end
  -- Required migration, not optional leaderboard work: any failure aborts restore before saving.
  require(script.Parent.FundedAccounts).new(engine,require(game.ReplicatedStorage.MarketReign.ProgressionConfig),currentConfig)
@@ -211,6 +282,13 @@ function Checkpoint.Restore(snapshot,currentConfig)
   local pending={};for id,o in pairs(engine.Orders)do if o.Type=="Limit"and engine.Accounts[o.Owner].Player then table.insert(pending,id)end end
   table.sort(pending);for _,id in ipairs(pending)do local o=engine.Orders[id];engine:Cancel(o.Owner,id)end
  end
+ require(script.Parent.LegacyRetirement).Apply(engine,population)
+ -- Rebuild missing targets/adopt legacy closing limits without executing trades during restore.
+ local Protective=require(script.Parent.ProtectiveOrders)
+ for _,id in ipairs(engine.AccountOrder)do local a=engine.Accounts[id]
+  if a.Player then for key in pairs(a.Positions)do Protective.Mark(engine,a,key)end end
+ end
+ Protective.Sync(engine,true)
  engine:Audit()
  return engine,population
 end
@@ -242,5 +320,11 @@ function Checkpoint.Decode(record,maxDecodedBytes)
  local raw=buffer.tostring(Encoding:DecompressBuffer(compressed,Enum.CompressionAlgorithm.Zstd))
  assert(digest(raw)==record.Digest,"Checkpoint checksum failed")
  return Http:JSONDecode(raw)
+end
+function Checkpoint.EncodeWorld(engine,population,maxRawBytes)
+ -- No borrowed table escapes this non-yielding call. EncodingService and JSON
+ -- encoding are synchronous; the engine cannot advance between capture and
+ -- serialization. Public Capture remains a deep copy for asynchronous consumers.
+ return Checkpoint.Encode(capture(engine,population,true),maxRawBytes)
 end
 return Checkpoint

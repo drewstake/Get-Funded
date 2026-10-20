@@ -1,0 +1,35 @@
+-- Permanent progression uses realized trading evidence; grants never count.
+return {
+ Version=4,ProgressionVersion=1,StartingBalance=10000,MinimumContracts=5,BalancePerContract=1000,MarginUse=0.8,
+ ResetLimits={Burst=5,RefillSeconds=720},AccountLimits={MaxExchangeAccounts=20000},
+ BadgeAtlas="rbxassetid://114491192679289",BadgeAtlasSize=1024,
+ Ranks={
+  {Id="Rookie",Name="Market Rookie",Trades=0,Wins=0,Profit=0,Badge=1},
+  {Id="Apprentice",Name="Trading Apprentice",Trades=25,Wins=10,Profit=25000,Badge=2},
+  {Id="Rising",Name="Rising Trader",Trades=100,Wins=40,Profit=100000,Badge=4},
+  {Id="Skilled",Name="Skilled Trader",Trades=250,Wins=100,Profit=250000,Badge=7},
+  {Id="Pro",Name="Market Pro",Trades=500,Wins=250,Profit=500000,Badge=11},
+  {Id="Master",Name="Market Master",Trades=1000,Wins=500,Profit=1000000,Badge=13},
+  {Id="Legend",Name="Trading Legend",Trades=2500,Wins=1250,Profit=2500000,Badge=15},
+  {Id="Sovereign",Name="Market Sovereign",Trades=5000,Wins=2500,Profit=5000000,Badge=16},
+ },
+ Milestones={
+  -- IDs are persistent save keys; keep them stable when raising requirements.
+  {Id="FirstTrade",StartingBonus=2500,Name="Close 25 trades",Kind="Trades",Goal=25,Title="Opening Bell",Badge=2,OldTitle="Trader"},
+  {Id="FirstWin",StartingBonus=5000,Name="Close 25 profitable trades",Kind="Wins",Goal=25,Title="Green Spark",Badge=3,OldTitle="First Win"},
+  {Id="Trades5",StartingBonus=7500,Name="Close 100 trades",Kind="Trades",Goal=100,Title="Tape Reader",Badge=4},
+  {Id="Profit500",StartingBonus=7500,Name="Reach $50,000 lifetime net profit",Kind="Profit",Goal=50000,Title="Profit Scout",Badge=5,OldTitle="Rising Trader"},
+  {Id="Wins10",StartingBonus=10000,Name="Close 100 profitable trades",Kind="Wins",Goal=100,Title="Green Collector",Badge=6},
+  {Id="Trades25",StartingBonus=10000,Name="Close 500 trades",Kind="Trades",Goal=500,Title="Market Navigator",Badge=7},
+  {Id="Profit2500",StartingBonus=10000,Name="Reach $100,000 lifetime net profit",Kind="Profit",Goal=100000,Title="Golden Edge",Badge=8},
+  {Id="Balance10K",StartingBonus=12500,Name="Reach $250,000 lifetime net profit",Kind="Profit",Goal=250000,Title="Momentum Maker",Badge=9,OldTitle="Skilled Trader"},
+  {Id="Trades100",StartingBonus=15000,Name="Close 1,000 trades",Kind="Trades",Goal=1000,Title="Order Veteran",Badge=10},
+  {Id="Balance25K",StartingBonus=15000,Name="Reach $500,000 lifetime net profit",Kind="Profit",Goal=500000,Title="Market Pro",Badge=11},
+  {Id="Wins100",StartingBonus=20000,Name="Close 500 profitable trades",Kind="Wins",Goal=500,Title="Profit Ace",Badge=12},
+  {Id="Balance50K",StartingBonus=20000,Name="Reach $1,000,000 lifetime net profit",Kind="Profit",Goal=1000000,Title="Market Master",Badge=13},
+  {Id="Trades500",StartingBonus=25000,Name="Close 5,000 trades",Kind="Trades",Goal=5000,Title="Closing Champion",Badge=14},
+  {Id="Balance100K",StartingBonus=25000,Name="Reach $2,500,000 lifetime net profit",Kind="Profit",Goal=2500000,Title="Get Funded Legend",Badge=15},
+  {Id="Wins500",StartingBonus=30000,Name="Close 2,500 profitable trades",Kind="Wins",Goal=2500,Title="Emerald Titan",Badge=14},
+  {Id="Profit250K",StartingBonus=35000,Name="Reach $5,000,000 lifetime net profit",Kind="Profit",Goal=5000000,Title="Market Sovereign",Badge=16},
+ },
+}

@@ -1,0 +1,38 @@
+{
+  "Audit": {
+    "Inventory": {
+      "BT": 0,
+      "BX": 0,
+      "YM": 0,
+      "BG": 0,
+      "MNQ": 0,
+      "RTY": 0,
+      "MES": 0,
+      "MYM": 0,
+      "M2K": 0
+    },
+    "CashError": 8.791685104370117e-07,
+    "Volume": 60038907,
+    "EquityError": 1.7285346984863281e-06,
+    "Trades": 24278136,
+    "Hash": 2100964065
+  },
+  "Unix": 1792045984,
+  "Queue": 0,
+  "Observers": [],
+  "Status": "SHARED \u00b7 SAVED",
+  "Mode": "Shared",
+  "Accounts": {
+    "player:42875739:single-history": {
+      "Balance": -58130349.99999966,
+      "Positions": [],
+      "Orders": []
+    },
+    "player:42875739:single:6": {
+      "Balance": 135000,
+      "Positions": [],
+      "Orders": []
+    }
+  },
+  "Step": 8988024
+}

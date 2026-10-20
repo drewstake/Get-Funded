@@ -8,7 +8,7 @@ return function(engine,population,operationId)
  local seen={}
  for _,agent in ipairs(population.Agents)do
   local book=engine.Books[agent.Key]
-  if not book or book.Spec.CloseOnly then continue end
+  if not book or book.Spec.CloseOnly or agent.Retiring then continue end
   local account=assert(engine.Accounts[agent.Id],"Bot account missing")
   assert(not seen[agent.Id] and not account.Player and not account.House and not account.Archive,"Invalid bot account")
   seen[agent.Id]=true
@@ -17,8 +17,12 @@ return function(engine,population,operationId)
   if amount<=0 then receipt.Unchanged+=1;continue end
   -- Capital deposits raise both base and balance. Realized P&L and the trade cash ledger stay intact.
   local before=account.Balance
+  account.StartingCapital=account.StartingCapital or account.Base
+  account.NetCapitalAdjustments=(account.NetCapitalAdjustments or 0)+amount
+  account.CapitalAdjustments=account.CapitalAdjustments or {}
+  table.insert(account.CapitalAdjustments,{OperationId=operationId,Time=engine.Time,Amount=amount,Reason="Manual bot replenishment"})
   account.Base+=amount
-  account.Balance=account.Base+account.Realized
+  account.Balance=account.Base+(account.PnlBaseline or 0)+account.Realized
   account.LossLimit=account.Base
   account.Revision+=1
   assert(math.abs(account.Balance-agent.Budget)<0.001,"Refill accounting mismatch")

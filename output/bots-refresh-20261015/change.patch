@@ -1,0 +1,196 @@
+--- before/MarketEngine.luau
++++ after/MarketEngine.luau
+@@ -43,12 +43,12 @@
+  for _,key in ipairs(self.Config.ContractOrder) do
+   local b=self.Books[key] local p=a.Positions[key]
+   if p then
+-   unrealized+=((b.Last or b.Reference)*b.Spec.Tick-p.Entry)*p.Quantity*p.Direction*b.Spec.Multiplier
++   unrealized+=((b.Last or b.Reference)*b.Spec.Tick-(p.PnlEntry or p.Entry))*p.Quantity*p.Direction*b.Spec.Multiplier
+    count+=1 margin+=p.Quantity*b.Spec.Margin
+   end
+  end
+  -- Funded accounts liquidate on equity depletion; margin limits apply to new exposure.
+- return {Balance=a.Balance,Equity=a.Balance+unrealized,Unrealized=unrealized,Session=a.Balance+unrealized-a.Base,
++ return {Balance=a.Balance,Equity=a.Balance+unrealized,Unrealized=unrealized,Session=a.Balance+unrealized-a.Base-(a.PnlBaseline or 0),
+   Allowance=math.max(0,a.Balance+unrealized),Count=count,Margin=margin}
+ end
+ function Engine:Exposure(a,key,side,qty,summary)
+@@ -194,12 +194,12 @@
+   local closed=math.min(math.abs(oldNet),qty)
+   -- A saved account from before lifetime stats is migrated before this execution changes its ledger.
+   if a.Player and (type(a.Stats)~="table" or a.Stats.V~=TradeStats.Version or a.Stats.DayV~=1) then TradeStats.Reconcile(self,a,os.time()) end
+-  realized=(price-p.Entry)*closed*p.Direction*b.Spec.Multiplier
+-  a.Realized+=realized;a.Balance=a.Base+a.Realized
++  realized=(price-(p.PnlEntry or p.Entry))*closed*p.Direction*b.Spec.Multiplier
++  a.Realized+=realized;a.Balance=a.Base+(a.PnlBaseline or 0)+a.Realized
+   self:ContractLimit(a)
+   -- Persist eligibility independently of the bounded display history, including break-even closes.
+   a.CompletedTrades=(a.CompletedTrades or #a.History)+1
+-  table.insert(a.History,1,{PositionId=p.Id,Contract=o.Contract,Direction=p.Direction,Quantity=closed,Entry=p.Entry,Exit=price,Pnl=realized,
++  table.insert(a.History,1,{PositionId=p.Id,Contract=o.Contract,Direction=p.Direction,Quantity=closed,Entry=p.Entry,PnlEntry=p.PnlEntry,Exit=price,Pnl=realized,
+    Time=string.format("%02d:%02d:%02d",math.floor(self.Time/3600)%24,math.floor(self.Time/60)%60,math.floor(self.Time)%60),ClosedAt=os.time(),TradeId=tradeId,
+    Reason=o.Protection or p.Triggered or "Trade"})
+   -- Lifetime counters update on the same execution; trimming the display history below never changes them.
+@@ -213,7 +213,10 @@
+   p={Id=o.Id,Contract=o.Contract,Direction=net>0 and 1 or -1,Quantity=math.abs(net),Entry=price}
+   a.Positions[o.Contract]=p
+  else
+-  if oldNet*delta>0 then p.Entry=(p.Entry*math.abs(oldNet)+price*qty)/math.abs(net) end
++  if oldNet*delta>0 then
++   if p.PnlEntry then p.PnlEntry=(p.PnlEntry*math.abs(oldNet)+price*qty)/math.abs(net)end
++   p.Entry=(p.Entry*math.abs(oldNet)+price*qty)/math.abs(net)
++  end
+   p.Quantity=math.abs(net)
+  end
+  p=a.Positions[o.Contract]
+@@ -848,7 +851,7 @@
+   local p=a.Positions[symbol]
+   if p then
+    positions[symbol]=copy(p)
+-   positions[symbol].Unrealized=((self.Books[symbol].Last or self.Books[symbol].Reference)*self.Books[symbol].Spec.Tick-p.Entry)*p.Quantity*p.Direction*self.Books[symbol].Spec.Multiplier
++   positions[symbol].Unrealized=((self.Books[symbol].Last or self.Books[symbol].Reference)*self.Books[symbol].Spec.Tick-(p.PnlEntry or p.Entry))*p.Quantity*p.Direction*self.Books[symbol].Spec.Multiplier
+    for _,field in ipairs({"Stop","Target"}) do if p[field] then
+     local kind=field=="Stop"and "Stop loss"or "Take profit"
+     local closing=p.Triggered==kind
+@@ -914,7 +917,16 @@
+  for _,key in ipairs(self.Config.ContractOrder) do inventory[key]=0 end
+  for _,id in ipairs(self.AccountOrder) do
+   local a=self.Accounts[id] cash+=a.CashFlow equity+=self:Summary(a).Equity-a.Base
+-  assert(math.abs(a.Balance-a.Base-a.Realized)<0.001,"Balance / realized reconciliation")
++  assert(math.abs(a.Balance-a.Base-(a.PnlBaseline or 0)-a.Realized)<0.001,"Balance / realized reconciliation")
++  if a.PnlBaseline then
++   assert(not a.Player and not a.House and not a.Archive,"Invalid bot accounting baseline")
++   assert(math.abs(a.Base-a.StartingCapital-a.NetCapitalAdjustments)<0.001,"Bot capital reconciliation")
++   local marked=a.CashFlow
++   for key,p in pairs(a.Positions)do local b=self.Books[key]
++    marked+=(b.Last or b.Reference)*b.Spec.Tick*p.Quantity*p.Direction*b.Spec.Multiplier
++   end
++   assert(math.abs(self:Summary(a).Equity-a.Base-marked)<0.01,"Bot cash / marked equity reconciliation")
++  end
+   local st=a.Stats
+   if a.Player and type(st)=="table" then
+    assert(math.abs(a.Realized-(st.Gains-st.Loss+st.UntrackedNet))<0.01,"Lifetime stats / realized reconciliation")
+--- before/BotPopulation.luau
++++ after/BotPopulation.luau
+@@ -96,7 +96,7 @@
+    ac.CapitalAdjustments=ac.CapitalAdjustments or {}
+    table.insert(ac.CapitalAdjustments,{Version=c.Version,Time=p.Engine.Time,Amount=row.FundingAdjustment,
+     EquityBefore=row.EquityBefore,TargetEquity=row.TargetEquity,Reason='Bot population migration'})
+-   ac.Base=ac.StartingCapital+ac.NetCapitalAdjustments;ac.Balance=ac.Base+ac.Realized
++   ac.Base=ac.StartingCapital+ac.NetCapitalAdjustments;ac.Balance=ac.Base+(ac.PnlBaseline or 0)+ac.Realized
+    ac.PolicyCapitalTarget=c.Capital[a.Kind];ac.Limit=a.Limit;ac.Risk=a.Risk;ac.LossLimit=ac.Base
+    ac.Locked=false;ac.Revision+=1
+    -- Existing triggered liquidations and positions are preserved; repair happens through matching.
+--- before/WorldService.luau
++++ after/WorldService.luau
+@@ -5,6 +5,7 @@
+ local Lease=require(script.Parent.WorldLease)
+ local Engine=require(script.Parent.MarketEngine)
+ local Participants=require(script.Parent.Participants)
++local BotRefresh=require(script.Parent.BotRefresh)
+ local Settings=require(script.Parent.WorldConfig)
+ local World={} World.__index=World
+ function World.new(config,options)
+@@ -168,6 +169,37 @@
+  end
+  return ok,ok and result or tostring(err)
+ end
++-- Called only at the server scheduler boundary. Preview/encode do not yield or write
++-- live accounts; the lease commit freezes simulation until its outcome is known.
++function World:RefreshBots(sequence,actor)
++ if self.Busy or self.Mode~="Shared"or not self:CanRun()then return false,"Exchange is not ready."end
++ self.Busy=true;self.Transaction=true
++ local attempted=false;local result
++ local rawBytes,storedBytes=self.LastRawBytes,self.LastStoredBytes
++ local ok,err=pcall(function()
++  local plan=BotRefresh.Prepare(self.Engine,self.Population,sequence,actor)
++  result=plan.Receipt
++  if plan.Duplicate then return end
++  local engine,population=BotRefresh.Preview(self.Engine,self.Population,plan)
++  engine:Audit()
++  local encoded,step,projection=self:_encode(engine,population)
++  assert(not self.CaptureProjection or projection,"Cannot refresh without leaderboard projection")
++  attempted=true;self.Lease:Commit(encoded,step,false)
++  -- No epoch swap: preserve live objects, callbacks, pending requests and FIFO identity.
++  BotRefresh.Apply(self.Engine,self.Population,plan)
++  self:_committed(projection)
++ end)
++ self.Busy=false;self.Transaction=false;self.NextSave=self.Now()+self.Settings.SaveSeconds
++ if not ok then
++  self.LastRawBytes=rawBytes;self.LastStoredBytes=storedBytes;self.LastError=tostring(err)
++  if attempted then
++   self.Healthy=false;self.Mode="Unavailable";self.Status="Verifying the saved exchange"
++   self.Engine=nil;self.Population=nil;self.Epoch+=1;self.NextAttempt=self.Now()+self.Settings.RetrySeconds
++  end
++  warn("[Get Funded!] Bot refresh failed: "..tostring(err))
++ end
++ return ok,ok and result or tostring(err)
++end
+ function World:Maintain()
+  if self.Closing or self.Busy or self.Mode=="Local"then return end
+  local now=self.Now()
+--- before/WorldCheckpoint.luau
++++ after/WorldCheckpoint.luau
+@@ -28,7 +28,9 @@
+ -- V15 records bot capital adjustments, exact populations and retiring obligations. Older writers fail closed.
+ -- V16 applies one execution collar to all participants and persists request deduplication.
+ -- Older writers must not restore a market and resume asymmetric executions.
+-local Checkpoint={Version=16,Readable={[1]=true,[2]=true,[3]=true,[4]=true,[5]=true,[6]=true,[7]=true,[8]=true,[9]=true,[10]=true,[11]=true,[12]=true,[13]=true,[14]=true,[15]=true,[16]=true}}
++-- V17 persists bot P&L baselines and refresh receipts. Older engines must not settle
++-- refreshed positions against their strategy entries or discard the frozen P&L ledger.
++local Checkpoint={Version=17,Readable={[1]=true,[2]=true,[3]=true,[4]=true,[5]=true,[6]=true,[7]=true,[8]=true,[9]=true,[10]=true,[11]=true,[12]=true,[13]=true,[14]=true,[15]=true,[16]=true,[17]=true}}
+ local function digest(raw)
+  local bytes=Encoding:ComputeStringHash(raw,Enum.HashAlgorithm.Sha256)
+  return (bytes:gsub(".",function(c)return string.format("%02x",string.byte(c))end))
+@@ -233,8 +235,8 @@
+  -- floating-point drift. Rebuild only tiny discrepancies from the existing capital/P&L ledger;
+  -- larger differences still fail Audit. New settlement derives Balance from that ledger.
+  for _,id in ipairs(engine.AccountOrder)do local a=engine.Accounts[id]
+-  local gap=a.Balance-a.Base-a.Realized
+-  if a.Base>=1e9 and math.abs(gap)<.005 then a.Balance=a.Base+a.Realized end
++  local gap=a.Balance-a.Base-(a.PnlBaseline or 0)-a.Realized
++  if a.Base>=1e9 and math.abs(gap)<.005 then a.Balance=a.Base+(a.PnlBaseline or 0)+a.Realized end
+  end
+  require(script.Parent.BotPopulation).Apply(population)
+  for _,id in ipairs(engine.AccountOrder) do local a=engine.Accounts[id] if a.Player then TradeStats.Reconcile(engine,a,now) end end
+--- before/MarketServer.server.luau
++++ after/MarketServer.server.luau
+@@ -16,6 +16,7 @@
+ local RequestQueue=require(script.Parent.RequestQueue)
+ local OwnerResetCommand=require(script.Parent.OwnerResetCommand)
+ local OwnerGiveCommand=require(script.Parent.OwnerGiveCommand)
++local OwnerBotsCommand=require(script.Parent.OwnerBotsCommand)
+ local DepthAccess=require(script.Parent.MarketDepthAccess)
+ local depthAccess=DepthAccess.new()
+ Funded.Validate(Progression) -- Fail closed on invalid progression configuration.
+@@ -403,6 +404,21 @@
+  if player then giveCommand:Handle(player,text)end
+ end)
+ giveChat.Parent=chat
++local botsCommand=OwnerBotsCommand.new({
++ CreatorType=game.CreatorType,CreatorId=game.CreatorId,
++ GroupLookup=ownerCommand.Options.GroupLookup,
++ Ready=function()return world.Mode=="Shared"and not world.Busy and world:CanRun()end,
++ NextSequence=function()local r=world.Population.BotRefreshReceipt;return (r and r.Sequence or 0)+1 end,
++ Notify=ownerCommand.Options.Notify,
++ Refresh=function(sequence,actor)return world:RefreshBots(sequence,actor)end,
++})
++local oldBots=chat:FindFirstChild("OwnerBotsCommand");if oldBots then oldBots:Destroy()end
++local botsChat=Instance.new("TextChatCommand");botsChat.Name="OwnerBotsCommand";botsChat.PrimaryAlias="/bots";botsChat.AutocompleteVisible=false
++botsChat.Triggered:Connect(function(source,text)
++ local player=source and Players:GetPlayerByUserId(source.UserId)
++ if player then botsCommand:Handle(player,text)end
++end)
++botsChat.Parent=chat
+ task.spawn(function()world:Open()end)
+ game:BindToClose(function()
+  if funded then for _,state in pairs(clients)do funded:Depart(state.Uid)end end
+@@ -440,6 +456,8 @@
+  if active then
+   local limited
+   elapsed,steps,limited=SimulationScheduler.Advance(elapsed,Config,function()
++   -- Owner maintenance precedes the next request batch/step, never interleaves with a fill.
++   if botsCommand:AtBoundary()then return false end
+    -- Bound request work, with a fixed FIFO batch for deterministic replay. Every
+    -- accepted tail stays queued; the simulation still completes each atomic step.
+    local pending;pending,queue=RequestQueue.Take(queue)

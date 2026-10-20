@@ -90,13 +90,13 @@ function Tests.Run()
   local restored,agents=Checkpoint.Restore(before,C)
   local after=Checkpoint.Capture(restored,agents)
   equal(before.Engine,after.Engine);equal(before.Population,after.Population)
-  assert(after.Config.MakerQuoteSizeMultiplier==3 and after.Config.MakerReplenishSeconds==1.5 and after.Config.MakerDecisionMultiplier==.5)
+  assert(after.Config.MakerQuoteSizeMultiplier==C.MakerQuoteSizeMultiplier and after.Config.MakerReplenishSeconds==1.5 and after.Config.MakerDecisionMultiplier==.5)
   local resumed,rp=Checkpoint.Restore(Checkpoint.Decode(Checkpoint.Encode(after)),C)
   equal(after,Checkpoint.Capture(resumed,rp))
   for _=1,400 do agents:Step();rp:Step()end
   equal(Checkpoint.Capture(restored,agents),Checkpoint.Capture(resumed,rp))
   local migrated=0;for _,a in ipairs(agents.Agents)do if a.Kind=="Maker" and a.QuotePolicy==C.MakerQuotePolicyVersion then migrated+=1 end end
-  assert(migrated==30);restored:Audit();resumed:Audit()
+  assert(migrated==180);restored:Audit();resumed:Audit()
   return "Restore preserves history and accounts; makers adopt the policy on their next turn; replay remains exact"
  end)
  return results

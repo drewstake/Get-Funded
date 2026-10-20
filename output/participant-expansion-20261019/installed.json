@@ -1,0 +1,24 @@
+{
+  "Installed": {
+    "ServerScriptService.MarketReign.BotLiquidity": "1ed33a103d2a0fefd47b2fabee9d9e2e2a3fd3f715fd0f0f53def9acce0aa039",
+    "ServerScriptService.MarketReign.OrderFlowMarketTests": "bacebad03a4b6b9694f4b65c957b80386b304d8b705707bdab8ba2346c489394",
+    "ServerScriptService.MarketReign.BotPopulation": "b486090a1c2ffb22826c87edc142d132cf5d9c633ac87a352dd2a2d4c94d6839",
+    "ServerScriptService.MarketReign.DepthRealismTests": "ef4d055163da16ab254b24d02288df59231bb37b68173bd75f535cee358699c7",
+    "ServerScriptService.MarketReign.WorldCheckpoint": "6fcd08b2c9b114e15880e3913b89fad78d935a437d4fd5ae29057d8ccb0bb676",
+    "ServerScriptService.MarketReign.BotRefreshTests": "788b876c023739a02c3d9c1e716878e1ec631e0508e39db339981937db8e3d50",
+    "ServerScriptService.MarketReign.ParticipantExpansionTests": "c6adfe1d84cdba229e8509e6952301918a49ed73aba0384a0d7d51330a496a35",
+    "ServerScriptService.MarketReign.BotSignals": "3a796d1c597634eec17d0e9fcd0ef4b5e8827713f750ec4d9cd277c734aa3f39",
+    "ServerScriptService.MarketReign.MakerLiquidityTests": "c1e1fb65064f1951aca015a665aefac9d2569f8a369bb23adc6e7e6a68ac150c",
+    "ServerScriptService.MarketReign.WorldTests": "6f738fe1bf80ca10ab170dded5b97d438cb8611d3fd264e72ee4cb33c8f4d3b8",
+    "ServerScriptService.MarketReign.ScalperTests": "a537eabc036447d101bbc40687cc3ea072854f0ef4474015dfafddfba17b54df",
+    "ServerScriptService.MarketReign.Participants": "a6566101904ec0a9230d96ea819f58c1e6999212bdfb7840bf73621aa98ac0e4",
+    "ServerScriptService.MarketReign.MarketEngine": "f1886003b1f3c91d36901f3d538ed0d458b4eee2be10d56202215fad6ddd88b0",
+    "ServerScriptService.MarketReign.LegacyRetirementTests": "d746889f0886f54a7d79fb961da3ca9cbcb24fa4301a9f09f8dcec6bc6a569e4",
+    "ServerScriptService.MarketReign.BotPopulationTests": "4c133e4604b3e67fcc808aa34e8c83c1af4e2d0dd57d1ce2af20e378035eb003",
+    "ReplicatedStorage.MarketReign.MarketConfig": "257134429d078c9dbdf8221e908248db694b840975e3885f5562b6b4dc416193"
+  },
+  "Count": 16,
+  "Saved": false,
+  "DataStoreWrites": false,
+  "Published": false
+}

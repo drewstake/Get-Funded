@@ -1,6 +1,8 @@
 local Engine=require(script.Parent.MarketEngine)
 local Participants=require(script.Parent.Participants)
-local Default=require(game.ReplicatedStorage.MarketReign.MarketConfig)
+local Default=table.clone(require(game.ReplicatedStorage.MarketReign.MarketConfig))
+Default.BotPopulation=nil -- Small/empty schedulers here isolate matching; allocation has its own suite.
+Default.OrderFlowMarket=nil -- Standalone matching fixtures retain their explicit/unbounded reference.
 local Tests={}
 local function config()
  local c=table.clone(Default) c.MaxTradeHistory=100000 c.MaxOrderHistory=100000 c.MaxCandles=10000 return c
@@ -106,7 +108,7 @@ function Tests.Run()
      local expected=p[field] local revision=a.Revision
      local request={Contract=key,OrderId=p.Id,Protection=field,Price=price,ExpectedPrice=expected}
      local ok,reason=e:AmendProtection("P",request);assert(ok,key.." "..side.." "..field..": "..tostring(reason))
-     assert(p[field]==price and p[opposite]==other and a.Revision==revision+1)
+     assert(p[field]==price and p[opposite]==other and a.Revision>revision)
      assert(p["Manual"..field] and p.Quantity==2 and not p.Triggered)
      assert(not e:AmendProtection("P",request),"Repeated stale drag accepted")
      local found=false

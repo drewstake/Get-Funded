@@ -83,6 +83,8 @@ function Market.New(base,preview,previewData)
   end
 
   self.CanTrade=packet.CanTrade==true self.ConnectionStatus=packet.ConnectionStatus self.PersistenceMode=packet.PersistenceMode
+ self.RequestSession=packet.RequestSession or self.RequestSession
+ self.NextId=math.max(self.NextId,packet.RequestHigh or 0)
 
   -- Atomic funded portfolio and live unlock projection arrive with each price batch.
 
@@ -97,6 +99,7 @@ function Market.New(base,preview,previewData)
   if packet.Stats then self.Stats=packet.Stats self.StatsAt=os.clock() end
 
   if packet.StatusOnly then
+   self.MarketEvent=nil;self.News=nil
 
    if packet.NoAccount then
 
@@ -123,7 +126,7 @@ function Market.New(base,preview,previewData)
 
   self.Capacity=packet.Capacity self.Limit=packet.Limit self.Triggers=packet.Triggers or {}
 
-  self.Regime=packet.Regime self.News=packet.News self.Speed=packet.Speed self.Step=packet.Step
+  self.Regime=packet.Regime self.News=packet.News self.MarketEvent=packet.MarketEvent self.Speed=packet.Speed self.Step=packet.Step
 
   for key,quote in pairs(packet.Quotes) do if quote.Last then self.Prices[key]=quote.Last end end
 
@@ -253,6 +256,7 @@ function Session:Send(action,request,expectedAccount)
  end
 
  self.NextId+=1 request=request or {} request.Id=self.NextId request.Action=action
+ request.RequestSession=self.RequestSession
 
  request.ExpectedAccount=expectedAccount or self.AccountToken
 

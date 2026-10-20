@@ -1,0 +1,1843 @@
+{
+  "Scope": "Current workspace source, three seeds, two simulated hours per fresh run; no connected Roblox Studio session. Not a replay of the pasted live report.",
+  "ProductionSourcesUnchanged": true,
+  "Findings": {
+    "Scalper": "Entry filter compares a several-tick movement threshold to only 8-35 recent executions. Gate, not capital or order rejection, dominates in these runs. All scalpers being flat is common even though entries and closes do occur.",
+    "Protective": "Slow belief update lags fair-value trends. Edge uses this stale belief, producing countertrend entries even when trade price equals current fair value. Stops do not make that signal profitable.",
+    "Reversion": "Shares the lagging belief and explicitly opposes recent momentum; has no trend/regime condition requiring a genuine deviation from current fair value or evidence of reversal.",
+    "AdditionalRisk": "Bots may repeatedly add to positions and move stops away as average entry changes. Both strategies also enter in neutral conditions because of random signal noise. Neither changing stops alone nor reducing noise alone resolved losses in the exploratory single-seed comparisons."
+  },
+  "Comparison": {
+    "Protective": {
+      "BaselinePnlBySeed": [
+        -104177.5,
+        -281212.5,
+        -33315.0
+      ],
+      "CurrentFairPnlBySeed": [
+        137660.0,
+        227955.0,
+        123567.5
+      ],
+      "BaselineMeanPnl": -139568.33333333986,
+      "CurrentFairMeanPnl": 163060.8333333345
+    },
+    "Reversion": {
+      "BaselinePnlBySeed": [
+        -278870.0,
+        -608487.5,
+        -511420.0
+      ],
+      "CurrentFairPnlBySeed": [
+        -17470.0,
+        -53017.5,
+        -80837.5
+      ],
+      "BaselineMeanPnl": -466259.16666667187,
+      "CurrentFairMeanPnl": -50441.66666666861
+    }
+  },
+  "Baseline": [
+    {
+      "Seed": 73521,
+      "Variant": "baseline",
+      "Seconds": 7200,
+      "Groups": {
+        "Protective": {
+          "DeltaPnl": -104177.50000001742,
+          "Submits": 6239,
+          "Rejected": 0,
+          "Closes": 2379,
+          "Reasons": {
+            "Stop loss": {
+              "Contracts": 1095,
+              "Count": 465,
+              "Losses": 465,
+              "Pnl": -318385.98047773994,
+              "Wins": 0
+            },
+            "Strategy trade": {
+              "Contracts": 2671,
+              "Count": 1698,
+              "Losses": 718,
+              "Pnl": 132971.69546351538,
+              "Wins": 967
+            },
+            "Take profit": {
+              "Contracts": 501,
+              "Count": 216,
+              "Losses": 0,
+              "Pnl": 148846.5384891487,
+              "Wins": 216
+            }
+          },
+          "StopMovedAway": 1795,
+          "StopMovedCloser": 263,
+          "StopSlipDollars": -26622.500000000153,
+          "StopContracts": 1095,
+          "NoContractCapital": 0
+        },
+        "Reversion": {
+          "DeltaPnl": -278870.0000000224,
+          "Submits": 8061,
+          "Rejected": 0,
+          "Closes": 3047,
+          "Reasons": {
+            "Stop loss": {
+              "Contracts": 1488,
+              "Count": 566,
+              "Losses": 566,
+              "Pnl": -406014.4229689914,
+              "Wins": 0
+            },
+            "Strategy trade": {
+              "Contracts": 3652,
+              "Count": 2360,
+              "Losses": 978,
+              "Pnl": 152486.09579740994,
+              "Wins": 1369
+            },
+            "Take profit": {
+              "Contracts": 278,
+              "Count": 121,
+              "Losses": 0,
+              "Pnl": 71591.83653846588,
+              "Wins": 121
+            }
+          },
+          "StopMovedAway": 201,
+          "StopMovedCloser": 25,
+          "StopSlipDollars": -57475.00000000043,
+          "StopContracts": 1488,
+          "NoContractCapital": 0
+        },
+        "Scalper": {
+          "DeltaPnl": -1224.9999999999272,
+          "Submits": 529,
+          "Rejected": 0,
+          "Closes": 203,
+          "Reasons": {
+            "Scalper target": {
+              "Contracts": 96,
+              "Count": 84,
+              "Losses": 0,
+              "Pnl": 5355.000000000164,
+              "Wins": 84
+            },
+            "Stop loss": {
+              "Contracts": 98,
+              "Count": 93,
+              "Losses": 91,
+              "Pnl": -6222.500000000073,
+              "Wins": 1
+            },
+            "Timed exit": {
+              "Contracts": 26,
+              "Count": 26,
+              "Losses": 15,
+              "Pnl": -357.5000000000182,
+              "Wins": 10
+            }
+          },
+          "StopMovedAway": 0,
+          "StopMovedCloser": 0,
+          "StopSlipDollars": -832.5,
+          "StopContracts": 98,
+          "NoContractCapital": 0
+        }
+      },
+      "ScalperGates": {
+        "Cooldown": 1236,
+        "Decisions": 111780,
+        "EntrySubmit": 248,
+        "ManagingPosition": 1071,
+        "MinMove": 108267,
+        "MissingQuote": 91,
+        "Spread": 867
+      },
+      "MinimumMoveBlockedPercent": 96.85721953837896,
+      "AllScalpersFlatPercent": 82.56944444444444,
+      "Markets": {
+        "BG": {
+          "AverageSpreadTicks": 1.0604166666666666,
+          "Average64ExecutionRangeTicks": 2.564583333333333
+        },
+        "BT": {
+          "AverageSpreadTicks": 1.2489568845618915,
+          "Average64ExecutionRangeTicks": 3.9791666666666665
+        },
+        "BX": {
+          "AverageSpreadTicks": 1.09375,
+          "Average64ExecutionRangeTicks": 2.6215277777777777
+        }
+      },
+      "Audit": {
+        "CashError": -1.4901161193847656e-08,
+        "EquityError": -1.73225998878479e-07,
+        "Hash": 1559022449,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 76434,
+        "Volume": 234028
+      }
+    },
+    {
+      "Seed": 5501,
+      "Variant": "baseline",
+      "Seconds": 7200,
+      "Groups": {
+        "Protective": {
+          "DeltaPnl": -281212.50000000943,
+          "Submits": 5966,
+          "Rejected": 0,
+          "Closes": 2109,
+          "Reasons": {
+            "Stop loss": {
+              "Contracts": 1423,
+              "Count": 394,
+              "Losses": 394,
+              "Pnl": -351663.713014735,
+              "Wins": 0
+            },
+            "Strategy trade": {
+              "Contracts": 2572,
+              "Count": 1613,
+              "Losses": 810,
+              "Pnl": 46454.72172060156,
+              "Wins": 795
+            },
+            "Take profit": {
+              "Contracts": 274,
+              "Count": 102,
+              "Losses": 0,
+              "Pnl": 83595.23615979553,
+              "Wins": 102
+            }
+          },
+          "StopMovedAway": 1766,
+          "StopMovedCloser": 248,
+          "StopSlipDollars": -11537.5,
+          "StopContracts": 1423,
+          "NoContractCapital": 0
+        },
+        "Reversion": {
+          "DeltaPnl": -608487.4999999782,
+          "Submits": 9085,
+          "Rejected": 0,
+          "Closes": 2983,
+          "Reasons": {
+            "Stop loss": {
+              "Contracts": 2186,
+              "Count": 566,
+              "Losses": 566,
+              "Pnl": -610277.9253899828,
+              "Wins": 0
+            },
+            "Strategy trade": {
+              "Contracts": 3630,
+              "Count": 2362,
+              "Losses": 1108,
+              "Pnl": 64692.840625433084,
+              "Wins": 1239
+            },
+            "Take profit": {
+              "Contracts": 161,
+              "Count": 55,
+              "Losses": 0,
+              "Pnl": 51139.16183600553,
+              "Wins": 55
+            }
+          },
+          "StopMovedAway": 261,
+          "StopMovedCloser": 19,
+          "StopSlipDollars": -59557.5,
+          "StopContracts": 2186,
+          "NoContractCapital": 0
+        },
+        "Scalper": {
+          "DeltaPnl": -1349.999999999991,
+          "Submits": 436,
+          "Rejected": 0,
+          "Closes": 161,
+          "Reasons": {
+            "Scalper target": {
+              "Contracts": 69,
+              "Count": 62,
+              "Losses": 0,
+              "Pnl": 3582.4999999999636,
+              "Wins": 62
+            },
+            "Stop loss": {
+              "Contracts": 85,
+              "Count": 84,
+              "Losses": 84,
+              "Pnl": -4682.499999999991,
+              "Wins": 0
+            },
+            "Timed exit": {
+              "Contracts": 18,
+              "Count": 15,
+              "Losses": 9,
+              "Pnl": -249.99999999996362,
+              "Wins": 6
+            }
+          },
+          "StopMovedAway": 0,
+          "StopMovedCloser": 0,
+          "StopSlipDollars": -499.9999999999727,
+          "StopContracts": 85,
+          "NoContractCapital": 0
+        }
+      },
+      "ScalperGates": {
+        "Cooldown": 1183,
+        "Decisions": 115438,
+        "EntrySubmit": 209,
+        "ManagingPosition": 927,
+        "MinMove": 112554,
+        "Spread": 543,
+        "MissingQuote": 21,
+        "Signal": 1
+      },
+      "MinimumMoveBlockedPercent": 97.50168921845493,
+      "AllScalpersFlatPercent": 85.76388888888889,
+      "Markets": {
+        "BG": {
+          "AverageSpreadTicks": 1.0708333333333333,
+          "Average64ExecutionRangeTicks": 2.611111111111111
+        },
+        "BT": {
+          "AverageSpreadTicks": 1.1791666666666667,
+          "Average64ExecutionRangeTicks": 3.907638888888889
+        },
+        "BX": {
+          "AverageSpreadTicks": 1.0756944444444445,
+          "Average64ExecutionRangeTicks": 2.8055555555555554
+        }
+      },
+      "Audit": {
+        "CashError": 5.774199962615967e-08,
+        "EquityError": 7.55535438656807e-08,
+        "Hash": 1720354661,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 79058,
+        "Volume": 254203
+      }
+    },
+    {
+      "Seed": 4407,
+      "Variant": "baseline",
+      "Seconds": 7200,
+      "Groups": {
+        "Protective": {
+          "DeltaPnl": -33314.99999999268,
+          "Submits": 6377,
+          "Rejected": 0,
+          "Closes": 2226,
+          "Reasons": {
+            "Stop loss": {
+              "Contracts": 934,
+              "Count": 334,
+              "Losses": 334,
+              "Pnl": -252674.19165276544,
+              "Wins": 0
+            },
+            "Strategy trade": {
+              "Contracts": 2791,
+              "Count": 1853,
+              "Losses": 711,
+              "Pnl": 192686.01228275464,
+              "Wins": 1133
+            },
+            "Take profit": {
+              "Contracts": 100,
+              "Count": 39,
+              "Losses": 0,
+              "Pnl": 35221.629791764426,
+              "Wins": 39
+            }
+          },
+          "StopMovedAway": 1713,
+          "StopMovedCloser": 264,
+          "StopSlipDollars": -10652.499999999955,
+          "StopContracts": 934,
+          "NoContractCapital": 0
+        },
+        "Reversion": {
+          "DeltaPnl": -511420.00000001496,
+          "Submits": 10431,
+          "Rejected": 0,
+          "Closes": 3519,
+          "Reasons": {
+            "Stop loss": {
+              "Contracts": 1855,
+              "Count": 587,
+              "Losses": 587,
+              "Pnl": -478749.66748174664,
+              "Wins": 0
+            },
+            "Strategy trade": {
+              "Contracts": 4038,
+              "Count": 2805,
+              "Losses": 1549,
+              "Pnl": -53535.914512307,
+              "Wins": 1229
+            },
+            "Take profit": {
+              "Contracts": 289,
+              "Count": 127,
+              "Losses": 0,
+              "Pnl": 60540.72247558014,
+              "Wins": 127
+            }
+          },
+          "StopMovedAway": 268,
+          "StopMovedCloser": 23,
+          "StopSlipDollars": -67890.00000000019,
+          "StopContracts": 1855,
+          "NoContractCapital": 0
+        },
+        "Scalper": {
+          "DeltaPnl": -2260.0000000000273,
+          "Submits": 335,
+          "Rejected": 0,
+          "Closes": 127,
+          "Reasons": {
+            "Scalper target": {
+              "Contracts": 54,
+              "Count": 53,
+              "Losses": 0,
+              "Pnl": 2120,
+              "Wins": 53
+            },
+            "Stop loss": {
+              "Contracts": 69,
+              "Count": 66,
+              "Losses": 66,
+              "Pnl": -4440,
+              "Wins": 0
+            },
+            "Timed exit": {
+              "Contracts": 10,
+              "Count": 8,
+              "Losses": 2,
+              "Pnl": 59.999999999972715,
+              "Wins": 4
+            }
+          },
+          "StopMovedAway": 0,
+          "StopMovedCloser": 0,
+          "StopSlipDollars": -1217.5,
+          "StopContracts": 69,
+          "NoContractCapital": 0
+        }
+      },
+      "ScalperGates": {
+        "Cooldown": 997,
+        "Decisions": 115729,
+        "EntrySubmit": 163,
+        "ManagingPosition": 589,
+        "MinMove": 113265,
+        "MissingQuote": 55,
+        "Spread": 660
+      },
+      "MinimumMoveBlockedPercent": 97.87088802288105,
+      "AllScalpersFlatPercent": 86.52777777777777,
+      "Markets": {
+        "BG": {
+          "AverageSpreadTicks": 1.0618055555555554,
+          "Average64ExecutionRangeTicks": 2.609027777777778
+        },
+        "BT": {
+          "AverageSpreadTicks": 1.2506944444444446,
+          "Average64ExecutionRangeTicks": 3.6631944444444446
+        },
+        "BX": {
+          "AverageSpreadTicks": 1.0909722222222222,
+          "Average64ExecutionRangeTicks": 2.6354166666666665
+        }
+      },
+      "Audit": {
+        "CashError": 0,
+        "EquityError": -4.773028194904327e-09,
+        "Hash": 332869901,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 73337,
+        "Volume": 214553
+      }
+    }
+  ],
+  "CurrentFairExperiment": [
+    {
+      "Seed": 73521,
+      "Variant": "current_fair",
+      "Seconds": 7200,
+      "Groups": {
+        "Protective": {
+          "DeltaPnl": 137660.00000000282,
+          "Submits": 5215,
+          "Rejected": 0,
+          "Closes": 1753,
+          "Reasons": {
+            "Stop loss": {
+              "Contracts": 223,
+              "Count": 90,
+              "Losses": 90,
+              "Pnl": -68115.55734600066,
+              "Wins": 0
+            },
+            "Strategy trade": {
+              "Contracts": 2493,
+              "Count": 1578,
+              "Losses": 677,
+              "Pnl": 111378.44341868421,
+              "Wins": 876
+            },
+            "Take profit": {
+              "Contracts": 204,
+              "Count": 85,
+              "Losses": 0,
+              "Pnl": 78185.58130479853,
+              "Wins": 85
+            }
+          },
+          "StopMovedAway": 336,
+          "StopMovedCloser": 803,
+          "StopSlipDollars": -705,
+          "StopContracts": 223,
+          "NoContractCapital": 0
+        },
+        "Reversion": {
+          "DeltaPnl": -17470.000000011074,
+          "Submits": 7022,
+          "Rejected": 0,
+          "Closes": 2323,
+          "Reasons": {
+            "Stop loss": {
+              "Contracts": 536,
+              "Count": 166,
+              "Losses": 166,
+              "Pnl": -154693.55489878578,
+              "Wins": 0
+            },
+            "Strategy trade": {
+              "Contracts": 3119,
+              "Count": 2056,
+              "Losses": 1091,
+              "Pnl": -4038.155660839693,
+              "Wins": 938
+            },
+            "Take profit": {
+              "Contracts": 310,
+              "Count": 101,
+              "Losses": 0,
+              "Pnl": 136367.08424973016,
+              "Wins": 101
+            }
+          },
+          "StopMovedAway": 93,
+          "StopMovedCloser": 77,
+          "StopSlipDollars": -8497.499999999463,
+          "StopContracts": 536,
+          "NoContractCapital": 0
+        },
+        "Scalper": {
+          "DeltaPnl": -2090.0000000001546,
+          "Submits": 520,
+          "Rejected": 0,
+          "Closes": 189,
+          "Reasons": {
+            "Scalper target": {
+              "Contracts": 78,
+              "Count": 71,
+              "Losses": 0,
+              "Pnl": 4172.500000000055,
+              "Wins": 71
+            },
+            "Stop loss": {
+              "Contracts": 111,
+              "Count": 109,
+              "Losses": 109,
+              "Pnl": -6522.5000000001,
+              "Wins": 0
+            },
+            "Timed exit": {
+              "Contracts": 13,
+              "Count": 9,
+              "Losses": 2,
+              "Pnl": 259.99999999989086,
+              "Wins": 7
+            }
+          },
+          "StopMovedAway": 0,
+          "StopMovedCloser": 1,
+          "StopSlipDollars": -897.5000000000455,
+          "StopContracts": 111,
+          "NoContractCapital": 0
+        }
+      },
+      "ScalperGates": {
+        "Cooldown": 1111,
+        "Decisions": 113258,
+        "EntrySubmit": 263,
+        "ManagingPosition": 671,
+        "MinMove": 110700,
+        "MissingQuote": 29,
+        "Spread": 484
+      },
+      "MinimumMoveBlockedPercent": 97.74143989828534,
+      "AllScalpersFlatPercent": 83.88888888888889,
+      "Markets": {
+        "BG": {
+          "AverageSpreadTicks": 1.0472222222222223,
+          "Average64ExecutionRangeTicks": 2.5965277777777778
+        },
+        "BT": {
+          "AverageSpreadTicks": 1.3368055555555556,
+          "Average64ExecutionRangeTicks": 3.7604166666666665
+        },
+        "BX": {
+          "AverageSpreadTicks": 1.075,
+          "Average64ExecutionRangeTicks": 2.8243055555555556
+        }
+      },
+      "Audit": {
+        "CashError": 2.9802322387695312e-08,
+        "EquityError": -1.3603130355477333e-07,
+        "Hash": 1905145233,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 74747,
+        "Volume": 236724
+      }
+    },
+    {
+      "Seed": 5501,
+      "Variant": "current_fair",
+      "Seconds": 7200,
+      "Groups": {
+        "Protective": {
+          "DeltaPnl": 227954.99999999744,
+          "Submits": 5063,
+          "Rejected": 0,
+          "Closes": 1734,
+          "Reasons": {
+            "Stop loss": {
+              "Contracts": 323,
+              "Count": 104,
+              "Losses": 104,
+              "Pnl": -88828.70814320614,
+              "Wins": 0
+            },
+            "Strategy trade": {
+              "Contracts": 2422,
+              "Count": 1515,
+              "Losses": 596,
+              "Pnl": 196878.90340153206,
+              "Wins": 893
+            },
+            "Take profit": {
+              "Contracts": 279,
+              "Count": 115,
+              "Losses": 0,
+              "Pnl": 104579.50312103101,
+              "Wins": 115
+            }
+          },
+          "StopMovedAway": 284,
+          "StopMovedCloser": 818,
+          "StopSlipDollars": -422.4999999999909,
+          "StopContracts": 323,
+          "NoContractCapital": 0
+        },
+        "Reversion": {
+          "DeltaPnl": -53017.49999999453,
+          "Submits": 7747,
+          "Rejected": 0,
+          "Closes": 2559,
+          "Reasons": {
+            "Stop loss": {
+              "Contracts": 478,
+              "Count": 147,
+              "Losses": 147,
+              "Pnl": -142646.67000703618,
+              "Wins": 0
+            },
+            "Strategy trade": {
+              "Contracts": 3434,
+              "Count": 2295,
+              "Losses": 1195,
+              "Pnl": -13569.058506923147,
+              "Wins": 1059
+            },
+            "Take profit": {
+              "Contracts": 320,
+              "Count": 117,
+              "Losses": 0,
+              "Pnl": 122527.2183073422,
+              "Wins": 117
+            }
+          },
+          "StopMovedAway": 72,
+          "StopMovedCloser": 80,
+          "StopSlipDollars": -9502.500000000045,
+          "StopContracts": 478,
+          "NoContractCapital": 0
+        },
+        "Scalper": {
+          "DeltaPnl": -1837.4999999997908,
+          "Submits": 705,
+          "Rejected": 0,
+          "Closes": 259,
+          "Reasons": {
+            "Scalper target": {
+              "Contracts": 118,
+              "Count": 107,
+              "Losses": 0,
+              "Pnl": 5800.0000000000455,
+              "Wins": 107
+            },
+            "Stop loss": {
+              "Contracts": 140,
+              "Count": 133,
+              "Losses": 133,
+              "Pnl": -6814.999999999845,
+              "Wins": 0
+            },
+            "Timed exit": {
+              "Contracts": 24,
+              "Count": 19,
+              "Losses": 12,
+              "Pnl": -822.4999999999909,
+              "Wins": 5
+            }
+          },
+          "StopMovedAway": 0,
+          "StopMovedCloser": 1,
+          "StopSlipDollars": -619.9999999999272,
+          "StopContracts": 140,
+          "NoContractCapital": 0
+        }
+      },
+      "ScalperGates": {
+        "Cooldown": 1802,
+        "Decisions": 115296,
+        "EntrySubmit": 340,
+        "ManagingPosition": 1006,
+        "MinMove": 111698,
+        "MissingQuote": 21,
+        "Spread": 429
+      },
+      "MinimumMoveBlockedPercent": 96.8793366638912,
+      "AllScalpersFlatPercent": 79.93055555555556,
+      "Markets": {
+        "BG": {
+          "AverageSpreadTicks": 1.0708333333333333,
+          "Average64ExecutionRangeTicks": 2.68125
+        },
+        "BT": {
+          "AverageSpreadTicks": 1.5159944367176634,
+          "Average64ExecutionRangeTicks": 4.24375
+        },
+        "BX": {
+          "AverageSpreadTicks": 1.0777777777777777,
+          "Average64ExecutionRangeTicks": 2.734722222222222
+        }
+      },
+      "Audit": {
+        "CashError": 7.450580596923828e-09,
+        "EquityError": 1.467124093323946e-07,
+        "Hash": 779465731,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 73786,
+        "Volume": 241681
+      }
+    },
+    {
+      "Seed": 4407,
+      "Variant": "current_fair",
+      "Seconds": 7200,
+      "Groups": {
+        "Protective": {
+          "DeltaPnl": 123567.50000000325,
+          "Submits": 5010,
+          "Rejected": 0,
+          "Closes": 1663,
+          "Reasons": {
+            "Stop loss": {
+              "Contracts": 272,
+              "Count": 98,
+              "Losses": 98,
+              "Pnl": -66731.02556263156,
+              "Wins": 0
+            },
+            "Strategy trade": {
+              "Contracts": 2292,
+              "Count": 1508,
+              "Losses": 649,
+              "Pnl": 95761.85775915624,
+              "Wins": 846
+            },
+            "Take profit": {
+              "Contracts": 181,
+              "Count": 57,
+              "Losses": 0,
+              "Pnl": 89533.54078788022,
+              "Wins": 57
+            }
+          },
+          "StopMovedAway": 349,
+          "StopMovedCloser": 917,
+          "StopSlipDollars": -892.5000000000091,
+          "StopContracts": 272,
+          "NoContractCapital": 0
+        },
+        "Reversion": {
+          "DeltaPnl": -80837.50000000023,
+          "Submits": 8178,
+          "Rejected": 0,
+          "Closes": 2704,
+          "Reasons": {
+            "Stop loss": {
+              "Contracts": 387,
+              "Count": 118,
+              "Losses": 118,
+              "Pnl": -107245.72175572954,
+              "Wins": 0
+            },
+            "Strategy trade": {
+              "Contracts": 3458,
+              "Count": 2489,
+              "Losses": 1353,
+              "Pnl": -27878.822577440013,
+              "Wins": 1094
+            },
+            "Take profit": {
+              "Contracts": 233,
+              "Count": 97,
+              "Losses": 0,
+              "Pnl": 57454.41899272344,
+              "Wins": 97
+            }
+          },
+          "StopMovedAway": 83,
+          "StopMovedCloser": 72,
+          "StopSlipDollars": -5854.999999999618,
+          "StopContracts": 387,
+          "NoContractCapital": 0
+        },
+        "Scalper": {
+          "DeltaPnl": -5157.500000000055,
+          "Submits": 425,
+          "Rejected": 0,
+          "Closes": 158,
+          "Reasons": {
+            "Scalper target": {
+              "Contracts": 69,
+              "Count": 61,
+              "Losses": 0,
+              "Pnl": 3905,
+              "Wins": 61
+            },
+            "Stop loss": {
+              "Contracts": 107,
+              "Count": 91,
+              "Losses": 91,
+              "Pnl": -8907.500000000036,
+              "Wins": 0
+            },
+            "Timed exit": {
+              "Contracts": 6,
+              "Count": 6,
+              "Losses": 3,
+              "Pnl": -170.0000000000182,
+              "Wins": 1
+            }
+          },
+          "StopMovedAway": 0,
+          "StopMovedCloser": 0,
+          "StopSlipDollars": -1297.4999999999818,
+          "StopContracts": 107,
+          "NoContractCapital": 0
+        }
+      },
+      "ScalperGates": {
+        "Cooldown": 960,
+        "Decisions": 103683,
+        "EntrySubmit": 198,
+        "ManagingPosition": 647,
+        "MinMove": 101365,
+        "MissingQuote": 18,
+        "Spread": 495
+      },
+      "MinimumMoveBlockedPercent": 97.76433938061206,
+      "AllScalpersFlatPercent": 83.05555555555556,
+      "Markets": {
+        "BG": {
+          "AverageSpreadTicks": 1.073611111111111,
+          "Average64ExecutionRangeTicks": 2.6645833333333333
+        },
+        "BT": {
+          "AverageSpreadTicks": 1.1395833333333334,
+          "Average64ExecutionRangeTicks": 3.4291666666666667
+        },
+        "BX": {
+          "AverageSpreadTicks": 1.0763888888888888,
+          "Average64ExecutionRangeTicks": 2.7979166666666666
+        }
+      },
+      "Audit": {
+        "CashError": -1.4901161193847656e-08,
+        "EquityError": 1.292792148888111e-07,
+        "Hash": 983501492,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 69232,
+        "Volume": 221455
+      }
+    }
+  ],
+  "ExploratorySingleSeed": [
+    {
+      "Seed": 73521,
+      "Variant": "lower_noise",
+      "Seconds": 7200,
+      "Groups": {
+        "Protective": {
+          "DeltaPnl": -436772.50000000675,
+          "Submits": 3585,
+          "Rejected": 0,
+          "Closes": 1084,
+          "Reasons": {
+            "Stop loss": {
+              "Contracts": 1599,
+              "Count": 437,
+              "Losses": 437,
+              "Pnl": -511502.17457747005,
+              "Wins": 0
+            },
+            "Strategy trade": {
+              "Contracts": 945,
+              "Count": 595,
+              "Losses": 239,
+              "Pnl": 48058.446677683365,
+              "Wins": 355
+            },
+            "Take profit": {
+              "Contracts": 194,
+              "Count": 52,
+              "Losses": 0,
+              "Pnl": 46538.7683747401,
+              "Wins": 52
+            }
+          },
+          "StopMovedAway": 1385,
+          "StopMovedCloser": 84,
+          "StopSlipDollars": -18297.499999999665,
+          "StopContracts": 1599,
+          "NoContractCapital": 0
+        },
+        "Reversion": {
+          "DeltaPnl": -724067.5000000068,
+          "Submits": 5170,
+          "Rejected": 0,
+          "Closes": 1729,
+          "Reasons": {
+            "Stop loss": {
+              "Contracts": 1858,
+              "Count": 554,
+              "Losses": 554,
+              "Pnl": -630475.8333440559,
+              "Wins": 0
+            },
+            "Strategy trade": {
+              "Contracts": 1762,
+              "Count": 1140,
+              "Losses": 537,
+              "Pnl": -75499.71894573738,
+              "Wins": 599
+            },
+            "Take profit": {
+              "Contracts": 90,
+              "Count": 35,
+              "Losses": 0,
+              "Pnl": 20527.273979288504,
+              "Wins": 35
+            }
+          },
+          "StopMovedAway": 145,
+          "StopMovedCloser": 5,
+          "StopSlipDollars": -106822.50000000003,
+          "StopContracts": 1858,
+          "NoContractCapital": 0
+        },
+        "Scalper": {
+          "DeltaPnl": -327.5000000000455,
+          "Submits": 221,
+          "Rejected": 0,
+          "Closes": 75,
+          "Reasons": {
+            "Scalper target": {
+              "Contracts": 30,
+              "Count": 29,
+              "Losses": 0,
+              "Pnl": 1475,
+              "Wins": 29
+            },
+            "Stop loss": {
+              "Contracts": 32,
+              "Count": 31,
+              "Losses": 31,
+              "Pnl": -1665,
+              "Wins": 0
+            },
+            "Timed exit": {
+              "Contracts": 19,
+              "Count": 15,
+              "Losses": 8,
+              "Pnl": -137.50000000004547,
+              "Wins": 5
+            }
+          },
+          "StopMovedAway": 0,
+          "StopMovedCloser": 0,
+          "StopSlipDollars": -360,
+          "StopContracts": 32,
+          "NoContractCapital": 0
+        }
+      },
+      "ScalperGates": {
+        "Cooldown": 514,
+        "Decisions": 110294,
+        "EntrySubmit": 111,
+        "ManagingPosition": 514,
+        "MinMove": 108625,
+        "MissingQuote": 46,
+        "Spread": 484
+      },
+      "MinimumMoveBlockedPercent": 98.48677171922317,
+      "AllScalpersFlatPercent": 85.27777777777777,
+      "Markets": {
+        "BG": {
+          "AverageSpreadTicks": 1.0632383599722028,
+          "Average64ExecutionRangeTicks": 2.4993055555555554
+        },
+        "BT": {
+          "AverageSpreadTicks": 1.1354166666666667,
+          "Average64ExecutionRangeTicks": 3.2354166666666666
+        },
+        "BX": {
+          "AverageSpreadTicks": 1.0791666666666666,
+          "Average64ExecutionRangeTicks": 2.625
+        }
+      },
+      "Audit": {
+        "CashError": 0,
+        "EquityError": 4.381581675261259e-08,
+        "Hash": 1524769834,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 64061,
+        "Volume": 205484
+      }
+    },
+    {
+      "Seed": 73521,
+      "Variant": "fixed_stop",
+      "Seconds": 7200,
+      "Groups": {
+        "Protective": {
+          "DeltaPnl": -206814.99999999398,
+          "Submits": 5797,
+          "Rejected": 0,
+          "Closes": 1916,
+          "Reasons": {
+            "Stop loss": {
+              "Contracts": 1834,
+              "Count": 541,
+              "Losses": 541,
+              "Pnl": -409607.7470667019,
+              "Wins": 0
+            },
+            "Strategy trade": {
+              "Contracts": 2111,
+              "Count": 1261,
+              "Losses": 526,
+              "Pnl": 134023.27717066795,
+              "Wins": 723
+            },
+            "Take profit": {
+              "Contracts": 299,
+              "Count": 114,
+              "Losses": 0,
+              "Pnl": 84185.85574148182,
+              "Wins": 114
+            }
+          },
+          "StopMovedAway": 0,
+          "StopMovedCloser": 0,
+          "StopSlipDollars": -12287.500000000255,
+          "StopContracts": 1834,
+          "NoContractCapital": 0
+        },
+        "Reversion": {
+          "DeltaPnl": -270340.00000000116,
+          "Submits": 7493,
+          "Rejected": 0,
+          "Closes": 2569,
+          "Reasons": {
+            "Stop loss": {
+              "Contracts": 1672,
+              "Count": 495,
+              "Losses": 495,
+              "Pnl": -462456.6129069519,
+              "Wins": 0
+            },
+            "Strategy trade": {
+              "Contracts": 3205,
+              "Count": 2002,
+              "Losses": 823,
+              "Pnl": 165127.6294584914,
+              "Wins": 1166
+            },
+            "Take profit": {
+              "Contracts": 233,
+              "Count": 72,
+              "Losses": 0,
+              "Pnl": 62185.51214375232,
+              "Wins": 72
+            }
+          },
+          "StopMovedAway": 0,
+          "StopMovedCloser": 0,
+          "StopSlipDollars": -49459.99999999994,
+          "StopContracts": 1672,
+          "NoContractCapital": 0
+        },
+        "Scalper": {
+          "DeltaPnl": -1130.0000000000728,
+          "Submits": 588,
+          "Rejected": 0,
+          "Closes": 226,
+          "Reasons": {
+            "Scalper target": {
+              "Contracts": 107,
+              "Count": 98,
+              "Losses": 0,
+              "Pnl": 5922.4999999998545,
+              "Wins": 98
+            },
+            "Stop loss": {
+              "Contracts": 116,
+              "Count": 108,
+              "Losses": 108,
+              "Pnl": -7199.999999999982,
+              "Wins": 0
+            },
+            "Timed exit": {
+              "Contracts": 25,
+              "Count": 20,
+              "Losses": 8,
+              "Pnl": 147.50000000005457,
+              "Wins": 9
+            }
+          },
+          "StopMovedAway": 0,
+          "StopMovedCloser": 2,
+          "StopSlipDollars": -675.000000000091,
+          "StopContracts": 116,
+          "NoContractCapital": 0
+        }
+      },
+      "ScalperGates": {
+        "Cooldown": 1296,
+        "Decisions": 102229,
+        "EntrySubmit": 272,
+        "ManagingPosition": 1137,
+        "MinMove": 98866,
+        "MissingQuote": 43,
+        "Spread": 615
+      },
+      "MinimumMoveBlockedPercent": 96.71032681528725,
+      "AllScalpersFlatPercent": 83.26388888888889,
+      "Markets": {
+        "BG": {
+          "AverageSpreadTicks": 1.0645833333333334,
+          "Average64ExecutionRangeTicks": 2.526388888888889
+        },
+        "BT": {
+          "AverageSpreadTicks": 1.2195969423210562,
+          "Average64ExecutionRangeTicks": 3.7583333333333333
+        },
+        "BX": {
+          "AverageSpreadTicks": 1.0666666666666667,
+          "Average64ExecutionRangeTicks": 2.4618055555555554
+        }
+      },
+      "Audit": {
+        "CashError": 1.4901161193847656e-08,
+        "EquityError": -8.747156243771315e-08,
+        "Hash": 456545142,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 74511,
+        "Volume": 251696
+      }
+    },
+    {
+      "Seed": 73521,
+      "Variant": "no_fade",
+      "Seconds": 7200,
+      "Groups": {
+        "Protective": {
+          "DeltaPnl": -308682.50000000675,
+          "Submits": 6172,
+          "Rejected": 0,
+          "Closes": 2028,
+          "Reasons": {
+            "Stop loss": {
+              "Contracts": 1191,
+              "Count": 304,
+              "Losses": 304,
+              "Pnl": -341857.2973456731,
+              "Wins": 0
+            },
+            "Strategy trade": {
+              "Contracts": 2691,
+              "Count": 1634,
+              "Losses": 885,
+              "Pnl": -43790.870772944465,
+              "Wins": 741
+            },
+            "Take profit": {
+              "Contracts": 262,
+              "Count": 90,
+              "Losses": 0,
+              "Pnl": 67819.8466129249,
+              "Wins": 90
+            }
+          },
+          "StopMovedAway": 1809,
+          "StopMovedCloser": 243,
+          "StopSlipDollars": -16172.50000000091,
+          "StopContracts": 1191,
+          "NoContractCapital": 0
+        },
+        "Reversion": {
+          "DeltaPnl": -381985.0000000036,
+          "Submits": 7825,
+          "Rejected": 0,
+          "Closes": 2564,
+          "Reasons": {
+            "Stop loss": {
+              "Contracts": 1583,
+              "Count": 398,
+              "Losses": 398,
+              "Pnl": -458757.8844891996,
+              "Wins": 0
+            },
+            "Strategy trade": {
+              "Contracts": 3321,
+              "Count": 2101,
+              "Losses": 992,
+              "Pnl": 31230.47886903442,
+              "Wins": 1099
+            },
+            "Take profit": {
+              "Contracts": 214,
+              "Count": 65,
+              "Losses": 0,
+              "Pnl": 64312.70897560914,
+              "Wins": 65
+            }
+          },
+          "StopMovedAway": 193,
+          "StopMovedCloser": 54,
+          "StopSlipDollars": -84355.00000000124,
+          "StopContracts": 1583,
+          "NoContractCapital": 0
+        },
+        "Scalper": {
+          "DeltaPnl": -937.4999999999818,
+          "Submits": 325,
+          "Rejected": 0,
+          "Closes": 116,
+          "Reasons": {
+            "Scalper target": {
+              "Contracts": 53,
+              "Count": 51,
+              "Losses": 0,
+              "Pnl": 2285,
+              "Wins": 51
+            },
+            "Stop loss": {
+              "Contracts": 64,
+              "Count": 61,
+              "Losses": 61,
+              "Pnl": -3077.499999999982,
+              "Wins": 0
+            },
+            "Timed exit": {
+              "Contracts": 4,
+              "Count": 4,
+              "Losses": 4,
+              "Pnl": -145,
+              "Wins": 0
+            }
+          },
+          "StopMovedAway": 0,
+          "StopMovedCloser": 0,
+          "StopSlipDollars": -117.5000000000091,
+          "StopContracts": 64,
+          "NoContractCapital": 0
+        }
+      },
+      "ScalperGates": {
+        "Cooldown": 777,
+        "Decisions": 118123,
+        "EntrySubmit": 155,
+        "ManagingPosition": 436,
+        "MinMove": 116374,
+        "MissingQuote": 6,
+        "Spread": 374,
+        "Signal": 1
+      },
+      "MinimumMoveBlockedPercent": 98.51934000998959,
+      "AllScalpersFlatPercent": 91.52777777777777,
+      "Markets": {
+        "BG": {
+          "AverageSpreadTicks": 1.0611535788742181,
+          "Average64ExecutionRangeTicks": 2.428472222222222
+        },
+        "BT": {
+          "AverageSpreadTicks": 1.1895833333333334,
+          "Average64ExecutionRangeTicks": 3.7708333333333335
+        },
+        "BX": {
+          "AverageSpreadTicks": 1.054861111111111,
+          "Average64ExecutionRangeTicks": 2.290277777777778
+        }
+      },
+      "Audit": {
+        "CashError": -1.862645149230957e-09,
+        "EquityError": 1.023290678858757e-07,
+        "Hash": 458769860,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 76678,
+        "Volume": 242109
+      }
+    }
+  ],
+  "NeutralAndScalperProbes": {
+    "Neutral": [
+      {
+        "Buy": 2599,
+        "Decisions": 10000,
+        "Kind": "Protective",
+        "Limit": 2671,
+        "Market": 2689,
+        "Protected": 5360,
+        "Sell": 2761,
+        "Submissions": 5360,
+        "Threshold": 0.5
+      },
+      {
+        "Buy": 1990,
+        "Decisions": 10000,
+        "Kind": "Protective",
+        "Limit": 2021,
+        "Market": 1973,
+        "Protected": 3994,
+        "Sell": 2004,
+        "Submissions": 3994,
+        "Threshold": 0.85
+      },
+      {
+        "Buy": 1406,
+        "Decisions": 10000,
+        "Kind": "Protective",
+        "Limit": 1384,
+        "Market": 1437,
+        "Protected": 2821,
+        "Sell": 1415,
+        "Submissions": 2821,
+        "Threshold": 1.2
+      },
+      {
+        "Buy": 2613,
+        "Decisions": 10000,
+        "Kind": "Reversion",
+        "Limit": 2692,
+        "Market": 2672,
+        "Protected": 853,
+        "Sell": 2751,
+        "Submissions": 5364,
+        "Threshold": 0.5
+      },
+      {
+        "Buy": 1905,
+        "Decisions": 10000,
+        "Kind": "Reversion",
+        "Limit": 1994,
+        "Market": 1982,
+        "Protected": 617,
+        "Sell": 2071,
+        "Submissions": 3976,
+        "Threshold": 0.85
+      },
+      {
+        "Buy": 1342,
+        "Decisions": 10000,
+        "Kind": "Reversion",
+        "Limit": 1384,
+        "Market": 1376,
+        "Protected": 427,
+        "Sell": 1418,
+        "Submissions": 2760,
+        "Threshold": 1.2
+      }
+    ],
+    "Notes": "Neutral probes: flat position, zero bias, fair equals last, no recent price move, zero belief noise. Decision noise is unchanged. Scalper probes use spread 2, slippage allowance 1, entry buffer 4, MinMove 3.",
+    "Scalper": [
+      {
+        "Decisions": 1000,
+        "Gates": {
+          "Decisions": 1000,
+          "MinMove": 1000
+        },
+        "Move": 0,
+        "RequiredMove": 7,
+        "Spread": 2
+      },
+      {
+        "Decisions": 1000,
+        "Gates": {
+          "Decisions": 1000,
+          "MinMove": 1000
+        },
+        "Move": 1,
+        "RequiredMove": 7,
+        "Spread": 2
+      },
+      {
+        "Decisions": 1000,
+        "Gates": {
+          "Decisions": 1000,
+          "MinMove": 1000
+        },
+        "Move": 2,
+        "RequiredMove": 7,
+        "Spread": 2
+      },
+      {
+        "Decisions": 1000,
+        "Gates": {
+          "Decisions": 1000,
+          "MinMove": 1000
+        },
+        "Move": 3,
+        "RequiredMove": 7,
+        "Spread": 2
+      },
+      {
+        "Decisions": 1000,
+        "Gates": {
+          "Decisions": 1000,
+          "MinMove": 1000
+        },
+        "Move": 4,
+        "RequiredMove": 7,
+        "Spread": 2
+      },
+      {
+        "Decisions": 1000,
+        "Gates": {
+          "Decisions": 1000,
+          "MinMove": 1000
+        },
+        "Move": 5,
+        "RequiredMove": 7,
+        "Spread": 2
+      },
+      {
+        "Decisions": 1000,
+        "Gates": {
+          "Decisions": 1000,
+          "MinMove": 1000
+        },
+        "Move": 6,
+        "RequiredMove": 7,
+        "Spread": 2
+      },
+      {
+        "Decisions": 1000,
+        "Gates": {
+          "Decisions": 1000,
+          "EntrySubmit": 1000
+        },
+        "Move": 7,
+        "RequiredMove": 7,
+        "Spread": 2
+      },
+      {
+        "Decisions": 1000,
+        "Gates": {
+          "Decisions": 1000,
+          "EntrySubmit": 1000
+        },
+        "Move": 8,
+        "RequiredMove": 7,
+        "Spread": 2
+      },
+      {
+        "Decisions": 1000,
+        "Gates": {
+          "Decisions": 1000,
+          "EntrySubmit": 1000
+        },
+        "Move": 10,
+        "RequiredMove": 7,
+        "Spread": 2
+      }
+    ]
+  },
+  "DirectionalProbes": {
+    "Notes": "Synthetic decision-only probes: fair value equals trade price, no position or orders, zero bias, zero belief noise, normal decision noise. Price moves 1 tick per 10 simulated seconds with a 20-execution lookback. No simulated fills/P&L.",
+    "Results": [
+      {
+        "BeliefLagSum": -122544.01776653972,
+        "Buy": 3302,
+        "CurrentFairBelief": false,
+        "Decisions": 10000,
+        "Kind": "Protective",
+        "LagSamples": 9900,
+        "MeanBeliefLagTicks": -12.37818361278179,
+        "Sell": 1035,
+        "Submissions": 4337,
+        "TrendTicksPerDecision": -1
+      },
+      {
+        "BeliefLagSum": 0,
+        "Buy": 1990,
+        "CurrentFairBelief": true,
+        "Decisions": 10000,
+        "Kind": "Protective",
+        "LagSamples": 9900,
+        "MeanBeliefLagTicks": 0,
+        "Sell": 2004,
+        "Submissions": 3994,
+        "TrendTicksPerDecision": -1
+      },
+      {
+        "BeliefLagSum": 0,
+        "Buy": 1990,
+        "CurrentFairBelief": false,
+        "Decisions": 10000,
+        "Kind": "Protective",
+        "LagSamples": 9900,
+        "MeanBeliefLagTicks": 0,
+        "Sell": 2004,
+        "Submissions": 3994,
+        "TrendTicksPerDecision": 0
+      },
+      {
+        "BeliefLagSum": 0,
+        "Buy": 1990,
+        "CurrentFairBelief": true,
+        "Decisions": 10000,
+        "Kind": "Protective",
+        "LagSamples": 9900,
+        "MeanBeliefLagTicks": 0,
+        "Sell": 2004,
+        "Submissions": 3994,
+        "TrendTicksPerDecision": 0
+      },
+      {
+        "BeliefLagSum": 122184.51915266158,
+        "Buy": 1036,
+        "CurrentFairBelief": false,
+        "Decisions": 10000,
+        "Kind": "Protective",
+        "LagSamples": 9900,
+        "MeanBeliefLagTicks": 12.341870621480968,
+        "Sell": 3199,
+        "Submissions": 4235,
+        "TrendTicksPerDecision": 1
+      },
+      {
+        "BeliefLagSum": 0,
+        "Buy": 1990,
+        "CurrentFairBelief": true,
+        "Decisions": 10000,
+        "Kind": "Protective",
+        "LagSamples": 9900,
+        "MeanBeliefLagTicks": 0,
+        "Sell": 2004,
+        "Submissions": 3994,
+        "TrendTicksPerDecision": 1
+      },
+      {
+        "BeliefLagSum": -121641.4564565526,
+        "Buy": 7051,
+        "CurrentFairBelief": false,
+        "Decisions": 10000,
+        "Kind": "Reversion",
+        "LagSamples": 9900,
+        "MeanBeliefLagTicks": -12.287015803692181,
+        "Sell": 8,
+        "Submissions": 7059,
+        "TrendTicksPerDecision": -1
+      },
+      {
+        "BeliefLagSum": 0,
+        "Buy": 6699,
+        "CurrentFairBelief": true,
+        "Decisions": 10000,
+        "Kind": "Reversion",
+        "LagSamples": 9900,
+        "MeanBeliefLagTicks": 0,
+        "Sell": 36,
+        "Submissions": 6735,
+        "TrendTicksPerDecision": -1
+      },
+      {
+        "BeliefLagSum": 0,
+        "Buy": 1905,
+        "CurrentFairBelief": false,
+        "Decisions": 10000,
+        "Kind": "Reversion",
+        "LagSamples": 9900,
+        "MeanBeliefLagTicks": 0,
+        "Sell": 2071,
+        "Submissions": 3976,
+        "TrendTicksPerDecision": 0
+      },
+      {
+        "BeliefLagSum": 0,
+        "Buy": 1905,
+        "CurrentFairBelief": true,
+        "Decisions": 10000,
+        "Kind": "Reversion",
+        "LagSamples": 9900,
+        "MeanBeliefLagTicks": 0,
+        "Sell": 2071,
+        "Submissions": 3976,
+        "TrendTicksPerDecision": 0
+      },
+      {
+        "BeliefLagSum": 122631.51259563805,
+        "Buy": 13,
+        "CurrentFairBelief": false,
+        "Decisions": 10000,
+        "Kind": "Reversion",
+        "LagSamples": 9900,
+        "MeanBeliefLagTicks": 12.387021474306874,
+        "Sell": 7020,
+        "Submissions": 7033,
+        "TrendTicksPerDecision": 1
+      },
+      {
+        "BeliefLagSum": 0,
+        "Buy": 47,
+        "CurrentFairBelief": true,
+        "Decisions": 10000,
+        "Kind": "Reversion",
+        "LagSamples": 9900,
+        "MeanBeliefLagTicks": 0,
+        "Sell": 6723,
+        "Submissions": 6770,
+        "TrendTicksPerDecision": 1
+      }
+    ]
+  },
+  "HistoricalStudioContinuation": {
+    "Seed": 1,
+    "Variant": "saved",
+    "Seconds": 1800,
+    "Groups": {
+      "Protective": {
+        "DeltaPnl": -96647.49999999334,
+        "Submits": 1007,
+        "Rejected": 0,
+        "Closes": 300,
+        "Reasons": {
+          "Stop loss": {
+            "Contracts": 305,
+            "Count": 75,
+            "Losses": 75,
+            "Pnl": -110529.1659351678,
+            "Wins": 0
+          },
+          "Strategy trade": {
+            "Contracts": 298,
+            "Count": 202,
+            "Losses": 57,
+            "Pnl": 34488.989371777956,
+            "Wins": 143
+          },
+          "Take profit": {
+            "Contracts": 45,
+            "Count": 23,
+            "Losses": 0,
+            "Pnl": 13119.02097902054,
+            "Wins": 23
+          }
+        },
+        "StopMovedAway": 374,
+        "StopMovedCloser": 44,
+        "StopSlipDollars": -3870,
+        "StopContracts": 305,
+        "NoContractCapital": 4
+      },
+      "Reversion": {
+        "DeltaPnl": -116494.99999999702,
+        "Submits": 1380,
+        "Rejected": 0,
+        "Closes": 419,
+        "Reasons": {
+          "Stop loss": {
+            "Contracts": 385,
+            "Count": 83,
+            "Losses": 83,
+            "Pnl": -153771.77816527674,
+            "Wins": 0
+          },
+          "Strategy trade": {
+            "Contracts": 500,
+            "Count": 320,
+            "Losses": 159,
+            "Pnl": 1082.2493960070215,
+            "Wins": 157
+          },
+          "Take profit": {
+            "Contracts": 31,
+            "Count": 16,
+            "Losses": 0,
+            "Pnl": 14032.989583333416,
+            "Wins": 16
+          }
+        },
+        "StopMovedAway": 36,
+        "StopMovedCloser": 2,
+        "StopSlipDollars": -17120,
+        "StopContracts": 385,
+        "NoContractCapital": 7
+      },
+      "Scalper": {
+        "DeltaPnl": -3135.000000000011,
+        "Submits": 274,
+        "Rejected": 0,
+        "Closes": 101,
+        "Reasons": {
+          "Scalper target": {
+            "Contracts": 41,
+            "Count": 38,
+            "Losses": 0,
+            "Pnl": 2582.499999999971,
+            "Wins": 38
+          },
+          "Stop loss": {
+            "Contracts": 62,
+            "Count": 52,
+            "Losses": 52,
+            "Pnl": -5317.499999999982,
+            "Wins": 0
+          },
+          "Timed exit": {
+            "Contracts": 13,
+            "Count": 11,
+            "Losses": 4,
+            "Pnl": -375,
+            "Wins": 5
+          }
+        },
+        "StopMovedAway": 0,
+        "StopMovedCloser": 1,
+        "StopSlipDollars": -427.5,
+        "StopContracts": 62,
+        "NoContractCapital": 0
+      }
+    },
+    "ScalperGates": {
+      "Cooldown": 667,
+      "Decisions": 26270,
+      "EntrySubmit": 133,
+      "ManagingPosition": 629,
+      "MinMove": 24633,
+      "Spread": 208
+    },
+    "MinimumMoveBlockedPercent": 93.76855728968405,
+    "AllScalpersFlatPercent": 63.611111111111114,
+    "Markets": {
+      "BG": {
+        "AverageSpreadTicks": 1.0666666666666667,
+        "Average64ExecutionRangeTicks": 2.5694444444444446
+      },
+      "BT": {
+        "AverageSpreadTicks": 1.2944444444444445,
+        "Average64ExecutionRangeTicks": 4.766666666666667
+      },
+      "BX": {
+        "AverageSpreadTicks": 1.0694444444444444,
+        "Average64ExecutionRangeTicks": 3.1333333333333333
+      }
+    },
+    "Audit": {
+      "CashError": 9.238719940185547e-07,
+      "EquityError": 1.817941665649414e-06,
+      "Hash": 506024403,
+      "Inventory": {
+        "BG": 0,
+        "BT": 0,
+        "BX": 0,
+        "M2K": 0,
+        "MES": 0,
+        "MNQ": 0,
+        "MYM": 0,
+        "RTY": 0,
+        "YM": 0
+      },
+      "Trades": 24247091,
+      "Volume": 59947510
+    }
+  },
+  "Limitations": [
+    "Experimental variants only exist in detached harness copies. No live funding, game code, or saved worlds were changed.",
+    "Current-fair experiment resets only Protective/Reversion beliefs to current internal fair value before each decision; all ordinary belief-update RNG draws still execute.",
+    "Shared-book paths and subsequent RNG consumption diverge after a behavior change. Equal seeds/durations are sensitivity experiments, not a controlled replay of identical trades.",
+    "Fresh-population results and a historical Studio checkpoint do not determine the exact historical contribution of each cause to the pasted cumulative P&L.",
+    "Synthetic directional probes test decisions, not trading returns. Account/inventory/cash audits passed for completed simulations.",
+    "No broker fees exist in these experiments; spread, slippage, position management, and directional exposure still affect P&L."
+  ]
+}

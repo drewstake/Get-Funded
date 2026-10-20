@@ -1,0 +1,58 @@
+{
+  "AccountsAfter": 398,
+  "PlayersUnchanged": 5,
+  "RetiredEquityPreserved": true,
+  "ArchivedBots": 264,
+  "SourceVersion": 18,
+  "AccountsBefore": 662,
+  "CurrentMarketsPreserved": true,
+  "CheckpointVersion": 19,
+  "ExactRoundtrip": true,
+  "RawBytes": 4949349,
+  "ExactReplay": true,
+  "AuditAfter": {
+    "Inventory": {
+      "BT": 0,
+      "BX": 0,
+      "BG": 0
+    },
+    "CashError": 1.071486622095108e-06,
+    "Volume": 67192479,
+    "EquityError": -7.632188498973846e-07,
+    "Hash": 1247755936,
+    "Trades": 26945723
+  },
+  "CancelledOrders": 261,
+  "SettledPositions": 188,
+  "ReplaySeconds": 2.1308870000066236,
+  "AgentsAfter": 390,
+  "ArchiveFrozen": true,
+  "AgentsBefore": 654,
+  "ReplaySteps": 240,
+  "PayloadBytes": 1282588,
+  "FundingEligible": 390,
+  "Success": true,
+  "SourceStep": 9499279,
+  "SettlementPrices": {
+    "RTY": 2042.5,
+    "YM": 40006,
+    "MES": 5142,
+    "MYM": 34241,
+    "M2K": 2137.6,
+    "MNQ": 17855
+  },
+  "BooksAfter": 3,
+  "AuditBefore": {
+    "Inventory": {
+      "BT": 0,
+      "BX": 0,
+      "BG": 0
+    },
+    "CashError": 1.077074557542801e-06,
+    "Volume": 67190495,
+    "EquityError": -7.855705916881561e-07,
+    "Hash": 626502989,
+    "Trades": 26945128
+  },
+  "BooksBefore": 9
+}

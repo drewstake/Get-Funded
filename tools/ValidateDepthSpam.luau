@@ -5,6 +5,7 @@ local Shared=RealGame.ReplicatedStorage.DepthSpamShared
 local Server=RealGame.ServerScriptService.DepthSpamServer
 local function clone(x)if type(x)~="table"then return x end local r={}for k,v in pairs(x)do r[k]=clone(v)end return r end
 local AuditConfig=clone(require(Shared.MarketConfig))
+AuditConfig.BotPopulation=nil -- This fixture deliberately isolates reserve liquidity.
 AuditConfig.ParticipantsPerInstrument=0;AuditConfig.MakersPerInstrument=0;AuditConfig.ScalpersPerInstrument=0
 AuditConfig.WhaleFrequency=0;AuditConfig.NewsFrequency=0
 AuditConfig.Regimes={{Name="Fixed",Weight=1,Volatility=0,Liquidity=1,Activity=1,Trend=0}}

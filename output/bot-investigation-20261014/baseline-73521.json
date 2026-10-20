@@ -1,0 +1,1015 @@
+{
+  "Audit": {
+    "CashError": -3.026798367500305e-8,
+    "EquityError": -1.519365468993783e-7,
+    "Hash": 806349080,
+    "Inventory": {
+      "BG": 0,
+      "BT": 0,
+      "BX": 0
+    },
+    "Trades": 79716,
+    "Volume": 323588
+  },
+  "CounterpartyMarkToMarket": {
+    "Liquidity": {
+      "Liquidity": 0,
+      "Maker": -336280,
+      "Momentum": -59697.5,
+      "Protective": 20162.5,
+      "Reserve": 62417.5,
+      "Reversion": -14477.5,
+      "Scalper/Momentum": -12790,
+      "Scalper/Reversion": 3697.500000000029,
+      "Value": -17385,
+      "Whale": 57495
+    },
+    "Maker": {
+      "Liquidity": 336280,
+      "Maker": 0,
+      "Momentum": 208640.00000000035,
+      "Protective": 470129.9999999985,
+      "Reserve": -383067.49999999907,
+      "Reversion": 255702.5,
+      "Scalper/Momentum": 146840.00000000047,
+      "Scalper/Reversion": 276465,
+      "Value": 596144.9999999963,
+      "Whale": -886472.5
+    },
+    "Momentum": {
+      "Liquidity": 59697.5,
+      "Maker": -208640.00000000035,
+      "Momentum": 0,
+      "Protective": -1145,
+      "Reserve": 21317.5,
+      "Reversion": 5202.5,
+      "Scalper/Momentum": 13152.5,
+      "Scalper/Reversion": 36289.99999999988,
+      "Value": 47952.50000000093,
+      "Whale": 11775.000000000233
+    },
+    "Protective": {
+      "Liquidity": -20162.5,
+      "Maker": -470129.9999999985,
+      "Momentum": 1145,
+      "Protective": 0,
+      "Reserve": 72247.5,
+      "Reversion": 27225,
+      "Scalper/Momentum": -5287.5,
+      "Scalper/Reversion": 3210,
+      "Value": 9967.5,
+      "Whale": 66252.5
+    },
+    "Reserve": {
+      "Liquidity": -62417.5,
+      "Maker": 383067.49999999907,
+      "Momentum": -21317.5,
+      "Protective": -72247.5,
+      "Reversion": -14632.5,
+      "Scalper/Momentum": -81197.50000000035,
+      "Scalper/Reversion": -9350,
+      "Value": 210740,
+      "Whale": 149652.49999999627
+    },
+    "Reversion": {
+      "Liquidity": 14477.5,
+      "Maker": -255702.5,
+      "Momentum": -5202.5,
+      "Protective": -27225,
+      "Reserve": 14632.5,
+      "Reversion": 0,
+      "Scalper/Momentum": -13105,
+      "Scalper/Reversion": -45640,
+      "Value": -12625,
+      "Whale": 1232.5
+    },
+    "Scalper/Momentum": {
+      "Liquidity": 12790,
+      "Maker": -146840.00000000047,
+      "Momentum": -13152.5,
+      "Protective": 5287.5,
+      "Reserve": 81197.50000000035,
+      "Reversion": 13105,
+      "Scalper/Momentum": 0,
+      "Scalper/Reversion": -20697.49999999997,
+      "Value": -15722.499999999534,
+      "Whale": 16502.500000000087
+    },
+    "Scalper/Reversion": {
+      "Liquidity": -3697.500000000029,
+      "Maker": -276465,
+      "Momentum": -36289.99999999988,
+      "Protective": -3210,
+      "Reserve": 9350,
+      "Reversion": 45640,
+      "Scalper/Momentum": 20697.49999999997,
+      "Scalper/Reversion": 0,
+      "Value": 101620,
+      "Whale": 57580.000000000466
+    },
+    "Value": {
+      "Liquidity": 17385,
+      "Maker": -596144.9999999963,
+      "Momentum": -47952.50000000093,
+      "Protective": -9967.5,
+      "Reserve": -210740,
+      "Reversion": 12625,
+      "Scalper/Momentum": 15722.499999999534,
+      "Scalper/Reversion": -101620,
+      "Value": 0,
+      "Whale": 270064.99999999953
+    },
+    "Whale": {
+      "Liquidity": -57495,
+      "Maker": 886472.5,
+      "Momentum": -11775.000000000233,
+      "Protective": -66252.5,
+      "Reserve": -149652.49999999627,
+      "Reversion": -1232.5,
+      "Scalper/Momentum": -16502.500000000087,
+      "Scalper/Reversion": -57580.000000000466,
+      "Value": -270064.99999999953,
+      "Whale": 0
+    }
+  },
+  "CpuSeconds": 63.19605239998782,
+  "Groups": {
+    "Liquidity": {
+      "AgainstReserve": 2548,
+      "Base": 3700468,
+      "ByDirection": {
+        "-1": {
+          "Count": 3013,
+          "Pnl": -345660.00342836254
+        },
+        "1": {
+          "Count": 3366,
+          "Pnl": 60671.659477476984
+        }
+      },
+      "ByMarket": {
+        "BG": -152329.99999999334,
+        "BT": -89440.00000000029,
+        "BX": -53262.500000001564
+      },
+      "ClosePnl": -284988.3439508852,
+      "Closes": 6379,
+      "Count": 34,
+      "FillContracts": 21844,
+      "Losses": 3870,
+      "Markout30": -173194.99999999587,
+      "MarkoutVolume": 21791,
+      "MidCost": 81122.5,
+      "MidVolume": 21833,
+      "NoOneContractCapacity": 0,
+      "PassiveContracts": 3082,
+      "PassiveMarkout30": -128017.50000000063,
+      "PassiveMarkoutVolume": 3078,
+      "Pnl": -295032.4999999951,
+      "ProfitBots": 9,
+      "Realized": -284988.3439508854,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 133,
+          "Pnl": -113186.05766725355
+        },
+        "Take profit": {
+          "Count": 86,
+          "Pnl": 67809.82056041174
+        },
+        "Timed exit": {
+          "Count": 36,
+          "Pnl": 775.6703573926134
+        },
+        "Trade": {
+          "Count": 6124,
+          "Pnl": -240387.77720143637
+        }
+      },
+      "Rejected": 10,
+      "Rejections": {
+        "Insufficient margin or inventory capacity.": 10
+      },
+      "Submit": 19746,
+      "TakerContracts": 18762,
+      "TakerMakerFills": 0,
+      "TakerMarkout30": -45177.49999999475,
+      "TakerMarkoutVolume": 18713,
+      "Unrealized": -10044.15604910996,
+      "Wins": 2357
+    },
+    "Maker": {
+      "AgainstReserve": 7686,
+      "Base": 14401377,
+      "ByDirection": {
+        "-1": {
+          "Count": 20644,
+          "Pnl": -107928.88440134996
+        },
+        "1": {
+          "Count": 23930,
+          "Pnl": 1127759.705882271
+        }
+      },
+      "ByMarket": {
+        "BG": 388150.000000028,
+        "BT": 714164.9999999364,
+        "BX": -79137.5000000199
+      },
+      "ClosePnl": 1019830.8214809245,
+      "Closes": 44574,
+      "Count": 30,
+      "FillContracts": 489559,
+      "Losses": 14211,
+      "Markout30": 573414.9999999875,
+      "MarkoutVolume": 488291,
+      "MidCost": -371521.25,
+      "MidVolume": 489440,
+      "NoOneContractCapacity": 0,
+      "PassiveContracts": 280341,
+      "PassiveMarkout30": -8250212.50000004,
+      "PassiveMarkoutVolume": 279573,
+      "Pnl": 1023177.4999999446,
+      "ProfitBots": 22,
+      "Realized": 1019830.8214809224,
+      "Reasons": {
+        "Timed exit": {
+          "Count": 2203,
+          "Pnl": 48492.03271396299
+        },
+        "Trade": {
+          "Count": 42371,
+          "Pnl": 971338.7887669586
+        }
+      },
+      "Rejected": 0,
+      "Rejections": {},
+      "Submit": 51570,
+      "TakerContracts": 209218,
+      "TakerMakerFills": 0,
+      "TakerMarkout30": 8823627.500000047,
+      "TakerMarkoutVolume": 208718,
+      "Unrealized": 3346.678519022198,
+      "Wins": 25348
+    },
+    "Momentum": {
+      "AgainstReserve": 1997,
+      "Base": 2390927,
+      "ByDirection": {
+        "-1": {
+          "Count": 2215,
+          "Pnl": -171863.02581696835
+        },
+        "1": {
+          "Count": 1977,
+          "Pnl": 153410.84082392356
+        }
+      },
+      "ByMarket": {
+        "BG": -7429.999999997439,
+        "BT": 3619.999999993146,
+        "BX": -10587.499999988402
+      },
+      "ClosePnl": -18452.18499304479,
+      "Closes": 4192,
+      "Count": 23,
+      "FillContracts": 16138,
+      "Losses": 2272,
+      "Markout30": -71379.99999999402,
+      "MarkoutVolume": 16112,
+      "MidCost": 65598.75,
+      "MidVolume": 16128,
+      "NoOneContractCapacity": 0,
+      "PassiveContracts": 1842,
+      "PassiveMarkout30": -74752.49999999921,
+      "PassiveMarkoutVolume": 1842,
+      "Pnl": -14397.499999992695,
+      "ProfitBots": 10,
+      "Realized": -18452.184993044837,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 101,
+          "Pnl": -72500.37697133281
+        },
+        "Take profit": {
+          "Count": 48,
+          "Pnl": 52142.92077437104
+        },
+        "Timed exit": {
+          "Count": 11,
+          "Pnl": 941.5236421136069
+        },
+        "Trade": {
+          "Count": 4032,
+          "Pnl": 963.747561803355
+        }
+      },
+      "Rejected": 1,
+      "Rejections": {
+        "Insufficient margin or inventory capacity.": 1
+      },
+      "Submit": 12009,
+      "TakerContracts": 14296,
+      "TakerMakerFills": 0,
+      "TakerMarkout30": 3372.500000005375,
+      "TakerMarkoutVolume": 14270,
+      "Unrealized": 4054.6849930521057,
+      "Wins": 1845
+    },
+    "Protective": {
+      "AgainstReserve": 1233,
+      "Base": 1357786,
+      "ByDirection": {
+        "-1": {
+          "Count": 1225,
+          "Pnl": -312083.3710590638
+        },
+        "1": {
+          "Count": 974,
+          "Pnl": -4058.244255737309
+        }
+      },
+      "ByMarket": {
+        "BG": -60589.999999992695,
+        "BT": -143445.00000000073,
+        "BX": -113237.49999999766
+      },
+      "ClosePnl": -316141.6153148009,
+      "Closes": 2199,
+      "Count": 13,
+      "FillContracts": 9037,
+      "Losses": 1390,
+      "Markout30": -104654.99999999904,
+      "MarkoutVolume": 9020,
+      "MidCost": 45287.5,
+      "MidVolume": 9034,
+      "NoOneContractCapacity": 0,
+      "PassiveContracts": 1343,
+      "PassiveMarkout30": -56604.99999999971,
+      "PassiveMarkoutVolume": 1343,
+      "Pnl": -317272.49999999104,
+      "ProfitBots": 0,
+      "Realized": -316141.6153148011,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 210,
+          "Pnl": -228893.64706113757
+        },
+        "Take profit": {
+          "Count": 1,
+          "Pnl": 5685.952380952076
+        },
+        "Timed exit": {
+          "Count": 13,
+          "Pnl": -59.82869922934697
+        },
+        "Trade": {
+          "Count": 1975,
+          "Pnl": -92874.09193538618
+        }
+      },
+      "Rejected": 44,
+      "Rejections": {
+        "Insufficient margin or inventory capacity.": 44
+      },
+      "Submit": 6846,
+      "TakerContracts": 7694,
+      "TakerMakerFills": 0,
+      "TakerMarkout30": -48049.99999999946,
+      "TakerMarkoutVolume": 7677,
+      "Unrealized": -1130.8846851899852,
+      "Wins": 784
+    },
+    "Reserve": {
+      "AgainstReserve": 0,
+      "Base": 1800000000000,
+      "ByDirection": {
+        "-1": {
+          "Count": 2771,
+          "Pnl": -953486.9706061031
+        },
+        "1": {
+          "Count": 2232,
+          "Pnl": 1337727.197198912
+        }
+      },
+      "ByMarket": {
+        "BG": -44260,
+        "BT": -319505,
+        "BX": 846062.5
+      },
+      "ClosePnl": 384240.2265928069,
+      "Closes": 5003,
+      "Count": 18,
+      "FillContracts": 25623,
+      "Losses": 2501,
+      "Markout30": 287404.99999999313,
+      "MarkoutVolume": 25604,
+      "MidCost": -209962.5,
+      "MidVolume": 25623,
+      "NoOneContractCapacity": 0,
+      "PassiveContracts": 25623,
+      "PassiveMarkout30": 287404.99999999313,
+      "PassiveMarkoutVolume": 25604,
+      "Pnl": 482297.5,
+      "ProfitBots": 8,
+      "Realized": 384240.2265928065,
+      "Reasons": {
+        "Timed exit": {
+          "Count": 492,
+          "Pnl": 13203.82350144519
+        },
+        "Trade": {
+          "Count": 4511,
+          "Pnl": 371036.40309136146
+        }
+      },
+      "Rejected": 0,
+      "Rejections": {},
+      "Submit": 56498,
+      "TakerContracts": 0,
+      "TakerMakerFills": 0,
+      "TakerMarkout30": 0,
+      "TakerMarkoutVolume": 0,
+      "Unrealized": 98057.27340720707,
+      "Wins": 2457
+    },
+    "Reversion": {
+      "AgainstReserve": 1457,
+      "Base": 1098647,
+      "ByDirection": {
+        "-1": {
+          "Count": 1995,
+          "Pnl": -284998.62607368635
+        },
+        "1": {
+          "Count": 934,
+          "Pnl": -44082.142857146384
+        }
+      },
+      "ByMarket": {
+        "BG": -107179.99999999758,
+        "BT": -161614.9999999965,
+        "BX": -60362.50000000138
+      },
+      "ClosePnl": -329080.7689308334,
+      "Closes": 2929,
+      "Count": 12,
+      "FillContracts": 11466,
+      "Losses": 2101,
+      "Markout30": -132499.99999999904,
+      "MarkoutVolume": 11439,
+      "MidCost": 47441.25,
+      "MidVolume": 11461,
+      "NoOneContractCapacity": 0,
+      "PassiveContracts": 2046,
+      "PassiveMarkout30": -101552.50000000099,
+      "PassiveMarkoutVolume": 2044,
+      "Pnl": -329157.49999999546,
+      "ProfitBots": 0,
+      "Realized": -329080.7689308326,
+      "Reasons": {
+        "Margin liquidation": {
+          "Count": 7,
+          "Pnl": -30413.57142857014
+        },
+        "Stop loss": {
+          "Count": 207,
+          "Pnl": -164365.00115602452
+        },
+        "Take profit": {
+          "Count": 11,
+          "Pnl": 16742.68603586628
+        },
+        "Timed exit": {
+          "Count": 11,
+          "Pnl": 383.18346020259014
+        },
+        "Trade": {
+          "Count": 2693,
+          "Pnl": -151428.0658423065
+        }
+      },
+      "Rejected": 265,
+      "Rejections": {
+        "Insufficient margin or inventory capacity.": 265
+      },
+      "Submit": 8916,
+      "TakerContracts": 9420,
+      "TakerMakerFills": 0,
+      "TakerMarkout30": -30947.4999999982,
+      "TakerMarkoutVolume": 9395,
+      "Unrealized": -76.73106916286088,
+      "Wins": 785
+    },
+    "Scalper/Momentum": {
+      "AgainstReserve": 1265,
+      "Base": 2794294,
+      "ByDirection": {
+        "-1": {
+          "Count": 2032,
+          "Pnl": -51164.99999999884
+        },
+        "1": {
+          "Count": 1780,
+          "Pnl": -16247.499999999296
+        }
+      },
+      "ByMarket": {
+        "BG": -18889.99999999808,
+        "BT": -18515,
+        "BX": -30125
+      },
+      "ClosePnl": -67412.4999999981,
+      "Closes": 3812,
+      "Count": 27,
+      "FillContracts": 10659,
+      "Losses": 2470,
+      "Markout30": -54957.499999997104,
+      "MarkoutVolume": 10619,
+      "MidCost": 39952.5,
+      "MidVolume": 10658,
+      "NoOneContractCapacity": 0,
+      "PassiveContracts": 1605,
+      "PassiveMarkout30": -59984.99999999997,
+      "PassiveMarkoutVolume": 1600,
+      "Pnl": -67529.99999999808,
+      "ProfitBots": 0,
+      "Realized": -67412.49999999808,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 450,
+          "Pnl": -34620.00000000012
+        },
+        "Timed exit": {
+          "Count": 3082,
+          "Pnl": -48624.99999999815
+        },
+        "Trade": {
+          "Count": 280,
+          "Pnl": 15832.500000000155
+        }
+      },
+      "Rejected": 0,
+      "Rejections": {},
+      "Submit": 13235,
+      "TakerContracts": 9054,
+      "TakerMakerFills": 0,
+      "TakerMarkout30": 5027.500000003092,
+      "TakerMarkoutVolume": 9019,
+      "Unrealized": -117.49999999998181,
+      "Wins": 945
+    },
+    "Scalper/Reversion": {
+      "AgainstReserve": 1461,
+      "Base": 2852470,
+      "ByDirection": {
+        "-1": {
+          "Count": 2065,
+          "Pnl": -62610.000000000015
+        },
+        "1": {
+          "Count": 2030,
+          "Pnl": -22114.99999999833
+        }
+      },
+      "ByMarket": {
+        "BG": -30639.999999998276,
+        "BT": -19460,
+        "BX": -34675
+      },
+      "ClosePnl": -84724.99999999846,
+      "Closes": 4095,
+      "Count": 27,
+      "FillContracts": 12581,
+      "Losses": 2700,
+      "Markout30": -69219.99999999773,
+      "MarkoutVolume": 12542,
+      "MidCost": 46765,
+      "MidVolume": 12574,
+      "NoOneContractCapacity": 0,
+      "PassiveContracts": 2035,
+      "PassiveMarkout30": -74452.50000000007,
+      "PassiveMarkoutVolume": 2033,
+      "Pnl": -84774.99999999828,
+      "ProfitBots": 0,
+      "Realized": -84724.99999999827,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 527,
+          "Pnl": -41252.500000000146
+        },
+        "Timed exit": {
+          "Count": 3253,
+          "Pnl": -63829.99999999835
+        },
+        "Trade": {
+          "Count": 315,
+          "Pnl": 20357.499999999993
+        }
+      },
+      "Rejected": 0,
+      "Rejections": {},
+      "Submit": 13710,
+      "TakerContracts": 10546,
+      "TakerMakerFills": 0,
+      "TakerMarkout30": 5232.500000002419,
+      "TakerMarkoutVolume": 10509,
+      "Unrealized": -49.999999999990905,
+      "Wins": 980
+    },
+    "Value": {
+      "AgainstReserve": 3299,
+      "Base": 2644550,
+      "ByDirection": {
+        "-1": {
+          "Count": 2869,
+          "Pnl": -682970.5134993106
+        },
+        "1": {
+          "Count": 2118,
+          "Pnl": 29639.999999999087
+        }
+      },
+      "ByMarket": {
+        "BG": -126700.00000000739,
+        "BT": -254065.0000000129,
+        "BX": -272462.50000000536
+      },
+      "ClosePnl": -653330.513499311,
+      "Closes": 4987,
+      "Count": 26,
+      "FillContracts": 20505,
+      "Losses": 3001,
+      "Markout30": -231195.000000002,
+      "MarkoutVolume": 20464,
+      "MidCost": 98952.5,
+      "MidVolume": 20497,
+      "NoOneContractCapacity": 0,
+      "PassiveContracts": 2681,
+      "PassiveMarkout30": -123327.50000000036,
+      "PassiveMarkoutVolume": 2677,
+      "Pnl": -653227.5000000257,
+      "ProfitBots": 2,
+      "Realized": -653330.5134993105,
+      "Reasons": {
+        "Margin liquidation": {
+          "Count": 25,
+          "Pnl": -44446.12987012719
+        },
+        "Stop loss": {
+          "Count": 254,
+          "Pnl": -443319.58539603365
+        },
+        "Take profit": {
+          "Count": 7,
+          "Pnl": 10652.620097049612
+        },
+        "Timed exit": {
+          "Count": 17,
+          "Pnl": -76.19670209447577
+        },
+        "Trade": {
+          "Count": 4684,
+          "Pnl": -176141.22162810518
+        }
+      },
+      "Rejected": 934,
+      "Rejections": {
+        "Insufficient margin or inventory capacity.": 934
+      },
+      "Submit": 16376,
+      "TakerContracts": 17824,
+      "TakerMakerFills": 0,
+      "TakerMarkout30": -107867.50000000226,
+      "TakerMarkoutVolume": 17787,
+      "Unrealized": 103.01349928489799,
+      "Wins": 1932
+    },
+    "Whale": {
+      "AgainstReserve": 4677,
+      "Base": 7648682,
+      "ByDirection": {
+        "-1": {
+          "Count": 1054,
+          "Pnl": -479562.44827901706
+        },
+        "1": {
+          "Count": 1616,
+          "Pnl": 762944.1649783978
+        }
+      },
+      "ByMarket": {
+        "BG": 159869.99999993306,
+        "BT": 288259.99999994587,
+        "BX": -192212.49999997893
+      },
+      "ClosePnl": 283381.7166993813,
+      "Closes": 2670,
+      "Count": 9,
+      "FillContracts": 29758,
+      "Losses": 1164,
+      "Markout30": -23717.499999988555,
+      "MarkoutVolume": 29680,
+      "MidCost": 156363.75,
+      "MidVolume": 29754,
+      "NoOneContractCapacity": 0,
+      "PassiveContracts": 2987,
+      "PassiveMarkout30": -153142.5000000018,
+      "PassiveMarkoutVolume": 2987,
+      "Pnl": 255917.4999999,
+      "ProfitBots": 6,
+      "Realized": 283381.7166993816,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 264,
+          "Pnl": -427991.43884280394
+        },
+        "Take profit": {
+          "Count": 481,
+          "Pnl": 624936.6021566271
+        },
+        "Timed exit": {
+          "Count": 7,
+          "Pnl": -272.0866535162713
+        },
+        "Trade": {
+          "Count": 1918,
+          "Pnl": 86708.64003907458
+        }
+      },
+      "Rejected": 78,
+      "Rejections": {
+        "Insufficient margin or inventory capacity.": 78
+      },
+      "Submit": 2925,
+      "TakerContracts": 26771,
+      "TakerMakerFills": 0,
+      "TakerMarkout30": 129425.00000001333,
+      "TakerMarkoutVolume": 26693,
+      "Unrealized": -27464.21669948154,
+      "Wins": 1504
+    }
+  },
+  "Market": {
+    "Count": 4320,
+    "FairMove": 0,
+    "LastFair": {},
+    "Missing": 1,
+    "Series": [
+      {
+        "Fair": {
+          "BG": 23869.817987611492,
+          "BT": 82412.80499336433,
+          "BX": 23442.432161077195
+        },
+        "Pnl": {
+          "Liquidity": -19970.000000003958,
+          "Maker": 5989.999999998603,
+          "Momentum": -7725.000000004919,
+          "Protective": -20085.000000001965,
+          "Reserve": 28367.5,
+          "Reversion": -24400.000000000116,
+          "Scalper/Momentum": -4810.0000000004,
+          "Scalper/Reversion": -4910.000000000415,
+          "Value": -34044.99999999725,
+          "Whale": 81587.49999999302
+        },
+        "Time": 600
+      },
+      {
+        "Fair": {
+          "BG": 23840.545913554764,
+          "BT": 82370.38290142955,
+          "BX": 23401.21258742517
+        },
+        "Pnl": {
+          "Liquidity": -62972.50000000573,
+          "Maker": 12472.499999980908,
+          "Momentum": -11045.000000005377,
+          "Protective": -17855.00000000104,
+          "Reserve": 216917.5,
+          "Reversion": -32517.499999997075,
+          "Scalper/Momentum": -10285.000000000138,
+          "Scalper/Reversion": -12225.00000000064,
+          "Value": -37574.99999999106,
+          "Whale": -44915.00000000361
+        },
+        "Time": 1200
+      },
+      {
+        "Fair": {
+          "BG": 23867.058286431813,
+          "BT": 82346.1822331089,
+          "BX": 23425.46706632843
+        },
+        "Pnl": {
+          "Liquidity": -69600.000000004,
+          "Maker": 49817.50000003661,
+          "Momentum": -20510.00000000037,
+          "Protective": 11157.5000000016,
+          "Reserve": 84047.5,
+          "Reversion": -17204.99999999792,
+          "Scalper/Momentum": -17012.499999999716,
+          "Scalper/Reversion": -20170.00000000101,
+          "Value": 38757.499999999345,
+          "Whale": -39282.49999999488
+        },
+        "Time": 1800
+      },
+      {
+        "Fair": {
+          "BG": 23836.11682051473,
+          "BT": 82265.06164302626,
+          "BX": 23407.44179911253
+        },
+        "Pnl": {
+          "Liquidity": -99827.49999999926,
+          "Maker": 144067.50000004267,
+          "Momentum": -26787.499999996602,
+          "Protective": -12412.499999994005,
+          "Reserve": 204032.5,
+          "Reversion": -39512.49999999619,
+          "Scalper/Momentum": -20787.499999999083,
+          "Scalper/Reversion": -26010.000000000684,
+          "Value": 39587.499999994594,
+          "Whale": -162350.00000004435
+        },
+        "Time": 2400
+      },
+      {
+        "Fair": {
+          "BG": 23830.21214280827,
+          "BT": 82282.055447959,
+          "BX": 23408.560383584718
+        },
+        "Pnl": {
+          "Liquidity": -138677.49999999756,
+          "Maker": 72470.00000003685,
+          "Momentum": -28369.999999992542,
+          "Protective": -19234.999999988773,
+          "Reserve": 154645,
+          "Reversion": -53342.499999994805,
+          "Scalper/Momentum": -27504.999999999054,
+          "Scalper/Reversion": -34542.50000000051,
+          "Value": 43952.49999998838,
+          "Whale": 30604.99999993737
+        },
+        "Time": 3000
+      },
+      {
+        "Fair": {
+          "BG": 23843.928077589273,
+          "BT": 82403.29860181338,
+          "BX": 23436.5338475929
+        },
+        "Pnl": {
+          "Liquidity": -163162.5000000052,
+          "Maker": 269667.4999999276,
+          "Momentum": -34164.99999999874,
+          "Protective": -86319.99999998456,
+          "Reserve": -47560,
+          "Reversion": -89367.49999999539,
+          "Scalper/Momentum": -34167.49999999979,
+          "Scalper/Reversion": -42835.00000000062,
+          "Value": -55185.00000001637,
+          "Whale": 283094.999999941
+        },
+        "Time": 3600
+      },
+      {
+        "Fair": {
+          "BG": 23888.223415506698,
+          "BT": 82473.12506660432,
+          "BX": 23490.791313305122
+        },
+        "Pnl": {
+          "Liquidity": -198017.50000000518,
+          "Maker": 339057.49999992567,
+          "Momentum": -33082.49999999708,
+          "Protective": -98412.49999998955,
+          "Reserve": -49525,
+          "Reversion": -122757.49999999357,
+          "Scalper/Momentum": -39584.99999999932,
+          "Scalper/Reversion": -50797.50000000064,
+          "Value": -98375.00000001867,
+          "Whale": 351494.999999932
+        },
+        "Time": 4200
+      },
+      {
+        "Fair": {
+          "BG": 23879.326772735,
+          "BT": 82448.2759723062,
+          "BX": 23500.338975021543
+        },
+        "Pnl": {
+          "Liquidity": -208195.00000000178,
+          "Maker": 436472.49999989656,
+          "Momentum": -55992.499999999476,
+          "Protective": -106542.49999999025,
+          "Reserve": 21287.5,
+          "Reversion": -134292.4999999993,
+          "Scalper/Momentum": -45622.49999999943,
+          "Scalper/Reversion": -58310.00000000085,
+          "Value": -125972.50000001867,
+          "Whale": 277167.4999999227
+        },
+        "Time": 4800
+      },
+      {
+        "Fair": {
+          "BG": 23931.88995681433,
+          "BT": 82555.82711567591,
+          "BX": 23529.146824261006
+        },
+        "Pnl": {
+          "Liquidity": -225957.5000000005,
+          "Maker": 645897.4999998871,
+          "Momentum": -48812.49999999752,
+          "Protective": -134269.99999998958,
+          "Reserve": 81325,
+          "Reversion": -177544.99999999168,
+          "Scalper/Momentum": -50319.99999999911,
+          "Scalper/Reversion": -63645.00000000013,
+          "Value": -238910.00000001554,
+          "Whale": 212237.49999991397
+        },
+        "Time": 5400
+      },
+      {
+        "Fair": {
+          "BG": 24003.814362174966,
+          "BT": 82714.6292056885,
+          "BX": 23581.941166309996
+        },
+        "Pnl": {
+          "Liquidity": -248405.0000000032,
+          "Maker": 767549.9999999353,
+          "Momentum": -11587.499999992004,
+          "Protective": -248402.49999999403,
+          "Reserve": 383765,
+          "Reversion": -265442.49999999197,
+          "Scalper/Momentum": -57727.4999999984,
+          "Scalper/Reversion": -72167.49999999927,
+          "Value": -512947.5000000197,
+          "Whale": 265364.9999998987
+        },
+        "Time": 6000
+      },
+      {
+        "Fair": {
+          "BG": 24037.538643473257,
+          "BT": 82835.68692394071,
+          "BX": 23595.530377029296
+        },
+        "Pnl": {
+          "Liquidity": -265027.50000000076,
+          "Maker": 908042.4999999527,
+          "Momentum": -17739.999999989137,
+          "Protective": -300057.49999999127,
+          "Reserve": 505157.5,
+          "Reversion": -319907.49999999604,
+          "Scalper/Momentum": -63274.999999998035,
+          "Scalper/Reversion": -76467.49999999853,
+          "Value": -652610.0000000197,
+          "Whale": 281884.9999998867
+        },
+        "Time": 6600
+      },
+      {
+        "Fair": {
+          "BG": 24015.416845794796,
+          "BT": 82842.28574699137,
+          "BX": 23585.867090504278
+        },
+        "Pnl": {
+          "Liquidity": -295032.4999999951,
+          "Maker": 1023177.4999999446,
+          "Momentum": -14397.499999992695,
+          "Protective": -317272.49999999104,
+          "Reserve": 482297.5,
+          "Reversion": -329157.49999999546,
+          "Scalper/Momentum": -67529.99999999808,
+          "Scalper/Reversion": -84774.99999999828,
+          "Value": -653227.5000000257,
+          "Whale": 255917.4999999
+        },
+        "Time": 7200
+      }
+    ],
+    "Spread": 4955,
+    "TrendSeconds": {
+      "High volatility": 439,
+      "Quiet": 1596.5,
+      "Range-bound": 2925.75,
+      "Thin liquidity": 807.75,
+      "Trending": 1431
+    },
+    "TwoSided": 4319
+  },
+  "Measurement": "Fresh isolated simulation using saved Live config and local source. Initial auction excluded from Pnl/flow; startup realized remains in Realized. Markouts use last trade 30 simulated seconds after each fill; final 30s excluded.",
+  "Seed": 73521,
+  "SimulatedSeconds": 7200,
+  "Variant": "baseline"
+}

@@ -1,0 +1,298 @@
+{
+  "MarketTests": {
+    "Total": 14,
+    "Passed": 13,
+    "Results": [
+      {
+        "Passed": true,
+        "Name": "Price/time priority, partial fills, cancellation and no quote-driven price",
+        "Detail": "Better price first, then FIFO; partial residual 1; ownership checked"
+      },
+      {
+        "Passed": true,
+        "Name": "Marketable limits honor their price cap and rest the residual",
+        "Detail": "Limit cap, later partial fill and residual cancellation passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Thin liquidity increases impact; multi-level sweeps",
+        "Detail": {
+          "ThinAverage": 5825.625,
+          "DeepSlippage": 0,
+          "DeepAverage": 5825,
+          "ThinSlippage": 0.625
+        }
+      },
+      {
+        "Passed": true,
+        "Name": "Unfilled market remainder cancelled, self trades prevented",
+        "Detail": "IOC accounting and self-trade prevention passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Stop cascade, partial protection, retry and OCO",
+        "Detail": "Stop remains latched through insufficient liquidity, never reverses"
+      },
+      {
+        "Passed": true,
+        "Name": "Take-profit long and short, entry averaging and realized P&L",
+        "Detail": "Both take-profit directions settle from real fills"
+      },
+      {
+        "Passed": true,
+        "Name": "Dragged SL and TP amend atomically and trigger from subsequent executions",
+        "Detail": "Long/short SL and TP, profitable stops, snapshots, OCO and fill-based exits passed"
+      },
+      {
+        "Passed": false,
+        "Name": "Wide ticket protections remain draggable outside the entry-order price band",
+        "Detail": "ServerStorage.ProtectiveOrderValidation.MarketTests:109: assertion failed!"
+      },
+      {
+        "Passed": true,
+        "Name": "Protection edits reject invalid, stale and foreign requests",
+        "Detail": "Invalid ticks, direction, ownership, stale versions, non-finite/extreme prices, cancelled/triggered orders rejected"
+      },
+      {
+        "Passed": true,
+        "Name": "Validation, reserved margin, finite inventory and off-tick prices",
+        "Detail": "Working orders reserve capacity; invalid inputs rejected"
+      },
+      {
+        "Passed": true,
+        "Name": "Every candle timeframe agrees with the execution tape",
+        "Detail": "OHLCV independently reconstructed for 1m, 5m, 15m, 1h and 1D"
+      },
+      {
+        "Passed": true,
+        "Name": "Daily quote baseline follows simulated days, timeframes and saved restores",
+        "Detail": "Negative/positive days, midnight, no trades, all timeframes and checkpoint restore passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Seeded participants and identical step-indexed player actions reproduce",
+        "Detail": {
+          "Hash": 868186536,
+          "CashError": 0,
+          "Seed": 73521,
+          "EquityError": 6.111804395914078e-10,
+          "Volume": 3220,
+          "DifferentSeedHash": 1229404423,
+          "Trades": 1215
+        }
+      },
+      {
+        "Passed": true,
+        "Name": "Player executions consume shared liquidity and join the execution tape",
+        "Detail": {
+          "Inventory": {
+            "BT": 0,
+            "BX": 0,
+            "BG": 0
+          },
+          "CashError": 0,
+          "Volume": 3,
+          "EquityError": 0,
+          "Hash": 5220052,
+          "Trades": 2
+        }
+      }
+    ]
+  },
+  "ProtectionScaleTests": [
+    {
+      "Passed": true,
+      "Name": "BX 1: protections survive adds, partial fills and reductions; reversal gets new levels",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "BX -1: protections survive adds, partial fills and reductions; reversal gets new levels",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "BT 1: protections survive adds, partial fills and reductions; reversal gets new levels",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "BT -1: protections survive adds, partial fills and reductions; reversal gets new levels",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "BG 1: protections survive adds, partial fills and reductions; reversal gets new levels",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "BG -1: protections survive adds, partial fills and reductions; reversal gets new levels",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Entry-label replacement rejects stale quantity and stale price atomically",
+      "Detail": "Passed"
+    }
+  ],
+  "SharedDepthTests": [
+    {
+      "Passed": true,
+      "Name": "Player and participant quantities aggregate anonymously and execute FIFO",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Price priority and finite marketable limits leave exact residuals",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Empty and one-sided books never generate synthetic fills or levels",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Repricing retains identity and protection but resets FIFO priority",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Self-trade prevention covers multiple accounts with the same owner",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Disconnect cancels all resting liquidity and rejects stale entries",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Invalid capacity, expired orders and untriggered stops are excluded",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": false,
+      "Name": "Stop entries wait for liquidity, partially fill, then report once",
+      "Detail": "ServerStorage.ProtectiveOrderValidation.SharedDepthTests:79: assertion failed!"
+    },
+    {
+      "Passed": false,
+      "Name": "Stop-loss partial fills retry without reversing and preserve OCO",
+      "Detail": "ServerStorage.ProtectiveOrderValidation.SharedDepthTests:89: assertion failed!"
+    },
+    {
+      "Passed": false,
+      "Name": "Take-profit rests at its target and cannot fill at a worse price",
+      "Detail": "ServerStorage.ProtectiveOrderValidation.SharedDepthTests:95: assertion failed!"
+    },
+    {
+      "Passed": true,
+      "Name": "Old checkpoints cancel off-book player limits without rewriting balances or tape",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Maker quotes retain queue position and partial quantity between material changes",
+      "Detail": "Passed"
+    }
+  ],
+  "ExecutionChoiceTests": [
+    {
+      "Passed": true,
+      "Name": "Default market fills immediately within budget, cancels remainder and never resumes",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Explicit slicing continues and cancellation stops later fills",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Changing modes never resets the shared allowance",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Empty market cancels standard order and retains explicitly sliced order",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Standard marketable limits reject blocked submissions without creating an order",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Sliced limits preserve execution choice when amended",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Limit amendment reports partial fills, retained remainders and full fills",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Blocked buy and sell amendments preserve order identity, FIFO, protection and quantity",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Exhausted budgets and price guards reject moves before any fill or self-trade cancellation",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Standard limit remainder stays on book, fills on later orders and survives restore",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Repeated sliced amendments report new fills without counting previous executions again",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Moving a partially filled limit without new matches never reports historical fills as new",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Triggered stops honor standard versus sliced execution",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Invalid execution mode cannot create orders or fills",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Execution choice and existing queued orders survive checkpoint restore",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Client forwards selection and defaults to standard",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": false,
+      "Name": "Triggered take profits stay labelled as closing protection through partial fills and restore",
+      "Detail": "ServerStorage.ProtectiveOrderValidation.ExecutionChoiceTests:166: assertion failed!"
+    },
+    {
+      "Passed": true,
+      "Name": "Trillion-dollar settlement does not accumulate balance rounding drift",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Restore repairs only sub-cent large-account drift and still rejects larger discrepancies",
+      "Detail": "Passed"
+    }
+  ]
+}

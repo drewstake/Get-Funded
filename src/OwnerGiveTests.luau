@@ -1,4 +1,5 @@
-local C=require(game.ReplicatedStorage.MarketReign.MarketConfig)
+local C=table.clone(require(game.ReplicatedStorage.MarketReign.MarketConfig))
+C.BotPopulation=nil -- Account fixture intentionally has no autonomous scheduler.
 local L=require(game.ReplicatedStorage.MarketReign.ProgressionConfig)
 local E=require(script.Parent.MarketEngine)
 local F=require(script.Parent.FundedAccounts)

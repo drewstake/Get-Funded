@@ -1,6 +1,7 @@
 local Liquidity=require(script.Parent.TestLiquidity)
 -- Isolated exchange/profile tests, including real fills and encoded checkpoint restart.
-local C=require(game.ReplicatedStorage.MarketReign.MarketConfig)
+local C=table.clone(require(game.ReplicatedStorage.MarketReign.MarketConfig))
+C.BotPopulation=nil -- This fixture intentionally has no autonomous population.
 local L=require(game.ReplicatedStorage.MarketReign.ProgressionConfig)
 local Protection=require(game.ReplicatedStorage.MarketReign.TradeProtection)
 local E=require(script.Parent.MarketEngine)
@@ -66,8 +67,12 @@ function Tests.Run()
    assert(Liquidity.Submit(e,id,{Contract="BX",Direction=side,Quantity=1,Type="Market",StopDollars=100,TargetDollars=200}))
    local p=e.Accounts[id].Positions.BX;local price=reason=="Take profit"and p.Target or p.Stop
    assert(not f:TakeEvents("preferences-test"));trade(e,price)
-   assert(p.Triggered==reason and not f:TakeEvents("preferences-test"),"A price trigger is not a fill")
-   Liquidity.Offer(e,"BX",side,1,price)
+   if reason=="Stop loss"then
+    assert(p.Triggered==reason and not f:TakeEvents("preferences-test"),"A price trigger is not a fill")
+    Liquidity.Offer(e,"BX",side,1,price)
+   else
+    assert(not e.Accounts[id].Positions.BX and e.Accounts[id].History[1].Reason==reason,"Working TP did not execute")
+   end
    e:ProcessStops();assert(not e.Accounts[id].Positions.BX)
    local events=f:TakeEvents("preferences-test");assert(#events==1,"Close should not add progression toasts")
    local ev=events[1];assert(ev.Kind=="TradeClosed"and ev.Reason==reason and ev.Account==id and ev.TradeId==e.Accounts[id].History[1].TradeId)

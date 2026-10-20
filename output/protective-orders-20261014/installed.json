@@ -1,0 +1,62 @@
+[
+  {
+    "Bytes": 47202,
+    "Path": "ServerScriptService.MarketReign.MarketEngine"
+  },
+  {
+    "Bytes": 5805,
+    "Path": "ServerScriptService.MarketReign.PlayerExecution"
+  },
+  {
+    "Bytes": 4272,
+    "Path": "ServerScriptService.MarketReign.ProtectiveOrders"
+  },
+  {
+    "Bytes": 10461,
+    "Path": "ServerScriptService.MarketReign.ProtectiveOrdersTests"
+  },
+  {
+    "Bytes": 17115,
+    "Path": "ServerScriptService.MarketReign.WorldCheckpoint"
+  },
+  {
+    "Bytes": 28837,
+    "Path": "ServerScriptService.MarketReign.FundedAccounts"
+  },
+  {
+    "Bytes": 16040,
+    "Path": "ServerScriptService.MarketReign.MarketTests"
+  },
+  {
+    "Bytes": 14919,
+    "Path": "ServerScriptService.MarketReign.ExecutionChoiceTests"
+  },
+  {
+    "Bytes": 7774,
+    "Path": "ServerScriptService.MarketReign.SharedDepthTests"
+  },
+  {
+    "Bytes": 22755,
+    "Path": "ServerScriptService.MarketReign.TradeLimitsTests"
+  },
+  {
+    "Bytes": 6041,
+    "Path": "ServerScriptService.MarketReign.TradePreferencesTests"
+  },
+  {
+    "Bytes": 1769,
+    "Path": "ServerScriptService.MarketReign.TestLiquidity"
+  },
+  {
+    "Bytes": 7686,
+    "Path": "ServerScriptService.MarketReign.ClosedTradePnlTests"
+  },
+  {
+    "Bytes": 81501,
+    "Path": "ReplicatedStorage.MarketReign.ChartView"
+  },
+  {
+    "Bytes": 148038,
+    "Path": "ReplicatedStorage.MarketReign.TerminalUI"
+  }
+]

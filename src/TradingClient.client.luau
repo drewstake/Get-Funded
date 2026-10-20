@@ -4,6 +4,13 @@ local player=Players.LocalPlayer
 local screen=script.Parent
 local ui=require(game:GetService("ReplicatedStorage"):WaitForChild("MarketReign"):WaitForChild("TerminalUI"))
 local controller=ui.Mount(screen)
+local botStatsView=require(game:GetService("ReplicatedStorage").MarketReign:WaitForChild("BotStatsView")).Mount(screen.Parent)
+local statsConnection
+task.spawn(function()
+ local remote=game:GetService("ReplicatedStorage").MarketReign:WaitForChild("OwnerBotStats")
+ if not screen.Parent then return end
+ statsConnection=remote.OnClientEvent:Connect(function(report)botStatsView:Show(report)end)
+end)
 -- Private replies for the server-owned /reset command. This remote has no server event handler.
 local noticeConnection
 task.spawn(function()
@@ -34,6 +41,7 @@ end
 local characterConnection=player.CharacterAdded:Connect(disableJump)
 if player.Character then task.spawn(disableJump,player.Character)end
 screen.Destroying:Connect(function()
- characterConnection:Disconnect();if noticeConnection then noticeConnection:Disconnect()end;controller:Destroy()
+ characterConnection:Disconnect();if noticeConnection then noticeConnection:Disconnect()end
+ if statsConnection then statsConnection:Disconnect()end;botStatsView:Destroy();controller:Destroy()
 end)
 print("[Get Funded!] Native trading workspace ready. Server-authoritative order book.")

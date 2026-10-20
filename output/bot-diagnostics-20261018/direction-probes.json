@@ -1,0 +1,149 @@
+{
+  "Notes": "Synthetic decision-only probes: fair value equals trade price, no position or orders, zero bias, zero belief noise, normal decision noise. Price moves 1 tick per 10 simulated seconds with a 20-execution lookback. No simulated fills/P&L.",
+  "Results": [
+    {
+      "BeliefLagSum": -122544.01776653972,
+      "Buy": 3302,
+      "CurrentFairBelief": false,
+      "Decisions": 10000,
+      "Kind": "Protective",
+      "LagSamples": 9900,
+      "MeanBeliefLagTicks": -12.37818361278179,
+      "Sell": 1035,
+      "Submissions": 4337,
+      "TrendTicksPerDecision": -1
+    },
+    {
+      "BeliefLagSum": 0,
+      "Buy": 1990,
+      "CurrentFairBelief": true,
+      "Decisions": 10000,
+      "Kind": "Protective",
+      "LagSamples": 9900,
+      "MeanBeliefLagTicks": 0,
+      "Sell": 2004,
+      "Submissions": 3994,
+      "TrendTicksPerDecision": -1
+    },
+    {
+      "BeliefLagSum": 0,
+      "Buy": 1990,
+      "CurrentFairBelief": false,
+      "Decisions": 10000,
+      "Kind": "Protective",
+      "LagSamples": 9900,
+      "MeanBeliefLagTicks": 0,
+      "Sell": 2004,
+      "Submissions": 3994,
+      "TrendTicksPerDecision": 0
+    },
+    {
+      "BeliefLagSum": 0,
+      "Buy": 1990,
+      "CurrentFairBelief": true,
+      "Decisions": 10000,
+      "Kind": "Protective",
+      "LagSamples": 9900,
+      "MeanBeliefLagTicks": 0,
+      "Sell": 2004,
+      "Submissions": 3994,
+      "TrendTicksPerDecision": 0
+    },
+    {
+      "BeliefLagSum": 122184.51915266158,
+      "Buy": 1036,
+      "CurrentFairBelief": false,
+      "Decisions": 10000,
+      "Kind": "Protective",
+      "LagSamples": 9900,
+      "MeanBeliefLagTicks": 12.341870621480968,
+      "Sell": 3199,
+      "Submissions": 4235,
+      "TrendTicksPerDecision": 1
+    },
+    {
+      "BeliefLagSum": 0,
+      "Buy": 1990,
+      "CurrentFairBelief": true,
+      "Decisions": 10000,
+      "Kind": "Protective",
+      "LagSamples": 9900,
+      "MeanBeliefLagTicks": 0,
+      "Sell": 2004,
+      "Submissions": 3994,
+      "TrendTicksPerDecision": 1
+    },
+    {
+      "BeliefLagSum": -121641.4564565526,
+      "Buy": 7051,
+      "CurrentFairBelief": false,
+      "Decisions": 10000,
+      "Kind": "Reversion",
+      "LagSamples": 9900,
+      "MeanBeliefLagTicks": -12.287015803692181,
+      "Sell": 8,
+      "Submissions": 7059,
+      "TrendTicksPerDecision": -1
+    },
+    {
+      "BeliefLagSum": 0,
+      "Buy": 6699,
+      "CurrentFairBelief": true,
+      "Decisions": 10000,
+      "Kind": "Reversion",
+      "LagSamples": 9900,
+      "MeanBeliefLagTicks": 0,
+      "Sell": 36,
+      "Submissions": 6735,
+      "TrendTicksPerDecision": -1
+    },
+    {
+      "BeliefLagSum": 0,
+      "Buy": 1905,
+      "CurrentFairBelief": false,
+      "Decisions": 10000,
+      "Kind": "Reversion",
+      "LagSamples": 9900,
+      "MeanBeliefLagTicks": 0,
+      "Sell": 2071,
+      "Submissions": 3976,
+      "TrendTicksPerDecision": 0
+    },
+    {
+      "BeliefLagSum": 0,
+      "Buy": 1905,
+      "CurrentFairBelief": true,
+      "Decisions": 10000,
+      "Kind": "Reversion",
+      "LagSamples": 9900,
+      "MeanBeliefLagTicks": 0,
+      "Sell": 2071,
+      "Submissions": 3976,
+      "TrendTicksPerDecision": 0
+    },
+    {
+      "BeliefLagSum": 122631.51259563805,
+      "Buy": 13,
+      "CurrentFairBelief": false,
+      "Decisions": 10000,
+      "Kind": "Reversion",
+      "LagSamples": 9900,
+      "MeanBeliefLagTicks": 12.387021474306874,
+      "Sell": 7020,
+      "Submissions": 7033,
+      "TrendTicksPerDecision": 1
+    },
+    {
+      "BeliefLagSum": 0,
+      "Buy": 47,
+      "CurrentFairBelief": true,
+      "Decisions": 10000,
+      "Kind": "Reversion",
+      "LagSamples": 9900,
+      "MeanBeliefLagTicks": 0,
+      "Sell": 6723,
+      "Submissions": 6770,
+      "TrendTicksPerDecision": 1
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "At": 1792043959,
+  "After": {
+    "MaxMs": 262.33669999055564,
+    "BudgetHits": 7868,
+    "Steps": 156951,
+    "Frames": 129616,
+    "TotalMs": 836359.7748837201,
+    "LastMs": 8.510899962857366,
+    "LastSteps": 1,
+    "Backlog": 0.10490905260667205,
+    "MeanMs": 6.452596707842551
+  },
+  "Before": {
+    "MaxMs": 262.33669999055564,
+    "BudgetHits": 7783,
+    "Steps": 155150,
+    "Frames": 128124,
+    "TotalMs": 825773.7398806494,
+    "LastMs": 3.669800003990531,
+    "LastSteps": 1,
+    "Backlog": 0.05210884427651763,
+    "MeanMs": 6.445113638979811
+  },
+  "Frames": {
+    "P95Ms": 18.114732578396797,
+    "MaxMs": 141.55662059783936,
+    "Count": 1492,
+    "MeanMs": 16.767307127209197
+  },
+  "Scopes": {
+    "AmendProtection": {
+      "MaxMs": 0,
+      "MeanMs": 0,
+      "TotalMs": 0,
+      "Calls": 0
+    },
+    "Cancel": {
+      "MaxMs": 0.19219995010644197,
+      "MeanMs": 0.01449405070929428,
+      "TotalMs": 127.4316938361153,
+      "Calls": 8792
+    },
+    "Submit": {
+      "MaxMs": 2.8961000498384237,
+      "MeanMs": 0.3824616358484535,
+      "TotalMs": 5944.601205992512,
+      "Calls": 15543
+    },
+    "ProcessStops": {
+      "MaxMs": 1.2958000879734755,
+      "MeanMs": 0.003310817879360204,
+      "TotalMs": 238.10740024782717,
+      "Calls": 71918
+    },
+    "Snapshot": {
+      "MaxMs": 2.769300015643239,
+      "MeanMs": 0.7560531971976161,
+      "TotalMs": 189.01329929940403,
+      "Calls": 250
+    },
+    "AmendOrder": {
+      "MaxMs": 0,
+      "MeanMs": 0,
+      "TotalMs": 0,
+      "Calls": 0
+    },
+    "PersistencePreparation": {
+      "MaxMs": 137.32919993344694,
+      "MeanMs": 137.32919993344694,
+      "TotalMs": 137.32919993344694,
+      "Calls": 1
+    },
+    "CheckpointEncode": {
+      "MaxMs": 78.11050000600517,
+      "MeanMs": 78.11050000600517,
+      "TotalMs": 78.11050000600517,
+      "Calls": 1
+    },
+    "CheckpointCapture": {
+      "MaxMs": 53.050999995321035,
+      "MeanMs": 53.050999995321035,
+      "TotalMs": 53.050999995321035,
+      "Calls": 1
+    },
+    "_match": {
+      "MaxMs": 2.556700026616454,
+      "MeanMs": 0.25432899118010016,
+      "TotalMs": 3953.035509912297,
+      "Calls": 15543
+    },
+    "BotStep": {
+      "MaxMs": 22.010300075635314,
+      "MeanMs": 5.642093837376,
+      "TotalMs": 10161.411001114175,
+      "Calls": 1801
+    }
+  }
+}

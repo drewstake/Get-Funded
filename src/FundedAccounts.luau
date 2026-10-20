@@ -17,7 +17,7 @@ function Funded.Key(uid) return tostring(uid) end
 function Funded:Profile(uid) return self.Engine.Profiles[uid] end
 function Funded:_touch(p) p.Revision=(p.Revision or 0)+1 end
 function Funded:Owner(uid) local p=self:Profile(uid);return p and p.Account end
-function Funded:Usable(a) return a and not (a.Locked or a.Depleted or a.Retired or a.LegacyRetired) end
+function Funded:Usable(a) return a and not (a.Locked or a.Depleted or a.Retired or a.LegacyRetired or a.Resetting) end
 function Funded:_new(uid)
  local p={V=4,Run=0,Ledger={},Tiers={},Awards={},Titles={},Rank="New Trader",Tutorial="Pending",Revision=1,
   Created=self.Engine.Time,Events={},RunHistory={},Limits={}}
@@ -98,13 +98,16 @@ function Funded:Migrate(p,uid)
 end
 function Funded.new(engine,config,market,options)
  Funded.Validate(config);engine.Profiles=engine.Profiles or {}
- local self=setmetatable({Engine=engine,Config=config,Market=market or engine.Config,Capacity=options and options.Capacity},Funded)
+ local self=setmetatable({Engine=engine,Config=config,Market=market or engine.Config,Capacity=options and options.Capacity,PendingResets={}},Funded)
  engine.OnFundedClose=nil
  for _,id in ipairs(engine.AccountOrder) do
   local a=engine.Accounts[id];local uid=id:match("^player:([^:]+):")
   if a.Player and uid and not engine.Profiles[uid] then engine.Profiles[uid]={V=1,Tiers={},Ledger={}} end
  end
- for _,uid in ipairs(keys(engine.Profiles)) do self:Migrate(engine.Profiles[uid],uid) end
+ for _,uid in ipairs(keys(engine.Profiles)) do
+  self:Migrate(engine.Profiles[uid],uid)
+  if engine.Profiles[uid].PendingReset then self.PendingResets[uid]=true end
+ end
  engine.OnFundedClose=function(a,row)
   local p=a.ProfileId and self:Profile(a.ProfileId)
   if p and p.Account==a.Id then
@@ -262,7 +265,7 @@ function Funded:Evaluate(uid,silent,closingTrade)
   p.Events=p.Events or {};table.insert(p.Events,{Kind="RankUp",Id=rank.Id,Name=rank.Name})
  end
  if migrated then self:_touch(p)end
- if a.Depleted and p.FailureNotice~=p.Run then
+ if a.Depleted and not a.Resetting and p.FailureNotice~=p.Run then
   p.FailureNotice=p.Run;p.Events=p.Events or {}
   if not silent then table.insert(p.Events,{Kind="Depleted",Tier=a.Id,Event=tostring(p.Run),Name="Trading account"})end
   self:_touch(p)
@@ -289,7 +292,7 @@ function Funded:_credits(p)
 end
 function Funded:CanRestart(p)
  local a=self.Engine.Accounts[p.Account]
- return a.Depleted==true and not next(a.Positions) and not next(a.OpenOrders)
+ return not p.PendingReset and a.Depleted==true and not next(a.Positions) and not next(a.OpenOrders)
 end
 -- Completed runs are folded into one accounting record. Legacy migration records remain intact.
 function Funded:_archiveRun(uid,p,a)
@@ -323,29 +326,51 @@ function Funded:Restart(uid,expected)
  self:_open(uid,p,self:StartingBalance(p),"Restart")
  return true,string.format("Account restarted with $%s. Your permanent progress is kept.",self:StartingBalance(p))
 end
--- Discard exposure by transferring its cost basis to an internal clearing account.
--- No player fill, completed trade, profit, volume or milestone is generated.
+-- Only finalize outside matching: fill callbacks still reference the old account.
+-- The pending request and its consumed reset credit are checkpointed with the exposure.
+function Funded:_finishReset(uid,p)
+ local pending=p.PendingReset
+ if not pending then return false end
+ assert(pending.Account==p.Account,"Reset account changed before liquidation completed")
+ local e=self.Engine;local a=e.Accounts[p.Account]
+ assert(a and a.Resetting,"Missing resetting account")
+ if next(a.Positions)then return false end
+ e:CancelAll(a.Id)
+ self:Evaluate(uid,true)
+ p.Absence=nil;p.AwaySummary=nil
+ self:_archiveRun(uid,p,a);p.PendingReset=nil
+ self.PendingResets[uid]=nil
+ self:_open(uid,p,self:StartingBalance(p),"Reset")
+ return true
+end
+function Funded:ProcessResets()
+ for _,uid in ipairs(keys(self.PendingResets))do
+  local p=self:Profile(uid)
+  if p and p.PendingReset then self:_finishReset(uid,p)else self.PendingResets[uid]=nil end
+ end
+end
+-- Cancel entries, then close against actual book liquidity before granting the next run.
 function Funded:ResetAccount(uid,expected)
  local p=self:Profile(uid);if not p then return false,"Wait for your account to load."end
  if expected~=p.Account then return false,"Your account has changed. Check it before resetting."end
+ if p.PendingReset then return true,"Reset in progress. Positions are liquidating; the new account opens after they close."end
  local credits=self:_credits(p);if credits<1 then return false,"Reset limit reached. Please wait before resetting again."end
  local ok,reason=self:CreationAllowed("Reset");if not ok then return false,reason end
  local e=self.Engine;local a=e.Accounts[p.Account]
- e:CancelAll(a.Id)
- local clearing=e.Accounts["house:reset-exposure"] or e:AddAccount("house:reset-exposure",0,1e9,1,false)
- clearing.House=true
+ p.PendingReset={Account=a.Id,At=e.Time}
+ self.PendingResets[uid]=true
+ p.Limits.Reset={Tokens=credits-1,At=e.Time}
+ a.Resetting=true;a.Liquidating=true;a.Revision+=1
+ p.Absence=nil;p.AwaySummary=nil;self:_touch(p)
  for _,key in ipairs(keys(a.Positions))do
-  local pos=a.Positions[key];local spec=e.Books[key].Spec
-  local order={Id=0,Owner=clearing.Id,Contract=key,Direction=pos.Direction,Remaining=pos.Quantity,Filled=0,Notional=0,Reference=0}
-  e:_fillAccount(order,pos.Entry,pos.Quantity,0)
-  a.CashFlow+=pos.Entry*pos.Quantity*pos.Direction*spec.Multiplier
-  a.Positions[key]=nil
+  local pos=a.Positions[key]
+  pos.Triggered="Account reset";pos.Stop=nil;pos.Target=nil;pos.ExitOrder=nil;pos.TargetOrder=nil
+  table.insert(e.PendingStops,{Owner=a.Id,Contract=key,Position=pos.Id})
  end
- p.Absence=nil;p.AwaySummary=nil
- self:Evaluate(uid,true)
- self:_archiveRun(uid,p,a);p.Limits.Reset={Tokens=credits-1,At=e.Time}
- self:_open(uid,p,self:StartingBalance(p),"Reset")
- return true,"Account reset. Lifetime statistics, ranks and permanent bonuses are kept."
+ e:CancelAll(a.Id)
+ e:ProcessStops()
+ if self:_finishReset(uid,p)then return true,"Account reset. Closing trades are recorded; lifetime statistics, ranks and permanent bonuses are kept."end
+ return true,"Reset in progress. Positions are liquidating; the new account opens after they close."
 end
 function Funded:Flag(uid,stage)
  local p=self:Profile(uid);if not p then return false,"Wait for your account to load." end
@@ -379,15 +404,16 @@ function Funded:View(uid)
  local p=self:Profile(uid);if not p then return {New=true,Revision=0} end
  local a=self.Engine.Accounts[p.Account];local sum=self.Engine:Summary(a);local net=self:Earned(p);local trades,wins=self:_counts(p)
  local failed=a.Depleted==true;local closing=next(a.Positions)~=nil or next(a.OpenOrders)~=nil
- local row={Key=a.Id,Name="Trading account",Short="Trading account",State="Active",Usable=not failed,Depleted=failed,Breached=failed,
-  Closing=failed and closing,CanRestart=self:CanRestart(p),DepletionEvent=tostring(p.Run),Balance=a.Balance,Equity=sum.Equity,
+ local resetting=p.PendingReset~=nil
+ local row={Key=a.Id,Name="Trading account",Short="Trading account",State=resetting and "Resetting"or "Active",Usable=not failed and not resetting,Depleted=failed,Breached=failed,
+  Resetting=resetting,Closing=(failed or resetting)and closing,CanRestart=self:CanRestart(p),DepletionEvent=tostring(p.Run),Balance=a.Balance,Equity=sum.Equity,
   Unrealized=sum.Unrealized,Realized=a.Realized,Limit=self.Engine:ContractLimit(a),Size=a.Base,LossLimit=math.max(0,sum.Equity),Positions=sum.Count}
  local v={Revision=p.Revision,Started=true,Active=a.Id,ActiveName="Trading account",ActiveShort="Trading account",ActiveSize=a.Base,
   Run=p.Run,RunProfit=a.Realized,RunStartBalance=p.RunStartBalance,Earned=net,Open=sum.Unrealized,Balance=a.Balance,Equity=sum.Equity,
   StartingBalance=self:StartingBalance(p),StartingBonus=select(2,self:StartingBalance(p)),BaseStartingBalance=self.Config.StartingBalance,AwaySummary=Absence.WithPnl(self.Engine,clone(p.AwaySummary)),
   ProtectionPreferences=Protection.Preferences(p.ProtectionPreferences),
   Rank=p.Rank,RankId=p.RankId,Trades=trades,Wins=wins,Titles=clone(p.Titles),Awards=clone(p.Awards),Tutorial=p.Tutorial,Accounts={row},CanRestart=row.CanRestart,
-  ActiveCount=failed and 0 or 1,UsableCount=failed and 0 or 1,Failed=failed,Milestones={},Migrated=p.Migration~=nil}
+  ActiveCount=(failed or resetting)and 0 or 1,UsableCount=(failed or resetting)and 0 or 1,Failed=failed,Resetting=resetting,Milestones={},Migrated=p.Migration~=nil}
  for _,m in ipairs(self.Config.Milestones) do
   local value,goal=self:_metric(p,m,net,trades,wins)
   local r={Key=m.Id,Badge=m.Badge,Name=m.Name,Short=m.Name,Title=m.Title,Kind=m.Kind,Goal=goal,Progress=math.min(value,goal),
@@ -417,12 +443,15 @@ function Funded:StatsKey(uid)
 end
 function Funded.Perform(engine,owner,req)
  local a=engine.Accounts[owner];if not a then return false,"Unknown account." end
+ if a.Resetting then return false,"Reset in progress. Wait for positions to finish liquidating."end
  if req.Action=="Place" then return engine:Submit(owner,req)
  elseif req.Action=="AmendProtection" then return engine:AmendProtection(owner,req)
  elseif req.Action=="AmendOrder" then return engine:AmendOrder(owner,req)
  elseif req.Action=="Cancel" then
   if type(req.OrderId)~="number" then return false,"Unknown order." end
   if req.Protection then return engine:CancelProtection(owner,req.OrderId,req.Protection) end
+  local o=engine.Orders[req.OrderId]
+  if o and o.Owner==owner and o.Protection then return false,"Use the position's protection controls to cancel this order."end
   return engine:Cancel(owner,req.OrderId)
  elseif req.Action=="Close" then
   local p=a.Positions[req.Contract];if not p then return false,"No open position." end

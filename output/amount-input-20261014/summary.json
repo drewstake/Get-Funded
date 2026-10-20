@@ -1,0 +1,12 @@
+{
+  "RegressionCases": 102,
+  "RegressionFailures": [],
+  "InstalledUI": {
+    "Layouts": 4,
+    "Passed": true,
+    "Checks": 252
+  },
+  "SourcesCompile": true,
+  "AppliedToStudio": true,
+  "Published": false
+}

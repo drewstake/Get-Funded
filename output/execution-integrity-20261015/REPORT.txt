@@ -1,0 +1,204 @@
+EXECUTION INTEGRITY — OCTOBER 15, 2026
+
+Deployment: all 15 validated sources installed in Studio; Play resumed; checkpoint
+V16 is healthy (SHARED · SAVED). All 15 installed source hashes match the workspace.
+No further restart is required. Nothing published. The open Studio place has not
+been saved to the local .rbxl; source changes and the installer are saved on disk.
+The original active trade was never cancelled, closed, reset, amended or used
+for testing by this investigation. All trading fixtures used detached engines.
+
+CONFIRMED CAUSE
+The chart showed actual BX executions from the same running exchange. The old
+matcher applied the fair-value guard to a player's resting quote but exempted
+a bot's quote. It skipped the better TP while executing a worse bot ask.
+
+Detailed capture: 2026-10-15 05:26:18 UTC / 01:26:18 America/New_York.
+Owner player:42875739:single:5, position 148756145: long 7,946 BX, entry 5,230.25,
+target 5,234.75. TP 151879264: sell limit, original/remaining 7,946, filled and
+cancelled zero, priority 151879362, submitted simulation time 2,175,251.75.
+Capture step 8,715,284; simulation time 2,178,821. Best raw bid/ask was
+5,234.25 / 5,234.75; fair value 5,194.00. The raw status incorrectly said
+"Waiting for matching" although the order was resting, not queued.
+
+The owner was connected, not locked or liquidating. The target was reduce-only
+and bound to the same position. Balance was 14,207,225.00, realized P&L
+4,197,225.00, base 10,010,000.00, contract limit 14,207. These restrictions
+did not explain the bypass: the target could reduce its remaining 7,946.
+
+A 60-second observation captured 22 executions / 46 contracts at 5,234.75–
+5,240.75. For every observed print, the target was already resting, had zero
+better-priced/earlier same-price quantity ahead, and still had 7,946 remaining.
+There was positive opposing quantity and distinct counterparties. Internal fair
+value ranged 5,178.50–5,183.00. These were not earlier trades, a FIFO wait,
+insufficient opposing quantity or an inactive target.
+
+First observed bypass: trade 23447624, step 8709491, simulation time 2177372.75.
+A bot buy with 91 remaining took 2 from a bot ask at 5,235.25, skipping the TP at
+5,234.75, with fair value 5,181.50. observed-trade-throughs.csv records each
+print's IDs, price, size, fair value, bid/ask, submission time, queue and reason.
+
+BX's 0.25 tick and existing 20-tick guard allow an incoming buy to pay at most
+fair + 5.00, and an incoming sell to receive at least fair - 5.00. Both the TP
+and worse bot ask were outside that buy-side guard. The fix blocks both
+consistently; it does not grant retroactive fills or invent 7,946 contracts of
+liquidity. Buy-side collar eligibility for that TP alone requires fair >=
+5,229.75; opposing quantity and all other restrictions still apply.
+
+Historical tape outside the observation lacks the pre-match fair value and
+order identities needed to attribute every old candle. Those records are
+preserved without assigning unsupported causes. Client packet samples and the
+chart's data path confirm that BX candles originate from this engine's trades.
+
+SESSION CHANGES OBSERVED
+The initial TP was 151700921. A session boundary before the detailed capture
+reset diagnostics and recreated it as 151879264, preserving the position and
+target. This investigation did not issue Play/Stop at that point.
+Later the client's action log recorded Close at step 8941967 and Restart at
+8942073. At step 8945902 the new account single:6 was flat, had no orders, and
+held 135,000.00. These were client actions, not test actions.
+
+IMPLEMENTED RULES AND RELIABILITY
+* Best eligible price, then FIFO, independent of participant type. The same
+  directional execution guard prevents bypassing a blocked price with a worse
+  one. Immediate out-of-band limits reject explicitly for players and bots.
+* Existing absolute entry bands, player entry allowances, capital, risk
+  parameters and strategy settings are preserved. Existing participant risk
+  models remain; the execution-price rule is shared.
+* Dynamic blocked status, bounded order status history, and the last 64 exact
+  submission-rejection reasons. New trades include both order IDs/priorities,
+  aggressor direction and fair value. Studio's Execution diagnostic exposes
+  rules, raw order levels, current reasons, recent fills and queue depth.
+* Every fill rechecks quantity, eligibility/margin, position identity and
+  reduce-only limits. Matches settle in chunks; self-trade prevention cancels
+  the older own quote without creating an execution.
+* TP quantity tracks the remaining position; TP/SL/manual exits remove obsolete
+  siblings and cannot reverse a closed or replaced position. A blocked bot
+  target retains one pending order and recovers without repeated creation.
+* Same-price quantity reduction and no-op amendments retain priority. Repricing
+  or increasing remaining quantity loses priority. Expected state and capacity
+  are checked before changes. Original = filled + remaining + cancelled.
+* Accepted requests enter FIFO batches of at most 16 before each atomic step;
+  the tail remains queued. Capacity is 256; overflow receives a busy response.
+  The existing 8 ms simulation budget and carry-forward backlog are retained.
+* Persisted request sessions, consumed-ID watermarks and 128 cached replies
+  prevent duplicate mutations after retry, reply eviction or old-session replay.
+  The client resumes above the server's accepted-ID watermark. A new deliberate
+  request is a new operation; reconnect does not replay an old request.
+* Both parties and tape settle before close callbacks. Callback exceptions are
+  recorded and cannot leave half a fill settled.
+* Checkpoint V16 persists the journal and diagnostics with account/order state,
+  reads V1–V16 and fences older writers. Public Capture remains a detached copy.
+
+PERFORMANCE: CONTROLLED CAPTURED-STATE COMPARISON
+512 steps from the same full world/RNG state, three alternating repetitions;
+numbers are medians of the per-run metrics. See captured-replay-benchmark.json.
+                                    Before        After
+Mean simulation step (ms)             3.719         2.471
+p95 simulation step (ms)              7.444         4.475
+Maximum step (median, ms)            15.501        12.652
+Steps/second                        268.9         404.8
+Full-book scans                   15,218         4,835
+Failed bot exit attempts                8             1
+Submit calls                        4,011         5,070
+
+Mean latency fell 33.6%, p95 fell 39.9%, scans fell 68.2%. The baseline reproduced
+14 TP bypasses; the candidate produced zero. Corrected price eligibility changes
+the tape: candidate 945 trades / 1,946 contracts; baseline 1,290 / 2,042. These
+are equivalent inputs, not identical outputs. Candidate rejected 2,095 quotes
+and created 2,975 orders versus 4,011 baseline orders. Increased bot submission
+rejections reflect the common guard; strategies were not retuned to hide them.
+
+Profiling found repeated book scans and account summaries dominant. Redundant
+scans were removed, summaries reused only within one non-yielding operation,
+exposure aggregated once, levels binary-searched, normal FIFO arrivals appended,
+and cancellations directed at their known level. Retry caches track step, fair,
+book and account eligibility revisions. Recently installed blocked-exit controls
+are retained and extended to timed voluntary exits and risk repair.
+
+Native Studio encoding of the same detached checkpoint, three runs: median
+deep capture + encode 91.1 ms; atomic EncodeWorld 65.9 ms, 27.6% lower. Each
+decoded snapshot was identical. The save-only path borrows references inside
+synchronous serialization; no yield or mutable borrowed state escapes it.
+
+Identical eligible 8,000-, 13,000- and 50,000-contract fixtures each ran 12
+repetitions for entry/protection, target fill, amendment, cancellation and
+snapshot. Each full target uses one match when quantity permits. Candidate mean
+target-fill time was 0.018–0.019 ms, with no per-contract loop. Tiny cancellation
+measurements are noisy and are not claimed as a performance improvement.
+
+LIVE BASELINE AND LIMITS OF THE COMPARISON
+25 seconds / 1,801 steps: server frame mean 16.77 ms, p95 18.11, max 141.56;
+85 budget hits; backlog 0.0521 -> 0.1049 simulated seconds. Submit mean
+0.382 ms, matching 0.254, cancellation 0.0145, protective processing 0.00331,
+snapshot/broadcast preparation 0.756; one save preparation cost 137.3 ms.
+No amendments occurred during observation; those were measured in fixtures.
+Separate 15-second client sample: 151 packets, 225 frames (mean 66.81 ms),
+chart paint mean 1.532 ms / p95 2.387 / max 4.079. Chart rendering is unchanged.
+The post-install 25-second server sample completed 1,800 steps / 1,484 frames:
+mean frame 16.84 ms, p95 18.22, max 96.74; 52 budget hits; backlog 0.2237 ->
+0.1849 simulated seconds. Submit mean 0.235 ms; matching 0.0852; cancellation
+0.00883; protective processing 0.00299; snapshot 0.508. Two saves averaged
+83.8 ms preparation (maximum 92.4). The 15-second client sample received 150
+packets / 224 frames: mean frame 67.19 ms, p95 69.01, max 135.37; chart paints
+mean 1.864 ms, p95 2.754, max 3.991. Both client observations were about 15 FPS;
+no client frame-rate improvement is claimed. Chart-paint cost did not improve.
+Live samples and detached workloads are different conditions, including the
+user's intervening close/restart. These live numbers are smoke checks, not a
+controlled before/after UI or network responsiveness benchmark.
+
+VALIDATION
+326 local cases across 26 suites: zero failures. 34 focused native Studio cases
+on detached modules: zero failures. All 80 workspace Luau sources compile.
+The same 34 focused cases passed again against the installed modules, still
+using isolated engines. The new account resumed flat with balance 135,000.00,
+no orders, live BX packets, request session 1 and zero queued requests. Restored
+global inventory and accounting audits passed. No test trade was sent to it.
+Coverage includes the exact TP incident; both collar directions; best price and
+FIFO; partial fills; cancellations and all amendment priorities; 256 queued
+requests and retries; TP/SL races; reduce-only; sparse liquidity; 8k/13k/50k
+sizes; 55 blocked bot exits, fair/liquidity recovery; budget/backlog; restore;
+reply eviction/reconnect; snapshot-independent replay; callback failure safety.
+
+Every replay fill checks both parties' inventory, notional cash transfers,
+realized P&L and balances. Global inventory is zero per instrument; cash error
+<0.000001 and equity/P&L error <0.000002, consistent with accumulated floating
+point. Volume, candles and order quantities reconcile. Fees are not modeled
+(zero). Two candidate 512-step continuations have identical hash 25314752,
+order counter 152018299 and cumulative volume 57610475.
+
+REMAINING LIMITATIONS
+Saving is still synchronous (~66 ms here), and one atomic step can exceed the
+8 ms budget. Batches/backlog are bounded; fills cannot be safely preempted.
+Checkpoint durability is not a per-fill event log: an abrupt crash can lose
+changes after the last successful checkpoint, normally up to 15 real seconds.
+Old executables cannot open V16. Do not restore the investigation snapshot over
+subsequent real trading. There is no guarantee of liquidity or future fills.
+
+REPRODUCTION AND EVIDENCE
+From the repository root:
+  python tools/prepare_execution_validation.py
+  tmp/single-account/runtime/lune.exe run tools/CompileSources.luau
+  tmp/single-account/runtime/lune.exe run tmp/execution-integrity/regressions.luau
+  tmp/single-account/runtime/lune.exe run tmp/execution-integrity/captured-replay.luau
+  tmp/single-account/runtime/lune.exe run tmp/execution-integrity/latency.luau
+  python tools/summarize_execution_integrity.py
+  python tools/build_execution_release.py
+
+This directory holds JSON results, the per-print CSV, source hash manifest,
+release sources and Edit-only installer. execution-only.patch is relative to
+the before-task source backup, preserving pre-existing work. scope-audit.json
+verifies all other original sources unchanged.
+
+Private ignored backups under backups/execution-integrity-20261015 contain the
+original workspace source tree, disk .rbxl, git status/diff, 74 live sources,
+full checkpoint and tape, 22 pre-match observations and client samples. The
+installer checks every source hash before its first edit, refuses Play mode,
+and performs no save or publication.
+
+Installation evidence: installation-result.json, installed-source-hashes.json,
+installed-native-tests.json, postinstall-state.json, native-live-profile-after.json,
+client-after-smoke.json and deployment-status.json. The pre-install V15 checkpoint
+and Edit sources are also backed up privately. Studio's tool returned an undo-
+recording error after executing commands; separate source readback and all hashes
+verified the installation. The installer caught an encoding mismatch before edits;
+its UTF-8 handling was corrected and all preflight and post-write hashes passed.

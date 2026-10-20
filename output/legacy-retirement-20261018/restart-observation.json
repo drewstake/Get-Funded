@@ -1,0 +1,71 @@
+{
+  "NewClosingExecutions": 9636,
+  "Step": 9503962,
+  "GameErrors": [],
+  "ByMarket": {
+    "BT": 130,
+    "BX": 130,
+    "BG": 130
+  },
+  "CancelledOrders": 261,
+  "Time": 2375990.5,
+  "Performance": {
+    "MaxMs": 81.03960001608357,
+    "BudgetHits": 2,
+    "Steps": 1822,
+    "Frames": 1552,
+    "TotalMs": 4364.760898926761,
+    "LastMs": 10.244100005365908,
+    "LastSteps": 5,
+    "Backlog": 0.32788030337542295,
+    "MeanMs": 2.8123459400301294
+  },
+  "Status": "SHARED \u00b7 SAVED",
+  "Mode": "Shared",
+  "RawBytes": 4964028,
+  "CapitalPreserved": true,
+  "Participants": 390,
+  "Total": {
+    "CapitalAdjusted": -1799994597325.9597,
+    "Queued": 0,
+    "Active": 390,
+    "Realized": 10721.183615266582,
+    "Unrealized": -25433.68361507381,
+    "Contracts": 3146,
+    "Orders": 568,
+    "Allocation": 204000000,
+    "Retired": 0,
+    "Balance": 204010721.1836153,
+    "Count": 390,
+    "Equity": 203985287.5000001,
+    "Exits": 6,
+    "Pnl": -14712.499999806489,
+    "Positions": 287,
+    "Depleted": 0
+  },
+  "SettledPositions": 188,
+  "PayloadBytes": 1281132,
+  "Scope": "Studio",
+  "ArchivedBots": 264,
+  "LeaseUntil": 1792380276,
+  "Audit": {
+    "Inventory": {
+      "BT": 0,
+      "BX": 0,
+      "BG": 0
+    },
+    "CashError": 1.0677613317966461e-06,
+    "Volume": 67215551,
+    "EquityError": -8.246861398220062e-07,
+    "Hash": 379550648,
+    "Trades": 26954303
+  },
+  "At": 1792380197,
+  "FundingEligible": 390,
+  "Version": 19,
+  "RunningStep": 9504746,
+  "ArchiveUnchanged": true,
+  "InitialStep": 9499279,
+  "SessionStartStep": 9502924,
+  "SaveSequence": 8862
+}

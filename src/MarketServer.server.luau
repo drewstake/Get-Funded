@@ -11,8 +11,14 @@ local Leaderboards=require(script.Parent.LeaderboardService)
 local Ranking=require(script.Parent.LeaderboardRanking)
 local ReplyBuffer=require(script.Parent.ReplyBuffer)
 local WorldSettings=require(script.Parent.WorldConfig)
+local SimulationScheduler=require(script.Parent.SimulationScheduler)
+local RequestJournal=require(script.Parent.RequestJournal)
+local RequestQueue=require(script.Parent.RequestQueue)
 local OwnerResetCommand=require(script.Parent.OwnerResetCommand)
 local OwnerGiveCommand=require(script.Parent.OwnerGiveCommand)
+local OwnerBotsCommand=require(script.Parent.OwnerBotsCommand)
+local BotStats=require(script.Parent.BotStats)
+local OrderFlow=require(script.Parent.OrderFlowMarket)
 local DepthAccess=require(script.Parent.MarketDepthAccess)
 local depthAccess=DepthAccess.new()
 Funded.Validate(Progression) -- Fail closed on invalid progression configuration.
@@ -22,6 +28,7 @@ local function remote(name)
 end
 local requestRemote=remote("OrderRequest") local updateRemote=remote("MarketUpdate")
 local ownerNotice=remote("OwnerNotice")
+local ownerBotStats=remote("OwnerBotStats") -- Server-to-owner only; no OnServerEvent handler.
 local world=World.new(Config)
 local leaderboard=Leaderboards.new({Studio=world.Studio})
 world.CaptureProjection=function(engine)return Ranking.Capture(Funded.new(engine,Progression,Config))end
@@ -44,6 +51,9 @@ local function resolve(player,state)
   local events={};for _,event in ipairs(p.Events or {})do if event.Kind~="TradeClosed"then table.insert(events,event)end end;p.Events=events
  end
  state.Owner=funded:Owner(state.Uid) state.Full=true state.PortfolioRevision=nil
+ if state.RequestEngine~=market then
+  state.RequestEngine=market;state.RequestSession=RequestJournal.Open(market,state.Uid)
+ end
  if state.Owner then market:SetConnected(state.Owner,true)end
 end
 local function add(player)
@@ -100,7 +110,7 @@ local function emit(player,state)
  if unavailable or not state.Owner or not market.Accounts[state.Owner] then
   -- No trading account yet (first join) or the exchange is not ready: send status and portfolio only.
   local queued,dropped=replies:Take(state)
-  local packet={StatusOnly=true,CanTrade=not unavailable and world:CanRun(),ConnectionStatus=world:Label(),Replies=queued,RepliesDropped=dropped,NoAccount=not unavailable or nil}
+  local packet={StatusOnly=true,CanTrade=not unavailable and world:CanRun(),ConnectionStatus=world:Label(),Replies=queued,RepliesDropped=dropped,NoAccount=not unavailable or nil,RequestSession=state.RequestSession,RequestHigh=state.LastRequestId}
   if not unavailable then attachPortfolio(state,packet) state.Full=false end
   depthAccess:Apply(packet,player,state.Contract)
   updateRemote:FireClient(player,packet)
@@ -109,6 +119,9 @@ local function emit(player,state)
  local packet=market:Snapshot(state.Owner,state.Contract,state.Timeframe,state.Full)
  packet.Seed=nil -- The server's future random stream is private.
  packet.CanTrade=world:CanRun() packet.ConnectionStatus=world:Label() packet.PersistenceMode=world.Mode
+ if market.Accounts[state.Owner].Resetting then
+  packet.CanTrade=false;packet.ConnectionStatus="Resetting account · liquidating positions…"
+ end
  -- Quotes/candles/P&L are frequent; unchanged order and trade histories are not resent.
  local orderParts={}
  for _,order in ipairs(packet.Orders)do
@@ -124,10 +137,14 @@ local function emit(player,state)
  end
  depthAccess:Apply(packet,player,state.Contract)
  state.SentRevision=packet.Revision state.SentOwner=state.Owner state.SentOrders=orderSignature
- packet.Regime=population.Regime.Name packet.News=market.Time<population.NewsUntil and population.News or nil
+ packet.Regime=population.Regime.Name
+ -- Only completed executions in the subscribed instrument can produce an alert.
+ packet.MarketEvent=OrderFlow.Event(market,state.Contract,epoch)
  packet.Speed=Config.SimulationSpeed packet.Replies,packet.RepliesDropped=replies:Take(state)
  packet.AccountKey=(funded:Profile(state.Uid) or {}).Active
  packet.AccountToken=state.Owner -- identifies the exact attempt; checked, never used to choose an owner
+ packet.RequestSession=state.RequestSession
+ packet.RequestHigh=state.LastRequestId
  attachPortfolio(state,packet)
  updateRemote:FireClient(player,packet) state.Full=false
 end
@@ -145,11 +162,13 @@ end
 local function reply(state,id,ok,message,result,extra)
  local r={RequestId=id,Ok=ok,Message=message,Result=result}
  for k,v in pairs(extra or {})do r[k]=v end
+ local active=state.ActiveJournal
+ if active and active.Id==id then RequestJournal.Finish(market,state.Uid,active.Session,id,r)end
  replies:Push(state,r,os.clock())
 end
 local allowed={Place=true,Cancel=true,Close=true,Subscribe=true,AmendProtection=true,AmendOrder=true,
  Start=true,Restart=true,ResetAccount=true,AcknowledgeAway=true,Flag=true,Stats=true,ProtectionPreferences=true}
-local fields={"ExpectedAccount","Contract","Timeframe","Direction","Quantity","Type","Price","StopTicks","TargetTicks","StopDollars","TargetDollars","ExpectedQuantity","OrderId","Protection","ExpectedPrice",
+local fields={"RequestSession","ExpectedAccount","Contract","Timeframe","Direction","Quantity","Type","Price","StopTicks","TargetTicks","StopDollars","TargetDollars","ExpectedQuantity","OrderId","Protection","ExpectedPrice",
  "Stage","StopOn","TargetOn","Create","SummaryId","Execution"}
 requestRemote.OnServerEvent:Connect(function(player,request)
  local state=clients[player]
@@ -163,7 +182,12 @@ requestRemote.OnServerEvent:Connect(function(player,request)
   state.Tokens=math.min(20,state.Tokens+(now-state.TokenTime)*6);state.TokenTime=now
   if state.Tokens<1 then return end;state.Tokens-=1
  end
- if type(request.Id)~="number" or request.Id%1~=0 or request.Id<1 or request.Id>1e9 or state.Seen[request.Id] then return end
+ if type(request.Id)~="number" or request.Id%1~=0 or request.Id<1 or request.Id>1e9 then return end
+ if state.Seen[request.Id]then
+  local cached=RequestJournal.Cached(market,state.Uid,request.RequestSession,request.Id)
+  if cached then replies:Push(state,cached,now)else state.Full=true end
+  return
+ end
  if not allowed[request.Action] then return end
  -- Whitelist scalar inputs. ExpectedAccount detects a stale view; it never selects an owner.
  -- Execution prices, timestamps and account ownership remain server-owned.
@@ -179,8 +203,9 @@ requestRemote.OnServerEvent:Connect(function(player,request)
    clean[field]=value
   end
  end
- if #queue>=256 then reply(state,clean.Id,false,"Exchange busy. Please retry.") return end
+ if #queue>=RequestQueue.Capacity then reply(state,clean.Id,false,"Exchange busy. Please retry.") return end
  state.Seen[clean.Id]=true table.insert(state.SeenOrder,clean.Id)
+ state.LastRequestId=math.max(state.LastRequestId or 0,clean.Id)
  if #state.SeenOrder>256 then state.Seen[table.remove(state.SeenOrder,1)]=nil end
  -- Read-only: resend the authoritative Stats packet with the next update (Stats page Retry).
  if clean.Action=="Stats"then state.StatsKey=nil return end
@@ -195,7 +220,7 @@ requestRemote.OnServerEvent:Connect(function(player,request)
  if not world:CanRun()then reply(state,clean.Id,false,world:Label())return end
  sequence+=1 table.insert(queue,{Player=player,Request=clean,Sequence=sequence,Epoch=epoch,Owner=state.Owner})
 end)
-local function process(item)
+local function processCore(item)
  local state=clients[item.Player] if not state or state.ResetPending then return end
  if not world:CanRun() then reply(state,item.Request.Id,false,world:Label(),nil,{Kind=item.Request.Action}) return end
  if item.Epoch~=epoch then reply(state,item.Request.Id,false,"Exchange reconnected. Please submit your order again.")return end
@@ -243,6 +268,25 @@ local function process(item)
  local message=type(result)=="table" and Funded.Describe(result) or result or "Request rejected."
  reply(state,req.Id,ok,message,type(result)=="table" and result or nil,{Kind=req.Action})
 end
+local function process(item)
+ local state=clients[item.Player];if not state or state.ResetPending then return end
+ local req=item.Request
+ if not market then reply(state,req.Id,false,"Exchange is not ready.");return end
+ local accepted,cached,message=RequestJournal.Begin(market,state.Uid,req.RequestSession,req.Id)
+ if not accepted then
+  if cached then replies:Push(state,cached,os.clock())else reply(state,req.Id,false,message)end
+  state.Full=true;return
+ end
+ state.ActiveJournal={Id=req.Id,Session=req.RequestSession}
+ market.RequestContext={Sequence=item.Sequence,Id=req.Id,Step=market.Step}
+ local ok,err=pcall(processCore,item)
+ market.RequestContext=nil
+ if not ok then
+  reply(state,req.Id,false,"Request interrupted. Check the account snapshot before placing another order.")
+  state.Full=true;warn("[Get Funded!] Request processing failed: "..tostring(err))
+ end
+ state.ActiveJournal=nil
+end
 Players.PlayerRemoving:Connect(function(player)
  depthAccess:Forget(player)
  -- Leaving cancels working orders. Positions and their protective triggers remain on the exchange.
@@ -252,6 +296,11 @@ Players.PlayerRemoving:Connect(function(player)
  local remaining={}
  for _,item in ipairs(queue)do
   if item.Player==player and item.Request.Action=="ProtectionPreferences"then process(item)
+  elseif item.Player==player and market and departing then
+   local req=item.Request
+   if RequestJournal.Begin(market,departing.Uid,req.RequestSession,req.Id)then
+    RequestJournal.Finish(market,departing.Uid,req.RequestSession,req.Id,{RequestId=req.Id,Ok=false,Message="Disconnected before execution; request cancelled."})
+   end
   elseif item.Player~=player then table.insert(remaining,item)end
  end
  queue=remaining;clients[player]=nil
@@ -360,6 +409,27 @@ giveChat.Triggered:Connect(function(source,text)
  if player then giveCommand:Handle(player,text)end
 end)
 giveChat.Parent=chat
+local botsCommand=OwnerBotsCommand.new({
+ CreatorType=game.CreatorType,CreatorId=game.CreatorId,
+ GroupLookup=ownerCommand.Options.GroupLookup,
+ Ready=function()return world.Mode=="Shared"and not world.Busy and world:CanRun()end,
+ NextSequence=function()local r=world.Population.BotRefreshReceipt;return (r and r.Sequence or 0)+1 end,
+ Notify=ownerCommand.Options.Notify,
+ Refresh=function(sequence,actor)return world:RefreshBots(sequence,actor)end,
+ StatsReady=function()return not world.Busy and world:CanRun()and world.Population~=nil end,
+ Stats=function(player)
+  -- Non-yielding inspection produces one coherent snapshot without saving or stepping.
+  local report=BotStats.Text(world.Engine,world.Population)
+  if player.Parent==Players then ownerBotStats:FireClient(player,report)end
+ end,
+})
+local oldBots=chat:FindFirstChild("OwnerBotsCommand");if oldBots then oldBots:Destroy()end
+local botsChat=Instance.new("TextChatCommand");botsChat.Name="OwnerBotsCommand";botsChat.PrimaryAlias="/bots";botsChat.AutocompleteVisible=false
+botsChat.Triggered:Connect(function(source,text)
+ local player=source and Players:GetPlayerByUserId(source.UserId)
+ if player then botsCommand:Handle(player,text)end
+end)
+botsChat.Parent=chat
 task.spawn(function()world:Open()end)
 game:BindToClose(function()
  if funded then for _,state in pairs(clients)do funded:Depart(state.Uid)end end
@@ -376,7 +446,7 @@ task.spawn(function()
  end
 end)
 local elapsed,broadcast,maintenance=0,0,0
-local performance={Frames=0,Steps=0,TotalMs=0,MaxMs=0,Backlog=0}
+local performance={Frames=0,Steps=0,TotalMs=0,MaxMs=0,Backlog=0,BudgetHits=0}
 RunService.Heartbeat:Connect(function(dt)
  local started=os.clock()
  debug.profilebegin("FundedMarketHeartbeat")
@@ -394,17 +464,27 @@ RunService.Heartbeat:Connect(function(dt)
  root:SetAttribute("Ready",active)root:SetAttribute("PersistenceStatus",world:Label())
  if active then elapsed+=dt*Config.SimulationSpeed else elapsed=0 end
  broadcast+=dt maintenance+=dt local steps=0
- while active and elapsed>=Config.StepSeconds and steps<Config.MaxCatchupSteps do
-  elapsed-=Config.StepSeconds steps+=1
-  local pending=queue queue={}
-  for _,item in ipairs(pending) do
-   table.insert(actionLog,{Step=market.Step,Sequence=item.Sequence,Player=item.Player.UserId,Request=item.Request})
-   if #actionLog>5000 then table.remove(actionLog,1) end
-   process(item)
-  end
-  if world:CanRun() then population:Step() else break end
+ if active then
+  local limited
+  elapsed,steps,limited=SimulationScheduler.Advance(elapsed,Config,function()
+   -- Owner maintenance precedes the next request batch/step, never interleaves with a fill.
+   if botsCommand:AtBoundary()then return false end
+   -- Bound request work, with a fixed FIFO batch for deterministic replay. Every
+   -- accepted tail stays queued; the simulation still completes each atomic step.
+   population:Prepare() -- Adopt observed-price policy before accepting any new request.
+   local pending;pending,queue=RequestQueue.Take(queue)
+   for _,item in ipairs(pending) do
+    table.insert(actionLog,{Step=market.Step,Sequence=item.Sequence,Player=item.Player.UserId,Request=item.Request})
+    if #actionLog>5000 then table.remove(actionLog,1) end
+    process(item)
+   end
+   if not world:CanRun()then return false end
+   population:Step();funded:ProcessResets()
+  end,os.clock,started)
+  if limited then performance.BudgetHits+=1 end
  end
- if not active and #queue>0 then
+ -- Already accepted requests keep their FIFO place through bot maintenance.
+ if not active and #queue>0 and not world.BotRefreshSaving then
   for _,item in ipairs(queue)do local state=clients[item.Player]if state then reply(state,item.Request.Id,false,world:Label())end end
   queue={}
  end
@@ -428,6 +508,7 @@ RunService.Heartbeat:Connect(function(dt)
  local ms=(os.clock()-started)*1000
  performance.Frames+=1 performance.Steps+=steps performance.TotalMs+=ms
  performance.MaxMs=math.max(performance.MaxMs,ms) performance.Backlog=elapsed
+ performance.LastMs=ms;performance.LastSteps=steps
  debug.profileend()
 end)
 -- Read-only diagnostic access in Studio; never replicated to game clients.
@@ -442,6 +523,23 @@ if RunService:IsStudio() then
   if command=="Performance"then local result=table.clone(performance);result.MeanMs=result.TotalMs/math.max(1,result.Frames);return result end
   if command=="Actions" then return actionLog end
   if not market then return {Mode=world.Mode,Status=world:Label(),Error=world.LastError}end
+  if command=="Execution"then
+   local key=Config.Contracts[a]and a or Config.ContractOrder[1];local book=market.Books[key]
+   local orders,levels,trades={},{Bids={},Asks={}},{ }
+   for _,side in ipairs({"Bids","Asks"})do for _,level in ipairs(book[side])do
+    local ids={};for _,order in ipairs(level.Orders)do table.insert(ids,order.Id)end
+    table.insert(levels[side],{Price=level.Price*book.Spec.Tick,Quantity=level.Quantity,Orders=ids})
+   end end
+   for _,order in pairs(market.Orders)do if order.Contract==key then
+    local row=table.clone(order);row.Price=row.Price and row.Price*book.Spec.Tick or nil;row.BlockedReason=market:OrderBlockReason(order)
+    table.insert(orders,row)
+   end end
+   table.sort(orders,function(x,y)return x.Priority<y.Priority end)
+   for i=math.max(1,#market.Trades-199),#market.Trades do local trade=market.Trades[i];if trade.Contract==key then table.insert(trades,trade)end end
+   return {Contract=key,Step=market.Step,Time=market.Time,FairValue=book.FairReference and book.FairReference*book.Spec.Tick,
+    Rules=market.Config.PlayerExecution,PriceBandFraction=market.Config.PriceBandFraction,Book=levels,Orders=orders,Executions=trades,
+    Diagnostics=market.ExecutionDiagnostics,LastCloseNotificationError=market.LastCloseNotificationError,RequestQueueDepth=#queue}
+  end
   if command=="Profiles"then
    local views={} for uid in pairs(market.Profiles)do views[uid]={Saved=market.Profiles[uid],View=funded:View(uid)}end return views
   end

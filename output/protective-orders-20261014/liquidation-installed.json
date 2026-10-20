@@ -1,0 +1,15 @@
+{
+  "Installed": [
+    "FundedAccounts",
+    "MarketEngine",
+    "ProtectiveOrders",
+    "WorldCheckpoint",
+    "MarketServer",
+    "TerminalUI",
+    "AccountUpgradeTests",
+    "ClosedTradePnlTests",
+    "ProtectiveOrdersTests",
+    "ResetLiquidationTests"
+  ],
+  "Published": false
+}

@@ -1,0 +1,182 @@
+{
+  "Total": 34,
+  "Suites": {
+    "RequestJournalTests": [
+      {
+        "Passed": true,
+        "Name": "Retry returns the original result and cannot create another order or fill",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Reply eviction, changed payload and reconnect cannot resurrect a consumed request",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Interleaved owners retain their own request order; consumed failures never execute twice",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Checkpoint persists request sessions, high-water marks and acknowledgements atomically",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "256 simultaneous accepted requests retain FIFO across bounded steps and new arrivals",
+        "Detail": "Passed"
+      }
+    ],
+    "ExecutionIntegrityTests": [
+      {
+        "Passed": true,
+        "Name": "Captured BX TP: 7946 at 5234.75 cannot be bypassed by bot ask 5235.25 at fair 5181.50",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Player and bot resting liquidity use identical collars for buy and sell aggressors",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Rejected aggressive limits record a bounded reason for players and bots",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Best eligible price then FIFO, independent of participant type, with partial chunks",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Amendment no-op retains FIFO; reprice loses priority; cancellation removes exactly one order",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "TP/SL race cancels residual target and cannot reverse after a partial target fill",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Quantity reduction retains FIFO; increase loses FIFO and reserves new capacity",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Bot margin eligibility is rechecked before a resting quote can execute",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Snapshot filters ineligible liquidity without retiring or reprioritizing an order",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "8000-contract TP uses matched chunks, tracks residual and never reverses",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "13000-contract TP uses matched chunks, tracks residual and never reverses",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "50000-contract TP uses matched chunks, tracks residual and never reverses",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Sparse liquidity preserves an active target and later arrival gets only available quantity",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Checkpoint preserves blocked TP priority and exact continuation, independent of snapshot reads",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Self-trade prevention cancels own older quote and never creates a fill",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Closing notification failure cannot interrupt settlement between the two counterparties",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Atomic save encoding matches detached capture and cannot change after later fills",
+        "Detail": "Passed"
+      }
+    ],
+    "BotExitRetryTests": [
+      {
+        "Passed": true,
+        "Name": "55 blocked exits behind a 13000-contract bid create no repeated orders or full-book scans",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "New executable quote wakes a blocked exit and fills only available contracts",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Fair-value change wakes eligible player liquidity before retry deadline",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Blocked retry state survives checkpoint round trip and resumes identically",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Bot risk repair does not submit a second exit while a stop owns the position",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Timed scalper exits reuse retry controls while the only ask is blocked",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Bot take-profit limits still rest without opposing liquidity",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Guard-blocked bot target retains one queued order and recovers without reversing",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Time budget yields after atomic steps and carries every unprocessed step",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "One slow atomic step cannot trigger a 32-step catch-up batch",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Unavailable exchange preserves backlog and never reports a completed step",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Partial tick and maximum catch-up limits remain intact",
+        "Detail": "Passed"
+      }
+    ]
+  },
+  "Failures": 0
+}

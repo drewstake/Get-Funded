@@ -1,0 +1,12 @@
+{
+  "Modules": {
+    "ServerScriptService.MarketReign.WorldCheckpoint": "72c139708ed4a582a98ba2d62a64b875d8935917662c92d003fc14a175366e56",
+    "ServerScriptService.MarketReign.Participants": "52512dfac4451d7eb94aeff3dd1a19a1e13dcb110a7d85577aa959c4b18aaad4",
+    "ServerScriptService.MarketReign.BotPopulation": "660e6e1d7d85c778b9f70d911620193dd11ac7a537ff2650d0317a88759813b1",
+    "ReplicatedStorage.MarketReign.MarketConfig": "6841d8fa8fb8ff96ac277c8e3e49659f22db18fcaa421f51204d132b1791eb28"
+  },
+  "UniverseId": 10768404077,
+  "InstalledAt": 1792033878,
+  "PlaceVersionBeforePublish": 353,
+  "PlaceId": 137759823569682
+}

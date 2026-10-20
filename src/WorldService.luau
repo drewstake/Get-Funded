@@ -5,6 +5,7 @@ local Checkpoint=require(script.Parent.WorldCheckpoint)
 local Lease=require(script.Parent.WorldLease)
 local Engine=require(script.Parent.MarketEngine)
 local Participants=require(script.Parent.Participants)
+local BotRefresh=require(script.Parent.BotRefresh)
 local Settings=require(script.Parent.WorldConfig)
 local World={} World.__index=World
 function World.new(config,options)
@@ -38,7 +39,7 @@ function World:_encode(engine,population)
   if ok then projection=result else warn("[Get Funded!] Leaderboard projection unavailable: "..tostring(result)) end
  end
  -- Raw size is refused by Encode (before compression) with exactly the bound the reader enforces.
- local record=Checkpoint.Encode(Checkpoint.Capture(engine,population),Checkpoint.MaxDecodedBytes)
+ local record=Checkpoint.EncodeWorld(engine,population,Checkpoint.MaxDecodedBytes)
  -- Measure the complete value UpdateAsync will store: lease fields plus this checkpoint, with headroom.
  local stored=self:_storedBytes(record,engine.Step)
  assert(stored+(self.Settings.RecordHeadroomBytes or 0)<=self.Settings.MaxEncodedBytes,"Exchange checkpoint is too large; trading paused to protect saved state")
@@ -165,6 +166,37 @@ function World:TransformSaved(transform)
    self.NextAttempt=self.Now()+self.Settings.RetrySeconds
   end
   warn("[Get Funded!] Saved transformation failed: "..self.LastError)
+ end
+ return ok,ok and result or tostring(err)
+end
+-- Called only at the server scheduler boundary. Preview/encode do not yield or write
+-- live accounts; the lease commit freezes simulation until its outcome is known.
+function World:RefreshBots(sequence,actor)
+ if self.Busy or self.Mode~="Shared"or not self:CanRun()then return false,"Exchange is not ready."end
+ self.Busy=true;self.Transaction=true;self.BotRefreshSaving=true
+ local attempted=false;local result
+ local rawBytes,storedBytes=self.LastRawBytes,self.LastStoredBytes
+ local ok,err=pcall(function()
+  local plan=BotRefresh.Prepare(self.Engine,self.Population,sequence,actor)
+  result=plan.Receipt
+  if plan.Duplicate then return end
+  local engine,population=BotRefresh.Preview(self.Engine,self.Population,plan)
+  engine:Audit()
+  local encoded,step,projection=self:_encode(engine,population)
+  assert(not self.CaptureProjection or projection,"Cannot refresh without leaderboard projection")
+  attempted=true;self.Lease:Commit(encoded,step,false)
+  -- No epoch swap: preserve live objects, callbacks, pending requests and FIFO identity.
+  BotRefresh.Apply(self.Engine,self.Population,plan)
+  self:_committed(projection)
+ end)
+ self.Busy=false;self.Transaction=false;self.BotRefreshSaving=false;self.NextSave=self.Now()+self.Settings.SaveSeconds
+ if not ok then
+  self.LastRawBytes=rawBytes;self.LastStoredBytes=storedBytes;self.LastError=tostring(err)
+  if attempted then
+   self.Healthy=false;self.Mode="Unavailable";self.Status="Verifying the saved exchange"
+   self.Engine=nil;self.Population=nil;self.Epoch+=1;self.NextAttempt=self.Now()+self.Settings.RetrySeconds
+  end
+  warn("[Get Funded!] Bot refresh failed: "..tostring(err))
  end
  return ok,ok and result or tostring(err)
 end

@@ -570,9 +570,12 @@ if not overlaps and py>=top+10 and py<=bottom-10 then text(plot,"PriceAxis",Mark
     local title=field=="Stop"and(mobile and"SL "or"STOP LOSS ")or(mobile and"TP "or"TAKE PROFIT ")
     local suffix=moving and(adjustment.RequestId and" ..."or" *")or""
     local closing=held.Triggered==(field=="Stop"and "Stop loss"or "Take profit")
-    local value=closing and (mobile and "closing "or "Closing ")..held.Quantity or Market.Signed((n-held.Entry)*held.Quantity*c.Multiplier*held.Direction)
-    level(n,(editable and"↕ "or"")..title..value..suffix,
-     field=="Stop"and C.Red or C.Green,mobile and 116 or 198,editable and field or nil)
+    local filled=field=="Target"and(held.TargetFilled or 0)or 0
+    local value=closing and ((filled>0 and filled.." filled · "or "")..held.Quantity.." left")or Market.Signed((n-held.Entry)*held.Quantity*c.Multiplier*held.Direction)
+    local label=(editable and"↕ "or"")..title..value..suffix
+    local width=mobile and 116 or 198
+    if closing then width=math.max(width,math.ceil(TextService:GetTextSize(label,10,M,Vector2.new(2000,20)).X)+10)end
+    level(n,label,field=="Stop"and C.Red or C.Green,width,editable and field or nil)
    end
   end
   -- Direction and contract count only ("Long 5" / "Short 5"), sized to its text so it never clips.

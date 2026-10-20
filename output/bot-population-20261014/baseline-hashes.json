@@ -1,0 +1,286 @@
+[
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\AbsenceSummary.luau",
+    "Hash": "98034EE06CEC93F5CFDD4FE03D0FAD49B2F9803E04E60FB8D263C8B38D43AAF3"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\AccountUpgradeTests.luau",
+    "Hash": "547F667CF63C4FAF235432416B8B3ACDDD39A2FB2ED8E27C61D3E9E006F6A751"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\AmountInputTests.luau",
+    "Hash": "EC2B68B057234BE869BFAA860D71745582042D8FD8634F3FE3C210F2A2FF3792"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\AwayView.luau",
+    "Hash": "E7945E7849B041EA371219D879726CFE621224F0E7C8700D8FF2EFA2050B180D"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\BadgeArt.luau",
+    "Hash": "478D54ECB1C6FDC51C7858635D4AD1D07F31E5DC9C7F751684B967B1727756A2"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\CapacityTests.luau",
+    "Hash": "C01BEBEF51674A3AA14422871A3DBEDFAC418BBED3FB42B6CDBDD21E58D09269"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\ChartPaintPool.luau",
+    "Hash": "DF7339106B167C4B8DB527EFEDB209576297E6174AA3A26231A096EACA5D9631"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\ChartPaintPoolTests.luau",
+    "Hash": "D1F5F6E72E1C2D3B48889E593D27ED792645A5A3DCD7A374EA805E47541C4A99"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\ChartTools.luau",
+    "Hash": "B7201826EE0F8BE130946AD72CB97D09B4CE42DEBB7ABEBBFB82BBBAC81A1327"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\ChartToolsTests.luau",
+    "Hash": "7A75D5A5958732466B5092285B2790FB2701C1A14B9BA66BF2081E8022ACA1B5"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\ChartView.luau",
+    "Hash": "6BB403299845611B469632A9F31554FD0DCC4B42D5D64577839774444395E86A"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\ChartViewport.luau",
+    "Hash": "5DB64861E1E4F8901C31462C71F46BD73E7E202F2A5B1E510813650FC7E652C5"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\ChartViewportTests.luau",
+    "Hash": "5B69650BA7581FEDFC87238BFF0800F18D3D71ACAB9A70812F48AC5AB85BD0F8"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\ClosedTradePnlTests.luau",
+    "Hash": "1AD1702E471E9007008EF07D86E4000358CA40D6B96A1171BFE760C17AF9F08C"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\ContractLimits.luau",
+    "Hash": "A09E12B84BCC129BA046D5A2540A91988BC5ECF30C978768AE63C54EAA6091CA"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\DemoMarket.luau",
+    "Hash": "56C64D91AA829E70594D86306C2855001F2B0116663A2FEC9257BFA734E38C27"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\DepthPurchase.luau",
+    "Hash": "0EB835211242A99DA45BDB59829DCA530A3C5C57FE27333C7D7B549B0A82BEAF"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\DepthRealismTests.luau",
+    "Hash": "24808ABFCF4467498B39CF6D8EB1468E28F954591CB2F6E840AB144DAA73C755"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\ExecutionChoiceTests.luau",
+    "Hash": "0525B82953E0269012287D84639D6770B3CE188962BA7A8DE21BBD5E141C382A"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\FundedAccounts.luau",
+    "Hash": "7CD47EBCBEAA6C63CDDA0925029B6DAB59AAA4BD61C435C8A8AD4AD72EDAD39C"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\LeaderboardClient.luau",
+    "Hash": "9861D7A03AB98911E43B295E1ED81D6D1AFA1F70E5A41CBFD79A7104FBD04279"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\LeaderboardRanking.luau",
+    "Hash": "E8EBDE90533044F2EDCE119ACAEC715D8F6B69771DAAEF9D83D233FE6BD96017"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\LeaderboardService.luau",
+    "Hash": "070E399E26D48E6823EB71140169F1345FC29BDF131D821177E964703A525F45"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\LeaderboardView.luau",
+    "Hash": "733BDEFED90ED69AEB1FD41AC570242324E56B4F20108CAD80800834A64D82C8"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\Level2View.luau",
+    "Hash": "F6E3163614668B50587E8344EB6E3E058FC3EBFF15166E3EB329D6E0B6C26171"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\MakerLiquidityTests.luau",
+    "Hash": "B897472184A7F798642659FBD14C74D95295A8134AE346AF9920F8D36757B056"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\MarketClient.luau",
+    "Hash": "60F11D0A89743503D2A60C437E08BB6863FB9DB70363D39DCDA6447420619AD0"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\MarketConfig.luau",
+    "Hash": "31096E3398220094E6B4543E2D9A4AC5EF5995DB445F213DCC745ABD0BB8B2E4"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\MarketDepthAccess.luau",
+    "Hash": "45ED39B9A496EE5B1EC88247AFB8CADF08DF7802F61396A0D003A493515079E4"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\MarketEngine.luau",
+    "Hash": "69DCD2D55CD31046B160E2A834313F7EB862DE13ECF4B5039681D65604F91DCA"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\MarketServer.server.luau",
+    "Hash": "035D00C03316CADB048CD7849E0FD746378B2CD837F0C28F873BDA5C530FF2F6"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\MarketTests.luau",
+    "Hash": "2005CB91EFBC9D8498CC0ACC490CF74D0369A735E95FBF9303E89F15DF4B39B0"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\NumberInput.luau",
+    "Hash": "53A94AA28DAAE91F19B300F0C654F8DAB5B60F5B2772F9F1158FC3D5E17AA5D7"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\OwnerGiveCommand.luau",
+    "Hash": "18AD9386DBA8AEA67C678C8A45F4ACF5C9BE75735EED15FD0F029932303D724D"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\OwnerGiveTests.luau",
+    "Hash": "2B48170432F242CB262F6A12F0D8AA4310B49DA177CACDF5DD4C9A95551FDDEB"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\OwnerResetCommand.luau",
+    "Hash": "0BF8F85BC6FE944D1475DFBF413B80E4AAE4B3B1BEE1EE57C1591767C46D8E78"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\OwnerResetTests.luau",
+    "Hash": "6DEAD2F40595A1C2148AB568482651FF46621D21E5D04E8B8479BB4637FB755E"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\Participants.luau",
+    "Hash": "DAFCA8EB01EADC0E284884CC12C428579EDEF79CF7D269B3590822F6F05E09FF"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\PlayerExecution.luau",
+    "Hash": "9C71DCB61CA205916C8C503F64060953504813E130EABC2B700F27A5DFA9B704"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\ProgressionConfig.luau",
+    "Hash": "6BB3E0CEC34F5FC4E9B8D606C06F663B769789C7563038647784F1F7CDAE2DBA"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\ProgressionRules.luau",
+    "Hash": "283BFEA83660C17EE10EF4C17A658D2E46452912099080926C68739F022E12E0"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\ProgressView.luau",
+    "Hash": "FD8D3338C8C032079DE7240346A9329EE08585CAD907F0DA57D8A65751B0E9C0"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\ProtectionScaleTests.luau",
+    "Hash": "A4DA986D821F7D5B76B0309DEC7EC83FFEEEAEDD9DCDCFA36CFC187E177276F3"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\ProtectiveOrders.luau",
+    "Hash": "131979F9D20E0D2D5E56FE396FBA087C9D11142809C49D093F7762E43567DAE7"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\ProtectiveOrdersTests.luau",
+    "Hash": "C2FC8BFEAF62D3772DFFD1A1FA353DA9395DA529E5B579711B3643897AC16749"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\RankBadgeTests.luau",
+    "Hash": "566D7FA550E39434DA3BC0C93BD751356FA52D8B42121F2B00BB9DF5FA253BBD"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\ReplyBuffer.luau",
+    "Hash": "FCD94D7110207490B76EAF3F523F100807B5DCD75F096A7EC8A277C09FE319FA"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\ResetLiquidationTests.luau",
+    "Hash": "5E38B09F4A601C0907D091ACE4E7105DCA746F1081585AB33825F2F8C93CCBB4"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\ScalperTests.luau",
+    "Hash": "53BD77C2D81108BC24047161BFA955A2ADA06C10DB1B83340D7EAD5FC3A22445"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\SecurityTests.luau",
+    "Hash": "99544F2A5B7F03F2C00F10FE37F7718E4D478C757E59E526FAD2AD91A3FDBD91"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\SharedDepthTests.luau",
+    "Hash": "CFB14492BFB4BE3DACF40F5B105AE2E59CD52ED13503A5C7057CE40E6B6E1560"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\ShopView.luau",
+    "Hash": "711483497D9C1516BA2160DF6DFD207ADFE73542F2F20989EB146B86D897077C"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\SingleAccountTests.luau",
+    "Hash": "FA305DA078F336D252D9F521E96C8F8B712086142AD75F7C56FE89BB4F63A2C8"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\StatsCharts.luau",
+    "Hash": "F1C115903366D41487D0AB59A886C62A773A87A3E22FB4B563AD2F8BB8408083"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\StatsPieces.luau",
+    "Hash": "161A510F148F0014E98DCAE80683B5B99459C54EB88FE8C2CF1A2ABCC1BAED50"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\StatsView.luau",
+    "Hash": "81715276CEC3B8EF121492DAD51E0E9CBAC3C1000401222EFCB7707647B07021"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\TerminalUI.luau",
+    "Hash": "54D8E471B0946B10524C1F6F7880641DEDD62A14A271ED851A5E199BF55F001E"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\TestLiquidity.luau",
+    "Hash": "D0AB36CADA7AA96C656FB9C87918A65D6202DB8A3F9847AB248B81C18C2312BA"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\TradeAmendmentTests.luau",
+    "Hash": "74B182E981F5A2D53C44D09896AB54C57486D5638FFAF2C1FBA8A95D24AF8AE3"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\TradeLimitsTests.luau",
+    "Hash": "C5DF3EC1620029E3FBB2C149A4216E40D44D184FA7F19164F5DF9C27068FFB29"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\TradePreferencesTests.luau",
+    "Hash": "9796F0AD4E303B5F06191874654633F50AC918E88ECBDD89023D87A3051B82FE"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\TradeProtection.luau",
+    "Hash": "872A2586795E2C718DEAD094437F591A45900C159C30ADDBA49E99D3D513A2CC"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\TradeStats.luau",
+    "Hash": "FCE549F37C90C724BB279E1BA3C7AB94FA48A75B31F1F26E4B023284C655F539"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\TradingCharacter.server.luau",
+    "Hash": "793226D29B5B4692B241C75DB07E67D2C30A119227B0D007AC1EAAEACC676AAD"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\TradingClient.client.luau",
+    "Hash": "E7E53AD09B023AF999045BE3AFB78B439C9EB7B1A56201A64166DE30419A0F9A"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\UIFeedback.luau",
+    "Hash": "0545C3A5EF103F9AED2C784F535667EDCD5F22C08F1AC9F157EE062F3EE75CC7"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\WorldCheckpoint.luau",
+    "Hash": "96BB8EF370ED366BD5192203AE6EBB9A0D4C5FA6C5FEE358CE8B572F658112D9"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\WorldConfig.luau",
+    "Hash": "FE58E1F09AD9B464C6CD8B47F0069302FEF6558B00CE4874C344BBF488C92260"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\WorldLease.luau",
+    "Hash": "D8AEB9563AC38EDA858A7FCB81DC65C8026F7D8068B8A06892B7228C596590C1"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\WorldService.luau",
+    "Hash": "FD853859515D92199138E5AF252E7292C9EFA86169917964381A950CDC02907D"
+  },
+  {
+    "Path": "C:\\Users\\drews\\Desktop\\Development\\Get-Funded\\backups\\bot-population-20261014\\src\\WorldTests.luau",
+    "Hash": "ACD304550678F8B3D54FAFD811045B4230C5B35919FE7217A067C671F3E99FE3"
+  }
+]

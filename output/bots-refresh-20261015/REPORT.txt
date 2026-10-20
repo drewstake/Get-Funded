@@ -1,0 +1,81 @@
+Implemented /bots refresh in the workspace; validated with detached local and Studio fixtures.
+The running Studio play session and active account were not used to execute the command.
+Nothing was published. Production Studio sources and the local .rbxl were not replaced.
+
+Behavior
+- Existing server-side user-creator/group-owner authorization; exact /bots refresh parser.
+- Single pending command consumed before the next simulation request batch/step.
+- Existing BotPopulation.Capital[Kind] determines new bot equity; all participant categories,
+  retiring agents and close-only markets are included. Players/clearing/archive accounts excluded.
+- Realized and unrealized reported P&L start at zero. Original position Entry stays intact;
+  PnlEntry establishes the new accounting cost basis, including partial closes and scale-ins.
+- CapitalAdjustments records actor, sequence, step/time, capital amount, cash change, prior
+  realized/unrealized P&L and the retained PnlBaseline. Existing double-entry notional cash,
+  equity, inventory, volume, FIFO and player-statistics audits remain enforced.
+- Detached accounting preview is committed with the fenced world checkpoint before applying
+  to live bot objects. Existing strategy state, positions, orders, protections and priorities
+  survive; already accepted player requests retain their queue position during the save.
+- A durable monotonic receipt prevents replay; ambiguity pauses and reloads the durable result.
+- Checkpoint V17 reads older formats and prevents older builds from settling the new baseline.
+
+Code
+New: src/BotRefresh.luau, src/OwnerBotsCommand.luau, src/BotRefreshTests.luau.
+Updated: MarketEngine, BotPopulation, WorldService, WorldCheckpoint, MarketServer,
+tools/ReplenishBotCapital.luau and MARKET_ENGINE.md.
+source-manifest.json and bots-refresh-only.patch isolate this task from pre-existing edits.
+scope-audit.json verifies all unrelated source files stayed byte-identical to the backup,
+including MarketConfig, Participants, BotExitRetry, SimulationScheduler, PlayerExecution,
+RequestJournal, RequestQueue and ProtectiveOrders. The simulation frame budget remains 8 ms.
+
+Validation
+- All workspace Luau sources and the self-contained installer compile.
+- 341 local regression cases passed, zero failures (regressions.json).
+- 102 detached Studio cases passed, zero failures (studio-tests.json).
+- All 15 refresh cases passed again after the final queue-preservation change, both locally
+  and natively in Studio (studio-final-focused.json).
+- Coverage: long/short gains/losses, open positions, partial entry/exit fills, scale-in/reversal,
+  pending exits/protections and retry identity, negative equity, all categories, retired markets,
+  unauthorized user/group callers, duplicate/stale sequences, scheduler boundary/save overlap,
+  checkpoint restore, encode failure, failed writes and lost commit acknowledgments.
+- Captured-state copy: 654 bots, 264 retiring/retired-market bots, 373 open positions.
+  Illustrative copied-state adjustment: -$32,956,957.25. This was NOT applied to the active world.
+- 128 local replay steps and 64 native Studio replay steps after refresh/restore were deterministic.
+  Players, markets, candles, volume, order ids/priorities and pending execution state were checked
+  unchanged at refresh. Cash/marked-equity conservation errors remained below $0.000001.
+- Native copied-state accounting refresh took about 3 ms (checkpoint encode/commit not included).
+  Existing simulation budgets/retry controls were unchanged; the commit pauses simulation.
+- Injected storage failures emit expected warnings in fixtures. No real DataStore writes were
+  made by the validation. The Studio checkpoint backup used read-only GetAsync in Studio scope.
+
+Backups made before editing
+backups/bots-refresh-20261015/source-complete/ -- full original workspace source
+backups/bots-refresh-20261015/Get Funded!.rbxl -- original local place
+backups/bots-refresh-20261015/private-studio-sources.json -- original running Studio source
+backups/bots-refresh-20261015/private-checkpoint.json -- original saved Studio checkpoint
+backups/bots-refresh-20261015/preexisting.patch -- pre-existing tracked changes
+Affected original tool/document files are also retained there. Private state is git-ignored.
+
+Activation / local-save requirement
+Studio was left in its existing Play session. The new command is not active in that session.
+1. Stop Play when ready. This was not done automatically to avoid interacting with the active account.
+2. In Studio Edit mode, run the contents of InstallBotsRefresh.luau in the Command Bar.
+   The installer checks all eight destination sources before writing, refuses Play mode,
+   and refuses unexpected source changes. It performs no checkpoint writes or publication.
+3. Save the local place, then start a new play session to load the updated modules.
+4. Thereafter the owner can use /bots refresh without restarting the simulation. The concise
+   success notice includes bot count and signed total capital adjustment and appears only after save.
+
+Installation itself does not run the refresh. Do not resume a V17 checkpoint with an older engine.
+The local .rbxl has intentionally not been resaved during an active Play session.
+
+Reproduce offline
+python tools/prepare_bots_refresh_validation.py
+tmp/single-account/runtime/lune.exe run tools/CompileSources.luau
+tmp/single-account/runtime/lune.exe run tmp/bots-refresh/regressions.luau
+tmp/single-account/runtime/lune.exe run tmp/bots-refresh/captured.luau
+python tools/build_bots_refresh_release.py
+tmp/single-account/runtime/lune.exe run tools/CompileBotsRefreshRelease.luau
+
+Native detached validation: start tools/bots_refresh_bridge.py, then execute
+tools/ValidateBotsRefresh.luau in Studio's Server context. It creates unparented test modules,
+uses injected stores/captured state, and destroys those modules afterward.

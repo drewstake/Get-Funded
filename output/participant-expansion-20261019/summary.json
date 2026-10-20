@@ -1,0 +1,185 @@
+{
+  "CheckpointVersion": 23,
+  "PopulationPolicyVersion": 2,
+  "PerMarketBefore": 130,
+  "PerMarketAfter": 390,
+  "TotalAfter": 1170,
+  "CountsPerMarket": {
+    "Maker": 60,
+    "Liquidity": 72,
+    "Momentum": 36,
+    "Value": 60,
+    "Reversion": 36,
+    "Protective": 24,
+    "Scalper": 72,
+    "Whale": 12,
+    "Reserve": 18
+  },
+  "ExistingBotFundingReset": false,
+  "AddedBotsOnCompleteV1World": 780,
+  "OfflineChecks": 167,
+  "NativeChecks": 167,
+  "SavedWorld": {
+    "Participants": 1170,
+    "ToVersion": 23,
+    "PayloadBytes": 1461160,
+    "Added": 780,
+    "ReplaySteps": 240,
+    "FromVersion": 19,
+    "Audit": {
+      "Inventory": {
+        "BT": 0,
+        "BX": 0,
+        "BG": 0
+      },
+      "CashError": 1.0491348803043365e-06,
+      "Volume": 69464036,
+      "EquityError": -9.178183972835541e-07,
+      "Hash": 1890118734,
+      "Trades": 27681768
+    },
+    "Accounts": 1178,
+    "RawBytes": 5502043,
+    "ExistingAccountsAndAgentsPreserved": true
+  },
+  "Runs": [
+    {
+      "Seed": 19381,
+      "Seconds": 3600,
+      "Trades": 22472,
+      "MeanStepMs": 5.9029048541358655,
+      "P95StepMs": 9.46299999486655,
+      "Depleted": 0,
+      "LiquidityPaused": 0,
+      "RawBytes": 2099284,
+      "StoredBytesWithHeadroom": 470303,
+      "Markets": {
+        "BT": {
+          "TopFiveBid": 1546.25,
+          "SpreadTicks": 1.0083333333333333,
+          "TwoSidedFraction": 1,
+          "TopFiveAsk": 1494.2055555555555,
+          "TwoSided": 360,
+          "Samples": 360,
+          "Initial": 81941,
+          "Final": 81949
+        },
+        "BX": {
+          "TopFiveBid": 3535.9222222222224,
+          "SpreadTicks": 1.0083333333333333,
+          "TwoSidedFraction": 1,
+          "TopFiveAsk": 3480.4694444444444,
+          "TwoSided": 360,
+          "Samples": 360,
+          "Initial": 23298,
+          "Final": 23294
+        },
+        "BG": {
+          "TopFiveBid": 1707.661111111111,
+          "SpreadTicks": 1.0138888888888888,
+          "TwoSidedFraction": 1,
+          "TopFiveAsk": 1694.6444444444444,
+          "TwoSided": 360,
+          "Samples": 360,
+          "Initial": 23847,
+          "Final": 23845
+        }
+      },
+      "Audit": {
+        "Inventory": {
+          "BT": 0,
+          "BX": 0,
+          "BG": 0
+        },
+        "CashError": 0,
+        "Volume": 47077,
+        "EquityError": 2.3967004381120205e-08,
+        "Hash": 1316412494,
+        "Trades": 22472
+      }
+    },
+    {
+      "Seed": 68473,
+      "Seconds": 3600,
+      "Trades": 24222,
+      "MeanStepMs": 5.695220354064077,
+      "P95StepMs": 8.739200013224036,
+      "Depleted": 0,
+      "LiquidityPaused": 0,
+      "RawBytes": 2074968,
+      "StoredBytesWithHeadroom": 471079,
+      "Markets": {
+        "BT": {
+          "TopFiveBid": 1537.4833333333333,
+          "SpreadTicks": 1.0166666666666666,
+          "TwoSidedFraction": 1,
+          "TopFiveAsk": 1528.0027777777777,
+          "TwoSided": 360,
+          "Samples": 360,
+          "Initial": 81941,
+          "Final": 81939
+        },
+        "BX": {
+          "TopFiveBid": 3694.6472222222224,
+          "SpreadTicks": 1.0027777777777778,
+          "TwoSidedFraction": 1,
+          "TopFiveAsk": 3680.413888888889,
+          "TwoSided": 360,
+          "Samples": 360,
+          "Initial": 23300,
+          "Final": 23302
+        },
+        "BG": {
+          "TopFiveBid": 1876.4083333333333,
+          "SpreadTicks": 1.0222222222222221,
+          "TwoSidedFraction": 1,
+          "TopFiveAsk": 1889.3805555555555,
+          "TwoSided": 360,
+          "Samples": 360,
+          "Initial": 23845,
+          "Final": 23848
+        }
+      },
+      "Audit": {
+        "Inventory": {
+          "BT": 0,
+          "BX": 0,
+          "BG": 0
+        },
+        "CashError": 0,
+        "Volume": 51663,
+        "EquityError": 6.616755854338408e-08,
+        "Hash": 696210084,
+        "Trades": 24222
+      }
+    }
+  ],
+  "BaselineMeanStepMs": 5.44489870135294,
+  "FirstSeedDepthRatios": {
+    "BT": 2.863192148327962,
+    "BX": 3.0401700925085637,
+    "BG": 2.8035395880399285
+  },
+  "Sources": {
+    "ReplicatedStorage.MarketReign.MarketConfig": "257134429d078c9dbdf8221e908248db694b840975e3885f5562b6b4dc416193",
+    "ServerScriptService.MarketReign.BotPopulation": "b486090a1c2ffb22826c87edc142d132cf5d9c633ac87a352dd2a2d4c94d6839",
+    "ServerScriptService.MarketReign.WorldCheckpoint": "6fcd08b2c9b114e15880e3913b89fad78d935a437d4fd5ae29057d8ccb0bb676",
+    "ServerScriptService.MarketReign.BotPopulationTests": "4c133e4604b3e67fcc808aa34e8c83c1af4e2d0dd57d1ce2af20e378035eb003",
+    "ServerScriptService.MarketReign.ParticipantExpansionTests": "c6adfe1d84cdba229e8509e6952301918a49ed73aba0384a0d7d51330a496a35",
+    "ServerScriptService.MarketReign.BotRefreshTests": "788b876c023739a02c3d9c1e716878e1ec631e0508e39db339981937db8e3d50",
+    "ServerScriptService.MarketReign.OrderFlowMarketTests": "bacebad03a4b6b9694f4b65c957b80386b304d8b705707bdab8ba2346c489394",
+    "ServerScriptService.MarketReign.LegacyRetirementTests": "d746889f0886f54a7d79fb961da3ca9cbcb24fa4301a9f09f8dcec6bc6a569e4",
+    "ServerScriptService.MarketReign.ScalperTests": "a537eabc036447d101bbc40687cc3ea072854f0ef4474015dfafddfba17b54df",
+    "ServerScriptService.MarketReign.WorldTests": "6f738fe1bf80ca10ab170dded5b97d438cb8611d3fd264e72ee4cb33c8f4d3b8",
+    "ServerScriptService.MarketReign.MakerLiquidityTests": "c1e1fb65064f1951aca015a665aefac9d2569f8a369bb23adc6e7e6a68ac150c",
+    "ServerScriptService.MarketReign.DepthRealismTests": "ef4d055163da16ab254b24d02288df59231bb37b68173bd75f535cee358699c7",
+    "ServerScriptService.MarketReign.Participants": "a6566101904ec0a9230d96ea819f58c1e6999212bdfb7840bf73621aa98ac0e4",
+    "ServerScriptService.MarketReign.MarketEngine": "f1886003b1f3c91d36901f3d538ed0d458b4eee2be10d56202215fad6ddd88b0",
+    "ServerScriptService.MarketReign.BotLiquidity": "1ed33a103d2a0fefd47b2fabee9d9e2e2a3fd3f715fd0f0f53def9acce0aa039",
+    "ServerScriptService.MarketReign.BotSignals": "3a796d1c597634eec17d0e9fcd0ef4b5e8827713f750ec4d9cd277c734aa3f39"
+  },
+  "Published": false,
+  "RBXLSaved": false,
+  "DataStoreWrites": false,
+  "InstalledSources": 16
+}

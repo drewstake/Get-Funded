@@ -1,4 +1,5 @@
-local C=require(game.ReplicatedStorage.MarketReign.MarketConfig)
+local C=table.clone(require(game.ReplicatedStorage.MarketReign.MarketConfig))
+C.BotPopulation=nil -- Intentionally empty scheduler in save/restore execution fixtures.
 local E=require(script.Parent.MarketEngine)
 local P=require(script.Parent.Participants)
 local CP=require(script.Parent.WorldCheckpoint)
@@ -155,7 +156,7 @@ function Tests.Run()
    assert(e:Submit("maker",{Contract="BX",Direction=-side,Quantity=3,Type="Limit",Price=price}))
    local ok,entry=e:Submit("user",{Contract="BX",Direction=side,Quantity=3,Type="Market",TargetTicks=4});assert(ok and entry.Filled==3)
    local p=e.Accounts.user.Positions.BX;local target=p.Target
-   -- An unrelated trade touches TP but consumes the available counterpart liquidity.
+   -- The already-working target consumes the first available contract immediately.
    assert(e:Submit("maker",{Contract="BX",Direction=side,Quantity=1,Type="Limit",Price=target}))
    assert(e:Submit("trigger",{Contract="BX",Direction=-side,Quantity=1,Type="Market"}))
    e:ProcessStops();assert(p.Triggered=="Take profit"and p.ExitOrder)
@@ -167,12 +168,12 @@ function Tests.Run()
     assert(order.Kind==(side==-1 and "Take profit · closing short"or "Take profit · closing long"))
     assert(snapshot.Positions.BX.Direction==side and snapshot.Positions.BX.Quantity==quantity)
    end
-   check(e,3);e:Audit()
+   check(e,2);e:Audit()
    local pop=setmetatable({Engine=e,Config=c,Random=P.RNG.new(937),Agents={}},P)
-   local restored=CP.Restore(CP.Decode(CP.Encode(CP.Capture(e,pop))),c);check(restored,3)
+   local restored=CP.Restore(CP.Decode(CP.Encode(CP.Capture(e,pop))),c);check(restored,2)
    local filled,r=restored:Submit("maker",{Contract="BX",Direction=side,Quantity=1,Type="Market"});assert(filled and r.Filled==1)
-   check(restored,2)
-   local done,result=restored:Submit("maker",{Contract="BX",Direction=side,Quantity=2,Type="Market"});assert(done and result.Filled==2)
+   check(restored,1)
+   local done,result=restored:Submit("maker",{Contract="BX",Direction=side,Quantity=1,Type="Market"});assert(done and result.Filled==1)
    local snapshot=restored:Snapshot("user","BX","1m",false)
    assert(not snapshot.Positions.BX and #snapshot.Orders==0,"Protective exit left or reversed the position");restored:Audit()
   end

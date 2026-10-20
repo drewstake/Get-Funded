@@ -1,0 +1,69 @@
+{
+  "Error": "HTTP 409 (Superseded by final participant benchmark)\nAssistantCommand:3\nAssistantCommand:7\n",
+  "Success": false,
+  "Runs": [
+    {
+      "MaxStepMs": 38.58350001974031,
+      "StoredBytesWithHeadroom": 168382,
+      "MeanStepMs": 5.44489870135294,
+      "Trades": 8109,
+      "Markets": {
+        "BT": {
+          "TopFiveBid": 525.0861111111111,
+          "SpreadTicks": 1.0222222222222221,
+          "TwoSidedFraction": 1,
+          "TopFiveAsk": 536.825,
+          "TwoSided": 360,
+          "Samples": 360,
+          "Initial": 81943,
+          "Final": 81941
+        },
+        "BX": {
+          "TopFiveBid": 1149.2833333333333,
+          "SpreadTicks": 1.0083333333333333,
+          "TwoSidedFraction": 1,
+          "TopFiveAsk": 1158.611111111111,
+          "TwoSided": 360,
+          "Samples": 360,
+          "Initial": 23298,
+          "Final": 23305
+        },
+        "BG": {
+          "TopFiveBid": 601.1833333333333,
+          "SpreadTicks": 1.0305555555555554,
+          "TwoSidedFraction": 1,
+          "TopFiveAsk": 612.3916666666667,
+          "TwoSided": 360,
+          "Samples": 360,
+          "Initial": 23845,
+          "Final": 23831
+        }
+      },
+      "P95StepMs": 9.266700013540685,
+      "Volume": 18531,
+      "RawBytes": 713722,
+      "Participants": 390,
+      "Seconds": 3600,
+      "PayloadBytes": 163980,
+      "Audit": {
+        "Inventory": {
+          "BT": 0,
+          "BX": 0,
+          "BG": 0
+        },
+        "CashError": 0,
+        "Volume": 18531,
+        "EquityError": -5.4802512750029564e-08,
+        "Hash": 1530930228,
+        "Trades": 8109
+      },
+      "StepTotalMs": 78406.54129948234,
+      "Name": "baseline",
+      "Seed": 19381,
+      "CreationMs": 39.71029998501763,
+      "LiquidityPaused": 0,
+      "EncodeMs": 11.296900047454983,
+      "Depleted": 0
+    }
+  ]
+}

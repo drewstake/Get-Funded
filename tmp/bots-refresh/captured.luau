@@ -1,0 +1,6 @@
+local fs=require('@lune/fs');local serde=require('@lune/serde');local env=require('./environment')
+local saved=env.game:GetService('HttpService'):JSONDecode(fs.readFile('backups/bots-refresh-20261015/private-checkpoint.json'))
+local snapshot=require('./candidate/WorldCheckpoint').Decode(saved.Record.Checkpoint)
+local result=require('./candidate/BotRefreshTests').Captured(snapshot,128)
+fs.writeFile('output/bots-refresh-20261015/captured-replay.json',serde.encode('json',result))
+print(serde.encode('json',result))

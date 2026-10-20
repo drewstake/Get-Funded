@@ -7,7 +7,7 @@ local Tests={}
 local function clone(v)if type(v)~="table"then return v end local t={}for k,x in pairs(v)do t[k]=clone(x)end return t end
 local function fixture(config,seed)local e=E.new(config or clone(C),seed or 4141);return e,P.new(e)end
 local function fixed()
- local c=clone(C);c.ParticipantsPerInstrument=0;c.MakersPerInstrument=0;c.ScalpersPerInstrument=0;c.WhaleFrequency=0;c.NewsFrequency=0
+ local c=clone(C);c.BotPopulation=nil;c.ParticipantsPerInstrument=0;c.MakersPerInstrument=0;c.ScalpersPerInstrument=0;c.WhaleFrequency=0;c.NewsFrequency=0
  c.Regimes={{Name="Fixed",Weight=1,Volatility=0,Liquidity=1,Activity=1,Trend=0}}
  return c
 end
@@ -24,7 +24,7 @@ function Tests.Run()
    for _,side in ipairs({"Bids","Asks"})do
     assert(#b[side]==5)
     for i,l in ipairs(b[side])do
-     assert(l.Quantity>0 and l.Quantity<500,"Oversized reserve wall")
+     assert(l.Quantity>0 and l.Quantity<500*C.Reserve.Count/6,"Oversized reserve wall")
      if i>1 then assert(math.abs(l.Price-b[side][i-1].Price)==1,"Reserve ladder skipped ticks")end
      local sum=0;for _,o in ipairs(l.Orders)do assert(o.Remaining<100);sum+=o.Remaining end
      assert(sum==l.Quantity,"Displayed depth differs from executable orders")

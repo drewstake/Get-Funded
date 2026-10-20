@@ -1,0 +1,35 @@
+{
+  "Status": "Prepared locally. No publication or production migration authorized or performed.",
+  "SourceModules": {
+    "ReplicatedStorage.MarketReign.MarketConfig": "src/MarketConfig.luau",
+    "ServerScriptService.MarketReign.Participants": "src/Participants.luau",
+    "ServerScriptService.MarketReign.BotPopulation": "src/BotPopulation.luau (new ModuleScript)",
+    "ServerScriptService.MarketReign.WorldCheckpoint": "src/WorldCheckpoint.luau"
+  },
+  "Migration": {
+    "CheckpointVersion": 15,
+    "PopulationPolicyVersion": 1,
+    "Fresh": "130 bots / $68M per active market; 390 bots / $204M total. Exact group allocation and capital are in MarketConfig.BotPopulation.",
+    "Existing": "Retain existing active agents in sorted ID order up to each target; add missing accounts with unused IDs. Set retained agents' marked equity to the configured target through an explicit one-time funding adjustment. Preserve realized P&L, cash-flow ledger, positions, and existing reduce-only exits. Cancel and report old entry orders so new quotes obey the new policy. Legacy markets and player accounts receive no bot funding changes.",
+    "Accounting": "StartingCapital records original contributed capital available at migration; NetCapitalAdjustments and CapitalAdjustments record deposits/withdrawals. PolicyCapitalTarget is the new funding target. Base remains the matching engine's net contributed capital and can be negative after withdrawing accumulated profits. Balance=Base+Realized remains valid. Do not label Base as original starting capital in bot reports.",
+    "Obligations": "Surplus agents retire without losing their accounts or positions. They close through real counterparties in chunks of at most 64 contracts. Retained agents above their new inventory or margin limit also reduce through matching. If depth is absent, positions remain outstanding; no synthetic fill is created.",
+    "Retries": "Population.PolicyVersion and saved funding ledger prevent repeated creation or funding. Duplicate agent IDs, incompatible policies and unsupported checkpoint versions fail closed.",
+    "RecurringFunding": "None. The manual ReplenishBotCapital tool now records funding separately and skips retiring agents; it is not scheduled or executed."
+  },
+  "StepsForLaterAuthorizedDeployment": [
+    "Review comparison-summary.json, native test results and the current read-only migration report. Review remaining strategy losses and depth tradeoffs; these budgets are a tested starting configuration, not a guarantee of permanent solvency.",
+    "Re-run DryRunBotPopulation.Run on a fresh read-only Live snapshot with the release candidate modules. The supplied report concerns a historical snapshot. Confirm player/legacy preservation, obligations, funding adjustments, exact population and checkpoint size again.",
+    "Back up the release source and latest durable checkpoint securely. Test a staged copy in a separate test experience or storage scope. Keep the existing take-profit and reset-liquidation implementation intact.",
+    "Install all four runtime modules together, plus the updated manual maintenance tool where it is used. Complete native tests and load tests for expected connected-player activity before publishing; detached benchmarks do not include network/UI load.",
+    "During an explicitly authorized maintenance deployment, stop the old writer cleanly and allow its final fenced checkpoint to save. Publish the coherent V15 build and let WorldService.Open claim the lease, restore/migrate a detached state, audit, and durably commit before enabling trading. Never write a transformed checkpoint directly over an active owner.",
+    "Verify the first durable V15 checkpoint has 390 active bots, the recorded funding ledger, preserved player/legacy accounts and no duplicate population. Surplus/oversized positions may take time to close through available depth. Watch actual spreads, depth, failed entry capacity, drawdowns, execution time and save sizes.",
+    "If the initial migration fails before commit, fail closed and investigate with the prior durable state. After V15 commits, use a V15-compatible forward fix; old V14 binaries intentionally refuse it. Restoring an older checkpoint after trading resumes would discard acknowledged trades and must not be used as a routine rollback."
+  ],
+  "ValidationCommands": [
+    "python tools/prepare_bot_validation.py",
+    "tmp/single-account/runtime/lune.exe run tools/CompileSources.luau",
+    "tmp/single-account/runtime/lune.exe run tmp/bot-population/tests.luau",
+    "tmp/single-account/runtime/lune.exe run tmp/bot-population/compare.luau baseline 5501 21600 (repeat baseline/proposed for seeds 5501, 4407, 73521)",
+    "python tools/summarize_bot_population.py (requires completed native tests, strategy ablations, Live dry run, and native benchmark files)"
+  ]
+}

@@ -12,10 +12,11 @@ local function equal(a,b)
  for k,v in pairs(a)do equal(v,b[k])end;for k in pairs(b)do assert(a[k]~=nil,"Unexpected key "..tostring(k))end
 end
 local function fixture()
- local c=clone(Default);c.ParticipantsPerInstrument=0;c.MakersPerInstrument=0;c.ScalpersPerInstrument=0;c.WhaleFrequency=0;c.NewsFrequency=0
+ local c=clone(Default);c.BotPopulation=nil;c.ParticipantsPerInstrument=0;c.MakersPerInstrument=0;c.ScalpersPerInstrument=0;c.WhaleFrequency=0;c.NewsFrequency=0
  -- Deliberately deep fixture for arithmetic/queue ceiling tests, not production depth.
  -- Production quote realism and depth-limited execution are covered by DepthRealismTests.
  c.Reserve.QuoteSize=100000;c.Reserve.QuoteSizes=nil;c.Reserve.SizeVariation=nil
+ c.Reserve.Capital=100000000000;c.Reserve.InventoryLimit=50000000 -- Deliberately large arithmetic fixture.
  c.Reserve.Offsets={2,4,8,12,16};c.Reserve.SpacingTicks=nil;c.Reserve.DepthGrowth=.5
  c.Regimes={{Name="Fixed",Weight=1,Volatility=0,Liquidity=1,Activity=1,Trend=0}}
  local e=E.new(c,7411);local p=P.new(e)
@@ -157,6 +158,7 @@ function Tests.Run()
   e:Audit();restored:Audit();return "Exact replay, saved allowances, cancellable/disconnect-safe queues"
  end)
  test("Pre-reserve saves gain institutions without changing existing accounts or history",function()
+  local Default=clone(Default);Default.BotPopulation=nil -- Isolate the historical reserve upgrade.
   local c=clone(Default);c.Reserve=nil;c.ReservePopulationVersion=nil;c.PlayerExecution=nil
   local e=E.new(c,924);local p=P.new(e)
   for _=1,40 do p:Step()end

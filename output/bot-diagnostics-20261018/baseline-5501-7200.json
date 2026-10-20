@@ -1,0 +1,1359 @@
+{
+  "Audit": {
+    "CashError": 5.774199962615967e-8,
+    "EquityError": 7.55535438656807e-8,
+    "Hash": 1720354661,
+    "Inventory": {
+      "BG": 0,
+      "BT": 0,
+      "BX": 0
+    },
+    "Trades": 79058,
+    "Volume": 254203
+  },
+  "Elapsed": 77.13013369997498,
+  "Gates": {
+    "BG": {
+      "Cooldown": 82,
+      "Decisions": 39950,
+      "EntrySubmit": 20,
+      "ManagingPosition": 134,
+      "MinMove": 39699,
+      "Spread": 15
+    },
+    "BT": {
+      "Cooldown": 925,
+      "Decisions": 36951,
+      "EntrySubmit": 156,
+      "ManagingPosition": 462,
+      "MinMove": 34947,
+      "MissingQuote": 21,
+      "Signal": 1,
+      "Spread": 439
+    },
+    "BX": {
+      "Cooldown": 176,
+      "Decisions": 38537,
+      "EntrySubmit": 33,
+      "ManagingPosition": 331,
+      "MinMove": 37908,
+      "Spread": 89
+    }
+  },
+  "Groups": {
+    "Liquidity": {
+      "Bots": 72,
+      "ClosedContracts": 6822,
+      "Closes": 4477,
+      "DeltaPnl": -300280.00000001286,
+      "EndEquity": 10499719.999999989,
+      "Fills": 13935,
+      "Losses": 2594,
+      "NoContractCapital": 0,
+      "Orders": 13,
+      "Positions": 57,
+      "Reasons": {
+        "Stop loss": {
+          "Contracts": 866,
+          "Count": 289,
+          "Losses": 289,
+          "Pnl": -261648.9262383958,
+          "Wins": 0
+        },
+        "Strategy trade": {
+          "Contracts": 5591,
+          "Count": 4055,
+          "Losses": 2305,
+          "Pnl": -136827.06212341628,
+          "Wins": 1676
+        },
+        "Take profit": {
+          "Contracts": 365,
+          "Count": 133,
+          "Losses": 0,
+          "Pnl": 147566.82831875427,
+          "Wins": 133
+        }
+      },
+      "Rejected": 0,
+      "Rejections": {},
+      "StartEquity": 10800000,
+      "StopContracts": 866,
+      "StopMovedAway": 129,
+      "StopMovedCloser": 106,
+      "StopSlipDollars": -15169.999999999955,
+      "Submits": 13621,
+      "Wins": 1809
+    },
+    "Maker": {
+      "Bots": 60,
+      "ClosedContracts": 212040,
+      "Closes": 61595,
+      "DeltaPnl": 385105.0000000116,
+      "EndEquity": 45385105.000000015,
+      "Fills": 424781,
+      "Losses": 25118,
+      "NoContractCapital": 0,
+      "Orders": 277,
+      "Positions": 58,
+      "Reasons": {
+        "Strategy trade": {
+          "Contracts": 212040,
+          "Count": 61595,
+          "Losses": 25118,
+          "Pnl": 393668.6822706499,
+          "Wins": 32013
+        }
+      },
+      "Rejected": 0,
+      "Rejections": {},
+      "StartEquity": 45000000,
+      "StopContracts": 0,
+      "StopMovedAway": 0,
+      "StopMovedCloser": 0,
+      "StopSlipDollars": 0,
+      "Submits": 97223,
+      "Wins": 32013
+    },
+    "Momentum": {
+      "Bots": 36,
+      "ClosedContracts": 4042,
+      "Closes": 2441,
+      "DeltaPnl": 35832.500000001855,
+      "EndEquity": 7235832.500000001,
+      "Fills": 8232,
+      "Losses": 1278,
+      "NoContractCapital": 0,
+      "Orders": 7,
+      "Positions": 29,
+      "Reasons": {
+        "Stop loss": {
+          "Contracts": 371,
+          "Count": 119,
+          "Losses": 119,
+          "Pnl": -127725.50435734863,
+          "Wins": 0
+        },
+        "Strategy trade": {
+          "Contracts": 3426,
+          "Count": 2258,
+          "Losses": 1159,
+          "Pnl": 58112.12320425557,
+          "Wins": 1067
+        },
+        "Take profit": {
+          "Contracts": 245,
+          "Count": 64,
+          "Losses": 0,
+          "Pnl": 93899.56319616828,
+          "Wins": 64
+        }
+      },
+      "Rejected": 0,
+      "Rejections": {},
+      "StartEquity": 7200000,
+      "StopContracts": 371,
+      "StopMovedAway": 60,
+      "StopMovedCloser": 107,
+      "StopSlipDollars": -8380.000000000146,
+      "Submits": 7854,
+      "Wins": 1131
+    },
+    "Protective": {
+      "Bots": 24,
+      "ClosedContracts": 4269,
+      "Closes": 2109,
+      "DeltaPnl": -281212.50000000943,
+      "EndEquity": 3318787.4999999898,
+      "Fills": 8753,
+      "Losses": 1204,
+      "NoContractCapital": 0,
+      "Orders": 6,
+      "Positions": 20,
+      "Reasons": {
+        "Stop loss": {
+          "Contracts": 1423,
+          "Count": 394,
+          "Losses": 394,
+          "Pnl": -351663.713014735,
+          "Wins": 0
+        },
+        "Strategy trade": {
+          "Contracts": 2572,
+          "Count": 1613,
+          "Losses": 810,
+          "Pnl": 46454.72172060156,
+          "Wins": 795
+        },
+        "Take profit": {
+          "Contracts": 274,
+          "Count": 102,
+          "Losses": 0,
+          "Pnl": 83595.23615979553,
+          "Wins": 102
+        }
+      },
+      "Rejected": 0,
+      "Rejections": {},
+      "StartEquity": 3600000,
+      "StopContracts": 1423,
+      "StopMovedAway": 1766,
+      "StopMovedCloser": 248,
+      "StopSlipDollars": -11537.5,
+      "Submits": 5966,
+      "Wins": 897
+    },
+    "Reserve": {
+      "Bots": 18,
+      "ClosedContracts": 4274,
+      "Closes": 2152,
+      "DeltaPnl": 859450.0000000265,
+      "EndEquity": 90859450.00000003,
+      "Fills": 9255,
+      "Losses": 809,
+      "NoContractCapital": 0,
+      "Orders": 90,
+      "Positions": 18,
+      "Reasons": {
+        "Strategy trade": {
+          "Contracts": 4274,
+          "Count": 2152,
+          "Losses": 809,
+          "Pnl": 476214.25031512394,
+          "Wins": 1333
+        }
+      },
+      "Rejected": 0,
+      "Rejections": {},
+      "StartEquity": 90000000,
+      "StopContracts": 0,
+      "StopMovedAway": 0,
+      "StopMovedCloser": 0,
+      "StopSlipDollars": 0,
+      "Submits": 64095,
+      "Wins": 1333
+    },
+    "Reversion": {
+      "Bots": 36,
+      "ClosedContracts": 5977,
+      "Closes": 2983,
+      "DeltaPnl": -608487.4999999782,
+      "EndEquity": 6591512.50000002,
+      "Fills": 12238,
+      "Losses": 1674,
+      "NoContractCapital": 0,
+      "Orders": 6,
+      "Positions": 34,
+      "Reasons": {
+        "Stop loss": {
+          "Contracts": 2186,
+          "Count": 566,
+          "Losses": 566,
+          "Pnl": -610277.9253899828,
+          "Wins": 0
+        },
+        "Strategy trade": {
+          "Contracts": 3630,
+          "Count": 2362,
+          "Losses": 1108,
+          "Pnl": 64692.840625433084,
+          "Wins": 1239
+        },
+        "Take profit": {
+          "Contracts": 161,
+          "Count": 55,
+          "Losses": 0,
+          "Pnl": 51139.16183600553,
+          "Wins": 55
+        }
+      },
+      "Rejected": 0,
+      "Rejections": {},
+      "StartEquity": 7200000,
+      "StopContracts": 2186,
+      "StopMovedAway": 261,
+      "StopMovedCloser": 19,
+      "StopSlipDollars": -59557.5,
+      "Submits": 9085,
+      "Wins": 1294
+    },
+    "Scalper": {
+      "Bots": 72,
+      "ClosedContracts": 172,
+      "Closes": 161,
+      "DeltaPnl": -1349.999999999991,
+      "EndEquity": 7198650,
+      "Fills": 344,
+      "Losses": 93,
+      "NoContractCapital": 0,
+      "Orders": 0,
+      "Positions": 0,
+      "Reasons": {
+        "Scalper target": {
+          "Contracts": 69,
+          "Count": 62,
+          "Losses": 0,
+          "Pnl": 3582.4999999999636,
+          "Wins": 62
+        },
+        "Stop loss": {
+          "Contracts": 85,
+          "Count": 84,
+          "Losses": 84,
+          "Pnl": -4682.499999999991,
+          "Wins": 0
+        },
+        "Timed exit": {
+          "Contracts": 18,
+          "Count": 15,
+          "Losses": 9,
+          "Pnl": -249.99999999996362,
+          "Wins": 6
+        }
+      },
+      "Rejected": 0,
+      "Rejections": {},
+      "StartEquity": 7200000,
+      "StopContracts": 85,
+      "StopMovedAway": 0,
+      "StopMovedCloser": 0,
+      "StopSlipDollars": -499.9999999999727,
+      "Submits": 436,
+      "Wins": 68
+    },
+    "Value": {
+      "Bots": 60,
+      "ClosedContracts": 5336,
+      "Closes": 1819,
+      "DeltaPnl": 6114.9999999965585,
+      "EndEquity": 15006114.999999996,
+      "Fills": 11213,
+      "Losses": 1029,
+      "NoContractCapital": 0,
+      "Orders": 5,
+      "Positions": 51,
+      "Reasons": {
+        "Stop loss": {
+          "Contracts": 2109,
+          "Count": 595,
+          "Losses": 595,
+          "Pnl": -754446.0054890837,
+          "Wins": 0
+        },
+        "Strategy trade": {
+          "Contracts": 1296,
+          "Count": 792,
+          "Losses": 434,
+          "Pnl": -68399.2680011531,
+          "Wins": 356
+        },
+        "Take profit": {
+          "Contracts": 1931,
+          "Count": 432,
+          "Losses": 0,
+          "Pnl": 910468.6323454883,
+          "Wins": 432
+        }
+      },
+      "Rejected": 0,
+      "Rejections": {},
+      "StartEquity": 15000000,
+      "StopContracts": 2109,
+      "StopMovedAway": 91,
+      "StopMovedCloser": 169,
+      "StopSlipDollars": -138017.5000000007,
+      "Submits": 7465,
+      "Wins": 788
+    },
+    "Whale": {
+      "Bots": 12,
+      "ClosedContracts": 9457,
+      "Closes": 2170,
+      "DeltaPnl": -95172.49999995968,
+      "EndEquity": 17904827.500000037,
+      "Fills": 19649,
+      "Losses": 1236,
+      "NoContractCapital": 0,
+      "Orders": 1,
+      "Positions": 11,
+      "Reasons": {
+        "Stop loss": {
+          "Contracts": 2344,
+          "Count": 449,
+          "Losses": 449,
+          "Pnl": -781711.7646098159,
+          "Wins": 0
+        },
+        "Strategy trade": {
+          "Contracts": 6243,
+          "Count": 1479,
+          "Losses": 787,
+          "Pnl": 257599.57948246546,
+          "Wins": 692
+        },
+        "Take profit": {
+          "Contracts": 870,
+          "Count": 242,
+          "Losses": 0,
+          "Pnl": 295561.12742990005,
+          "Wins": 242
+        }
+      },
+      "Rejected": 0,
+      "Rejections": {},
+      "StartEquity": 18000000,
+      "StopContracts": 2344,
+      "StopMovedAway": 89,
+      "StopMovedCloser": 67,
+      "StopSlipDollars": -67062.50000000084,
+      "Submits": 2039,
+      "Wins": 934
+    }
+  },
+  "Note": "Detached current-source simulation. No live world, player actions, or funding changes. saved variant uses a historical Studio checkpoint, not the user report.",
+  "Samples": {
+    "AllScalpersFlat": 1235,
+    "AnyScalperOrders": 207,
+    "Count": 1440,
+    "Markets": {
+      "BG": {
+        "RecentRange": 3760,
+        "Samples": 1440,
+        "Spread": 1542,
+        "TwoSided": 1440,
+        "Volatility": 409.63110609367646
+      },
+      "BT": {
+        "RecentRange": 5627,
+        "Samples": 1440,
+        "Spread": 1698,
+        "TwoSided": 1440,
+        "Volatility": 498.94798532577835
+      },
+      "BX": {
+        "RecentRange": 4040,
+        "Samples": 1440,
+        "Spread": 1549,
+        "TwoSided": 1440,
+        "Volatility": 435.9126108856075
+      }
+    }
+  },
+  "ScalperProfiles": [
+    {
+      "EntryBuffer": 4.067108550140219,
+      "Hold": 119.56300220990693,
+      "Lookback": 22,
+      "Market": "BT",
+      "MinMove": 4.746029773143134,
+      "Stop": 9,
+      "Style": "Momentum",
+      "Target": 6,
+      "Threshold": 0.8421757819327413
+    },
+    {
+      "EntryBuffer": 3.1010959321172424,
+      "Hold": 130.8903518109072,
+      "Lookback": 14,
+      "Market": "BT",
+      "MinMove": 6.752174039255909,
+      "Stop": 9,
+      "Style": "Momentum",
+      "Target": 10,
+      "Threshold": 0.668318975469246
+    },
+    {
+      "EntryBuffer": 3.903605130456204,
+      "Hold": 156.63813890360208,
+      "Lookback": 24,
+      "Market": "BX",
+      "MinMove": 4.154065314286419,
+      "Stop": 12,
+      "Style": "Momentum",
+      "Target": 4,
+      "Threshold": 0.9673459382575684
+    },
+    {
+      "EntryBuffer": 2.9855591249584963,
+      "Hold": 95.31549300966574,
+      "Lookback": 25,
+      "Market": "BX",
+      "MinMove": 5.405651089458564,
+      "Stop": 10,
+      "Style": "Reversion",
+      "Target": 8,
+      "Threshold": 0.5927756098531073
+    },
+    {
+      "EntryBuffer": 2.75036010739876,
+      "Hold": 63.87944973254551,
+      "Lookback": 30,
+      "Market": "BX",
+      "MinMove": 3.790930306907245,
+      "Stop": 8,
+      "Style": "Momentum",
+      "Target": 6,
+      "Threshold": 0.519737972235185
+    },
+    {
+      "EntryBuffer": 2.8352624871000938,
+      "Hold": 84.36018442565583,
+      "Lookback": 19,
+      "Market": "BT",
+      "MinMove": 6.694393510787931,
+      "Stop": 7,
+      "Style": "Reversion",
+      "Target": 6,
+      "Threshold": 0.7666322324735262
+    },
+    {
+      "EntryBuffer": 4.994268342384262,
+      "Hold": 113.44201509721671,
+      "Lookback": 8,
+      "Market": "BX",
+      "MinMove": 3.4089440383990035,
+      "Stop": 6,
+      "Style": "Momentum",
+      "Target": 5,
+      "Threshold": 0.9702436275175975
+    },
+    {
+      "EntryBuffer": 5.0216460595939525,
+      "Hold": 121.36496857244752,
+      "Lookback": 21,
+      "Market": "BT",
+      "MinMove": 5.346178324588657,
+      "Stop": 7,
+      "Style": "Momentum",
+      "Target": 6,
+      "Threshold": 0.7092790058857198
+    },
+    {
+      "EntryBuffer": 3.162480215152018,
+      "Hold": 68.06109088848396,
+      "Lookback": 26,
+      "Market": "BG",
+      "MinMove": 5.603082003818397,
+      "Stop": 11,
+      "Style": "Reversion",
+      "Target": 6,
+      "Threshold": 0.6911174156661692
+    },
+    {
+      "EntryBuffer": 5.991040693591833,
+      "Hold": 89.47332256728473,
+      "Lookback": 27,
+      "Market": "BX",
+      "MinMove": 7.406650464239833,
+      "Stop": 10,
+      "Style": "Reversion",
+      "Target": 6,
+      "Threshold": 1.1001337080728883
+    },
+    {
+      "EntryBuffer": 2.0692480728352667,
+      "Hold": 115.4518302173595,
+      "Lookback": 31,
+      "Market": "BT",
+      "MinMove": 6.342154788944011,
+      "Stop": 8,
+      "Style": "Reversion",
+      "Target": 5,
+      "Threshold": 1.0975844441436158
+    },
+    {
+      "EntryBuffer": 4.991608932144757,
+      "Hold": 114.13588064263382,
+      "Lookback": 10,
+      "Market": "BX",
+      "MinMove": 7.94345444950436,
+      "Stop": 9,
+      "Style": "Reversion",
+      "Target": 7,
+      "Threshold": 0.8444632888512981
+    },
+    {
+      "EntryBuffer": 5.00531016988927,
+      "Hold": 104.72388044405909,
+      "Lookback": 20,
+      "Market": "BX",
+      "MinMove": 4.659013406214776,
+      "Stop": 11,
+      "Style": "Reversion",
+      "Target": 7,
+      "Threshold": 0.627818553069522
+    },
+    {
+      "EntryBuffer": 3.617724424981384,
+      "Hold": 148.14847821935476,
+      "Lookback": 15,
+      "Market": "BX",
+      "MinMove": 4.469647845472045,
+      "Stop": 6,
+      "Style": "Reversion",
+      "Target": 10,
+      "Threshold": 0.5614720090578645
+    },
+    {
+      "EntryBuffer": 2.103699000600585,
+      "Hold": 111.68554340288301,
+      "Lookback": 24,
+      "Market": "BX",
+      "MinMove": 5.068072488563169,
+      "Stop": 11,
+      "Style": "Reversion",
+      "Target": 4,
+      "Threshold": 0.6427169143421189
+    },
+    {
+      "EntryBuffer": 4.579461316847922,
+      "Hold": 92.21537511619525,
+      "Lookback": 20,
+      "Market": "BG",
+      "MinMove": 4.471531957607498,
+      "Stop": 6,
+      "Style": "Reversion",
+      "Target": 4,
+      "Threshold": 0.8889801276796405
+    },
+    {
+      "EntryBuffer": 5.244940610250897,
+      "Hold": 67.18103027491878,
+      "Lookback": 12,
+      "Market": "BX",
+      "MinMove": 3.660246776258688,
+      "Stop": 6,
+      "Style": "Reversion",
+      "Target": 7,
+      "Threshold": 0.9934837018109317
+    },
+    {
+      "EntryBuffer": 2.271017259113033,
+      "Hold": 79.55395928749533,
+      "Lookback": 20,
+      "Market": "BG",
+      "MinMove": 5.842643306517342,
+      "Stop": 5,
+      "Style": "Momentum",
+      "Target": 4,
+      "Threshold": 0.9243185494208329
+    },
+    {
+      "EntryBuffer": 2.403924163619021,
+      "Hold": 65.05972864528174,
+      "Lookback": 12,
+      "Market": "BT",
+      "MinMove": 5.2791275672051725,
+      "Stop": 11,
+      "Style": "Reversion",
+      "Target": 4,
+      "Threshold": 0.9425501457148
+    },
+    {
+      "EntryBuffer": 2.7455147191628417,
+      "Hold": 99.8534914124075,
+      "Lookback": 30,
+      "Market": "BX",
+      "MinMove": 6.426260886912356,
+      "Stop": 5,
+      "Style": "Momentum",
+      "Target": 7,
+      "Threshold": 1.0170674726912134
+    },
+    {
+      "EntryBuffer": 3.717015136832844,
+      "Hold": 106.07162955127268,
+      "Lookback": 10,
+      "Market": "BX",
+      "MinMove": 5.547087572769769,
+      "Stop": 5,
+      "Style": "Momentum",
+      "Target": 4,
+      "Threshold": 0.779070091470643
+    },
+    {
+      "EntryBuffer": 5.204573876785382,
+      "Hold": 57.5744180202365,
+      "Lookback": 16,
+      "Market": "BT",
+      "MinMove": 7.982007883946415,
+      "Stop": 7,
+      "Style": "Reversion",
+      "Target": 5,
+      "Threshold": 0.6266132824246833
+    },
+    {
+      "EntryBuffer": 5.993730273094834,
+      "Hold": 140.33013322778518,
+      "Lookback": 32,
+      "Market": "BT",
+      "MinMove": 4.6925157009123435,
+      "Stop": 12,
+      "Style": "Momentum",
+      "Target": 7,
+      "Threshold": 0.7250153411761928
+    },
+    {
+      "EntryBuffer": 3.72569081640136,
+      "Hold": 112.30831398829274,
+      "Lookback": 20,
+      "Market": "BX",
+      "MinMove": 4.026748137561022,
+      "Stop": 11,
+      "Style": "Reversion",
+      "Target": 5,
+      "Threshold": 1.1398209172486424
+    },
+    {
+      "EntryBuffer": 2.223841615125463,
+      "Hold": 55.682101938725495,
+      "Lookback": 35,
+      "Market": "BG",
+      "MinMove": 4.323254651540543,
+      "Stop": 11,
+      "Style": "Momentum",
+      "Target": 4,
+      "Threshold": 0.9864673050523117
+    },
+    {
+      "EntryBuffer": 5.691370475893547,
+      "Hold": 153.23583947552174,
+      "Lookback": 12,
+      "Market": "BT",
+      "MinMove": 5.680302321761987,
+      "Stop": 6,
+      "Style": "Reversion",
+      "Target": 5,
+      "Threshold": 0.7088295287959415
+    },
+    {
+      "EntryBuffer": 5.2022838011394645,
+      "Hold": 159.02063471033267,
+      "Lookback": 8,
+      "Market": "BT",
+      "MinMove": 4.801706003864159,
+      "Stop": 6,
+      "Style": "Reversion",
+      "Target": 10,
+      "Threshold": 1.0783658305547972
+    },
+    {
+      "EntryBuffer": 2.81030221507433,
+      "Hold": 151.2299961481383,
+      "Lookback": 31,
+      "Market": "BT",
+      "MinMove": 5.622779816213427,
+      "Stop": 5,
+      "Style": "Momentum",
+      "Target": 6,
+      "Threshold": 1.0480271555706984
+    },
+    {
+      "EntryBuffer": 2.4940780366277684,
+      "Hold": 156.01154918037892,
+      "Lookback": 9,
+      "Market": "BG",
+      "MinMove": 5.051132573769955,
+      "Stop": 12,
+      "Style": "Momentum",
+      "Target": 4,
+      "Threshold": 0.8481412573476048
+    },
+    {
+      "EntryBuffer": 3.8545849965208143,
+      "Hold": 112.02443028987591,
+      "Lookback": 20,
+      "Market": "BT",
+      "MinMove": 6.340458820266862,
+      "Stop": 7,
+      "Style": "Reversion",
+      "Target": 10,
+      "Threshold": 0.9451732689259449
+    },
+    {
+      "EntryBuffer": 2.884907329867085,
+      "Hold": 128.2432757244647,
+      "Lookback": 19,
+      "Market": "BG",
+      "MinMove": 7.202150017582881,
+      "Stop": 5,
+      "Style": "Momentum",
+      "Target": 5,
+      "Threshold": 0.8304474861502869
+    },
+    {
+      "EntryBuffer": 3.6512359332531856,
+      "Hold": 91.72028534660129,
+      "Lookback": 12,
+      "Market": "BG",
+      "MinMove": 6.5121675806642365,
+      "Stop": 6,
+      "Style": "Reversion",
+      "Target": 10,
+      "Threshold": 0.9854128668948137
+    },
+    {
+      "EntryBuffer": 5.77903388989113,
+      "Hold": 112.66346574605603,
+      "Lookback": 8,
+      "Market": "BX",
+      "MinMove": 5.18112366841227,
+      "Stop": 6,
+      "Style": "Momentum",
+      "Target": 9,
+      "Threshold": 1.1630666098385427
+    },
+    {
+      "EntryBuffer": 3.5474536519252946,
+      "Hold": 144.51345504844255,
+      "Lookback": 27,
+      "Market": "BG",
+      "MinMove": 4.419040107363388,
+      "Stop": 6,
+      "Style": "Momentum",
+      "Target": 4,
+      "Threshold": 1.1571419625809147
+    },
+    {
+      "EntryBuffer": 5.731241630265136,
+      "Hold": 118.34260529575059,
+      "Lookback": 11,
+      "Market": "BG",
+      "MinMove": 6.455918160479477,
+      "Stop": 5,
+      "Style": "Reversion",
+      "Target": 7,
+      "Threshold": 0.5222463085885375
+    },
+    {
+      "EntryBuffer": 5.81070243744678,
+      "Hold": 50.37340587488069,
+      "Lookback": 10,
+      "Market": "BG",
+      "MinMove": 6.02169749188316,
+      "Stop": 12,
+      "Style": "Momentum",
+      "Target": 7,
+      "Threshold": 0.6115125021019543
+    },
+    {
+      "EntryBuffer": 2.4860796073852476,
+      "Hold": 78.32877384793422,
+      "Lookback": 12,
+      "Market": "BG",
+      "MinMove": 7.435910116618457,
+      "Stop": 12,
+      "Style": "Reversion",
+      "Target": 4,
+      "Threshold": 0.7074456425418358
+    },
+    {
+      "EntryBuffer": 2.044146936407381,
+      "Hold": 136.01507660374747,
+      "Lookback": 24,
+      "Market": "BG",
+      "MinMove": 6.770959150870778,
+      "Stop": 5,
+      "Style": "Momentum",
+      "Target": 7,
+      "Threshold": 0.984083121448794
+    },
+    {
+      "EntryBuffer": 5.687077598500567,
+      "Hold": 154.96517108146344,
+      "Lookback": 10,
+      "Market": "BG",
+      "MinMove": 6.653446526105258,
+      "Stop": 12,
+      "Style": "Reversion",
+      "Target": 5,
+      "Threshold": 0.5519156301635856
+    },
+    {
+      "EntryBuffer": 4.234053836313102,
+      "Hold": 153.18258793334599,
+      "Lookback": 26,
+      "Market": "BG",
+      "MinMove": 3.0159158371463026,
+      "Stop": 5,
+      "Style": "Momentum",
+      "Target": 4,
+      "Threshold": 1.133165266892484
+    },
+    {
+      "EntryBuffer": 3.4970400563893094,
+      "Hold": 79.63890641910905,
+      "Lookback": 9,
+      "Market": "BG",
+      "MinMove": 7.525702460448119,
+      "Stop": 9,
+      "Style": "Reversion",
+      "Target": 10,
+      "Threshold": 1.0031133767231895
+    },
+    {
+      "EntryBuffer": 5.364133659454125,
+      "Hold": 77.3813657003368,
+      "Lookback": 22,
+      "Market": "BG",
+      "MinMove": 5.619844387574049,
+      "Stop": 10,
+      "Style": "Momentum",
+      "Target": 6,
+      "Threshold": 0.5974338025774033
+    },
+    {
+      "EntryBuffer": 2.5647623169071796,
+      "Hold": 110.57045441054295,
+      "Lookback": 31,
+      "Market": "BG",
+      "MinMove": 5.0522492830884875,
+      "Stop": 10,
+      "Style": "Reversion",
+      "Target": 5,
+      "Threshold": 1.1031095309663144
+    },
+    {
+      "EntryBuffer": 3.097346790645899,
+      "Hold": 122.2633949267973,
+      "Lookback": 21,
+      "Market": "BX",
+      "MinMove": 5.533664085219458,
+      "Stop": 6,
+      "Style": "Momentum",
+      "Target": 6,
+      "Threshold": 0.9618127737482138
+    },
+    {
+      "EntryBuffer": 3.4445375303945216,
+      "Hold": 72.70584970373002,
+      "Lookback": 26,
+      "Market": "BG",
+      "MinMove": 4.588912092423492,
+      "Stop": 6,
+      "Style": "Reversion",
+      "Target": 7,
+      "Threshold": 0.8921412647199544
+    },
+    {
+      "EntryBuffer": 4.405679858478568,
+      "Hold": 147.12293196614968,
+      "Lookback": 12,
+      "Market": "BG",
+      "MinMove": 3.7155607737207603,
+      "Stop": 12,
+      "Style": "Momentum",
+      "Target": 8,
+      "Threshold": 0.6699037767806574
+    },
+    {
+      "EntryBuffer": 5.442934229710574,
+      "Hold": 65.37686410610418,
+      "Lookback": 26,
+      "Market": "BX",
+      "MinMove": 5.347752948919196,
+      "Stop": 12,
+      "Style": "Reversion",
+      "Target": 9,
+      "Threshold": 0.8438931165001788
+    },
+    {
+      "EntryBuffer": 5.336678238276708,
+      "Hold": 48.53234200949424,
+      "Lookback": 29,
+      "Market": "BX",
+      "MinMove": 3.994049818717898,
+      "Stop": 9,
+      "Style": "Momentum",
+      "Target": 7,
+      "Threshold": 0.8397462849224667
+    },
+    {
+      "EntryBuffer": 2.551256921399039,
+      "Hold": 149.5650438319729,
+      "Lookback": 34,
+      "Market": "BG",
+      "MinMove": 5.153566066247209,
+      "Stop": 6,
+      "Style": "Momentum",
+      "Target": 10,
+      "Threshold": 0.7333128454784457
+    },
+    {
+      "EntryBuffer": 3.670665378528957,
+      "Hold": 82.33587923754746,
+      "Lookback": 21,
+      "Market": "BG",
+      "MinMove": 3.8606087141021197,
+      "Stop": 8,
+      "Style": "Reversion",
+      "Target": 5,
+      "Threshold": 0.5912786943331727
+    },
+    {
+      "EntryBuffer": 4.742402729924025,
+      "Hold": 111.17038115075343,
+      "Lookback": 35,
+      "Market": "BT",
+      "MinMove": 6.15272020322863,
+      "Stop": 6,
+      "Style": "Reversion",
+      "Target": 10,
+      "Threshold": 0.6390067322361315
+    },
+    {
+      "EntryBuffer": 2.881037278511113,
+      "Hold": 147.1529586776872,
+      "Lookback": 34,
+      "Market": "BT",
+      "MinMove": 3.688088762428653,
+      "Stop": 5,
+      "Style": "Momentum",
+      "Target": 9,
+      "Threshold": 0.7428792157875743
+    },
+    {
+      "EntryBuffer": 5.65738400428434,
+      "Hold": 157.58765225000104,
+      "Lookback": 22,
+      "Market": "BT",
+      "MinMove": 4.979088511773892,
+      "Stop": 8,
+      "Style": "Reversion",
+      "Target": 7,
+      "Threshold": 0.7496947786536509
+    },
+    {
+      "EntryBuffer": 2.154169416126874,
+      "Hold": 53.210420961124086,
+      "Lookback": 12,
+      "Market": "BX",
+      "MinMove": 5.389857325418786,
+      "Stop": 6,
+      "Style": "Reversion",
+      "Target": 10,
+      "Threshold": 0.7404131538888501
+    },
+    {
+      "EntryBuffer": 3.3015960386496017,
+      "Hold": 96.39389344323142,
+      "Lookback": 22,
+      "Market": "BT",
+      "MinMove": 4.6779770686654265,
+      "Stop": 9,
+      "Style": "Momentum",
+      "Target": 8,
+      "Threshold": 0.8618627898683132
+    },
+    {
+      "EntryBuffer": 3.9762713266426095,
+      "Hold": 64.02810268850443,
+      "Lookback": 27,
+      "Market": "BG",
+      "MinMove": 3.7415104567732245,
+      "Stop": 10,
+      "Style": "Reversion",
+      "Target": 9,
+      "Threshold": 0.6785189179137903
+    },
+    {
+      "EntryBuffer": 3.68465297375091,
+      "Hold": 155.59883785042857,
+      "Lookback": 21,
+      "Market": "BX",
+      "MinMove": 7.854619912735475,
+      "Stop": 10,
+      "Style": "Reversion",
+      "Target": 9,
+      "Threshold": 1.1954054411013635
+    },
+    {
+      "EntryBuffer": 3.9469033190733303,
+      "Hold": 128.33083942547944,
+      "Lookback": 24,
+      "Market": "BX",
+      "MinMove": 6.712643735908271,
+      "Stop": 10,
+      "Style": "Momentum",
+      "Target": 4,
+      "Threshold": 1.1455397818449604
+    },
+    {
+      "EntryBuffer": 2.0805630796032784,
+      "Hold": 91.05556218840907,
+      "Lookback": 15,
+      "Market": "BT",
+      "MinMove": 4.075519412325471,
+      "Stop": 8,
+      "Style": "Momentum",
+      "Target": 5,
+      "Threshold": 0.7243508276643003
+    },
+    {
+      "EntryBuffer": 5.103135276168182,
+      "Hold": 84.56457104001407,
+      "Lookback": 14,
+      "Market": "BT",
+      "MinMove": 7.3036448929010165,
+      "Stop": 7,
+      "Style": "Reversion",
+      "Target": 5,
+      "Threshold": 1.1645151342100069
+    },
+    {
+      "EntryBuffer": 5.0220054811900505,
+      "Hold": 107.2436580039764,
+      "Lookback": 24,
+      "Market": "BT",
+      "MinMove": 7.033228156172311,
+      "Stop": 8,
+      "Style": "Momentum",
+      "Target": 10,
+      "Threshold": 0.6528601059936266
+    },
+    {
+      "EntryBuffer": 3.084351452572435,
+      "Hold": 109.95042238289044,
+      "Lookback": 21,
+      "Market": "BX",
+      "MinMove": 6.411208905005459,
+      "Stop": 7,
+      "Style": "Reversion",
+      "Target": 5,
+      "Threshold": 0.8761738311854069
+    },
+    {
+      "EntryBuffer": 5.486690187587724,
+      "Hold": 75.44906925198113,
+      "Lookback": 22,
+      "Market": "BT",
+      "MinMove": 5.527556308790835,
+      "Stop": 12,
+      "Style": "Momentum",
+      "Target": 8,
+      "Threshold": 0.6647387736778421
+    },
+    {
+      "EntryBuffer": 2.2803784200364623,
+      "Hold": 124.31124037332425,
+      "Lookback": 8,
+      "Market": "BT",
+      "MinMove": 5.683391975091487,
+      "Stop": 11,
+      "Style": "Momentum",
+      "Target": 4,
+      "Threshold": 0.7771149930437631
+    },
+    {
+      "EntryBuffer": 3.926781621727525,
+      "Hold": 131.53479162768218,
+      "Lookback": 35,
+      "Market": "BX",
+      "MinMove": 7.5945780117039465,
+      "Stop": 7,
+      "Style": "Momentum",
+      "Target": 5,
+      "Threshold": 0.5178059493740117
+    },
+    {
+      "EntryBuffer": 5.977660525579779,
+      "Hold": 103.10886475774872,
+      "Lookback": 25,
+      "Market": "BT",
+      "MinMove": 5.0640378268733794,
+      "Stop": 9,
+      "Style": "Reversion",
+      "Target": 6,
+      "Threshold": 1.103676475958748
+    },
+    {
+      "EntryBuffer": 5.727655185259718,
+      "Hold": 60.831343574836545,
+      "Lookback": 28,
+      "Market": "BT",
+      "MinMove": 5.054309589813608,
+      "Stop": 7,
+      "Style": "Reversion",
+      "Target": 8,
+      "Threshold": 0.9215436979762948
+    },
+    {
+      "EntryBuffer": 4.0763714230043675,
+      "Hold": 83.34219587004846,
+      "Lookback": 10,
+      "Market": "BT",
+      "MinMove": 3.6561998048127626,
+      "Stop": 5,
+      "Style": "Momentum",
+      "Target": 9,
+      "Threshold": 1.1751736761420841
+    },
+    {
+      "EntryBuffer": 4.796046666240342,
+      "Hold": 80.23931933950601,
+      "Lookback": 18,
+      "Market": "BX",
+      "MinMove": 7.960782609396047,
+      "Stop": 8,
+      "Style": "Momentum",
+      "Target": 7,
+      "Threshold": 0.7371482100510729
+    },
+    {
+      "EntryBuffer": 5.072487277478206,
+      "Hold": 92.3893685324068,
+      "Lookback": 28,
+      "Market": "BG",
+      "MinMove": 3.0417139381364517,
+      "Stop": 9,
+      "Style": "Momentum",
+      "Target": 6,
+      "Threshold": 0.6365851724225027
+    },
+    {
+      "EntryBuffer": 3.24366300610996,
+      "Hold": 51.527329565737084,
+      "Lookback": 26,
+      "Market": "BG",
+      "MinMove": 4.071209917343785,
+      "Stop": 5,
+      "Style": "Reversion",
+      "Target": 5,
+      "Threshold": 1.085635321534069
+    },
+    {
+      "EntryBuffer": 2.4165498821141895,
+      "Hold": 137.27730790957685,
+      "Lookback": 21,
+      "Market": "BX",
+      "MinMove": 7.099199417559057,
+      "Stop": 10,
+      "Style": "Momentum",
+      "Target": 5,
+      "Threshold": 0.7966361670273524
+    }
+  ],
+  "Seconds": 7200,
+  "Seed": 5501,
+  "StartTime": 0,
+  "Variant": "baseline",
+  "Windows": [
+    {
+      "Closes": 3,
+      "Decisions": 7994,
+      "Entries": 6,
+      "FlatSamples": 109,
+      "MinMove": 7894,
+      "Samples": 119,
+      "Time": 0
+    },
+    {
+      "Closes": 11,
+      "Decisions": 11082,
+      "Entries": 12,
+      "FlatSamples": 107,
+      "MinMove": 10831,
+      "Samples": 120,
+      "Time": 600
+    },
+    {
+      "Closes": 13,
+      "Decisions": 9576,
+      "Entries": 13,
+      "FlatSamples": 116,
+      "MinMove": 9418,
+      "Samples": 120,
+      "Time": 1200
+    },
+    {
+      "Closes": 12,
+      "Decisions": 8986,
+      "Entries": 26,
+      "FlatSamples": 84,
+      "MinMove": 8633,
+      "Samples": 120,
+      "Time": 1800
+    },
+    {
+      "Closes": 2,
+      "Decisions": 9768,
+      "Entries": 3,
+      "FlatSamples": 119,
+      "MinMove": 9709,
+      "Samples": 120,
+      "Time": 2400
+    },
+    {
+      "Closes": 6,
+      "Decisions": 11806,
+      "Entries": 10,
+      "FlatSamples": 113,
+      "MinMove": 11660,
+      "Samples": 120,
+      "Time": 3000
+    },
+    {
+      "Closes": 9,
+      "Decisions": 11474,
+      "Entries": 10,
+      "FlatSamples": 97,
+      "MinMove": 11190,
+      "Samples": 120,
+      "Time": 3600
+    },
+    {
+      "Closes": 10,
+      "Decisions": 8986,
+      "Entries": 13,
+      "FlatSamples": 113,
+      "MinMove": 8884,
+      "Samples": 120,
+      "Time": 4200
+    },
+    {
+      "Closes": 0,
+      "Decisions": 9609,
+      "Entries": 0,
+      "FlatSamples": 120,
+      "MinMove": 9600,
+      "Samples": 120,
+      "Time": 4800
+    },
+    {
+      "Closes": 33,
+      "Decisions": 9554,
+      "Entries": 41,
+      "FlatSamples": 98,
+      "MinMove": 9122,
+      "Samples": 120,
+      "Time": 5400
+    },
+    {
+      "Closes": 58,
+      "Decisions": 8893,
+      "Entries": 65,
+      "FlatSamples": 47,
+      "MinMove": 8005,
+      "Samples": 120,
+      "Time": 6000
+    },
+    {
+      "Closes": 4,
+      "Decisions": 7704,
+      "Entries": 10,
+      "FlatSamples": 111,
+      "MinMove": 7602,
+      "Samples": 120,
+      "Time": 6600
+    },
+    {
+      "Closes": 0,
+      "Decisions": 6,
+      "Entries": 0,
+      "FlatSamples": 1,
+      "MinMove": 6,
+      "Samples": 1,
+      "Time": 7200
+    }
+  ]
+}

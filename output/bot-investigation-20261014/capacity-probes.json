@@ -1,0 +1,6 @@
+{
+  "Checks": 174,
+  "FlatPositiveBalanceBlockedAtOne": 145,
+  "FlatScalpersBlockedAtConfiguredSize": 31,
+  "ScalpersThatCouldTradeOneButRequestTwo": 14
+}

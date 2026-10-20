@@ -1,0 +1,5084 @@
+{
+  "Accounts": [
+    {
+      "BaseBefore": 543574,
+      "CancelEntryOrders": [
+        1664,
+        2133,
+        2134,
+        2136,
+        2137,
+        2299
+      ],
+      "EquityBefore": 544498.9999999991,
+      "FundingAdjustment": 205501,
+      "Id": "bot:BX:Maker:1",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Maker",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 5823.788461538462,
+          "Market": "BX",
+          "Quantity": 13
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 737.4999999988177,
+      "TargetEquity": 750000,
+      "Unrealized": 187.50000000022737
+    },
+    {
+      "BaseBefore": 472763,
+      "CancelEntryOrders": [
+        2138,
+        2140,
+        2141,
+        2366
+      ],
+      "EquityBefore": 473700.5000000003,
+      "FundingAdjustment": 276299.5,
+      "Id": "bot:BX:Maker:10",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Maker",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 5823.602272727273,
+          "Market": "BX",
+          "Quantity": 22
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 825,
+      "TargetEquity": 750000,
+      "Unrealized": 112.50000000027285
+    },
+    {
+      "BaseBefore": 636555,
+      "CancelEntryOrders": [
+        1736,
+        1958,
+        1960,
+        1961,
+        2048
+      ],
+      "EquityBefore": 636505,
+      "FundingAdjustment": 113495,
+      "Id": "bot:BX:Maker:2",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Maker",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5823.75,
+          "Market": "BX",
+          "Quantity": 7
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 37.5,
+      "TargetEquity": 750000,
+      "Unrealized": -87.5
+    },
+    {
+      "BaseBefore": 462341,
+      "CancelEntryOrders": [
+        1989,
+        1990,
+        1991,
+        2378
+      ],
+      "EquityBefore": 463853.50000000035,
+      "FundingAdjustment": 286146.5,
+      "Id": "bot:BX:Maker:3",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Maker",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 5824.111111111111,
+          "Market": "BX",
+          "Quantity": 21
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 870.8333333334849,
+      "TargetEquity": 750000,
+      "Unrealized": 641.6666666668789
+    },
+    {
+      "BaseBefore": 410373,
+      "CancelEntryOrders": [
+        1590,
+        1963,
+        1964,
+        1965,
+        2310
+      ],
+      "EquityBefore": 411210.50000000035,
+      "FundingAdjustment": 338789.5,
+      "Id": "bot:BX:Maker:4",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Maker",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5823.6442307692305,
+          "Market": "BX",
+          "Quantity": 26
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 1025,
+      "TargetEquity": 750000,
+      "Unrealized": -187.4999999996362
+    },
+    {
+      "BaseBefore": 549399,
+      "CancelEntryOrders": [
+        1992,
+        1993,
+        1994,
+        1995,
+        2252,
+        2380
+      ],
+      "EquityBefore": 550361.4999999999,
+      "FundingAdjustment": 199638.5,
+      "Id": "bot:BX:Maker:5",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Maker",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 5824.022727272727,
+          "Market": "BX",
+          "Quantity": 10
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 701.1363636363512,
+      "TargetEquity": 750000,
+      "Unrealized": 261.36363636351234
+    },
+    {
+      "BaseBefore": 640398,
+      "CancelEntryOrders": [
+        1917,
+        2179,
+        2269,
+        2270,
+        2271,
+        2423
+      ],
+      "EquityBefore": 641810.5,
+      "FundingAdjustment": 108189.5,
+      "Id": "bot:BX:Maker:6",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Maker",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 5824.25,
+          "Market": "BX",
+          "Quantity": 18
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 737.5,
+      "TargetEquity": 750000,
+      "Unrealized": 675
+    },
+    {
+      "BaseBefore": 517338,
+      "CancelEntryOrders": [
+        1720,
+        2066,
+        2067,
+        2300,
+        2411
+      ],
+      "EquityBefore": 516037.9999999989,
+      "FundingAdjustment": 233962,
+      "Id": "bot:BX:Maker:7",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Maker",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5823.585365853659,
+          "Market": "BX",
+          "Quantity": 41
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -1125.0000000003638,
+      "TargetEquity": 750000,
+      "Unrealized": -175.00000000077307
+    },
+    {
+      "BaseBefore": 440867,
+      "CancelEntryOrders": [
+        2068,
+        2069,
+        2070,
+        2071,
+        2390
+      ],
+      "EquityBefore": 441104.4999999998,
+      "FundingAdjustment": 308895.5,
+      "Id": "bot:BX:Maker:8",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Maker",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 5823.5192307692305,
+          "Market": "BX",
+          "Quantity": 13
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 225,
+      "TargetEquity": 750000,
+      "Unrealized": 12.499999999818101
+    },
+    {
+      "BaseBefore": 452273,
+      "CancelEntryOrders": [
+        2030,
+        2031,
+        2032,
+        2033,
+        2304
+      ],
+      "EquityBefore": 452310.5,
+      "FundingAdjustment": 297689.5,
+      "Id": "bot:BX:Maker:9",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Maker",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 5823.5,
+          "Market": "BX",
+          "Quantity": 7
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 37.5,
+      "TargetEquity": 750000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 70152,
+      "CancelEntryOrders": {},
+      "EquityBefore": 70139.5,
+      "FundingAdjustment": 79860.5,
+      "Id": "bot:BX:Liquidity:10",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Liquidity",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 5824.25,
+          "Market": "BX",
+          "Quantity": 2
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -87.5,
+      "TargetEquity": 150000,
+      "Unrealized": 75
+    },
+    {
+      "BaseBefore": 130046,
+      "CancelEntryOrders": [
+        1435
+      ],
+      "EquityBefore": 130246,
+      "FundingAdjustment": 19754,
+      "Id": "bot:BX:Liquidity:11",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Liquidity",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 5824.5,
+          "Market": "BX",
+          "Quantity": 4
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 150000,
+      "Unrealized": 200
+    },
+    {
+      "BaseBefore": 51325,
+      "CancelEntryOrders": {},
+      "EquityBefore": 51325,
+      "FundingAdjustment": 98675,
+      "Id": "bot:BX:Liquidity:18",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Liquidity",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 150000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 152658,
+      "CancelEntryOrders": {},
+      "EquityBefore": 152595.5,
+      "FundingAdjustment": -2595.5,
+      "Id": "bot:BX:Liquidity:2",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Liquidity",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5824.125,
+          "Market": "BX",
+          "Quantity": 2
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 150000,
+      "Unrealized": -62.5
+    },
+    {
+      "BaseBefore": 75479,
+      "CancelEntryOrders": {},
+      "EquityBefore": 75179,
+      "FundingAdjustment": 74821,
+      "Id": "bot:BX:Liquidity:25",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Liquidity",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5824.5,
+          "Market": "BX",
+          "Quantity": 6
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 150000,
+      "Unrealized": -300
+    },
+    {
+      "BaseBefore": 81892,
+      "CancelEntryOrders": {},
+      "EquityBefore": 82004.5,
+      "FundingAdjustment": 67995.5,
+      "Id": "bot:BX:Liquidity:26",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Liquidity",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 5824.65625,
+          "Market": "BX",
+          "Quantity": 3
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -60.9375,
+      "TargetEquity": 150000,
+      "Unrealized": 173.4375
+    },
+    {
+      "BaseBefore": 143027,
+      "CancelEntryOrders": {},
+      "EquityBefore": 142877,
+      "FundingAdjustment": 7123,
+      "Id": "bot:BX:Liquidity:29",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Liquidity",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5825,
+          "Market": "BX",
+          "Quantity": 2
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 150000,
+      "Unrealized": -150
+    },
+    {
+      "BaseBefore": 137520,
+      "CancelEntryOrders": [
+        2236
+      ],
+      "EquityBefore": 137720,
+      "FundingAdjustment": 12280,
+      "Id": "bot:BX:Liquidity:31",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Liquidity",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 5824.5,
+          "Market": "BX",
+          "Quantity": 4
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 150000,
+      "Unrealized": 200
+    },
+    {
+      "BaseBefore": 124257,
+      "CancelEntryOrders": [
+        1653
+      ],
+      "EquityBefore": 124007,
+      "FundingAdjustment": 25993,
+      "Id": "bot:BX:Liquidity:34",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Liquidity",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5824.9375,
+          "Market": "BX",
+          "Quantity": 3
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -34.375,
+      "TargetEquity": 150000,
+      "Unrealized": -215.625
+    },
+    {
+      "BaseBefore": 130950,
+      "CancelEntryOrders": {},
+      "EquityBefore": 130625.00000000004,
+      "FundingAdjustment": 19375,
+      "Id": "bot:BX:Liquidity:8",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Liquidity",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5824.7,
+          "Market": "BX",
+          "Quantity": 5
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -25,
+      "TargetEquity": 150000,
+      "Unrealized": -299.9999999999545
+    },
+    {
+      "BaseBefore": 118761,
+      "CancelEntryOrders": {},
+      "EquityBefore": 118586,
+      "FundingAdjustment": 81414,
+      "Id": "bot:BX:Momentum:1",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Momentum",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 5823.5,
+          "Market": "BX",
+          "Quantity": 3
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -175,
+      "TargetEquity": 200000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 103983,
+      "CancelEntryOrders": {},
+      "EquityBefore": 103845.5,
+      "FundingAdjustment": 96154.5,
+      "Id": "bot:BX:Momentum:12",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Momentum",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5824.625,
+          "Market": "BX",
+          "Quantity": 2
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -25,
+      "TargetEquity": 200000,
+      "Unrealized": -112.5
+    },
+    {
+      "BaseBefore": 139112,
+      "CancelEntryOrders": [
+        1408,
+        1891
+      ],
+      "EquityBefore": 139037,
+      "FundingAdjustment": 60963,
+      "Id": "bot:BX:Momentum:15",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Momentum",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5824.75,
+          "Market": "BX",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -12.5,
+      "TargetEquity": 200000,
+      "Unrealized": -62.5
+    },
+    {
+      "BaseBefore": 119812,
+      "CancelEntryOrders": {},
+      "EquityBefore": 119687,
+      "FundingAdjustment": 80313,
+      "Id": "bot:BX:Momentum:17",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Momentum",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5824.75,
+          "Market": "BX",
+          "Quantity": 2
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 200000,
+      "Unrealized": -125
+    },
+    {
+      "BaseBefore": 116618,
+      "CancelEntryOrders": {},
+      "EquityBefore": 116093,
+      "FundingAdjustment": 83907,
+      "Id": "bot:BX:Momentum:3",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Momentum",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5824.8125,
+          "Market": "BX",
+          "Quantity": 8
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 200000,
+      "Unrealized": -525
+    },
+    {
+      "BaseBefore": 86246,
+      "CancelEntryOrders": {},
+      "EquityBefore": 86171,
+      "FundingAdjustment": 113829,
+      "Id": "bot:BX:Momentum:33",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Momentum",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5825,
+          "Market": "BX",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 200000,
+      "Unrealized": -75
+    },
+    {
+      "BaseBefore": 123054,
+      "CancelEntryOrders": {},
+      "EquityBefore": 123916.49999999972,
+      "FundingAdjustment": 126083.5,
+      "Id": "bot:BX:Value:20",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Value",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 5824.65,
+          "Market": "BX",
+          "Quantity": 15
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 250000,
+      "Unrealized": 862.4999999997272
+    },
+    {
+      "BaseBefore": 85539,
+      "CancelEntryOrders": [
+        2039,
+        2253
+      ],
+      "EquityBefore": 85689,
+      "FundingAdjustment": 164311,
+      "Id": "bot:BX:Value:22",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Value",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 5824.5,
+          "Market": "BX",
+          "Quantity": 3
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 250000,
+      "Unrealized": 150
+    },
+    {
+      "BaseBefore": 79721,
+      "CancelEntryOrders": [
+        1457,
+        2254
+      ],
+      "EquityBefore": 79783.5,
+      "FundingAdjustment": 170216.5,
+      "Id": "bot:BX:Value:23",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Value",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 5824.75,
+          "Market": "BX",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 250000,
+      "Unrealized": 62.5
+    },
+    {
+      "BaseBefore": 82061,
+      "CancelEntryOrders": [
+        1874
+      ],
+      "EquityBefore": 81861.00000000004,
+      "FundingAdjustment": 168139,
+      "Id": "bot:BX:Value:24",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Value",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5824.833333333333,
+          "Market": "BX",
+          "Quantity": 3
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 250000,
+      "Unrealized": -199.99999999995453
+    },
+    {
+      "BaseBefore": 69520,
+      "CancelEntryOrders": {},
+      "EquityBefore": 69607.5,
+      "FundingAdjustment": 180392.5,
+      "Id": "bot:BX:Value:27",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Value",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 5824,
+          "Market": "BX",
+          "Quantity": 4
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -12.5,
+      "TargetEquity": 250000,
+      "Unrealized": 100
+    },
+    {
+      "BaseBefore": 143145,
+      "CancelEntryOrders": {},
+      "EquityBefore": 143320.00000000006,
+      "FundingAdjustment": 106680,
+      "Id": "bot:BX:Value:28",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Value",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 5824.666666666667,
+          "Market": "BX",
+          "Quantity": 3
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 250000,
+      "Unrealized": 175.00000000004547
+    },
+    {
+      "BaseBefore": 113193,
+      "CancelEntryOrders": {},
+      "EquityBefore": 113068,
+      "FundingAdjustment": 136932,
+      "Id": "bot:BX:Value:5",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Value",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5824.75,
+          "Market": "BX",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -62.5,
+      "TargetEquity": 250000,
+      "Unrealized": -62.5
+    },
+    {
+      "BaseBefore": 151193,
+      "CancelEntryOrders": [
+        2188
+      ],
+      "EquityBefore": 151180.5,
+      "FundingAdjustment": 98819.5,
+      "Id": "bot:BX:Value:6",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Value",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -12.5,
+      "TargetEquity": 250000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 154448,
+      "CancelEntryOrders": [
+        2205
+      ],
+      "EquityBefore": 154160.5,
+      "FundingAdjustment": 95839.5,
+      "Id": "bot:BX:Value:9",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Value",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5824.9375,
+          "Market": "BX",
+          "Quantity": 4
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 250000,
+      "Unrealized": -287.5
+    },
+    {
+      "BaseBefore": 126909,
+      "CancelEntryOrders": {},
+      "EquityBefore": 127221.5,
+      "FundingAdjustment": 72778.5,
+      "Id": "bot:BX:Reversion:14",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Reversion",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 5824.75,
+          "Market": "BX",
+          "Quantity": 5
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 200000,
+      "Unrealized": 312.5
+    },
+    {
+      "BaseBefore": 149332,
+      "CancelEntryOrders": {},
+      "EquityBefore": 149369.5,
+      "FundingAdjustment": 50630.5,
+      "Id": "bot:BX:Reversion:19",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Reversion",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": 37.5,
+      "TargetEquity": 200000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 61695,
+      "CancelEntryOrders": [
+        1822
+      ],
+      "EquityBefore": 61607.5,
+      "FundingAdjustment": 138392.5,
+      "Id": "bot:BX:Reversion:21",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Reversion",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5824.375,
+          "Market": "BX",
+          "Quantity": 2
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 200000,
+      "Unrealized": -87.5
+    },
+    {
+      "BaseBefore": 135286,
+      "CancelEntryOrders": [
+        2255
+      ],
+      "EquityBefore": 134498.5000000001,
+      "FundingAdjustment": 65501.5,
+      "Id": "bot:BX:Reversion:32",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Reversion",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5824.838068181818,
+          "Market": "BX",
+          "Quantity": 11
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -51.5625,
+      "TargetEquity": 200000,
+      "Unrealized": -735.937499999909
+    },
+    {
+      "BaseBefore": 132564,
+      "CancelEntryOrders": [
+        1550
+      ],
+      "EquityBefore": 132564,
+      "FundingAdjustment": 67436,
+      "Id": "bot:BX:Reversion:35",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Reversion",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 200000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 61448,
+      "CancelEntryOrders": {},
+      "EquityBefore": 61548.000000000044,
+      "FundingAdjustment": 138452,
+      "Id": "bot:BX:Reversion:4",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Reversion",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 5824.666666666667,
+          "Market": "BX",
+          "Quantity": 2
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -16.66666666665151,
+      "TargetEquity": 200000,
+      "Unrealized": 116.66666666669698
+    },
+    {
+      "BaseBefore": 119872,
+      "CancelEntryOrders": {},
+      "EquityBefore": 119797,
+      "FundingAdjustment": 80203,
+      "Id": "bot:BX:Reversion:7",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Reversion",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 5824.5,
+          "Market": "BX",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -125,
+      "TargetEquity": 200000,
+      "Unrealized": 50
+    },
+    {
+      "BaseBefore": 155704,
+      "CancelEntryOrders": [
+        2073
+      ],
+      "EquityBefore": 155829,
+      "FundingAdjustment": -5829,
+      "Id": "bot:BX:Protective:13",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Protective",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 5824.5,
+          "Market": "BX",
+          "Quantity": 3
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -25,
+      "TargetEquity": 150000,
+      "Unrealized": 150
+    },
+    {
+      "BaseBefore": 125016,
+      "CancelEntryOrders": [
+        2273
+      ],
+      "EquityBefore": 124791,
+      "FundingAdjustment": 25209,
+      "Id": "bot:BX:Protective:16",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Protective",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5825,
+          "Market": "BX",
+          "Quantity": 3
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 150000,
+      "Unrealized": -225
+    },
+    {
+      "BaseBefore": 135593,
+      "CancelEntryOrders": [
+        1966,
+        2306
+      ],
+      "EquityBefore": 135230.5,
+      "FundingAdjustment": 14769.5,
+      "Id": "bot:BX:Protective:30",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Protective",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5824.75,
+          "Market": "BX",
+          "Quantity": 4
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -112.5,
+      "TargetEquity": 150000,
+      "Unrealized": -250
+    },
+    {
+      "BaseBefore": 127619,
+      "CancelEntryOrders": {},
+      "EquityBefore": 127319.00000000009,
+      "FundingAdjustment": 22681,
+      "Id": "bot:BX:Protective:36",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Protective",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5824.333333333333,
+          "Market": "BX",
+          "Quantity": 6
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -50,
+      "TargetEquity": 150000,
+      "Unrealized": -249.99999999990905
+    },
+    {
+      "BaseBefore": 59436,
+      "CancelEntryOrders": {},
+      "EquityBefore": 59348.5,
+      "FundingAdjustment": 40651.5,
+      "Id": "bot:BX:Scalper:1",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Scalper",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5824.75,
+          "Market": "BX",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": [
+        1954
+      ],
+      "Realized": -25,
+      "TargetEquity": 100000,
+      "Unrealized": -62.5
+    },
+    {
+      "BaseBefore": 147912,
+      "CancelEntryOrders": [
+        2383
+      ],
+      "EquityBefore": 147887,
+      "FundingAdjustment": -47887,
+      "Id": "bot:BX:Scalper:10",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -25,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 92390,
+      "CancelEntryOrders": {},
+      "EquityBefore": 92240,
+      "FundingAdjustment": 7760,
+      "Id": "bot:BX:Scalper:11",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Scalper",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5824.75,
+          "Market": "BX",
+          "Quantity": 2
+        }
+      ],
+      "PreserveExitOrders": [
+        1941
+      ],
+      "Realized": -25,
+      "TargetEquity": 100000,
+      "Unrealized": -125
+    },
+    {
+      "BaseBefore": 54546,
+      "CancelEntryOrders": {},
+      "EquityBefore": 54521,
+      "FundingAdjustment": 45479,
+      "Id": "bot:BX:Scalper:12",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -25,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 121940,
+      "CancelEntryOrders": {},
+      "EquityBefore": 121890,
+      "FundingAdjustment": -21890,
+      "Id": "bot:BX:Scalper:13",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -50,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 105038,
+      "CancelEntryOrders": {},
+      "EquityBefore": 104863,
+      "FundingAdjustment": -4863,
+      "Id": "bot:BX:Scalper:14",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Scalper",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5824.75,
+          "Market": "BX",
+          "Quantity": 2
+        }
+      ],
+      "PreserveExitOrders": [
+        1943
+      ],
+      "Realized": -50,
+      "TargetEquity": 100000,
+      "Unrealized": -125
+    },
+    {
+      "BaseBefore": 131950,
+      "CancelEntryOrders": [
+        2314
+      ],
+      "EquityBefore": 131925,
+      "FundingAdjustment": -31925,
+      "Id": "bot:BX:Scalper:15",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -25,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 117113,
+      "CancelEntryOrders": {},
+      "EquityBefore": 117050.5,
+      "FundingAdjustment": -17050.5,
+      "Id": "bot:BX:Scalper:16",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Scalper",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5824.5,
+          "Market": "BX",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": [
+        1975
+      ],
+      "Realized": -12.5,
+      "TargetEquity": 100000,
+      "Unrealized": -50
+    },
+    {
+      "BaseBefore": 67280,
+      "CancelEntryOrders": {},
+      "EquityBefore": 67192.5,
+      "FundingAdjustment": 32807.5,
+      "Id": "bot:BX:Scalper:17",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -87.5,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 95023,
+      "CancelEntryOrders": {},
+      "EquityBefore": 94935.5,
+      "FundingAdjustment": 5064.5,
+      "Id": "bot:BX:Scalper:18",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Scalper",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5824.5,
+          "Market": "BX",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": [
+        2041
+      ],
+      "Realized": -37.5,
+      "TargetEquity": 100000,
+      "Unrealized": -50
+    },
+    {
+      "BaseBefore": 130202,
+      "CancelEntryOrders": {},
+      "EquityBefore": 130152,
+      "FundingAdjustment": -30152,
+      "Id": "bot:BX:Scalper:2",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -50,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 114921,
+      "CancelEntryOrders": {},
+      "EquityBefore": 114971,
+      "FundingAdjustment": -14971,
+      "Id": "bot:BX:Scalper:3",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": 50,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 151054,
+      "CancelEntryOrders": {},
+      "EquityBefore": 150854,
+      "FundingAdjustment": -50854,
+      "Id": "bot:BX:Scalper:4",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Scalper",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5824.5,
+          "Market": "BX",
+          "Quantity": 2
+        }
+      ],
+      "PreserveExitOrders": [
+        2053
+      ],
+      "Realized": -100,
+      "TargetEquity": 100000,
+      "Unrealized": -100
+    },
+    {
+      "BaseBefore": 103202,
+      "CancelEntryOrders": {},
+      "EquityBefore": 103177,
+      "FundingAdjustment": -3177,
+      "Id": "bot:BX:Scalper:5",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Scalper",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5823.75,
+          "Market": "BX",
+          "Quantity": 2
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 100000,
+      "Unrealized": -25
+    },
+    {
+      "BaseBefore": 79348,
+      "CancelEntryOrders": {},
+      "EquityBefore": 79298,
+      "FundingAdjustment": 20702,
+      "Id": "bot:BX:Scalper:6",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -50,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 116564,
+      "CancelEntryOrders": {},
+      "EquityBefore": 116526.5,
+      "FundingAdjustment": -16526.5,
+      "Id": "bot:BX:Scalper:7",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Scalper",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5823.75,
+          "Market": "BX",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -25,
+      "TargetEquity": 100000,
+      "Unrealized": -12.5
+    },
+    {
+      "BaseBefore": 51363,
+      "CancelEntryOrders": {},
+      "EquityBefore": 51350.5,
+      "FundingAdjustment": 48649.5,
+      "Id": "bot:BX:Scalper:8",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -12.5,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 142972,
+      "CancelEntryOrders": {},
+      "EquityBefore": 142909.5,
+      "FundingAdjustment": -42909.5,
+      "Id": "bot:BX:Scalper:9",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Scalper",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5824.5,
+          "Market": "BX",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": [
+        2279
+      ],
+      "Realized": -12.5,
+      "TargetEquity": 100000,
+      "Unrealized": -50
+    },
+    {
+      "BaseBefore": 778231,
+      "CancelEntryOrders": {},
+      "EquityBefore": 777031,
+      "FundingAdjustment": 722969,
+      "Id": "bot:BX:Whale:1",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Whale",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5825,
+          "Market": "BX",
+          "Quantity": 16
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 1500000,
+      "Unrealized": -1200
+    },
+    {
+      "BaseBefore": 762945,
+      "CancelEntryOrders": {},
+      "EquityBefore": 766719.9999999983,
+      "FundingAdjustment": 733280,
+      "Id": "bot:BX:Whale:2",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Whale",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 5824.467948717948,
+          "Market": "BX",
+          "Quantity": 78
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 1500000,
+      "Unrealized": 3774.999999998272
+    },
+    {
+      "BaseBefore": 997486,
+      "CancelEntryOrders": {},
+      "EquityBefore": 988810.9999999986,
+      "FundingAdjustment": 511189,
+      "Id": "bot:BX:Whale:3",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Whale",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 5824.922131147541,
+          "Market": "BX",
+          "Quantity": 122
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 1500000,
+      "Unrealized": -8675.000000001455
+    },
+    {
+      "BaseBefore": 100000000000,
+      "CancelEntryOrders": [
+        2280,
+        2281,
+        2282,
+        2283,
+        2284
+      ],
+      "EquityBefore": 100000000000,
+      "FundingAdjustment": -99995000000,
+      "Id": "bot:BX:Reserve:1",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Reserve",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 5000000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 100000000000,
+      "CancelEntryOrders": [
+        2392,
+        2393,
+        2394,
+        2395,
+        2396
+      ],
+      "EquityBefore": 100000000000,
+      "FundingAdjustment": -99995000000,
+      "Id": "bot:BX:Reserve:2",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Reserve",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 5000000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 100000000000,
+      "CancelEntryOrders": [
+        2367,
+        2368,
+        2369,
+        2370,
+        2371
+      ],
+      "EquityBefore": 100000000000,
+      "FundingAdjustment": -99995000000,
+      "Id": "bot:BX:Reserve:3",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Reserve",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 5000000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 100000000000,
+      "CancelEntryOrders": [
+        2285,
+        2286,
+        2287,
+        2288,
+        2289
+      ],
+      "EquityBefore": 100000001000,
+      "FundingAdjustment": -99995001000,
+      "Id": "bot:BX:Reserve:4",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Reserve",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 5824.75,
+          "Market": "BX",
+          "Quantity": 16
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 5000000,
+      "Unrealized": 1000
+    },
+    {
+      "BaseBefore": 100000000000,
+      "CancelEntryOrders": [
+        2358,
+        2359,
+        2360,
+        2361,
+        2362
+      ],
+      "EquityBefore": 100000001275,
+      "FundingAdjustment": -99995001275,
+      "Id": "bot:BX:Reserve:5",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Reserve",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 5825,
+          "Market": "BX",
+          "Quantity": 17
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 5000000,
+      "Unrealized": 1275
+    },
+    {
+      "BaseBefore": 100000000000,
+      "CancelEntryOrders": [
+        2397,
+        2398,
+        2399,
+        2400,
+        2401
+      ],
+      "EquityBefore": 100000001725,
+      "FundingAdjustment": -99995001725,
+      "Id": "bot:BX:Reserve:6",
+      "Keep": true,
+      "Key": "BX",
+      "Kind": "Reserve",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 5825,
+          "Market": "BX",
+          "Quantity": 23
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 5000000,
+      "Unrealized": 1725
+    },
+    {
+      "BaseBefore": 604113,
+      "CancelEntryOrders": [
+        1926,
+        2221
+      ],
+      "EquityBefore": 603008.0000000005,
+      "FundingAdjustment": 146992,
+      "Id": "bot:BT:Maker:1",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Maker",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 20481.5,
+          "Market": "BT",
+          "Quantity": 3
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -1104.9999999995634,
+      "TargetEquity": 750000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 618671,
+      "CancelEntryOrders": [
+        1883,
+        1884,
+        1885,
+        2336,
+        2337
+      ],
+      "EquityBefore": 619895.9999999995,
+      "FundingAdjustment": 130104,
+      "Id": "bot:BT:Maker:10",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Maker",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 20481.94230769231,
+          "Market": "BT",
+          "Quantity": 26
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 1455,
+      "TargetEquity": 750000,
+      "Unrealized": -230.00000000043656
+    },
+    {
+      "BaseBefore": 515369,
+      "CancelEntryOrders": [
+        2076,
+        2317,
+        2318,
+        2319
+      ],
+      "EquityBefore": 516334.0000000008,
+      "FundingAdjustment": 233666,
+      "Id": "bot:BT:Maker:2",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Maker",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 20482.758694670283,
+          "Market": "BT",
+          "Quantity": 39
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -16.781842820055317,
+      "TargetEquity": 750000,
+      "Unrealized": 981.7818428208557
+    },
+    {
+      "BaseBefore": 550408,
+      "CancelEntryOrders": [
+        2036,
+        2251
+      ],
+      "EquityBefore": 552237.9999999999,
+      "FundingAdjustment": 197762,
+      "Id": "bot:BT:Maker:3",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Maker",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 20482.21153846154,
+          "Market": "BT",
+          "Quantity": 52
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 1089.9999999992724,
+      "TargetEquity": 750000,
+      "Unrealized": 740.0000000005821
+    },
+    {
+      "BaseBefore": 460451,
+      "CancelEntryOrders": [
+        2009,
+        2321,
+        2323
+      ],
+      "EquityBefore": 461051.00000000285,
+      "FundingAdjustment": 288949,
+      "Id": "bot:BT:Maker:4",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Maker",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 20482.5125,
+          "Market": "BT",
+          "Quantity": 40
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -209.99999999774445,
+      "TargetEquity": 750000,
+      "Unrealized": 810.0000000005821
+    },
+    {
+      "BaseBefore": 462061,
+      "CancelEntryOrders": [
+        1929,
+        2022,
+        2024
+      ],
+      "EquityBefore": 462426.0000000012,
+      "FundingAdjustment": 287574,
+      "Id": "bot:BT:Maker:5",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Maker",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 20482.5,
+          "Market": "BT",
+          "Quantity": 16
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 685.0000000012369,
+      "TargetEquity": 750000,
+      "Unrealized": -320
+    },
+    {
+      "BaseBefore": 401598,
+      "CancelEntryOrders": [
+        1852,
+        2056,
+        2291,
+        2292
+      ],
+      "EquityBefore": 402172.99999999965,
+      "FundingAdjustment": 347827,
+      "Id": "bot:BT:Maker:6",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Maker",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 20481.647916666665,
+          "Market": "BT",
+          "Quantity": 4
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 563.1666666664387,
+      "TargetEquity": 750000,
+      "Unrealized": 11.833333333197515
+    },
+    {
+      "BaseBefore": 639056,
+      "CancelEntryOrders": [
+        2331,
+        2333
+      ],
+      "EquityBefore": 637065.9999999981,
+      "FundingAdjustment": 112934,
+      "Id": "bot:BT:Maker:7",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Maker",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 20482,
+          "Market": "BT",
+          "Quantity": 3
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -2020.0000000018917,
+      "TargetEquity": 750000,
+      "Unrealized": 30
+    },
+    {
+      "BaseBefore": 455225,
+      "CancelEntryOrders": [
+        1930,
+        1932,
+        2058,
+        2340,
+        2341
+      ],
+      "EquityBefore": 455065.0000000021,
+      "FundingAdjustment": 294935,
+      "Id": "bot:BT:Maker:8",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Maker",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 20482.659836065573,
+          "Market": "BT",
+          "Quantity": 61
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 1255.0000000017462,
+      "TargetEquity": 750000,
+      "Unrealized": -1414.9999999996362
+    },
+    {
+      "BaseBefore": 509862,
+      "CancelEntryOrders": [
+        2080,
+        2211,
+        2404,
+        2405,
+        2406
+      ],
+      "EquityBefore": 510241.9999999999,
+      "FundingAdjustment": 239758,
+      "Id": "bot:BT:Maker:9",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Maker",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 20482,
+          "Market": "BT",
+          "Quantity": 2
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 399.9999999998545,
+      "TargetEquity": 750000,
+      "Unrealized": -20
+    },
+    {
+      "BaseBefore": 50033,
+      "CancelEntryOrders": {},
+      "EquityBefore": 50433.00000000007,
+      "FundingAdjustment": 99567,
+      "Id": "bot:BT:Liquidity:1",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Liquidity",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 20484.464285714286,
+          "Market": "BT",
+          "Quantity": 7
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -15,
+      "TargetEquity": 150000,
+      "Unrealized": 415.00000000007276
+    },
+    {
+      "BaseBefore": 144988,
+      "CancelEntryOrders": {},
+      "EquityBefore": 144843.00000000006,
+      "FundingAdjustment": 5157,
+      "Id": "bot:BT:Liquidity:10",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Liquidity",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 20485.583333333332,
+          "Market": "BT",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -63.33333333328483,
+      "TargetEquity": 150000,
+      "Unrealized": -81.66666666664241
+    },
+    {
+      "BaseBefore": 74547,
+      "CancelEntryOrders": [
+        1254
+      ],
+      "EquityBefore": 74532,
+      "FundingAdjustment": 75468,
+      "Id": "bot:BT:Liquidity:15",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Liquidity",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -15,
+      "TargetEquity": 150000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 96254,
+      "CancelEntryOrders": {},
+      "EquityBefore": 95808.99999999985,
+      "FundingAdjustment": 54191,
+      "Id": "bot:BT:Liquidity:18",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Liquidity",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -445.0000000001455,
+      "TargetEquity": 150000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 88409,
+      "CancelEntryOrders": {},
+      "EquityBefore": 87903.99999999935,
+      "FundingAdjustment": 62096,
+      "Id": "bot:BT:Liquidity:21",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Liquidity",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 20484.318877551024,
+          "Market": "BT",
+          "Quantity": 3
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -335.86734693919425,
+      "TargetEquity": 150000,
+      "Unrealized": -169.1326530614606
+    },
+    {
+      "BaseBefore": 64911,
+      "CancelEntryOrders": {},
+      "EquityBefore": 64636,
+      "FundingAdjustment": 85364,
+      "Id": "bot:BT:Liquidity:25",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Liquidity",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 20484.25,
+          "Market": "BT",
+          "Quantity": 5
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 150000,
+      "Unrealized": -275
+    },
+    {
+      "BaseBefore": 90910,
+      "CancelEntryOrders": [
+        1849
+      ],
+      "EquityBefore": 90920,
+      "FundingAdjustment": 59080,
+      "Id": "bot:BT:Liquidity:27",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Liquidity",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": 10,
+      "TargetEquity": 150000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 132581,
+      "CancelEntryOrders": [
+        1861,
+        2307
+      ],
+      "EquityBefore": 132501,
+      "FundingAdjustment": 17499,
+      "Id": "bot:BT:Liquidity:31",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Liquidity",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 20485.5,
+          "Market": "BT",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 150000,
+      "Unrealized": -80
+    },
+    {
+      "BaseBefore": 103938,
+      "CancelEntryOrders": [
+        2425
+      ],
+      "EquityBefore": 103007.99999999898,
+      "FundingAdjustment": 46992,
+      "Id": "bot:BT:Liquidity:32",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Liquidity",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 20485.239197530867,
+          "Market": "BT",
+          "Quantity": 12
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -32.592592592845904,
+      "TargetEquity": 150000,
+      "Unrealized": -897.4074074081727
+    },
+    {
+      "BaseBefore": 91462,
+      "CancelEntryOrders": {},
+      "EquityBefore": 91437,
+      "FundingAdjustment": 58563,
+      "Id": "bot:BT:Liquidity:35",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Liquidity",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 20482.5,
+          "Market": "BT",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -5,
+      "TargetEquity": 150000,
+      "Unrealized": -20
+    },
+    {
+      "BaseBefore": 97141,
+      "CancelEntryOrders": {},
+      "EquityBefore": 96655.99999999993,
+      "FundingAdjustment": 53344,
+      "Id": "bot:BT:Liquidity:36",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Liquidity",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 20484.964285714286,
+          "Market": "BT",
+          "Quantity": 7
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 150000,
+      "Unrealized": -485.00000000007276
+    },
+    {
+      "BaseBefore": 118374,
+      "CancelEntryOrders": {},
+      "EquityBefore": 118419,
+      "FundingAdjustment": 31581,
+      "Id": "bot:BT:Liquidity:6",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Liquidity",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 20483,
+          "Market": "BT",
+          "Quantity": 3
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -45,
+      "TargetEquity": 150000,
+      "Unrealized": 90
+    },
+    {
+      "BaseBefore": 147822,
+      "CancelEntryOrders": {},
+      "EquityBefore": 147621.99999999994,
+      "FundingAdjustment": 2378,
+      "Id": "bot:BT:Liquidity:9",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Liquidity",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 20483.45,
+          "Market": "BT",
+          "Quantity": 5
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -5,
+      "TargetEquity": 150000,
+      "Unrealized": -195.00000000007276
+    },
+    {
+      "BaseBefore": 69258,
+      "CancelEntryOrders": [
+        2407
+      ],
+      "EquityBefore": 69178,
+      "FundingAdjustment": 130822,
+      "Id": "bot:BT:Momentum:11",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Momentum",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 20485.5,
+          "Market": "BT",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 200000,
+      "Unrealized": -80
+    },
+    {
+      "BaseBefore": 142035,
+      "CancelEntryOrders": {},
+      "EquityBefore": 142085,
+      "FundingAdjustment": 57915,
+      "Id": "bot:BT:Momentum:14",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Momentum",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 20481.75,
+          "Market": "BT",
+          "Quantity": 3
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 65,
+      "TargetEquity": 200000,
+      "Unrealized": -15
+    },
+    {
+      "BaseBefore": 110997,
+      "CancelEntryOrders": {},
+      "EquityBefore": 110937,
+      "FundingAdjustment": 89063,
+      "Id": "bot:BT:Momentum:22",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Momentum",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 20482.25,
+          "Market": "BT",
+          "Quantity": 4
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 200000,
+      "Unrealized": -60
+    },
+    {
+      "BaseBefore": 118996,
+      "CancelEntryOrders": [
+        1473
+      ],
+      "EquityBefore": 118826,
+      "FundingAdjustment": 81174,
+      "Id": "bot:BT:Momentum:28",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Momentum",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 20485.75,
+          "Market": "BT",
+          "Quantity": 2
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 200000,
+      "Unrealized": -170
+    },
+    {
+      "BaseBefore": 149602,
+      "CancelEntryOrders": {},
+      "EquityBefore": 149852,
+      "FundingAdjustment": 50148,
+      "Id": "bot:BT:Momentum:29",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Momentum",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 20482.75,
+          "Market": "BT",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 275,
+      "TargetEquity": 200000,
+      "Unrealized": -25
+    },
+    {
+      "BaseBefore": 55356,
+      "CancelEntryOrders": {},
+      "EquityBefore": 55356,
+      "FundingAdjustment": 144644,
+      "Id": "bot:BT:Momentum:30",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Momentum",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 200000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 62112,
+      "CancelEntryOrders": {},
+      "EquityBefore": 61807,
+      "FundingAdjustment": 138193,
+      "Id": "bot:BT:Momentum:34",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Momentum",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 20485.25,
+          "Market": "BT",
+          "Quantity": 4
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -5,
+      "TargetEquity": 200000,
+      "Unrealized": -300
+    },
+    {
+      "BaseBefore": 76883,
+      "CancelEntryOrders": [
+        1453
+      ],
+      "EquityBefore": 76833,
+      "FundingAdjustment": 123167,
+      "Id": "bot:BT:Momentum:7",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Momentum",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -50,
+      "TargetEquity": 200000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 105712,
+      "CancelEntryOrders": [
+        2212
+      ],
+      "EquityBefore": 105862,
+      "FundingAdjustment": 144138,
+      "Id": "bot:BT:Value:13",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Value",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 20485.25,
+          "Market": "BT",
+          "Quantity": 2
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 250000,
+      "Unrealized": 150
+    },
+    {
+      "BaseBefore": 125441,
+      "CancelEntryOrders": {},
+      "EquityBefore": 125701,
+      "FundingAdjustment": 124299,
+      "Id": "bot:BT:Value:19",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Value",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 20484.75,
+          "Market": "BT",
+          "Quantity": 4
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 250000,
+      "Unrealized": 260
+    },
+    {
+      "BaseBefore": 114293,
+      "CancelEntryOrders": {},
+      "EquityBefore": 114053,
+      "FundingAdjustment": 135947,
+      "Id": "bot:BT:Value:20",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Value",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 20484.5,
+          "Market": "BT",
+          "Quantity": 4
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 250000,
+      "Unrealized": -240
+    },
+    {
+      "BaseBefore": 96081,
+      "CancelEntryOrders": {},
+      "EquityBefore": 96061,
+      "FundingAdjustment": 153939,
+      "Id": "bot:BT:Value:3",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Value",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 20483.75,
+          "Market": "BT",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 25,
+      "TargetEquity": 250000,
+      "Unrealized": -45
+    },
+    {
+      "BaseBefore": 151187,
+      "CancelEntryOrders": {},
+      "EquityBefore": 150857,
+      "FundingAdjustment": 99143,
+      "Id": "bot:BT:Value:33",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Value",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 20483.75,
+          "Market": "BT",
+          "Quantity": 7
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -15,
+      "TargetEquity": 250000,
+      "Unrealized": -315
+    },
+    {
+      "BaseBefore": 82642,
+      "CancelEntryOrders": {},
+      "EquityBefore": 82886.99999999993,
+      "FundingAdjustment": 167113,
+      "Id": "bot:BT:Value:4",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Value",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 20484.958333333332,
+          "Market": "BT",
+          "Quantity": 3
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 37.5,
+      "TargetEquity": 250000,
+      "Unrealized": 207.49999999992724
+    },
+    {
+      "BaseBefore": 78287,
+      "CancelEntryOrders": {},
+      "EquityBefore": 77671.99999999978,
+      "FundingAdjustment": 172328,
+      "Id": "bot:BT:Value:8",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Value",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 20484.916666666668,
+          "Market": "BT",
+          "Quantity": 9
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 250000,
+      "Unrealized": -615.0000000002183
+    },
+    {
+      "BaseBefore": 114200,
+      "CancelEntryOrders": [
+        2338
+      ],
+      "EquityBefore": 114295,
+      "FundingAdjustment": 85705,
+      "Id": "bot:BT:Reversion:12",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Reversion",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": 95,
+      "TargetEquity": 200000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 86882,
+      "CancelEntryOrders": {},
+      "EquityBefore": 86872,
+      "FundingAdjustment": 113128,
+      "Id": "bot:BT:Reversion:17",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Reversion",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -10,
+      "TargetEquity": 200000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 69923,
+      "CancelEntryOrders": [
+        1826
+      ],
+      "EquityBefore": 69523.00000000007,
+      "FundingAdjustment": 130477,
+      "Id": "bot:BT:Reversion:26",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Reversion",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 20485.3,
+          "Market": "BT",
+          "Quantity": 5
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -20,
+      "TargetEquity": 200000,
+      "Unrealized": -379.99999999992724
+    },
+    {
+      "BaseBefore": 159748,
+      "CancelEntryOrders": {},
+      "EquityBefore": 159768,
+      "FundingAdjustment": 40232,
+      "Id": "bot:BT:Reversion:5",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Reversion",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 20484,
+          "Market": "BT",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -30,
+      "TargetEquity": 200000,
+      "Unrealized": 50
+    },
+    {
+      "BaseBefore": 152701,
+      "CancelEntryOrders": {},
+      "EquityBefore": 152251,
+      "FundingAdjustment": -2251,
+      "Id": "bot:BT:Protective:16",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Protective",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 20484.65625,
+          "Market": "BT",
+          "Quantity": 6
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -71.25,
+      "TargetEquity": 150000,
+      "Unrealized": -378.75
+    },
+    {
+      "BaseBefore": 156212,
+      "CancelEntryOrders": {},
+      "EquityBefore": 156426.99999999994,
+      "FundingAdjustment": -6427,
+      "Id": "bot:BT:Protective:2",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Protective",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 20485.083333333332,
+          "Market": "BT",
+          "Quantity": 3
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 150000,
+      "Unrealized": 214.99999999992724
+    },
+    {
+      "BaseBefore": 147455,
+      "CancelEntryOrders": {},
+      "EquityBefore": 147760,
+      "FundingAdjustment": 2240,
+      "Id": "bot:BT:Protective:23",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Protective",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 20485.25,
+          "Market": "BT",
+          "Quantity": 4
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 5,
+      "TargetEquity": 150000,
+      "Unrealized": 300
+    },
+    {
+      "BaseBefore": 101810,
+      "CancelEntryOrders": {},
+      "EquityBefore": 102245,
+      "FundingAdjustment": 47755,
+      "Id": "bot:BT:Protective:24",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Protective",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 20485.125,
+          "Market": "BT",
+          "Quantity": 6
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 150000,
+      "Unrealized": 435
+    },
+    {
+      "BaseBefore": 110013,
+      "CancelEntryOrders": {},
+      "EquityBefore": 110033,
+      "FundingAdjustment": -10033,
+      "Id": "bot:BT:Scalper:1",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": 20,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 147346,
+      "CancelEntryOrders": {},
+      "EquityBefore": 147226,
+      "FundingAdjustment": -47226,
+      "Id": "bot:BT:Scalper:10",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -120,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 143793,
+      "CancelEntryOrders": {},
+      "EquityBefore": 143763,
+      "FundingAdjustment": -43763,
+      "Id": "bot:BT:Scalper:11",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -30,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 55205,
+      "CancelEntryOrders": {},
+      "EquityBefore": 55155,
+      "FundingAdjustment": 44845,
+      "Id": "bot:BT:Scalper:12",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -50,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 89763,
+      "CancelEntryOrders": {},
+      "EquityBefore": 89648,
+      "FundingAdjustment": 10352,
+      "Id": "bot:BT:Scalper:13",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -115,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 121707,
+      "CancelEntryOrders": {},
+      "EquityBefore": 121627,
+      "FundingAdjustment": -21627,
+      "Id": "bot:BT:Scalper:14",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -80,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 74070,
+      "CancelEntryOrders": {},
+      "EquityBefore": 74110,
+      "FundingAdjustment": 25890,
+      "Id": "bot:BT:Scalper:15",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": 40,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 144061,
+      "CancelEntryOrders": {},
+      "EquityBefore": 144101,
+      "FundingAdjustment": -44101,
+      "Id": "bot:BT:Scalper:16",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": 40,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 124970,
+      "CancelEntryOrders": {},
+      "EquityBefore": 124920,
+      "FundingAdjustment": -24920,
+      "Id": "bot:BT:Scalper:17",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Scalper",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 20482,
+          "Market": "BT",
+          "Quantity": 2
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -70,
+      "TargetEquity": 100000,
+      "Unrealized": 20
+    },
+    {
+      "BaseBefore": 113108,
+      "CancelEntryOrders": {},
+      "EquityBefore": 113118,
+      "FundingAdjustment": -13118,
+      "Id": "bot:BT:Scalper:18",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": 10,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 101460,
+      "CancelEntryOrders": {},
+      "EquityBefore": 101510,
+      "FundingAdjustment": -1510,
+      "Id": "bot:BT:Scalper:2",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": 50,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 63686,
+      "CancelEntryOrders": {},
+      "EquityBefore": 63626,
+      "FundingAdjustment": 36374,
+      "Id": "bot:BT:Scalper:3",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -60,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 95235,
+      "CancelEntryOrders": {},
+      "EquityBefore": 95185,
+      "FundingAdjustment": 4815,
+      "Id": "bot:BT:Scalper:4",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Scalper",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 20482.75,
+          "Market": "BT",
+          "Quantity": 2
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 100000,
+      "Unrealized": -50
+    },
+    {
+      "BaseBefore": 150639,
+      "CancelEntryOrders": {},
+      "EquityBefore": 150624,
+      "FundingAdjustment": -50624,
+      "Id": "bot:BT:Scalper:5",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -15,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 158143,
+      "CancelEntryOrders": {},
+      "EquityBefore": 158183,
+      "FundingAdjustment": -58183,
+      "Id": "bot:BT:Scalper:6",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": 40,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 93594,
+      "CancelEntryOrders": {},
+      "EquityBefore": 93674,
+      "FundingAdjustment": 6326,
+      "Id": "bot:BT:Scalper:7",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": 80,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 123469,
+      "CancelEntryOrders": {},
+      "EquityBefore": 123474,
+      "FundingAdjustment": -23474,
+      "Id": "bot:BT:Scalper:8",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Scalper",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 20481.75,
+          "Market": "BT",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 100000,
+      "Unrealized": 5
+    },
+    {
+      "BaseBefore": 86510,
+      "CancelEntryOrders": {},
+      "EquityBefore": 86455,
+      "FundingAdjustment": 13545,
+      "Id": "bot:BT:Scalper:9",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -55,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 733036,
+      "CancelEntryOrders": {},
+      "EquityBefore": 726600.9999999974,
+      "FundingAdjustment": 773399,
+      "Id": "bot:BT:Whale:1",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Whale",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 20485.33035714286,
+          "Market": "BT",
+          "Quantity": 84
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 1500000,
+      "Unrealized": -6435.000000002619
+    },
+    {
+      "BaseBefore": 961904,
+      "CancelEntryOrders": {},
+      "EquityBefore": 965204,
+      "FundingAdjustment": 534796,
+      "Id": "bot:BT:Whale:2",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Whale",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 20485.25,
+          "Market": "BT",
+          "Quantity": 44
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 1500000,
+      "Unrealized": 3300
+    },
+    {
+      "BaseBefore": 891869,
+      "CancelEntryOrders": {},
+      "EquityBefore": 892854.0000000008,
+      "FundingAdjustment": 607146,
+      "Id": "bot:BT:Whale:3",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Whale",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 20483.641304347828,
+          "Market": "BT",
+          "Quantity": 23
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 1500000,
+      "Unrealized": 985.0000000008004
+    },
+    {
+      "BaseBefore": 100000000000,
+      "CancelEntryOrders": [
+        2418,
+        2419,
+        2420,
+        2421,
+        2422
+      ],
+      "EquityBefore": 100000000540,
+      "FundingAdjustment": -99995000540,
+      "Id": "bot:BT:Reserve:1",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Reserve",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 20485.5,
+          "Market": "BT",
+          "Quantity": 6
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 60,
+      "TargetEquity": 5000000,
+      "Unrealized": 480
+    },
+    {
+      "BaseBefore": 100000000000,
+      "CancelEntryOrders": [
+        2343,
+        2344,
+        2345,
+        2346,
+        2347
+      ],
+      "EquityBefore": 100000000280,
+      "FundingAdjustment": -99995000280,
+      "Id": "bot:BT:Reserve:2",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Reserve",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 20485.5,
+          "Market": "BT",
+          "Quantity": 2
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 120,
+      "TargetEquity": 5000000,
+      "Unrealized": 160
+    },
+    {
+      "BaseBefore": 100000000000,
+      "CancelEntryOrders": [
+        2372,
+        2373,
+        2374,
+        2375,
+        2376
+      ],
+      "EquityBefore": 100000000670,
+      "FundingAdjustment": -99995000670,
+      "Id": "bot:BT:Reserve:3",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Reserve",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 20485.5,
+          "Market": "BT",
+          "Quantity": 8
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 30,
+      "TargetEquity": 5000000,
+      "Unrealized": 640
+    },
+    {
+      "BaseBefore": 100000000000,
+      "CancelEntryOrders": [
+        2385,
+        2386,
+        2387,
+        2388,
+        2389
+      ],
+      "EquityBefore": 100000000605,
+      "FundingAdjustment": -99995000605,
+      "Id": "bot:BT:Reserve:4",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Reserve",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 20485.5,
+          "Market": "BT",
+          "Quantity": 7
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 45,
+      "TargetEquity": 5000000,
+      "Unrealized": 560
+    },
+    {
+      "BaseBefore": 100000000000,
+      "CancelEntryOrders": [
+        2426,
+        2427,
+        2428,
+        2429,
+        2430
+      ],
+      "EquityBefore": 100000000765,
+      "FundingAdjustment": -99995000765,
+      "Id": "bot:BT:Reserve:5",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Reserve",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 20485.5,
+          "Market": "BT",
+          "Quantity": 9
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 45,
+      "TargetEquity": 5000000,
+      "Unrealized": 720
+    },
+    {
+      "BaseBefore": 100000000000,
+      "CancelEntryOrders": [
+        2431,
+        2432,
+        2433,
+        2434,
+        2435
+      ],
+      "EquityBefore": 100000000300,
+      "FundingAdjustment": -99995000300,
+      "Id": "bot:BT:Reserve:6",
+      "Keep": true,
+      "Key": "BT",
+      "Kind": "Reserve",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 20485.5,
+          "Market": "BT",
+          "Quantity": 3
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 60,
+      "TargetEquity": 5000000,
+      "Unrealized": 240
+    },
+    {
+      "BaseBefore": 578998,
+      "CancelEntryOrders": [
+        123,
+        124,
+        125,
+        126,
+        701,
+        896
+      ],
+      "EquityBefore": 579987.9999999992,
+      "FundingAdjustment": 170012,
+      "Id": "bot:BG:Maker:1",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Maker",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 2384.5999999999995,
+          "Market": "BG",
+          "Quantity": 33
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 660.0000000009004,
+      "TargetEquity": 750000,
+      "Unrealized": 329.9999999981992
+    },
+    {
+      "BaseBefore": 480232,
+      "CancelEntryOrders": [
+        175,
+        176,
+        177,
+        178,
+        179,
+        180
+      ],
+      "EquityBefore": 480232,
+      "FundingAdjustment": 269768,
+      "Id": "bot:BG:Maker:10",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Maker",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 750000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 441014,
+      "CancelEntryOrders": [
+        129,
+        130,
+        131,
+        132,
+        487,
+        814
+      ],
+      "EquityBefore": 441433.9999999996,
+      "FundingAdjustment": 308566,
+      "Id": "bot:BG:Maker:2",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Maker",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": 419.999999999618,
+      "TargetEquity": 750000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 418624,
+      "CancelEntryOrders": [
+        135,
+        136,
+        137,
+        138,
+        579,
+        1057
+      ],
+      "EquityBefore": 418864.00000000035,
+      "FundingAdjustment": 331136,
+      "Id": "bot:BG:Maker:3",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Maker",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": 240.00000000032742,
+      "TargetEquity": 750000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 404667,
+      "CancelEntryOrders": [
+        141,
+        142,
+        143,
+        144,
+        1205,
+        1609
+      ],
+      "EquityBefore": 405166.99999999953,
+      "FundingAdjustment": 344833,
+      "Id": "bot:BG:Maker:4",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Maker",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": 499.99999999954525,
+      "TargetEquity": 750000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 461117,
+      "CancelEntryOrders": [
+        146,
+        147,
+        148,
+        149,
+        150,
+        2268
+      ],
+      "EquityBefore": 461517.0000000003,
+      "FundingAdjustment": 288483,
+      "Id": "bot:BG:Maker:5",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Maker",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 2384.5,
+          "Market": "BG",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 400.00000000027285,
+      "TargetEquity": 750000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 639300,
+      "CancelEntryOrders": [
+        151,
+        152,
+        153,
+        154,
+        155,
+        156
+      ],
+      "EquityBefore": 639300,
+      "FundingAdjustment": 110700,
+      "Id": "bot:BG:Maker:6",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Maker",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 2384.5,
+          "Market": "BG",
+          "Quantity": 26
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 750000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 526133,
+      "CancelEntryOrders": [
+        157,
+        158,
+        159,
+        160,
+        161,
+        162
+      ],
+      "EquityBefore": 526133,
+      "FundingAdjustment": 223867,
+      "Id": "bot:BG:Maker:7",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Maker",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 750000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 353121,
+      "CancelEntryOrders": [
+        163,
+        164,
+        165,
+        166,
+        167,
+        168
+      ],
+      "EquityBefore": 353121,
+      "FundingAdjustment": 396879,
+      "Id": "bot:BG:Maker:8",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Maker",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 750000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 350333,
+      "CancelEntryOrders": [
+        169,
+        170,
+        171,
+        172,
+        173,
+        174
+      ],
+      "EquityBefore": 350333,
+      "FundingAdjustment": 399667,
+      "Id": "bot:BG:Maker:9",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Maker",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 750000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 100951,
+      "CancelEntryOrders": [
+        1850
+      ],
+      "EquityBefore": 100860.99999999985,
+      "FundingAdjustment": 49139,
+      "Id": "bot:BG:Liquidity:11",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Liquidity",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 2384.5,
+          "Market": "BG",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -90.00000000014552,
+      "TargetEquity": 150000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 101211,
+      "CancelEntryOrders": {},
+      "EquityBefore": 101021.00000000003,
+      "FundingAdjustment": 48979,
+      "Id": "bot:BG:Liquidity:12",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Liquidity",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 2384.6583333333333,
+          "Market": "BG",
+          "Quantity": 12
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 150000,
+      "Unrealized": -189.99999999996362
+    },
+    {
+      "BaseBefore": 144218,
+      "CancelEntryOrders": {},
+      "EquityBefore": 144218,
+      "FundingAdjustment": 5782,
+      "Id": "bot:BG:Liquidity:14",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Liquidity",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 150000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 54964,
+      "CancelEntryOrders": [
+        1871,
+        2082
+      ],
+      "EquityBefore": 54954.00000000001,
+      "FundingAdjustment": 95046,
+      "Id": "bot:BG:Liquidity:17",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Liquidity",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -9.999999999990905,
+      "TargetEquity": 150000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 148006,
+      "CancelEntryOrders": {},
+      "EquityBefore": 148006,
+      "FundingAdjustment": 1994,
+      "Id": "bot:BG:Liquidity:21",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Liquidity",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 2384.5,
+          "Market": "BG",
+          "Quantity": 4
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 150000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 113422,
+      "CancelEntryOrders": {},
+      "EquityBefore": 113372.00000000004,
+      "FundingAdjustment": 36628,
+      "Id": "bot:BG:Liquidity:22",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Liquidity",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 2384.6,
+          "Market": "BG",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -39.99999999996362,
+      "TargetEquity": 150000,
+      "Unrealized": -9.999999999990905
+    },
+    {
+      "BaseBefore": 89073,
+      "CancelEntryOrders": {},
+      "EquityBefore": 89043.00000000007,
+      "FundingAdjustment": 60957,
+      "Id": "bot:BG:Liquidity:23",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Liquidity",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -29.99999999992724,
+      "TargetEquity": 150000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 100724,
+      "CancelEntryOrders": [
+        2245,
+        2409
+      ],
+      "EquityBefore": 100693.9999999998,
+      "FundingAdjustment": 49306,
+      "Id": "bot:BG:Liquidity:25",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Liquidity",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 2384.5119047619046,
+          "Market": "BG",
+          "Quantity": 6
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -37.14285714295329,
+      "TargetEquity": 150000,
+      "Unrealized": 7.142857142753201
+    },
+    {
+      "BaseBefore": 139952,
+      "CancelEntryOrders": {},
+      "EquityBefore": 139912,
+      "FundingAdjustment": 10088,
+      "Id": "bot:BG:Liquidity:3",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Liquidity",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 2384.5,
+          "Market": "BG",
+          "Quantity": 3
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -40.000000000009095,
+      "TargetEquity": 150000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 66319,
+      "CancelEntryOrders": {},
+      "EquityBefore": 66319,
+      "FundingAdjustment": 83681,
+      "Id": "bot:BG:Liquidity:36",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Liquidity",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 2384.5,
+          "Market": "BG",
+          "Quantity": 7
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 150000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 119882,
+      "CancelEntryOrders": {},
+      "EquityBefore": 119791.99999999985,
+      "FundingAdjustment": 30208,
+      "Id": "bot:BG:Liquidity:4",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Liquidity",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 2384.6800000000003,
+          "Market": "BG",
+          "Quantity": 5
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 150000,
+      "Unrealized": -90.00000000014552
+    },
+    {
+      "BaseBefore": 149750,
+      "CancelEntryOrders": [
+        2309
+      ],
+      "EquityBefore": 149750,
+      "FundingAdjustment": 250,
+      "Id": "bot:BG:Liquidity:8",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Liquidity",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 150000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 57276,
+      "CancelEntryOrders": {},
+      "EquityBefore": 57276,
+      "FundingAdjustment": 92724,
+      "Id": "bot:BG:Liquidity:9",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Liquidity",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 2384.5,
+          "Market": "BG",
+          "Quantity": 3
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 150000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 54587,
+      "CancelEntryOrders": {},
+      "EquityBefore": 54587,
+      "FundingAdjustment": 145413,
+      "Id": "bot:BG:Momentum:10",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Momentum",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 200000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 98469,
+      "CancelEntryOrders": {},
+      "EquityBefore": 98459.00000000001,
+      "FundingAdjustment": 101541,
+      "Id": "bot:BG:Momentum:13",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Momentum",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 2384.5,
+          "Market": "BG",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -9.999999999990905,
+      "TargetEquity": 200000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 98848,
+      "CancelEntryOrders": {},
+      "EquityBefore": 98827.99999999997,
+      "FundingAdjustment": 101172,
+      "Id": "bot:BG:Momentum:15",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Momentum",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 2384.7000000000003,
+          "Market": "BG",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 200000,
+      "Unrealized": -20.000000000027285
+    },
+    {
+      "BaseBefore": 84071,
+      "CancelEntryOrders": {},
+      "EquityBefore": 84071,
+      "FundingAdjustment": 115929,
+      "Id": "bot:BG:Momentum:18",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Momentum",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 2384.5,
+          "Market": "BG",
+          "Quantity": 2
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 200000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 66557,
+      "CancelEntryOrders": [
+        2416
+      ],
+      "EquityBefore": 66557,
+      "FundingAdjustment": 133443,
+      "Id": "bot:BG:Momentum:2",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Momentum",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 2384.5,
+          "Market": "BG",
+          "Quantity": 5
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 200000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 120764,
+      "CancelEntryOrders": {},
+      "EquityBefore": 120744.00000000001,
+      "FundingAdjustment": 79256,
+      "Id": "bot:BG:Momentum:26",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Momentum",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -19.99999999998181,
+      "TargetEquity": 200000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 85301,
+      "CancelEntryOrders": {},
+      "EquityBefore": 85240.99999999991,
+      "FundingAdjustment": 114759,
+      "Id": "bot:BG:Momentum:30",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Momentum",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 2384.7000000000003,
+          "Market": "BG",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -40.00000000005457,
+      "TargetEquity": 200000,
+      "Unrealized": -20.000000000027285
+    },
+    {
+      "BaseBefore": 61047,
+      "CancelEntryOrders": {},
+      "EquityBefore": 61037.00000000001,
+      "FundingAdjustment": 138963,
+      "Id": "bot:BG:Momentum:6",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Momentum",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 2384.5,
+          "Market": "BG",
+          "Quantity": 6
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -9.999999999990905,
+      "TargetEquity": 200000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 56566,
+      "CancelEntryOrders": {},
+      "EquityBefore": 56486.00000000044,
+      "FundingAdjustment": 143514,
+      "Id": "bot:BG:Momentum:7",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Momentum",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 2384.5999999999995,
+          "Market": "BG",
+          "Quantity": 5
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -29.99999999983629,
+      "TargetEquity": 200000,
+      "Unrealized": -49.99999999972715
+    },
+    {
+      "BaseBefore": 108559,
+      "CancelEntryOrders": [
+        1240,
+        2234
+      ],
+      "EquityBefore": 108399.00000000028,
+      "FundingAdjustment": 141601,
+      "Id": "bot:BG:Value:19",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Value",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 2384.6777777777775,
+          "Market": "BG",
+          "Quantity": 9
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 250000,
+      "Unrealized": -159.99999999971806
+    },
+    {
+      "BaseBefore": 113525,
+      "CancelEntryOrders": {},
+      "EquityBefore": 113525,
+      "FundingAdjustment": 136475,
+      "Id": "bot:BG:Value:20",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Value",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 2384.5,
+          "Market": "BG",
+          "Quantity": 3
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 250000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 74273,
+      "CancelEntryOrders": {},
+      "EquityBefore": 74252.99999999997,
+      "FundingAdjustment": 175747,
+      "Id": "bot:BG:Value:24",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Value",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 2384.7000000000003,
+          "Market": "BG",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 250000,
+      "Unrealized": -20.000000000027285
+    },
+    {
+      "BaseBefore": 99162,
+      "CancelEntryOrders": {},
+      "EquityBefore": 99162,
+      "FundingAdjustment": 150838,
+      "Id": "bot:BG:Value:28",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Value",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 2384.5,
+          "Market": "BG",
+          "Quantity": 9
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 250000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 99604,
+      "CancelEntryOrders": {},
+      "EquityBefore": 99604,
+      "FundingAdjustment": 150396,
+      "Id": "bot:BG:Value:31",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Value",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 2384.5,
+          "Market": "BG",
+          "Quantity": 2
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 250000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 134120,
+      "CancelEntryOrders": [
+        1986
+      ],
+      "EquityBefore": 133949.99999999948,
+      "FundingAdjustment": 116050,
+      "Id": "bot:BG:Value:35",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Value",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 2384.6700000000005,
+          "Market": "BG",
+          "Quantity": 10
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 250000,
+      "Unrealized": -170.0000000005275
+    },
+    {
+      "BaseBefore": 51333,
+      "CancelEntryOrders": {},
+      "EquityBefore": 51333,
+      "FundingAdjustment": 198667,
+      "Id": "bot:BG:Value:5",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Value",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 250000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 138643,
+      "CancelEntryOrders": [
+        2029
+      ],
+      "EquityBefore": 138663.00000000006,
+      "FundingAdjustment": 61337,
+      "Id": "bot:BG:Reversion:1",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Reversion",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 2384.525,
+          "Market": "BG",
+          "Quantity": 8
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 200000,
+      "Unrealized": 20.00000000007276
+    },
+    {
+      "BaseBefore": 103158,
+      "CancelEntryOrders": {},
+      "EquityBefore": 103067.99999999994,
+      "FundingAdjustment": 96932,
+      "Id": "bot:BG:Reversion:16",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Reversion",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 2384.625,
+          "Market": "BG",
+          "Quantity": 4
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -40.00000000005457,
+      "TargetEquity": 200000,
+      "Unrealized": -50
+    },
+    {
+      "BaseBefore": 108905,
+      "CancelEntryOrders": {},
+      "EquityBefore": 108814.99999999994,
+      "FundingAdjustment": 91185,
+      "Id": "bot:BG:Reversion:27",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Reversion",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 2384.65,
+          "Market": "BG",
+          "Quantity": 6
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 200000,
+      "Unrealized": -90.00000000005457
+    },
+    {
+      "BaseBefore": 125863,
+      "CancelEntryOrders": {},
+      "EquityBefore": 125853.00000000001,
+      "FundingAdjustment": 74147,
+      "Id": "bot:BG:Reversion:29",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Reversion",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 2384.5,
+          "Market": "BG",
+          "Quantity": 8
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -9.999999999990905,
+      "TargetEquity": 200000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 96030,
+      "CancelEntryOrders": {},
+      "EquityBefore": 96030,
+      "FundingAdjustment": 103970,
+      "Id": "bot:BG:Reversion:33",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Reversion",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 2384.5,
+          "Market": "BG",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 200000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 70371,
+      "CancelEntryOrders": [
+        1760,
+        2364
+      ],
+      "EquityBefore": 70270.99999999985,
+      "FundingAdjustment": 79729,
+      "Id": "bot:BG:Protective:32",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Protective",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 2384.7000000000003,
+          "Market": "BG",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -80.00000000010914,
+      "TargetEquity": 150000,
+      "Unrealized": -20.000000000027285
+    },
+    {
+      "BaseBefore": 69058,
+      "CancelEntryOrders": {},
+      "EquityBefore": 69048.00000000015,
+      "FundingAdjustment": 80952,
+      "Id": "bot:BG:Protective:34",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Protective",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 2384.5750000000003,
+          "Market": "BG",
+          "Quantity": 2
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -24.99999999990905,
+      "TargetEquity": 150000,
+      "Unrealized": 15.00000000005457
+    },
+    {
+      "BaseBefore": 50037,
+      "CancelEntryOrders": {},
+      "EquityBefore": 50006.999999999985,
+      "FundingAdjustment": 49993,
+      "Id": "bot:BG:Scalper:1",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -30.00000000001819,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 91584,
+      "CancelEntryOrders": {},
+      "EquityBefore": 91564.00000000003,
+      "FundingAdjustment": 8436,
+      "Id": "bot:BG:Scalper:10",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Scalper",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 2384.6,
+          "Market": "BG",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": [
+        1382
+      ],
+      "Realized": -9.999999999990905,
+      "TargetEquity": 100000,
+      "Unrealized": -9.999999999990905
+    },
+    {
+      "BaseBefore": 113529,
+      "CancelEntryOrders": {},
+      "EquityBefore": 113508.99999999997,
+      "FundingAdjustment": -13509,
+      "Id": "bot:BG:Scalper:11",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -20.000000000027285,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 75389,
+      "CancelEntryOrders": {},
+      "EquityBefore": 75348.99999999994,
+      "FundingAdjustment": 24651,
+      "Id": "bot:BG:Scalper:12",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -40.00000000005457,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 159106,
+      "CancelEntryOrders": {},
+      "EquityBefore": 159106,
+      "FundingAdjustment": -59106,
+      "Id": "bot:BG:Scalper:13",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Scalper",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 2384.6,
+          "Market": "BG",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": [
+        2235
+      ],
+      "Realized": -9.999999999990905,
+      "TargetEquity": 100000,
+      "Unrealized": 9.999999999990905
+    },
+    {
+      "BaseBefore": 108329,
+      "CancelEntryOrders": {},
+      "EquityBefore": 108289.00000000003,
+      "FundingAdjustment": -8289,
+      "Id": "bot:BG:Scalper:14",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -39.99999999996362,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 93620,
+      "CancelEntryOrders": {},
+      "EquityBefore": 93559.99999999996,
+      "FundingAdjustment": 6440,
+      "Id": "bot:BG:Scalper:15",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Scalper",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 2384.6,
+          "Market": "BG",
+          "Quantity": 2
+        }
+      ],
+      "PreserveExitOrders": [
+        2018
+      ],
+      "Realized": -40.00000000005457,
+      "TargetEquity": 100000,
+      "Unrealized": -19.99999999998181
+    },
+    {
+      "BaseBefore": 116226,
+      "CancelEntryOrders": {},
+      "EquityBefore": 116205.99999999997,
+      "FundingAdjustment": -16206,
+      "Id": "bot:BG:Scalper:16",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Scalper",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 2384.5,
+          "Market": "BG",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": [
+        2329
+      ],
+      "Realized": -20.000000000027285,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 51271,
+      "CancelEntryOrders": {},
+      "EquityBefore": 51210.99999999987,
+      "FundingAdjustment": 48789,
+      "Id": "bot:BG:Scalper:17",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -60.00000000012733,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 97054,
+      "CancelEntryOrders": {},
+      "EquityBefore": 96993.99999999996,
+      "FundingAdjustment": 3006,
+      "Id": "bot:BG:Scalper:18",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Scalper",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 2384.6,
+          "Market": "BG",
+          "Quantity": 2
+        }
+      ],
+      "PreserveExitOrders": [
+        1974
+      ],
+      "Realized": -40.00000000005457,
+      "TargetEquity": 100000,
+      "Unrealized": -19.99999999998181
+    },
+    {
+      "BaseBefore": 131254,
+      "CancelEntryOrders": {},
+      "EquityBefore": 131193.99999999997,
+      "FundingAdjustment": -31194,
+      "Id": "bot:BG:Scalper:2",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -60.00000000003638,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 68725,
+      "CancelEntryOrders": {},
+      "EquityBefore": 68684.99999999994,
+      "FundingAdjustment": 31315,
+      "Id": "bot:BG:Scalper:3",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -40.00000000005457,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 159754,
+      "CancelEntryOrders": {},
+      "EquityBefore": 159723.99999999997,
+      "FundingAdjustment": -59724,
+      "Id": "bot:BG:Scalper:4",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -30.00000000001819,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 88922,
+      "CancelEntryOrders": {},
+      "EquityBefore": 88882.00000000003,
+      "FundingAdjustment": 11118,
+      "Id": "bot:BG:Scalper:5",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Scalper",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 2384.6,
+          "Market": "BG",
+          "Quantity": 2
+        }
+      ],
+      "PreserveExitOrders": [
+        2246
+      ],
+      "Realized": -19.99999999998181,
+      "TargetEquity": 100000,
+      "Unrealized": -19.99999999998181
+    },
+    {
+      "BaseBefore": 118788,
+      "CancelEntryOrders": [
+        2410
+      ],
+      "EquityBefore": 118768.00000000001,
+      "FundingAdjustment": -18768,
+      "Id": "bot:BG:Scalper:6",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Scalper",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": -19.99999999998181,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 65122,
+      "CancelEntryOrders": {},
+      "EquityBefore": 65082.00000000003,
+      "FundingAdjustment": 34918,
+      "Id": "bot:BG:Scalper:7",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Scalper",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 2384.6,
+          "Market": "BG",
+          "Quantity": 2
+        }
+      ],
+      "PreserveExitOrders": [
+        2017
+      ],
+      "Realized": -19.99999999998181,
+      "TargetEquity": 100000,
+      "Unrealized": -19.99999999998181
+    },
+    {
+      "BaseBefore": 156667,
+      "CancelEntryOrders": {},
+      "EquityBefore": 156667,
+      "FundingAdjustment": -56667,
+      "Id": "bot:BG:Scalper:8",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Scalper",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 2384.5,
+          "Market": "BG",
+          "Quantity": 1
+        }
+      ],
+      "PreserveExitOrders": [
+        2204
+      ],
+      "Realized": 0,
+      "TargetEquity": 100000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 100951,
+      "CancelEntryOrders": {},
+      "EquityBefore": 100911.00000000003,
+      "FundingAdjustment": -911,
+      "Id": "bot:BG:Scalper:9",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Scalper",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 2384.6,
+          "Market": "BG",
+          "Quantity": 2
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": -19.99999999998181,
+      "TargetEquity": 100000,
+      "Unrealized": -19.99999999998181
+    },
+    {
+      "BaseBefore": 645591,
+      "CancelEntryOrders": {},
+      "EquityBefore": 645591,
+      "FundingAdjustment": 854409,
+      "Id": "bot:BG:Whale:1",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Whale",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 1500000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 806342,
+      "CancelEntryOrders": {},
+      "EquityBefore": 805461.9999999988,
+      "FundingAdjustment": 694538,
+      "Id": "bot:BG:Whale:2",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Whale",
+      "Positions": [
+        {
+          "Direction": 1,
+          "Entry": 2384.7000000000003,
+          "Market": "BG",
+          "Quantity": 44
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 1500000,
+      "Unrealized": -880.0000000012005
+    },
+    {
+      "BaseBefore": 740121,
+      "CancelEntryOrders": {},
+      "EquityBefore": 740121,
+      "FundingAdjustment": 759879,
+      "Id": "bot:BG:Whale:3",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Whale",
+      "Positions": {},
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 1500000,
+      "Unrealized": 0
+    },
+    {
+      "BaseBefore": 100000000000,
+      "CancelEntryOrders": [
+        2098,
+        2099,
+        2100,
+        2101,
+        2102,
+        2103,
+        2104
+      ],
+      "EquityBefore": 100000000070,
+      "FundingAdjustment": -99995000070,
+      "Id": "bot:BG:Reserve:1",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Reserve",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 2384.6,
+          "Market": "BG",
+          "Quantity": 7
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 5000000,
+      "Unrealized": 69.99999999993634
+    },
+    {
+      "BaseBefore": 100000000000,
+      "CancelEntryOrders": [
+        2105,
+        2106,
+        2107,
+        2108,
+        2109,
+        2110,
+        2111
+      ],
+      "EquityBefore": 100000000060,
+      "FundingAdjustment": -99995000060,
+      "Id": "bot:BG:Reserve:2",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Reserve",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 2384.6,
+          "Market": "BG",
+          "Quantity": 6
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 5000000,
+      "Unrealized": 59.99999999994543
+    },
+    {
+      "BaseBefore": 100000000000,
+      "CancelEntryOrders": [
+        2112,
+        2113,
+        2114,
+        2115,
+        2116,
+        2117,
+        2118
+      ],
+      "EquityBefore": 100000000040,
+      "FundingAdjustment": -99995000040,
+      "Id": "bot:BG:Reserve:3",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Reserve",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 2384.6,
+          "Market": "BG",
+          "Quantity": 4
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 5000000,
+      "Unrealized": 39.99999999996362
+    },
+    {
+      "BaseBefore": 100000000000,
+      "CancelEntryOrders": [
+        2148,
+        2149,
+        2150,
+        2151,
+        2152,
+        2153,
+        2154
+      ],
+      "EquityBefore": 100000000040,
+      "FundingAdjustment": -99995000040,
+      "Id": "bot:BG:Reserve:4",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Reserve",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 2384.6,
+          "Market": "BG",
+          "Quantity": 4
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 5000000,
+      "Unrealized": 39.99999999996362
+    },
+    {
+      "BaseBefore": 100000000000,
+      "CancelEntryOrders": [
+        2171,
+        2172,
+        2173,
+        2174,
+        2175,
+        2176,
+        2177
+      ],
+      "EquityBefore": 100000000050,
+      "FundingAdjustment": -99995000050,
+      "Id": "bot:BG:Reserve:5",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Reserve",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 2384.6,
+          "Market": "BG",
+          "Quantity": 5
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 5000000,
+      "Unrealized": 49.999999999954525
+    },
+    {
+      "BaseBefore": 100000000000,
+      "CancelEntryOrders": [
+        2084,
+        2085,
+        2086,
+        2087,
+        2088,
+        2089,
+        2090
+      ],
+      "EquityBefore": 100000000050,
+      "FundingAdjustment": -99995000050,
+      "Id": "bot:BG:Reserve:6",
+      "Keep": true,
+      "Key": "BG",
+      "Kind": "Reserve",
+      "Positions": [
+        {
+          "Direction": -1,
+          "Entry": 2384.6,
+          "Market": "BG",
+          "Quantity": 5
+        }
+      ],
+      "PreserveExitOrders": {},
+      "Realized": 0,
+      "TargetEquity": 5000000,
+      "Unrealized": 49.999999999954525
+    }
+  ],
+  "Add": [
+    {
+      "CapitalEach": 750000,
+      "Count": 10,
+      "Key": "BX",
+      "Kind": "Maker"
+    },
+    {
+      "CapitalEach": 150000,
+      "Count": 14,
+      "Key": "BX",
+      "Kind": "Liquidity"
+    },
+    {
+      "CapitalEach": 200000,
+      "Count": 6,
+      "Key": "BX",
+      "Kind": "Momentum"
+    },
+    {
+      "CapitalEach": 250000,
+      "Count": 11,
+      "Key": "BX",
+      "Kind": "Value"
+    },
+    {
+      "CapitalEach": 200000,
+      "Count": 5,
+      "Key": "BX",
+      "Kind": "Reversion"
+    },
+    {
+      "CapitalEach": 150000,
+      "Count": 4,
+      "Key": "BX",
+      "Kind": "Protective"
+    },
+    {
+      "CapitalEach": 100000,
+      "Count": 6,
+      "Key": "BX",
+      "Kind": "Scalper"
+    },
+    {
+      "CapitalEach": 1500000,
+      "Count": 1,
+      "Key": "BX",
+      "Kind": "Whale"
+    },
+    {
+      "CapitalEach": 750000,
+      "Count": 10,
+      "Key": "BT",
+      "Kind": "Maker"
+    },
+    {
+      "CapitalEach": 150000,
+      "Count": 11,
+      "Key": "BT",
+      "Kind": "Liquidity"
+    },
+    {
+      "CapitalEach": 200000,
+      "Count": 4,
+      "Key": "BT",
+      "Kind": "Momentum"
+    },
+    {
+      "CapitalEach": 250000,
+      "Count": 13,
+      "Key": "BT",
+      "Kind": "Value"
+    },
+    {
+      "CapitalEach": 200000,
+      "Count": 8,
+      "Key": "BT",
+      "Kind": "Reversion"
+    },
+    {
+      "CapitalEach": 150000,
+      "Count": 4,
+      "Key": "BT",
+      "Kind": "Protective"
+    },
+    {
+      "CapitalEach": 100000,
+      "Count": 6,
+      "Key": "BT",
+      "Kind": "Scalper"
+    },
+    {
+      "CapitalEach": 1500000,
+      "Count": 1,
+      "Key": "BT",
+      "Kind": "Whale"
+    },
+    {
+      "CapitalEach": 750000,
+      "Count": 10,
+      "Key": "BG",
+      "Kind": "Maker"
+    },
+    {
+      "CapitalEach": 150000,
+      "Count": 11,
+      "Key": "BG",
+      "Kind": "Liquidity"
+    },
+    {
+      "CapitalEach": 200000,
+      "Count": 3,
+      "Key": "BG",
+      "Kind": "Momentum"
+    },
+    {
+      "CapitalEach": 250000,
+      "Count": 13,
+      "Key": "BG",
+      "Kind": "Value"
+    },
+    {
+      "CapitalEach": 200000,
+      "Count": 7,
+      "Key": "BG",
+      "Kind": "Reversion"
+    },
+    {
+      "CapitalEach": 150000,
+      "Count": 6,
+      "Key": "BG",
+      "Kind": "Protective"
+    },
+    {
+      "CapitalEach": 100000,
+      "Count": 6,
+      "Key": "BG",
+      "Kind": "Scalper"
+    },
+    {
+      "CapitalEach": 1500000,
+      "Count": 1,
+      "Key": "BG",
+      "Kind": "Whale"
+    }
+  ],
+  "FromVersion": 0,
+  "FundingAdjustment": -1799887637608,
+  "Markets": {
+    "BG": {
+      "Liquidity": {
+        "Before": 13,
+        "Target": 24,
+        "TargetCapital": 3600000
+      },
+      "Maker": {
+        "Before": 10,
+        "Target": 20,
+        "TargetCapital": 15000000
+      },
+      "Momentum": {
+        "Before": 9,
+        "Target": 12,
+        "TargetCapital": 2400000
+      },
+      "Protective": {
+        "Before": 2,
+        "Target": 8,
+        "TargetCapital": 1200000
+      },
+      "Reserve": {
+        "Before": 6,
+        "Target": 6,
+        "TargetCapital": 30000000
+      },
+      "Reversion": {
+        "Before": 5,
+        "Target": 12,
+        "TargetCapital": 2400000
+      },
+      "Scalper": {
+        "Before": 18,
+        "Target": 24,
+        "TargetCapital": 2400000
+      },
+      "Value": {
+        "Before": 7,
+        "Target": 20,
+        "TargetCapital": 5000000
+      },
+      "Whale": {
+        "Before": 3,
+        "Target": 4,
+        "TargetCapital": 6000000
+      }
+    },
+    "BT": {
+      "Liquidity": {
+        "Before": 13,
+        "Target": 24,
+        "TargetCapital": 3600000
+      },
+      "Maker": {
+        "Before": 10,
+        "Target": 20,
+        "TargetCapital": 15000000
+      },
+      "Momentum": {
+        "Before": 8,
+        "Target": 12,
+        "TargetCapital": 2400000
+      },
+      "Protective": {
+        "Before": 4,
+        "Target": 8,
+        "TargetCapital": 1200000
+      },
+      "Reserve": {
+        "Before": 6,
+        "Target": 6,
+        "TargetCapital": 30000000
+      },
+      "Reversion": {
+        "Before": 4,
+        "Target": 12,
+        "TargetCapital": 2400000
+      },
+      "Scalper": {
+        "Before": 18,
+        "Target": 24,
+        "TargetCapital": 2400000
+      },
+      "Value": {
+        "Before": 7,
+        "Target": 20,
+        "TargetCapital": 5000000
+      },
+      "Whale": {
+        "Before": 3,
+        "Target": 4,
+        "TargetCapital": 6000000
+      }
+    },
+    "BX": {
+      "Liquidity": {
+        "Before": 10,
+        "Target": 24,
+        "TargetCapital": 3600000
+      },
+      "Maker": {
+        "Before": 10,
+        "Target": 20,
+        "TargetCapital": 15000000
+      },
+      "Momentum": {
+        "Before": 6,
+        "Target": 12,
+        "TargetCapital": 2400000
+      },
+      "Protective": {
+        "Before": 4,
+        "Target": 8,
+        "TargetCapital": 1200000
+      },
+      "Reserve": {
+        "Before": 6,
+        "Target": 6,
+        "TargetCapital": 30000000
+      },
+      "Reversion": {
+        "Before": 7,
+        "Target": 12,
+        "TargetCapital": 2400000
+      },
+      "Scalper": {
+        "Before": 18,
+        "Target": 24,
+        "TargetCapital": 2400000
+      },
+      "Value": {
+        "Before": 9,
+        "Target": 20,
+        "TargetCapital": 5000000
+      },
+      "Whale": {
+        "Before": 3,
+        "Target": 4,
+        "TargetCapital": 6000000
+      }
+    }
+  },
+  "Needed": true,
+  "Retire": {},
+  "Version": 1
+}

@@ -1,0 +1,5 @@
+{
+  "Source": "output/bot-diagnostics-20261018",
+  "AllModuleHashesMatchPreservedBaseline": true,
+  "Note": "Reused the completed, audited two-hour runs because every baseline source module matches exactly; rerunning unchanged seeds is unnecessary."
+}

@@ -1,0 +1,173 @@
+{
+  "Neutral": [
+    {
+      "Buy": 2599,
+      "Decisions": 10000,
+      "Kind": "Protective",
+      "Limit": 2671,
+      "Market": 2689,
+      "Protected": 5360,
+      "Sell": 2761,
+      "Submissions": 5360,
+      "Threshold": 0.5
+    },
+    {
+      "Buy": 1990,
+      "Decisions": 10000,
+      "Kind": "Protective",
+      "Limit": 2021,
+      "Market": 1973,
+      "Protected": 3994,
+      "Sell": 2004,
+      "Submissions": 3994,
+      "Threshold": 0.85
+    },
+    {
+      "Buy": 1406,
+      "Decisions": 10000,
+      "Kind": "Protective",
+      "Limit": 1384,
+      "Market": 1437,
+      "Protected": 2821,
+      "Sell": 1415,
+      "Submissions": 2821,
+      "Threshold": 1.2
+    },
+    {
+      "Buy": 2613,
+      "Decisions": 10000,
+      "Kind": "Reversion",
+      "Limit": 2692,
+      "Market": 2672,
+      "Protected": 853,
+      "Sell": 2751,
+      "Submissions": 5364,
+      "Threshold": 0.5
+    },
+    {
+      "Buy": 1905,
+      "Decisions": 10000,
+      "Kind": "Reversion",
+      "Limit": 1994,
+      "Market": 1982,
+      "Protected": 617,
+      "Sell": 2071,
+      "Submissions": 3976,
+      "Threshold": 0.85
+    },
+    {
+      "Buy": 1342,
+      "Decisions": 10000,
+      "Kind": "Reversion",
+      "Limit": 1384,
+      "Market": 1376,
+      "Protected": 427,
+      "Sell": 1418,
+      "Submissions": 2760,
+      "Threshold": 1.2
+    }
+  ],
+  "Notes": "Neutral probes: flat position, zero bias, fair equals last, no recent price move, zero belief noise. Decision noise is unchanged. Scalper probes use spread 2, slippage allowance 1, entry buffer 4, MinMove 3.",
+  "Scalper": [
+    {
+      "Decisions": 1000,
+      "Gates": {
+        "Decisions": 1000,
+        "MinMove": 1000
+      },
+      "Move": 0,
+      "RequiredMove": 7,
+      "Spread": 2
+    },
+    {
+      "Decisions": 1000,
+      "Gates": {
+        "Decisions": 1000,
+        "MinMove": 1000
+      },
+      "Move": 1,
+      "RequiredMove": 7,
+      "Spread": 2
+    },
+    {
+      "Decisions": 1000,
+      "Gates": {
+        "Decisions": 1000,
+        "MinMove": 1000
+      },
+      "Move": 2,
+      "RequiredMove": 7,
+      "Spread": 2
+    },
+    {
+      "Decisions": 1000,
+      "Gates": {
+        "Decisions": 1000,
+        "MinMove": 1000
+      },
+      "Move": 3,
+      "RequiredMove": 7,
+      "Spread": 2
+    },
+    {
+      "Decisions": 1000,
+      "Gates": {
+        "Decisions": 1000,
+        "MinMove": 1000
+      },
+      "Move": 4,
+      "RequiredMove": 7,
+      "Spread": 2
+    },
+    {
+      "Decisions": 1000,
+      "Gates": {
+        "Decisions": 1000,
+        "MinMove": 1000
+      },
+      "Move": 5,
+      "RequiredMove": 7,
+      "Spread": 2
+    },
+    {
+      "Decisions": 1000,
+      "Gates": {
+        "Decisions": 1000,
+        "MinMove": 1000
+      },
+      "Move": 6,
+      "RequiredMove": 7,
+      "Spread": 2
+    },
+    {
+      "Decisions": 1000,
+      "Gates": {
+        "Decisions": 1000,
+        "EntrySubmit": 1000
+      },
+      "Move": 7,
+      "RequiredMove": 7,
+      "Spread": 2
+    },
+    {
+      "Decisions": 1000,
+      "Gates": {
+        "Decisions": 1000,
+        "EntrySubmit": 1000
+      },
+      "Move": 8,
+      "RequiredMove": 7,
+      "Spread": 2
+    },
+    {
+      "Decisions": 1000,
+      "Gates": {
+        "Decisions": 1000,
+        "EntrySubmit": 1000
+      },
+      "Move": 10,
+      "RequiredMove": 7,
+      "Spread": 2
+    }
+  ]
+}

@@ -25,6 +25,10 @@ end
 local function quote(e,side,ticks,quantity)
  assert(e:Submit(side==1 and "fixture-buyer" or "fixture-seller",{Contract="BX",Direction=side,Quantity=quantity or 10,Type="Limit",Price=ticks*e.Books.BX.Spec.Tick}))
 end
+local function movement(e,p,a,last)
+ e.Time=60;a.Style="Momentum"
+ p.Markets[a.Key].SignalHistory={{Time=0,Price=last-30},{Time=57,Price=last-1},{Time=60,Price=last}}
+end
 function Tests.Run()
  local report={}
  local function test(name,fn)
@@ -39,10 +43,10 @@ function Tests.Run()
     assert(a.Size>=1 and a.Size<=2 and a.Limit==a.Size)
     assert(e.Accounts[a.Id].Limit==a.Size)
    end end
-   assert(count==18 and momentum==9 and reversion==9)
+   assert(count==72 and momentum==36 and reversion==36)
   end
-  local rng=p.Random.State;assert(p:EnsureScalpers(Default.ContractOrder,18)==0 and p.Random.State==rng)
-  return "54 scalpers, balanced styles, one/two-contract caps and idempotent top-up"
+  local rng=p.Random.State;assert(p:EnsureScalpers(Default.ContractOrder,72)==0 and p.Random.State==rng)
+  return "216 scalpers, balanced styles, one/two-contract caps and idempotent top-up"
  end)
  test("Missing quotes, wide spreads and cooldowns suppress entries",function()
   local e,p,a=fixture();local orders=e.NextOrder
@@ -54,7 +58,8 @@ function Tests.Run()
  end)
  test("Partial entry is capped, target keeps priority and timed exit is reduce-only",function()
   local e,p,a=fixture();local b=e.Books.BX local last=b.Last
-  a.Size=2;a.Limit=2;e.Accounts[a.Id].Limit=2;a.Bias=100
+  e.Books.BX.Recent={last-30,last};a.Size=2;a.Limit=2;e.Accounts[a.Id].Limit=2;a.Bias=100
+  movement(e,p,a,last)
   p.Config.Scalper.AggressiveChance=1
   quote(e,1,last-1);quote(e,-1,last+1,1)
   p:_scalper(a)
@@ -73,7 +78,8 @@ function Tests.Run()
  end)
  test("Passive entries expire without accumulating orders",function()
   local e,p,a=fixture();local last=e.Books.BX.Last
-  a.Bias=100;p.Config.Scalper.AggressiveChance=0
+  e.Books.BX.Recent={last-30,last};a.Bias=100;p.Config.Scalper.AggressiveChance=0
+  movement(e,p,a,last)
   quote(e,1,last-1);quote(e,-1,last+1)
   p:_scalper(a)
   local account=e.Accounts[a.Id];local id=assert(next(account.OpenOrders))
@@ -84,6 +90,8 @@ function Tests.Run()
   e:Audit();return "One pending entry, bounded lifetime"
  end)
  test("Old checkpoints gain scalpers once without rewriting market history",function()
+  local Default=clone(Default);Default.BotPopulation=nil;Default.ScalpersPerInstrument=18 -- Isolate the historical V11 upgrade.
+  Default.MarketRetirementVersion=nil
   local config=clone(Default);config.ScalperPopulationVersion=nil;config.ScalpersPerInstrument=nil;config.Scalper=nil
   config.Contracts.RTY=clone(config.LegacyContracts.RTY);table.insert(config.ContractOrder,"RTY")
   local e=Engine.new(config,4407);local p=Participants.new(e)

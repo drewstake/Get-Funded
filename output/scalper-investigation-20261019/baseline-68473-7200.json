@@ -1,0 +1,5321 @@
+{
+  "Audit": {
+    "CashError": 0,
+    "EquityError": -2.895103534683585e-7,
+    "Hash": 1375002812,
+    "Inventory": {
+      "BG": 0,
+      "BT": 0,
+      "BX": 0
+    },
+    "Trades": 75284,
+    "Volume": 236196
+  },
+  "Bots": [
+    {
+      "Bots": 0,
+      "ClosedContracts": 45,
+      "Closes": 45,
+      "Counterparties": {
+        "Maker": 43,
+        "Scalper": 1,
+        "Value": 1
+      },
+      "Entries": 45,
+      "EntryFairEdgeTicks": 260.4102827454699,
+      "EntryMakerAge": 1199.5,
+      "Even": 2,
+      "ExitCounterparties": {
+        "Liquidity": 1,
+        "Maker": 28,
+        "Momentum": 1,
+        "Reserve": 9,
+        "Scalper": 3,
+        "Value": 3
+      },
+      "FillContracts": 90,
+      "GrossLosses": 109.9999999999909,
+      "GrossWins": 2360.0000000002638,
+      "HoldSeconds": 2341,
+      "Id": "bot:BG:Scalper:1",
+      "Losses": 5,
+      "MakerEntryCount": 43,
+      "Market": "BG",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 59.999999999990905,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7150.25,
+      "PassiveEntries": 0,
+      "Peak": 2250.000000000273,
+      "Pnl": 2250.000000000273,
+      "Positive": 0,
+      "Realized": 2250.000000000273,
+      "Reasons": {
+        "Target": {
+          "Count": 18,
+          "Pnl": 1650.000000000182
+        },
+        "Timed exit": {
+          "Count": 27,
+          "Pnl": 600.000000000091
+        }
+      },
+      "Size": 1,
+      "Stop": 11,
+      "Style": "Reversion",
+      "Target": 9,
+      "Unrealized": 0,
+      "Wins": 38
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 47,
+      "Closes": 47,
+      "Counterparties": {
+        "Liquidity": 1,
+        "Maker": 40,
+        "Reserve": 1,
+        "Scalper": 2,
+        "Value": 1,
+        "Whale": 2
+      },
+      "Entries": 47,
+      "EntryFairEdgeTicks": 110.9143516212207,
+      "EntryMakerAge": 1661.75,
+      "Even": 5,
+      "ExitCounterparties": {
+        "Liquidity": 4,
+        "Maker": 33,
+        "Reserve": 5,
+        "Scalper": 2,
+        "Value": 3
+      },
+      "FillContracts": 94,
+      "GrossLosses": 1010.0000000000364,
+      "GrossWins": 1390.0000000000546,
+      "HoldSeconds": 2823.75,
+      "Id": "bot:BG:Scalper:10",
+      "Losses": 19,
+      "MakerEntryCount": 38,
+      "Market": "BG",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 450,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7017,
+      "PassiveEntries": 4,
+      "Peak": 630.0000000000182,
+      "Pnl": 380.0000000000182,
+      "Positive": 0,
+      "Realized": 380.0000000000182,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 7,
+          "Pnl": -700
+        },
+        "Target": {
+          "Count": 9,
+          "Pnl": 900
+        },
+        "Timed exit": {
+          "Count": 31,
+          "Pnl": 180.0000000000182
+        }
+      },
+      "Size": 1,
+      "Stop": 10,
+      "Style": "Momentum",
+      "Target": 10,
+      "Unrealized": 0,
+      "Wins": 23
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 44,
+      "Closes": 44,
+      "Counterparties": {
+        "Liquidity": 1,
+        "Maker": 38,
+        "Momentum": 1,
+        "Scalper": 3,
+        "Value": 1,
+        "Whale": 1
+      },
+      "Entries": 45,
+      "EntryFairEdgeTicks": 237.82639994454803,
+      "EntryMakerAge": 1515.75,
+      "Even": 3,
+      "ExitCounterparties": {
+        "Liquidity": 2,
+        "Maker": 26,
+        "Momentum": 2,
+        "Protective": 2,
+        "Reserve": 7,
+        "Reversion": 2,
+        "Value": 3
+      },
+      "FillContracts": 89,
+      "GrossLosses": 159.99999999994543,
+      "GrossWins": 2250.000000000182,
+      "HoldSeconds": 2278,
+      "Id": "bot:BG:Scalper:11",
+      "Losses": 4,
+      "MakerEntryCount": 38,
+      "Market": "BG",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 100,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7155.75,
+      "PassiveEntries": 1,
+      "Peak": 2160.0000000002183,
+      "Pnl": 2160.0000000002183,
+      "Positive": 0,
+      "Realized": 2090.0000000002365,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 2,
+          "Pnl": -100
+        },
+        "Target": {
+          "Count": 19,
+          "Pnl": 1710.0000000000364
+        },
+        "Timed exit": {
+          "Count": 23,
+          "Pnl": 480.0000000002001
+        }
+      },
+      "Size": 1,
+      "Stop": 5,
+      "Style": "Reversion",
+      "Target": 9,
+      "Unrealized": 69.99999999998181,
+      "Wins": 37
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 112,
+      "Closes": 74,
+      "Counterparties": {
+        "Maker": 102,
+        "Momentum": 2,
+        "Protective": 1,
+        "Reserve": 3,
+        "Scalper": 2,
+        "Whale": 4
+      },
+      "Entries": 65,
+      "EntryFairEdgeTicks": 141.95018980560417,
+      "EntryMakerAge": 2119,
+      "Even": 9,
+      "ExitCounterparties": {
+        "Liquidity": 2,
+        "Maker": 81,
+        "Momentum": 5,
+        "Protective": 1,
+        "Reserve": 12,
+        "Reversion": 1,
+        "Scalper": 8,
+        "Value": 2
+      },
+      "FillContracts": 226,
+      "GrossLosses": 1710.0000000004457,
+      "GrossWins": 3000,
+      "HoldSeconds": 7800.25,
+      "Id": "bot:BG:Scalper:12",
+      "Losses": 27,
+      "MakerEntryCount": 56,
+      "Market": "BG",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 570.0000000003001,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7169.5,
+      "PassiveEntries": 4,
+      "Peak": 1639.9999999999636,
+      "Pnl": 1389.9999999995543,
+      "Positive": 0,
+      "Realized": 1289.9999999995543,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 14,
+          "Pnl": -1270.0000000002092
+        },
+        "Target": {
+          "Count": 16,
+          "Pnl": 1919.9999999998909
+        },
+        "Timed exit": {
+          "Count": 44,
+          "Pnl": 639.9999999998727
+        }
+      },
+      "Size": 2,
+      "Stop": 7,
+      "Style": "Momentum",
+      "Target": 8,
+      "Unrealized": 100,
+      "Wins": 38
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 89,
+      "Closes": 51,
+      "Counterparties": {
+        "Liquidity": 2,
+        "Maker": 87
+      },
+      "Entries": 53,
+      "EntryFairEdgeTicks": 282.85897324928374,
+      "EntryMakerAge": 1732.5,
+      "Even": 4,
+      "ExitCounterparties": {
+        "Liquidity": 2,
+        "Maker": 66,
+        "Protective": 6,
+        "Reserve": 5,
+        "Scalper": 4,
+        "Value": 6
+      },
+      "FillContracts": 178,
+      "GrossLosses": 490.0000000001455,
+      "GrossWins": 3020.0000000000728,
+      "HoldSeconds": 3970.25,
+      "Id": "bot:BG:Scalper:13",
+      "Losses": 8,
+      "MakerEntryCount": 51,
+      "Market": "BG",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 160.00000000003638,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7084,
+      "PassiveEntries": 1,
+      "Peak": 2629.9999999999272,
+      "Pnl": 2529.9999999999272,
+      "Positive": 0,
+      "Realized": 2529.9999999999272,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 1,
+          "Pnl": -139.99999999996362
+        },
+        "Target": {
+          "Count": 33,
+          "Pnl": 2800
+        },
+        "Timed exit": {
+          "Count": 17,
+          "Pnl": -130.00000000010914
+        }
+      },
+      "Size": 2,
+      "Stop": 7,
+      "Style": "Reversion",
+      "Target": 5,
+      "Unrealized": 0,
+      "Wins": 39
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 63,
+      "Closes": 63,
+      "Counterparties": {
+        "Liquidity": 1,
+        "Maker": 53,
+        "Reserve": 8,
+        "Whale": 1
+      },
+      "Entries": 63,
+      "EntryFairEdgeTicks": 168.89000880641106,
+      "EntryMakerAge": 1781,
+      "Even": 6,
+      "ExitCounterparties": {
+        "Liquidity": 1,
+        "Maker": 50,
+        "Momentum": 1,
+        "Reserve": 8,
+        "Scalper": 2,
+        "Value": 1
+      },
+      "FillContracts": 126,
+      "GrossLosses": 1100.000000000182,
+      "GrossWins": 1459.999999999991,
+      "HoldSeconds": 3012.5,
+      "Id": "bot:BG:Scalper:14",
+      "Losses": 25,
+      "MakerEntryCount": 52,
+      "Market": "BG",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 200,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7071,
+      "PassiveEntries": 1,
+      "Peak": 479.9999999997908,
+      "Pnl": 359.999999999809,
+      "Positive": 0,
+      "Realized": 359.999999999809,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 5,
+          "Pnl": -550.0000000000455
+        },
+        "Target": {
+          "Count": 14,
+          "Pnl": 980.0000000000637
+        },
+        "Timed exit": {
+          "Count": 44,
+          "Pnl": -70.00000000020918
+        }
+      },
+      "Size": 1,
+      "Stop": 11,
+      "Style": "Momentum",
+      "Target": 7,
+      "Unrealized": 0,
+      "Wins": 32
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 66,
+      "Closes": 45,
+      "Counterparties": {
+        "Liquidity": 5,
+        "Maker": 56,
+        "Momentum": 1,
+        "Whale": 4
+      },
+      "Entries": 39,
+      "EntryFairEdgeTicks": 199.19107930315295,
+      "EntryMakerAge": 1129.25,
+      "Even": 0,
+      "ExitCounterparties": {
+        "Liquidity": 5,
+        "Maker": 42,
+        "Momentum": 2,
+        "Protective": 3,
+        "Reserve": 5,
+        "Scalper": 5,
+        "Value": 2,
+        "Whale": 2
+      },
+      "FillContracts": 132,
+      "GrossLosses": 1010.0000000002183,
+      "GrossWins": 4150,
+      "HoldSeconds": 5938.25,
+      "Id": "bot:BG:Scalper:15",
+      "Losses": 9,
+      "MakerEntryCount": 31,
+      "Market": "BG",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 340.00000000005457,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7140.5,
+      "PassiveEntries": 5,
+      "Peak": 3319.9999999998,
+      "Pnl": 3139.9999999997817,
+      "Positive": 0,
+      "Realized": 3139.9999999997817,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 5,
+          "Pnl": -640.0000000001455
+        },
+        "Target": {
+          "Count": 24,
+          "Pnl": 3700
+        },
+        "Timed exit": {
+          "Count": 16,
+          "Pnl": 79.99999999992724
+        }
+      },
+      "Size": 2,
+      "Stop": 8,
+      "Style": "Reversion",
+      "Target": 10,
+      "Unrealized": 0,
+      "Wins": 36
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 60,
+      "Closes": 60,
+      "Counterparties": {
+        "Liquidity": 3,
+        "Maker": 50,
+        "Momentum": 1,
+        "Protective": 2,
+        "Reserve": 1,
+        "Scalper": 2,
+        "Value": 1
+      },
+      "Entries": 60,
+      "EntryFairEdgeTicks": 222.59330533055254,
+      "EntryMakerAge": 1983.5,
+      "Even": 3,
+      "ExitCounterparties": {
+        "Liquidity": 4,
+        "Maker": 42,
+        "Momentum": 3,
+        "Protective": 1,
+        "Reserve": 7,
+        "Scalper": 1,
+        "Value": 1,
+        "Whale": 1
+      },
+      "FillContracts": 120,
+      "GrossLosses": 550.0000000000455,
+      "GrossWins": 1770.0000000000273,
+      "HoldSeconds": 2564.5,
+      "Id": "bot:BG:Scalper:16",
+      "Losses": 17,
+      "MakerEntryCount": 50,
+      "Market": "BG",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 140.0000000000091,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7147,
+      "PassiveEntries": 7,
+      "Peak": 1219.9999999999818,
+      "Pnl": 1219.9999999999818,
+      "Positive": 0,
+      "Realized": 1219.9999999999818,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 3,
+          "Pnl": -309.9999999999909
+        },
+        "Target": {
+          "Count": 27,
+          "Pnl": 1489.9999999999636
+        },
+        "Timed exit": {
+          "Count": 30,
+          "Pnl": 40.000000000009095
+        }
+      },
+      "Size": 1,
+      "Stop": 10,
+      "Style": "Momentum",
+      "Target": 5,
+      "Unrealized": 0,
+      "Wins": 40
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 37,
+      "Closes": 37,
+      "Counterparties": {
+        "Liquidity": 1,
+        "Maker": 32,
+        "Reversion": 1,
+        "Scalper": 1,
+        "Whale": 2
+      },
+      "Entries": 37,
+      "EntryFairEdgeTicks": 203.76151349427528,
+      "EntryMakerAge": 775.5,
+      "Even": 2,
+      "ExitCounterparties": {
+        "Liquidity": 3,
+        "Maker": 24,
+        "Momentum": 1,
+        "Reserve": 3,
+        "Scalper": 1,
+        "Value": 5
+      },
+      "FillContracts": 74,
+      "GrossLosses": 149.99999999995453,
+      "GrossWins": 1729.9999999999272,
+      "HoldSeconds": 2288.75,
+      "Id": "bot:BG:Scalper:17",
+      "Losses": 3,
+      "MakerEntryCount": 32,
+      "Market": "BG",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 109.9999999999909,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7144.5,
+      "PassiveEntries": 5,
+      "Peak": 1579.9999999999727,
+      "Pnl": 1579.9999999999727,
+      "Positive": 0,
+      "Realized": 1579.9999999999727,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 2,
+          "Pnl": -139.99999999996362
+        },
+        "Target": {
+          "Count": 20,
+          "Pnl": 1399.9999999999545
+        },
+        "Timed exit": {
+          "Count": 15,
+          "Pnl": 319.9999999999818
+        }
+      },
+      "Size": 1,
+      "Stop": 7,
+      "Style": "Reversion",
+      "Target": 7,
+      "Unrealized": 0,
+      "Wins": 32
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 53,
+      "Closes": 53,
+      "Counterparties": {
+        "Liquidity": 2,
+        "Maker": 47,
+        "Momentum": 3,
+        "Whale": 2
+      },
+      "Entries": 54,
+      "EntryFairEdgeTicks": 203.01600005004366,
+      "EntryMakerAge": 1462.5,
+      "Even": 2,
+      "ExitCounterparties": {
+        "Liquidity": 4,
+        "Maker": 39,
+        "Momentum": 1,
+        "Protective": 3,
+        "Reserve": 3,
+        "Scalper": 1,
+        "Value": 1,
+        "Whale": 1
+      },
+      "FillContracts": 107,
+      "GrossLosses": 840.0000000000546,
+      "GrossWins": 1200,
+      "HoldSeconds": 3633.5,
+      "Id": "bot:BG:Scalper:18",
+      "Losses": 20,
+      "MakerEntryCount": 47,
+      "Market": "BG",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 180.0000000000182,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7191,
+      "PassiveEntries": 5,
+      "Peak": 529.9999999999727,
+      "Pnl": 369.99999999993634,
+      "Positive": 0,
+      "Realized": 359.99999999994543,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 15,
+          "Pnl": -750
+        },
+        "Target": {
+          "Count": 20,
+          "Pnl": 1000
+        },
+        "Timed exit": {
+          "Count": 18,
+          "Pnl": 109.99999999994543
+        }
+      },
+      "Size": 1,
+      "Stop": 5,
+      "Style": "Momentum",
+      "Target": 5,
+      "Unrealized": 9.999999999990905,
+      "Wins": 31
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 104,
+      "Closes": 63,
+      "Counterparties": {
+        "Maker": 92,
+        "Protective": 1,
+        "Scalper": 7,
+        "Whale": 4
+      },
+      "Entries": 59,
+      "EntryFairEdgeTicks": 330.3187756675288,
+      "EntryMakerAge": 1375.75,
+      "Even": 6,
+      "ExitCounterparties": {
+        "Liquidity": 4,
+        "Maker": 83,
+        "Momentum": 2,
+        "Protective": 2,
+        "Reserve": 6,
+        "Scalper": 4,
+        "Value": 3
+      },
+      "FillContracts": 208,
+      "GrossLosses": 350,
+      "GrossWins": 2909.9999999997635,
+      "HoldSeconds": 4367,
+      "Id": "bot:BG:Scalper:19",
+      "Losses": 7,
+      "MakerEntryCount": 49,
+      "Market": "BG",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 139.99999999996362,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7170,
+      "PassiveEntries": 2,
+      "Peak": 2559.9999999997635,
+      "Pnl": 2559.9999999997635,
+      "Positive": 0,
+      "Realized": 2559.9999999997635,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 2,
+          "Pnl": -279.99999999992724
+        },
+        "Target": {
+          "Count": 37,
+          "Pnl": 2550.000000000091
+        },
+        "Timed exit": {
+          "Count": 24,
+          "Pnl": 289.9999999995998
+        }
+      },
+      "Size": 2,
+      "Stop": 7,
+      "Style": "Reversion",
+      "Target": 4,
+      "Unrealized": 0,
+      "Wins": 50
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 76,
+      "Closes": 46,
+      "Counterparties": {
+        "Liquidity": 4,
+        "Maker": 64,
+        "Reserve": 1,
+        "Scalper": 3,
+        "Value": 2,
+        "Whale": 2
+      },
+      "Entries": 45,
+      "EntryFairEdgeTicks": 135.80022580553123,
+      "EntryMakerAge": 1292.75,
+      "Even": 2,
+      "ExitCounterparties": {
+        "Liquidity": 2,
+        "Maker": 59,
+        "Protective": 1,
+        "Reserve": 7,
+        "Scalper": 3,
+        "Value": 2,
+        "Whale": 2
+      },
+      "FillContracts": 152,
+      "GrossLosses": 2270.0000000000728,
+      "GrossWins": 2850,
+      "HoldSeconds": 8014.25,
+      "Id": "bot:BG:Scalper:2",
+      "Losses": 15,
+      "MakerEntryCount": 37,
+      "Market": "BG",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 640.0000000001455,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7104,
+      "PassiveEntries": 4,
+      "Peak": 1019.9999999998909,
+      "Pnl": 579.9999999999272,
+      "Positive": 0,
+      "Realized": 579.9999999999272,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 9,
+          "Pnl": -1810.0000000000364
+        },
+        "Target": {
+          "Count": 19,
+          "Pnl": 2239.9999999998727
+        },
+        "Timed exit": {
+          "Count": 18,
+          "Pnl": 150.00000000009095
+        }
+      },
+      "Size": 2,
+      "Stop": 11,
+      "Style": "Momentum",
+      "Target": 8,
+      "Unrealized": 0,
+      "Wins": 29
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 49,
+      "Closes": 49,
+      "Counterparties": {
+        "Liquidity": 4,
+        "Maker": 41,
+        "Reserve": 3,
+        "Scalper": 1
+      },
+      "Entries": 49,
+      "EntryFairEdgeTicks": 101.65612841977054,
+      "EntryMakerAge": 1176.5,
+      "Even": 3,
+      "ExitCounterparties": {
+        "Liquidity": 2,
+        "Maker": 38,
+        "Momentum": 2,
+        "Reserve": 5,
+        "Reversion": 1,
+        "Value": 1
+      },
+      "FillContracts": 98,
+      "GrossLosses": 740.0000000000091,
+      "GrossWins": 1400.000000000182,
+      "HoldSeconds": 3881.25,
+      "Id": "bot:BG:Scalper:20",
+      "Losses": 17,
+      "MakerEntryCount": 40,
+      "Market": "BG",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 249.99999999990905,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7081.5,
+      "PassiveEntries": 2,
+      "Peak": 810.0000000000819,
+      "Pnl": 660.0000000001728,
+      "Positive": 0,
+      "Realized": 660.0000000001728,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 4,
+          "Pnl": -440.00000000005457
+        },
+        "Target": {
+          "Count": 20,
+          "Pnl": 1200.0000000001364
+        },
+        "Timed exit": {
+          "Count": 25,
+          "Pnl": -99.99999999990905
+        }
+      },
+      "Size": 1,
+      "Stop": 11,
+      "Style": "Momentum",
+      "Target": 6,
+      "Unrealized": 0,
+      "Wins": 29
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 37,
+      "Closes": 37,
+      "Counterparties": {
+        "Liquidity": 2,
+        "Maker": 31,
+        "Scalper": 2,
+        "Whale": 2
+      },
+      "Entries": 37,
+      "EntryFairEdgeTicks": 199.7827140302834,
+      "EntryMakerAge": 674.75,
+      "Even": 0,
+      "ExitCounterparties": {
+        "Liquidity": 1,
+        "Maker": 25,
+        "Momentum": 1,
+        "Reserve": 4,
+        "Scalper": 2,
+        "Value": 4
+      },
+      "FillContracts": 74,
+      "GrossLosses": 329.9999999999727,
+      "GrossWins": 1930.0000000001546,
+      "HoldSeconds": 2978.75,
+      "Id": "bot:BG:Scalper:21",
+      "Losses": 6,
+      "MakerEntryCount": 31,
+      "Market": "BG",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 180.0000000000182,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7078.5,
+      "PassiveEntries": 2,
+      "Peak": 1780.0000000002,
+      "Pnl": 1600.000000000182,
+      "Positive": 0,
+      "Realized": 1600.000000000182,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 4,
+          "Pnl": -280.0000000000182
+        },
+        "Target": {
+          "Count": 19,
+          "Pnl": 1520.0000000001182
+        },
+        "Timed exit": {
+          "Count": 14,
+          "Pnl": 360.00000000008185
+        }
+      },
+      "Size": 1,
+      "Stop": 7,
+      "Style": "Reversion",
+      "Target": 8,
+      "Unrealized": 0,
+      "Wins": 31
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 121,
+      "Closes": 83,
+      "Counterparties": {
+        "Liquidity": 3,
+        "Maker": 102,
+        "Momentum": 4,
+        "Reserve": 4,
+        "Scalper": 7,
+        "Whale": 1
+      },
+      "Entries": 74,
+      "EntryFairEdgeTicks": 373.36224299530295,
+      "EntryMakerAge": 2006.5,
+      "Even": 5,
+      "ExitCounterparties": {
+        "Liquidity": 3,
+        "Maker": 84,
+        "Momentum": 5,
+        "Protective": 1,
+        "Reserve": 14,
+        "Reversion": 1,
+        "Scalper": 8,
+        "Whale": 5
+      },
+      "FillContracts": 242,
+      "GrossLosses": 1700.000000000091,
+      "GrossWins": 3500,
+      "HoldSeconds": 7359,
+      "Id": "bot:BG:Scalper:22",
+      "Losses": 21,
+      "MakerEntryCount": 60,
+      "Market": "BG",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 480.0000000000182,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7132.25,
+      "PassiveEntries": 3,
+      "Peak": 2139.9999999998727,
+      "Pnl": 1799.999999999909,
+      "Positive": 0,
+      "Realized": 1799.999999999909,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 9,
+          "Pnl": -1100
+        },
+        "Target": {
+          "Count": 47,
+          "Pnl": 3259.9999999999454
+        },
+        "Timed exit": {
+          "Count": 27,
+          "Pnl": -360.0000000000364
+        }
+      },
+      "Size": 2,
+      "Stop": 11,
+      "Style": "Momentum",
+      "Target": 5,
+      "Unrealized": 0,
+      "Wins": 57
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 40,
+      "Closes": 40,
+      "Counterparties": {
+        "Liquidity": 1,
+        "Maker": 38,
+        "Scalper": 1,
+        "Whale": 1
+      },
+      "Entries": 41,
+      "EntryFairEdgeTicks": 256.2610179874573,
+      "EntryMakerAge": 1359.5,
+      "Even": 3,
+      "ExitCounterparties": {
+        "Liquidity": 1,
+        "Maker": 24,
+        "Momentum": 3,
+        "Protective": 1,
+        "Reserve": 4,
+        "Scalper": 1,
+        "Value": 5,
+        "Whale": 1
+      },
+      "FillContracts": 81,
+      "GrossLosses": 210.00000000008185,
+      "GrossWins": 2319.999999999982,
+      "HoldSeconds": 3318,
+      "Id": "bot:BG:Scalper:23",
+      "Losses": 5,
+      "MakerEntryCount": 38,
+      "Market": "BG",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 80.00000000001819,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7162.75,
+      "PassiveEntries": 2,
+      "Peak": 2169.999999999891,
+      "Pnl": 2169.999999999891,
+      "Positive": 0,
+      "Realized": 2109.9999999999,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 2,
+          "Pnl": -130.00000000006366
+        },
+        "Target": {
+          "Count": 22,
+          "Pnl": 2000
+        },
+        "Timed exit": {
+          "Count": 16,
+          "Pnl": 239.99999999996362
+        }
+      },
+      "Size": 1,
+      "Stop": 6,
+      "Style": "Reversion",
+      "Target": 9,
+      "Unrealized": 59.999999999990905,
+      "Wins": 32
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 42,
+      "Closes": 42,
+      "Counterparties": {
+        "Liquidity": 2,
+        "Maker": 38,
+        "Reserve": 2
+      },
+      "Entries": 42,
+      "EntryFairEdgeTicks": 114.23586792133574,
+      "EntryMakerAge": 1422.25,
+      "Even": 2,
+      "ExitCounterparties": {
+        "Liquidity": 2,
+        "Maker": 31,
+        "Reserve": 2,
+        "Scalper": 4,
+        "Value": 3
+      },
+      "FillContracts": 84,
+      "GrossLosses": 1510.0000000001728,
+      "GrossWins": 1659.999999999991,
+      "HoldSeconds": 4454.5,
+      "Id": "bot:BG:Scalper:24",
+      "Losses": 16,
+      "MakerEntryCount": 38,
+      "Market": "BG",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 429.9999999999727,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7133.5,
+      "PassiveEntries": 2,
+      "Peak": 239.99999999991815,
+      "Pnl": 149.9999999998181,
+      "Positive": 0,
+      "Realized": 149.9999999998181,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 9,
+          "Pnl": -1100.000000000091
+        },
+        "Target": {
+          "Count": 18,
+          "Pnl": 1439.9999999999636
+        },
+        "Timed exit": {
+          "Count": 15,
+          "Pnl": -190.00000000005457
+        }
+      },
+      "Size": 1,
+      "Stop": 12,
+      "Style": "Momentum",
+      "Target": 8,
+      "Unrealized": 0,
+      "Wins": 24
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 68,
+      "Closes": 39,
+      "Counterparties": {
+        "Liquidity": 1,
+        "Maker": 63,
+        "Momentum": 1,
+        "Whale": 3
+      },
+      "Entries": 40,
+      "EntryFairEdgeTicks": 217.94922966639206,
+      "EntryMakerAge": 1251.5,
+      "Even": 4,
+      "ExitCounterparties": {
+        "Liquidity": 2,
+        "Maker": 46,
+        "Momentum": 4,
+        "Protective": 1,
+        "Reserve": 5,
+        "Reversion": 2,
+        "Scalper": 2,
+        "Value": 6
+      },
+      "FillContracts": 136,
+      "GrossLosses": 540.0000000000546,
+      "GrossWins": 3000.000000000364,
+      "HoldSeconds": 4660,
+      "Id": "bot:BG:Scalper:3",
+      "Losses": 5,
+      "MakerEntryCount": 36,
+      "Market": "BG",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 340.00000000005457,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 6967.75,
+      "PassiveEntries": 2,
+      "Peak": 2660.0000000004,
+      "Pnl": 2460.0000000003092,
+      "Positive": 0,
+      "Realized": 2460.0000000003092,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 2,
+          "Pnl": -320.00000000007276
+        },
+        "Target": {
+          "Count": 21,
+          "Pnl": 2660.0000000003092
+        },
+        "Timed exit": {
+          "Count": 16,
+          "Pnl": 120.00000000007276
+        }
+      },
+      "Size": 2,
+      "Stop": 8,
+      "Style": "Reversion",
+      "Target": 7,
+      "Unrealized": 0,
+      "Wins": 30
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 34,
+      "Closes": 34,
+      "Counterparties": {
+        "Liquidity": 2,
+        "Maker": 28,
+        "Scalper": 1,
+        "Value": 1,
+        "Whale": 2
+      },
+      "Entries": 34,
+      "EntryFairEdgeTicks": 158.46652008119418,
+      "EntryMakerAge": 1123.25,
+      "Even": 3,
+      "ExitCounterparties": {
+        "Liquidity": 2,
+        "Maker": 23,
+        "Momentum": 1,
+        "Reserve": 6,
+        "Scalper": 1,
+        "Value": 1
+      },
+      "FillContracts": 68,
+      "GrossLosses": 500.00000000009095,
+      "GrossWins": 1590.0000000000546,
+      "HoldSeconds": 3460.25,
+      "Id": "bot:BG:Scalper:4",
+      "Losses": 7,
+      "MakerEntryCount": 28,
+      "Market": "BG",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 180.0000000000182,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7116,
+      "PassiveEntries": 1,
+      "Peak": 1200,
+      "Pnl": 1089.9999999999636,
+      "Positive": 0,
+      "Realized": 1089.9999999999636,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 2,
+          "Pnl": -260.0000000000364
+        },
+        "Target": {
+          "Count": 14,
+          "Pnl": 1260.0000000000819
+        },
+        "Timed exit": {
+          "Count": 18,
+          "Pnl": 89.99999999991815
+        }
+      },
+      "Size": 1,
+      "Stop": 11,
+      "Style": "Momentum",
+      "Target": 9,
+      "Unrealized": 0,
+      "Wins": 24
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 29,
+      "Closes": 29,
+      "Counterparties": {
+        "Liquidity": 2,
+        "Maker": 24,
+        "Scalper": 1,
+        "Whale": 2
+      },
+      "Entries": 29,
+      "EntryFairEdgeTicks": 141.46153420319752,
+      "EntryMakerAge": 728.75,
+      "Even": 1,
+      "ExitCounterparties": {
+        "Liquidity": 1,
+        "Maker": 21,
+        "Momentum": 1,
+        "Protective": 1,
+        "Reserve": 1,
+        "Scalper": 2,
+        "Value": 1,
+        "Whale": 1
+      },
+      "FillContracts": 58,
+      "GrossLosses": 380.00000000006366,
+      "GrossWins": 1810.0000000000364,
+      "HoldSeconds": 2943,
+      "Id": "bot:BG:Scalper:5",
+      "Losses": 5,
+      "MakerEntryCount": 24,
+      "Market": "BG",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 230.0000000000182,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 6938.5,
+      "PassiveEntries": 3,
+      "Peak": 1569.9999999999818,
+      "Pnl": 1429.9999999999727,
+      "Positive": 0,
+      "Realized": 1429.9999999999727,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 4,
+          "Pnl": -320.00000000007276
+        },
+        "Target": {
+          "Count": 15,
+          "Pnl": 1500
+        },
+        "Timed exit": {
+          "Count": 10,
+          "Pnl": 250.00000000004547
+        }
+      },
+      "Size": 1,
+      "Stop": 8,
+      "Style": "Reversion",
+      "Target": 10,
+      "Unrealized": 0,
+      "Wins": 23
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 96,
+      "Closes": 59,
+      "Counterparties": {
+        "Liquidity": 2,
+        "Maker": 86,
+        "Reserve": 2,
+        "Scalper": 4,
+        "Whale": 2
+      },
+      "Entries": 57,
+      "EntryFairEdgeTicks": 192.94900598025924,
+      "EntryMakerAge": 1740,
+      "Even": 0,
+      "ExitCounterparties": {
+        "Liquidity": 5,
+        "Maker": 79,
+        "Momentum": 4,
+        "Reserve": 6,
+        "Scalper": 2
+      },
+      "FillContracts": 192,
+      "GrossLosses": 1960.0000000003092,
+      "GrossWins": 2280.000000000109,
+      "HoldSeconds": 7369,
+      "Id": "bot:BG:Scalper:6",
+      "Losses": 18,
+      "MakerEntryCount": 51,
+      "Market": "BG",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 739.9999999998727,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7137,
+      "PassiveEntries": 2,
+      "Peak": 479.9999999998363,
+      "Pnl": 319.9999999997999,
+      "Positive": 0,
+      "Realized": 319.9999999997999,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 5,
+          "Pnl": -880.0000000001091
+        },
+        "Target": {
+          "Count": 31,
+          "Pnl": 2040.0000000000546
+        },
+        "Timed exit": {
+          "Count": 23,
+          "Pnl": -840.0000000001455
+        }
+      },
+      "Size": 2,
+      "Stop": 11,
+      "Style": "Momentum",
+      "Target": 4,
+      "Unrealized": 0,
+      "Wins": 41
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 64,
+      "Closes": 39,
+      "Counterparties": {
+        "Liquidity": 1,
+        "Maker": 53,
+        "Momentum": 2,
+        "Scalper": 1,
+        "Value": 1,
+        "Whale": 6
+      },
+      "Entries": 41,
+      "EntryFairEdgeTicks": 210.18160060266018,
+      "EntryMakerAge": 1229.5,
+      "Even": 3,
+      "ExitCounterparties": {
+        "Liquidity": 3,
+        "Maker": 44,
+        "Momentum": 4,
+        "Protective": 2,
+        "Reserve": 6,
+        "Scalper": 2,
+        "Value": 3
+      },
+      "FillContracts": 128,
+      "GrossLosses": 419.9999999999818,
+      "GrossWins": 3380.000000000291,
+      "HoldSeconds": 4648.5,
+      "Id": "bot:BG:Scalper:7",
+      "Losses": 5,
+      "MakerEntryCount": 34,
+      "Market": "BG",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 279.99999999992724,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7145.5,
+      "PassiveEntries": 4,
+      "Peak": 3000.000000000273,
+      "Pnl": 2960.0000000003092,
+      "Positive": 0,
+      "Realized": 2960.0000000003092,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 1,
+          "Pnl": -239.99999999996362
+        },
+        "Target": {
+          "Count": 18,
+          "Pnl": 2520.0000000001637
+        },
+        "Timed exit": {
+          "Count": 20,
+          "Pnl": 680.0000000001091
+        }
+      },
+      "Size": 2,
+      "Stop": 12,
+      "Style": "Reversion",
+      "Target": 9,
+      "Unrealized": 0,
+      "Wins": 31
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 44,
+      "Closes": 44,
+      "Counterparties": {
+        "Maker": 39,
+        "Protective": 1,
+        "Reserve": 2,
+        "Scalper": 1,
+        "Value": 1,
+        "Whale": 1
+      },
+      "Entries": 45,
+      "EntryFairEdgeTicks": 165.9748187566438,
+      "EntryMakerAge": 1370.25,
+      "Even": 3,
+      "ExitCounterparties": {
+        "Liquidity": 4,
+        "Maker": 27,
+        "Momentum": 2,
+        "Protective": 2,
+        "Reserve": 5,
+        "Scalper": 2,
+        "Value": 2
+      },
+      "FillContracts": 89,
+      "GrossLosses": 650,
+      "GrossWins": 2049.999999999818,
+      "HoldSeconds": 4125,
+      "Id": "bot:BG:Scalper:8",
+      "Losses": 8,
+      "MakerEntryCount": 39,
+      "Market": "BG",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 170.00000000002728,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7067,
+      "PassiveEntries": 2,
+      "Peak": 1489.9999999998272,
+      "Pnl": 1319.9999999998,
+      "Positive": 0,
+      "Realized": 1399.999999999818,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 3,
+          "Pnl": -400
+        },
+        "Target": {
+          "Count": 22,
+          "Pnl": 1759.9999999999
+        },
+        "Timed exit": {
+          "Count": 19,
+          "Pnl": 39.999999999918145
+        }
+      },
+      "Size": 1,
+      "Stop": 12,
+      "Style": "Momentum",
+      "Target": 8,
+      "Unrealized": -80.00000000001819,
+      "Wins": 33
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 55,
+      "Closes": 55,
+      "Counterparties": {
+        "Liquidity": 4,
+        "Maker": 47,
+        "Protective": 1,
+        "Scalper": 3,
+        "Value": 1
+      },
+      "Entries": 56,
+      "EntryFairEdgeTicks": 324.9084451654235,
+      "EntryMakerAge": 1669.75,
+      "Even": 4,
+      "ExitCounterparties": {
+        "Liquidity": 2,
+        "Maker": 42,
+        "Momentum": 2,
+        "Protective": 2,
+        "Reserve": 4,
+        "Scalper": 1,
+        "Value": 1,
+        "Whale": 1
+      },
+      "FillContracts": 111,
+      "GrossLosses": 249.99999999995453,
+      "GrossWins": 1549.999999999818,
+      "HoldSeconds": 2518,
+      "Id": "bot:BG:Scalper:9",
+      "Losses": 6,
+      "MakerEntryCount": 47,
+      "Market": "BG",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 110.00000000003638,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7177.5,
+      "PassiveEntries": 3,
+      "Peak": 1329.9999999998818,
+      "Pnl": 1329.9999999998818,
+      "Positive": 0,
+      "Realized": 1299.9999999998636,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 4,
+          "Pnl": -200
+        },
+        "Target": {
+          "Count": 34,
+          "Pnl": 1399.999999999818
+        },
+        "Timed exit": {
+          "Count": 17,
+          "Pnl": 100.00000000004547
+        }
+      },
+      "Size": 1,
+      "Stop": 5,
+      "Style": "Reversion",
+      "Target": 4,
+      "Unrealized": 30.00000000001819,
+      "Wins": 45
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 59,
+      "Closes": 59,
+      "Counterparties": {
+        "Liquidity": 1,
+        "Maker": 51,
+        "Momentum": 1,
+        "Scalper": 2,
+        "Value": 4
+      },
+      "Entries": 59,
+      "EntryFairEdgeTicks": 503.4540344728448,
+      "EntryMakerAge": 1101.25,
+      "Even": 2,
+      "ExitCounterparties": {
+        "Liquidity": 1,
+        "Maker": 38,
+        "Momentum": 2,
+        "Protective": 1,
+        "Reserve": 4,
+        "Reversion": 2,
+        "Scalper": 2,
+        "Value": 7,
+        "Whale": 2
+      },
+      "FillContracts": 118,
+      "GrossLosses": 185,
+      "GrossWins": 1610,
+      "HoldSeconds": 2170.25,
+      "Id": "bot:BT:Scalper:1",
+      "Losses": 5,
+      "MakerEntryCount": 50,
+      "Market": "BT",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 70,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7055.5,
+      "PassiveEntries": 5,
+      "Peak": 1435,
+      "Pnl": 1425,
+      "Positive": 0,
+      "Realized": 1425,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 4,
+          "Pnl": -180
+        },
+        "Target": {
+          "Count": 42,
+          "Pnl": 1490
+        },
+        "Timed exit": {
+          "Count": 13,
+          "Pnl": 115
+        }
+      },
+      "Size": 1,
+      "Stop": 9,
+      "Style": "Reversion",
+      "Target": 7,
+      "Unrealized": 0,
+      "Wins": 52
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 63,
+      "Closes": 63,
+      "Counterparties": {
+        "Liquidity": 2,
+        "Maker": 55,
+        "Momentum": 1,
+        "Scalper": 2,
+        "Whale": 3
+      },
+      "Entries": 63,
+      "EntryFairEdgeTicks": 467.3881928101473,
+      "EntryMakerAge": 1076,
+      "Even": 1,
+      "ExitCounterparties": {
+        "Liquidity": 4,
+        "Maker": 50,
+        "Momentum": 1,
+        "Reserve": 3,
+        "Scalper": 1,
+        "Value": 4
+      },
+      "FillContracts": 126,
+      "GrossLosses": 505,
+      "GrossWins": 1420,
+      "HoldSeconds": 2210.75,
+      "Id": "bot:BT:Scalper:10",
+      "Losses": 12,
+      "MakerEntryCount": 54,
+      "Market": "BT",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 100,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7089.75,
+      "PassiveEntries": 6,
+      "Peak": 995,
+      "Pnl": 915,
+      "Positive": 0,
+      "Realized": 915,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 9,
+          "Pnl": -450
+        },
+        "Target": {
+          "Count": 41,
+          "Pnl": 1305
+        },
+        "Timed exit": {
+          "Count": 13,
+          "Pnl": 60
+        }
+      },
+      "Size": 1,
+      "Stop": 10,
+      "Style": "Momentum",
+      "Target": 6,
+      "Unrealized": 0,
+      "Wins": 50
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 65,
+      "Closes": 65,
+      "Counterparties": {
+        "Liquidity": 10,
+        "Maker": 45,
+        "Momentum": 1,
+        "Reversion": 1,
+        "Scalper": 1,
+        "Value": 4,
+        "Whale": 3
+      },
+      "Entries": 65,
+      "EntryFairEdgeTicks": 546.0257815969089,
+      "EntryMakerAge": 922.5,
+      "Even": 3,
+      "ExitCounterparties": {
+        "Liquidity": 8,
+        "Maker": 47,
+        "Momentum": 3,
+        "Reserve": 5,
+        "Value": 2
+      },
+      "FillContracts": 130,
+      "GrossLosses": 350,
+      "GrossWins": 2125,
+      "HoldSeconds": 2822.5,
+      "Id": "bot:BT:Scalper:11",
+      "Losses": 13,
+      "MakerEntryCount": 45,
+      "Market": "BT",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 70,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7171.5,
+      "PassiveEntries": 9,
+      "Peak": 1775,
+      "Pnl": 1775,
+      "Positive": 0,
+      "Realized": 1775,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 7,
+          "Pnl": -280
+        },
+        "Target": {
+          "Count": 35,
+          "Pnl": 1875
+        },
+        "Timed exit": {
+          "Count": 23,
+          "Pnl": 180
+        }
+      },
+      "Size": 1,
+      "Stop": 8,
+      "Style": "Reversion",
+      "Target": 10,
+      "Unrealized": 0,
+      "Wins": 49
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 71,
+      "Closes": 71,
+      "Counterparties": {
+        "Liquidity": 5,
+        "Maker": 62,
+        "Value": 2,
+        "Whale": 3
+      },
+      "Entries": 72,
+      "EntryFairEdgeTicks": 645.8620290346298,
+      "EntryMakerAge": 1206.5,
+      "Even": 0,
+      "ExitCounterparties": {
+        "Liquidity": 6,
+        "Maker": 52,
+        "Momentum": 2,
+        "Protective": 1,
+        "Reserve": 2,
+        "Scalper": 2,
+        "Value": 3,
+        "Whale": 3
+      },
+      "FillContracts": 143,
+      "GrossLosses": 420,
+      "GrossWins": 2225,
+      "HoldSeconds": 3283.5,
+      "Id": "bot:BT:Scalper:12",
+      "Losses": 17,
+      "MakerEntryCount": 61,
+      "Market": "BT",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 55,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7193,
+      "PassiveEntries": 7,
+      "Peak": 1855,
+      "Pnl": 1810,
+      "Positive": 0,
+      "Realized": 1805,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 16,
+          "Pnl": -415
+        },
+        "Target": {
+          "Count": 45,
+          "Pnl": 2050
+        },
+        "Timed exit": {
+          "Count": 10,
+          "Pnl": 170
+        }
+      },
+      "Size": 1,
+      "Stop": 5,
+      "Style": "Momentum",
+      "Target": 9,
+      "Unrealized": 5,
+      "Wins": 54
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 69,
+      "Closes": 69,
+      "Counterparties": {
+        "Liquidity": 5,
+        "Maker": 60,
+        "Momentum": 1,
+        "Reversion": 1,
+        "Whale": 3
+      },
+      "Entries": 70,
+      "EntryFairEdgeTicks": 686.9743334713421,
+      "EntryMakerAge": 1073.75,
+      "Even": 0,
+      "ExitCounterparties": {
+        "Liquidity": 4,
+        "Maker": 50,
+        "Momentum": 1,
+        "Protective": 2,
+        "Reserve": 4,
+        "Scalper": 2,
+        "Value": 3,
+        "Whale": 3
+      },
+      "FillContracts": 139,
+      "GrossLosses": 245,
+      "GrossWins": 2660,
+      "HoldSeconds": 3230.75,
+      "Id": "bot:BT:Scalper:13",
+      "Losses": 8,
+      "MakerEntryCount": 60,
+      "Market": "BT",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 125,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7185,
+      "PassiveEntries": 6,
+      "Peak": 2425,
+      "Pnl": 2425,
+      "Positive": 0,
+      "Realized": 2415,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 7,
+          "Pnl": -240
+        },
+        "Target": {
+          "Count": 58,
+          "Pnl": 2600
+        },
+        "Timed exit": {
+          "Count": 4,
+          "Pnl": 55
+        }
+      },
+      "Size": 1,
+      "Stop": 5,
+      "Style": "Reversion",
+      "Target": 8,
+      "Unrealized": 10,
+      "Wins": 61
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 70,
+      "Closes": 70,
+      "Counterparties": {
+        "Liquidity": 5,
+        "Maker": 55,
+        "Momentum": 2,
+        "Reserve": 1,
+        "Value": 5,
+        "Whale": 3
+      },
+      "Entries": 71,
+      "EntryFairEdgeTicks": 523.018341682051,
+      "EntryMakerAge": 1135.5,
+      "Even": 1,
+      "ExitCounterparties": {
+        "Liquidity": 6,
+        "Maker": 53,
+        "Protective": 2,
+        "Reserve": 2,
+        "Reversion": 1,
+        "Scalper": 2,
+        "Value": 2,
+        "Whale": 2
+      },
+      "FillContracts": 141,
+      "GrossLosses": 250,
+      "GrossWins": 2340,
+      "HoldSeconds": 3512.5,
+      "Id": "bot:BT:Scalper:14",
+      "Losses": 12,
+      "MakerEntryCount": 55,
+      "Market": "BT",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 60,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7183.5,
+      "PassiveEntries": 9,
+      "Peak": 2105,
+      "Pnl": 2105,
+      "Positive": 0,
+      "Realized": 2090,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 10,
+          "Pnl": -230
+        },
+        "Target": {
+          "Count": 53,
+          "Pnl": 2265
+        },
+        "Timed exit": {
+          "Count": 7,
+          "Pnl": 55
+        }
+      },
+      "Size": 1,
+      "Stop": 5,
+      "Style": "Momentum",
+      "Target": 8,
+      "Unrealized": 15,
+      "Wins": 57
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 49,
+      "Closes": 49,
+      "Counterparties": {
+        "Liquidity": 1,
+        "Maker": 38,
+        "Momentum": 2,
+        "Reserve": 1,
+        "Scalper": 2,
+        "Value": 4,
+        "Whale": 1
+      },
+      "Entries": 49,
+      "EntryFairEdgeTicks": 420.786779504866,
+      "EntryMakerAge": 852.5,
+      "Even": 0,
+      "ExitCounterparties": {
+        "Liquidity": 2,
+        "Maker": 39,
+        "Momentum": 1,
+        "Protective": 2,
+        "Scalper": 1,
+        "Value": 2,
+        "Whale": 2
+      },
+      "FillContracts": 98,
+      "GrossLosses": 355,
+      "GrossWins": 1305,
+      "HoldSeconds": 1993.75,
+      "Id": "bot:BT:Scalper:15",
+      "Losses": 6,
+      "MakerEntryCount": 38,
+      "Market": "BT",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 110,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7138.75,
+      "PassiveEntries": 6,
+      "Peak": 950,
+      "Pnl": 950,
+      "Positive": 0,
+      "Realized": 950,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 5,
+          "Pnl": -335
+        },
+        "Target": {
+          "Count": 41,
+          "Pnl": 1280
+        },
+        "Timed exit": {
+          "Count": 3,
+          "Pnl": 5
+        }
+      },
+      "Size": 1,
+      "Stop": 12,
+      "Style": "Reversion",
+      "Target": 5,
+      "Unrealized": 0,
+      "Wins": 43
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 55,
+      "Closes": 55,
+      "Counterparties": {
+        "Liquidity": 2,
+        "Maker": 47,
+        "Scalper": 1,
+        "Value": 2,
+        "Whale": 3
+      },
+      "Entries": 55,
+      "EntryFairEdgeTicks": 327.86242266547924,
+      "EntryMakerAge": 1148.75,
+      "Even": 2,
+      "ExitCounterparties": {
+        "Liquidity": 3,
+        "Maker": 40,
+        "Momentum": 3,
+        "Protective": 1,
+        "Reserve": 1,
+        "Reversion": 1,
+        "Scalper": 2,
+        "Value": 4
+      },
+      "FillContracts": 110,
+      "GrossLosses": 365,
+      "GrossWins": 1390,
+      "HoldSeconds": 3136.75,
+      "Id": "bot:BT:Scalper:16",
+      "Losses": 14,
+      "MakerEntryCount": 46,
+      "Market": "BT",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 65,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7175.25,
+      "PassiveEntries": 7,
+      "Peak": 1045,
+      "Pnl": 1025,
+      "Positive": 0,
+      "Realized": 1025,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 12,
+          "Pnl": -340
+        },
+        "Target": {
+          "Count": 32,
+          "Pnl": 1305
+        },
+        "Timed exit": {
+          "Count": 11,
+          "Pnl": 60
+        }
+      },
+      "Size": 1,
+      "Stop": 6,
+      "Style": "Momentum",
+      "Target": 8,
+      "Unrealized": 0,
+      "Wins": 39
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 70,
+      "Closes": 70,
+      "Counterparties": {
+        "Liquidity": 4,
+        "Maker": 55,
+        "Reserve": 1,
+        "Scalper": 2,
+        "Value": 5,
+        "Whale": 3
+      },
+      "Entries": 70,
+      "EntryFairEdgeTicks": 652.4952810577233,
+      "EntryMakerAge": 1068.75,
+      "Even": 2,
+      "ExitCounterparties": {
+        "Liquidity": 4,
+        "Maker": 53,
+        "Momentum": 1,
+        "Protective": 1,
+        "Reserve": 3,
+        "Reversion": 1,
+        "Scalper": 3,
+        "Value": 3,
+        "Whale": 1
+      },
+      "FillContracts": 140,
+      "GrossLosses": 195,
+      "GrossWins": 2445,
+      "HoldSeconds": 3097,
+      "Id": "bot:BT:Scalper:17",
+      "Losses": 6,
+      "MakerEntryCount": 55,
+      "Market": "BT",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 80,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7165.25,
+      "PassiveEntries": 9,
+      "Peak": 2275,
+      "Pnl": 2250,
+      "Positive": 0,
+      "Realized": 2250,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 4,
+          "Pnl": -185
+        },
+        "Target": {
+          "Count": 49,
+          "Pnl": 2215
+        },
+        "Timed exit": {
+          "Count": 17,
+          "Pnl": 220
+        }
+      },
+      "Size": 1,
+      "Stop": 11,
+      "Style": "Reversion",
+      "Target": 8,
+      "Unrealized": 0,
+      "Wins": 62
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 66,
+      "Closes": 66,
+      "Counterparties": {
+        "Liquidity": 2,
+        "Maker": 58,
+        "Momentum": 1,
+        "Protective": 3,
+        "Value": 2,
+        "Whale": 1
+      },
+      "Entries": 67,
+      "EntryFairEdgeTicks": 516.3594578874618,
+      "EntryMakerAge": 1179,
+      "Even": 3,
+      "ExitCounterparties": {
+        "Liquidity": 7,
+        "Maker": 46,
+        "Momentum": 5,
+        "Protective": 1,
+        "Reserve": 3,
+        "Scalper": 2,
+        "Value": 1,
+        "Whale": 1
+      },
+      "FillContracts": 133,
+      "GrossLosses": 195,
+      "GrossWins": 2000,
+      "HoldSeconds": 3283,
+      "Id": "bot:BT:Scalper:18",
+      "Losses": 8,
+      "MakerEntryCount": 57,
+      "Market": "BT",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 50,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7189.75,
+      "PassiveEntries": 5,
+      "Peak": 1830,
+      "Pnl": 1815,
+      "Positive": 0,
+      "Realized": 1805,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 8,
+          "Pnl": -175
+        },
+        "Target": {
+          "Count": 41,
+          "Pnl": 1785
+        },
+        "Timed exit": {
+          "Count": 17,
+          "Pnl": 195
+        }
+      },
+      "Size": 1,
+      "Stop": 5,
+      "Style": "Momentum",
+      "Target": 8,
+      "Unrealized": 10,
+      "Wins": 55
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 51,
+      "Closes": 51,
+      "Counterparties": {
+        "Liquidity": 1,
+        "Maker": 47,
+        "Momentum": 1,
+        "Scalper": 1,
+        "Whale": 2
+      },
+      "Entries": 52,
+      "EntryFairEdgeTicks": 423.7901201752684,
+      "EntryMakerAge": 929.25,
+      "Even": 0,
+      "ExitCounterparties": {
+        "Liquidity": 5,
+        "Maker": 37,
+        "Reserve": 1,
+        "Scalper": 1,
+        "Value": 5,
+        "Whale": 2
+      },
+      "FillContracts": 103,
+      "GrossLosses": 270,
+      "GrossWins": 1715,
+      "HoldSeconds": 3019,
+      "Id": "bot:BT:Scalper:19",
+      "Losses": 12,
+      "MakerEntryCount": 47,
+      "Market": "BT",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 70,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7187.5,
+      "PassiveEntries": 2,
+      "Peak": 1500,
+      "Pnl": 1455,
+      "Positive": 0,
+      "Realized": 1445,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 9,
+          "Pnl": -240
+        },
+        "Target": {
+          "Count": 36,
+          "Pnl": 1665
+        },
+        "Timed exit": {
+          "Count": 6,
+          "Pnl": 20
+        }
+      },
+      "Size": 1,
+      "Stop": 5,
+      "Style": "Reversion",
+      "Target": 9,
+      "Unrealized": 10,
+      "Wins": 39
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 64,
+      "Closes": 64,
+      "Counterparties": {
+        "Liquidity": 1,
+        "Maker": 57,
+        "Momentum": 2,
+        "Scalper": 1,
+        "Value": 1,
+        "Whale": 2
+      },
+      "Entries": 64,
+      "EntryFairEdgeTicks": 569.9373803428753,
+      "EntryMakerAge": 883.75,
+      "Even": 0,
+      "ExitCounterparties": {
+        "Liquidity": 9,
+        "Maker": 35,
+        "Momentum": 4,
+        "Protective": 4,
+        "Reserve": 2,
+        "Reversion": 1,
+        "Scalper": 4,
+        "Value": 3,
+        "Whale": 2
+      },
+      "FillContracts": 128,
+      "GrossLosses": 285,
+      "GrossWins": 2325,
+      "HoldSeconds": 2907.25,
+      "Id": "bot:BT:Scalper:2",
+      "Losses": 7,
+      "MakerEntryCount": 57,
+      "Market": "BT",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 125,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7169.25,
+      "PassiveEntries": 3,
+      "Peak": 2040,
+      "Pnl": 2040,
+      "Positive": 0,
+      "Realized": 2040,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 4,
+          "Pnl": -205
+        },
+        "Target": {
+          "Count": 53,
+          "Pnl": 2255
+        },
+        "Timed exit": {
+          "Count": 7,
+          "Pnl": -10
+        }
+      },
+      "Size": 1,
+      "Stop": 10,
+      "Style": "Momentum",
+      "Target": 8,
+      "Unrealized": 0,
+      "Wins": 57
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 62,
+      "Closes": 62,
+      "Counterparties": {
+        "Liquidity": 1,
+        "Maker": 50,
+        "Momentum": 1,
+        "Protective": 1,
+        "Reserve": 5,
+        "Scalper": 2,
+        "Value": 2
+      },
+      "Entries": 62,
+      "EntryFairEdgeTicks": 365.7295896558353,
+      "EntryMakerAge": 1216.5,
+      "Even": 2,
+      "ExitCounterparties": {
+        "Liquidity": 2,
+        "Maker": 46,
+        "Momentum": 3,
+        "Reserve": 5,
+        "Scalper": 5,
+        "Value": 1
+      },
+      "FillContracts": 124,
+      "GrossLosses": 215,
+      "GrossWins": 2045,
+      "HoldSeconds": 3216.5,
+      "Id": "bot:BT:Scalper:20",
+      "Losses": 10,
+      "MakerEntryCount": 50,
+      "Market": "BT",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 75,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7157,
+      "PassiveEntries": 3,
+      "Peak": 1830,
+      "Pnl": 1830,
+      "Positive": 0,
+      "Realized": 1830,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 3,
+          "Pnl": -150
+        },
+        "Target": {
+          "Count": 34,
+          "Pnl": 1700
+        },
+        "Timed exit": {
+          "Count": 25,
+          "Pnl": 280
+        }
+      },
+      "Size": 1,
+      "Stop": 10,
+      "Style": "Momentum",
+      "Target": 10,
+      "Unrealized": 0,
+      "Wins": 50
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 55,
+      "Closes": 55,
+      "Counterparties": {
+        "Liquidity": 3,
+        "Maker": 48,
+        "Momentum": 1,
+        "Reversion": 1,
+        "Whale": 2
+      },
+      "Entries": 55,
+      "EntryFairEdgeTicks": 475.88669601170113,
+      "EntryMakerAge": 1087.25,
+      "Even": 0,
+      "ExitCounterparties": {
+        "Liquidity": 2,
+        "Maker": 44,
+        "Momentum": 1,
+        "Protective": 1,
+        "Reserve": 2,
+        "Reversion": 1,
+        "Value": 3,
+        "Whale": 1
+      },
+      "FillContracts": 110,
+      "GrossLosses": 205,
+      "GrossWins": 1500,
+      "HoldSeconds": 2443.5,
+      "Id": "bot:BT:Scalper:21",
+      "Losses": 7,
+      "MakerEntryCount": 48,
+      "Market": "BT",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 65,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7163.25,
+      "PassiveEntries": 2,
+      "Peak": 1310,
+      "Pnl": 1295,
+      "Positive": 0,
+      "Realized": 1295,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 3,
+          "Pnl": -145
+        },
+        "Target": {
+          "Count": 43,
+          "Pnl": 1415
+        },
+        "Timed exit": {
+          "Count": 9,
+          "Pnl": 25
+        }
+      },
+      "Size": 1,
+      "Stop": 9,
+      "Style": "Reversion",
+      "Target": 6,
+      "Unrealized": 0,
+      "Wins": 48
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 57,
+      "Closes": 57,
+      "Counterparties": {
+        "Liquidity": 1,
+        "Maker": 49,
+        "Momentum": 1,
+        "Protective": 1,
+        "Reserve": 2,
+        "Scalper": 1,
+        "Whale": 2
+      },
+      "Entries": 57,
+      "EntryFairEdgeTicks": 364.31802816809795,
+      "EntryMakerAge": 1246,
+      "Even": 1,
+      "ExitCounterparties": {
+        "Liquidity": 4,
+        "Maker": 47,
+        "Momentum": 1,
+        "Reserve": 1,
+        "Reversion": 1,
+        "Value": 2,
+        "Whale": 1
+      },
+      "FillContracts": 114,
+      "GrossLosses": 255,
+      "GrossWins": 1490,
+      "HoldSeconds": 2956,
+      "Id": "bot:BT:Scalper:22",
+      "Losses": 13,
+      "MakerEntryCount": 49,
+      "Market": "BT",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 70,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7161.75,
+      "PassiveEntries": 4,
+      "Peak": 1235,
+      "Pnl": 1235,
+      "Positive": 0,
+      "Realized": 1235,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 8,
+          "Pnl": -200
+        },
+        "Target": {
+          "Count": 34,
+          "Pnl": 1350
+        },
+        "Timed exit": {
+          "Count": 15,
+          "Pnl": 85
+        }
+      },
+      "Size": 1,
+      "Stop": 5,
+      "Style": "Momentum",
+      "Target": 7,
+      "Unrealized": 0,
+      "Wins": 43
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 64,
+      "Closes": 64,
+      "Counterparties": {
+        "Liquidity": 3,
+        "Maker": 49,
+        "Momentum": 3,
+        "Protective": 1,
+        "Reversion": 1,
+        "Scalper": 3,
+        "Value": 2,
+        "Whale": 2
+      },
+      "Entries": 64,
+      "EntryFairEdgeTicks": 571.9083236024162,
+      "EntryMakerAge": 1137.75,
+      "Even": 1,
+      "ExitCounterparties": {
+        "Liquidity": 1,
+        "Maker": 51,
+        "Momentum": 5,
+        "Reserve": 2,
+        "Reversion": 1,
+        "Scalper": 1,
+        "Value": 1,
+        "Whale": 2
+      },
+      "FillContracts": 128,
+      "GrossLosses": 325,
+      "GrossWins": 1785,
+      "HoldSeconds": 2752,
+      "Id": "bot:BT:Scalper:23",
+      "Losses": 9,
+      "MakerEntryCount": 49,
+      "Market": "BT",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 75,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7174.25,
+      "PassiveEntries": 9,
+      "Peak": 1460,
+      "Pnl": 1460,
+      "Positive": 0,
+      "Realized": 1460,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 6,
+          "Pnl": -265
+        },
+        "Target": {
+          "Count": 44,
+          "Pnl": 1610
+        },
+        "Timed exit": {
+          "Count": 14,
+          "Pnl": 115
+        }
+      },
+      "Size": 1,
+      "Stop": 10,
+      "Style": "Reversion",
+      "Target": 7,
+      "Unrealized": 0,
+      "Wins": 54
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 58,
+      "Closes": 58,
+      "Counterparties": {
+        "Liquidity": 3,
+        "Maker": 47,
+        "Momentum": 2,
+        "Protective": 2,
+        "Reserve": 1,
+        "Scalper": 1,
+        "Value": 2,
+        "Whale": 1
+      },
+      "Entries": 59,
+      "EntryFairEdgeTicks": 375.50198673986597,
+      "EntryMakerAge": 927.75,
+      "Even": 0,
+      "ExitCounterparties": {
+        "Liquidity": 3,
+        "Maker": 44,
+        "Momentum": 3,
+        "Protective": 1,
+        "Reserve": 3,
+        "Scalper": 1,
+        "Value": 3
+      },
+      "FillContracts": 117,
+      "GrossLosses": 400,
+      "GrossWins": 2080,
+      "HoldSeconds": 3533,
+      "Id": "bot:BT:Scalper:24",
+      "Losses": 10,
+      "MakerEntryCount": 47,
+      "Market": "BT",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 195,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7194.25,
+      "PassiveEntries": 5,
+      "Peak": 1685,
+      "Pnl": 1685,
+      "Positive": 0,
+      "Realized": 1680,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 10,
+          "Pnl": -400
+        },
+        "Target": {
+          "Count": 39,
+          "Pnl": 1915
+        },
+        "Timed exit": {
+          "Count": 9,
+          "Pnl": 165
+        }
+      },
+      "Size": 1,
+      "Stop": 5,
+      "Style": "Momentum",
+      "Target": 9,
+      "Unrealized": 5,
+      "Wins": 48
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 77,
+      "Closes": 77,
+      "Counterparties": {
+        "Liquidity": 3,
+        "Maker": 66,
+        "Momentum": 1,
+        "Scalper": 1,
+        "Value": 3,
+        "Whale": 3
+      },
+      "Entries": 77,
+      "EntryFairEdgeTicks": 647.1382566467946,
+      "EntryMakerAge": 1329.75,
+      "Even": 4,
+      "ExitCounterparties": {
+        "Liquidity": 1,
+        "Maker": 63,
+        "Momentum": 1,
+        "Reserve": 6,
+        "Scalper": 3,
+        "Value": 3
+      },
+      "FillContracts": 154,
+      "GrossLosses": 105,
+      "GrossWins": 1510,
+      "HoldSeconds": 1855.5,
+      "Id": "bot:BT:Scalper:3",
+      "Losses": 6,
+      "MakerEntryCount": 66,
+      "Market": "BT",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 55,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7168.5,
+      "PassiveEntries": 8,
+      "Peak": 1405,
+      "Pnl": 1405,
+      "Positive": 0,
+      "Realized": 1405,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 1,
+          "Pnl": -50
+        },
+        "Target": {
+          "Count": 59,
+          "Pnl": 1460
+        },
+        "Timed exit": {
+          "Count": 17,
+          "Pnl": -5
+        }
+      },
+      "Size": 1,
+      "Stop": 10,
+      "Style": "Reversion",
+      "Target": 4,
+      "Unrealized": 0,
+      "Wins": 67
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 52,
+      "Closes": 52,
+      "Counterparties": {
+        "Liquidity": 1,
+        "Maker": 45,
+        "Momentum": 1,
+        "Scalper": 3,
+        "Value": 1,
+        "Whale": 2
+      },
+      "Entries": 53,
+      "EntryFairEdgeTicks": 374.2211547318584,
+      "EntryMakerAge": 885.75,
+      "Even": 1,
+      "ExitCounterparties": {
+        "Liquidity": 1,
+        "Maker": 39,
+        "Momentum": 2,
+        "Reserve": 2,
+        "Scalper": 3,
+        "Value": 3,
+        "Whale": 2
+      },
+      "FillContracts": 105,
+      "GrossLosses": 400,
+      "GrossWins": 1520,
+      "HoldSeconds": 3035.5,
+      "Id": "bot:BT:Scalper:4",
+      "Losses": 10,
+      "MakerEntryCount": 45,
+      "Market": "BT",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 120,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7181.5,
+      "PassiveEntries": 4,
+      "Peak": 1135,
+      "Pnl": 1135,
+      "Positive": 0,
+      "Realized": 1120,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 8,
+          "Pnl": -345
+        },
+        "Target": {
+          "Count": 34,
+          "Pnl": 1365
+        },
+        "Timed exit": {
+          "Count": 10,
+          "Pnl": 100
+        }
+      },
+      "Size": 1,
+      "Stop": 7,
+      "Style": "Momentum",
+      "Target": 8,
+      "Unrealized": 15,
+      "Wins": 41
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 55,
+      "Closes": 55,
+      "Counterparties": {
+        "Liquidity": 2,
+        "Maker": 51,
+        "Reserve": 1,
+        "Scalper": 1,
+        "Value": 1
+      },
+      "Entries": 56,
+      "EntryFairEdgeTicks": 440.3395256550866,
+      "EntryMakerAge": 1017.75,
+      "Even": 0,
+      "ExitCounterparties": {
+        "Maker": 45,
+        "Reserve": 1,
+        "Reversion": 2,
+        "Scalper": 2,
+        "Value": 3,
+        "Whale": 2
+      },
+      "FillContracts": 111,
+      "GrossLosses": 355,
+      "GrossWins": 1870,
+      "HoldSeconds": 3113.5,
+      "Id": "bot:BT:Scalper:5",
+      "Losses": 8,
+      "MakerEntryCount": 51,
+      "Market": "BT",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 95,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7182,
+      "PassiveEntries": 1,
+      "Peak": 1530,
+      "Pnl": 1530,
+      "Positive": 0,
+      "Realized": 1515,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 6,
+          "Pnl": -330
+        },
+        "Target": {
+          "Count": 39,
+          "Pnl": 1755
+        },
+        "Timed exit": {
+          "Count": 10,
+          "Pnl": 90
+        }
+      },
+      "Size": 1,
+      "Stop": 10,
+      "Style": "Reversion",
+      "Target": 9,
+      "Unrealized": 15,
+      "Wins": 47
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 88,
+      "Closes": 88,
+      "Counterparties": {
+        "Liquidity": 4,
+        "Maker": 74,
+        "Protective": 1,
+        "Scalper": 3,
+        "Value": 3,
+        "Whale": 3
+      },
+      "Entries": 88,
+      "EntryFairEdgeTicks": 500.6891725612222,
+      "EntryMakerAge": 1828.5,
+      "Even": 5,
+      "ExitCounterparties": {
+        "Liquidity": 2,
+        "Maker": 73,
+        "Momentum": 2,
+        "Reserve": 4,
+        "Scalper": 3,
+        "Value": 2,
+        "Whale": 2
+      },
+      "FillContracts": 176,
+      "GrossLosses": 825,
+      "GrossWins": 1490,
+      "HoldSeconds": 3084.5,
+      "Id": "bot:BT:Scalper:6",
+      "Losses": 21,
+      "MakerEntryCount": 72,
+      "Market": "BT",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 280,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7170.75,
+      "PassiveEntries": 9,
+      "Peak": 780,
+      "Pnl": 665,
+      "Positive": 0,
+      "Realized": 665,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 10,
+          "Pnl": -665
+        },
+        "Target": {
+          "Count": 53,
+          "Pnl": 1390
+        },
+        "Timed exit": {
+          "Count": 25,
+          "Pnl": -60
+        }
+      },
+      "Size": 1,
+      "Stop": 10,
+      "Style": "Momentum",
+      "Target": 5,
+      "Unrealized": 0,
+      "Wins": 62
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 63,
+      "Closes": 63,
+      "Counterparties": {
+        "Liquidity": 2,
+        "Maker": 54,
+        "Momentum": 2,
+        "Reserve": 1,
+        "Scalper": 2,
+        "Whale": 2
+      },
+      "Entries": 63,
+      "EntryFairEdgeTicks": 471.9207728023757,
+      "EntryMakerAge": 1164,
+      "Even": 2,
+      "ExitCounterparties": {
+        "Liquidity": 6,
+        "Maker": 45,
+        "Protective": 1,
+        "Reserve": 3,
+        "Scalper": 1,
+        "Value": 5,
+        "Whale": 2
+      },
+      "FillContracts": 126,
+      "GrossLosses": 310,
+      "GrossWins": 1475,
+      "HoldSeconds": 2583.5,
+      "Id": "bot:BT:Scalper:7",
+      "Losses": 7,
+      "MakerEntryCount": 54,
+      "Market": "BT",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 85,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7083.5,
+      "PassiveEntries": 5,
+      "Peak": 1245,
+      "Pnl": 1165,
+      "Positive": 0,
+      "Realized": 1165,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 4,
+          "Pnl": -230
+        },
+        "Target": {
+          "Count": 52,
+          "Pnl": 1460
+        },
+        "Timed exit": {
+          "Count": 7,
+          "Pnl": -65
+        }
+      },
+      "Size": 1,
+      "Stop": 11,
+      "Style": "Reversion",
+      "Target": 5,
+      "Unrealized": 0,
+      "Wins": 54
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 70,
+      "Closes": 70,
+      "Counterparties": {
+        "Liquidity": 4,
+        "Maker": 59,
+        "Reserve": 1,
+        "Scalper": 3,
+        "Value": 1,
+        "Whale": 2
+      },
+      "Entries": 70,
+      "EntryFairEdgeTicks": 518.3212987330917,
+      "EntryMakerAge": 1350.75,
+      "Even": 1,
+      "ExitCounterparties": {
+        "Liquidity": 2,
+        "Maker": 63,
+        "Reserve": 2,
+        "Scalper": 1,
+        "Value": 1,
+        "Whale": 1
+      },
+      "FillContracts": 140,
+      "GrossLosses": 150,
+      "GrossWins": 1380,
+      "HoldSeconds": 2505,
+      "Id": "bot:BT:Scalper:8",
+      "Losses": 11,
+      "MakerEntryCount": 59,
+      "Market": "BT",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 50,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7137,
+      "PassiveEntries": 5,
+      "Peak": 1230,
+      "Pnl": 1230,
+      "Positive": 0,
+      "Realized": 1230,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 1,
+          "Pnl": -40
+        },
+        "Target": {
+          "Count": 56,
+          "Pnl": 1360
+        },
+        "Timed exit": {
+          "Count": 13,
+          "Pnl": -90
+        }
+      },
+      "Size": 1,
+      "Stop": 8,
+      "Style": "Momentum",
+      "Target": 4,
+      "Unrealized": 0,
+      "Wins": 58
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 54,
+      "Closes": 54,
+      "Counterparties": {
+        "Liquidity": 1,
+        "Maker": 44,
+        "Momentum": 1,
+        "Scalper": 2,
+        "Value": 3,
+        "Whale": 3
+      },
+      "Entries": 54,
+      "EntryFairEdgeTicks": 502.7526552208292,
+      "EntryMakerAge": 789.25,
+      "Even": 2,
+      "ExitCounterparties": {
+        "Liquidity": 1,
+        "Maker": 41,
+        "Momentum": 3,
+        "Reserve": 4,
+        "Scalper": 2,
+        "Value": 3
+      },
+      "FillContracts": 108,
+      "GrossLosses": 130,
+      "GrossWins": 1495,
+      "HoldSeconds": 1683.5,
+      "Id": "bot:BT:Scalper:9",
+      "Losses": 5,
+      "MakerEntryCount": 44,
+      "Market": "BT",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 65,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7087.25,
+      "PassiveEntries": 6,
+      "Peak": 1415,
+      "Pnl": 1365,
+      "Positive": 0,
+      "Realized": 1365,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 3,
+          "Pnl": -120
+        },
+        "Target": {
+          "Count": 40,
+          "Pnl": 1420
+        },
+        "Timed exit": {
+          "Count": 11,
+          "Pnl": 65
+        }
+      },
+      "Size": 1,
+      "Stop": 8,
+      "Style": "Reversion",
+      "Target": 5,
+      "Unrealized": 0,
+      "Wins": 47
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 36,
+      "Closes": 36,
+      "Counterparties": {
+        "Maker": 34,
+        "Scalper": 3
+      },
+      "Entries": 37,
+      "EntryFairEdgeTicks": 214.83036285849812,
+      "EntryMakerAge": 1178.5,
+      "Even": 1,
+      "ExitCounterparties": {
+        "Liquidity": 2,
+        "Maker": 22,
+        "Momentum": 2,
+        "Protective": 1,
+        "Reserve": 5,
+        "Reversion": 1,
+        "Scalper": 2,
+        "Whale": 1
+      },
+      "FillContracts": 73,
+      "GrossLosses": 50,
+      "GrossWins": 2975,
+      "HoldSeconds": 3106.75,
+      "Id": "bot:BX:Scalper:1",
+      "Losses": 1,
+      "MakerEntryCount": 34,
+      "Market": "BX",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 75,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7112.5,
+      "PassiveEntries": 0,
+      "Peak": 3037.5,
+      "Pnl": 3037.5,
+      "Positive": 0,
+      "Realized": 2925,
+      "Reasons": {
+        "Target": {
+          "Count": 17,
+          "Pnl": 2125
+        },
+        "Timed exit": {
+          "Count": 19,
+          "Pnl": 800
+        }
+      },
+      "Size": 1,
+      "Stop": 5,
+      "Style": "Reversion",
+      "Target": 10,
+      "Unrealized": 112.5,
+      "Wins": 34
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 98,
+      "Closes": 55,
+      "Counterparties": {
+        "Liquidity": 2,
+        "Maker": 74,
+        "Reserve": 17,
+        "Scalper": 4,
+        "Value": 1
+      },
+      "Entries": 54,
+      "EntryFairEdgeTicks": 149.96104828649186,
+      "EntryMakerAge": 1399.5,
+      "Even": 4,
+      "ExitCounterparties": {
+        "Liquidity": 2,
+        "Maker": 88,
+        "Reversion": 3,
+        "Scalper": 1,
+        "Value": 2,
+        "Whale": 2
+      },
+      "FillContracts": 196,
+      "GrossLosses": 1300,
+      "GrossWins": 2687.5,
+      "HoldSeconds": 6289,
+      "Id": "bot:BX:Scalper:10",
+      "Losses": 19,
+      "MakerEntryCount": 37,
+      "Market": "BX",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 300,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7060.5,
+      "PassiveEntries": 2,
+      "Peak": 1512.5,
+      "Pnl": 1387.5,
+      "Positive": 0,
+      "Realized": 1387.5,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 9,
+          "Pnl": -875
+        },
+        "Target": {
+          "Count": 28,
+          "Pnl": 2587.5
+        },
+        "Timed exit": {
+          "Count": 18,
+          "Pnl": -325
+        }
+      },
+      "Size": 2,
+      "Stop": 5,
+      "Style": "Momentum",
+      "Target": 4,
+      "Unrealized": 0,
+      "Wins": 32
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 32,
+      "Closes": 32,
+      "Counterparties": {
+        "Liquidity": 1,
+        "Maker": 31,
+        "Scalper": 1
+      },
+      "Entries": 33,
+      "EntryFairEdgeTicks": 183.12616429772606,
+      "EntryMakerAge": 966.25,
+      "Even": 1,
+      "ExitCounterparties": {
+        "Liquidity": 2,
+        "Maker": 17,
+        "Momentum": 1,
+        "Protective": 2,
+        "Reserve": 6,
+        "Scalper": 2,
+        "Value": 1,
+        "Whale": 1
+      },
+      "FillContracts": 65,
+      "GrossLosses": 212.5,
+      "GrossWins": 2125,
+      "HoldSeconds": 2776.25,
+      "Id": "bot:BX:Scalper:11",
+      "Losses": 5,
+      "MakerEntryCount": 31,
+      "Market": "BX",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 87.5,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7187,
+      "PassiveEntries": 0,
+      "Peak": 2000,
+      "Pnl": 1912.5,
+      "Positive": 0,
+      "Realized": 1912.5,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 1,
+          "Pnl": -75
+        },
+        "Target": {
+          "Count": 16,
+          "Pnl": 1800
+        },
+        "Timed exit": {
+          "Count": 15,
+          "Pnl": 187.5
+        }
+      },
+      "Size": 1,
+      "Stop": 6,
+      "Style": "Reversion",
+      "Target": 9,
+      "Unrealized": 0,
+      "Wins": 26
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 43,
+      "Closes": 43,
+      "Counterparties": {
+        "Maker": 41,
+        "Reserve": 2,
+        "Scalper": 1
+      },
+      "Entries": 44,
+      "EntryFairEdgeTicks": 135.7708085520644,
+      "EntryMakerAge": 1369.25,
+      "Even": 2,
+      "ExitCounterparties": {
+        "Liquidity": 2,
+        "Maker": 21,
+        "Momentum": 2,
+        "Protective": 1,
+        "Reserve": 12,
+        "Scalper": 2,
+        "Value": 2,
+        "Whale": 1
+      },
+      "FillContracts": 87,
+      "GrossLosses": 862.5,
+      "GrossWins": 2562.5,
+      "HoldSeconds": 4536.5,
+      "Id": "bot:BX:Scalper:12",
+      "Losses": 11,
+      "MakerEntryCount": 40,
+      "Market": "BX",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 200,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7188.5,
+      "PassiveEntries": 1,
+      "Peak": 1825,
+      "Pnl": 1700,
+      "Positive": 0,
+      "Realized": 1700,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 8,
+          "Pnl": -800
+        },
+        "Target": {
+          "Count": 12,
+          "Pnl": 1500
+        },
+        "Timed exit": {
+          "Count": 23,
+          "Pnl": 1000
+        }
+      },
+      "Size": 1,
+      "Stop": 8,
+      "Style": "Momentum",
+      "Target": 10,
+      "Unrealized": 0,
+      "Wins": 30
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 102,
+      "Closes": 58,
+      "Counterparties": {
+        "Liquidity": 5,
+        "Maker": 86,
+        "Momentum": 2,
+        "Scalper": 5,
+        "Whale": 4
+      },
+      "Entries": 59,
+      "EntryFairEdgeTicks": 331.3687159436813,
+      "EntryMakerAge": 1520.25,
+      "Even": 4,
+      "ExitCounterparties": {
+        "Liquidity": 4,
+        "Maker": 71,
+        "Momentum": 1,
+        "Protective": 1,
+        "Reserve": 18,
+        "Scalper": 4,
+        "Value": 3
+      },
+      "FillContracts": 204,
+      "GrossLosses": 25,
+      "GrossWins": 4000,
+      "HoldSeconds": 4608,
+      "Id": "bot:BX:Scalper:13",
+      "Losses": 1,
+      "MakerEntryCount": 48,
+      "Market": "BX",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 125,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7104,
+      "PassiveEntries": 4,
+      "Peak": 3975,
+      "Pnl": 3975,
+      "Positive": 0,
+      "Realized": 3975,
+      "Reasons": {
+        "Target": {
+          "Count": 43,
+          "Pnl": 3600
+        },
+        "Timed exit": {
+          "Count": 15,
+          "Pnl": 375
+        }
+      },
+      "Size": 2,
+      "Stop": 10,
+      "Style": "Reversion",
+      "Target": 4,
+      "Unrealized": 0,
+      "Wins": 53
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 124,
+      "Closes": 66,
+      "Counterparties": {
+        "Maker": 113,
+        "Momentum": 3,
+        "Reserve": 6,
+        "Whale": 2
+      },
+      "Entries": 68,
+      "EntryFairEdgeTicks": 208.26016453010743,
+      "EntryMakerAge": 2473.25,
+      "Even": 9,
+      "ExitCounterparties": {
+        "Liquidity": 2,
+        "Maker": 87,
+        "Reserve": 28,
+        "Scalper": 1,
+        "Value": 2,
+        "Whale": 4
+      },
+      "FillContracts": 248,
+      "GrossLosses": 1200,
+      "GrossWins": 2850,
+      "HoldSeconds": 5994.5,
+      "Id": "bot:BX:Scalper:14",
+      "Losses": 19,
+      "MakerEntryCount": 60,
+      "Market": "BX",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 400,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7118.75,
+      "PassiveEntries": 4,
+      "Peak": 1650,
+      "Pnl": 1650,
+      "Positive": 0,
+      "Realized": 1650,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 2,
+          "Pnl": -500
+        },
+        "Target": {
+          "Count": 27,
+          "Pnl": 2400
+        },
+        "Timed exit": {
+          "Count": 37,
+          "Pnl": -250
+        }
+      },
+      "Size": 2,
+      "Stop": 10,
+      "Style": "Momentum",
+      "Target": 4,
+      "Unrealized": 0,
+      "Wins": 38
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 70,
+      "Closes": 41,
+      "Counterparties": {
+        "Liquidity": 2,
+        "Maker": 64,
+        "Momentum": 2,
+        "Protective": 1,
+        "Scalper": 1
+      },
+      "Entries": 40,
+      "EntryFairEdgeTicks": 251.19272302544414,
+      "EntryMakerAge": 1066,
+      "Even": 1,
+      "ExitCounterparties": {
+        "Liquidity": 4,
+        "Maker": 37,
+        "Momentum": 6,
+        "Reserve": 16,
+        "Scalper": 4,
+        "Value": 2,
+        "Whale": 1
+      },
+      "FillContracts": 140,
+      "GrossLosses": 25,
+      "GrossWins": 4100,
+      "HoldSeconds": 3513.25,
+      "Id": "bot:BX:Scalper:15",
+      "Losses": 1,
+      "MakerEntryCount": 35,
+      "Market": "BX",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 100,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7084,
+      "PassiveEntries": 2,
+      "Peak": 4075,
+      "Pnl": 4075,
+      "Positive": 0,
+      "Realized": 4075,
+      "Reasons": {
+        "Target": {
+          "Count": 29,
+          "Pnl": 3550
+        },
+        "Timed exit": {
+          "Count": 12,
+          "Pnl": 525
+        }
+      },
+      "Size": 2,
+      "Stop": 5,
+      "Style": "Reversion",
+      "Target": 6,
+      "Unrealized": 0,
+      "Wins": 39
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 45,
+      "Closes": 45,
+      "Counterparties": {
+        "Liquidity": 2,
+        "Maker": 37,
+        "Reserve": 3,
+        "Scalper": 1,
+        "Whale": 2
+      },
+      "Entries": 45,
+      "EntryFairEdgeTicks": 162.14434659268954,
+      "EntryMakerAge": 1234.5,
+      "Even": 1,
+      "ExitCounterparties": {
+        "Liquidity": 4,
+        "Maker": 30,
+        "Protective": 1,
+        "Reserve": 8,
+        "Scalper": 2
+      },
+      "FillContracts": 90,
+      "GrossLosses": 1025,
+      "GrossWins": 2975,
+      "HoldSeconds": 5002.75,
+      "Id": "bot:BX:Scalper:16",
+      "Losses": 12,
+      "MakerEntryCount": 36,
+      "Market": "BX",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 175,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7050.5,
+      "PassiveEntries": 5,
+      "Peak": 2087.5,
+      "Pnl": 1950,
+      "Positive": 0,
+      "Realized": 1950,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 7,
+          "Pnl": -962.5
+        },
+        "Target": {
+          "Count": 18,
+          "Pnl": 2250
+        },
+        "Timed exit": {
+          "Count": 20,
+          "Pnl": 662.5
+        }
+      },
+      "Size": 1,
+      "Stop": 11,
+      "Style": "Momentum",
+      "Target": 10,
+      "Unrealized": 0,
+      "Wins": 32
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 31,
+      "Closes": 31,
+      "Counterparties": {
+        "Maker": 29,
+        "Protective": 1,
+        "Whale": 2
+      },
+      "Entries": 32,
+      "EntryFairEdgeTicks": 185.7557242026087,
+      "EntryMakerAge": 1036,
+      "Even": 0,
+      "ExitCounterparties": {
+        "Liquidity": 3,
+        "Maker": 16,
+        "Momentum": 1,
+        "Protective": 1,
+        "Reserve": 7,
+        "Scalper": 1,
+        "Value": 2
+      },
+      "FillContracts": 63,
+      "GrossLosses": 112.5,
+      "GrossWins": 2762.5,
+      "HoldSeconds": 3140,
+      "Id": "bot:BX:Scalper:17",
+      "Losses": 3,
+      "MakerEntryCount": 29,
+      "Market": "BX",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 87.5,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7144.75,
+      "PassiveEntries": 2,
+      "Peak": 2750,
+      "Pnl": 2750,
+      "Positive": 0,
+      "Realized": 2650,
+      "Reasons": {
+        "Target": {
+          "Count": 16,
+          "Pnl": 2000
+        },
+        "Timed exit": {
+          "Count": 15,
+          "Pnl": 650
+        }
+      },
+      "Size": 1,
+      "Stop": 5,
+      "Style": "Reversion",
+      "Target": 10,
+      "Unrealized": 100,
+      "Wins": 28
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 62,
+      "Closes": 62,
+      "Counterparties": {
+        "Maker": 56,
+        "Reserve": 4,
+        "Scalper": 1,
+        "Whale": 2
+      },
+      "Entries": 63,
+      "EntryFairEdgeTicks": 246.06731814195882,
+      "EntryMakerAge": 1775,
+      "Even": 1,
+      "ExitCounterparties": {
+        "Liquidity": 2,
+        "Maker": 45,
+        "Momentum": 3,
+        "Protective": 2,
+        "Reserve": 1,
+        "Scalper": 2,
+        "Value": 6,
+        "Whale": 1
+      },
+      "FillContracts": 125,
+      "GrossLosses": 1100,
+      "GrossWins": 2375,
+      "HoldSeconds": 4581.75,
+      "Id": "bot:BX:Scalper:18",
+      "Losses": 19,
+      "MakerEntryCount": 55,
+      "Market": "BX",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 187.5,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7182,
+      "PassiveEntries": 2,
+      "Peak": 1362.5,
+      "Pnl": 1287.5,
+      "Positive": 0,
+      "Realized": 1275,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 16,
+          "Pnl": -1000
+        },
+        "Target": {
+          "Count": 36,
+          "Pnl": 2250
+        },
+        "Timed exit": {
+          "Count": 10,
+          "Pnl": 25
+        }
+      },
+      "Size": 1,
+      "Stop": 5,
+      "Style": "Momentum",
+      "Target": 5,
+      "Unrealized": 12.5,
+      "Wins": 42
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 46,
+      "Closes": 46,
+      "Counterparties": {
+        "Maker": 45,
+        "Value": 1
+      },
+      "Entries": 46,
+      "EntryFairEdgeTicks": 265.34304406914816,
+      "EntryMakerAge": 1520,
+      "Even": 8,
+      "ExitCounterparties": {
+        "Liquidity": 2,
+        "Maker": 28,
+        "Protective": 3,
+        "Reserve": 11,
+        "Value": 2
+      },
+      "FillContracts": 92,
+      "GrossLosses": 62.5,
+      "GrossWins": 2837.5,
+      "HoldSeconds": 2391,
+      "Id": "bot:BX:Scalper:19",
+      "Losses": 3,
+      "MakerEntryCount": 45,
+      "Market": "BX",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 62.5,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7111.75,
+      "PassiveEntries": 0,
+      "Peak": 2775,
+      "Pnl": 2775,
+      "Positive": 0,
+      "Realized": 2775,
+      "Reasons": {
+        "Target": {
+          "Count": 12,
+          "Pnl": 1350
+        },
+        "Timed exit": {
+          "Count": 34,
+          "Pnl": 1425
+        }
+      },
+      "Size": 1,
+      "Stop": 6,
+      "Style": "Reversion",
+      "Target": 9,
+      "Unrealized": 0,
+      "Wins": 35
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 68,
+      "Closes": 37,
+      "Counterparties": {
+        "Maker": 59,
+        "Reserve": 3,
+        "Reversion": 1,
+        "Scalper": 5
+      },
+      "Entries": 39,
+      "EntryFairEdgeTicks": 164.62826741320896,
+      "EntryMakerAge": 1032,
+      "Even": 1,
+      "ExitCounterparties": {
+        "Liquidity": 2,
+        "Maker": 48,
+        "Momentum": 2,
+        "Protective": 2,
+        "Reserve": 6,
+        "Reversion": 2,
+        "Scalper": 4,
+        "Value": 2
+      },
+      "FillContracts": 136,
+      "GrossLosses": 1412.5,
+      "GrossWins": 3775,
+      "HoldSeconds": 6279.25,
+      "Id": "bot:BX:Scalper:2",
+      "Losses": 8,
+      "MakerEntryCount": 33,
+      "Market": "BX",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 350,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7020,
+      "PassiveEntries": 0,
+      "Peak": 2612.5,
+      "Pnl": 2362.5,
+      "Positive": 0,
+      "Realized": 2362.5,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 6,
+          "Pnl": -1212.5
+        },
+        "Target": {
+          "Count": 21,
+          "Pnl": 3325
+        },
+        "Timed exit": {
+          "Count": 10,
+          "Pnl": 250
+        }
+      },
+      "Size": 2,
+      "Stop": 8,
+      "Style": "Momentum",
+      "Target": 7,
+      "Unrealized": 0,
+      "Wins": 28
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 62,
+      "Closes": 62,
+      "Counterparties": {
+        "Liquidity": 5,
+        "Maker": 49,
+        "Reserve": 8
+      },
+      "Entries": 62,
+      "EntryFairEdgeTicks": 191.06539705098476,
+      "EntryMakerAge": 2214,
+      "Even": 7,
+      "ExitCounterparties": {
+        "Liquidity": 2,
+        "Maker": 39,
+        "Momentum": 1,
+        "Reserve": 19,
+        "Reversion": 1
+      },
+      "FillContracts": 124,
+      "GrossLosses": 400,
+      "GrossWins": 2750,
+      "HoldSeconds": 3138.5,
+      "Id": "bot:BX:Scalper:20",
+      "Losses": 19,
+      "MakerEntryCount": 49,
+      "Market": "BX",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 100,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7122.5,
+      "PassiveEntries": 5,
+      "Peak": 2350,
+      "Pnl": 2350,
+      "Positive": 0,
+      "Realized": 2350,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 1,
+          "Pnl": -87.5
+        },
+        "Target": {
+          "Count": 11,
+          "Pnl": 1375
+        },
+        "Timed exit": {
+          "Count": 50,
+          "Pnl": 1062.5
+        }
+      },
+      "Size": 1,
+      "Stop": 7,
+      "Style": "Momentum",
+      "Target": 10,
+      "Unrealized": 0,
+      "Wins": 36
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 37,
+      "Closes": 37,
+      "Counterparties": {
+        "Liquidity": 1,
+        "Maker": 35,
+        "Scalper": 1
+      },
+      "Entries": 37,
+      "EntryFairEdgeTicks": 223.78717097546541,
+      "EntryMakerAge": 1182.25,
+      "Even": 1,
+      "ExitCounterparties": {
+        "Liquidity": 2,
+        "Maker": 24,
+        "Reserve": 7,
+        "Scalper": 2,
+        "Value": 1,
+        "Whale": 1
+      },
+      "FillContracts": 74,
+      "GrossLosses": 175,
+      "GrossWins": 2837.5,
+      "HoldSeconds": 3069,
+      "Id": "bot:BX:Scalper:21",
+      "Losses": 3,
+      "MakerEntryCount": 35,
+      "Market": "BX",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 150,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7111.75,
+      "PassiveEntries": 1,
+      "Peak": 2662.5,
+      "Pnl": 2662.5,
+      "Positive": 0,
+      "Realized": 2662.5,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 2,
+          "Pnl": -150
+        },
+        "Target": {
+          "Count": 20,
+          "Pnl": 2250
+        },
+        "Timed exit": {
+          "Count": 15,
+          "Pnl": 562.5
+        }
+      },
+      "Size": 1,
+      "Stop": 6,
+      "Style": "Reversion",
+      "Target": 9,
+      "Unrealized": 0,
+      "Wins": 33
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 79,
+      "Closes": 79,
+      "Counterparties": {
+        "Liquidity": 1,
+        "Maker": 68,
+        "Reserve": 9,
+        "Scalper": 1,
+        "Whale": 1
+      },
+      "Entries": 80,
+      "EntryFairEdgeTicks": 253.25283767969086,
+      "EntryMakerAge": 2460.25,
+      "Even": 7,
+      "ExitCounterparties": {
+        "Liquidity": 1,
+        "Maker": 68,
+        "Protective": 1,
+        "Reserve": 7,
+        "Value": 1,
+        "Whale": 1
+      },
+      "FillContracts": 159,
+      "GrossLosses": 925,
+      "GrossWins": 2125,
+      "HoldSeconds": 4281.25,
+      "Id": "bot:BX:Scalper:22",
+      "Losses": 24,
+      "MakerEntryCount": 67,
+      "Market": "BX",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 150,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7188.5,
+      "PassiveEntries": 3,
+      "Peak": 1200,
+      "Pnl": 1200,
+      "Positive": 0,
+      "Realized": 1200,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 5,
+          "Pnl": -437.5
+        },
+        "Target": {
+          "Count": 38,
+          "Pnl": 1900
+        },
+        "Timed exit": {
+          "Count": 36,
+          "Pnl": -262.5
+        }
+      },
+      "Size": 1,
+      "Stop": 7,
+      "Style": "Momentum",
+      "Target": 4,
+      "Unrealized": 0,
+      "Wins": 48
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 32,
+      "Closes": 32,
+      "Counterparties": {
+        "Maker": 29,
+        "Scalper": 2,
+        "Whale": 1
+      },
+      "Entries": 32,
+      "EntryFairEdgeTicks": 199.64747771658585,
+      "EntryMakerAge": 1175.75,
+      "Even": 0,
+      "ExitCounterparties": {
+        "Liquidity": 2,
+        "Maker": 22,
+        "Momentum": 3,
+        "Reserve": 1,
+        "Scalper": 1,
+        "Value": 3
+      },
+      "FillContracts": 64,
+      "GrossLosses": 175,
+      "GrossWins": 1687.5,
+      "HoldSeconds": 2143,
+      "Id": "bot:BX:Scalper:23",
+      "Losses": 4,
+      "MakerEntryCount": 29,
+      "Market": "BX",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 87.5,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 6989.25,
+      "PassiveEntries": 1,
+      "Peak": 1550,
+      "Pnl": 1512.5,
+      "Positive": 0,
+      "Realized": 1512.5,
+      "Reasons": {
+        "Target": {
+          "Count": 25,
+          "Pnl": 1587.5
+        },
+        "Timed exit": {
+          "Count": 7,
+          "Pnl": -75
+        }
+      },
+      "Size": 1,
+      "Stop": 8,
+      "Style": "Reversion",
+      "Target": 5,
+      "Unrealized": 0,
+      "Wins": 28
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 99,
+      "Closes": 61,
+      "Counterparties": {
+        "Liquidity": 1,
+        "Maker": 94,
+        "Reserve": 4,
+        "Scalper": 2
+      },
+      "Entries": 55,
+      "EntryFairEdgeTicks": 276.4057067395879,
+      "EntryMakerAge": 1918.75,
+      "Even": 1,
+      "ExitCounterparties": {
+        "Liquidity": 5,
+        "Maker": 59,
+        "Momentum": 2,
+        "Protective": 6,
+        "Reserve": 17,
+        "Reversion": 1,
+        "Scalper": 2,
+        "Value": 3,
+        "Whale": 4
+      },
+      "FillContracts": 200,
+      "GrossLosses": 1300,
+      "GrossWins": 5237.5,
+      "HoldSeconds": 6933.75,
+      "Id": "bot:BX:Scalper:24",
+      "Losses": 12,
+      "MakerEntryCount": 51,
+      "Market": "BX",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 250,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7193,
+      "PassiveEntries": 1,
+      "Peak": 3937.5,
+      "Pnl": 3937.5,
+      "Positive": 0,
+      "Realized": 3937.5,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 5,
+          "Pnl": -1000
+        },
+        "Target": {
+          "Count": 34,
+          "Pnl": 4287.5
+        },
+        "Timed exit": {
+          "Count": 22,
+          "Pnl": 650
+        }
+      },
+      "Size": 2,
+      "Stop": 8,
+      "Style": "Momentum",
+      "Target": 7,
+      "Unrealized": 0,
+      "Wins": 48
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 84,
+      "Closes": 50,
+      "Counterparties": {
+        "Maker": 78,
+        "Protective": 2,
+        "Reserve": 2,
+        "Whale": 2
+      },
+      "Entries": 42,
+      "EntryFairEdgeTicks": 226.90611545474894,
+      "EntryMakerAge": 1603.25,
+      "Even": 1,
+      "ExitCounterparties": {
+        "Liquidity": 3,
+        "Maker": 52,
+        "Momentum": 4,
+        "Protective": 3,
+        "Reserve": 10,
+        "Reversion": 4,
+        "Scalper": 4,
+        "Whale": 4
+      },
+      "FillContracts": 168,
+      "GrossLosses": 450,
+      "GrossWins": 4300,
+      "HoldSeconds": 4791.75,
+      "Id": "bot:BX:Scalper:3",
+      "Losses": 4,
+      "MakerEntryCount": 39,
+      "Market": "BX",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 300,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 6917.5,
+      "PassiveEntries": 1,
+      "Peak": 3850,
+      "Pnl": 3850,
+      "Positive": 0,
+      "Realized": 3850,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 1,
+          "Pnl": -300
+        },
+        "Target": {
+          "Count": 34,
+          "Pnl": 3900
+        },
+        "Timed exit": {
+          "Count": 15,
+          "Pnl": 250
+        }
+      },
+      "Size": 2,
+      "Stop": 12,
+      "Style": "Reversion",
+      "Target": 6,
+      "Unrealized": 0,
+      "Wins": 45
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 105,
+      "Closes": 63,
+      "Counterparties": {
+        "Maker": 95,
+        "Momentum": 3,
+        "Reserve": 4,
+        "Scalper": 3
+      },
+      "Entries": 60,
+      "EntryFairEdgeTicks": 223.99294525522055,
+      "EntryMakerAge": 1727.25,
+      "Even": 2,
+      "ExitCounterparties": {
+        "Liquidity": 8,
+        "Maker": 72,
+        "Momentum": 2,
+        "Protective": 2,
+        "Reserve": 10,
+        "Scalper": 7,
+        "Value": 4
+      },
+      "FillContracts": 210,
+      "GrossLosses": 775,
+      "GrossWins": 6250,
+      "HoldSeconds": 9115.5,
+      "Id": "bot:BX:Scalper:4",
+      "Losses": 9,
+      "MakerEntryCount": 52,
+      "Market": "BX",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 425,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7144.75,
+      "PassiveEntries": 2,
+      "Peak": 5475,
+      "Pnl": 5475,
+      "Positive": 0,
+      "Realized": 5475,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 2,
+          "Pnl": -350
+        },
+        "Target": {
+          "Count": 32,
+          "Pnl": 5025
+        },
+        "Timed exit": {
+          "Count": 29,
+          "Pnl": 800
+        }
+      },
+      "Size": 2,
+      "Stop": 7,
+      "Style": "Momentum",
+      "Target": 8,
+      "Unrealized": 0,
+      "Wins": 52
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 43,
+      "Closes": 43,
+      "Counterparties": {
+        "Maker": 42,
+        "Scalper": 1
+      },
+      "Entries": 43,
+      "EntryFairEdgeTicks": 274.3733638118938,
+      "EntryMakerAge": 1431.5,
+      "Even": 2,
+      "ExitCounterparties": {
+        "Liquidity": 4,
+        "Maker": 27,
+        "Momentum": 1,
+        "Protective": 2,
+        "Reserve": 5,
+        "Reversion": 1,
+        "Scalper": 1,
+        "Value": 1,
+        "Whale": 1
+      },
+      "FillContracts": 86,
+      "GrossLosses": 62.5,
+      "GrossWins": 3237.5,
+      "HoldSeconds": 3080.25,
+      "Id": "bot:BX:Scalper:5",
+      "Losses": 2,
+      "MakerEntryCount": 42,
+      "Market": "BX",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 50,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7093.25,
+      "PassiveEntries": 0,
+      "Peak": 3175,
+      "Pnl": 3175,
+      "Positive": 0,
+      "Realized": 3175,
+      "Reasons": {
+        "Target": {
+          "Count": 27,
+          "Pnl": 2700
+        },
+        "Timed exit": {
+          "Count": 16,
+          "Pnl": 475
+        }
+      },
+      "Size": 1,
+      "Stop": 11,
+      "Style": "Reversion",
+      "Target": 8,
+      "Unrealized": 0,
+      "Wins": 39
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 82,
+      "Closes": 49,
+      "Counterparties": {
+        "Maker": 77,
+        "Momentum": 2,
+        "Scalper": 3
+      },
+      "Entries": 48,
+      "EntryFairEdgeTicks": 184.35712009113922,
+      "EntryMakerAge": 1522.75,
+      "Even": 0,
+      "ExitCounterparties": {
+        "Liquidity": 5,
+        "Maker": 56,
+        "Momentum": 2,
+        "Protective": 3,
+        "Reserve": 4,
+        "Scalper": 4,
+        "Value": 2,
+        "Whale": 6
+      },
+      "FillContracts": 164,
+      "GrossLosses": 2087.5,
+      "GrossWins": 3325,
+      "HoldSeconds": 6078,
+      "Id": "bot:BX:Scalper:6",
+      "Losses": 14,
+      "MakerEntryCount": 42,
+      "Market": "BX",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 800,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7019,
+      "PassiveEntries": 3,
+      "Peak": 2025,
+      "Pnl": 1237.5,
+      "Positive": 0,
+      "Realized": 1237.5,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 9,
+          "Pnl": -1575
+        },
+        "Target": {
+          "Count": 28,
+          "Pnl": 3075
+        },
+        "Timed exit": {
+          "Count": 12,
+          "Pnl": -262.5
+        }
+      },
+      "Size": 2,
+      "Stop": 9,
+      "Style": "Momentum",
+      "Target": 5,
+      "Unrealized": 0,
+      "Wins": 35
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 70,
+      "Closes": 39,
+      "Counterparties": {
+        "Liquidity": 3,
+        "Maker": 60,
+        "Scalper": 5,
+        "Whale": 2
+      },
+      "Entries": 41,
+      "EntryFairEdgeTicks": 243.97407541451685,
+      "EntryMakerAge": 1039.25,
+      "Even": 5,
+      "ExitCounterparties": {
+        "Liquidity": 6,
+        "Maker": 52,
+        "Momentum": 5,
+        "Protective": 1,
+        "Value": 4,
+        "Whale": 2
+      },
+      "FillContracts": 140,
+      "GrossLosses": 150,
+      "GrossWins": 3400,
+      "HoldSeconds": 4730.5,
+      "Id": "bot:BX:Scalper:7",
+      "Losses": 1,
+      "MakerEntryCount": 33,
+      "Market": "BX",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 200,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7104.5,
+      "PassiveEntries": 5,
+      "Peak": 3250,
+      "Pnl": 3250,
+      "Positive": 0,
+      "Realized": 3250,
+      "Reasons": {
+        "Target": {
+          "Count": 28,
+          "Pnl": 3125
+        },
+        "Timed exit": {
+          "Count": 11,
+          "Pnl": 125
+        }
+      },
+      "Size": 2,
+      "Stop": 10,
+      "Style": "Reversion",
+      "Target": 5,
+      "Unrealized": 0,
+      "Wins": 33
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 33,
+      "Closes": 33,
+      "Counterparties": {
+        "Liquidity": 1,
+        "Maker": 27,
+        "Momentum": 1,
+        "Protective": 1,
+        "Scalper": 2,
+        "Whale": 1
+      },
+      "Entries": 33,
+      "EntryFairEdgeTicks": 146.01114775208407,
+      "EntryMakerAge": 967.25,
+      "Even": 3,
+      "ExitCounterparties": {
+        "Liquidity": 2,
+        "Maker": 26,
+        "Momentum": 1,
+        "Reserve": 1,
+        "Scalper": 1,
+        "Value": 1,
+        "Whale": 1
+      },
+      "FillContracts": 66,
+      "GrossLosses": 225,
+      "GrossWins": 1362.5,
+      "HoldSeconds": 2915,
+      "Id": "bot:BX:Scalper:8",
+      "Losses": 4,
+      "MakerEntryCount": 27,
+      "Market": "BX",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 137.5,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 6984.75,
+      "PassiveEntries": 3,
+      "Peak": 1237.5,
+      "Pnl": 1137.5,
+      "Positive": 0,
+      "Realized": 1137.5,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 1,
+          "Pnl": -112.5
+        },
+        "Target": {
+          "Count": 19,
+          "Pnl": 1200
+        },
+        "Timed exit": {
+          "Count": 13,
+          "Pnl": 50
+        }
+      },
+      "Size": 1,
+      "Stop": 9,
+      "Style": "Momentum",
+      "Target": 5,
+      "Unrealized": 0,
+      "Wins": 26
+    },
+    {
+      "Bots": 0,
+      "ClosedContracts": 47,
+      "Closes": 47,
+      "Counterparties": {
+        "Liquidity": 2,
+        "Maker": 43,
+        "Momentum": 1,
+        "Scalper": 1
+      },
+      "Entries": 47,
+      "EntryFairEdgeTicks": 280.8511072018737,
+      "EntryMakerAge": 1611.25,
+      "Even": 6,
+      "ExitCounterparties": {
+        "Liquidity": 3,
+        "Maker": 26,
+        "Momentum": 4,
+        "Reserve": 9,
+        "Reversion": 1,
+        "Scalper": 2,
+        "Value": 2
+      },
+      "FillContracts": 94,
+      "GrossLosses": 212.5,
+      "GrossWins": 2875,
+      "HoldSeconds": 2426.75,
+      "Id": "bot:BX:Scalper:9",
+      "Losses": 5,
+      "MakerEntryCount": 43,
+      "Market": "BX",
+      "MaxBotPnl": null,
+      "MaxDrawdown": 137.5,
+      "MinBotPnl": null,
+      "Negative": 0,
+      "OpenedAt": 7105.75,
+      "PassiveEntries": 2,
+      "Peak": 2662.5,
+      "Pnl": 2662.5,
+      "Positive": 0,
+      "Realized": 2662.5,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 1,
+          "Pnl": -137.5
+        },
+        "Target": {
+          "Count": 23,
+          "Pnl": 2300
+        },
+        "Timed exit": {
+          "Count": 23,
+          "Pnl": 500
+        }
+      },
+      "Size": 1,
+      "Stop": 11,
+      "Style": "Reversion",
+      "Target": 8,
+      "Unrealized": 0,
+      "Wins": 36
+    }
+  ],
+  "Elapsed": 65.58181740000146,
+  "Groups": {
+    "BG": {
+      "Bots": 24,
+      "ClosedContracts": 1475,
+      "Closes": 1178,
+      "Counterparties": {
+        "Liquidity": 44,
+        "Maker": 1294,
+        "Momentum": 15,
+        "Protective": 6,
+        "Reserve": 27,
+        "Reversion": 1,
+        "Scalper": 43,
+        "Value": 10,
+        "Whale": 42
+      },
+      "Entries": 1157,
+      "EntryFairEdgeTicks": 4954.720231633542,
+      "EntryMakerAge": 33781.25,
+      "Even": 75,
+      "ExitCounterparties": {
+        "Liquidity": 62,
+        "Maker": 1057,
+        "Momentum": 47,
+        "Protective": 29,
+        "Reserve": 139,
+        "Reversion": 7,
+        "Scalper": 61,
+        "Value": 59,
+        "Whale": 14
+      },
+      "FillContracts": 2957,
+      "GrossLosses": 18940.000000001874,
+      "GrossWins": 54560.00000000109,
+      "HoldSeconds": 100747.25,
+      "Losses": 278,
+      "MakerEntryCount": 990,
+      "MaxBotPnl": 3139.9999999997817,
+      "MaxDrawdown": 739.9999999998727,
+      "MinBotPnl": 149.9999999998181,
+      "Negative": 0,
+      "PassiveEntries": 67,
+      "Pnl": 35809.99999999916,
+      "Positive": 24,
+      "Realized": 35619.9999999992,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 114,
+          "Pnl": -12360.000000000764
+        },
+        "Target": {
+          "Count": 537,
+          "Pnl": 44900.00000000054
+        },
+        "Timed exit": {
+          "Count": 527,
+          "Pnl": 3079.999999999427
+        }
+      },
+      "Unrealized": 189.99999999996362,
+      "Wins": 825
+    },
+    "BG:Momentum": {
+      "Bots": 12,
+      "ClosedContracts": 797,
+      "Closes": 654,
+      "Counterparties": {
+        "Liquidity": 24,
+        "Maker": 690,
+        "Momentum": 10,
+        "Protective": 4,
+        "Reserve": 27,
+        "Scalper": 23,
+        "Value": 6,
+        "Whale": 17
+      },
+      "Entries": 635,
+      "EntryFairEdgeTicks": 2089.80866557387,
+      "EntryMakerAge": 19139.25,
+      "Even": 43,
+      "ExitCounterparties": {
+        "Liquidity": 35,
+        "Maker": 586,
+        "Momentum": 24,
+        "Protective": 9,
+        "Reserve": 80,
+        "Reversion": 3,
+        "Scalper": 34,
+        "Value": 17,
+        "Whale": 9
+      },
+      "FillContracts": 1598,
+      "GrossLosses": 14540.00000000151,
+      "GrossWins": 24150.000000000226,
+      "HoldSeconds": 58497.75,
+      "Losses": 210,
+      "MakerEntryCount": 536,
+      "MaxBotPnl": 1799.999999999909,
+      "MaxDrawdown": 739.9999999998727,
+      "MinBotPnl": 149.9999999998181,
+      "Negative": 0,
+      "PassiveEntries": 37,
+      "Pnl": 9639.99999999869,
+      "Positive": 12,
+      "Realized": 9609.999999998718,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 85,
+          "Pnl": -9570.000000000573
+        },
+        "Target": {
+          "Count": 257,
+          "Pnl": 19489.999999999873
+        },
+        "Timed exit": {
+          "Count": 312,
+          "Pnl": -310.0000000005821
+        }
+      },
+      "Unrealized": 29.999999999972715,
+      "Wins": 401
+    },
+    "BG:Reversion": {
+      "Bots": 12,
+      "ClosedContracts": 678,
+      "Closes": 524,
+      "Counterparties": {
+        "Liquidity": 20,
+        "Maker": 604,
+        "Momentum": 5,
+        "Protective": 2,
+        "Reversion": 1,
+        "Scalper": 20,
+        "Value": 4,
+        "Whale": 25
+      },
+      "Entries": 522,
+      "EntryFairEdgeTicks": 2864.9115660596726,
+      "EntryMakerAge": 14642,
+      "Even": 32,
+      "ExitCounterparties": {
+        "Liquidity": 27,
+        "Maker": 471,
+        "Momentum": 23,
+        "Protective": 20,
+        "Reserve": 59,
+        "Reversion": 4,
+        "Scalper": 27,
+        "Value": 42,
+        "Whale": 5
+      },
+      "FillContracts": 1359,
+      "GrossLosses": 4400.000000000364,
+      "GrossWins": 30410.000000000855,
+      "HoldSeconds": 42249.5,
+      "Losses": 68,
+      "MakerEntryCount": 454,
+      "MaxBotPnl": 3139.9999999997817,
+      "MaxDrawdown": 340.00000000005457,
+      "MinBotPnl": 1329.9999999998818,
+      "Negative": 0,
+      "PassiveEntries": 30,
+      "Pnl": 26170.00000000048,
+      "Positive": 12,
+      "Realized": 26010.000000000487,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 29,
+          "Pnl": -2790.000000000191
+        },
+        "Target": {
+          "Count": 280,
+          "Pnl": 25410.000000000677
+        },
+        "Timed exit": {
+          "Count": 215,
+          "Pnl": 3390.000000000009
+        }
+      },
+      "Unrealized": 159.9999999999909,
+      "Wins": 424
+    },
+    "BT": {
+      "Bots": 24,
+      "ClosedContracts": 1507,
+      "Closes": 1507,
+      "Counterparties": {
+        "Liquidity": 67,
+        "Maker": 1266,
+        "Momentum": 25,
+        "Protective": 9,
+        "Reserve": 14,
+        "Reversion": 4,
+        "Scalper": 34,
+        "Value": 47,
+        "Whale": 49
+      },
+      "Entries": 1515,
+      "EntryFairEdgeTicks": 11892.681615230773,
+      "EntryMakerAge": 26558.5,
+      "Even": 33,
+      "ExitCounterparties": {
+        "Liquidity": 84,
+        "Maker": 1141,
+        "Momentum": 44,
+        "Protective": 18,
+        "Reserve": 65,
+        "Reversion": 11,
+        "Scalper": 44,
+        "Value": 69,
+        "Whale": 31
+      },
+      "FillContracts": 3022,
+      "GrossLosses": 7295,
+      "GrossWins": 43200,
+      "HoldSeconds": 67429,
+      "Losses": 237,
+      "MakerEntryCount": 1259,
+      "MaxBotPnl": 2425,
+      "MaxDrawdown": 280,
+      "MinBotPnl": 665,
+      "Negative": 0,
+      "PassiveEntries": 135,
+      "Pnl": 35990,
+      "Positive": 24,
+      "Realized": 35905,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 158,
+          "Pnl": -6215
+        },
+        "Target": {
+          "Count": 1053,
+          "Pnl": 40290
+        },
+        "Timed exit": {
+          "Count": 296,
+          "Pnl": 1830
+        }
+      },
+      "Unrealized": 85,
+      "Wins": 1237
+    },
+    "BT:Momentum": {
+      "Bots": 12,
+      "ClosedContracts": 776,
+      "Closes": 776,
+      "Counterparties": {
+        "Liquidity": 31,
+        "Maker": 658,
+        "Momentum": 11,
+        "Protective": 8,
+        "Reserve": 10,
+        "Scalper": 17,
+        "Value": 21,
+        "Whale": 25
+      },
+      "Entries": 781,
+      "EntryFairEdgeTicks": 5549.209055012616,
+      "EntryMakerAge": 14084.75,
+      "Even": 17,
+      "ExitCounterparties": {
+        "Liquidity": 49,
+        "Maker": 588,
+        "Momentum": 26,
+        "Protective": 10,
+        "Reserve": 30,
+        "Reversion": 4,
+        "Scalper": 26,
+        "Value": 29,
+        "Whale": 14
+      },
+      "FillContracts": 1557,
+      "GrossLosses": 4265,
+      "GrossWins": 21705,
+      "HoldSeconds": 36664.25,
+      "Losses": 145,
+      "MakerEntryCount": 652,
+      "MaxBotPnl": 2105,
+      "MaxDrawdown": 280,
+      "MinBotPnl": 665,
+      "Negative": 0,
+      "PassiveEntries": 67,
+      "Pnl": 17490,
+      "Positive": 12,
+      "Realized": 17440,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 99,
+          "Pnl": -3615
+        },
+        "Target": {
+          "Count": 515,
+          "Pnl": 20045
+        },
+        "Timed exit": {
+          "Count": 162,
+          "Pnl": 1010
+        }
+      },
+      "Unrealized": 50,
+      "Wins": 614
+    },
+    "BT:Reversion": {
+      "Bots": 12,
+      "ClosedContracts": 731,
+      "Closes": 731,
+      "Counterparties": {
+        "Liquidity": 36,
+        "Maker": 608,
+        "Momentum": 14,
+        "Protective": 1,
+        "Reserve": 4,
+        "Reversion": 4,
+        "Scalper": 17,
+        "Value": 26,
+        "Whale": 24
+      },
+      "Entries": 734,
+      "EntryFairEdgeTicks": 6343.472560218157,
+      "EntryMakerAge": 12473.75,
+      "Even": 16,
+      "ExitCounterparties": {
+        "Liquidity": 35,
+        "Maker": 553,
+        "Momentum": 18,
+        "Protective": 8,
+        "Reserve": 35,
+        "Reversion": 7,
+        "Scalper": 18,
+        "Value": 40,
+        "Whale": 17
+      },
+      "FillContracts": 1465,
+      "GrossLosses": 3030,
+      "GrossWins": 21495,
+      "HoldSeconds": 30764.75,
+      "Losses": 92,
+      "MakerEntryCount": 607,
+      "MaxBotPnl": 2425,
+      "MaxDrawdown": 125,
+      "MinBotPnl": 950,
+      "Negative": 0,
+      "PassiveEntries": 68,
+      "Pnl": 18500,
+      "Positive": 12,
+      "Realized": 18465,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 59,
+          "Pnl": -2600
+        },
+        "Target": {
+          "Count": 538,
+          "Pnl": 20245
+        },
+        "Timed exit": {
+          "Count": 134,
+          "Pnl": 820
+        }
+      },
+      "Unrealized": 35,
+      "Wins": 623
+    },
+    "BX": {
+      "Bots": 24,
+      "ClosedContracts": 1530,
+      "Closes": 1147,
+      "Counterparties": {
+        "Liquidity": 26,
+        "Maker": 1366,
+        "Momentum": 14,
+        "Protective": 5,
+        "Reserve": 62,
+        "Reversion": 1,
+        "Scalper": 43,
+        "Value": 2,
+        "Whale": 19
+      },
+      "Entries": 1140,
+      "EntryFairEdgeTicks": 5223.073153057419,
+      "EntryMakerAge": 35424,
+      "Even": 68,
+      "ExitCounterparties": {
+        "Liquidity": 74,
+        "Maker": 1033,
+        "Momentum": 43,
+        "Protective": 32,
+        "Reserve": 208,
+        "Reversion": 14,
+        "Scalper": 49,
+        "Value": 46,
+        "Whale": 31
+      },
+      "FillContracts": 3068,
+      "GrossLosses": 14325,
+      "GrossWins": 75412.5,
+      "HoldSeconds": 104922.25,
+      "Losses": 203,
+      "MakerEntryCount": 992,
+      "MaxBotPnl": 5475,
+      "MaxDrawdown": 800,
+      "MinBotPnl": 1137.5,
+      "Negative": 0,
+      "PassiveEntries": 49,
+      "Pnl": 61312.5,
+      "Positive": 24,
+      "Realized": 61087.5,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 76,
+          "Pnl": -9575
+        },
+        "Target": {
+          "Count": 594,
+          "Pnl": 61462.5
+        },
+        "Timed exit": {
+          "Count": 477,
+          "Pnl": 9200
+        }
+      },
+      "Unrealized": 225,
+      "Wins": 876
+    },
+    "BX:Momentum": {
+      "Bots": 12,
+      "ClosedContracts": 900,
+      "Closes": 655,
+      "Counterparties": {
+        "Liquidity": 12,
+        "Maker": 790,
+        "Momentum": 9,
+        "Protective": 1,
+        "Reserve": 60,
+        "Reversion": 1,
+        "Scalper": 23,
+        "Value": 1,
+        "Whale": 8
+      },
+      "Entries": 651,
+      "EntryFairEdgeTicks": 2341.9171080852284,
+      "EntryMakerAge": 20093.75,
+      "Even": 38,
+      "ExitCounterparties": {
+        "Liquidity": 37,
+        "Maker": 639,
+        "Momentum": 15,
+        "Protective": 18,
+        "Reserve": 113,
+        "Reversion": 7,
+        "Scalper": 26,
+        "Value": 25,
+        "Whale": 20
+      },
+      "FillContracts": 1805,
+      "GrossLosses": 12612.5,
+      "GrossWins": 38275,
+      "HoldSeconds": 65145.75,
+      "Losses": 170,
+      "MakerEntryCount": 549,
+      "MaxBotPnl": 5475,
+      "MaxDrawdown": 800,
+      "MinBotPnl": 1137.5,
+      "Negative": 0,
+      "PassiveEntries": 31,
+      "Pnl": 25675,
+      "Positive": 12,
+      "Realized": 25662.5,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 71,
+          "Pnl": -8912.5
+        },
+        "Target": {
+          "Count": 304,
+          "Pnl": 31175
+        },
+        "Timed exit": {
+          "Count": 280,
+          "Pnl": 3400
+        }
+      },
+      "Unrealized": 12.5,
+      "Wins": 447
+    },
+    "BX:Reversion": {
+      "Bots": 12,
+      "ClosedContracts": 630,
+      "Closes": 492,
+      "Counterparties": {
+        "Liquidity": 14,
+        "Maker": 576,
+        "Momentum": 5,
+        "Protective": 4,
+        "Reserve": 2,
+        "Scalper": 20,
+        "Value": 1,
+        "Whale": 11
+      },
+      "Entries": 489,
+      "EntryFairEdgeTicks": 2881.156044972191,
+      "EntryMakerAge": 15330.25,
+      "Even": 30,
+      "ExitCounterparties": {
+        "Liquidity": 37,
+        "Maker": 394,
+        "Momentum": 28,
+        "Protective": 14,
+        "Reserve": 95,
+        "Reversion": 7,
+        "Scalper": 23,
+        "Value": 21,
+        "Whale": 11
+      },
+      "FillContracts": 1263,
+      "GrossLosses": 1712.5,
+      "GrossWins": 37137.5,
+      "HoldSeconds": 39776.5,
+      "Losses": 33,
+      "MakerEntryCount": 443,
+      "MaxBotPnl": 4075,
+      "MaxDrawdown": 300,
+      "MinBotPnl": 1512.5,
+      "Negative": 0,
+      "PassiveEntries": 18,
+      "Pnl": 35637.5,
+      "Positive": 12,
+      "Realized": 35425,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 5,
+          "Pnl": -662.5
+        },
+        "Target": {
+          "Count": 290,
+          "Pnl": 30287.5
+        },
+        "Timed exit": {
+          "Count": 197,
+          "Pnl": 5800
+        }
+      },
+      "Unrealized": 212.5,
+      "Wins": 429
+    },
+    "Momentum": {
+      "Bots": 36,
+      "ClosedContracts": 2473,
+      "Closes": 2085,
+      "Counterparties": {
+        "Liquidity": 67,
+        "Maker": 2138,
+        "Momentum": 30,
+        "Protective": 13,
+        "Reserve": 97,
+        "Reversion": 1,
+        "Scalper": 63,
+        "Value": 28,
+        "Whale": 50
+      },
+      "Entries": 2067,
+      "EntryFairEdgeTicks": 9980.934828671714,
+      "EntryMakerAge": 53317.75,
+      "Even": 98,
+      "ExitCounterparties": {
+        "Liquidity": 121,
+        "Maker": 1813,
+        "Momentum": 65,
+        "Protective": 37,
+        "Reserve": 223,
+        "Reversion": 14,
+        "Scalper": 86,
+        "Value": 71,
+        "Whale": 43
+      },
+      "FillContracts": 4960,
+      "GrossLosses": 31417.500000001506,
+      "GrossWins": 84130.00000000023,
+      "HoldSeconds": 160307.75,
+      "Losses": 525,
+      "MakerEntryCount": 1737,
+      "MaxBotPnl": 5475,
+      "MaxDrawdown": 800,
+      "MinBotPnl": 149.9999999998181,
+      "Negative": 0,
+      "PassiveEntries": 135,
+      "Pnl": 52804.9999999987,
+      "Positive": 36,
+      "Realized": 52712.49999999872,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 255,
+          "Pnl": -22097.500000000575
+        },
+        "Target": {
+          "Count": 1076,
+          "Pnl": 70709.99999999987
+        },
+        "Timed exit": {
+          "Count": 754,
+          "Pnl": 4099.999999999418
+        }
+      },
+      "Unrealized": 92.49999999997272,
+      "Wins": 1462
+    },
+    "Reversion": {
+      "Bots": 36,
+      "ClosedContracts": 2039,
+      "Closes": 1747,
+      "Counterparties": {
+        "Liquidity": 70,
+        "Maker": 1788,
+        "Momentum": 24,
+        "Protective": 7,
+        "Reserve": 6,
+        "Reversion": 5,
+        "Scalper": 57,
+        "Value": 31,
+        "Whale": 60
+      },
+      "Entries": 1745,
+      "EntryFairEdgeTicks": 12089.54017125002,
+      "EntryMakerAge": 42446,
+      "Even": 78,
+      "ExitCounterparties": {
+        "Liquidity": 99,
+        "Maker": 1418,
+        "Momentum": 69,
+        "Protective": 42,
+        "Reserve": 189,
+        "Reversion": 18,
+        "Scalper": 68,
+        "Value": 103,
+        "Whale": 33
+      },
+      "FillContracts": 4087,
+      "GrossLosses": 9142.500000000364,
+      "GrossWins": 89042.50000000086,
+      "HoldSeconds": 112790.75,
+      "Losses": 193,
+      "MakerEntryCount": 1504,
+      "MaxBotPnl": 4075,
+      "MaxDrawdown": 340.00000000005457,
+      "MinBotPnl": 950,
+      "Negative": 0,
+      "PassiveEntries": 116,
+      "Pnl": 80307.50000000048,
+      "Positive": 36,
+      "Realized": 79900.0000000005,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 93,
+          "Pnl": -6052.500000000191
+        },
+        "Target": {
+          "Count": 1108,
+          "Pnl": 75942.50000000067
+        },
+        "Timed exit": {
+          "Count": 546,
+          "Pnl": 10010.00000000001
+        }
+      },
+      "Unrealized": 407.4999999999909,
+      "Wins": 1476
+    },
+    "Total": {
+      "Bots": 72,
+      "ClosedContracts": 4512,
+      "Closes": 3832,
+      "Counterparties": {
+        "Liquidity": 137,
+        "Maker": 3926,
+        "Momentum": 54,
+        "Protective": 20,
+        "Reserve": 103,
+        "Reversion": 6,
+        "Scalper": 120,
+        "Value": 59,
+        "Whale": 110
+      },
+      "Entries": 3812,
+      "EntryFairEdgeTicks": 22070.474999921735,
+      "EntryMakerAge": 95763.75,
+      "Even": 176,
+      "ExitCounterparties": {
+        "Liquidity": 220,
+        "Maker": 3231,
+        "Momentum": 134,
+        "Protective": 79,
+        "Reserve": 412,
+        "Reversion": 32,
+        "Scalper": 154,
+        "Value": 174,
+        "Whale": 76
+      },
+      "FillContracts": 9047,
+      "GrossLosses": 40560.00000000188,
+      "GrossWins": 173172.5000000011,
+      "HoldSeconds": 273098.5,
+      "Losses": 718,
+      "MakerEntryCount": 3241,
+      "MaxBotPnl": 5475,
+      "MaxDrawdown": 800,
+      "MinBotPnl": 149.9999999998181,
+      "Negative": 0,
+      "PassiveEntries": 251,
+      "Pnl": 133112.49999999919,
+      "Positive": 72,
+      "Realized": 132612.49999999924,
+      "Reasons": {
+        "Stop loss": {
+          "Count": 348,
+          "Pnl": -28150.000000000764
+        },
+        "Target": {
+          "Count": 2184,
+          "Pnl": 146652.50000000052
+        },
+        "Timed exit": {
+          "Count": 1300,
+          "Pnl": 14109.999999999427
+        }
+      },
+      "Unrealized": 499.9999999999636,
+      "Wins": 2938
+    }
+  },
+  "Samples": [
+    {
+      "Negative": 5,
+      "Pnl": 19534.99999999997,
+      "Positive": 67,
+      "Time": 600
+    },
+    {
+      "Negative": 0,
+      "Pnl": 41919.999999999956,
+      "Positive": 72,
+      "Time": 1200
+    },
+    {
+      "Negative": 2,
+      "Pnl": 45017.49999999964,
+      "Positive": 70,
+      "Time": 1800
+    },
+    {
+      "Negative": 1,
+      "Pnl": 57572.499999999425,
+      "Positive": 71,
+      "Time": 2400
+    },
+    {
+      "Negative": 1,
+      "Pnl": 69520.00000000006,
+      "Positive": 71,
+      "Time": 3000
+    },
+    {
+      "Negative": 0,
+      "Pnl": 82650.0000000002,
+      "Positive": 72,
+      "Time": 3600
+    },
+    {
+      "Negative": 1,
+      "Pnl": 92207.50000000006,
+      "Positive": 71,
+      "Time": 4200
+    },
+    {
+      "Negative": 0,
+      "Pnl": 102164.99999999974,
+      "Positive": 72,
+      "Time": 4800
+    },
+    {
+      "Negative": 0,
+      "Pnl": 109702.5,
+      "Positive": 72,
+      "Time": 5400
+    },
+    {
+      "Negative": 1,
+      "Pnl": 117185.0000000003,
+      "Positive": 71,
+      "Time": 6000
+    },
+    {
+      "Negative": 1,
+      "Pnl": 121994.99999999974,
+      "Positive": 71,
+      "Time": 6600
+    },
+    {
+      "Negative": 0,
+      "Pnl": 133112.49999999919,
+      "Positive": 72,
+      "Time": 7200
+    }
+  ],
+  "Scope": "Fresh isolated current-source simulation; no refresh, player trades, persistence or network. Closing-fill win rates; mark-to-market P&L. Equal seeds are sensitivity comparisons, not identical price paths.",
+  "Seconds": 7200,
+  "Seed": 68473,
+  "TypePnl": {
+    "Liquidity": -319147.5000000062,
+    "Maker": 836244.9999998629,
+    "Momentum": 72482.50000000473,
+    "Protective": 161560.00000000282,
+    "Reserve": -1153537.5000000747,
+    "Reversion": 105985.00000000025,
+    "Scalper": 133112.49999999919,
+    "Value": 83032.49999998992,
+    "Whale": 80267.4999999322
+  },
+  "Variant": "baseline"
+}

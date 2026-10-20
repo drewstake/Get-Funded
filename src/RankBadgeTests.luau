@@ -1,6 +1,7 @@
 local Liquidity=require(script.Parent.TestLiquidity)
 -- Disposable engines, real executions and in-memory checkpoint/store roundtrips only.
-local C=require(game.ReplicatedStorage.MarketReign.MarketConfig)
+local C=table.clone(require(game.ReplicatedStorage.MarketReign.MarketConfig))
+C.BotPopulation=nil -- Account fixture intentionally has no autonomous scheduler.
 local L=require(game.ReplicatedStorage.MarketReign.ProgressionConfig)
 local Rules=require(game.ReplicatedStorage.MarketReign.ProgressionRules)
 local E=require(script.Parent.MarketEngine)

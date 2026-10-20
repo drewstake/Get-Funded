@@ -1,0 +1,79 @@
+{
+  "Before": {
+    "MatchingCalls": 48739,
+    "CheckpointP95Ms": 100.08890001336113,
+    "Trades": 13897,
+    "StepP95Ms": 4.241999995429069,
+    "Volume": 63952,
+    "Speed": 18,
+    "MaxEncodedWithHeadroom": 981180,
+    "MatchingSeconds": 4.882132699887734,
+    "Seconds": 1800,
+    "StepComputeSeconds": 15.229059298872016,
+    "CheckpointSeconds": 0.5410435000085272,
+    "ComputeFractionAt18x": 0.15770102798880545,
+    "Scope": "Roblox Studio Edit, detached copies of one saved Live snapshot; includes retained legacy bots and saved player accounts. No UI/network/broadcast/load from newly connected players. No writes to any DataStore. Simulation yields excluded from compute time. Matching is a subset of step time.",
+    "Audit": {
+      "Inventory": {
+        "BT": 0,
+        "BX": 0,
+        "YM": 0,
+        "BG": 0,
+        "MNQ": 0,
+        "RTY": 0,
+        "MES": 0,
+        "MYM": 0,
+        "M2K": 0
+      },
+      "CashError": 7.152557373046875e-07,
+      "Volume": 41159850,
+      "EquityError": -1.963318936759606e-06,
+      "Hash": 566807105,
+      "Trades": 15551794
+    },
+    "MaxRawBytes": 3742959,
+    "Accounts": 500,
+    "Agents": 483,
+    "StepP99Ms": 6.52789999730885
+  },
+  "After": {
+    "MatchingCalls": 85610,
+    "CheckpointP95Ms": 118.92069998430088,
+    "Trades": 35038,
+    "StepP95Ms": 11.200200009625405,
+    "Volume": 111046,
+    "Speed": 18,
+    "MaxEncodedWithHeadroom": 1111468,
+    "MatchingSeconds": 19.199644894746598,
+    "Seconds": 1800,
+    "StepComputeSeconds": 41.20936689910013,
+    "CheckpointSeconds": 0.626116500061471,
+    "ComputeFractionAt18x": 0.41835483399161605,
+    "Scope": "Roblox Studio Edit, detached copies of one saved Live snapshot; includes retained legacy bots and saved player accounts. No UI/network/broadcast/load from newly connected players. No writes to any DataStore. Simulation yields excluded from compute time. Matching is a subset of step time.",
+    "Audit": {
+      "Inventory": {
+        "BT": 0,
+        "BX": 0,
+        "YM": 0,
+        "BG": 0,
+        "MNQ": 0,
+        "RTY": 0,
+        "MES": 0,
+        "MYM": 0,
+        "M2K": 0
+      },
+      "CashError": 7.152557373046875e-07,
+      "Volume": 41206944,
+      "EquityError": -1.3076933100819588e-06,
+      "Hash": 1682969444,
+      "Trades": 15572935
+    },
+    "MaxRawBytes": 4246094,
+    "Accounts": 671,
+    "Agents": 654,
+    "StepP99Ms": 14.857999980449677
+  },
+  "SourceVersion": 14,
+  "ReadAt": 1792032791,
+  "SavedAt": 1792031007
+}

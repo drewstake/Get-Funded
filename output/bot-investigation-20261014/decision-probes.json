@@ -1,0 +1,68 @@
+{
+  "Conditions": "Fixed price, fair value equals last, zero trend, zero inventory, no fills, eligible flat-account decisions. Generic belief reset to fair before every decision; normal belief noise still applies.",
+  "Results": {
+    "Liquidity": {
+      "Buy": 3062,
+      "EligibleDecisions": 10000,
+      "Kind": "Liquidity",
+      "Limit": 3009,
+      "Market": 3090,
+      "Sell": 3037,
+      "Submissions": 6099
+    },
+    "Momentum": {
+      "Buy": 3074,
+      "EligibleDecisions": 10000,
+      "Kind": "Momentum",
+      "Limit": 3040,
+      "Market": 3067,
+      "Sell": 3033,
+      "Submissions": 6107
+    },
+    "Protective": {
+      "Buy": 3198,
+      "EligibleDecisions": 10000,
+      "Kind": "Protective",
+      "Limit": 3132,
+      "Market": 3092,
+      "Sell": 3026,
+      "Submissions": 6224
+    },
+    "Reversion": {
+      "Buy": 3069,
+      "EligibleDecisions": 10000,
+      "Kind": "Reversion",
+      "Limit": 3035,
+      "Market": 3063,
+      "Sell": 3029,
+      "Submissions": 6098
+    },
+    "Scalper": {
+      "Buy": 4217,
+      "EligibleDecisions": 10000,
+      "Kind": "Scalper",
+      "Limit": 8421,
+      "Market": 0,
+      "Sell": 4204,
+      "Submissions": 8421
+    },
+    "Value": {
+      "Buy": 3056,
+      "EligibleDecisions": 10000,
+      "Kind": "Value",
+      "Limit": 2989,
+      "Market": 3089,
+      "Sell": 3022,
+      "Submissions": 6078
+    },
+    "Whale": {
+      "Buy": 2977,
+      "EligibleDecisions": 10000,
+      "Kind": "Whale",
+      "Limit": 1236,
+      "Market": 4955,
+      "Sell": 3214,
+      "Submissions": 6191
+    }
+  }
+}

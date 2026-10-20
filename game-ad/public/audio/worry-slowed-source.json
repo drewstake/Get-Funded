@@ -1,0 +1,17 @@
+{
+  "title": "worry (Slowed)",
+  "artists": ["LONOWN", "riserayss"],
+  "url": "https://www.youtube.com/watch?v=f3DoKx_R1_s",
+  "sourceCredit": "℗ ARCADIA",
+  "releaseDate": "2025-10-10",
+  "excerptStartSeconds": 35.455,
+  "excerptEndSeconds": 55.455,
+  "durationSeconds": 20,
+  "playbackRate": 1,
+  "gainDb": -8.6,
+  "fadeInSeconds": 0.02,
+  "fadeOutSeconds": 0.45,
+  "sceneStartFrames": [0, 123, 246, 369, 492],
+  "fps": 30,
+  "commercialLicenseIncluded": false
+}

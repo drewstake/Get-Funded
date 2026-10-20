@@ -1,0 +1,22 @@
+local E=require('./proposed/MarketEngine')
+local P=require('./proposed/Participants')
+local C=require('./proposed/MarketConfig')
+local CP=require('./proposed/WorldCheckpoint')
+local fs=require('@lune/fs');local serde=require('@lune/serde')
+local e=E.new(C,5501);local p=P.new(e)
+for _=1,400 do p:Step()end
+local capture=CP.Capture(e,p);local record=CP.Encode(capture)
+local e2,p2=CP.Restore(CP.Decode(record),C)
+e:Audit();e2:Audit()
+local BE=require('./baseline/MarketEngine');local BP=require('./baseline/Participants');local BC=require('./baseline/MarketConfig');local BCP=require('./baseline/WorldCheckpoint')
+local old=BE.new(BC,5501);local pop=BP.new(old)
+for _=1,400 do pop:Step()end
+local before=BCP.Capture(old,pop)
+fs.writeFile('output/bot-population-20261014/migration-fixture.json',serde.encode('json',before))
+local re,rp=CP.Restore(before,C)
+re:Audit()
+fs.writeFile('output/bot-population-20261014/migration-dry-run.json',serde.encode('json',rp.MigrationReport,true))
+local rr,pr=CP.Restore(CP.Decode(CP.Encode(CP.Capture(re,rp))),C);rr:Audit()
+for _=1,400 do rp:Step();pr:Step()end
+assert(re.TradeHash==rr.TradeHash,'Replay differs');re:Audit();rr:Audit()
+print('SMOKE PASS',#p.Agents,#rp.Agents,record.RawBytes)

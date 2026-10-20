@@ -1,0 +1,80 @@
+{
+  "Success": true,
+  "Results": [
+    {
+      "Passed": true,
+      "Name": "Exact username parser rejects multi-target and malformed commands",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Authorization trusts only creator user id or actual group owner",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Non-owner command cannot resolve a name or mutate a profile",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Offline exact username resets once, with durable result before disconnect",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Display-name mismatch and lookup failure cannot choose a target",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Saved reset removes titles, rank, all histories, preferences and counters",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Open positions, armed stops and working limits settle without moving the market or another player",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Archived depleted runs and prefix-neighbor users stay isolated",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Repeated resets survive checkpoint restore and retain unique request tokens",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Transaction saves new profile and projection before replacing the live engine",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Validation failure keeps the original engine and saved record intact",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Write failure pauses and reloads durable data without overwriting it",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Lost commit response recovers the saved wipe instead of restoring old progress",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Busy, follower and unsaved worlds reject resets before mutation",
+      "Detail": "Passed"
+    },
+    {
+      "Passed": true,
+      "Name": "Leaderboard drops wiped scores immediately and persists the newer projection",
+      "Detail": "Passed"
+    }
+  ]
+}

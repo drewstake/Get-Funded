@@ -1,0 +1,50 @@
+{
+  "ServerScriptService.MarketReign.BotRefresh": {
+    "Hash": "15047b97d27f2f681a0edac26de86db47ad82643aa028a30544c5060838d6287",
+    "ExpectedHash": null,
+    "ClassName": "ModuleScript",
+    "File": "BotRefresh.luau"
+  },
+  "ServerScriptService.MarketReign.OwnerBotsCommand": {
+    "Hash": "c903691b074ca1a80d902bca05678d6f45eb46705b0174b4f907622596f670c5",
+    "ExpectedHash": null,
+    "ClassName": "ModuleScript",
+    "File": "OwnerBotsCommand.luau"
+  },
+  "ServerScriptService.MarketReign.BotRefreshTests": {
+    "Hash": "5f31eda6ec35ba1cc1ba8a91748e7ce497f3e95fba234018bca9fb079b23a4ba",
+    "ExpectedHash": null,
+    "ClassName": "ModuleScript",
+    "File": "BotRefreshTests.luau"
+  },
+  "ServerScriptService.MarketReign.MarketEngine": {
+    "Hash": "c21290936a7bd58a805119e3f5e14259349a79598730d41ae35cb6d6c85a88c0",
+    "ExpectedHash": "89be02e0df95783388b0510ba8e4efa3e71c89e6a049ce8ae07dbcac9c2f9f4d",
+    "ClassName": "ModuleScript",
+    "File": "MarketEngine.luau"
+  },
+  "ServerScriptService.MarketReign.BotPopulation": {
+    "Hash": "7513b696867a2a7593d732f1a7a974d8f229a707710dca29bbbdb58798a25b30",
+    "ExpectedHash": "660e6e1d7d85c778b9f70d911620193dd11ac7a537ff2650d0317a88759813b1",
+    "ClassName": "ModuleScript",
+    "File": "BotPopulation.luau"
+  },
+  "ServerScriptService.MarketReign.WorldService": {
+    "Hash": "4d0c09207c2b4884e8a0d997c88a4b0a81a61b9126226d7bd52b4ad6d5c6de0b",
+    "ExpectedHash": "665bb3ab92a3db33a85176ef0a157f6298d1e893d5c9b318cbe159e2342fc649",
+    "ClassName": "ModuleScript",
+    "File": "WorldService.luau"
+  },
+  "ServerScriptService.MarketReign.WorldCheckpoint": {
+    "Hash": "1500dbb050c321c4f17d4bb9649dbee902f9ea79e6439058aa5ea072aa55bd82",
+    "ExpectedHash": "3b8e1ab2c532853a8ed6606ff58280bf0da5d2d6993ffa116c62d02c569028db",
+    "ClassName": "ModuleScript",
+    "File": "WorldCheckpoint.luau"
+  },
+  "ServerScriptService.MarketReign.MarketServer": {
+    "Hash": "cec20529bccf09603a6ce0c24e081ac4509f7e8af0f6bb18706b84ae715f19e5",
+    "ExpectedHash": "30dbf55cabf4a2e7383a6b73393245c039c3a1db598ed1902dd6ec6aa52cd655",
+    "ClassName": "Script",
+    "File": "MarketServer.server.luau"
+  }
+}

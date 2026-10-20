@@ -1,0 +1,82 @@
+[
+  {
+    "Passed": true,
+    "Name": "Plain, currency and decimal shorthand parse without losing magnitude",
+    "Detail": "Passed"
+  },
+  {
+    "Passed": true,
+    "Name": "Malformed, ambiguous and nonfinite numeric text is rejected",
+    "Detail": "Passed"
+  },
+  {
+    "Passed": false,
+    "Name": "Large preferences save without quantity-dependent clamping",
+    "Detail": "ServerStorage.AmountInputValidation.FundedAccounts:11: attempt to index nil with 'Version'"
+  },
+  {
+    "Passed": true,
+    "Name": "BX 1: large dollar stops reach filled positions",
+    "Detail": "Passed"
+  },
+  {
+    "Passed": true,
+    "Name": "BX 1: far targets and raw ticks are accepted without the old cap",
+    "Detail": "Passed"
+  },
+  {
+    "Passed": true,
+    "Name": "BX -1: large dollar stops reach filled positions",
+    "Detail": "Passed"
+  },
+  {
+    "Passed": true,
+    "Name": "BX -1: far targets and raw ticks are accepted without the old cap",
+    "Detail": "Passed"
+  },
+  {
+    "Passed": true,
+    "Name": "BT 1: large dollar stops reach filled positions",
+    "Detail": "Passed"
+  },
+  {
+    "Passed": true,
+    "Name": "BT 1: far targets and raw ticks are accepted without the old cap",
+    "Detail": "Passed"
+  },
+  {
+    "Passed": true,
+    "Name": "BT -1: large dollar stops reach filled positions",
+    "Detail": "Passed"
+  },
+  {
+    "Passed": true,
+    "Name": "BT -1: far targets and raw ticks are accepted without the old cap",
+    "Detail": "Passed"
+  },
+  {
+    "Passed": true,
+    "Name": "BG 1: large dollar stops reach filled positions",
+    "Detail": "Passed"
+  },
+  {
+    "Passed": true,
+    "Name": "BG 1: far targets and raw ticks are accepted without the old cap",
+    "Detail": "Passed"
+  },
+  {
+    "Passed": true,
+    "Name": "BG -1: large dollar stops reach filled positions",
+    "Detail": "Passed"
+  },
+  {
+    "Passed": true,
+    "Name": "BG -1: far targets and raw ticks are accepted without the old cap",
+    "Detail": "Passed"
+  },
+  {
+    "Passed": true,
+    "Name": "Protection amount and raw tick bounds reject invalid requests atomically",
+    "Detail": "Passed"
+  }
+]

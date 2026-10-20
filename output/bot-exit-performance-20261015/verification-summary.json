@@ -1,0 +1,39 @@
+{
+  "AppliedTo": "Studio edit source and restarted Studio playtest",
+  "PublishedToProduction": false,
+  "Tests": {
+    "Total": 278,
+    "Failures": 0
+  },
+  "Replay": {
+    "BaselineMeanStepMs": 15.921382032502152,
+    "UpdatedMeanStepMs": 3.8081093789514853,
+    "ReductionPercent": 76.08179132202498,
+    "BaselineOrderSubmissions": 8526,
+    "UpdatedOrderSubmissions": 1158
+  },
+  "RunningServer": {
+    "BacklogAfter": 0.1754126101732254,
+    "Seconds": 8.00507800001651,
+    "Steps": 577,
+    "Frames": 471,
+    "P95HeartbeatMs": 13.16560001578182,
+    "StepsPerSecond": 72.07924769737534,
+    "BudgetHits": 38,
+    "BacklogBefore": 0.4512767158448696,
+    "MaxHeartbeatMs": 108.63640008028597,
+    "MeanHeartbeatMs": 6.76540169625636
+  },
+  "RunningClient": {
+    "Seconds": 8.013430199935101,
+    "EntryLabel": "Long 7946",
+    "FPS": 59.525070799751035,
+    "Frames": 477,
+    "UpdateMaxSeconds": 0.13970080006401986,
+    "UpdateP95Seconds": 0.10173270001541823,
+    "MarketUpdates": 80,
+    "ChartLastMs": 0.9171999990940094,
+    "ChartPaints": 83
+  },
+  "Limit": "The 8 ms budget yields between atomic simulation steps; a single slow step or checkpoint/broadcast can exceed it."
+}

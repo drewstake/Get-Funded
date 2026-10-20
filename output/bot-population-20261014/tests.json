@@ -1,0 +1,39 @@
+{
+  "BotPopulationTests": [
+    {
+      "Detail": "Three seeds: 390 bots, $204M, 12/12 scalpers per market; independent reproducible schedules",
+      "Name": "Exact capital, counts, styles, diversity and reproducibility",
+      "Passed": true
+    },
+    {
+      "Detail": "Downsizes to 2 then 1 with a pending entry; zero capacity sends no order",
+      "Name": "Sizing reserves pending orders and reduces unaffordable requests",
+      "Passed": true
+    },
+    {
+      "Detail": "Half-life updates on observation clocks; no future data or forced prices",
+      "Name": "Value observations follow elapsed time with noisy independent estimates",
+      "Passed": true
+    },
+    {
+      "Detail": "Flat tape cannot trigger an entry; qualified two-contract request fits one contract",
+      "Name": "Scalpers reject flat/noisy signals but can size down a qualified entry",
+      "Passed": true
+    },
+    {
+      "Detail": "V14→V15 migration is pure on input, no trades on restore, idempotent funding and exact replay",
+      "Name": "Migration retains players, positions, exits and P&L; records funding; resumes exactly",
+      "Passed": true
+    },
+    {
+      "Detail": "Surplus accounts preserved; no fake fills; reserve closes exactly excess inventory",
+      "Name": "Surplus bots retire with obligations; oversized reserve reduces through matching",
+      "Passed": true
+    },
+    {
+      "Detail": "No duplicate population or unrecognized policy accepted",
+      "Name": "Duplicate agents and unsupported policy downgrade fail closed",
+      "Passed": true
+    }
+  ]
+}

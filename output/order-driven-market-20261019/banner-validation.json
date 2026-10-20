@@ -1,0 +1,29 @@
+{
+  "Success": true,
+  "Banners": [
+    {
+      "Direction": 1,
+      "Width": 390
+    },
+    {
+      "Direction": -1,
+      "Width": 390
+    },
+    {
+      "Direction": 1,
+      "Width": 844
+    },
+    {
+      "Direction": -1,
+      "Width": 844
+    },
+    {
+      "Direction": 1,
+      "Width": 1280
+    },
+    {
+      "Direction": -1,
+      "Width": 1280
+    }
+  ]
+}

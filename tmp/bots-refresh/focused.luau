@@ -1,0 +1,1 @@
+local r=require("./candidate/BotRefreshTests").Run(); for _,row in ipairs(r)do print(row.Name,row.Passed,row.Detail)end

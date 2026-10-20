@@ -11,6 +11,7 @@ local report={}
 for _,seed in ipairs({73521,5501,4407})do
  for _,count in ipairs({0,18})do
   local config=clone(Default);config.ScalpersPerInstrument=count
+  if config.BotPopulation then config.BotPopulation.Counts.Scalper=count end
   local e=Engine.new(config,seed);local p=Participants.new(e)
   local spreadSum,spreadCount,missing=0,0,0
   local start=os.clock()

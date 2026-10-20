@@ -1,0 +1,134 @@
+{
+  "Ok": true,
+  "Checks": 392,
+  "Layouts": [
+    {
+      "Height": 568,
+      "Mode": "Help",
+      "ScrollHeight": 718,
+      "Width": 320
+    },
+    {
+      "Height": 568,
+      "Mode": "Expanded",
+      "ScrollHeight": 1090,
+      "Width": 320
+    },
+    {
+      "Height": 568,
+      "Mode": "Info",
+      "ScrollHeight": 48,
+      "Width": 320
+    },
+    {
+      "Height": 844,
+      "Mode": "Help",
+      "ScrollHeight": 646,
+      "Width": 390
+    },
+    {
+      "Height": 844,
+      "Mode": "Expanded",
+      "ScrollHeight": 982,
+      "Width": 390
+    },
+    {
+      "Height": 844,
+      "Mode": "Info",
+      "ScrollHeight": 48,
+      "Width": 390
+    },
+    {
+      "Height": 320,
+      "Mode": "Help",
+      "ScrollHeight": 592,
+      "Width": 568
+    },
+    {
+      "Height": 320,
+      "Mode": "Expanded",
+      "ScrollHeight": 856,
+      "Width": 568
+    },
+    {
+      "Height": 320,
+      "Mode": "Info",
+      "ScrollHeight": 48,
+      "Width": 568
+    },
+    {
+      "Height": 390,
+      "Mode": "Help",
+      "ScrollHeight": 592,
+      "Width": 844
+    },
+    {
+      "Height": 390,
+      "Mode": "Expanded",
+      "ScrollHeight": 856,
+      "Width": 844
+    },
+    {
+      "Height": 390,
+      "Mode": "Info",
+      "ScrollHeight": 48,
+      "Width": 844
+    },
+    {
+      "Height": 600,
+      "Mode": "Help",
+      "ScrollHeight": 592,
+      "Width": 1000
+    },
+    {
+      "Height": 600,
+      "Mode": "Expanded",
+      "ScrollHeight": 856,
+      "Width": 1000
+    },
+    {
+      "Height": 600,
+      "Mode": "Info",
+      "ScrollHeight": 48,
+      "Width": 1000
+    },
+    {
+      "Height": 720,
+      "Mode": "Help",
+      "ScrollHeight": 592,
+      "Width": 1280
+    },
+    {
+      "Height": 720,
+      "Mode": "Expanded",
+      "ScrollHeight": 856,
+      "Width": 1280
+    },
+    {
+      "Height": 720,
+      "Mode": "Info",
+      "ScrollHeight": 48,
+      "Width": 1280
+    },
+    {
+      "Height": 1080,
+      "Mode": "Help",
+      "ScrollHeight": 592,
+      "Width": 1920
+    },
+    {
+      "Height": 1080,
+      "Mode": "Expanded",
+      "ScrollHeight": 856,
+      "Width": 1920
+    },
+    {
+      "Height": 1080,
+      "Mode": "Info",
+      "ScrollHeight": 48,
+      "Width": 1920
+    }
+  ],
+  "Issues": [],
+  "StorageAccessed": false
+}

@@ -1,0 +1,38 @@
+{
+  "Audit": {
+    "Inventory": {
+      "BT": 0,
+      "BX": 0,
+      "YM": 0,
+      "BG": 0,
+      "MNQ": 0,
+      "RTY": 0,
+      "MES": 0,
+      "MYM": 0,
+      "M2K": 0
+    },
+    "CashError": 8.307397365570068e-07,
+    "Volume": 57608529,
+    "EquityError": 1.5147088561207056e-06,
+    "Hash": 1345744854,
+    "Trades": 23467463
+  },
+  "SourceStep": 8715284,
+  "Runs": [
+    {
+      "DetachedCaptureThenEncodeMs": 90.3676999732852,
+      "AtomicEncodeMs": 65.32990001142025,
+      "RawBytes": 4395762
+    },
+    {
+      "DetachedCaptureThenEncodeMs": 91.09030000399798,
+      "AtomicEncodeMs": 66.30010006483644,
+      "RawBytes": 4395762
+    },
+    {
+      "DetachedCaptureThenEncodeMs": 96.70310001820326,
+      "AtomicEncodeMs": 65.91240002308041,
+      "RawBytes": 4395762
+    }
+  ]
+}

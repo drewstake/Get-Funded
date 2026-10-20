@@ -1,0 +1,2897 @@
+{
+  "Audit": {
+    "CashError": 0,
+    "EquityError": 1.4784745872020721e-8,
+    "Hash": 771489725,
+    "Inventory": {
+      "BG": 0,
+      "BT": 0,
+      "BX": 0
+    },
+    "Trades": 64311,
+    "Volume": 121851
+  },
+  "Bots": [
+    {
+      "Contracts": 1,
+      "Equity": 156119.99999999997,
+      "Id": "bot:BG:Liquidity:1",
+      "Kind": "Liquidity",
+      "Pnl": 6119.999999999982
+    },
+    {
+      "Contracts": 0,
+      "Equity": 149499.99999999983,
+      "Id": "bot:BG:Liquidity:10",
+      "Kind": "Liquidity",
+      "Pnl": -500.0000000001819
+    },
+    {
+      "Contracts": 0,
+      "Equity": 154019.99999999956,
+      "Id": "bot:BG:Liquidity:11",
+      "Kind": "Liquidity",
+      "Pnl": 4019.9999999995725
+    },
+    {
+      "Contracts": 0,
+      "Equity": 152470.00000000006,
+      "Id": "bot:BG:Liquidity:12",
+      "Kind": "Liquidity",
+      "Pnl": 2470.0000000000728
+    },
+    {
+      "Contracts": 0,
+      "Equity": 150090,
+      "Id": "bot:BG:Liquidity:13",
+      "Kind": "Liquidity",
+      "Pnl": 90.0000000000091
+    },
+    {
+      "Contracts": 1,
+      "Equity": 152039.99999999994,
+      "Id": "bot:BG:Liquidity:14",
+      "Kind": "Liquidity",
+      "Pnl": 2039.9999999999636
+    },
+    {
+      "Contracts": 4,
+      "Equity": 151729.99999999988,
+      "Id": "bot:BG:Liquidity:15",
+      "Kind": "Liquidity",
+      "Pnl": 1729.9999999998818
+    },
+    {
+      "Contracts": 4,
+      "Equity": 153799.99999999968,
+      "Id": "bot:BG:Liquidity:16",
+      "Kind": "Liquidity",
+      "Pnl": 3799.9999999996817
+    },
+    {
+      "Contracts": 2,
+      "Equity": 154060.00000000038,
+      "Id": "bot:BG:Liquidity:17",
+      "Kind": "Liquidity",
+      "Pnl": 4060.0000000004
+    },
+    {
+      "Contracts": 0,
+      "Equity": 154910.00000000003,
+      "Id": "bot:BG:Liquidity:18",
+      "Kind": "Liquidity",
+      "Pnl": 4910.000000000036
+    },
+    {
+      "Contracts": 0,
+      "Equity": 154770.00000000003,
+      "Id": "bot:BG:Liquidity:19",
+      "Kind": "Liquidity",
+      "Pnl": 4770.000000000027
+    },
+    {
+      "Contracts": 2,
+      "Equity": 153859.99999999956,
+      "Id": "bot:BG:Liquidity:2",
+      "Kind": "Liquidity",
+      "Pnl": 3859.9999999995816
+    },
+    {
+      "Contracts": 5,
+      "Equity": 153540.00000000006,
+      "Id": "bot:BG:Liquidity:20",
+      "Kind": "Liquidity",
+      "Pnl": 3540.0000000000546
+    },
+    {
+      "Contracts": 2,
+      "Equity": 153610.00000000003,
+      "Id": "bot:BG:Liquidity:21",
+      "Kind": "Liquidity",
+      "Pnl": 3610.0000000000364
+    },
+    {
+      "Contracts": 0,
+      "Equity": 150729.99999999948,
+      "Id": "bot:BG:Liquidity:22",
+      "Kind": "Liquidity",
+      "Pnl": 729.9999999994725
+    },
+    {
+      "Contracts": 1,
+      "Equity": 150350.0000000003,
+      "Id": "bot:BG:Liquidity:23",
+      "Kind": "Liquidity",
+      "Pnl": 350.00000000027285
+    },
+    {
+      "Contracts": 3,
+      "Equity": 154429.9999999998,
+      "Id": "bot:BG:Liquidity:24",
+      "Kind": "Liquidity",
+      "Pnl": 4429.999999999791
+    },
+    {
+      "Contracts": 1,
+      "Equity": 150399.9999999998,
+      "Id": "bot:BG:Liquidity:3",
+      "Kind": "Liquidity",
+      "Pnl": 399.9999999997726
+    },
+    {
+      "Contracts": 0,
+      "Equity": 154000.00000000017,
+      "Id": "bot:BG:Liquidity:4",
+      "Kind": "Liquidity",
+      "Pnl": 4000.000000000182
+    },
+    {
+      "Contracts": 0,
+      "Equity": 153019.99999999988,
+      "Id": "bot:BG:Liquidity:5",
+      "Kind": "Liquidity",
+      "Pnl": 3019.999999999891
+    },
+    {
+      "Contracts": 2,
+      "Equity": 156699.99999999994,
+      "Id": "bot:BG:Liquidity:6",
+      "Kind": "Liquidity",
+      "Pnl": 6699.9999999999545
+    },
+    {
+      "Contracts": 0,
+      "Equity": 157630.00000000035,
+      "Id": "bot:BG:Liquidity:7",
+      "Kind": "Liquidity",
+      "Pnl": 7630.0000000003365
+    },
+    {
+      "Contracts": 0,
+      "Equity": 148410.00000000026,
+      "Id": "bot:BG:Liquidity:8",
+      "Kind": "Liquidity",
+      "Pnl": -1589.9999999997362
+    },
+    {
+      "Contracts": 0,
+      "Equity": 150129.99999999997,
+      "Id": "bot:BG:Liquidity:9",
+      "Kind": "Liquidity",
+      "Pnl": 129.99999999997272
+    },
+    {
+      "Contracts": 18,
+      "Equity": 710759.9999999988,
+      "Id": "bot:BG:Maker:1",
+      "Kind": "Maker",
+      "Pnl": -39240.000000001106
+    },
+    {
+      "Contracts": 7,
+      "Equity": 706679.999999998,
+      "Id": "bot:BG:Maker:10",
+      "Kind": "Maker",
+      "Pnl": -43320.00000000189
+    },
+    {
+      "Contracts": 5,
+      "Equity": 726640.000000004,
+      "Id": "bot:BG:Maker:11",
+      "Kind": "Maker",
+      "Pnl": -23359.999999996096
+    },
+    {
+      "Contracts": 4,
+      "Equity": 726829.9999999997,
+      "Id": "bot:BG:Maker:12",
+      "Kind": "Maker",
+      "Pnl": -23170.000000000284
+    },
+    {
+      "Contracts": 20,
+      "Equity": 713560.0000000069,
+      "Id": "bot:BG:Maker:13",
+      "Kind": "Maker",
+      "Pnl": -36439.99999999318
+    },
+    {
+      "Contracts": 2,
+      "Equity": 741660.0000000052,
+      "Id": "bot:BG:Maker:14",
+      "Kind": "Maker",
+      "Pnl": -8339.999999994689
+    },
+    {
+      "Contracts": 9,
+      "Equity": 720560,
+      "Id": "bot:BG:Maker:15",
+      "Kind": "Maker",
+      "Pnl": -29439.99999999994
+    },
+    {
+      "Contracts": 23,
+      "Equity": 688060.0000000059,
+      "Id": "bot:BG:Maker:16",
+      "Kind": "Maker",
+      "Pnl": -61939.999999994136
+    },
+    {
+      "Contracts": 9,
+      "Equity": 691690.000000004,
+      "Id": "bot:BG:Maker:17",
+      "Kind": "Maker",
+      "Pnl": -58309.99999999602
+    },
+    {
+      "Contracts": 11,
+      "Equity": 733009.9999999988,
+      "Id": "bot:BG:Maker:18",
+      "Kind": "Maker",
+      "Pnl": -16990.00000000115
+    },
+    {
+      "Contracts": 1,
+      "Equity": 724589.9999999994,
+      "Id": "bot:BG:Maker:19",
+      "Kind": "Maker",
+      "Pnl": -25410.000000000535
+    },
+    {
+      "Contracts": 3,
+      "Equity": 716369.9999999987,
+      "Id": "bot:BG:Maker:2",
+      "Kind": "Maker",
+      "Pnl": -33630.0000000012
+    },
+    {
+      "Contracts": 19,
+      "Equity": 712619.9999999942,
+      "Id": "bot:BG:Maker:20",
+      "Kind": "Maker",
+      "Pnl": -37380.00000000576
+    },
+    {
+      "Contracts": 0,
+      "Equity": 761009.9999999981,
+      "Id": "bot:BG:Maker:3",
+      "Kind": "Maker",
+      "Pnl": 11009.999999998172
+    },
+    {
+      "Contracts": 10,
+      "Equity": 743980.0000000028,
+      "Id": "bot:BG:Maker:4",
+      "Kind": "Maker",
+      "Pnl": -6019.999999997253
+    },
+    {
+      "Contracts": 20,
+      "Equity": 676750.0000000049,
+      "Id": "bot:BG:Maker:5",
+      "Kind": "Maker",
+      "Pnl": -73249.99999999507
+    },
+    {
+      "Contracts": 17,
+      "Equity": 712269.9999999966,
+      "Id": "bot:BG:Maker:6",
+      "Kind": "Maker",
+      "Pnl": -37730.000000003296
+    },
+    {
+      "Contracts": 1,
+      "Equity": 734430.0000000003,
+      "Id": "bot:BG:Maker:7",
+      "Kind": "Maker",
+      "Pnl": -15569.999999999638
+    },
+    {
+      "Contracts": 9,
+      "Equity": 714929.9999999992,
+      "Id": "bot:BG:Maker:8",
+      "Kind": "Maker",
+      "Pnl": -35070.000000000764
+    },
+    {
+      "Contracts": 4,
+      "Equity": 699719.9999999999,
+      "Id": "bot:BG:Maker:9",
+      "Kind": "Maker",
+      "Pnl": -50280.00000000012
+    },
+    {
+      "Contracts": 8,
+      "Equity": 220120.0000000008,
+      "Id": "bot:BG:Momentum:1",
+      "Kind": "Momentum",
+      "Pnl": 20120.000000000775
+    },
+    {
+      "Contracts": 3,
+      "Equity": 205679.99999999878,
+      "Id": "bot:BG:Momentum:10",
+      "Kind": "Momentum",
+      "Pnl": 5679.99999999879
+    },
+    {
+      "Contracts": 0,
+      "Equity": 240820.00000000172,
+      "Id": "bot:BG:Momentum:11",
+      "Kind": "Momentum",
+      "Pnl": 40820.00000000172
+    },
+    {
+      "Contracts": 33,
+      "Equity": 245379.99999999552,
+      "Id": "bot:BG:Momentum:12",
+      "Kind": "Momentum",
+      "Pnl": 45379.99999999552
+    },
+    {
+      "Contracts": 8,
+      "Equity": 207910.0000000078,
+      "Id": "bot:BG:Momentum:2",
+      "Kind": "Momentum",
+      "Pnl": 7910.000000007811
+    },
+    {
+      "Contracts": 6,
+      "Equity": 198760.00000000035,
+      "Id": "bot:BG:Momentum:3",
+      "Kind": "Momentum",
+      "Pnl": -1239.9999999996453
+    },
+    {
+      "Contracts": 19,
+      "Equity": 241689.99999999712,
+      "Id": "bot:BG:Momentum:4",
+      "Kind": "Momentum",
+      "Pnl": 41689.999999997126
+    },
+    {
+      "Contracts": 0,
+      "Equity": 191949.99999999878,
+      "Id": "bot:BG:Momentum:5",
+      "Kind": "Momentum",
+      "Pnl": -8050.000000001228
+    },
+    {
+      "Contracts": 2,
+      "Equity": 205529.99999999866,
+      "Id": "bot:BG:Momentum:6",
+      "Kind": "Momentum",
+      "Pnl": 5529.999999998654
+    },
+    {
+      "Contracts": 4,
+      "Equity": 201410.00000000114,
+      "Id": "bot:BG:Momentum:7",
+      "Kind": "Momentum",
+      "Pnl": 1410.0000000011278
+    },
+    {
+      "Contracts": 1,
+      "Equity": 219319.99999999965,
+      "Id": "bot:BG:Momentum:8",
+      "Kind": "Momentum",
+      "Pnl": 19319.99999999963
+    },
+    {
+      "Contracts": 6,
+      "Equity": 217740.00000000498,
+      "Id": "bot:BG:Momentum:9",
+      "Kind": "Momentum",
+      "Pnl": 17740.000000004995
+    },
+    {
+      "Contracts": 2,
+      "Equity": 162400.0000000016,
+      "Id": "bot:BG:Protective:1",
+      "Kind": "Protective",
+      "Pnl": 12400.000000001592
+    },
+    {
+      "Contracts": 3,
+      "Equity": 145789.99999999904,
+      "Id": "bot:BG:Protective:2",
+      "Kind": "Protective",
+      "Pnl": -4210.000000000946
+    },
+    {
+      "Contracts": 0,
+      "Equity": 158970.00000000157,
+      "Id": "bot:BG:Protective:3",
+      "Kind": "Protective",
+      "Pnl": 8970.000000001573
+    },
+    {
+      "Contracts": 5,
+      "Equity": 143329.99999999942,
+      "Id": "bot:BG:Protective:4",
+      "Kind": "Protective",
+      "Pnl": -6670.000000000569
+    },
+    {
+      "Contracts": 7,
+      "Equity": 152659.99999999886,
+      "Id": "bot:BG:Protective:5",
+      "Kind": "Protective",
+      "Pnl": 2659.999999998854
+    },
+    {
+      "Contracts": 8,
+      "Equity": 163170.00000000105,
+      "Id": "bot:BG:Protective:6",
+      "Kind": "Protective",
+      "Pnl": 13170.000000001073
+    },
+    {
+      "Contracts": 2,
+      "Equity": 162969.9999999991,
+      "Id": "bot:BG:Protective:7",
+      "Kind": "Protective",
+      "Pnl": 12969.999999999118
+    },
+    {
+      "Contracts": 15,
+      "Equity": 168659.999999999,
+      "Id": "bot:BG:Protective:8",
+      "Kind": "Protective",
+      "Pnl": 18659.99999999899
+    },
+    {
+      "Contracts": 26,
+      "Equity": 5077600.000000002,
+      "Id": "bot:BG:Reserve:1",
+      "Kind": "Reserve",
+      "Pnl": 77600.00000000221
+    },
+    {
+      "Contracts": 22,
+      "Equity": 5096140.000000001,
+      "Id": "bot:BG:Reserve:2",
+      "Kind": "Reserve",
+      "Pnl": 96140.00000000132
+    },
+    {
+      "Contracts": 36,
+      "Equity": 5061210.000000003,
+      "Id": "bot:BG:Reserve:3",
+      "Kind": "Reserve",
+      "Pnl": 61210.0000000029
+    },
+    {
+      "Contracts": 60,
+      "Equity": 5068610.0000000205,
+      "Id": "bot:BG:Reserve:4",
+      "Kind": "Reserve",
+      "Pnl": 68610.00000002058
+    },
+    {
+      "Contracts": 37,
+      "Equity": 5054659.999999999,
+      "Id": "bot:BG:Reserve:5",
+      "Kind": "Reserve",
+      "Pnl": 54659.99999999881
+    },
+    {
+      "Contracts": 33,
+      "Equity": 5037470.000000003,
+      "Id": "bot:BG:Reserve:6",
+      "Kind": "Reserve",
+      "Pnl": 37470.00000000219
+    },
+    {
+      "Contracts": 1,
+      "Equity": 199170.00000000003,
+      "Id": "bot:BG:Reversion:1",
+      "Kind": "Reversion",
+      "Pnl": -829.9999999999727
+    },
+    {
+      "Contracts": 0,
+      "Equity": 197670.00000000026,
+      "Id": "bot:BG:Reversion:10",
+      "Kind": "Reversion",
+      "Pnl": -2329.9999999997453
+    },
+    {
+      "Contracts": 2,
+      "Equity": 199449.99999999977,
+      "Id": "bot:BG:Reversion:11",
+      "Kind": "Reversion",
+      "Pnl": -550.0000000002274
+    },
+    {
+      "Contracts": 0,
+      "Equity": 199110.0000000001,
+      "Id": "bot:BG:Reversion:12",
+      "Kind": "Reversion",
+      "Pnl": -889.9999999999181
+    },
+    {
+      "Contracts": 0,
+      "Equity": 199300.0000000001,
+      "Id": "bot:BG:Reversion:2",
+      "Kind": "Reversion",
+      "Pnl": -699.999999999909
+    },
+    {
+      "Contracts": 0,
+      "Equity": 198589.99999999997,
+      "Id": "bot:BG:Reversion:3",
+      "Kind": "Reversion",
+      "Pnl": -1410.0000000000364
+    },
+    {
+      "Contracts": 0,
+      "Equity": 197719.99999999988,
+      "Id": "bot:BG:Reversion:4",
+      "Kind": "Reversion",
+      "Pnl": -2280.000000000109
+    },
+    {
+      "Contracts": 1,
+      "Equity": 195969.99999999994,
+      "Id": "bot:BG:Reversion:5",
+      "Kind": "Reversion",
+      "Pnl": -4030.0000000000637
+    },
+    {
+      "Contracts": 0,
+      "Equity": 199570.00000000012,
+      "Id": "bot:BG:Reversion:6",
+      "Kind": "Reversion",
+      "Pnl": -429.99999999988177
+    },
+    {
+      "Contracts": 0,
+      "Equity": 195889.99999999977,
+      "Id": "bot:BG:Reversion:7",
+      "Kind": "Reversion",
+      "Pnl": -4110.000000000218
+    },
+    {
+      "Contracts": 4,
+      "Equity": 194790.00000000006,
+      "Id": "bot:BG:Reversion:8",
+      "Kind": "Reversion",
+      "Pnl": -5209.999999999945
+    },
+    {
+      "Contracts": 0,
+      "Equity": 198910.00000000026,
+      "Id": "bot:BG:Reversion:9",
+      "Kind": "Reversion",
+      "Pnl": -1089.9999999997362
+    },
+    {
+      "Contracts": 1,
+      "Equity": 97149.99999999987,
+      "Id": "bot:BG:Scalper:1",
+      "Kind": "Scalper",
+      "Pnl": -2850.0000000001364
+    },
+    {
+      "Contracts": 0,
+      "Equity": 102799.99999999996,
+      "Id": "bot:BG:Scalper:10",
+      "Kind": "Scalper",
+      "Pnl": 2799.9999999999545
+    },
+    {
+      "Contracts": 0,
+      "Equity": 97340.00000000001,
+      "Id": "bot:BG:Scalper:11",
+      "Kind": "Scalper",
+      "Pnl": -2659.999999999991
+    },
+    {
+      "Contracts": 0,
+      "Equity": 104359.99999999926,
+      "Id": "bot:BG:Scalper:12",
+      "Kind": "Scalper",
+      "Pnl": 4359.999999999263
+    },
+    {
+      "Contracts": 0,
+      "Equity": 94119.99999999975,
+      "Id": "bot:BG:Scalper:13",
+      "Kind": "Scalper",
+      "Pnl": -5880.000000000246
+    },
+    {
+      "Contracts": 0,
+      "Equity": 105239.99999999987,
+      "Id": "bot:BG:Scalper:14",
+      "Kind": "Scalper",
+      "Pnl": 5239.999999999873
+    },
+    {
+      "Contracts": 0,
+      "Equity": 98169.99999999994,
+      "Id": "bot:BG:Scalper:15",
+      "Kind": "Scalper",
+      "Pnl": -1830.0000000000637
+    },
+    {
+      "Contracts": 1,
+      "Equity": 102019.99999999962,
+      "Id": "bot:BG:Scalper:16",
+      "Kind": "Scalper",
+      "Pnl": 2019.999999999618
+    },
+    {
+      "Contracts": 0,
+      "Equity": 96370.0000000002,
+      "Id": "bot:BG:Scalper:17",
+      "Kind": "Scalper",
+      "Pnl": -3629.999999999791
+    },
+    {
+      "Contracts": 0,
+      "Equity": 103420.00000000026,
+      "Id": "bot:BG:Scalper:18",
+      "Kind": "Scalper",
+      "Pnl": 3420.0000000002547
+    },
+    {
+      "Contracts": 0,
+      "Equity": 96780.00000000012,
+      "Id": "bot:BG:Scalper:19",
+      "Kind": "Scalper",
+      "Pnl": -3219.999999999891
+    },
+    {
+      "Contracts": 1,
+      "Equity": 102169.99999999999,
+      "Id": "bot:BG:Scalper:2",
+      "Kind": "Scalper",
+      "Pnl": 2169.999999999982
+    },
+    {
+      "Contracts": 0,
+      "Equity": 105370.00000000035,
+      "Id": "bot:BG:Scalper:20",
+      "Kind": "Scalper",
+      "Pnl": 5370.000000000346
+    },
+    {
+      "Contracts": 0,
+      "Equity": 98820.00000000003,
+      "Id": "bot:BG:Scalper:21",
+      "Kind": "Scalper",
+      "Pnl": -1179.9999999999727
+    },
+    {
+      "Contracts": 2,
+      "Equity": 106200.00000000032,
+      "Id": "bot:BG:Scalper:22",
+      "Kind": "Scalper",
+      "Pnl": 6200.000000000318
+    },
+    {
+      "Contracts": 0,
+      "Equity": 95849.99999999991,
+      "Id": "bot:BG:Scalper:23",
+      "Kind": "Scalper",
+      "Pnl": -4150.000000000091
+    },
+    {
+      "Contracts": 0,
+      "Equity": 109419.99999999988,
+      "Id": "bot:BG:Scalper:24",
+      "Kind": "Scalper",
+      "Pnl": 9419.99999999989
+    },
+    {
+      "Contracts": 0,
+      "Equity": 94829.99999999939,
+      "Id": "bot:BG:Scalper:3",
+      "Kind": "Scalper",
+      "Pnl": -5170.0000000006185
+    },
+    {
+      "Contracts": 0,
+      "Equity": 99519.99999999903,
+      "Id": "bot:BG:Scalper:4",
+      "Kind": "Scalper",
+      "Pnl": -480.00000000097316
+    },
+    {
+      "Contracts": 0,
+      "Equity": 96370.00000000007,
+      "Id": "bot:BG:Scalper:5",
+      "Kind": "Scalper",
+      "Pnl": -3629.9999999999272
+    },
+    {
+      "Contracts": 2,
+      "Equity": 105910.00000000017,
+      "Id": "bot:BG:Scalper:6",
+      "Kind": "Scalper",
+      "Pnl": 5910.000000000173
+    },
+    {
+      "Contracts": 0,
+      "Equity": 99030.00000000006,
+      "Id": "bot:BG:Scalper:7",
+      "Kind": "Scalper",
+      "Pnl": -969.9999999999363
+    },
+    {
+      "Contracts": 2,
+      "Equity": 106899.99999999994,
+      "Id": "bot:BG:Scalper:8",
+      "Kind": "Scalper",
+      "Pnl": 6899.9999999999545
+    },
+    {
+      "Contracts": 0,
+      "Equity": 98250.00000000004,
+      "Id": "bot:BG:Scalper:9",
+      "Kind": "Scalper",
+      "Pnl": -1749.9999999999545
+    },
+    {
+      "Contracts": 18,
+      "Equity": 250630.00000000274,
+      "Id": "bot:BG:Value:1",
+      "Kind": "Value",
+      "Pnl": 630.0000000027467
+    },
+    {
+      "Contracts": 6,
+      "Equity": 254259.9999999993,
+      "Id": "bot:BG:Value:10",
+      "Kind": "Value",
+      "Pnl": 4259.999999999309
+    },
+    {
+      "Contracts": 17,
+      "Equity": 228029.9999999999,
+      "Id": "bot:BG:Value:11",
+      "Kind": "Value",
+      "Pnl": -21970.000000000073
+    },
+    {
+      "Contracts": 0,
+      "Equity": 250030.00000000012,
+      "Id": "bot:BG:Value:12",
+      "Kind": "Value",
+      "Pnl": 30.00000000010914
+    },
+    {
+      "Contracts": 7,
+      "Equity": 220000.00000000038,
+      "Id": "bot:BG:Value:13",
+      "Kind": "Value",
+      "Pnl": -29999.99999999962
+    },
+    {
+      "Contracts": 15,
+      "Equity": 272440.00000000035,
+      "Id": "bot:BG:Value:14",
+      "Kind": "Value",
+      "Pnl": 22440.000000000353
+    },
+    {
+      "Contracts": 12,
+      "Equity": 202039.9999999966,
+      "Id": "bot:BG:Value:15",
+      "Kind": "Value",
+      "Pnl": -47960.000000003405
+    },
+    {
+      "Contracts": 1,
+      "Equity": 250640.00000000035,
+      "Id": "bot:BG:Value:16",
+      "Kind": "Value",
+      "Pnl": 640.0000000003274
+    },
+    {
+      "Contracts": 6,
+      "Equity": 241770.00000000038,
+      "Id": "bot:BG:Value:17",
+      "Kind": "Value",
+      "Pnl": -8229.999999999607
+    },
+    {
+      "Contracts": 25,
+      "Equity": 235509.99999999744,
+      "Id": "bot:BG:Value:18",
+      "Kind": "Value",
+      "Pnl": -14490.000000002554
+    },
+    {
+      "Contracts": 7,
+      "Equity": 214120.0000000006,
+      "Id": "bot:BG:Value:19",
+      "Kind": "Value",
+      "Pnl": -35879.99999999938
+    },
+    {
+      "Contracts": 25,
+      "Equity": 254029.99999999916,
+      "Id": "bot:BG:Value:2",
+      "Kind": "Value",
+      "Pnl": 4029.999999999156
+    },
+    {
+      "Contracts": 0,
+      "Equity": 249420.00000000026,
+      "Id": "bot:BG:Value:20",
+      "Kind": "Value",
+      "Pnl": -579.9999999997453
+    },
+    {
+      "Contracts": 8,
+      "Equity": 245659.99999999977,
+      "Id": "bot:BG:Value:3",
+      "Kind": "Value",
+      "Pnl": -4340.0000000002365
+    },
+    {
+      "Contracts": 14,
+      "Equity": 262910.0000000033,
+      "Id": "bot:BG:Value:4",
+      "Kind": "Value",
+      "Pnl": 12910.000000003312
+    },
+    {
+      "Contracts": 22,
+      "Equity": 247400.0000000011,
+      "Id": "bot:BG:Value:5",
+      "Kind": "Value",
+      "Pnl": -2599.9999999989122
+    },
+    {
+      "Contracts": 2,
+      "Equity": 250870.00000000017,
+      "Id": "bot:BG:Value:6",
+      "Kind": "Value",
+      "Pnl": 870.0000000001637
+    },
+    {
+      "Contracts": 13,
+      "Equity": 265139.99999999773,
+      "Id": "bot:BG:Value:7",
+      "Kind": "Value",
+      "Pnl": 15139.999999997735
+    },
+    {
+      "Contracts": 17,
+      "Equity": 250249.99999999988,
+      "Id": "bot:BG:Value:8",
+      "Kind": "Value",
+      "Pnl": 249.99999999990905
+    },
+    {
+      "Contracts": 24,
+      "Equity": 261050.00000000114,
+      "Id": "bot:BG:Value:9",
+      "Kind": "Value",
+      "Pnl": 11050.000000001137
+    },
+    {
+      "Contracts": 58,
+      "Equity": 1646859.9999999732,
+      "Id": "bot:BG:Whale:1",
+      "Kind": "Whale",
+      "Pnl": 146859.99999997314
+    },
+    {
+      "Contracts": 122,
+      "Equity": 1298600.00000002,
+      "Id": "bot:BG:Whale:2",
+      "Kind": "Whale",
+      "Pnl": -201399.99999998003
+    },
+    {
+      "Contracts": 10,
+      "Equity": 1524680.0000000158,
+      "Id": "bot:BG:Whale:3",
+      "Kind": "Whale",
+      "Pnl": 24680.00000001601
+    },
+    {
+      "Contracts": 0,
+      "Equity": 1554719.9999998875,
+      "Id": "bot:BG:Whale:4",
+      "Kind": "Whale",
+      "Pnl": 54719.99999988754
+    },
+    {
+      "Contracts": 7,
+      "Equity": 157009.99999999948,
+      "Id": "bot:BT:Liquidity:1",
+      "Kind": "Liquidity",
+      "Pnl": 7009.999999999491
+    },
+    {
+      "Contracts": 2,
+      "Equity": 153624.99999999985,
+      "Id": "bot:BT:Liquidity:10",
+      "Kind": "Liquidity",
+      "Pnl": 3624.9999999998545
+    },
+    {
+      "Contracts": 8,
+      "Equity": 167744.99999999977,
+      "Id": "bot:BT:Liquidity:11",
+      "Kind": "Liquidity",
+      "Pnl": 17744.99999999978
+    },
+    {
+      "Contracts": 0,
+      "Equity": 161015,
+      "Id": "bot:BT:Liquidity:12",
+      "Kind": "Liquidity",
+      "Pnl": 11015
+    },
+    {
+      "Contracts": 2,
+      "Equity": 151335.00000000015,
+      "Id": "bot:BT:Liquidity:13",
+      "Kind": "Liquidity",
+      "Pnl": 1335.0000000001455
+    },
+    {
+      "Contracts": 1,
+      "Equity": 150959.99999999994,
+      "Id": "bot:BT:Liquidity:14",
+      "Kind": "Liquidity",
+      "Pnl": 959.9999999999272
+    },
+    {
+      "Contracts": 1,
+      "Equity": 149829.99999999994,
+      "Id": "bot:BT:Liquidity:15",
+      "Kind": "Liquidity",
+      "Pnl": -170.00000000007276
+    },
+    {
+      "Contracts": 3,
+      "Equity": 150964.99999999977,
+      "Id": "bot:BT:Liquidity:16",
+      "Kind": "Liquidity",
+      "Pnl": 964.9999999997817
+    },
+    {
+      "Contracts": 4,
+      "Equity": 151655.00000000006,
+      "Id": "bot:BT:Liquidity:17",
+      "Kind": "Liquidity",
+      "Pnl": 1655.0000000000728
+    },
+    {
+      "Contracts": 2,
+      "Equity": 153605.00000000006,
+      "Id": "bot:BT:Liquidity:18",
+      "Kind": "Liquidity",
+      "Pnl": 3605.0000000000728
+    },
+    {
+      "Contracts": 2,
+      "Equity": 149365,
+      "Id": "bot:BT:Liquidity:19",
+      "Kind": "Liquidity",
+      "Pnl": -635
+    },
+    {
+      "Contracts": 3,
+      "Equity": 169064.99999999942,
+      "Id": "bot:BT:Liquidity:2",
+      "Kind": "Liquidity",
+      "Pnl": 19064.999999999418
+    },
+    {
+      "Contracts": 2,
+      "Equity": 151505.00000000044,
+      "Id": "bot:BT:Liquidity:20",
+      "Kind": "Liquidity",
+      "Pnl": 1505.0000000004366
+    },
+    {
+      "Contracts": 0,
+      "Equity": 149105,
+      "Id": "bot:BT:Liquidity:21",
+      "Kind": "Liquidity",
+      "Pnl": -895
+    },
+    {
+      "Contracts": 0,
+      "Equity": 151800,
+      "Id": "bot:BT:Liquidity:22",
+      "Kind": "Liquidity",
+      "Pnl": 1800
+    },
+    {
+      "Contracts": 1,
+      "Equity": 148279.99999999994,
+      "Id": "bot:BT:Liquidity:23",
+      "Kind": "Liquidity",
+      "Pnl": -1720.0000000000728
+    },
+    {
+      "Contracts": 3,
+      "Equity": 150815.00000000015,
+      "Id": "bot:BT:Liquidity:24",
+      "Kind": "Liquidity",
+      "Pnl": 815.0000000001455
+    },
+    {
+      "Contracts": 2,
+      "Equity": 158730.00000000006,
+      "Id": "bot:BT:Liquidity:3",
+      "Kind": "Liquidity",
+      "Pnl": 8730.000000000073
+    },
+    {
+      "Contracts": 1,
+      "Equity": 163470.00000000015,
+      "Id": "bot:BT:Liquidity:4",
+      "Kind": "Liquidity",
+      "Pnl": 13470.000000000146
+    },
+    {
+      "Contracts": 0,
+      "Equity": 160374.99999999985,
+      "Id": "bot:BT:Liquidity:5",
+      "Kind": "Liquidity",
+      "Pnl": 10374.999999999854
+    },
+    {
+      "Contracts": 5,
+      "Equity": 154235.00000000035,
+      "Id": "bot:BT:Liquidity:6",
+      "Kind": "Liquidity",
+      "Pnl": 4235.000000000364
+    },
+    {
+      "Contracts": 0,
+      "Equity": 162080,
+      "Id": "bot:BT:Liquidity:7",
+      "Kind": "Liquidity",
+      "Pnl": 12080
+    },
+    {
+      "Contracts": 2,
+      "Equity": 154819.99999999994,
+      "Id": "bot:BT:Liquidity:8",
+      "Kind": "Liquidity",
+      "Pnl": 4819.999999999927
+    },
+    {
+      "Contracts": 0,
+      "Equity": 151379.9999999997,
+      "Id": "bot:BT:Liquidity:9",
+      "Kind": "Liquidity",
+      "Pnl": 1379.999999999709
+    },
+    {
+      "Contracts": 32,
+      "Equity": 676955.0000000107,
+      "Id": "bot:BT:Maker:1",
+      "Kind": "Maker",
+      "Pnl": -73044.9999999893
+    },
+    {
+      "Contracts": 12,
+      "Equity": 734545.0000000023,
+      "Id": "bot:BT:Maker:10",
+      "Kind": "Maker",
+      "Pnl": -15454.999999997672
+    },
+    {
+      "Contracts": 27,
+      "Equity": 594874.999999997,
+      "Id": "bot:BT:Maker:11",
+      "Kind": "Maker",
+      "Pnl": -155125.00000000297
+    },
+    {
+      "Contracts": 29,
+      "Equity": 766005.000000001,
+      "Id": "bot:BT:Maker:12",
+      "Kind": "Maker",
+      "Pnl": 16005.000000001019
+    },
+    {
+      "Contracts": 0,
+      "Equity": 687940.0000000064,
+      "Id": "bot:BT:Maker:13",
+      "Kind": "Maker",
+      "Pnl": -62059.9999999936
+    },
+    {
+      "Contracts": 4,
+      "Equity": 759990.0000000062,
+      "Id": "bot:BT:Maker:14",
+      "Kind": "Maker",
+      "Pnl": 9990.000000006185
+    },
+    {
+      "Contracts": 18,
+      "Equity": 735364.9999999983,
+      "Id": "bot:BT:Maker:15",
+      "Kind": "Maker",
+      "Pnl": -14635.000000001819
+    },
+    {
+      "Contracts": 5,
+      "Equity": 738664.9999999965,
+      "Id": "bot:BT:Maker:16",
+      "Kind": "Maker",
+      "Pnl": -11335.000000003492
+    },
+    {
+      "Contracts": 27,
+      "Equity": 729700.0000000016,
+      "Id": "bot:BT:Maker:17",
+      "Kind": "Maker",
+      "Pnl": -20299.9999999984
+    },
+    {
+      "Contracts": 28,
+      "Equity": 662484.9999999909,
+      "Id": "bot:BT:Maker:18",
+      "Kind": "Maker",
+      "Pnl": -87515.00000000917
+    },
+    {
+      "Contracts": 35,
+      "Equity": 639004.999999993,
+      "Id": "bot:BT:Maker:19",
+      "Kind": "Maker",
+      "Pnl": -110995.00000000698
+    },
+    {
+      "Contracts": 6,
+      "Equity": 744820.0000000033,
+      "Id": "bot:BT:Maker:2",
+      "Kind": "Maker",
+      "Pnl": -5179.999999996726
+    },
+    {
+      "Contracts": 42,
+      "Equity": 562535.0000000064,
+      "Id": "bot:BT:Maker:20",
+      "Kind": "Maker",
+      "Pnl": -187464.9999999936
+    },
+    {
+      "Contracts": 21,
+      "Equity": 688015.0000000056,
+      "Id": "bot:BT:Maker:3",
+      "Kind": "Maker",
+      "Pnl": -61984.99999999447
+    },
+    {
+      "Contracts": 3,
+      "Equity": 750569.9999999921,
+      "Id": "bot:BT:Maker:4",
+      "Kind": "Maker",
+      "Pnl": 569.999999992142
+    },
+    {
+      "Contracts": 17,
+      "Equity": 706980.0000000035,
+      "Id": "bot:BT:Maker:5",
+      "Kind": "Maker",
+      "Pnl": -43019.99999999651
+    },
+    {
+      "Contracts": 57,
+      "Equity": 598074.9999999921,
+      "Id": "bot:BT:Maker:6",
+      "Kind": "Maker",
+      "Pnl": -151925.00000000795
+    },
+    {
+      "Contracts": 18,
+      "Equity": 676480.0000000017,
+      "Id": "bot:BT:Maker:7",
+      "Kind": "Maker",
+      "Pnl": -73519.99999999833
+    },
+    {
+      "Contracts": 14,
+      "Equity": 676045.0000000019,
+      "Id": "bot:BT:Maker:8",
+      "Kind": "Maker",
+      "Pnl": -73954.99999999811
+    },
+    {
+      "Contracts": 18,
+      "Equity": 695630.0000000044,
+      "Id": "bot:BT:Maker:9",
+      "Kind": "Maker",
+      "Pnl": -54369.99999999549
+    },
+    {
+      "Contracts": 25,
+      "Equity": 257800.00000000146,
+      "Id": "bot:BT:Momentum:1",
+      "Kind": "Momentum",
+      "Pnl": 57800.000000001455
+    },
+    {
+      "Contracts": 2,
+      "Equity": 193965.00000000093,
+      "Id": "bot:BT:Momentum:10",
+      "Kind": "Momentum",
+      "Pnl": -6034.999999999054
+    },
+    {
+      "Contracts": 0,
+      "Equity": 258955.00000000146,
+      "Id": "bot:BT:Momentum:11",
+      "Kind": "Momentum",
+      "Pnl": 58955.000000001455
+    },
+    {
+      "Contracts": 1,
+      "Equity": 236364.99999999686,
+      "Id": "bot:BT:Momentum:12",
+      "Kind": "Momentum",
+      "Pnl": 36364.99999999687
+    },
+    {
+      "Contracts": 1,
+      "Equity": 200155.00000000073,
+      "Id": "bot:BT:Momentum:2",
+      "Kind": "Momentum",
+      "Pnl": 155.0000000007276
+    },
+    {
+      "Contracts": 6,
+      "Equity": 357775.0000000131,
+      "Id": "bot:BT:Momentum:3",
+      "Kind": "Momentum",
+      "Pnl": 157775.0000000131
+    },
+    {
+      "Contracts": 0,
+      "Equity": 268364.9999999956,
+      "Id": "bot:BT:Momentum:4",
+      "Kind": "Momentum",
+      "Pnl": 68364.99999999556
+    },
+    {
+      "Contracts": 1,
+      "Equity": 205689.99999999942,
+      "Id": "bot:BT:Momentum:5",
+      "Kind": "Momentum",
+      "Pnl": 5689.999999999418
+    },
+    {
+      "Contracts": 0,
+      "Equity": 204969.99999999985,
+      "Id": "bot:BT:Momentum:6",
+      "Kind": "Momentum",
+      "Pnl": 4969.9999999998545
+    },
+    {
+      "Contracts": 0,
+      "Equity": 195890,
+      "Id": "bot:BT:Momentum:7",
+      "Kind": "Momentum",
+      "Pnl": -4110
+    },
+    {
+      "Contracts": 6,
+      "Equity": 191954.99999999884,
+      "Id": "bot:BT:Momentum:8",
+      "Kind": "Momentum",
+      "Pnl": -8045.000000001164
+    },
+    {
+      "Contracts": 3,
+      "Equity": 240910.00000000087,
+      "Id": "bot:BT:Momentum:9",
+      "Kind": "Momentum",
+      "Pnl": 40910.00000000087
+    },
+    {
+      "Contracts": 5,
+      "Equity": 174484.99999999724,
+      "Id": "bot:BT:Protective:1",
+      "Kind": "Protective",
+      "Pnl": 24484.999999997235
+    },
+    {
+      "Contracts": 4,
+      "Equity": 178789.99999999898,
+      "Id": "bot:BT:Protective:2",
+      "Kind": "Protective",
+      "Pnl": 28789.99999999898
+    },
+    {
+      "Contracts": 0,
+      "Equity": 175190.00000000015,
+      "Id": "bot:BT:Protective:3",
+      "Kind": "Protective",
+      "Pnl": 25190.000000000146
+    },
+    {
+      "Contracts": 1,
+      "Equity": 186754.99999999977,
+      "Id": "bot:BT:Protective:4",
+      "Kind": "Protective",
+      "Pnl": 36754.99999999978
+    },
+    {
+      "Contracts": 1,
+      "Equity": 150589.9999999997,
+      "Id": "bot:BT:Protective:5",
+      "Kind": "Protective",
+      "Pnl": 589.999999999709
+    },
+    {
+      "Contracts": 1,
+      "Equity": 167640.0000000021,
+      "Id": "bot:BT:Protective:6",
+      "Kind": "Protective",
+      "Pnl": 17640.00000000211
+    },
+    {
+      "Contracts": 8,
+      "Equity": 215034.99999999948,
+      "Id": "bot:BT:Protective:7",
+      "Kind": "Protective",
+      "Pnl": 65034.99999999949
+    },
+    {
+      "Contracts": 1,
+      "Equity": 163980.0000000003,
+      "Id": "bot:BT:Protective:8",
+      "Kind": "Protective",
+      "Pnl": 13980.000000000291
+    },
+    {
+      "Contracts": 21,
+      "Equity": 5088044.999999984,
+      "Id": "bot:BT:Reserve:1",
+      "Kind": "Reserve",
+      "Pnl": 88044.99999998407
+    },
+    {
+      "Contracts": 12,
+      "Equity": 5151424.999999996,
+      "Id": "bot:BT:Reserve:2",
+      "Kind": "Reserve",
+      "Pnl": 151424.9999999958
+    },
+    {
+      "Contracts": 35,
+      "Equity": 5073559.999999998,
+      "Id": "bot:BT:Reserve:3",
+      "Kind": "Reserve",
+      "Pnl": 73559.99999999738
+    },
+    {
+      "Contracts": 40,
+      "Equity": 5065835.000000005,
+      "Id": "bot:BT:Reserve:4",
+      "Kind": "Reserve",
+      "Pnl": 65835.00000000458
+    },
+    {
+      "Contracts": 79,
+      "Equity": 5093320,
+      "Id": "bot:BT:Reserve:5",
+      "Kind": "Reserve",
+      "Pnl": 93319.99999999949
+    },
+    {
+      "Contracts": 34,
+      "Equity": 5103075.000000022,
+      "Id": "bot:BT:Reserve:6",
+      "Kind": "Reserve",
+      "Pnl": 103075.00000002168
+    },
+    {
+      "Contracts": 0,
+      "Equity": 194800,
+      "Id": "bot:BT:Reversion:1",
+      "Kind": "Reversion",
+      "Pnl": -5200
+    },
+    {
+      "Contracts": 0,
+      "Equity": 182300,
+      "Id": "bot:BT:Reversion:10",
+      "Kind": "Reversion",
+      "Pnl": -17700
+    },
+    {
+      "Contracts": 0,
+      "Equity": 197335,
+      "Id": "bot:BT:Reversion:11",
+      "Kind": "Reversion",
+      "Pnl": -2665
+    },
+    {
+      "Contracts": 1,
+      "Equity": 186164.99999999977,
+      "Id": "bot:BT:Reversion:12",
+      "Kind": "Reversion",
+      "Pnl": -13835.000000000218
+    },
+    {
+      "Contracts": 0,
+      "Equity": 199505,
+      "Id": "bot:BT:Reversion:2",
+      "Kind": "Reversion",
+      "Pnl": -495
+    },
+    {
+      "Contracts": 0,
+      "Equity": 198450,
+      "Id": "bot:BT:Reversion:3",
+      "Kind": "Reversion",
+      "Pnl": -1550
+    },
+    {
+      "Contracts": 0,
+      "Equity": 196205.00000000006,
+      "Id": "bot:BT:Reversion:4",
+      "Kind": "Reversion",
+      "Pnl": -3794.9999999999272
+    },
+    {
+      "Contracts": 2,
+      "Equity": 192925,
+      "Id": "bot:BT:Reversion:5",
+      "Kind": "Reversion",
+      "Pnl": -7075
+    },
+    {
+      "Contracts": 3,
+      "Equity": 202694.99999999994,
+      "Id": "bot:BT:Reversion:6",
+      "Kind": "Reversion",
+      "Pnl": 2694.9999999999272
+    },
+    {
+      "Contracts": 2,
+      "Equity": 186254.99999999994,
+      "Id": "bot:BT:Reversion:7",
+      "Kind": "Reversion",
+      "Pnl": -13745.000000000073
+    },
+    {
+      "Contracts": 0,
+      "Equity": 177799.99999999977,
+      "Id": "bot:BT:Reversion:8",
+      "Kind": "Reversion",
+      "Pnl": -22200.00000000022
+    },
+    {
+      "Contracts": 0,
+      "Equity": 198210,
+      "Id": "bot:BT:Reversion:9",
+      "Kind": "Reversion",
+      "Pnl": -1790
+    },
+    {
+      "Contracts": 1,
+      "Equity": 95075,
+      "Id": "bot:BT:Scalper:1",
+      "Kind": "Scalper",
+      "Pnl": -4925
+    },
+    {
+      "Contracts": 0,
+      "Equity": 104040,
+      "Id": "bot:BT:Scalper:10",
+      "Kind": "Scalper",
+      "Pnl": 4040
+    },
+    {
+      "Contracts": 0,
+      "Equity": 98135,
+      "Id": "bot:BT:Scalper:11",
+      "Kind": "Scalper",
+      "Pnl": -1865
+    },
+    {
+      "Contracts": 0,
+      "Equity": 103250,
+      "Id": "bot:BT:Scalper:12",
+      "Kind": "Scalper",
+      "Pnl": 3250
+    },
+    {
+      "Contracts": 0,
+      "Equity": 97440,
+      "Id": "bot:BT:Scalper:13",
+      "Kind": "Scalper",
+      "Pnl": -2560
+    },
+    {
+      "Contracts": 0,
+      "Equity": 102530,
+      "Id": "bot:BT:Scalper:14",
+      "Kind": "Scalper",
+      "Pnl": 2530
+    },
+    {
+      "Contracts": 0,
+      "Equity": 96695,
+      "Id": "bot:BT:Scalper:15",
+      "Kind": "Scalper",
+      "Pnl": -3305
+    },
+    {
+      "Contracts": 0,
+      "Equity": 103280,
+      "Id": "bot:BT:Scalper:16",
+      "Kind": "Scalper",
+      "Pnl": 3280
+    },
+    {
+      "Contracts": 1,
+      "Equity": 96420,
+      "Id": "bot:BT:Scalper:17",
+      "Kind": "Scalper",
+      "Pnl": -3580
+    },
+    {
+      "Contracts": 1,
+      "Equity": 105840,
+      "Id": "bot:BT:Scalper:18",
+      "Kind": "Scalper",
+      "Pnl": 5840
+    },
+    {
+      "Contracts": 0,
+      "Equity": 96585,
+      "Id": "bot:BT:Scalper:19",
+      "Kind": "Scalper",
+      "Pnl": -3415
+    },
+    {
+      "Contracts": 1,
+      "Equity": 102545,
+      "Id": "bot:BT:Scalper:2",
+      "Kind": "Scalper",
+      "Pnl": 2545
+    },
+    {
+      "Contracts": 0,
+      "Equity": 102440,
+      "Id": "bot:BT:Scalper:20",
+      "Kind": "Scalper",
+      "Pnl": 2440
+    },
+    {
+      "Contracts": 0,
+      "Equity": 95775,
+      "Id": "bot:BT:Scalper:21",
+      "Kind": "Scalper",
+      "Pnl": -4225
+    },
+    {
+      "Contracts": 1,
+      "Equity": 103075,
+      "Id": "bot:BT:Scalper:22",
+      "Kind": "Scalper",
+      "Pnl": 3075
+    },
+    {
+      "Contracts": 0,
+      "Equity": 96895,
+      "Id": "bot:BT:Scalper:23",
+      "Kind": "Scalper",
+      "Pnl": -3105
+    },
+    {
+      "Contracts": 0,
+      "Equity": 101490,
+      "Id": "bot:BT:Scalper:24",
+      "Kind": "Scalper",
+      "Pnl": 1490
+    },
+    {
+      "Contracts": 0,
+      "Equity": 97570,
+      "Id": "bot:BT:Scalper:3",
+      "Kind": "Scalper",
+      "Pnl": -2430
+    },
+    {
+      "Contracts": 0,
+      "Equity": 104005,
+      "Id": "bot:BT:Scalper:4",
+      "Kind": "Scalper",
+      "Pnl": 4005
+    },
+    {
+      "Contracts": 0,
+      "Equity": 98450,
+      "Id": "bot:BT:Scalper:5",
+      "Kind": "Scalper",
+      "Pnl": -1550
+    },
+    {
+      "Contracts": 0,
+      "Equity": 101295,
+      "Id": "bot:BT:Scalper:6",
+      "Kind": "Scalper",
+      "Pnl": 1295
+    },
+    {
+      "Contracts": 1,
+      "Equity": 98375,
+      "Id": "bot:BT:Scalper:7",
+      "Kind": "Scalper",
+      "Pnl": -1625
+    },
+    {
+      "Contracts": 1,
+      "Equity": 103080,
+      "Id": "bot:BT:Scalper:8",
+      "Kind": "Scalper",
+      "Pnl": 3080
+    },
+    {
+      "Contracts": 0,
+      "Equity": 98395,
+      "Id": "bot:BT:Scalper:9",
+      "Kind": "Scalper",
+      "Pnl": -1605
+    },
+    {
+      "Contracts": 19,
+      "Equity": 218579.99999999942,
+      "Id": "bot:BT:Value:1",
+      "Kind": "Value",
+      "Pnl": -31420.000000000582
+    },
+    {
+      "Contracts": 4,
+      "Equity": 246735.00000000285,
+      "Id": "bot:BT:Value:10",
+      "Kind": "Value",
+      "Pnl": -3264.9999999971624
+    },
+    {
+      "Contracts": 7,
+      "Equity": 256714.9999999983,
+      "Id": "bot:BT:Value:11",
+      "Kind": "Value",
+      "Pnl": 6714.9999999983265
+    },
+    {
+      "Contracts": 2,
+      "Equity": 227139.9999999984,
+      "Id": "bot:BT:Value:12",
+      "Kind": "Value",
+      "Pnl": -22860.0000000016
+    },
+    {
+      "Contracts": 1,
+      "Equity": 225000.0000000011,
+      "Id": "bot:BT:Value:13",
+      "Kind": "Value",
+      "Pnl": -24999.99999999891
+    },
+    {
+      "Contracts": 29,
+      "Equity": 238124.99999999593,
+      "Id": "bot:BT:Value:14",
+      "Kind": "Value",
+      "Pnl": -11875.000000004075
+    },
+    {
+      "Contracts": 5,
+      "Equity": 253469.9999999982,
+      "Id": "bot:BT:Value:15",
+      "Kind": "Value",
+      "Pnl": 3469.999999998181
+    },
+    {
+      "Contracts": 6,
+      "Equity": 299990.0000000006,
+      "Id": "bot:BT:Value:16",
+      "Kind": "Value",
+      "Pnl": 49990.00000000058
+    },
+    {
+      "Contracts": 4,
+      "Equity": 217010.0000000032,
+      "Id": "bot:BT:Value:17",
+      "Kind": "Value",
+      "Pnl": -32989.9999999968
+    },
+    {
+      "Contracts": 23,
+      "Equity": 204034.9999999989,
+      "Id": "bot:BT:Value:18",
+      "Kind": "Value",
+      "Pnl": -45965.00000000109
+    },
+    {
+      "Contracts": 3,
+      "Equity": 207365.00000000044,
+      "Id": "bot:BT:Value:19",
+      "Kind": "Value",
+      "Pnl": -42634.99999999956
+    },
+    {
+      "Contracts": 0,
+      "Equity": 247275.00000000052,
+      "Id": "bot:BT:Value:2",
+      "Kind": "Value",
+      "Pnl": -2724.9999999994907
+    },
+    {
+      "Contracts": 4,
+      "Equity": 248935.00000000326,
+      "Id": "bot:BT:Value:20",
+      "Kind": "Value",
+      "Pnl": -1064.9999999967258
+    },
+    {
+      "Contracts": 1,
+      "Equity": 271594.9999999992,
+      "Id": "bot:BT:Value:3",
+      "Kind": "Value",
+      "Pnl": 21594.9999999992
+    },
+    {
+      "Contracts": 8,
+      "Equity": 237589.99999999913,
+      "Id": "bot:BT:Value:4",
+      "Kind": "Value",
+      "Pnl": -12410.000000000873
+    },
+    {
+      "Contracts": 0,
+      "Equity": 233454.99999999898,
+      "Id": "bot:BT:Value:5",
+      "Kind": "Value",
+      "Pnl": -16545.00000000102
+    },
+    {
+      "Contracts": 3,
+      "Equity": 230130.0000000004,
+      "Id": "bot:BT:Value:6",
+      "Kind": "Value",
+      "Pnl": -19869.999999999563
+    },
+    {
+      "Contracts": 4,
+      "Equity": 193960.00000000015,
+      "Id": "bot:BT:Value:7",
+      "Kind": "Value",
+      "Pnl": -56039.999999999854
+    },
+    {
+      "Contracts": 25,
+      "Equity": 237500.00000000917,
+      "Id": "bot:BT:Value:8",
+      "Kind": "Value",
+      "Pnl": -12499.999999990832
+    },
+    {
+      "Contracts": 3,
+      "Equity": 232900.00000000052,
+      "Id": "bot:BT:Value:9",
+      "Kind": "Value",
+      "Pnl": -17099.99999999949
+    },
+    {
+      "Contracts": 1,
+      "Equity": 1557295.0000000189,
+      "Id": "bot:BT:Whale:1",
+      "Kind": "Whale",
+      "Pnl": 57295.00000001877
+    },
+    {
+      "Contracts": 0,
+      "Equity": 1657550.0000000237,
+      "Id": "bot:BT:Whale:2",
+      "Kind": "Whale",
+      "Pnl": 157550.00000002375
+    },
+    {
+      "Contracts": 14,
+      "Equity": 1515369.9999999993,
+      "Id": "bot:BT:Whale:3",
+      "Kind": "Whale",
+      "Pnl": 15369.999999999345
+    },
+    {
+      "Contracts": 14,
+      "Equity": 1478985.0000000142,
+      "Id": "bot:BT:Whale:4",
+      "Kind": "Whale",
+      "Pnl": -21014.99999998574
+    },
+    {
+      "Contracts": 2,
+      "Equity": 151800.00000000006,
+      "Id": "bot:BX:Liquidity:1",
+      "Kind": "Liquidity",
+      "Pnl": 1800.0000000000455
+    },
+    {
+      "Contracts": 0,
+      "Equity": 147062.5,
+      "Id": "bot:BX:Liquidity:10",
+      "Kind": "Liquidity",
+      "Pnl": -2937.5
+    },
+    {
+      "Contracts": 0,
+      "Equity": 152787.5000000001,
+      "Id": "bot:BX:Liquidity:11",
+      "Kind": "Liquidity",
+      "Pnl": 2787.500000000091
+    },
+    {
+      "Contracts": 0,
+      "Equity": 154537.50000000006,
+      "Id": "bot:BX:Liquidity:12",
+      "Kind": "Liquidity",
+      "Pnl": 4537.5000000000455
+    },
+    {
+      "Contracts": 0,
+      "Equity": 149275,
+      "Id": "bot:BX:Liquidity:13",
+      "Kind": "Liquidity",
+      "Pnl": -725
+    },
+    {
+      "Contracts": 0,
+      "Equity": 148900,
+      "Id": "bot:BX:Liquidity:14",
+      "Kind": "Liquidity",
+      "Pnl": -1100
+    },
+    {
+      "Contracts": 0,
+      "Equity": 149112.49999999994,
+      "Id": "bot:BX:Liquidity:15",
+      "Kind": "Liquidity",
+      "Pnl": -887.5000000000455
+    },
+    {
+      "Contracts": 0,
+      "Equity": 150012.5,
+      "Id": "bot:BX:Liquidity:16",
+      "Kind": "Liquidity",
+      "Pnl": 12.5
+    },
+    {
+      "Contracts": 0,
+      "Equity": 148900,
+      "Id": "bot:BX:Liquidity:17",
+      "Kind": "Liquidity",
+      "Pnl": -1100
+    },
+    {
+      "Contracts": 1,
+      "Equity": 149875,
+      "Id": "bot:BX:Liquidity:18",
+      "Kind": "Liquidity",
+      "Pnl": -125
+    },
+    {
+      "Contracts": 1,
+      "Equity": 149025,
+      "Id": "bot:BX:Liquidity:19",
+      "Kind": "Liquidity",
+      "Pnl": -975
+    },
+    {
+      "Contracts": 2,
+      "Equity": 157587.49999999994,
+      "Id": "bot:BX:Liquidity:2",
+      "Kind": "Liquidity",
+      "Pnl": 7587.4999999999545
+    },
+    {
+      "Contracts": 0,
+      "Equity": 153887.5,
+      "Id": "bot:BX:Liquidity:20",
+      "Kind": "Liquidity",
+      "Pnl": 3887.5
+    },
+    {
+      "Contracts": 0,
+      "Equity": 156425,
+      "Id": "bot:BX:Liquidity:21",
+      "Kind": "Liquidity",
+      "Pnl": 6425
+    },
+    {
+      "Contracts": 0,
+      "Equity": 153400,
+      "Id": "bot:BX:Liquidity:22",
+      "Kind": "Liquidity",
+      "Pnl": 3400
+    },
+    {
+      "Contracts": 1,
+      "Equity": 149125,
+      "Id": "bot:BX:Liquidity:23",
+      "Kind": "Liquidity",
+      "Pnl": -875
+    },
+    {
+      "Contracts": 0,
+      "Equity": 151825,
+      "Id": "bot:BX:Liquidity:24",
+      "Kind": "Liquidity",
+      "Pnl": 1825
+    },
+    {
+      "Contracts": 0,
+      "Equity": 153337.49999999994,
+      "Id": "bot:BX:Liquidity:3",
+      "Kind": "Liquidity",
+      "Pnl": 3337.4999999999545
+    },
+    {
+      "Contracts": 0,
+      "Equity": 149487.5,
+      "Id": "bot:BX:Liquidity:4",
+      "Kind": "Liquidity",
+      "Pnl": -512.5
+    },
+    {
+      "Contracts": 3,
+      "Equity": 155962.4999999999,
+      "Id": "bot:BX:Liquidity:5",
+      "Kind": "Liquidity",
+      "Pnl": 5962.499999999909
+    },
+    {
+      "Contracts": 0,
+      "Equity": 155662.50000000015,
+      "Id": "bot:BX:Liquidity:6",
+      "Kind": "Liquidity",
+      "Pnl": 5662.500000000136
+    },
+    {
+      "Contracts": 1,
+      "Equity": 152050,
+      "Id": "bot:BX:Liquidity:7",
+      "Kind": "Liquidity",
+      "Pnl": 2050
+    },
+    {
+      "Contracts": 0,
+      "Equity": 152499.99999999994,
+      "Id": "bot:BX:Liquidity:8",
+      "Kind": "Liquidity",
+      "Pnl": 2499.9999999999545
+    },
+    {
+      "Contracts": 0,
+      "Equity": 149837.5,
+      "Id": "bot:BX:Liquidity:9",
+      "Kind": "Liquidity",
+      "Pnl": -162.5
+    },
+    {
+      "Contracts": 9,
+      "Equity": 737775.0000000029,
+      "Id": "bot:BX:Maker:1",
+      "Kind": "Maker",
+      "Pnl": -12224.999999997126
+    },
+    {
+      "Contracts": 2,
+      "Equity": 716437.4999999998,
+      "Id": "bot:BX:Maker:10",
+      "Kind": "Maker",
+      "Pnl": -33562.500000000204
+    },
+    {
+      "Contracts": 39,
+      "Equity": 736187.5000000023,
+      "Id": "bot:BX:Maker:11",
+      "Kind": "Maker",
+      "Pnl": -13812.499999997637
+    },
+    {
+      "Contracts": 33,
+      "Equity": 771249.9999999963,
+      "Id": "bot:BX:Maker:12",
+      "Kind": "Maker",
+      "Pnl": 21249.999999996173
+    },
+    {
+      "Contracts": 16,
+      "Equity": 699349.9999999985,
+      "Id": "bot:BX:Maker:13",
+      "Kind": "Maker",
+      "Pnl": -50650.00000000152
+    },
+    {
+      "Contracts": 27,
+      "Equity": 730662.5000000008,
+      "Id": "bot:BX:Maker:14",
+      "Kind": "Maker",
+      "Pnl": -19337.499999999134
+    },
+    {
+      "Contracts": 7,
+      "Equity": 682362.4999999985,
+      "Id": "bot:BX:Maker:15",
+      "Kind": "Maker",
+      "Pnl": -67637.5000000015
+    },
+    {
+      "Contracts": 27,
+      "Equity": 696512.4999999997,
+      "Id": "bot:BX:Maker:16",
+      "Kind": "Maker",
+      "Pnl": -53487.500000000386
+    },
+    {
+      "Contracts": 4,
+      "Equity": 716100.0000000016,
+      "Id": "bot:BX:Maker:17",
+      "Kind": "Maker",
+      "Pnl": -33899.99999999843
+    },
+    {
+      "Contracts": 15,
+      "Equity": 719299.9999999999,
+      "Id": "bot:BX:Maker:18",
+      "Kind": "Maker",
+      "Pnl": -30700.000000000116
+    },
+    {
+      "Contracts": 14,
+      "Equity": 738862.4999999994,
+      "Id": "bot:BX:Maker:19",
+      "Kind": "Maker",
+      "Pnl": -11137.5000000005
+    },
+    {
+      "Contracts": 13,
+      "Equity": 743087.5000000006,
+      "Id": "bot:BX:Maker:2",
+      "Kind": "Maker",
+      "Pnl": -6912.499999999458
+    },
+    {
+      "Contracts": 22,
+      "Equity": 720662.4999999992,
+      "Id": "bot:BX:Maker:20",
+      "Kind": "Maker",
+      "Pnl": -29337.500000000724
+    },
+    {
+      "Contracts": 38,
+      "Equity": 678050.0000000007,
+      "Id": "bot:BX:Maker:3",
+      "Kind": "Maker",
+      "Pnl": -71949.99999999926
+    },
+    {
+      "Contracts": 21,
+      "Equity": 763725.0000000009,
+      "Id": "bot:BX:Maker:4",
+      "Kind": "Maker",
+      "Pnl": 13725.000000000915
+    },
+    {
+      "Contracts": 24,
+      "Equity": 662299.9999999987,
+      "Id": "bot:BX:Maker:5",
+      "Kind": "Maker",
+      "Pnl": -87700.00000000125
+    },
+    {
+      "Contracts": 27,
+      "Equity": 699875.0000000003,
+      "Id": "bot:BX:Maker:6",
+      "Kind": "Maker",
+      "Pnl": -50124.999999999694
+    },
+    {
+      "Contracts": 18,
+      "Equity": 714937.5000000006,
+      "Id": "bot:BX:Maker:7",
+      "Kind": "Maker",
+      "Pnl": -35062.49999999953
+    },
+    {
+      "Contracts": 26,
+      "Equity": 736550.0000000034,
+      "Id": "bot:BX:Maker:8",
+      "Kind": "Maker",
+      "Pnl": -13449.999999996684
+    },
+    {
+      "Contracts": 18,
+      "Equity": 739862.4999999914,
+      "Id": "bot:BX:Maker:9",
+      "Kind": "Maker",
+      "Pnl": -10137.50000000865
+    },
+    {
+      "Contracts": 1,
+      "Equity": 225300.00000000346,
+      "Id": "bot:BX:Momentum:1",
+      "Kind": "Momentum",
+      "Pnl": 25300.00000000346
+    },
+    {
+      "Contracts": 2,
+      "Equity": 209274.9999999995,
+      "Id": "bot:BX:Momentum:10",
+      "Kind": "Momentum",
+      "Pnl": 9274.9999999995
+    },
+    {
+      "Contracts": 5,
+      "Equity": 204325.0000000017,
+      "Id": "bot:BX:Momentum:11",
+      "Kind": "Momentum",
+      "Pnl": 4325.000000001684
+    },
+    {
+      "Contracts": 9,
+      "Equity": 196350.00000000067,
+      "Id": "bot:BX:Momentum:12",
+      "Kind": "Momentum",
+      "Pnl": -3649.999999999318
+    },
+    {
+      "Contracts": 2,
+      "Equity": 207137.49999999983,
+      "Id": "bot:BX:Momentum:2",
+      "Kind": "Momentum",
+      "Pnl": 7137.49999999982
+    },
+    {
+      "Contracts": 1,
+      "Equity": 208374.99999999878,
+      "Id": "bot:BX:Momentum:3",
+      "Kind": "Momentum",
+      "Pnl": 8374.999999998772
+    },
+    {
+      "Contracts": 3,
+      "Equity": 227674.999999999,
+      "Id": "bot:BX:Momentum:4",
+      "Kind": "Momentum",
+      "Pnl": 27674.99999999899
+    },
+    {
+      "Contracts": 11,
+      "Equity": 202174.99999999913,
+      "Id": "bot:BX:Momentum:5",
+      "Kind": "Momentum",
+      "Pnl": 2174.999999999136
+    },
+    {
+      "Contracts": 4,
+      "Equity": 226300.00000000215,
+      "Id": "bot:BX:Momentum:6",
+      "Kind": "Momentum",
+      "Pnl": 26300.000000002143
+    },
+    {
+      "Contracts": 26,
+      "Equity": 235974.99999999604,
+      "Id": "bot:BX:Momentum:7",
+      "Kind": "Momentum",
+      "Pnl": 35974.99999999604
+    },
+    {
+      "Contracts": 3,
+      "Equity": 201649.99999999927,
+      "Id": "bot:BX:Momentum:8",
+      "Kind": "Momentum",
+      "Pnl": 1649.9999999992724
+    },
+    {
+      "Contracts": 2,
+      "Equity": 244850.0000000026,
+      "Id": "bot:BX:Momentum:9",
+      "Kind": "Momentum",
+      "Pnl": 44850.00000000259
+    },
+    {
+      "Contracts": 1,
+      "Equity": 150225.00000000195,
+      "Id": "bot:BX:Protective:1",
+      "Kind": "Protective",
+      "Pnl": 225.0000000019554
+    },
+    {
+      "Contracts": 13,
+      "Equity": 177025.00000000006,
+      "Id": "bot:BX:Protective:2",
+      "Kind": "Protective",
+      "Pnl": 27025.000000000044
+    },
+    {
+      "Contracts": 10,
+      "Equity": 149812.49999999645,
+      "Id": "bot:BX:Protective:3",
+      "Kind": "Protective",
+      "Pnl": -187.50000000354703
+    },
+    {
+      "Contracts": 3,
+      "Equity": 166087.5000000009,
+      "Id": "bot:BX:Protective:4",
+      "Kind": "Protective",
+      "Pnl": 16087.500000000899
+    },
+    {
+      "Contracts": 0,
+      "Equity": 130975.00000000004,
+      "Id": "bot:BX:Protective:5",
+      "Kind": "Protective",
+      "Pnl": -19024.999999999956
+    },
+    {
+      "Contracts": 5,
+      "Equity": 164250.00000000067,
+      "Id": "bot:BX:Protective:6",
+      "Kind": "Protective",
+      "Pnl": 14250.000000000682
+    },
+    {
+      "Contracts": 0,
+      "Equity": 155712.5000000009,
+      "Id": "bot:BX:Protective:7",
+      "Kind": "Protective",
+      "Pnl": 5712.5000000009095
+    },
+    {
+      "Contracts": 1,
+      "Equity": 156362.50000000128,
+      "Id": "bot:BX:Protective:8",
+      "Kind": "Protective",
+      "Pnl": 6362.500000001273
+    },
+    {
+      "Contracts": 207,
+      "Equity": 4992874.999999999,
+      "Id": "bot:BX:Reserve:1",
+      "Kind": "Reserve",
+      "Pnl": -7125.000000001033
+    },
+    {
+      "Contracts": 250,
+      "Equity": 5001262.499999983,
+      "Id": "bot:BX:Reserve:2",
+      "Kind": "Reserve",
+      "Pnl": 1262.4999999825686
+    },
+    {
+      "Contracts": 35,
+      "Equity": 5012337.50000001,
+      "Id": "bot:BX:Reserve:3",
+      "Kind": "Reserve",
+      "Pnl": 12337.500000010099
+    },
+    {
+      "Contracts": 59,
+      "Equity": 4958412.499999989,
+      "Id": "bot:BX:Reserve:4",
+      "Kind": "Reserve",
+      "Pnl": -41587.500000010645
+    },
+    {
+      "Contracts": 134,
+      "Equity": 4973950.000000007,
+      "Id": "bot:BX:Reserve:5",
+      "Kind": "Reserve",
+      "Pnl": -26049.999999992666
+    },
+    {
+      "Contracts": 49,
+      "Equity": 4977275.000000007,
+      "Id": "bot:BX:Reserve:6",
+      "Kind": "Reserve",
+      "Pnl": -22724.999999992375
+    },
+    {
+      "Contracts": 0,
+      "Equity": 195387.49999999985,
+      "Id": "bot:BX:Reversion:1",
+      "Kind": "Reversion",
+      "Pnl": -4612.500000000136
+    },
+    {
+      "Contracts": 0,
+      "Equity": 200300,
+      "Id": "bot:BX:Reversion:10",
+      "Kind": "Reversion",
+      "Pnl": 300
+    },
+    {
+      "Contracts": 0,
+      "Equity": 191250.0000000001,
+      "Id": "bot:BX:Reversion:11",
+      "Kind": "Reversion",
+      "Pnl": -8749.999999999909
+    },
+    {
+      "Contracts": 0,
+      "Equity": 200025,
+      "Id": "bot:BX:Reversion:12",
+      "Kind": "Reversion",
+      "Pnl": 25
+    },
+    {
+      "Contracts": 0,
+      "Equity": 198825,
+      "Id": "bot:BX:Reversion:2",
+      "Kind": "Reversion",
+      "Pnl": -1175
+    },
+    {
+      "Contracts": 4,
+      "Equity": 199350,
+      "Id": "bot:BX:Reversion:3",
+      "Kind": "Reversion",
+      "Pnl": -650
+    },
+    {
+      "Contracts": 0,
+      "Equity": 199287.5,
+      "Id": "bot:BX:Reversion:4",
+      "Kind": "Reversion",
+      "Pnl": -712.5
+    },
+    {
+      "Contracts": 1,
+      "Equity": 199687.5,
+      "Id": "bot:BX:Reversion:5",
+      "Kind": "Reversion",
+      "Pnl": -312.5
+    },
+    {
+      "Contracts": 1,
+      "Equity": 200275,
+      "Id": "bot:BX:Reversion:6",
+      "Kind": "Reversion",
+      "Pnl": 275
+    },
+    {
+      "Contracts": 4,
+      "Equity": 190775.00000000023,
+      "Id": "bot:BX:Reversion:7",
+      "Kind": "Reversion",
+      "Pnl": -9224.999999999773
+    },
+    {
+      "Contracts": 3,
+      "Equity": 195787.5,
+      "Id": "bot:BX:Reversion:8",
+      "Kind": "Reversion",
+      "Pnl": -4212.5
+    },
+    {
+      "Contracts": 0,
+      "Equity": 195500.00000000006,
+      "Id": "bot:BX:Reversion:9",
+      "Kind": "Reversion",
+      "Pnl": -4499.9999999999545
+    },
+    {
+      "Contracts": 0,
+      "Equity": 94987.5,
+      "Id": "bot:BX:Scalper:1",
+      "Kind": "Scalper",
+      "Pnl": -5012.5
+    },
+    {
+      "Contracts": 0,
+      "Equity": 102000,
+      "Id": "bot:BX:Scalper:10",
+      "Kind": "Scalper",
+      "Pnl": 2000
+    },
+    {
+      "Contracts": 0,
+      "Equity": 98137.5,
+      "Id": "bot:BX:Scalper:11",
+      "Kind": "Scalper",
+      "Pnl": -1862.5
+    },
+    {
+      "Contracts": 1,
+      "Equity": 103425,
+      "Id": "bot:BX:Scalper:12",
+      "Kind": "Scalper",
+      "Pnl": 3425
+    },
+    {
+      "Contracts": 0,
+      "Equity": 99525,
+      "Id": "bot:BX:Scalper:13",
+      "Kind": "Scalper",
+      "Pnl": -475
+    },
+    {
+      "Contracts": 2,
+      "Equity": 106450,
+      "Id": "bot:BX:Scalper:14",
+      "Kind": "Scalper",
+      "Pnl": 6450
+    },
+    {
+      "Contracts": 0,
+      "Equity": 98137.5,
+      "Id": "bot:BX:Scalper:15",
+      "Kind": "Scalper",
+      "Pnl": -1862.5
+    },
+    {
+      "Contracts": 0,
+      "Equity": 105250,
+      "Id": "bot:BX:Scalper:16",
+      "Kind": "Scalper",
+      "Pnl": 5250
+    },
+    {
+      "Contracts": 0,
+      "Equity": 98412.5,
+      "Id": "bot:BX:Scalper:17",
+      "Kind": "Scalper",
+      "Pnl": -1587.5
+    },
+    {
+      "Contracts": 2,
+      "Equity": 104275,
+      "Id": "bot:BX:Scalper:18",
+      "Kind": "Scalper",
+      "Pnl": 4275
+    },
+    {
+      "Contracts": 0,
+      "Equity": 94337.5,
+      "Id": "bot:BX:Scalper:19",
+      "Kind": "Scalper",
+      "Pnl": -5662.5
+    },
+    {
+      "Contracts": 0,
+      "Equity": 103162.5,
+      "Id": "bot:BX:Scalper:2",
+      "Kind": "Scalper",
+      "Pnl": 3162.5
+    },
+    {
+      "Contracts": 0,
+      "Equity": 105362.5,
+      "Id": "bot:BX:Scalper:20",
+      "Kind": "Scalper",
+      "Pnl": 5362.5
+    },
+    {
+      "Contracts": 0,
+      "Equity": 94350,
+      "Id": "bot:BX:Scalper:21",
+      "Kind": "Scalper",
+      "Pnl": -5650
+    },
+    {
+      "Contracts": 1,
+      "Equity": 106475,
+      "Id": "bot:BX:Scalper:22",
+      "Kind": "Scalper",
+      "Pnl": 6475
+    },
+    {
+      "Contracts": 1,
+      "Equity": 96475,
+      "Id": "bot:BX:Scalper:23",
+      "Kind": "Scalper",
+      "Pnl": -3525
+    },
+    {
+      "Contracts": 0,
+      "Equity": 106762.5,
+      "Id": "bot:BX:Scalper:24",
+      "Kind": "Scalper",
+      "Pnl": 6762.5
+    },
+    {
+      "Contracts": 0,
+      "Equity": 95250,
+      "Id": "bot:BX:Scalper:3",
+      "Kind": "Scalper",
+      "Pnl": -4750
+    },
+    {
+      "Contracts": 2,
+      "Equity": 107062.5,
+      "Id": "bot:BX:Scalper:4",
+      "Kind": "Scalper",
+      "Pnl": 7062.5
+    },
+    {
+      "Contracts": 0,
+      "Equity": 98825,
+      "Id": "bot:BX:Scalper:5",
+      "Kind": "Scalper",
+      "Pnl": -1175
+    },
+    {
+      "Contracts": 2,
+      "Equity": 107300,
+      "Id": "bot:BX:Scalper:6",
+      "Kind": "Scalper",
+      "Pnl": 7300
+    },
+    {
+      "Contracts": 0,
+      "Equity": 97562.5,
+      "Id": "bot:BX:Scalper:7",
+      "Kind": "Scalper",
+      "Pnl": -2437.5
+    },
+    {
+      "Contracts": 1,
+      "Equity": 107637.5,
+      "Id": "bot:BX:Scalper:8",
+      "Kind": "Scalper",
+      "Pnl": 7637.5
+    },
+    {
+      "Contracts": 0,
+      "Equity": 98062.5,
+      "Id": "bot:BX:Scalper:9",
+      "Kind": "Scalper",
+      "Pnl": -1937.5
+    },
+    {
+      "Contracts": 8,
+      "Equity": 242637.50000000006,
+      "Id": "bot:BX:Value:1",
+      "Kind": "Value",
+      "Pnl": -7362.4999999999545
+    },
+    {
+      "Contracts": 22,
+      "Equity": 238824.99999999907,
+      "Id": "bot:BX:Value:10",
+      "Kind": "Value",
+      "Pnl": -11175.000000000911
+    },
+    {
+      "Contracts": 4,
+      "Equity": 255887.49999999983,
+      "Id": "bot:BX:Value:11",
+      "Kind": "Value",
+      "Pnl": 5887.499999999818
+    },
+    {
+      "Contracts": 22,
+      "Equity": 262137.5,
+      "Id": "bot:BX:Value:12",
+      "Kind": "Value",
+      "Pnl": 12137.5
+    },
+    {
+      "Contracts": 3,
+      "Equity": 298312.50000000006,
+      "Id": "bot:BX:Value:13",
+      "Kind": "Value",
+      "Pnl": 48312.50000000008
+    },
+    {
+      "Contracts": 2,
+      "Equity": 257362.49999999927,
+      "Id": "bot:BX:Value:14",
+      "Kind": "Value",
+      "Pnl": 7362.499999999272
+    },
+    {
+      "Contracts": 0,
+      "Equity": 243537.50000000006,
+      "Id": "bot:BX:Value:15",
+      "Kind": "Value",
+      "Pnl": -6462.4999999999545
+    },
+    {
+      "Contracts": 11,
+      "Equity": 252237.49999999968,
+      "Id": "bot:BX:Value:16",
+      "Kind": "Value",
+      "Pnl": 2237.4999999996817
+    },
+    {
+      "Contracts": 7,
+      "Equity": 258375.0000000001,
+      "Id": "bot:BX:Value:17",
+      "Kind": "Value",
+      "Pnl": 8375.000000000091
+    },
+    {
+      "Contracts": 14,
+      "Equity": 243387.49999999968,
+      "Id": "bot:BX:Value:18",
+      "Kind": "Value",
+      "Pnl": -6612.500000000318
+    },
+    {
+      "Contracts": 0,
+      "Equity": 238187.50000000195,
+      "Id": "bot:BX:Value:19",
+      "Kind": "Value",
+      "Pnl": -11812.49999999805
+    },
+    {
+      "Contracts": 18,
+      "Equity": 245374.99999999965,
+      "Id": "bot:BX:Value:2",
+      "Kind": "Value",
+      "Pnl": -4625.000000000364
+    },
+    {
+      "Contracts": 14,
+      "Equity": 243925.0000000004,
+      "Id": "bot:BX:Value:20",
+      "Kind": "Value",
+      "Pnl": -6074.999999999591
+    },
+    {
+      "Contracts": 23,
+      "Equity": 231337.49999999968,
+      "Id": "bot:BX:Value:3",
+      "Kind": "Value",
+      "Pnl": -18662.50000000032
+    },
+    {
+      "Contracts": 7,
+      "Equity": 229787.50000000134,
+      "Id": "bot:BX:Value:4",
+      "Kind": "Value",
+      "Pnl": -20212.499999998647
+    },
+    {
+      "Contracts": 8,
+      "Equity": 259287.4999999997,
+      "Id": "bot:BX:Value:5",
+      "Kind": "Value",
+      "Pnl": 9287.499999999727
+    },
+    {
+      "Contracts": 6,
+      "Equity": 249637.5000000002,
+      "Id": "bot:BX:Value:6",
+      "Kind": "Value",
+      "Pnl": -362.4999999998181
+    },
+    {
+      "Contracts": 10,
+      "Equity": 277574.9999999992,
+      "Id": "bot:BX:Value:7",
+      "Kind": "Value",
+      "Pnl": 27574.999999999185
+    },
+    {
+      "Contracts": 5,
+      "Equity": 216162.50000000012,
+      "Id": "bot:BX:Value:8",
+      "Kind": "Value",
+      "Pnl": -33837.49999999991
+    },
+    {
+      "Contracts": 1,
+      "Equity": 258662.5,
+      "Id": "bot:BX:Value:9",
+      "Kind": "Value",
+      "Pnl": 8662.5
+    },
+    {
+      "Contracts": 25,
+      "Equity": 1550962.4999999972,
+      "Id": "bot:BX:Whale:1",
+      "Kind": "Whale",
+      "Pnl": 50962.49999999714
+    },
+    {
+      "Contracts": 0,
+      "Equity": 1561174.9999999974,
+      "Id": "bot:BX:Whale:2",
+      "Kind": "Whale",
+      "Pnl": 61174.999999997344
+    },
+    {
+      "Contracts": 64,
+      "Equity": 1666687.4999999888,
+      "Id": "bot:BX:Whale:3",
+      "Kind": "Whale",
+      "Pnl": 166687.49999998874
+    },
+    {
+      "Contracts": 12,
+      "Equity": 1620687.500000001,
+      "Id": "bot:BX:Whale:4",
+      "Kind": "Whale",
+      "Pnl": 120687.50000000105
+    }
+  ],
+  "Elapsed": 588.5562228999916,
+  "Groups": {
+    "Liquidity": {
+      "Bots": 72,
+      "ClosedContracts": 3366,
+      "Closes": 2022,
+      "Depleted": 0,
+      "FillContracts": 6819,
+      "Losses": 1034,
+      "MinReturn": -0.0294,
+      "Negative": 16,
+      "PassiveContracts": 5415,
+      "Paused": 0,
+      "Pnl": 235464.99999999805,
+      "Positive": 56,
+      "UnprotectedSamples": 3,
+      "Wins": 981
+    },
+    "Maker": {
+      "Bots": 60,
+      "ClosedContracts": 38954,
+      "Closes": 20286,
+      "Depleted": 0,
+      "FillContracts": 78910,
+      "Losses": 10633,
+      "MinReturn": -0.24995333333332478,
+      "Negative": 54,
+      "PassiveContracts": 78910,
+      "Paused": 0,
+      "Pnl": -2415349.999999973,
+      "Positive": 6,
+      "UnprotectedSamples": 124139,
+      "Wins": 9403
+    },
+    "Momentum": {
+      "Bots": 36,
+      "ClosedContracts": 15894,
+      "Closes": 9791,
+      "Depleted": 0,
+      "FillContracts": 31992,
+      "Losses": 4130,
+      "MinReturn": -0.10781250000000277,
+      "Negative": 6,
+      "PassiveContracts": 3275,
+      "Paused": 0,
+      "Pnl": 798492.5000000165,
+      "Positive": 30,
+      "UnprotectedSamples": 37260,
+      "Wins": 5533
+    },
+    "Protective": {
+      "Bots": 24,
+      "ClosedContracts": 7130,
+      "Closes": 4722,
+      "Depleted": 0,
+      "FillContracts": 14356,
+      "Losses": 2189,
+      "MinReturn": -0.12683333333333305,
+      "Negative": 4,
+      "PassiveContracts": 1286,
+      "Paused": 0,
+      "Pnl": 320864.99999999965,
+      "Positive": 20,
+      "UnprotectedSamples": 136,
+      "Wins": 2470
+    },
+    "Reserve": {
+      "Bots": 18,
+      "ClosedContracts": 9311,
+      "Closes": 5479,
+      "Depleted": 0,
+      "FillContracts": 19791,
+      "Losses": 2065,
+      "MinReturn": -0.058375000000005214,
+      "Negative": 4,
+      "PassiveContracts": 19791,
+      "Paused": 0,
+      "Pnl": 887062.500000027,
+      "Positive": 14,
+      "UnprotectedSamples": 37873,
+      "Wins": 3401
+    },
+    "Reversion": {
+      "Bots": 36,
+      "ClosedContracts": 938,
+      "Closes": 673,
+      "Depleted": 0,
+      "FillContracts": 1905,
+      "Losses": 579,
+      "MinReturn": -0.11155000000000116,
+      "Negative": 32,
+      "PassiveContracts": 469,
+      "Paused": 0,
+      "Pnl": -144765.00000000003,
+      "Positive": 4,
+      "UnprotectedSamples": 7875,
+      "Wins": 88
+    },
+    "Scalper": {
+      "Bots": 72,
+      "ClosedContracts": 9592,
+      "Closes": 7976,
+      "Depleted": 0,
+      "FillContracts": 19212,
+      "Losses": 3035,
+      "MinReturn": -0.058800000000002475,
+      "Negative": 37,
+      "PassiveContracts": 4712,
+      "Paused": 0,
+      "Pnl": 48314.99999999804,
+      "Positive": 35,
+      "UnprotectedSamples": 0,
+      "Wins": 4703
+    },
+    "Value": {
+      "Bots": 60,
+      "ClosedContracts": 11854,
+      "Closes": 5353,
+      "Depleted": 0,
+      "FillContracts": 24283,
+      "Losses": 2736,
+      "MinReturn": -0.33926000000001116,
+      "Negative": 36,
+      "PassiveContracts": 4979,
+      "Paused": 0,
+      "Pnl": -363657.4999999907,
+      "Positive": 24,
+      "UnprotectedSamples": 77585,
+      "Wins": 2607
+    },
+    "Whale": {
+      "Bots": 12,
+      "ClosedContracts": 23054,
+      "Closes": 7243,
+      "Depleted": 0,
+      "FillContracts": 46428,
+      "Losses": 3332,
+      "MinReturn": -0.13426666666665332,
+      "Negative": 2,
+      "PassiveContracts": 3011,
+      "Paused": 0,
+      "Pnl": 633572.4999999369,
+      "Positive": 10,
+      "UnprotectedSamples": 9375,
+      "Wins": 3908
+    }
+  },
+  "Seconds": 21600,
+  "Seed": 91753,
+  "TwoSidedFraction": 0.9998456790123457,
+  "Variant": "candidate"
+}

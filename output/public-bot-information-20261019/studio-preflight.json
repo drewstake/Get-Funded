@@ -1,0 +1,52 @@
+{
+  "ServerScriptService.MarketReign.BotLiquidity": {
+    "Hash": false,
+    "Exists": false,
+    "MatchesBaseline": false
+  },
+  "ServerScriptService.MarketReign.BotSignalsTests": {
+    "Hash": "03664ded512890765e50cf28648ce7d67bb93e0024eee4507e76875df4955bd4",
+    "Exists": true,
+    "MatchesBaseline": false
+  },
+  "ServerScriptService.MarketReign.MarketEngine": {
+    "Hash": "f5a25d6fb3f7241cb5a48e21da97048320703af787c52e972a4b5ed894338f4c",
+    "Exists": true,
+    "MatchesBaseline": false
+  },
+  "ServerScriptService.MarketReign.BotPopulationTests": {
+    "Hash": "b482abeef1b8bca9c33bc652f24049e4e84f01537cb90fc85bf7371e69af5499",
+    "Exists": true,
+    "MatchesBaseline": true
+  },
+  "ServerScriptService.MarketReign.WorldCheckpoint": {
+    "Hash": "1da1e5ca4b957c0ee5c7f52c0a7dc743e682124dd82bdef82e430485f49a6427",
+    "Exists": true,
+    "MatchesBaseline": false
+  },
+  "ServerScriptService.MarketReign.BotSignals": {
+    "Hash": "c35794afe246d39486eec772a50da8b0d68ceb456b058e111627f8025c82de1c",
+    "Exists": true,
+    "MatchesBaseline": false
+  },
+  "ServerScriptService.MarketReign.Participants": {
+    "Hash": "b9677f43e8c45881910670bd3bdbcdce925a69698b6f4555373df12ce53b6423",
+    "Exists": true,
+    "MatchesBaseline": false
+  },
+  "ServerScriptService.MarketReign.BotFairnessTests": {
+    "Hash": false,
+    "Exists": false,
+    "MatchesBaseline": false
+  },
+  "ServerScriptService.MarketReign.BotPublicInformationTests": {
+    "Hash": false,
+    "Exists": false,
+    "MatchesBaseline": true
+  },
+  "ReplicatedStorage.MarketReign.MarketConfig": {
+    "Hash": "e469c046fd60fbf416dfb1079b6167ca9a9f9649f96be714e2afc39ec8b0ee8f",
+    "Exists": true,
+    "MatchesBaseline": false
+  }
+}

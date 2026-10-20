@@ -1,5 +1,7 @@
 -- Native Roblox GUI. All panels and chart marks are editable GuiObjects.
 local Market = require(script.Parent.MarketClient)
+local NumberInput = require(script.Parent.NumberInput)
+local TradeProtection = require(script.Parent.TradeProtection)
 local ChartView = require(script.Parent.ChartView)
 local Feedback = require(script.Parent.UIFeedback)
 local LeaderboardClient = require(script.Parent.LeaderboardClient)
@@ -11,10 +13,14 @@ local AwayView=require(script.Parent.AwayView)
 local ShopView = require(script.Parent.ShopView)
 local DepthPurchase = require(script.Parent.DepthPurchase)
 local Level2View = require(script.Parent.Level2View)
+local WelcomeGuide = require(script.Parent.WelcomeGuide)
+local MarketEventBanner = require(script.Parent.MarketEventBanner)
 local UIS = game:GetService("UserInputService")
 local RunService = game:GetService("RunService")
 local TweenService = game:GetService("TweenService")
 local TextService = game:GetService("TextService")
+local GuiService = game:GetService("GuiService")
+local Players = game:GetService("Players")
 local UI = {}
 -- ImageGen artwork: icons/copy-trading/follower-checkmark.png (transparent RGBA).
 local FOLLOWER_CHECKMARK = "rbxassetid://87249253289841"
@@ -78,7 +84,7 @@ local function panel(p,accent)
  elseif p.BackgroundColor3~=C.Chart then tint(p)end
 end
 -- Tabs, segments, toggles and pickers use the softer selection sound.
-local SELECT_NAMES={Market=true,Limit=true,Toggle=true,Same=true,Proportional=true,ShowLevels=true,SoundToggle=true}
+local SELECT_NAMES={Market=true,Limit=true,Toggle=true,Same=true,Proportional=true,ShowLevels=true,SoundToggle=true,MotionToggle=true}
 local function selectable(name)
  return SELECT_NAMES[name]or name:match("^Tab")or name:match("^Nav")or name:match("^Market%u")or name:match("^Time")
   or name:match("^Choose")or name:match("^Lead")or name:match("^Follow")or name:match("^Tool")or name:match("^Level")
@@ -351,9 +357,23 @@ function UI.Mount(gui,options)
  if fx then fx:Destroy()end
  fx=not options.Preview and Feedback.new(root,{})or nil
  local feedback=fx
+ local marketBanner=MarketEventBanner.new(root)
  local s={Contract=Market.ContractOrder[1],Timeframe="1m",Type="Market",Qty=1,Limit=5820,Stop=5802.5,Target=5842.5,StopOn=true,TargetOn=true,
   Tab="Positions",Nav="Trade",Sheet=false,ProtectionDraft=nil,StopDollars=500,TargetDollars=1500,Overlay=nil,Guide=1,Tool="Pan",Drawings={},Levels=true,
-  Screen=nil,Coach=nil,SoundOn=true,SoundLevel="Medium",PendingOrder=nil,PendingClose=nil,Level2Expanded=true}
+  Screen=nil,SoundOn=true,SoundLevel="Medium",Calm=false,PendingOrder=nil,PendingClose=nil,Level2Expanded=true}
+ -- Comfort settings for this session, shared with the loading screen and the welcome guide through
+ -- player attributes. Reduced motion starts from the player's Roblox "Reduce Motion" setting.
+ local player=Players.LocalPlayer
+ local function comfort()
+  if not player or options.Preview then return end
+  s.SoundOn=player:GetAttribute("GetFundedSoundOn")~=false
+  local calm=player:GetAttribute("GetFundedReducedMotion")
+  if calm==nil then local ok,v=pcall(function()return GuiService.ReducedMotionEnabled end);calm=ok and v==true end
+  s.Calm=calm==true
+  if fx then fx:SetSound(s.SoundOn);fx:SetCalm(s.Calm)end
+ end
+ comfort()
+ local guide -- WelcomeGuide; created once the workspace has rendered (never in Edit previews)
  local Ladder=Market.Progression
  local session=Market.New(nil,options.Preview,options.PreviewData)
  local leaderboard=LeaderboardClient.new(options.Preview,options.LeaderboardData)
@@ -595,7 +615,7 @@ function UI.Mount(gui,options)
   s.Stop=p and p.Stop or Market.Snap(session.Prices[key]-22.25*c.Scale,key)
   s.Target=p and p.Target or Market.Snap(session.Prices[key]+17.75*c.Scale,key)
   s.StopOn=true;s.TargetOn=true;s.Error=nil;s.Overlay=nil;chartView:CancelPlacement()
-  if s.Coach==1 then s.Coach=2 end
+  if guide then guide:Signal("Market")end
   refresh()
  end
  local function close(key)s.CloseContract=key;s.Overlay="Close";refresh()end
@@ -630,7 +650,7 @@ function UI.Mount(gui,options)
   if max and qty>max then
    fail("Order too large. Available now: "..max.." "..s.Contract.." contracts.");effect(paths,"Error");return false
   end
-  local ok,msg,tab,requestId=session:Place(s.Contract,dir,qty,orderType,price,s.StopOn and s.StopDollars or nil,s.TargetOn and s.TargetDollars or nil,s.Execution or "Immediate")
+  local ok,msg,tab,requestId=session:Place(s.Contract,dir,qty,orderType,price,s.StopOn and s.StopDollars or nil,s.TargetOn and s.TargetDollars or nil,"Immediate")
   if ok then
    s.Error=nil;s.Tab=orderType=="Market"and tab or"Orders";s.Sheet=false
    local pending={Id=requestId,Direction=dir,At=os.clock()};s.PendingOrder=pending
@@ -730,7 +750,8 @@ function UI.Mount(gui,options)
   local panel=frame(canvas,"AccountSummary",x,y,w,h,C.Bg);panel.BackgroundTransparency=1
   local gap=mobile and 8 or 16;local cw=(w-gap*2)/3;local ch=h-8
   for i,d in ipairs({{"Balance","BALANCE",Market.Money(sum.Equity)},{"Unrealized","OPEN PROFIT",Market.Signed(sum.Unrealized)}}) do
-   local tile=button(panel,d[1].."Card","",(i-1)*(cw+gap),0,cw,ch,function()s.Overlay="Help";refresh()end,Color3.new(1,1,1))
+   local tile=frame(panel,d[1].."Card",(i-1)*(cw+gap),0,cw,ch,Color3.new(1,1,1))
+   round(tile);stroke(tile)
    summarySurface(tile,d[1],mobile)
    local labelH=mobile and 22 or 18;local valueH=mobile and 28 or 32
    local contentY=math.floor((ch-labelH-4-valueH)/2)
@@ -805,9 +826,7 @@ function UI.Mount(gui,options)
    local showIcon=not compact and h-top>=108
    local iconSize=showIcon and math.clamp(h-top-69,34,55)or 0
    local titleY=showIcon and top+iconSize+12 or top+10
-   -- While the guided-tour card covers the left of the panel, centre the empty state on the right.
    local ex,ew=12,w-24
-   if s.Coach and not mobile and not compact then ex=math.floor(w*.58);ew=w-ex-12 end
    if showIcon then sidebarImage(p,s.Tab=="History"and"Review"or"Positions",ex+(ew-iconSize)/2,top+8,iconSize)end
    gameHeading(text(p,"EmptyTitle",s.Tab=="Orders"and"No working orders"or"No closed trades yet",ex,titleY,ew,24,showIcon and 18 or 13,C.Text,B,CENTER))
    return
@@ -827,7 +846,8 @@ function UI.Mount(gui,options)
      glossy(button(row,"Close"..d.Contract,"CLOSE",w-67,3,59,40,function()close(d.Contract)end,C.Raised,C.Text,12),"Pink"):SetAttribute("Sound","Open")
     elseif s.Tab=="Orders"then
      text(row,"Description",d.Contract.." · "..d.Kind,14,7,w-108,24,13,C.Text,M)
-     text(row,"Price",(d.Queued and "Executing"or d.Type=="Market"and"Market"or Market.Number(d.Price)).." · "..d.Quantity.." remaining",14,35,w-112,27,12,C.Muted,N)
+     local status=text(row,"Price",d.Protection and d.Closing and d.Status or (d.Queued and "Executing"or d.Type=="Market"and"Market"or Market.Number(d.Price)).." · "..d.Quantity.." remaining",14,35,w-112,36,d.Protection and d.Closing and 10 or 12,C.Muted,N)
+     status.TextWrapped=true
      local cancel=glossy(button(row,"Cancel"..d.Id..(d.Protection or""),d.Closing and "Closing"or "Cancel",w-96,18,82,44,function()if d.Closing then return end local ok,message=session:Cancel(d.Id,d.Protection);if ok then toast("Cancelling order…","info")else fail(message)end end,C.Raised,C.Text,13),"Navy");cancel.Border.Color=C.Cyan
      if d.Closing then cancel:SetAttribute("Disabled",true);cancel.Active=false;cancel.Selectable=false end
     else
@@ -850,7 +870,10 @@ function UI.Mount(gui,options)
     if s.Tab=="Positions"then positive=session:Pnl(d)>=0;vals={d.Contract,d.Direction>0 and"BUY"or"SELL",tostring(d.Quantity),Market.Number(d.Entry),Market.Signed(session:Pnl(d))}
     elseif s.Tab=="Orders"then vals={d.Contract.."Z26",d.Kind,tostring(d.Quantity),d.Type=="Market"and"Market"or Market.Number(d.Price),d.Status or "Working"}
     else positive=d.Pnl>=0;vals={d.Contract.."Z26",tostring(d.Quantity),Market.Number(d.Entry),Market.Number(d.Exit),Market.Signed(d.Pnl),d.Time}end
-    for j,value in ipairs(vals)do text(row,"Cell"..j,value,14+fractions[j]*(w-28),2,(w-28)*(j==5 and .23 or .17)-7,35,11,j==5 and positive~=nil and(positive and C.Green or C.Red)or C.Text,j>=3 and N or M)end
+    for j,value in ipairs(vals)do
+     local cell=text(row,"Cell"..j,value,14+fractions[j]*(w-28),2,(w-28)*(j==5 and .23 or .17)-7,35,11,j==5 and positive~=nil and(positive and C.Green or C.Red)or C.Text,j>=3 and N or M)
+     if s.Tab=="Orders"and j==5 then cell.TextWrapped=true;cell.TextSize=10 end
+    end
     if s.Tab~="History"then
      local positions=s.Tab=="Positions"
     local b=glossy(button(row,"Action"..i,positions and"CLOSE"or d.Closing and"Closing"or"Cancel",14+.85*(w-28),5,(w-28)*.15-10,29,function()
@@ -903,8 +926,7 @@ function UI.Mount(gui,options)
   return Market.Protection(Market.Contracts[s.Contract],s.Qty,source[field.."Dollars"])
  end
  local function protectionMaximum()
-  local c=Market.Contracts[s.Contract]
-  return c.Tick*c.Multiplier*s.Qty*10000
+  return TradeProtection.MaxDollars
  end
  local function effective(field,draft)
   local v=protectionValue(field,draft)
@@ -928,7 +950,7 @@ function UI.Mount(gui,options)
  end
  local function saveProtectionPreferences(value)
   local ok,message=session:SetProtectionPreferences(value or s)
-  if not ok then fail(message)end
+  if not ok then fail(message)elseif guide then guide:Signal("Protection")end
   return ok
  end
  local function closeProtection()
@@ -954,12 +976,12 @@ function UI.Mount(gui,options)
    if enabled==false then return true end
    local maximum=upperBound()
    local lower=math.min(minimum,maximum)
-   local n=tonumber((field.Text:gsub("[, $]","")))
+   local n=NumberInput.Parse(field.Text)
    if onExceeded and n and n==n and math.abs(n)<math.huge and n>maximum then
     current=maximum;field.Text=display(current);setter(current);s.Error=nil;onExceeded(maximum);return false
    end
    if not n or n~=n or math.abs(n)==math.huge or n<lower or n>maximum or(step==1 and n%1~=0)then
-    s.Error=step==1 and(maximum<minimum and "No contracts available for this order."or "Enter a whole number from "..minimum.." to "..maximum..".")or"Enter an amount greater than $0."
+    s.Error=step==1 and(maximum<minimum and "No contracts available for this order."or "Enter a whole number from "..minimum.." to "..maximum..".")or("Enter an amount from "..display(lower).." to "..display(maximum)..". You can use k, m, b or t.")
     field.Text=display(current);fail(s.Error);if fx then fx:Shake(shell)end;return false
    end
    n=math.clamp(math.round(n/step)*step,lower,maximum)
@@ -991,7 +1013,7 @@ function UI.Mount(gui,options)
  local function quantity(p,x,y,w)
   local maximum=quantityLimit()
   s.Qty=math.clamp(s.Qty,math.min(1,maximum),maximum)
-  numericStepper(p,"Quantity",x,y,w,s.Qty,1,1,quantityLimit,function(n)s.Qty=n;if s.Coach==2 then s.Coach=3 end end,nil,true,false,quantityLimitPopup)
+  numericStepper(p,"Quantity",x,y,w,s.Qty,1,1,quantityLimit,function(n)s.Qty=n end,nil,true,false,quantityLimitPopup)
  end
  local function protectionIcon(p,key,x,y,size)
   local color=key=="Stop"and C.Red or C.Green
@@ -1049,14 +1071,6 @@ function UI.Mount(gui,options)
   yy+=46
   local hint=sidebarText(p,"OrderExplanation",s.Type=="Market"and"Trades now at available prices"or"Trades at your price or better",pad,yy,iw,20,narrow and 12 or 13,C.Muted);hint.TextXAlignment=CENTER
   hint.TextWrapped=true;yy+=30
-  heading("ExecutionLabel","Execution",yy);yy+=26
-  local modes=frame(p,"ExecutionMode",pad,yy,iw,38,C.Bg,p.ZIndex);modes.BackgroundTransparency=1
-  for i,mode in ipairs({{"Immediate","Standard"},{"Sliced","In slices"}})do
-   gameControl(button(modes,mode[1],mode[2],(i-1)*(iw+8)/2,0,(iw-8)/2,38,function()s.Execution=mode[1];s.Error=nil;refresh()end,C.Panel,C.Text,15,modes.ZIndex),(s.Execution or "Immediate")==mode[1])
-  end
-  yy+=42
-  local detail=s.Execution=="Sliced"and "Fills gradually. Cancel the remainder in Orders."or s.Type=="Market"and "Fills now within execution limits; unfilled quantity is cancelled."or "Matches now when possible; eligible remainder rests at your limit."
-  local executionHint=sidebarText(p,"ExecutionExplanation",detail,pad,yy,iw,40,12,C.Muted);executionHint.TextWrapped=true;yy+=46
   if s.Type=="Limit"then
    heading("LimitLabel","Limit price",yy);yy+=28
    local tick=Market.Contracts[s.Contract].Tick
@@ -1148,13 +1162,13 @@ function UI.Mount(gui,options)
   return part("SL","Stop").." · "..part("TP","Target")
  end
  local function quantityCaption()
-  return (s.Type=="Limit"and("Qty · Limit "..Market.Number(s.Limit))or"Quantity")..(s.Execution=="Sliced"and " · Sliced"or "")
+  return (s.Type=="Limit"and("Qty · Limit "..Market.Number(s.Limit))or"Quantity")
  end
  -- Retained dock refreshes are only safe while everything the dock displays is unchanged.
  local function dockKey()
   local held=session.Positions[s.Contract]
   return table.concat({held and(tostring(held.Id)..":"..held.Direction..":"..held.Quantity)or"flat",tostring(s.PendingClose and s.PendingClose.Contract),
-   tostring(s.PendingOrder and s.PendingOrder.Direction),s.Type,s.Execution or "Immediate",tostring(s.Limit),riskSummary()},"|")
+   tostring(s.PendingOrder and s.PendingOrder.Direction),s.Type,tostring(s.Limit),riskSummary()},"|")
  end
  -- Shown only while the selected market has an open position: side, quantity, live P&L and Close.
  local function positionBar(p,x,y,w,h)
@@ -1251,7 +1265,7 @@ function UI.Mount(gui,options)
   local headerH=short and 66 or narrow and 90 or 103
   sidebarImage(shell,"Settings",14,short and 8 or 17,short and 32 or narrow and 39 or 52)
   sidebarText(shell,"Title","Trade protection",short and 54 or narrow and 61 or 78,short and 6 or 18,pw-(short and 112 or narrow and 117 or 140),34,short and 24 or narrow and 24 or 32)
-  local sub=text(shell,"Subtitle","Total amounts for this order",16,headerH-(short and 26 or 34),pw-32,24,narrow and 12 or 15,C.Text);sub.TextXAlignment=CENTER
+  local sub=text(shell,"Subtitle","Total amounts · try 145k or 145.4m",16,headerH-(short and 26 or 34),pw-32,24,narrow and 12 or 15,C.Text);sub.TextXAlignment=CENTER
   dismissButton(shell,pw-56,14,42,closeProtection,43)
   local footerH=32
   local fields=make("ScrollingFrame","Fields",shell,{Position=UDim2.fromOffset(12,headerH),Size=UDim2.fromOffset(pw-24,ph-headerH-footerH),
@@ -1365,7 +1379,7 @@ function UI.Mount(gui,options)
    return
   end
   local pf=session.Portfolio
-  local pw=math.min(w-28,s.Overlay=="Tools" and 470 or 460)
+  local pw=math.min(w-28,(s.Overlay=="Help"or s.Overlay=="Guide")and 560 or s.Overlay=="Tools"and 470 or 460)
   local narrow=pw<380
   local pad=narrow and 16 or 22;local iw=pw-pad*2
   local function close()s.Overlay=nil;refresh()end
@@ -1375,18 +1389,18 @@ function UI.Mount(gui,options)
    local balance=pf and pf.StartingBalance or Ladder.StartingBalance
    local _,p=popupShell(w,h,pw,326,"Reset Account?","Accounts","Keep your permanent progress")
    optionLabel(p,"StartingBalance","Start with "..whole(balance),pad,0,iw,40,narrow and 22 or 28,C.Green)
-   body(p,"ResetEffects","Your current balance is replaced. Open positions and pending orders are cleared without counting as completed trades. Current account statistics start over.",pad,52,iw,105,15)
+   body(p,"ResetEffects","Pending orders are cancelled. Positions close at available market prices, recording profit or loss. Your new account opens after every position closes; this may take time.",pad,52,iw,105,15)
    body(p,"Preserved","Lifetime statistics, milestones, permanent starting-balance bonuses and rank progression stay yours.",pad,164,iw,78,15)
    local bw=(iw-10)/2
    popupButton(p,"CancelReset","Cancel",pad,260,bw,48,close,"Navy",18)
-   local confirm=popupButton(p,"ConfirmReset",s.PendingReset and "Resetting…"or "Reset Account",pad+bw+10,260,bw,48,function()
-    if s.PendingReset then return end
+   local confirm=popupButton(p,"ConfirmReset",(s.PendingReset or pf and pf.Resetting)and "Liquidating…"or "Reset Account",pad+bw+10,260,bw,48,function()
+    if s.PendingReset or pf and pf.Resetting then return end
     local ok,message,_,id=session:ResetAccount(s.ResetAccountToken)
     if not ok then fail(message);return end
     s.PendingReset=id;refresh()
     task.delay(10,function()if alive and s.PendingReset==id then s.PendingReset=nil;fail("Reset confirmation has not arrived. Check the account before retrying.")end end)
    end,"Pink",narrow and 15 or 18)
-   confirm.Active=not s.PendingReset
+   confirm.Active=not s.PendingReset and not(pf and pf.Resetting)
   elseif s.Overlay=="QuantityLimit"then
    local _,p=popupShell(w,h,pw,190,"Quantity limit","Accounts")
    local message="Available now: "..tostring(s.QuantityLimit).." "..s.QuantitySymbol.." contracts. Limits use settled balance, excluding open P&L. Positions and pending orders use this limit."
@@ -1483,11 +1497,14 @@ function UI.Mount(gui,options)
    restartButton(p,row,pad,260,iw,48,17,45,false,true)
 
   elseif s.Overlay=="Settings"then
-   local _,p=popupShell(w,h,pw,278,"Settings","Settings","Chart, sound and account")
+   local _,p=popupShell(w,h,pw,358,"Settings","Settings","Chart, sound and account")
    local rows={
     {"ShowLevels","Chart levels","Entry, stop loss and take profit",s.Levels,function()s.Levels=not s.Levels;refresh()end},
     {"SoundToggle","Sound effects","Clicks, confirmations and alerts",s.SoundOn~=false,function()
-     s.SoundOn=s.SoundOn==false;if fx then fx:SetSound(s.SoundOn~=false);if s.SoundOn~=false then fx:Play("Select")end end;refresh()end},
+     s.SoundOn=s.SoundOn==false;if player then player:SetAttribute("GetFundedSoundOn",s.SoundOn)end
+     if fx then fx:SetSound(s.SoundOn~=false);if s.SoundOn~=false then fx:Play("Select")end end;refresh()end},
+    {"MotionToggle","Reduced motion","Calmer animations, no bouncing or confetti",s.Calm==true,function()
+     s.Calm=not s.Calm;if player then player:SetAttribute("GetFundedReducedMotion",s.Calm)end;if fx then fx:SetCalm(s.Calm)end;refresh()end},
    }
    for i,r in ipairs(rows)do
     local y=(i-1)*80
@@ -1496,7 +1513,7 @@ function UI.Mount(gui,options)
     text(card,"Detail",r[3],14,30,iw-120,36,11,C.Muted,M,nil,46).TextWrapped=true
     local sw=switch(card,r[1],iw-98,18,r[4],r[5]);sw:SetAttribute("Sound",r[1]=="SoundToggle"and"None"or nil)
    end
-   local vy=2*80
+   local vy=#rows*80
    optionLabel(p,"VolumeLabel","Volume",pad,vy,110,40,narrow and 16 or 18)
    local levels={"Low","Medium","High"};local segW=(iw-110-8*2)/3
    for i,level in ipairs(levels)do
@@ -1509,34 +1526,81 @@ function UI.Mount(gui,options)
    popupButton(p,"ResetAccount","Reset Account",pad,vy+60,iw,48,function()
     s.Overlay="ResetAccount";refresh()
    end,"Pink",18)
+  elseif s.Overlay=="Info"then
+   local size=18
+   local bh=TextService:GetTextSize(s.Info or "",size,M,Vector2.new(iw-2,10000)).Y+12
+   local _,p=popupShell(w,h,pw,bh,"Trading terms","Help")
+   body(p,"Definition",s.Info or "",pad,0,iw,bh,size,C.Text)
   else
-   local info=s.Overlay=="Info"
-   local sections=info and {{"Trading terms",s.Info}}or{
-    {"Make your first trade","Start with "..whole(Ladder.StartingBalance).." in-game money. Choose a market and set quantity to 1. BUY to profit from a price rise; SELL to profit from a fall."},
-    {"Know your numbers","Balance: live account value including open profit or loss, also called equity.\nOpen profit: profit or loss on open positions; it changes with prices.\nSettled balance: account value after closed trades. This sets your contract limit; open profits do not add contracts.\nRealized profit: net profit or loss from this account's closed trades.\nLifetime net profit: realized profit across all your accounts, including losses before restarts. Starting money never counts as profit."},
-    {"Trade protection","Stop loss helps limit a loss. Take profit closes at your target. Switch each on to attach it to new orders. Dollar amounts cover your selected quantity and round to price ticks. Final fills can differ. Saving these settings does not change existing positions."},
-    {"Build your record","Close trades, earn wins and reach lifetime net profit goals for titles. Meet all three goals for a rank. Each closing fill counts as one trade, including partial closes. Earned ranks and titles stay yours."},
-    {"Restart after a loss","At $0 equity or below, your account fails and its positions close. Then restart free with "..whole((session.Portfolio or {}).StartingBalance or Ladder.StartingBalance)..". Current account stats start over; ranks, titles and lifetime totals stay. Losses still count. Repeated restarts may need a cooldown."},
-    {"The market keeps moving","Open positions and orders stay active when you leave. Close positions and cancel pending orders if you want to stop trading."},
+   local size=18;local headingSize=narrow and 20 or 23
+   local function textHeight(value,width,fontSize)
+    return math.ceil(TextService:GetTextSize(value,fontSize or size,M,Vector2.new(width-2,10000)).Y)+8
+   end
+   local steps={
+    {"Pick your direction","Choose a market. Start with quantity 1.",C.Cyan},
+    {"Set your protection","Stop loss limits losses; take profit targets gains. Switch each on before trading. Fills can vary.",C.Green},
+    {"Close trades. Rank up.","Close to lock in your result. Build trades, wins and lifetime net profit to earn ranks and titles.",Color3.fromRGB(255,222,80)},
    }
-   local size=narrow and 14 or 15;local contentH=0
-   for _,section in ipairs(sections)do
-    section[3]=TextService:GetTextSize(section[2],size,M,Vector2.new(iw-2,10000)).Y+8
-    contentH+=28+section[3]+16
+   local contentH=0
+   for i,step in ipairs(steps)do
+    step.TitleH=math.max(32,textHeight(step[1],iw-76,headingSize))
+    step.BodyH=textHeight(step[2],iw-28)
+    step.Height=14+step.TitleH+8+step.BodyH+14+(i==1 and 66 or 0)
+    contentH+=step.Height+12
    end
-   local _,p=popupShell(w,h,pw,contentH+62,info and "Trading terms"or "How to play","Help")
+   local away="Positions and orders stay active offline. Close positions and cancel orders to stop trading."
+   local awayH=44+textHeight(away,iw-28)+12
+   contentH+=awayH+12+48+12
+   local details={
+    {"Your numbers","Balance includes open profit or loss. Open profit changes with prices until you close. Settled balance sets your contract limit; open profits add no contracts."},
+    {"A fresh start","At $0 balance, your account fails. Restart free with "..whole((session.Portfolio or {}).StartingBalance or Ladder.StartingBalance)..". Account stats reset; ranks, titles and lifetime totals stay. Losses still count. A cooldown may apply."},
+   }
+   if s.HelpDetails then
+    for _,detail in ipairs(details)do detail.Height=44+textHeight(detail[2],iw-28)+14;contentH+=detail.Height+12 end
+   end
+   local shell,p=popupShell(w,h,pw,contentH+66,"How to play","Help")
+   -- Keep the guided trade action visible even when the larger cards need scrolling.
+   p.Size=UDim2.fromOffset(pw,p.Size.Y.Offset-66);p.CanvasSize=UDim2.fromOffset(0,contentH)
    local yy=0
-   for i,section in ipairs(sections)do
-    optionLabel(p,"Heading"..i,section[1],pad,yy,iw,24,18,C.Cyan)
-    body(p,"Body"..i,section[2],pad,yy+28,iw,section[3],size,C.Text)
-    yy+=28+section[3]+16
+   for i,step in ipairs(steps)do
+    local card=frame(p,"Step"..i,pad,yy,iw,step.Height,Color3.fromRGB(3,24,70),44)
+    round(card,14);stroke(card,step[3]).Thickness=2
+    local badge=frame(card,"Number",14,14,36,32,step[3],45);round(badge,10)
+    text(badge,"Value",tostring(i),0,0,36,32,23,C.Bg,B,CENTER,46).TextStrokeTransparency=1
+    local title=body(card,"Heading",step[1],62,14,iw-76,step.TitleH,headingSize,step[3])
+    title.TextYAlignment=Enum.TextYAlignment.Center
+    local by=14+step.TitleH+8
+    body(card,"Body",step[2],14,by,iw-28,step.BodyH,size,C.Text)
+    if i==1 then
+     local directions=frame(card,"Directions",14,by+step.BodyH+4,iw-28,58,C.Bg,45);round(directions,10)
+     text(directions,"Buy","BUY  =  price up",12,2,iw-52,26,18,C.Green,B,nil,46)
+     text(directions,"Sell","SELL  =  price down",12,28,iw-52,26,18,C.Red,B,nil,46)
+    end
+    yy+=step.Height+12
    end
-   popupButton(p,"ReplayTutorial","Start guided trade",pad,contentH,iw,48,function()s.Screen="Trade";s.Nav="Trade";s.Overlay=nil;s.Sheet=false;s.Coach=1;s.CoachBase=nil;s.CoachDismissed=nil;refresh()end,"Cyan",18)
-
+   local note=frame(p,"OfflineReminder",pad,yy,iw,awayH,Color3.fromRGB(3,24,70),44)
+   round(note,14);stroke(note,C.Blue).Thickness=2
+   optionLabel(note,"Heading","Before you leave",14,10,iw-28,28,20,C.Blue)
+   body(note,"Body",away,14,44,iw-28,awayH-56,size,C.Text)
+   yy+=awayH+12
+   popupButton(p,"HelpDetails",s.HelpDetails and "Less detail  -"or "Balances & restarts  +",pad,yy,iw,48,function()s.HelpDetails=not s.HelpDetails;refresh()end,"Navy",18)
+   yy+=60
+   if s.HelpDetails then
+    for i,detail in ipairs(details)do
+     local card=frame(p,"Detail"..i,pad,yy,iw,detail.Height,Color3.fromRGB(3,24,70),44);round(card,14);stroke(card,C.Border)
+     optionLabel(card,"Heading",detail[1],14,10,iw-28,28,20,C.Cyan)
+     body(card,"Body",detail[2],14,44,iw-28,detail.Height-58,size,C.Text)
+     yy+=detail.Height+12
+    end
+   end
+   local footer=frame(shell,"GuideAction",pad,shell.Size.Y.Offset-66,iw,60,Color3.fromRGB(3,30,83),44)
+   popupButton(footer,"ReplayTutorial","Replay welcome guide",0,6,iw,48,function()
+    s.Screen="Trade";s.Nav="Trade";s.Overlay=nil;s.Sheet=false;refresh();if guide then guide:Replay()end
+   end,"Green",20)
   end
  end
  -- ── Funded journey: welcome, dashboard, guided first trade and celebrations ──────────────────
- local AtEnd,Top=Enum.TextTruncate.AtEnd,Enum.TextYAlignment.Top
+ local AtEnd=Enum.TextTruncate.AtEnd
  local function chip(p,name,value,x,y,color,w)
   local width=w or(#value*7+22)
   local c=frame(p,name,x,y,width,22,color:Lerp(SC.Ink,.62));round(c,11);stroke(c,color).Thickness=2
@@ -1593,90 +1657,12 @@ function UI.Mount(gui,options)
    Restart=function(parent,bx,by,bw,bh)restartButton(parent,activeRow(),bx,by,bw,bh,18,4)end,
   })
  end
- local coachSteps={
-  {"Choose your market","Open the market list. Choose BX for the Blox 500, BT for tech or BG for gold.",
-   {Desktop={"OrderTicket.Fields.ContractSelector"},Mobile={"Chart.Header.ContractSelector"}}},
-  {"Set your quantity","Start with 1 contract. More contracts mean bigger gains and losses for the same price move.",
-   {Desktop={"OrderTicket.Fields.Quantity"},Mobile={"TradeDock.QuantityCard.Quantity","TradeDock.Fields.Quantity"}}},
-  {"Place a trade","BUY to profit from a rise. SELL to profit from a fall. Stop loss and take profit attach when switched on.",
-   {Desktop={"OrderTicket.OrderActions.BuyLong","OrderTicket.OrderActions.SellShort","OrderTicket.Fields.BuyLong","OrderTicket.Fields.SellShort"},Mobile={"TradeDock.BuyLong","TradeDock.SellShort"}}},
-  {"Close your position","Close to lock in your profit or loss. The filled result updates your balance and counts toward your goals.",
-   {Desktop={"OrderTicket.OrderActions.ClosePosition","OrderTicket.Fields.ClosePosition"},Mobile={"Activity.Rows.Row1","TopNavigation.TradeActivity"}}},
-  {"First trade complete","",{Desktop={},Mobile={}}},
- }
- local function findPath(path)
-  local node=canvas
-  for part in path:gmatch("[^%.]+")do node=node and node:FindFirstChild(part)end
-  return node
- end
- local function highlight(target)
-  local ring=make("Frame","CoachHighlight",target,{Size=UDim2.new(1,6,1,6),Position=UDim2.fromOffset(-3,-3),BackgroundTransparency=1,BorderSizePixel=0,ZIndex=target.ZIndex+3})
-  round(ring,10);local edge=stroke(ring,C.Blue);edge.Thickness=2
-  local pulse=TweenService:Create(edge,TweenInfo.new(.8,Enum.EasingStyle.Sine,Enum.EasingDirection.InOut,-1,true),{Transparency=.65})
-  if fx then fx:Loop(pulse)else pulse:Play()end
- end
- local function finishCoach(skipped)
-  s.Coach=nil;s.CoachBase=nil;s.CoachDismissed=true
-  session:Flag(skipped and"TutorialSkipped"or"TutorialDone");refresh()
- end
- local function coachProgress()
-  if not s.Coach then return false end
-  local fill,hist=session.Fills[1],session.History[1]
-  local base=s.CoachBase
-  if not base or base.Account~=session.AccountKey then
-   s.CoachBase={Account=session.AccountKey,Fill=fill and fill.TradeId,History=hist and hist.TradeId};return false
-  end
-  local before=s.Coach
-  if s.Coach<=3 and fill and fill.TradeId~=base.Fill then s.Coach=4;base.Fill=fill.TradeId end
-  if s.Coach==4 and hist and hist.TradeId~=base.History then s.Coach=5 end
-  return s.Coach~=before
- end
- local function coach(w,h,mobile,layout)
-  if not s.Coach or options.Preview then return end
-  local pf=session.Portfolio;if not pf or pf.New then return end
-  local step=coachSteps[s.Coach];local title,body=step[1],step[2]
-
-  if s.Coach==1 then body="Your $10,000 starting balance is in-game money. Open the market list and choose where to trade." end
-  if s.Coach==5 then
-   local last=session.History[1];title="First trade complete"
-   body=(last and "Realized profit: "..Market.Signed(last.Pnl)..". " or "").."It now counts toward your goals. "..(pf.Next and "Next: "..pf.Next.Name.."." or "Every title is yours.")
-  end
-  local hasButton=s.Coach<=2 or s.Coach==5
-  local x,y,cw,ch
-  if mobile then
-   -- Top of the screen, except step 1 whose target (the chart's contract selector) sits there.
-   x=12;cw=layout.CoachW or w-24;ch=s.Coach==5 and 142 or 116
-   y=s.Coach==1 and (layout.Compact and h-ch-10 or math.max(layout.Head,(layout.TradeTop or h-layout.NavH)-ch-8))or layout.Head
-  else
-   -- Compact and bottom-aligned so the activity tabs, table header and first row stay readable.
-   local a=layout.Activity;cw=math.min(640,a[3]*.56)
-   local textH=TextService:GetTextSize(body,12,F,Vector2.new(cw-(hasButton and 138 or 28),1000)).Y
-   ch=math.clamp(60+textH,86,math.max(86,a[4]-8));x=a[1]+12;y=a[2]+a[4]-ch-8
-  end
-  local card=frame(canvas,"Coach",x,y,cw,ch,Color3.new(1,1,1),38);round(card,16);stroke(card,C.Cyan).Thickness=3
-  tint(card,Color3.fromRGB(122,56,245),Color3.fromRGB(58,22,176))
-  sidebarText(card,"Step","FIRST TRADE · "..s.Coach.." OF "..#coachSteps,14,6,cw-124,18,11,Color3.fromRGB(236,227,255))
-  local skip=glossy(button(card,"SkipTour",s.Coach==5 and"Close"or"Skip tour",cw-98,6,88,26,function()finishCoach(s.Coach~=5)end,C.Raised,C.Text,12,39),"Navy")
-  skip.Border.Color=C.Cyan
-  sidebarText(card,"Title",title,14,24,cw-28,26,mobile and 16 or 19).TextTruncate=AtEnd
-  local t=text(card,"Body",body,14,52,cw-(hasButton and 138 or 28),ch-58,mobile and 11 or 12,Color3.fromRGB(236,232,255),M);t.TextWrapped=true;t.TextYAlignment=Top
-  if s.Coach<=2 then glossy(button(card,"CoachNext","Next  →",cw-104,ch-44,92,36,function()s.Coach+=1;refresh()end,C.Raised,C.Text,15,39),"Cyan")end
-  if s.Coach==5 then glossy(button(card,"FinishTour","Keep trading",cw-130,ch-46,118,38,function()finishCoach(false)end,C.Raised,C.Text,15,39),"Green")end
-  local targets=step[3][mobile and"Mobile"or"Desktop"]
-  if s.Coach==4 and mobile then
-   local key;for _,k in ipairs(Market.PositionOrder)do if session.Positions[k]then key=k break end end
-   local close=key and findPath("Activity.Rows.Row1.Close"..key)
-   local dock=findPath("TradeDock.PositionBar.ClosePosition")and"TradeDock.PositionBar.ClosePosition"
-    or findPath("TradeDock.Fields.PositionBar.ClosePosition")and"TradeDock.Fields.PositionBar.ClosePosition"
-   targets=dock and{dock}or close and{"Activity.Rows.Row1.Close"..key}or{"TopNavigation.TradeActivity"}
-  end
-  for _,path in ipairs(targets)do local target=findPath(path);if target then highlight(target)end end
- end
  local function celebrate(event)
   toast("Title earned: "..event.Title.." · "..event.Name,"success")
  end
  local function mobileBadge()
   if options.Preview then return "Studio preview"end
+  if session.Portfolio and session.Portfolio.Resetting then return "Resetting · liquidating positions…"end
   if not session.CanTrade then return session.Ready and "Trading paused"or "Connecting to the exchange…"end
   local row=activeRow();if row and row.Depleted then return row.Closing and"Account failed · closing positions…"or"Account failed · tap the goal card"end
   local _,_,_,_,summary=objective()
@@ -1707,6 +1693,7 @@ function UI.Mount(gui,options)
  local function tradeStatus()
   -- Header status for exceptional states only; the account strip carries the goal.
   if options.Preview then return "Studio preview"end
+  if session.Portfolio and session.Portfolio.Resetting then return "Resetting · liquidating positions…"end
   if not session.CanTrade then return session.Ready and "Trading paused"or "Connecting…"end
   local row=activeRow();if row and row.Depleted then return row.Closing and"Closing positions…"or"Account failed"end
   return session.PersistenceMode=="Local"and"Not saved"or""
@@ -1719,10 +1706,9 @@ function UI.Mount(gui,options)
   round(panel,inline and 10 or 12);stroke(panel,Color3.fromRGB(26,88,186)).Thickness=1.5
   tint(panel,Color3.fromRGB(6,46,120),Color3.fromRGB(3,28,80))
   local _,_,progress=objective()
-  local help=function()s.Overlay="Help";refresh()end
   local cells={
-   {"Balance","Balance",Market.Money(sum.Equity),C.Text,help},
-   {"Unrealized","Open P&L",Market.Signed(sum.Unrealized),sum.Unrealized>=0 and SC.Green or SC.Red,help},
+   {"Balance","Balance",Market.Money(sum.Equity),C.Text},
+   {"Unrealized","Open P&L",Market.Signed(sum.Unrealized),sum.Unrealized>=0 and SC.Green or SC.Red},
    {"Objective",failed and"Account failed"or"Next goal",failed and"Tap to restart"or stripGoal(),failed and SC.Red or C.Text,
     function()if failed then openBlown(pf.Active)else navigate("Progress")end end},
   }
@@ -1734,7 +1720,9 @@ function UI.Mount(gui,options)
    local goal=i==3
    local cw=goal and w-cx or math.floor(w*shares[i])
    if i>1 then local div=frame(panel,"Divider",cx,math.floor(h*.2),1,math.ceil(h*.6),Color3.fromRGB(44,104,200),4);div.BackgroundTransparency=.2 end
-   local cell=button(panel,d[1].."Card","",cx,0,cw,h,d[5],false,C.Text,12,4)
+   local cell
+   if goal then cell=button(panel,d[1].."Card","",cx,0,cw,h,d[5],false,C.Text,12,4)
+   else cell=frame(panel,d[1].."Card",cx,0,cw,h,C.Panel,4);cell.BackgroundTransparency=1 end
    if goal then cell:SetAttribute("Strip",true)end
    local valueName=goal and"Amount"or d[1].."Value"
    local tx,ty,tw
@@ -1803,7 +1791,6 @@ function UI.Mount(gui,options)
   local statusW=status~=""and math.ceil(TextService:GetTextSize(status,11,F,Vector2.new(400,40)).X)+8 or 0
   local head=wide and(tight and 36 or 40)or(pillW>0 or statusW>0)and(dense and 36 or 40)or 0
   local stripTop=wide and 0 or head>0 and head or 6
-  layout.Head=head;layout.Compact=wide
   local navH=layout.NavH
   local top=frame(canvas,"TopNavigation",0,0,w,math.max(head,1),C.Bg);top.BackgroundTransparency=1
   -- Holds the status notice; market updates refresh TopNavigation.Account.Brand in place.
@@ -1831,7 +1818,6 @@ function UI.Mount(gui,options)
    -- No placeholder rows: every remaining pixel goes to the chart's plot.
    chartView.Inline=false
    chart(pad,cy,w-pad*2,dockY-gap-cy,true,h<650,false)
-   layout.TradeTop=dockY
    mobileDock(pad,dockY,w-pad*2,dockH,false,dims)
   else
    local stripX=pad;local stripW=w-stripX-pad-(pillW>0 and pillW+gap or 0)-(statusW>0 and statusW+gap or 0)
@@ -1841,7 +1827,6 @@ function UI.Mount(gui,options)
    local cy=head+4;local ch=h-cy-navH-gap;local cw=w-pad*2-colW-gap
    chartView.Inline=true
    chart(pad,cy,cw,ch,true,true,true)
-   layout.CoachW=cw
    mobileDock(pad+cw+gap,cy,colW,ch,true)
   end
  end
@@ -1937,17 +1922,15 @@ function UI.Mount(gui,options)
   if session.Contract~=s.Contract or session.Timeframe~=s.Timeframe then session:Subscribe(s.Contract,s.Timeframe)end
   task.defer(function()if alive then for _,v in ipairs(canvas:GetDescendants())do if v:IsA("ScrollingFrame") and scroll[v:GetFullName()]then v.CanvasPosition=scroll[v:GetFullName()]end end end end)
   local mobile=w<1000 or h<600;local sum=session:Summary()
-  local screen=currentScreen();local layout
+  local screen=currentScreen()
   if screen=="Trade"then
-   local pf=session.Portfolio
-   if pf and pf.Tutorial=="Pending"and s.Coach==nil and not s.CoachDismissed and not options.Preview then s.Coach=1;s.CoachBase=nil end
    s.Nav="Trade"
   elseif screen=="Leaderboard"then s.Nav="Leaderboard"
   elseif screen=="Stats"then s.Nav="Stats"
   else s.Nav="Progress"end
   leaderboard:SetVisible(screen=="Leaderboard")
   if screen=="Loading"then loading(w,h)
-  elseif mobile then layout=mobileScreen(w,h,sum,screen)
+  elseif mobile then mobileScreen(w,h,sum,screen)
   else
    local railW=w<1150 and 180 or w<1550 and 220 or 256;local gap=16
    local cx=railW+gap;local usable=w-cx-20;local tw=w<1150 and 264 or w<1550 and 310 or 360;local cw=usable-tw-gap
@@ -2000,14 +1983,11 @@ function UI.Mount(gui,options)
     local summaryH=80
     accountCards(cx,22,usable,summaryH,false)
     local contentY=22+summaryH+16
-    local ay=h-math.clamp(h*.2,152,206)-12
-    chart(cx,contentY,cw,ay-contentY-16,false,false,false)
-    ticket(cx+cw+gap,contentY,tw,h-contentY-12)
-    activity(cx,ay,cw,h-ay-12,false,false)
-    layout={Activity={cx,ay,cw,h-ay-12}}
+    local chartH=h-contentY-12
+    chart(cx,contentY,cw,chartH,false,false,false)
+    ticket(cx+cw+gap,contentY,tw,chartH)
    end
   end
-  if screen=="Trade"and layout then coach(w,h,mobile,layout)end
   local away=session.Portfolio and session.Portfolio.AwaySummary
   if AwayView.ShouldShow(away)and s.AwaySeen~=away.Id then s.Overlay="Away"end
   overlay(w,h)
@@ -2020,7 +2000,7 @@ function UI.Mount(gui,options)
   if s.Toast then toastView(w,h,mobile)end
   root:SetAttribute("Layout",mobile and"Mobile"or"Desktop");root:SetAttribute("SelectedContract",s.Contract)
   local pf=session.Portfolio
-  root:SetAttribute("Screen",screen);root:SetAttribute("CoachStep",s.Coach);root:SetAttribute("ActiveAccount",pf and pf.Active)
+  root:SetAttribute("Screen",screen);root:SetAttribute("ActiveAccount",pf and pf.Active)
   local blownKeys={};for _,r in ipairs(pf and pf.Accounts or{})do if r.Depleted then table.insert(blownKeys,r.Key..(r.Closing and":closing"or":ready"))end end
   root:SetAttribute("BlownAccounts",table.concat(blownKeys,","));root:SetAttribute("BlownNotice",s.Overlay=="Blown"and s.BlownTier or nil)
   root:SetAttribute("NetRealized",pf and pf.Earned)
@@ -2031,6 +2011,8 @@ function UI.Mount(gui,options)
   root:SetAttribute("ExchangeStatus",session.ConnectionStatus or "EDIT PREVIEW")
   root:SetAttribute("EditPreview",options.Preview==true)
   runEffects()
+  local plot=canvas:FindFirstChild("Chart")
+  marketBanner:Step(plot and plot:FindFirstChild("CandlestickPlot"),screen=="Trade"and not s.Overlay and not s.Sheet and(options.Preview or session.DepthLive),s.Calm)
  end
  render=function(keepTicket)
   local ok,err=xpcall(function()renderNow(keepTicket)end,debug.traceback)
@@ -2043,6 +2025,11 @@ function UI.Mount(gui,options)
  table.insert(connections,root:GetPropertyChangedSignal("AbsoluteSize"):Connect(function()
   if math.abs(root.AbsoluteSize.X-lastW)>1 or math.abs(root.AbsoluteSize.Y-lastH)>1 then s.ContractAnchor=nil;refresh()end
  end))
+ if not options.Preview and player then
+  for _,name in ipairs({"GetFundedSoundOn","GetFundedReducedMotion"})do
+   table.insert(connections,player:GetAttributeChangedSignal(name):Connect(function()comfort();if s.Overlay=="Settings"then refresh()end end))
+  end
+ end
  if not options.Preview then
   table.insert(connections,UIS.InputBegan:Connect(function(ev,processed)
    if ev.UserInputType==Enum.UserInputType.Keyboard then
@@ -2063,6 +2050,8 @@ function UI.Mount(gui,options)
   table.insert(connections,game:GetService("GuiService").MenuOpened:Connect(function()chartView:FocusLost()end))
   local paintElapsed=0;local depthElapsed=0
   table.insert(connections,RunService.RenderStepped:Connect(function(dt)
+   local chartPanel=canvas:FindFirstChild("Chart")
+   marketBanner:Step(chartPanel and chartPanel:FindFirstChild("CandlestickPlot"),currentScreen()=="Trade"and not s.Overlay and not s.Sheet and session.DepthLive,s.Calm)
    paintElapsed+=dt
    depthElapsed+=dt;if depthElapsed>=1 then depthElapsed=0;updateLevel2();if s.Overlay=="Shop"then depthPurchase:Refresh();updateShop()end end
    leaderboard:Step()
@@ -2089,6 +2078,7 @@ function UI.Mount(gui,options)
   local triggersSeen={}
   local function marketUpdate()
    if not alive then return end
+   marketBanner:Update(session.MarketEvent,session.Time,currentScreen()=="Trade"and not s.Overlay and not s.Sheet and session.DepthLive,nil,session.Contract)
    updateLevel2()
    updateShop()
    restoreProtectionPreferences()
@@ -2120,7 +2110,6 @@ function UI.Mount(gui,options)
      else fail(what.." triggered but was not filled: "..tostring(t.Message or"no liquidity"))end
     end
    end
-   if coachProgress()then refresh()end
    local screen=currentScreen()
    local signature=screen..":"..tostring(session.AccountKey)..":"..tostring(session.CanTrade)..":"..#session.Orders..":"..#session.History..":"..portfolioSignature()
    -- A new server Stats packet (after a close, depletion or restart) rebuilds the Stats page.
@@ -2129,7 +2118,7 @@ function UI.Mount(gui,options)
     local p=session.Positions[key]
     if p then signature..=key..p.Quantity..":"..p.Entry..":"..tostring(p.Stop)..":"..tostring(p.Target)end
    end
-   for _,o in ipairs(session.Orders)do signature..=":"..o.Id..":"..o.Quantity..":"..tostring(o.Price) end
+   for _,o in ipairs(session.Orders)do signature..=":"..o.Id..":"..o.Quantity..":"..tostring(o.Price)..":"..tostring(o.Status)..":"..tostring(o.Filled)end
    if signature~=lastStructure and not UIS:GetFocusedTextBox()then lastStructure=signature;refresh(true);return end
    -- Preserve controls, focus, scroll positions and overlays between network batches.
    local sum=session:Summary();local w,h=root.AbsoluteSize.X,root.AbsoluteSize.Y;local mobile=w<1000 or h<600
@@ -2195,7 +2184,7 @@ function UI.Mount(gui,options)
    end
    if reply.Kind=="ResetAccount"then
     s.PendingReset=nil
-    if reply.Ok then s.Overlay=nil;blownQueue={};s.CoachDismissed=true end
+    if reply.Ok then s.Overlay=nil;blownQueue={} end
    end
    chartView:OnReply(reply)
    s.Error=not reply.Ok and reply.Message or nil
@@ -2222,7 +2211,7 @@ function UI.Mount(gui,options)
    local pf=session.Portfolio
    if reply.Kind=="Start"then
     s.Starting=nil
-    if reply.Ok then s.Screen="Trade";s.Nav="Trade";s.CoachDismissed=nil;if pf and pf.Tutorial=="Pending"then s.Coach=1;s.CoachBase=nil end end
+    if reply.Ok then s.Screen="Trade";s.Nav="Trade" end
    elseif (reply.Kind=="Restart"or reply.Kind=="ResetAccount")and reply.Ok then
     s.Overlay=nil;blownQueue={};s.Screen="Trade";s.Nav="Trade"
    end
@@ -2281,6 +2270,11 @@ function UI.Mount(gui,options)
  end
  table.insert(connections,leaderboard.Changed.Event:Connect(refresh))
  render()
+ marketBanner:Update(session.MarketEvent,session.Time,session.DepthLive and not s.Overlay and not s.Sheet,nil,session.Contract)
+ if not options.Preview then
+  guide=WelcomeGuide.new({Gui=gui,Root=root,Canvas=canvas,State=s,Session=session,Market=Market,Fx=feedback,Whole=whole,
+   GoTrade=function()navigate("Trade")end,GoProgress=function()navigate("Progress")end})
+ end
  -- Studio-only layout/test hook: read or set presentation state and rebuild synchronously.
  if RunService:IsStudio()and not options.Preview then
   local hook=Instance.new("BindableFunction");hook.Name="UIDiagnostics";hook.Parent=root
@@ -2291,8 +2285,8 @@ function UI.Mount(gui,options)
    return nil
   end
  end
- local controller={Root=root,State=s,Chart=chartView}
- function controller:Destroy()alive=false;depthPurchase:Destroy();for _,view in ipairs(depthViews)do view:Destroy()end;leaderboard:Destroy();chartView:Destroy();session:Destroy();if feedback then feedback:Destroy()end;if fx==feedback then fx=nil end;for _,c in ipairs(connections)do c:Disconnect()end;if root.Parent then root:Destroy()end end
+ local controller={Root=root,State=s,Chart=chartView,MarketBanner=marketBanner}
+ function controller:Destroy()alive=false;marketBanner:Destroy();if guide then guide:Destroy()end;depthPurchase:Destroy();for _,view in ipairs(depthViews)do view:Destroy()end;leaderboard:Destroy();chartView:Destroy();session:Destroy();if feedback then feedback:Destroy()end;if fx==feedback then fx=nil end;for _,c in ipairs(connections)do c:Disconnect()end;if root.Parent then root:Destroy()end end
  return controller
 end
 return UI

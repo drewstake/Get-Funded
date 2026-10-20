@@ -13,7 +13,12 @@ function T.Ensure(e,id,r)
  if not a or not a.Player or not b or r.Type~="Market"or type(r.Quantity)~="number"or r.Quantity<1 or r.Quantity%1~=0 then return end
  if not r.ReduceOnly and (a.Locked or e:OrderCapacity(a,r.Contract,r.Direction)<r.Quantity)then return end
  local levels=r.Direction==1 and b.Asks or b.Bids;local qty=0;local ticks=b.Last or b.Reference
- for _,l in ipairs(levels)do qty+=l.Quantity;ticks=l.Price end
+ for _,l in ipairs(levels)do for _,o in ipairs(l.Orders)do
+  local other=e.Accounts[o.Owner]
+  local same=o.Owner==id or a.Group and a.Group==other.Group or a.ProfileId and a.ProfileId==other.ProfileId
+  local available=not same and e:_available(o,true)or 0
+  if available>0 then qty+=available;ticks=l.Price end
+ end end
  if qty<r.Quantity then T.Offer(e,r.Contract,-r.Direction,r.Quantity-qty,ticks*b.Spec.Tick)end
 end
 function T.Submit(e,id,r,...)

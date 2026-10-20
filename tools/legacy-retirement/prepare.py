@@ -1,0 +1,22 @@
+"""Stage offline fixtures; this script never accesses Roblox or writes saved worlds."""
+from pathlib import Path
+import hashlib,json,re,shutil
+ROOT=Path(__file__).resolve().parents[2]
+BASE=ROOT/'tmp/legacy-retirement-20261018'
+OUT=ROOT/'output/legacy-retirement-20261018'
+BASE.mkdir(exist_ok=True);OUT.mkdir(exist_ok=True)
+shutil.copyfile(ROOT/'tmp/execution-integrity/environment.luau',BASE/'environment.luau')
+for name,source in [('baseline',ROOT/'backups/legacy-retirement-20261018/src'),('candidate',ROOT/'src')]:
+    target=BASE/name;target.mkdir(exist_ok=True);manifest={}
+    for path in source.glob('*.luau'):
+        if '.server.' in path.name or '.client.' in path.name:continue
+        raw=path.read_text(encoding='utf-8-sig');manifest[path.name]=hashlib.sha256(raw.encode()).hexdigest()
+        text=re.sub(r'require\((?:script\.Parent|game\.(?:ReplicatedStorage|ServerScriptService)\.MarketReign)\.(\w+)\)',r'require("./\1")',raw)
+        text=re.sub(r'local root=script\.Parent','local root={}',text)
+        text=re.sub(r'require\(root\.(\w+)\)',r'require("./\1")',text)
+        if 'game:' in text or 'Enum.' in text or 'task.' in text:text='local env=require("../environment")\nlocal game,Enum,task=env.game,env.Enum,env.task\n'+text
+        if 'Instance.new' in text:text='local Instance=require("@lune/roblox").Instance\n'+text
+        (target/path.name).write_text(text,encoding='utf-8')
+    (OUT/(name+'-manifest.json')).write_text(json.dumps(manifest,indent=2))
+for path in Path(__file__).parent.glob('*.luau'):shutil.copyfile(path,BASE/path.name)
+print('Prepared offline baseline and candidate.')

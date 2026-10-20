@@ -1,0 +1,436 @@
+{
+  "AccountUpgradeTests": {
+    "Passed": true,
+    "Results": [
+      {
+        "Passed": true,
+        "Name": "Legacy earned awards receive the current permanent bonus once",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Saved bonuses increase on reload, never stack or shrink, and fund the next reset",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Reset liquidates both directions, cancels pending entries and records closed trades",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Earned balance and permanent rank survive healthy resets; reset tokens and ownership are enforced",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Open positions remain open; gains before disconnect are excluded; summary acknowledgment persists",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Long offline Stop latches from executed history and settles once",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Long offline Target latches from executed history and settles once",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Short offline Stop latches from executed history and settles once",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Short offline Target latches from executed history and settles once",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Liquidation while absent uses an intervening execution, not recovered reconnect price",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Partial offline exits split carried-in, realized change and remaining unrealized change",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Paused returns show full entry P&L for long and short gains and losses",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Older saved summaries recover full P&L from their return price without changing with live quotes",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Price-history absence never creates returns while simulation is paused",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Drag-created SL/TP validates both directions, stale quantities, wrong sides and duplicates",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Soft magnet chooses nearest OHLC, holds near ties and releases at different zoom levels",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Leaderboard projects raw account balance without changing negative accounting",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Reset confirmation keeps its original run token after a lost response",
+        "Detail": "Passed"
+      }
+    ]
+  },
+  "ProtectiveOrdersTests": {
+    "Passed": true,
+    "Results": [
+      {
+        "Passed": true,
+        "Name": "Reset with a working or partially filled target permits subsequent market updates and protection",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "-1: 307-contract target fills in thin liquidity with exhausted entry allowance",
+        "Detail": {
+          "Target": 5913,
+          "FirstFill": 9,
+          "FinalPosition": 0,
+          "Contracts": 307
+        }
+      },
+      {
+        "Passed": true,
+        "Name": "-1: partial TP keeps stop and stop closes only the residual",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "-1: saved working/partial targets retain FIFO and residual stop",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "1: 307-contract target fills in thin liquidity with exhausted entry allowance",
+        "Detail": {
+          "Target": 5966.5,
+          "FirstFill": 9,
+          "FinalPosition": 0,
+          "Contracts": 307
+        }
+      },
+      {
+        "Passed": true,
+        "Name": "1: partial TP keeps stop and stop closes only the residual",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "1: saved working/partial targets retain FIFO and residual stop",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Resting TP observes FIFO and a later ordinary order cannot trade through it",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Target resizing preserves prices, reduces quantity, and removes orphan orders on reversal",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Moving/cancelling a TP updates the book without printing a trade",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Legacy queued TP migrates without fills then ignores exhausted entry budget",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Fake protective fields and voluntary reduce-only orders cannot bypass entry budgets",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Protective exits retain actual-price safeguards and report the reason",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Disconnected TP leaves depth but can close against connected liquidity",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "A zero-liquidity market never fabricates a protective fill",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "A bot limit cannot cross a target blocked by the price safeguard",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "A stop consumes thin liquidity despite an exhausted entry budget",
+        "Detail": "Passed"
+      }
+    ]
+  },
+  "OwnerResetTests": {
+    "Passed": true,
+    "Results": [
+      {
+        "Passed": true,
+        "Name": "Exact username parser rejects multi-target and malformed commands",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Authorization trusts only creator user id or actual group owner",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Non-owner command cannot resolve a name or mutate a profile",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Offline exact username resets once, with durable result before disconnect",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Display-name mismatch and lookup failure cannot choose a target",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Saved reset removes titles, rank, all histories, preferences and counters",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Open positions, armed stops and working limits settle without moving the market or another player",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Archived depleted runs and prefix-neighbor users stay isolated",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Repeated resets survive checkpoint restore and retain unique request tokens",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Transaction saves new profile and projection before replacing the live engine",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Validation failure keeps the original engine and saved record intact",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Write failure pauses and reloads durable data without overwriting it",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Lost commit response recovers the saved wipe instead of restoring old progress",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Busy, follower and unsaved worlds reject resets before mutation",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Leaderboard drops wiped scores immediately and persists the newer projection",
+        "Detail": "Passed"
+      }
+    ]
+  },
+  "ResetLiquidationTests": {
+    "Passed": true,
+    "Results": [
+      {
+        "Passed": false,
+        "Name": "1: 145-contract reset sweeps real depth and records market impact and loss",
+        "Detail": "ServerStorage.ResetLiquidationValidation.ResetLiquidationTests:47: assertion failed!"
+      },
+      {
+        "Passed": true,
+        "Name": "1: empty then partial liquidity retains old account and survives reload/disconnect",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": false,
+        "Name": "-1: 145-contract reset sweeps real depth and records market impact and loss",
+        "Detail": "ServerStorage.ResetLiquidationValidation.ResetLiquidationTests:47: assertion failed!"
+      },
+      {
+        "Passed": true,
+        "Name": "-1: empty then partial liquidity retains old account and survives reload/disconnect",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Multiple markets must all finish before reset completes",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Reset resumes after a snapshot taken flat but before the account grant",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Reset preserves price safeguards and waits instead of inventing liquidity",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Equity depletion during reset keeps the reset queued and records the loss",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Flat reset completes immediately; rejected resets do not cancel orders or spend credits",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": false,
+        "Name": "Partial TP is replaced by a reset liquidation without orphan exits or double counting",
+        "Detail": "ServerStorage.ResetLiquidationValidation.ResetLiquidationTests:131: assertion failed!"
+      }
+    ]
+  },
+  "ClosedTradePnlTests": {
+    "Passed": true,
+    "Results": [
+      {
+        "Passed": true,
+        "Name": "Long 40 + 20 + 30 + 30 contracts: whole-position PNL, move 4",
+        "Detail": {
+          "LastFillPnl": 4083.33333333303,
+          "Pnl": 24499.99999999818,
+          "Quantity": 120
+        }
+      },
+      {
+        "Passed": true,
+        "Name": "Long 40 + 20 + 30 + 30 contracts: whole-position PNL, move -4",
+        "Detail": {
+          "LastFillPnl": -3916.66666666697,
+          "Pnl": -23500.00000000182,
+          "Quantity": 120
+        }
+      },
+      {
+        "Passed": true,
+        "Name": "Long 40 + 20 + 30 + 30 contracts: whole-position PNL, move 0",
+        "Detail": {
+          "LastFillPnl": 83.33333333303017,
+          "Pnl": 499.999999998181,
+          "Quantity": 120
+        }
+      },
+      {
+        "Passed": true,
+        "Name": "Short 40 + 20 + 30 + 30 contracts: whole-position PNL, move 4",
+        "Detail": {
+          "LastFillPnl": 3916.66666666697,
+          "Pnl": 23500.00000000182,
+          "Quantity": 120
+        }
+      },
+      {
+        "Passed": true,
+        "Name": "Short 40 + 20 + 30 + 30 contracts: whole-position PNL, move -4",
+        "Detail": {
+          "LastFillPnl": -4083.33333333303,
+          "Pnl": -24499.99999999818,
+          "Quantity": 120
+        }
+      },
+      {
+        "Passed": true,
+        "Name": "Short 40 + 20 + 30 + 30 contracts: whole-position PNL, move 0",
+        "Detail": {
+          "LastFillPnl": -83.33333333303017,
+          "Pnl": -499.999999998181,
+          "Quantity": 120
+        }
+      },
+      {
+        "Passed": true,
+        "Name": "Partial exits survive save/rejoin and trimmed history; new additions stay in the same trade",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Prior trades and other open markets never enter the closed position total",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "A reversal completes the old trade and starts a separate result for the new direction",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Rewards earned on earlier fills accompany the final notification once",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Older open trades recover earlier partial closes from their retained position history",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Reset completes an unfinished close result before opening the next account",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Take profit aggregates multiple exit prices and waits for the final fill",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Stop loss aggregates multiple exit prices and waits for the final fill",
+        "Detail": "Passed"
+      },
+      {
+        "Passed": true,
+        "Name": "Break-even closes still produce exactly one zero-PNL message",
+        "Detail": "Passed"
+      }
+    ]
+  }
+}

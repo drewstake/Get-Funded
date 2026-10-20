@@ -1,0 +1,154 @@
+{
+  "Step": 9498534,
+  "InitialTime": 2372284.5,
+  "Time": 2374633.5,
+  "Performance": {
+    "MaxMs": 102.10519999964163,
+    "BudgetHits": 29,
+    "Steps": 2925,
+    "Frames": 2561,
+    "TotalMs": 12536.174900480546,
+    "LastMs": 8.767699997406453,
+    "LastSteps": 3,
+    "Backlog": 1.2059913463890553,
+    "MeanMs": 4.895031198938128
+  },
+  "Mode": "Shared",
+  "Participants": 654,
+  "Total": {
+    "CapitalAdjusted": -1799956779395.7097,
+    "Queued": 0,
+    "Active": 390,
+    "Realized": 45928.30244811258,
+    "Unrealized": -60640.80244789002,
+    "Contracts": 6562,
+    "Orders": 818,
+    "Allocation": 294850000,
+    "Retired": 264,
+    "Balance": 294895928.3024482,
+    "Count": 654,
+    "Equity": 294835287.5000003,
+    "Exits": 13,
+    "Pnl": -14712.499999776439,
+    "Positions": 488,
+    "Depleted": 0
+  },
+  "Audit": {
+    "Inventory": {
+      "BT": 0,
+      "BX": 0,
+      "YM": 0,
+      "BG": 0,
+      "MNQ": 0,
+      "RTY": 0,
+      "MES": 0,
+      "MYM": 0,
+      "M2K": 0
+    },
+    "CashError": 1.0542571544647217e-06,
+    "Volume": 67178198,
+    "EquityError": -7.705821190029383e-07,
+    "Hash": 1859151018,
+    "Trades": 26941701
+  },
+  "Status": "SHARED \u00b7 SAVED",
+  "SignalsVersion": 1,
+  "CapitalPreserved": true,
+  "At": 1792377967,
+  "PerformanceBaselinesPreserved": true,
+  "Version": 18,
+  "RunningStep": 9499248,
+  "Scope": "Studio",
+  "InitialStep": 9489138,
+  "Kinds": {
+    "Liquidity": {
+      "PnlChange": -96078.75000000093,
+      "Active": 72,
+      "Count": 129,
+      "CompletedTrades": 5571,
+      "Positions": 109,
+      "BotsTraded": 112
+    },
+    "Momentum": {
+      "PnlChange": -33233.24999999872,
+      "Active": 36,
+      "Count": 82,
+      "CompletedTrades": 3695,
+      "Positions": 72,
+      "BotsTraded": 69
+    },
+    "Scalper": {
+      "PnlChange": 49117.50000000057,
+      "Active": 72,
+      "Count": 72,
+      "CompletedTrades": 1211,
+      "Positions": 34,
+      "BotsTraded": 72
+    },
+    "Whale": {
+      "PnlChange": 36845.5000000053,
+      "Active": 12,
+      "Count": 30,
+      "CompletedTrades": 1990,
+      "Positions": 26,
+      "BotsTraded": 26
+    },
+    "Maker": {
+      "PnlChange": 119145.75,
+      "Active": 60,
+      "Count": 90,
+      "CompletedTrades": 30755,
+      "Positions": 83,
+      "BotsTraded": 85
+    },
+    "Value": {
+      "PnlChange": 32879.500000000204,
+      "Active": 60,
+      "Count": 110,
+      "CompletedTrades": 3102,
+      "Positions": 95,
+      "BotsTraded": 80
+    },
+    "Reserve": {
+      "PnlChange": -116612.49999996135,
+      "Active": 18,
+      "Count": 18,
+      "CompletedTrades": 488,
+      "Positions": 18,
+      "BotsTraded": 18
+    },
+    "Reversion": {
+      "PnlChange": 6051.500000000931,
+      "Active": 36,
+      "Count": 69,
+      "CompletedTrades": 287,
+      "Positions": 12,
+      "BotsTraded": 51
+    },
+    "Protective": {
+      "PnlChange": 1884.749999994412,
+      "Active": 24,
+      "Count": 54,
+      "CompletedTrades": 2667,
+      "Positions": 39,
+      "BotsTraded": 42
+    }
+  },
+  "Signals": {
+    "BT": {
+      "Span": 61,
+      "Samples": 62,
+      "LatestAge": 0.75
+    },
+    "BX": {
+      "Span": 61,
+      "Samples": 62,
+      "LatestAge": 0.75
+    },
+    "BG": {
+      "Span": 61,
+      "Samples": 62,
+      "LatestAge": 0.75
+    }
+  }
+}

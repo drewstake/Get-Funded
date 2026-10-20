@@ -1,0 +1,16 @@
+{
+  "RegressionCases": 249,
+  "AdditionalAssertions": 140,
+  "RegressionFailures": [],
+  "UI": {
+    "Passed": true,
+    "Result": {
+      "Layouts": 5,
+      "Passed": true,
+      "Checks": 45
+    }
+  },
+  "SourcesCompile": true,
+  "AppliedToStudio": true,
+  "Published": false
+}

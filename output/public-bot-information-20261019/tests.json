@@ -1,0 +1,985 @@
+{
+  "Failures": 0,
+  "Suites": {
+    "BotExitRetryTests": [
+      {
+        "Detail": "Passed",
+        "Name": "55 blocked exits behind a 13000-contract bid create no repeated orders or full-book scans",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "New executable quote wakes a blocked exit and fills only available contracts",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Fair-value change wakes eligible player liquidity before retry deadline",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Blocked retry state survives checkpoint round trip and resumes identically",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Bot risk repair does not submit a second exit while a stop owns the position",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Timed scalper exits reuse retry controls while the only ask is blocked",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Bot take-profit limits still rest without opposing liquidity",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Guard-blocked bot target retains one queued order and recovers without reversing",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Time budget yields after atomic steps and carries every unprocessed step",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "One slow atomic step cannot trigger a 32-step catch-up batch",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Unavailable exchange preserves backlog and never reports a completed step",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Partial tick and maximum catch-up limits remain intact",
+        "Passed": true
+      }
+    ],
+    "BotFairnessTests": [
+      {
+        "Detail": "Entries do not pay the spread; existing quotes keep priority; inventory exits are reduce-only",
+        "Name": "Liquidity quotes passively, retains FIFO and cannot reverse through an exit",
+        "Passed": true
+      },
+      {
+        "Detail": "Underfunded bots reduce to flat and stay paused; only explicit restored equity permits new risk",
+        "Name": "Liquidity pauses before depletion and waits for real exit liquidity",
+        "Passed": true
+      },
+      {
+        "Detail": "Legacy positions gain bounded protection on a decision; tighter stops survive",
+        "Name": "Legacy liquidity inventory receives stops without widening existing protection",
+        "Passed": true
+      },
+      {
+        "Detail": "Long and short averaging-down preserves the original stop",
+        "Name": "Bot scale-ins and partial fills never loosen stops in either direction",
+        "Passed": true
+      },
+      {
+        "Detail": "Materially stale quotes cancel immediately; replacements remain passive",
+        "Name": "Makers withdraw stale value risk before minimum rest and never take liquidity",
+        "Passed": true
+      },
+      {
+        "Detail": "Duration weighting is exact; hidden generator changes cannot change reversal decisions",
+        "Name": "Public time-weighted signal cannot see hidden fair value",
+        "Passed": true
+      },
+      {
+        "Detail": "No funding or trades at migration; exact replay retains quotes, stops, signal history and RNG",
+        "Name": "V19 upgrade preserves economic state and current format resumes deterministically",
+        "Passed": true
+      }
+    ],
+    "BotPopulationTests": [
+      {
+        "Detail": "Three seeds: 390 bots, $204M, 12/12 scalpers per market; independent reproducible schedules",
+        "Name": "Exact capital, counts, styles, diversity and reproducibility",
+        "Passed": true
+      },
+      {
+        "Detail": "Downsizes to 2 then 1 with a pending entry; zero capacity sends no order",
+        "Name": "Sizing reserves pending orders and reduces unaffordable requests",
+        "Passed": true
+      },
+      {
+        "Detail": "Half-life updates on observation clocks; no future data or forced prices",
+        "Name": "Value observations follow elapsed time with noisy independent estimates",
+        "Passed": true
+      },
+      {
+        "Detail": "Flat tape cannot trigger an entry; qualified two-contract request fits one contract",
+        "Name": "Scalpers reject flat/noisy signals but can size down a qualified entry",
+        "Passed": true
+      },
+      {
+        "Detail": "V14→V15 migration is pure on input, no trades on restore, idempotent funding and exact replay",
+        "Name": "Migration retains players, positions, exits and P&L; records funding; resumes exactly",
+        "Passed": true
+      },
+      {
+        "Detail": "Surplus accounts preserved; no fake fills; reserve closes exactly excess inventory",
+        "Name": "Surplus bots retire with obligations; oversized reserve reduces through matching",
+        "Passed": true
+      },
+      {
+        "Detail": "No duplicate population or unrecognized policy accepted",
+        "Name": "Duplicate agents and unsupported policy downgrade fail closed",
+        "Passed": true
+      }
+    ],
+    "BotPublicInformationTests": [
+      {
+        "Detail": "Seven trader types initialize, observe and submit identically with opposite hidden values and future schedules",
+        "Name": "Every trading profile and decision is independent of hidden value and future news",
+        "Passed": true
+      },
+      {
+        "Detail": "Private generator fields are guarded during adoption and every strategy path",
+        "Name": "Trader paths cannot read private market fields even with a legacy profile",
+        "Passed": true
+      },
+      {
+        "Detail": "The strategy and client share executable bid/ask filtering; empty sides use last trade",
+        "Name": "Public quote matches the player snapshot and falls back safely without a two-sided book",
+        "Passed": true
+      },
+      {
+        "Detail": "Idempotent adoption retains cash, positions, stops and reduce-only exits without fills or random draws",
+        "Name": "Adoption cancels private entries and parent intent while preserving inventory and exits",
+        "Passed": true
+      },
+      {
+        "Detail": "Both infrastructure groups continue repricing from internal fair value",
+        "Name": "Makers and reserves retain private valuation and are excluded from adoption",
+        "Passed": true
+      },
+      {
+        "Detail": "Restore itself preserves state; first-step adoption is saved and exact continuation survives encode/decode",
+        "Name": "V20 adoption preserves economics and V21 checkpoints replay exactly",
+        "Passed": true
+      }
+    ],
+    "BotRefreshTests": [
+      {
+        "Detail": "Passed",
+        "Name": "Open long and short winners/losers reset to allocation; flat-price closes earn zero",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Partial closes release only post-refresh P&L, including after checkpoint restore",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "A partially filled entry keeps its order and averages the new accounting basis",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Scaling and reversal use independent cost bases without leaking old unrealized P&L",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Working protections, stops, queued exits and retry deadlines retain identity and priority",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Negative equity is recapitalized without dropping pending liquidation exposure",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Retiring bots and closed markets receive no funding; players and clearing excluded",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Repeat receipts are idempotent forever; deliberate later refresh creates a new baseline",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Invalid allocation fails before touching any bot or market",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Owner-only parsing and queued boundary reject unauthorized and duplicate callbacks",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Group ownership fails closed and an unavailable world never queues a refresh",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Queued chat applies at one scheduler boundary and holds the step until saving finishes",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Durable commit is atomic, excludes overlaps, preserves live identity and restores exactly",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Encode rejection leaves the original world untouched and runnable",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Failed or ambiguous saves pause, reload the durable outcome and never double-apply",
+        "Passed": true
+      }
+    ],
+    "BotSignalsTests": [
+      {
+        "Detail": "A stale belief or hidden fair value cannot manufacture an entry when price equals the public midpoint",
+        "Name": "Protective public midpoint tracks up and down without stale-price bias",
+        "Passed": true
+      },
+      {
+        "Detail": "Continuations blocked; observed-price turns admitted independently of private fair value",
+        "Name": "Reversion needs observed-price distance and an actual turn in both directions",
+        "Passed": true
+      },
+      {
+        "Detail": "Warmup and confirmation do not block reductions; five requested contracts are capped to one",
+        "Name": "Unconfirmed Reversion reductions cannot reverse or exceed the remaining position",
+        "Passed": true
+      },
+      {
+        "Detail": "One sample per second; at most 62 samples; execution bursts cannot shorten the horizon",
+        "Name": "Time windows are independent of trade count, bounded, and require fresh history",
+        "Passed": true
+      },
+      {
+        "Detail": "A genuine two-tick move can trade; flat tape and inadequate target room cannot",
+        "Name": "Scalpers admit affordable small moves but reject flat prices and poor targets",
+        "Passed": true
+      },
+      {
+        "Detail": "No deposits, withdrawals, trades or account/order changes on upgrade; exact resumed signals and RNG",
+        "Name": "V17 strategy migration preserves ledgers and orders; current format resumes exactly",
+        "Passed": true
+      }
+    ],
+    "BotStatsTests": [
+      {
+        "Detail": "Passed",
+        "Name": "Stats reconcile type/market totals, include retiring bots and exclude private accounts",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Inspection and formatting are deterministic and do not mutate the exchange",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Reports use refresh P&L baselines instead of counting historical profit or funding",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Depleted equity, pending exits, working and queued orders are counted accurately",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Empty populations format without division by zero",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Exact stats parsing and server ownership prevent unauthorized report generation",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Group-owner reports are private and unavailable worlds fail closed",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Stats failures do not block a later refresh or leak internal error details",
+        "Passed": true
+      }
+    ],
+    "DepthRealismTests": [
+      {
+        "Detail": {
+          "BG": {
+            "Asks": [
+              15,
+              17,
+              21,
+              23,
+              27
+            ],
+            "Bids": [
+              13,
+              19,
+              19,
+              23,
+              28
+            ]
+          },
+          "BT": {
+            "Asks": [
+              22,
+              24,
+              25,
+              33,
+              33
+            ],
+            "Bids": [
+              20,
+              26,
+              31,
+              31,
+              34
+            ]
+          },
+          "BX": {
+            "Asks": [
+              140,
+              175,
+              177,
+              220,
+              240
+            ],
+            "Bids": [
+              128,
+              169,
+              184,
+              185,
+              203
+            ]
+          }
+        },
+        "Name": "Production reserve quotes vary by instrument and occupy consecutive ticks",
+        "Passed": true
+      },
+      {
+        "Detail": {
+          "BG": {
+            "FilledAcross100Clicks": 10,
+            "InitialContracts": 103,
+            "RemainingContracts": 93
+          },
+          "BT": {
+            "FilledAcross100Clicks": 13,
+            "InitialContracts": 137,
+            "RemainingContracts": 124
+          },
+          "BX": {
+            "FilledAcross100Clicks": 95,
+            "InitialContracts": 952,
+            "RemainingContracts": 857
+          }
+        },
+        "Name": "Cancelling and resubmitting cannot drain smaller production books",
+        "Passed": true
+      },
+      {
+        "Detail": "All 32 players receive fills without exhausting displayed depth",
+        "Name": "Thirty-two waiting players share the smaller production allowance",
+        "Passed": true
+      },
+      {
+        "Detail": "Consumed quotes are replaced with small real orders; large capital stays off the displayed book",
+        "Name": "Small quotes replenish through new finite orders after consumption",
+        "Passed": true
+      },
+      {
+        "Detail": "Balances, existing positions, player orders and trade history preserved; obsolete bot walls removed once",
+        "Name": "Old enormous quotes are withdrawn on restore without resetting positions or balances",
+        "Passed": true
+      },
+      {
+        "Detail": [
+          {
+            "Depth": {
+              "BG": {
+                "Empty": 0,
+                "Max": 429,
+                "Mean": 146.4,
+                "Samples": 400,
+                "Total": 58593
+              },
+              "BT": {
+                "Empty": 0,
+                "Max": 287,
+                "Mean": 100,
+                "Samples": 399,
+                "Total": 39921
+              },
+              "BX": {
+                "Empty": 0,
+                "Max": 492,
+                "Mean": 205.3,
+                "Samples": 395,
+                "Total": 81108
+              }
+            },
+            "Seed": 4141
+          },
+          {
+            "Depth": {
+              "BG": {
+                "Empty": 0,
+                "Max": 414,
+                "Mean": 135.8,
+                "Samples": 400,
+                "Total": 54350
+              },
+              "BT": {
+                "Empty": 0,
+                "Max": 325,
+                "Mean": 90.5,
+                "Samples": 400,
+                "Total": 36226
+              },
+              "BX": {
+                "Empty": 0,
+                "Max": 621,
+                "Mean": 198.9,
+                "Samples": 400,
+                "Total": 79587
+              }
+            },
+            "Seed": 73521
+          },
+          {
+            "Depth": {
+              "BG": {
+                "Empty": 0,
+                "Max": 420,
+                "Mean": 113,
+                "Samples": 400,
+                "Total": 45226
+              },
+              "BT": {
+                "Empty": 0,
+                "Max": 325,
+                "Mean": 88.6,
+                "Samples": 400,
+                "Total": 35461
+              },
+              "BX": {
+                "Empty": 0,
+                "Max": 520,
+                "Mean": 173.5,
+                "Samples": 398,
+                "Total": 69072
+              }
+            },
+            "Seed": 90871
+          }
+        ],
+        "Name": "Actual production simulation remains finite, varied and deterministic",
+        "Passed": true
+      }
+    ],
+    "ExecutionIntegrityTests": [
+      {
+        "Detail": "Passed",
+        "Name": "Captured BX TP: 7946 at 5234.75 cannot be bypassed by bot ask 5235.25 at fair 5181.50",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Player and bot resting liquidity use identical collars for buy and sell aggressors",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Rejected aggressive limits record a bounded reason for players and bots",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Best eligible price then FIFO, independent of participant type, with partial chunks",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Amendment no-op retains FIFO; reprice loses priority; cancellation removes exactly one order",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "TP/SL race cancels residual target and cannot reverse after a partial target fill",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Quantity reduction retains FIFO; increase loses FIFO and reserves new capacity",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Bot margin eligibility is rechecked before a resting quote can execute",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Snapshot filters ineligible liquidity without retiring or reprioritizing an order",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "8000-contract TP uses matched chunks, tracks residual and never reverses",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "13000-contract TP uses matched chunks, tracks residual and never reverses",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "50000-contract TP uses matched chunks, tracks residual and never reverses",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Sparse liquidity preserves an active target and later arrival gets only available quantity",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Checkpoint preserves blocked TP priority and exact continuation, independent of snapshot reads",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Self-trade prevention cancels own older quote and never creates a fill",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Closing notification failure cannot interrupt settlement between the two counterparties",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Atomic save encoding matches detached capture and cannot change after later fills",
+        "Passed": true
+      }
+    ],
+    "MakerLiquidityTests": [
+      {
+        "Detail": [
+          {
+            "After": 143,
+            "Before": 57,
+            "Direction": 1
+          },
+          {
+            "After": 143,
+            "Before": 57,
+            "Direction": -1
+          }
+        ],
+        "Name": "Larger real quotes fill a 143-contract market order in both directions",
+        "Passed": true
+      },
+      {
+        "Detail": "1.5-second refill delay; existing partial quote preserved",
+        "Name": "Consumed quotes replenish after a short delay; partial quotes retain priority",
+        "Passed": true
+      },
+      {
+        "Detail": "Quotes capped at five per side; no quotes with zero buying power",
+        "Name": "Larger quotes fit available inventory and capital without resetting balances",
+        "Passed": true
+      },
+      {
+        "Detail": "Stress still reduces size and depth",
+        "Name": "Thin liquidity regimes retain smaller finite depth",
+        "Passed": true
+      },
+      {
+        "Detail": "Restore preserves history and accounts; makers adopt the policy on their next turn; replay remains exact",
+        "Name": "Old worlds adopt tuning without altering accounts, tape or resting orders during restore",
+        "Passed": true
+      }
+    ],
+    "MarketTests": [
+      {
+        "Detail": "Better price first, then FIFO; partial residual 1; ownership checked",
+        "Name": "Price/time priority, partial fills, cancellation and no quote-driven price",
+        "Passed": true
+      },
+      {
+        "Detail": "Limit cap, later partial fill and residual cancellation passed",
+        "Name": "Marketable limits honor their price cap and rest the residual",
+        "Passed": true
+      },
+      {
+        "Detail": {
+          "DeepAverage": 5825,
+          "DeepSlippage": 0,
+          "ThinAverage": 5825.625,
+          "ThinSlippage": 0.625
+        },
+        "Name": "Thin liquidity increases impact; multi-level sweeps",
+        "Passed": true
+      },
+      {
+        "Detail": "IOC accounting and self-trade prevention passed",
+        "Name": "Unfilled market remainder cancelled, self trades prevented",
+        "Passed": true
+      },
+      {
+        "Detail": "Stop remains latched through insufficient liquidity, never reverses",
+        "Name": "Stop cascade, partial protection, retry and OCO",
+        "Passed": true
+      },
+      {
+        "Detail": "Both take-profit directions settle from real fills",
+        "Name": "Take-profit long and short, entry averaging and realized P&L",
+        "Passed": true
+      },
+      {
+        "Detail": "Long/short SL and TP, profitable stops, snapshots, OCO and fill-based exits passed",
+        "Name": "Dragged SL and TP amend atomically and trigger from subsequent executions",
+        "Passed": true
+      },
+      {
+        "Detail": "Wide long/short SL and TP can move both ways or be added on every market; entry bands and stale checks remain enforced",
+        "Name": "Wide ticket protections remain draggable outside the entry-order price band",
+        "Passed": true
+      },
+      {
+        "Detail": "Invalid ticks, direction, ownership, stale versions, non-finite/extreme prices, cancelled/triggered orders rejected",
+        "Name": "Protection edits reject invalid, stale and foreign requests",
+        "Passed": true
+      },
+      {
+        "Detail": "Working orders reserve capacity; invalid inputs rejected",
+        "Name": "Validation, reserved margin, finite inventory and off-tick prices",
+        "Passed": true
+      },
+      {
+        "Detail": "OHLCV independently reconstructed for 1m, 5m, 15m, 1h and 1D",
+        "Name": "Every candle timeframe agrees with the execution tape",
+        "Passed": true
+      },
+      {
+        "Detail": "Negative/positive days, midnight, no trades, all timeframes and checkpoint restore passed",
+        "Name": "Daily quote baseline follows simulated days, timeframes and saved restores",
+        "Passed": true
+      },
+      {
+        "Detail": {
+          "CashError": 0,
+          "DifferentSeedHash": 933758709,
+          "EquityError": 4.358298610895872e-9,
+          "Hash": 984464878,
+          "Seed": 73521,
+          "Trades": 604,
+          "Volume": 1348
+        },
+        "Name": "Seeded participants and identical step-indexed player actions reproduce",
+        "Passed": true
+      },
+      {
+        "Detail": {
+          "CashError": 0,
+          "EquityError": 0,
+          "Hash": 5220052,
+          "Inventory": {
+            "BG": 0,
+            "BT": 0,
+            "BX": 0
+          },
+          "Trades": 2,
+          "Volume": 3
+        },
+        "Name": "Player executions consume shared liquidity and join the execution tape",
+        "Passed": true
+      }
+    ],
+    "ProtectiveOrdersTests": [
+      {
+        "Detail": "Passed",
+        "Name": "Reset with a working or partially filled target permits subsequent market updates and protection",
+        "Passed": true
+      },
+      {
+        "Detail": {
+          "Contracts": 307,
+          "FinalPosition": 0,
+          "FirstFill": 9,
+          "Target": 5913
+        },
+        "Name": "-1: 307-contract target fills in thin liquidity with exhausted entry allowance",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "-1: partial TP keeps stop and stop closes only the residual",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "-1: saved working/partial targets retain FIFO and residual stop",
+        "Passed": true
+      },
+      {
+        "Detail": {
+          "Contracts": 307,
+          "FinalPosition": 0,
+          "FirstFill": 9,
+          "Target": 5966.5
+        },
+        "Name": "1: 307-contract target fills in thin liquidity with exhausted entry allowance",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "1: partial TP keeps stop and stop closes only the residual",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "1: saved working/partial targets retain FIFO and residual stop",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Resting TP observes FIFO and a later ordinary order cannot trade through it",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Target resizing preserves prices, reduces quantity, and removes orphan orders on reversal",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Moving/cancelling a TP updates the book without printing a trade",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Legacy queued TP migrates without fills then ignores exhausted entry budget",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Fake protective fields and voluntary reduce-only orders cannot bypass entry budgets",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Protective exits retain actual-price safeguards and report the reason",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Disconnected TP leaves depth but can close against connected liquidity",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "A zero-liquidity market never fabricates a protective fill",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "A bot limit cannot cross a target blocked by the price safeguard",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "A stop consumes thin liquidity despite an exhausted entry budget",
+        "Passed": true
+      }
+    ],
+    "ScalperTests": [
+      {
+        "Detail": "72 scalpers, balanced styles, one/two-contract caps and idempotent top-up",
+        "Name": "Population, independent styles and strict inventory caps",
+        "Passed": true
+      },
+      {
+        "Detail": "No entries without a two-sided book, through a wide spread or during cooldown",
+        "Name": "Missing quotes, wide spreads and cooldowns suppress entries",
+        "Passed": true
+      },
+      {
+        "Detail": "Partial fills never pyramid; target retains FIFO; timed exit closes without reversing",
+        "Name": "Partial entry is capped, target keeps priority and timed exit is reduce-only",
+        "Passed": true
+      },
+      {
+        "Detail": "One pending entry, bounded lifetime",
+        "Name": "Passive entries expire without accumulating orders",
+        "Passed": true
+      },
+      {
+        "Detail": "V10 upgrade preserves tape/accounts, skips retired markets and occupied IDs; V11 resume is exact",
+        "Name": "Old checkpoints gain scalpers once without rewriting market history",
+        "Passed": true
+      },
+      {
+        "Detail": {
+          "Audit": {
+            "CashError": 6.984919309616089e-10,
+            "EquityError": 6.6356733441352844e-9,
+            "Hash": 572819579,
+            "Inventory": {
+              "BG": 0,
+              "BT": 0,
+              "BX": 0
+            },
+            "Trades": 1468,
+            "Volume": 2999
+          },
+          "ClosedScalperTrades": 158
+        },
+        "Name": "Longer simulation preserves inventory limits and accounting",
+        "Passed": true
+      }
+    ],
+    "SharedDepthTests": [
+      {
+        "Detail": "Passed",
+        "Name": "Player and participant quantities aggregate anonymously and execute FIFO",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Price priority and finite marketable limits leave exact residuals",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Empty and one-sided books never generate synthetic fills or levels",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Repricing retains identity and protection but resets FIFO priority",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Self-trade prevention covers multiple accounts with the same owner",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Disconnect cancels all resting liquidity and rejects stale entries",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Invalid capacity, expired orders and untriggered stops are excluded",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Sliced stop entries queue once and retain protection through partial fills",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Stop-loss partial fills retry without reversing and preserve OCO",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Take-profit rests at its target and cannot fill at a worse price",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Old checkpoints cancel off-book player limits without rewriting balances or tape",
+        "Passed": true
+      },
+      {
+        "Detail": "Passed",
+        "Name": "Maker quotes retain queue position and partial quantity between material changes",
+        "Passed": true
+      }
+    ],
+    "WorldTests": [
+      {
+        "Detail": "20 makers, 76 ordinary traders, 4 whales and 24 scalpers per active market",
+        "Name": "Fresh markets retain makers, ordinary traders and whales alongside scalpers",
+        "Passed": true
+      },
+      {
+        "Detail": "15 makers added once; history, FIFO orders, positions, funds and retired participants preserved; deterministic restart and new quotes verified",
+        "Name": "Older worlds gain makers once, preserving the tape, accounts and retired markets",
+        "Passed": true
+      },
+      {
+        "Detail": "Renamed maker ids retained; occupied account untouched; repeat top-up is a no-op",
+        "Name": "Maker migration counts renamed agents and avoids occupied account ids",
+        "Passed": true
+      },
+      {
+        "Detail": {
+          "CompressedBytes": 110896,
+          "Hash": 1645151444,
+          "RawBytes": 647789,
+          "Step": 1200,
+          "Trades": 739
+        },
+        "Name": "Compressed checkpoint resumes the identical future with identical actions",
+        "Passed": true
+      },
+      {
+        "Detail": "FIFO object identity, partial residual, cancellation, persistent account and SL/TP passed",
+        "Name": "Restored book retains FIFO, partial fills, cancellations, account funds and protection",
+        "Passed": true
+      },
+      {
+        "Detail": "Single writer, expired lease, stale generation, release and monotonic checkpoint verified",
+        "Name": "Ownership is exclusive; takeover fences stale writes and preserves the checkpoint",
+        "Passed": true
+      },
+      {
+        "Detail": {
+          "Follower": "Following",
+          "Mode": "Shared",
+          "RestoredStep": 88,
+          "RestoredTrades": 36
+        },
+        "Name": "World service restart restores live accounts, candles and next random draw without a new auction",
+        "Passed": true
+      },
+      {
+        "Detail": "Initial failure fails closed; save failure pauses; retry recovers; expired owner cannot trade",
+        "Name": "Storage outage pauses orders and never creates a replacement market",
+        "Passed": true
+      },
+      {
+        "Detail": "Checksum and instrument-schema validation passed",
+        "Name": "Corrupt or incompatible checkpoints are rejected instead of reseeded",
+        "Passed": true
+      }
+    ]
+  },
+  "Total": 147
+}
