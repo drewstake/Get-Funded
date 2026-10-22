@@ -1,0 +1,78 @@
+[
+  {
+    "Case": "Seed71",
+    "Arm": "Baseline",
+    "WhaleEquityChange": 13288684.9999988,
+    "WhalesInitiallyAboveRiskFloor": 36,
+    "WhalesAboveRiskFloor": 36,
+    "WhalesPositiveEquity": 36,
+    "WhaleCount": 36,
+    "TransferChange": 0,
+    "RecoveryChange": 0,
+    "ThirtyMinuteVolumes": [
+      74161,
+      71109,
+      73540
+    ],
+    "Replay": true,
+    "WhaleAggressiveVolume": 129060,
+    "WhalePassiveVolume": 0
+  },
+  {
+    "Case": "Seed71",
+    "Arm": "Candidate",
+    "WhaleEquityChange": 332534.99999996275,
+    "WhalesInitiallyAboveRiskFloor": 36,
+    "WhalesAboveRiskFloor": 36,
+    "WhalesPositiveEquity": 36,
+    "WhaleCount": 36,
+    "TransferChange": 0,
+    "RecoveryChange": 0,
+    "ThirtyMinuteVolumes": [
+      24636,
+      21617,
+      21753
+    ],
+    "Replay": true,
+    "WhaleAggressiveVolume": 8512,
+    "WhalePassiveVolume": 7895
+  },
+  {
+    "Case": "Current",
+    "Arm": "Baseline",
+    "WhaleEquityChange": 12954710.000000522,
+    "WhalesInitiallyAboveRiskFloor": 36,
+    "WhalesAboveRiskFloor": 34,
+    "WhalesPositiveEquity": 36,
+    "WhaleCount": 36,
+    "TransferChange": 0.0,
+    "RecoveryChange": 0,
+    "ThirtyMinuteVolumes": [
+      75654,
+      81418,
+      73533
+    ],
+    "Replay": true,
+    "WhaleAggressiveVolume": 127997,
+    "WhalePassiveVolume": 0
+  },
+  {
+    "Case": "Current",
+    "Arm": "Candidate",
+    "WhaleEquityChange": 276409.9999998808,
+    "WhalesInitiallyAboveRiskFloor": 36,
+    "WhalesAboveRiskFloor": 36,
+    "WhalesPositiveEquity": 36,
+    "WhaleCount": 36,
+    "TransferChange": 0.0,
+    "RecoveryChange": 0,
+    "ThirtyMinuteVolumes": [
+      26529,
+      23888,
+      25644
+    ],
+    "Replay": true,
+    "WhaleAggressiveVolume": 9028,
+    "WhalePassiveVolume": 8190
+  }
+]

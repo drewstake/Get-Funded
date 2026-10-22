@@ -1,0 +1,143 @@
+--- original/ChartTimeframes.luau
++++ candidate/ChartTimeframes.luau
+@@ -0,0 +1,9 @@
++-- Visible chart tiers use existing stored series. Exchange time and candle history stay intact.
++-- Keys are the server/checkpoint series IDs; labels are the player-facing chart tiers.
++local T={
++ Default="5m",
++ Order=table.freeze({"5m","15m","1h","1D"}),
++ Labels=table.freeze({["5m"]="1m",["15m"]="5m",["1h"]="15m",["1D"]="1h"}),
++ Tooltips=table.freeze({["5m"]="1 minute",["15m"]="5 minutes",["1h"]="15 minutes",["1D"]="1 hour"}),
++}
++return table.freeze(T)
+--- original/ChartView.luau
++++ candidate/ChartView.luau
+@@ -3,6 +3,7 @@
+ -- stop/target drag sends the same AmendProtection request the order ticket uses, and the right-click
+ -- order menu submits through the terminal's shared order path (same checks and server validation).
+ local Viewport=require(script.Parent.ChartViewport)
++local Timeframes=require(script.Parent.ChartTimeframes)
+ local PaintPool=require(script.Parent.ChartPaintPool)
+ local Tools=require(script.Parent.ChartTools)
+ local UIS=game:GetService("UserInputService")
+@@ -71,7 +72,7 @@
+  ["1D"]={Image="rbxassetid://112401119467136",Width=0.55981,Height=0.36124,CX=0.50478,CY=0.51316},
+ }
+ function View.AddTimeframeIcon(parent,timeframe)
+- local asset=TIMEFRAME_IMAGES[timeframe];if not asset then return nil end
++ local asset=TIMEFRAME_IMAGES[Timeframes.Labels[timeframe]];if not asset then return nil end
+  local side=math.min((parent.Size.X.Offset-10)/asset.Width,(parent.Size.Y.Offset-14)/asset.Height,20/asset.Height)
+  local icon=Instance.new("ImageLabel")
+  icon.Name="TimeframeIcon";icon.BackgroundTransparency=1;icon.BorderSizePixel=0
+@@ -218,14 +219,15 @@
+  local ctx=self.Ctx local C,s,Market=ctx.C,self.S,ctx.Market
+  -- Phone landscape: timeframes sit inline in the header so the plot keeps the full column height.
+  local inline=mobile and toolsH==0
+- local tfW=inline and math.clamp(math.floor((w-256)/5),34,54)or 0
++ local timeframeCount=#Timeframes.Order
++ local tfW=inline and math.clamp(math.floor((w-256)/timeframeCount),34,54)or 0
+  local frame,text,button,line,stroke,round=ctx.frame,ctx.text,ctx.button,ctx.line,ctx.stroke,ctx.round
+  local F,M,B,N=ctx.F,ctx.M,ctx.B,ctx.N
+  local c=Market.Contracts[s.Contract]
+  local hd=frame(p,"Header",0,0,w,headH,Color3.new(1,1,1));round(hd,14);ctx.tint(hd,Color3.fromRGB(5,60,166),Color3.fromRGB(3,37,102));ctx.stars(hd)
+  ctx.selector(hd,s.Contract,8,7,mobile and 88 or 105,headH-14,function(b)if ctx.openContracts then ctx.openContracts(b)else s.Overlay="Contracts";ctx.refresh()end end,mobile and 14 or 18)
+  if mobile then
+-  local px=inline and 100+5*tfW+4 or 100
++  local px=inline and 100+timeframeCount*tfW+4 or 100
+   local lp=ctx.heading(text(hd,"LastPrice","",px,1,w-62-px,26,18,C.Text,B,RIGHT))
+   -- Five-digit prices still fit the narrower inline header.
+   lp.TextScaled=true;local fit=Instance.new("UITextSizeConstraint");fit.MinTextSize=11;fit.MaxTextSize=18;fit.Parent=lp
+@@ -238,10 +240,10 @@
+   text(hd,"PriceChange","",w-117,0,104,headH,14,C.Green,M,RIGHT)
+  end
+  ctx.rule(hd,0,headH-1,w)
+- local tb=inline and frame(p,"Toolbar",100,0,5*tfW,headH,C.Chart,hd.ZIndex+1)or frame(p,"Toolbar",0,headH,w,toolsH,C.Chart);tb.BackgroundTransparency=1
++ local tb=inline and frame(p,"Toolbar",100,0,timeframeCount*tfW,headH,C.Chart,hd.ZIndex+1)or frame(p,"Toolbar",0,headH,w,toolsH,C.Chart);tb.BackgroundTransparency=1
+  local tx=inline and 0 or 8
+- -- Twelve equally sized controls, plus padding and the three group gaps.
+- local desktopPitch=math.max(12,math.min(60,math.floor((w-52)/12)))
++ -- Visible timeframe choices plus seven drawing controls and the three group gaps.
++ local desktopPitch=math.max(12,math.min(60,math.floor((w-52)/(timeframeCount+7))))
+  local function finishControl(b,active,ink)
+   b.Corners.CornerRadius=UDim.new(0,8)
+   local rest=active and Color3.fromRGB(192,144,255)or Color3.fromRGB(26,88,166)
+@@ -254,12 +256,13 @@
+   end)
+   b.MouseLeave:Connect(function()b.Border.Color=rest;ink.ImageTransparency=active and 0 or .12 end)
+  end
+- for _,tf in ipairs({"1m","5m","15m","1h","1D"})do
+-  local bw=inline and tfW or mobile and(w-16)/5 or desktopPitch
++ for _,tf in ipairs(Timeframes.Order)do
++  local bw=inline and tfW or mobile and(w-16)/timeframeCount or desktopPitch
+   local active=tf==s.Timeframe
+-  local b=button(tb,"Time"..tf,"",tx,inline and 7 or 4,bw-6,inline and headH-14 or toolsH-8,function()s.Timeframe=tf;self:CancelPlacement();ctx.refresh()end,C.Panel,C.Text,18)
++  local b=button(tb,"Time"..Timeframes.Labels[tf],"",tx,inline and 7 or 4,bw-6,inline and headH-14 or toolsH-8,function()s.Timeframe=tf;self:CancelPlacement();ctx.refresh()end,C.Panel,C.Text,18)
+   ctx.control(b,active)
+-  b:SetAttribute("Tooltip",tf=="1D"and"1 day"or tf=="1h"and"1 hour"or tf:gsub("m", " minutes"))
++  b:SetAttribute("Tooltip",Timeframes.Tooltips[tf])
++  b:SetAttribute("CandleSeries",tf)
+   finishControl(b,active,View.AddTimeframeIcon(b,tf));tx+=bw
+  end
+  if not mobile then
+--- original/MarketClient.luau
++++ candidate/MarketClient.luau
+@@ -3,6 +3,7 @@
+ local root=script.Parent
+ 
+ local Config=require(root.MarketConfig)
++local Timeframes=require(root.ChartTimeframes)
+ 
+ local Progression=require(root.ProgressionConfig)
+ 
+@@ -39,7 +40,7 @@
+ 
+  local self=setmetatable({Base=base,Prices={},Quotes={},Positions={},Orders={},History={},Fills={},Cache={},
+   ProtectionPreferences=Protection.Preferences(),ClosedEvents={},ClosedEventOrder={},
+-  Time=0,Regime="Connecting",EventBacklog={},Speed=Config.SimulationSpeed,Ready=false,CanTrade=false,NextId=0,Pending={},Contract=Config.ContractOrder[1],Timeframe="1m",
++  Time=0,Regime="Connecting",EventBacklog={},Speed=Config.SimulationSpeed,Ready=false,CanTrade=false,NextId=0,Pending={},Contract=Config.ContractOrder[1],Timeframe=Timeframes.Default,
+ 
+   Changed=Instance.new("BindableEvent"),Replies=Instance.new("BindableEvent"),Events=Instance.new("BindableEvent"),Preview=preview},Session)
+ 
+@@ -166,7 +167,7 @@
+   self:_flushPreferences();self.Changed:Fire()
+  end)
+ 
+- self:Subscribe(Config.ContractOrder[1],"1m")
++ self:Subscribe(Config.ContractOrder[1],Timeframes.Default)
+ 
+  local start=os.clock() while not self.Ready and not self.ConnectionStatus and os.clock()-start<45 do task.wait(0.1) end
+ 
+--- original/TerminalUI.luau
++++ candidate/TerminalUI.luau
+@@ -3,6 +3,7 @@
+ local NumberInput = require(script.Parent.NumberInput)
+ local TradeProtection = require(script.Parent.TradeProtection)
+ local ChartView = require(script.Parent.ChartView)
++local Timeframes = require(script.Parent.ChartTimeframes)
+ local Feedback = require(script.Parent.UIFeedback)
+ local LeaderboardClient = require(script.Parent.LeaderboardClient)
+ local LeaderboardView = require(script.Parent.LeaderboardView)
+@@ -358,7 +359,7 @@
+  fx=not options.Preview and Feedback.new(root,{})or nil
+  local feedback=fx
+  local marketBanner=MarketEventBanner.new(root)
+- local s={Contract=Market.ContractOrder[1],Timeframe="1m",Type="Market",Qty=1,Limit=5820,Stop=5802.5,Target=5842.5,StopOn=true,TargetOn=true,
++ local s={Contract=Market.ContractOrder[1],Timeframe=Timeframes.Default,Type="Market",Qty=1,Limit=5820,Stop=5802.5,Target=5842.5,StopOn=true,TargetOn=true,
+   Tab="Positions",Nav="Trade",Sheet=false,ProtectionDraft=nil,StopDollars=500,TargetDollars=1500,Overlay=nil,Guide=1,Tool="Pan",Drawings={},Levels=true,
+   Screen=nil,SoundOn=true,SoundLevel="Medium",Calm=false,PendingOrder=nil,PendingClose=nil,Level2Expanded=true}
+  -- Comfort settings for this session, shared with the loading screen and the welcome guide through
+@@ -1443,11 +1444,11 @@
+     if selected then local dot=frame(b,"Dot",iw-30,23,12,12,Color3.fromRGB(93,255,83),b.ZIndex+3);round(dot,6);stroke(dot,SC.Ink).Thickness=3 end
+    end
+   elseif s.Overlay=="Timeframes"then
+-   local list={"1m","5m","15m","1h","1D"}
++   local list=Timeframes.Order
+    local _,p=popupShell(w,h,pw,#list*56,"Timeframe","Trade","Candle interval")
+    for i,tf in ipairs(list)do
+-    local b=option(p,"Choose"..tf,pad,(i-1)*56,iw,48,s.Timeframe==tf,function()s.Timeframe=tf;s.Overlay=nil;chartView:CancelPlacement();refresh()end)
+-    local t=optionLabel(b,"Label",tf,0,0,iw,48,20);t.TextXAlignment=CENTER
++    local b=option(p,"Choose"..Timeframes.Labels[tf],pad,(i-1)*56,iw,48,s.Timeframe==tf,function()s.Timeframe=tf;s.Overlay=nil;chartView:CancelPlacement();refresh()end)
++    local t=optionLabel(b,"Label",Timeframes.Labels[tf],0,0,iw,48,20);t.TextXAlignment=CENTER
+    end
+   elseif s.Overlay=="Tools"then
+    -- Two columns of touch-size buttons; the active tool and magnet are highlighted.

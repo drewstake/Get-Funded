@@ -1,0 +1,8 @@
+[string "Candidate.BotWhale"]:131: attempt to perform arithmetic (div) on nil and number
+[Stack Begin]
+    Script '[C]' - function 'error'
+    Script 'Candidate.Participants', Line 496
+    Script 'MomentumBenchmark.luau', Line 59
+    Script 'C:\Users\drews\Development\Roblox Dev\Get Funded!\output\diversity-20261022\LocalLab', Line 147
+[Stack End]
+

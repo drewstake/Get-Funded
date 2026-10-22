@@ -1,0 +1,11 @@
+{
+  "Variants": [
+    "rolling-portfolio-robust",
+    "rolling-patient-robust"
+  ],
+  "ParentSources": "Corresponding immutable rolling-*-safe variants; incomplete due Whale runtime failures",
+  "Changes": "Explicit nil-preserving quote selection for Whale and Diversity execution/profit checks. Integrate prior configuration guards, config-driven Whale urgency with preserved profiles, optional neighboring Maker lane, compatible legacy tests, full checkpoint31 barrier. No price, order size, funding or timing optimization from partial failed results.",
+  "BaselineReproduction": "one-sided-whale-baseline-reproduction.json",
+  "Prerequisites": "Focused tests including both buy/sell and passive/aggressive one-sided cases before complete development rerun",
+  "Validation": "Unconsumed"
+}

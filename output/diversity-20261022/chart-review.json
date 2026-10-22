@@ -1,0 +1,25 @@
+{
+  "Role": "Qualitative application of the original useful-movement and within-trend-pullback requirement. Numerical development passes alone are insufficient. This review does not change the numerical gates.",
+  "RejectedNumericPasses": {
+    "portfolio": {
+      "Decision": "Reject",
+      "Reason": "Current BX still has quiet platforms and largely uninterrupted separate waves, with no strict completed pullback. Aggregate counter counts do not demonstrate the requested within-trend chart behavior.",
+      "Evidence": "development-portfolio-BX.png"
+    },
+    "portfolio-dense": {
+      "Decision": "Reject",
+      "Reason": "Restoring depth improves spreads but leaves quiet intervals and current BX smooth waves without a strict completed pullback.",
+      "Evidence": "development-portfolio-dense-BX.png"
+    },
+    "inner-patient-stretch": {
+      "Decision": "Reject",
+      "Reason": "Current BX has a prolonged quiet middle and late jump. One minute contributes 49.03% of close-return variance and five contribute 80.72%; 62.71% of intervals are below the original six-tick/0.025% floor. This is not sustained useful movement.",
+      "Evidence": "development-inner-patient-stretch-BX.png"
+    },
+    "inner-patient-quote-safe": {
+      "Decision": "Reject",
+      "Reason": "Current BX retains a 24-minute meaningful leg, a prolonged downward sequence with shallow interruptions and no strict completed pullback. Nearly half its minute intervals are below the movement floor. Other worlds improve, but this required world does not convincingly meet the chart objective.",
+      "Evidence": "development-inner-patient-quote-safe-BX.png"
+    }
+  }
+}

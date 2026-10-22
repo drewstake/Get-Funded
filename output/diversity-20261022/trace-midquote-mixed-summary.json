@@ -1,0 +1,106 @@
+{
+  "MeanExecutableDepth": {
+    "Buy": 97.08333333333333,
+    "Sell": 102.31666666666666,
+    "BidTouch": 28.016666666666666,
+    "AskTouch": 34.36666666666667
+  },
+  "Flows": {
+    "Portfolio": {
+      "Incoming": 3979,
+      "Passive": 0,
+      "Open": 1982,
+      "Close": 1997,
+      "Reasons": {
+        "Time": 1800,
+        "Stop loss": 191,
+        "Risk": 6
+      }
+    },
+    "Maker": {
+      "Incoming": 0,
+      "Passive": 4784,
+      "Open": 2439,
+      "Close": 2345,
+      "Reasons": {
+        "Ordinary": 2345
+      }
+    },
+    "Protective": {
+      "Incoming": 3941,
+      "Passive": 976,
+      "Open": 2485,
+      "Close": 2432,
+      "Reasons": {
+        "Ordinary": 2007,
+        "Stop loss": 406,
+        "Take profit": 19
+      }
+    },
+    "Scalper": {
+      "Incoming": 2098,
+      "Passive": 1871,
+      "Open": 1964,
+      "Close": 2005,
+      "Reasons": {
+        "OtherReduction": 1401,
+        "Stop loss": 602,
+        "RecoveryRisk": 2
+      }
+    },
+    "Liquidity": {
+      "Incoming": 504,
+      "Passive": 8606,
+      "Open": 4568,
+      "Close": 4542,
+      "Reasons": {
+        "OtherReduction": 3795,
+        "Ordinary": 243,
+        "Stop loss": 498,
+        "RecoveryRisk": 6
+      }
+    },
+    "Whale": {
+      "Incoming": 2754,
+      "Passive": 1509,
+      "Open": 2138,
+      "Close": 2125,
+      "Reasons": {
+        "Time": 1273,
+        "Stop loss": 852
+      }
+    },
+    "Stretch": {
+      "Incoming": 1496,
+      "Passive": 0,
+      "Open": 762,
+      "Close": 734,
+      "Reasons": {
+        "Time": 549,
+        "Stop loss": 174,
+        "Retracement": 9,
+        "Risk": 2
+      }
+    },
+    "Momentum": {
+      "Incoming": 4793,
+      "Passive": 0,
+      "Open": 2421,
+      "Close": 2372,
+      "Reasons": {
+        "Time": 1694,
+        "Thesis": 364,
+        "Stop loss": 314
+      }
+    },
+    "Reserve": {
+      "Incoming": 0,
+      "Passive": 1819,
+      "Open": 929,
+      "Close": 890,
+      "Reasons": {
+        "Ordinary": 890
+      }
+    }
+  }
+}

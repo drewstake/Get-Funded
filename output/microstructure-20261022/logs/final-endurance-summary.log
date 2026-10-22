@@ -1,0 +1,8 @@
+baseline CurrentBX Maker P&L -477140.0 Maker above floor 172 /180 zero recovery 0.0 volume {'BG': [9257, 9816, 9200], 'BT': [7146, 7731, 6701], 'BX': [9341, 8861, 7213]}
+baseline Seed71 Maker P&L -1267575.0 Maker above floor 180 /180 zero recovery 0 volume {'BG': [7205, 6781, 6673], 'BT': [8516, 8673, 7417], 'BX': [5441, 7391, 6879]}
+no-skew-reserve-delay CurrentBX Maker P&L -147080.0 Maker above floor 176 /180 zero recovery 0.0 volume {'BG': [8109, 8034, 8400], 'BT': [5238, 6628, 6877], 'BX': [7440, 6006, 8114]}
+no-skew-reserve-delay Seed71 Maker P&L -310297.5 Maker above floor 180 /180 zero recovery 0 volume {'BG': [6647, 7900, 6350], 'BT': [7426, 8699, 3659], 'BX': [4571, 4780, 3819]}
+no-skew-sparse-whale CurrentBX Maker P&L 37570.0 Maker above floor 178 /180 zero recovery 0.0 volume {'BG': [9049, 9416, 8696], 'BT': [8296, 7663, 8082], 'BX': [8502, 7251, 8769]}
+no-skew-sparse-whale Seed71 Maker P&L 607.5 Maker above floor 180 /180 zero recovery 0 volume {'BG': [7191, 7099, 7005], 'BT': [7836, 9575, 8602], 'BX': [6166, 7793, 6967]}
+no-skew-sparse30-whale CurrentBX Maker P&L 229007.5 Maker above floor 179 /180 zero recovery 0.0 volume {'BG': [8825, 8349, 7613], 'BT': [6464, 7905, 7960], 'BX': [7577, 7662, 6071]}
+no-skew-sparse30-whale Seed71 Maker P&L 159822.5 Maker above floor 180 /180 zero recovery 0 volume {'BG': [8338, 6219, 7714], 'BT': [7699, 8708, 5407], 'BX': [6227, 7774, 7365]}

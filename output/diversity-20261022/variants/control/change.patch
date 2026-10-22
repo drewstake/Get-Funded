@@ -1,0 +1,44 @@
+--- original/BotWhale.luau
++++ control/BotWhale.luau
+@@ -120,7 +120,7 @@
+  if e.Time<(s.NextChildAt or 0)then return end
+  local budget=W.Budget(p,a,s)
+  local urgency=math.clamp((e.Time-s.StartedAt)/s.Duration,0,1)
+- local aggressive=s.ExitReason=='Risk'or random(s)<c.AggressiveProbability[1]+urgency*(c.AggressiveProbability[2]-c.AggressiveProbability[1])
++ local aggressive=s.ExitReason=='Risk'or random(s)<.30+urgency*(.65-.30)
+  local touch=aggressive and opposite or ownTouch
+  if not touch then return end
+  local tick=math.round(touch/b.Spec.Tick)+(aggressive and s.Side*c.MaxSlippageTicks or 0)
+--- original/MarketConfig.luau
++++ control/MarketConfig.luau
+@@ -13,7 +13,7 @@
+  DepthLevels = 5, -- Real best levels supplied per side; the UI never pads missing liquidity.
+  MakerQuotePolicyVersion = 8,
+  -- Funded makers occupy staggered quote distances; ticks reflect each market price scale.
+- MakerLanes = {Count=10,SpacingTicks={BX=6,BT=18,BG=6}},
++ MakerLanes = {Count=20,SpacingTicks={BX=6,BT=18,BG=6}},
+  MakerMinRestSeconds = 18, -- Simulated seconds (one wall-clock second at the default speed).
+  MakerRepriceTicks = 3, -- Keep queue priority until fair value moves materially.
+  MakerQuoteSizeMultiplier = 0.45, -- Smaller displayed lots; account capital and inventory limits are unchanged.
+--- original/Participants.luau
++++ control/Participants.luau
+@@ -275,7 +275,7 @@
+  local stress=self.Regime.Volatility*self.Config.Volatility+math.min(6,b.Volatility)*0.2
+  -- Quotes follow actual executions; inventory skews each maker's own reservation price.
+  local reference=OrderFlow.Reference(b)
+- local center=reference-inventory/a.Limit*(5+stress*5)
++ local center=reference
+  -- Spread independently funded makers across depth instead of stacking every bot at the touch.
+  local lanes=self.Config.MakerLanes
+  local lane=lanes and ((tonumber(a.Id:match(":(%d+)$"))or 1)-1)%lanes.Count or 0
+--- original/WorldCheckpoint.luau
++++ control/WorldCheckpoint.luau
+@@ -45,7 +45,7 @@
+ -- V27 persists patient Whale mandates, child reservations, fill baselines and private RNG.
+ -- V28 versions shorter Momentum horizons and staggered Maker replacement clocks.
+ -- Migration changes policy only; positions, orders, protections and ledgers remain intact.
+-local Checkpoint={Version=28,Readable={[28]=true,[1]=true,[2]=true,[3]=true,[4]=true,[5]=true,[6]=true,[7]=true,[8]=true,[9]=true,[10]=true,[11]=true,[12]=true,[13]=true,[14]=true,[15]=true,[16]=true,[17]=true,[18]=true,[19]=true,[20]=true,[21]=true,[22]=true,[23]=true,[24]=true,[25]=true,[26]=true,[27]=true}}
++local Checkpoint={Version=30,Readable={[30]=true,[28]=true,[1]=true,[2]=true,[3]=true,[4]=true,[5]=true,[6]=true,[7]=true,[8]=true,[9]=true,[10]=true,[11]=true,[12]=true,[13]=true,[14]=true,[15]=true,[16]=true,[17]=true,[18]=true,[19]=true,[20]=true,[21]=true,[22]=true,[23]=true,[24]=true,[25]=true,[26]=true,[27]=true}}
+ local function digest(raw)
+  local bytes=Encoding:ComputeStringHash(raw,Enum.HashAlgorithm.Sha256)
+  return (bytes:gsub(".",function(c)return string.format("%02x",string.byte(c))end))

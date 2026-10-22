@@ -1,0 +1,12 @@
+{
+  "Installed": false,
+  "Reason": "Both candidates fail predeclared candle-shape and volatility/funding checks",
+  "Retained": {
+    "Checkpoint": 28,
+    "Momentum": 2,
+    "Maker": 8,
+    "Whale": 1,
+    "NewsFrequency": 0
+  },
+  "Published": false
+}

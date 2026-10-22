@@ -1,0 +1,13 @@
+{
+  "Status": "Preregistered before any holdout checkpoint generation or inspection",
+  "CandidatesAllowed": 1,
+  "Cases": ["Seed42017", "Seed88069", "CurrentBXLater", "AgedLater"],
+  "FreshSeedWarmupSeconds": 1800,
+  "LaterWorldBaselineAdvanceSeconds": 7200,
+  "AdaptSeconds": 1200,
+  "MeasureSeconds": 3600,
+  "LaterWindowReason": "The copied helper advanced only 1800 seconds, which would overlap baseline observation windows with development. Before any validation data existed, change that helper to advance 7200 seconds under the unchanged installed baseline. Later measurements start after development measurements end. This strengthens separation and does not change a gate.",
+  "LineageCaveat": "Later saved worlds remain descendants of development worlds; they are disjoint forward windows, not independent random seeds. The two new seed worlds provide separate random trajectories.",
+  "Selection": "Freeze final source and test hashes after full six-case development gates, candle review, migration, native regression/parity and finite no-recovery endurance. All four validation cases must finish. Apply the existing metrics.py gates unchanged, including the later current-BX movement and shape check. Inspect all three matched-order candle charts on paired vertical scales.",
+  "Failure": "Reject the frozen candidate if any gate or chart review fails. Do not tune on these cases, substitute cases, loosen thresholds or install a failed candidate. Preserve all raw results."
+}

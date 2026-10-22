@@ -1,0 +1,1814 @@
+[
+  {
+    "Case": "Aged",
+    "Arm": "Baseline",
+    "Market": "BG",
+    "Events": [
+      {
+        "Minute": 9,
+        "Anchor": 1981.8000000000002,
+        "Extreme": 1980.3000000000002,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 10
+      },
+      {
+        "Minute": 20,
+        "Anchor": 1980.3000000000002,
+        "Extreme": 1987,
+        "Direction": 1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 28
+      },
+      {
+        "Minute": 27,
+        "Anchor": 1987,
+        "Extreme": 1984.9,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 28
+      },
+      {
+        "Minute": 30,
+        "Anchor": 1984.9,
+        "Extreme": 1988.6000000000001,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 33
+      },
+      {
+        "Minute": 51,
+        "Anchor": 1988.6000000000001,
+        "Extreme": 1976.6000000000001,
+        "Direction": -1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      }
+    ]
+  },
+  {
+    "Case": "Aged",
+    "Arm": "Baseline",
+    "Market": "BT",
+    "Events": [
+      {
+        "Minute": 16,
+        "Anchor": 17679,
+        "Extreme": 17663,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 16
+      },
+      {
+        "Minute": 30,
+        "Anchor": 17663,
+        "Extreme": 17691.25,
+        "Direction": 1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 43
+      },
+      {
+        "Minute": 41,
+        "Anchor": 17691.25,
+        "Extreme": 17672.5,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 43
+      },
+      {
+        "Minute": 48,
+        "Anchor": 17672.5,
+        "Extreme": 17696.25,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 52
+      }
+    ]
+  },
+  {
+    "Case": "Aged",
+    "Arm": "Baseline",
+    "Market": "BX",
+    "Events": [
+      {
+        "Minute": 23,
+        "Anchor": 4868.25,
+        "Extreme": 4891,
+        "Direction": 1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 45
+      },
+      {
+        "Minute": 37,
+        "Anchor": 4891,
+        "Extreme": 4870.5,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 45
+      },
+      {
+        "Minute": 52,
+        "Anchor": 4870.5,
+        "Extreme": 4897,
+        "Direction": 1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      }
+    ]
+  },
+  {
+    "Case": "Aged",
+    "Arm": "Candidate",
+    "Market": "BG",
+    "Events": [
+      {
+        "Minute": 12,
+        "Anchor": 1986.9,
+        "Extreme": 1984.8000000000002,
+        "Direction": -1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 15
+      },
+      {
+        "Minute": 15,
+        "Anchor": 1984.8000000000002,
+        "Extreme": 1986.1000000000001,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 15
+      },
+      {
+        "Minute": 17,
+        "Anchor": 1986.1000000000001,
+        "Extreme": 1984.2,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 23
+      },
+      {
+        "Minute": 20,
+        "Anchor": 1984.2,
+        "Extreme": 1985.3000000000002,
+        "Direction": 1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 22
+      },
+      {
+        "Minute": 22,
+        "Anchor": 1985.3000000000002,
+        "Extreme": 1984.3000000000002,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 22
+      },
+      {
+        "Minute": 29,
+        "Anchor": 1984.3000000000002,
+        "Extreme": 1989.6000000000001,
+        "Direction": 1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 38
+      },
+      {
+        "Minute": 37,
+        "Anchor": 1989.6000000000001,
+        "Extreme": 1985.2,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 38
+      },
+      {
+        "Minute": 40,
+        "Anchor": 1985.2,
+        "Extreme": 1989.9,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 46
+      },
+      {
+        "Minute": 54,
+        "Anchor": 1989.9,
+        "Extreme": 1983.9,
+        "Direction": -1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      }
+    ]
+  },
+  {
+    "Case": "Aged",
+    "Arm": "Candidate",
+    "Market": "BT",
+    "Events": [
+      {
+        "Minute": 22,
+        "Anchor": 17663.5,
+        "Extreme": 17623.5,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 22
+      },
+      {
+        "Minute": 32,
+        "Anchor": 17623.5,
+        "Extreme": 17799.5,
+        "Direction": 1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 45
+      },
+      {
+        "Minute": 33,
+        "Anchor": 17799.5,
+        "Extreme": 17764.25,
+        "Direction": -1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 36
+      },
+      {
+        "Minute": 36,
+        "Anchor": 17764.25,
+        "Extreme": 17772,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 36
+      },
+      {
+        "Minute": 39,
+        "Anchor": 17772,
+        "Extreme": 17752.5,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 39
+      },
+      {
+        "Minute": 40,
+        "Anchor": 17752.5,
+        "Extreme": 17778.25,
+        "Direction": 1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 42
+      },
+      {
+        "Minute": 42,
+        "Anchor": 17778.25,
+        "Extreme": 17769,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 42
+      },
+      {
+        "Minute": 58,
+        "Anchor": 17769,
+        "Extreme": 17818.25,
+        "Direction": 1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      }
+    ]
+  },
+  {
+    "Case": "Aged",
+    "Arm": "Candidate",
+    "Market": "BX",
+    "Events": [
+      {
+        "Minute": 7,
+        "Anchor": 4861.25,
+        "Extreme": 4871,
+        "Direction": 1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 9
+      },
+      {
+        "Minute": 9,
+        "Anchor": 4871,
+        "Extreme": 4868,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 9
+      },
+      {
+        "Minute": 10,
+        "Anchor": 4868,
+        "Extreme": 4872,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 12
+      },
+      {
+        "Minute": 18,
+        "Anchor": 4872,
+        "Extreme": 4856.5,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 24
+      },
+      {
+        "Minute": 27,
+        "Anchor": 4856.5,
+        "Extreme": 4873.5,
+        "Direction": 1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 30
+      },
+      {
+        "Minute": 29,
+        "Anchor": 4873.5,
+        "Extreme": 4870,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 30
+      },
+      {
+        "Minute": 32,
+        "Anchor": 4870,
+        "Extreme": 4874.75,
+        "Direction": 1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 35
+      },
+      {
+        "Minute": 35,
+        "Anchor": 4874.75,
+        "Extreme": 4873.25,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 35
+      },
+      {
+        "Minute": 37,
+        "Anchor": 4873.25,
+        "Extreme": 4875,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 37
+      },
+      {
+        "Minute": 39,
+        "Anchor": 4875,
+        "Extreme": 4871,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 42
+      },
+      {
+        "Minute": 43,
+        "Anchor": 4871,
+        "Extreme": 4875.25,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 48
+      },
+      {
+        "Minute": 44,
+        "Anchor": 4875.25,
+        "Extreme": 4873.5,
+        "Direction": -1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 46
+      },
+      {
+        "Minute": 46,
+        "Anchor": 4873.5,
+        "Extreme": 4875,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 46
+      },
+      {
+        "Minute": 54,
+        "Anchor": 4875,
+        "Extreme": 4855.75,
+        "Direction": -1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      }
+    ]
+  },
+  {
+    "Case": "CurrentBX",
+    "Arm": "Baseline",
+    "Market": "BG",
+    "Events": [
+      {
+        "Minute": 10,
+        "Anchor": 2010.4,
+        "Extreme": 2004.8000000000002,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 16
+      },
+      {
+        "Minute": 31,
+        "Anchor": 2004.8000000000002,
+        "Extreme": 2017.5,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 55
+      },
+      {
+        "Minute": 48,
+        "Anchor": 2017.5,
+        "Extreme": 2008.2,
+        "Direction": -1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 52
+      },
+      {
+        "Minute": 50,
+        "Anchor": 2008.2,
+        "Extreme": 2011,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 52
+      }
+    ]
+  },
+  {
+    "Case": "CurrentBX",
+    "Arm": "Baseline",
+    "Market": "BT",
+    "Events": [
+      {
+        "Minute": 17,
+        "Anchor": 15670.75,
+        "Extreme": 15690.25,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 20
+      },
+      {
+        "Minute": 42,
+        "Anchor": 15690.25,
+        "Extreme": 15633.25,
+        "Direction": -1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      },
+      {
+        "Minute": 57,
+        "Anchor": 15633.25,
+        "Extreme": 15658.25,
+        "Direction": 1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      }
+    ]
+  },
+  {
+    "Case": "CurrentBX",
+    "Arm": "Baseline",
+    "Market": "BX",
+    "Events": [
+      {
+        "Minute": 24,
+        "Anchor": 4359.5,
+        "Extreme": 4318,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 37
+      }
+    ]
+  },
+  {
+    "Case": "CurrentBX",
+    "Arm": "Candidate",
+    "Market": "BG",
+    "Events": [
+      {
+        "Minute": 5,
+        "Anchor": 2012.8000000000002,
+        "Extreme": 2010.8000000000002,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 7
+      },
+      {
+        "Minute": 8,
+        "Anchor": 2010.8000000000002,
+        "Extreme": 2013,
+        "Direction": 1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 13
+      },
+      {
+        "Minute": 12,
+        "Anchor": 2013,
+        "Extreme": 2011.7,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 13
+      },
+      {
+        "Minute": 27,
+        "Anchor": 2011.7,
+        "Extreme": 2017.6000000000001,
+        "Direction": 1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 53
+      },
+      {
+        "Minute": 41,
+        "Anchor": 2017.6000000000001,
+        "Extreme": 2012,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 53
+      },
+      {
+        "Minute": 50,
+        "Anchor": 2012,
+        "Extreme": 2017.1000000000001,
+        "Direction": 1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 53
+      },
+      {
+        "Minute": 52,
+        "Anchor": 2017.1000000000001,
+        "Extreme": 2015.5,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 53
+      },
+      {
+        "Minute": 56,
+        "Anchor": 2015.5,
+        "Extreme": 2019.1000000000001,
+        "Direction": 1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      }
+    ]
+  },
+  {
+    "Case": "CurrentBX",
+    "Arm": "Candidate",
+    "Market": "BT",
+    "Events": [
+      {
+        "Minute": 16,
+        "Anchor": 15698,
+        "Extreme": 15717.75,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 20
+      },
+      {
+        "Minute": 49,
+        "Anchor": 15717.75,
+        "Extreme": 15648,
+        "Direction": -1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      },
+      {
+        "Minute": 59,
+        "Anchor": 15648,
+        "Extreme": 15670.25,
+        "Direction": 1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      }
+    ]
+  },
+  {
+    "Case": "CurrentBX",
+    "Arm": "Candidate",
+    "Market": "BX",
+    "Events": [
+      {
+        "Minute": 8,
+        "Anchor": 4350,
+        "Extreme": 4346.75,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 9
+      },
+      {
+        "Minute": 17,
+        "Anchor": 4346.75,
+        "Extreme": 4362.5,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 23
+      },
+      {
+        "Minute": 34,
+        "Anchor": 4362.5,
+        "Extreme": 4342,
+        "Direction": -1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      },
+      {
+        "Minute": 49,
+        "Anchor": 4342,
+        "Extreme": 4361,
+        "Direction": 1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      }
+    ]
+  },
+  {
+    "Case": "Older",
+    "Arm": "Baseline",
+    "Market": "BG",
+    "Events": [
+      {
+        "Minute": 22,
+        "Anchor": 1991.8000000000002,
+        "Extreme": 1986.5,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 32
+      },
+      {
+        "Minute": 48,
+        "Anchor": 1986.5,
+        "Extreme": 1999.5,
+        "Direction": 1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      }
+    ]
+  },
+  {
+    "Case": "Older",
+    "Arm": "Baseline",
+    "Market": "BT",
+    "Events": [
+      {
+        "Minute": 6,
+        "Anchor": 17753.75,
+        "Extreme": 17762,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 8
+      },
+      {
+        "Minute": 24,
+        "Anchor": 17762,
+        "Extreme": 17733,
+        "Direction": -1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 43
+      },
+      {
+        "Minute": 38,
+        "Anchor": 17733,
+        "Extreme": 17759.75,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 43
+      },
+      {
+        "Minute": 49,
+        "Anchor": 17759.75,
+        "Extreme": 17732.75,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 58
+      }
+    ]
+  },
+  {
+    "Case": "Older",
+    "Arm": "Baseline",
+    "Market": "BX",
+    "Events": [
+      {
+        "Minute": 6,
+        "Anchor": 4896,
+        "Extreme": 4902.75,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 9
+      },
+      {
+        "Minute": 27,
+        "Anchor": 4902.75,
+        "Extreme": 4882.75,
+        "Direction": -1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 40
+      },
+      {
+        "Minute": 37,
+        "Anchor": 4882.75,
+        "Extreme": 4898.5,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 40
+      },
+      {
+        "Minute": 49,
+        "Anchor": 4898.5,
+        "Extreme": 4871.25,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 56
+      }
+    ]
+  },
+  {
+    "Case": "Older",
+    "Arm": "Candidate",
+    "Market": "BG",
+    "Events": [
+      {
+        "Minute": 7,
+        "Anchor": 1991.2,
+        "Extreme": 1992.9,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 9
+      },
+      {
+        "Minute": 10,
+        "Anchor": 1992.9,
+        "Extreme": 1991.1000000000001,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 11
+      },
+      {
+        "Minute": 15,
+        "Anchor": 1991.1000000000001,
+        "Extreme": 1993.1000000000001,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 22
+      },
+      {
+        "Minute": 23,
+        "Anchor": 1993.1000000000001,
+        "Extreme": 1991.1000000000001,
+        "Direction": -1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 26
+      },
+      {
+        "Minute": 26,
+        "Anchor": 1991.1000000000001,
+        "Extreme": 1991.9,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 26
+      },
+      {
+        "Minute": 30,
+        "Anchor": 1991.9,
+        "Extreme": 1989.2,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 32
+      },
+      {
+        "Minute": 41,
+        "Anchor": 1989.2,
+        "Extreme": 1995.5,
+        "Direction": 1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 46
+      },
+      {
+        "Minute": 43,
+        "Anchor": 1995.5,
+        "Extreme": 1993.9,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 46
+      },
+      {
+        "Minute": 49,
+        "Anchor": 1993.9,
+        "Extreme": 1997.2,
+        "Direction": 1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      }
+    ]
+  },
+  {
+    "Case": "Older",
+    "Arm": "Candidate",
+    "Market": "BT",
+    "Events": [
+      {
+        "Minute": 22,
+        "Anchor": 17722.5,
+        "Extreme": 17748.5,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 28
+      },
+      {
+        "Minute": 42,
+        "Anchor": 17748.5,
+        "Extreme": 17713.75,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 44
+      }
+    ]
+  },
+  {
+    "Case": "Older",
+    "Arm": "Candidate",
+    "Market": "BX",
+    "Events": [
+      {
+        "Minute": 3,
+        "Anchor": 4882.75,
+        "Extreme": 4885.75,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 7
+      },
+      {
+        "Minute": 24,
+        "Anchor": 4885.75,
+        "Extreme": 4871.75,
+        "Direction": -1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      },
+      {
+        "Minute": 37,
+        "Anchor": 4871.75,
+        "Extreme": 4882.75,
+        "Direction": 1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      },
+      {
+        "Minute": 42,
+        "Anchor": 4882.75,
+        "Extreme": 4879,
+        "Direction": -1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 46
+      },
+      {
+        "Minute": 46,
+        "Anchor": 4879,
+        "Extreme": 4880.75,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 46
+      },
+      {
+        "Minute": 57,
+        "Anchor": 4880.75,
+        "Extreme": 4875.5,
+        "Direction": -1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      }
+    ]
+  },
+  {
+    "Case": "Seed104729",
+    "Arm": "Baseline",
+    "Market": "BG",
+    "Events": [
+      {
+        "Minute": 24,
+        "Anchor": 2376.9,
+        "Extreme": 2364.9,
+        "Direction": -1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 45
+      },
+      {
+        "Minute": 37,
+        "Anchor": 2364.9,
+        "Extreme": 2375.9,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 45
+      },
+      {
+        "Minute": 51,
+        "Anchor": 2375.9,
+        "Extreme": 2364,
+        "Direction": -1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      }
+    ]
+  },
+  {
+    "Case": "Seed104729",
+    "Arm": "Baseline",
+    "Market": "BT",
+    "Events": [
+      {
+        "Minute": 31,
+        "Anchor": 20460,
+        "Extreme": 20398.75,
+        "Direction": -1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 41
+      },
+      {
+        "Minute": 37,
+        "Anchor": 20398.75,
+        "Extreme": 20419.75,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 41
+      }
+    ]
+  },
+  {
+    "Case": "Seed104729",
+    "Arm": "Baseline",
+    "Market": "BX",
+    "Events": [
+      {
+        "Minute": 15,
+        "Anchor": 5805.25,
+        "Extreme": 5821,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 20
+      },
+      {
+        "Minute": 27,
+        "Anchor": 5821,
+        "Extreme": 5802.75,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 33
+      },
+      {
+        "Minute": 49,
+        "Anchor": 5802.75,
+        "Extreme": 5838.25,
+        "Direction": 1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      }
+    ]
+  },
+  {
+    "Case": "Seed104729",
+    "Arm": "Candidate",
+    "Market": "BG",
+    "Events": [
+      {
+        "Minute": 12,
+        "Anchor": 2378.3,
+        "Extreme": 2373.6,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 17
+      },
+      {
+        "Minute": 18,
+        "Anchor": 2373.6,
+        "Extreme": 2378.8,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 27
+      },
+      {
+        "Minute": 44,
+        "Anchor": 2378.8,
+        "Extreme": 2370.5,
+        "Direction": -1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 57
+      },
+      {
+        "Minute": 45,
+        "Anchor": 2370.5,
+        "Extreme": 2373.5,
+        "Direction": 1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 46
+      },
+      {
+        "Minute": 46,
+        "Anchor": 2373.5,
+        "Extreme": 2372.4,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 46
+      },
+      {
+        "Minute": 50,
+        "Anchor": 2372.4,
+        "Extreme": 2377.3,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 55
+      }
+    ]
+  },
+  {
+    "Case": "Seed104729",
+    "Arm": "Candidate",
+    "Market": "BT",
+    "Events": [
+      {
+        "Minute": 10,
+        "Anchor": 20477.75,
+        "Extreme": 20449.75,
+        "Direction": -1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 27
+      },
+      {
+        "Minute": 27,
+        "Anchor": 20449.75,
+        "Extreme": 20474,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 27
+      },
+      {
+        "Minute": 28,
+        "Anchor": 20474,
+        "Extreme": 20448,
+        "Direction": -1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 31
+      },
+      {
+        "Minute": 31,
+        "Anchor": 20448,
+        "Extreme": 20453.75,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 31
+      },
+      {
+        "Minute": 43,
+        "Anchor": 20453.75,
+        "Extreme": 20428,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 43
+      },
+      {
+        "Minute": 44,
+        "Anchor": 20428,
+        "Extreme": 20542.25,
+        "Direction": 1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      },
+      {
+        "Minute": 47,
+        "Anchor": 20542.25,
+        "Extreme": 20506.5,
+        "Direction": -1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      },
+      {
+        "Minute": 50,
+        "Anchor": 20506.5,
+        "Extreme": 20523.25,
+        "Direction": 1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 51
+      },
+      {
+        "Minute": 51,
+        "Anchor": 20523.25,
+        "Extreme": 20513,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 51
+      },
+      {
+        "Minute": 52,
+        "Anchor": 20513,
+        "Extreme": 20540,
+        "Direction": 1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      },
+      {
+        "Minute": 56,
+        "Anchor": 20540,
+        "Extreme": 20526.25,
+        "Direction": -1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      }
+    ]
+  },
+  {
+    "Case": "Seed104729",
+    "Arm": "Candidate",
+    "Market": "BX",
+    "Events": [
+      {
+        "Minute": 21,
+        "Anchor": 5821,
+        "Extreme": 5810.75,
+        "Direction": -1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 37
+      },
+      {
+        "Minute": 27,
+        "Anchor": 5810.75,
+        "Extreme": 5814,
+        "Direction": 1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 28
+      },
+      {
+        "Minute": 28,
+        "Anchor": 5814,
+        "Extreme": 5811.75,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 28
+      },
+      {
+        "Minute": 31,
+        "Anchor": 5811.75,
+        "Extreme": 5814.25,
+        "Direction": 1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 34
+      },
+      {
+        "Minute": 34,
+        "Anchor": 5814.25,
+        "Extreme": 5812.5,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 34
+      },
+      {
+        "Minute": 36,
+        "Anchor": 5812.5,
+        "Extreme": 5814.25,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 36
+      },
+      {
+        "Minute": 39,
+        "Anchor": 5814.25,
+        "Extreme": 5810.5,
+        "Direction": -1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 42
+      },
+      {
+        "Minute": 41,
+        "Anchor": 5810.5,
+        "Extreme": 5813,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 42
+      },
+      {
+        "Minute": 51,
+        "Anchor": 5813,
+        "Extreme": 5801.25,
+        "Direction": -1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 53
+      },
+      {
+        "Minute": 53,
+        "Anchor": 5801.25,
+        "Extreme": 5804,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 53
+      },
+      {
+        "Minute": 55,
+        "Anchor": 5804,
+        "Extreme": 5800.75,
+        "Direction": -1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      }
+    ]
+  },
+  {
+    "Case": "Seed71",
+    "Arm": "Baseline",
+    "Market": "BG",
+    "Events": [
+      {
+        "Minute": 15,
+        "Anchor": 2391.7000000000003,
+        "Extreme": 2384.7000000000003,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 25
+      },
+      {
+        "Minute": 34,
+        "Anchor": 2384.7000000000003,
+        "Extreme": 2394.9,
+        "Direction": 1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 42
+      },
+      {
+        "Minute": 38,
+        "Anchor": 2394.9,
+        "Extreme": 2390.8,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 42
+      },
+      {
+        "Minute": 57,
+        "Anchor": 2390.8,
+        "Extreme": 2399.1,
+        "Direction": 1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      }
+    ]
+  },
+  {
+    "Case": "Seed71",
+    "Arm": "Baseline",
+    "Market": "BT",
+    "Events": [
+      {
+        "Minute": 9,
+        "Anchor": 20486,
+        "Extreme": 20494.75,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 10
+      },
+      {
+        "Minute": 20,
+        "Anchor": 20494.75,
+        "Extreme": 20473.25,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 32
+      },
+      {
+        "Minute": 52,
+        "Anchor": 20473.25,
+        "Extreme": 20517.25,
+        "Direction": 1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      },
+      {
+        "Minute": 59,
+        "Anchor": 20517.25,
+        "Extreme": 20487.75,
+        "Direction": -1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      }
+    ]
+  },
+  {
+    "Case": "Seed71",
+    "Arm": "Baseline",
+    "Market": "BX",
+    "Events": [
+      {
+        "Minute": 21,
+        "Anchor": 5799.75,
+        "Extreme": 5791.75,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 23
+      },
+      {
+        "Minute": 33,
+        "Anchor": 5791.75,
+        "Extreme": 5808,
+        "Direction": 1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 45
+      },
+      {
+        "Minute": 43,
+        "Anchor": 5808,
+        "Extreme": 5800.75,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 45
+      }
+    ]
+  },
+  {
+    "Case": "Seed71",
+    "Arm": "Candidate",
+    "Market": "BG",
+    "Events": [
+      {
+        "Minute": 9,
+        "Anchor": 2388,
+        "Extreme": 2387,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 9
+      },
+      {
+        "Minute": 16,
+        "Anchor": 2387,
+        "Extreme": 2390.4,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 27
+      },
+      {
+        "Minute": 21,
+        "Anchor": 2390.4,
+        "Extreme": 2388,
+        "Direction": -1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 25
+      },
+      {
+        "Minute": 25,
+        "Anchor": 2388,
+        "Extreme": 2388.7000000000003,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 25
+      },
+      {
+        "Minute": 50,
+        "Anchor": 2388.7000000000003,
+        "Extreme": 2381,
+        "Direction": -1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      },
+      {
+        "Minute": 59,
+        "Anchor": 2381,
+        "Extreme": 2387.9,
+        "Direction": 1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      }
+    ]
+  },
+  {
+    "Case": "Seed71",
+    "Arm": "Candidate",
+    "Market": "BT",
+    "Events": [
+      {
+        "Minute": 4,
+        "Anchor": 20490.25,
+        "Extreme": 20501,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 4
+      },
+      {
+        "Minute": 18,
+        "Anchor": 20501,
+        "Extreme": 20461,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 26
+      },
+      {
+        "Minute": 38,
+        "Anchor": 20461,
+        "Extreme": 20506.75,
+        "Direction": 1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 52
+      },
+      {
+        "Minute": 52,
+        "Anchor": 20506.75,
+        "Extreme": 20478.25,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 52
+      }
+    ]
+  },
+  {
+    "Case": "Seed71",
+    "Arm": "Candidate",
+    "Market": "BX",
+    "Events": [
+      {
+        "Minute": 15,
+        "Anchor": 5799.75,
+        "Extreme": 5812.25,
+        "Direction": 1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 29
+      },
+      {
+        "Minute": 24,
+        "Anchor": 5812.25,
+        "Extreme": 5805.25,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 29
+      },
+      {
+        "Minute": 34,
+        "Anchor": 5805.25,
+        "Extreme": 5818,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 40
+      },
+      {
+        "Minute": 46,
+        "Anchor": 5818,
+        "Extreme": 5803.75,
+        "Direction": -1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      },
+      {
+        "Minute": 54,
+        "Anchor": 5803.75,
+        "Extreme": 5812.5,
+        "Direction": 1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      }
+    ]
+  },
+  {
+    "Case": "Seed7919",
+    "Arm": "Baseline",
+    "Market": "BG",
+    "Events": [
+      {
+        "Minute": 30,
+        "Anchor": 2394.9,
+        "Extreme": 2379,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 41
+      },
+      {
+        "Minute": 49,
+        "Anchor": 2379,
+        "Extreme": 2397,
+        "Direction": 1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      },
+      {
+        "Minute": 54,
+        "Anchor": 2397,
+        "Extreme": 2392.9,
+        "Direction": -1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      }
+    ]
+  },
+  {
+    "Case": "Seed7919",
+    "Arm": "Baseline",
+    "Market": "BT",
+    "Events": [
+      {
+        "Minute": 8,
+        "Anchor": 20452.25,
+        "Extreme": 20442.5,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 9
+      },
+      {
+        "Minute": 19,
+        "Anchor": 20442.5,
+        "Extreme": 20461.5,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 22
+      },
+      {
+        "Minute": 31,
+        "Anchor": 20461.5,
+        "Extreme": 20434.25,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 56
+      },
+      {
+        "Minute": 44,
+        "Anchor": 20434.25,
+        "Extreme": 20455.75,
+        "Direction": 1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 55
+      },
+      {
+        "Minute": 53,
+        "Anchor": 20455.75,
+        "Extreme": 20441.25,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 55
+      }
+    ]
+  },
+  {
+    "Case": "Seed7919",
+    "Arm": "Baseline",
+    "Market": "BX",
+    "Events": [
+      {
+        "Minute": 8,
+        "Anchor": 5805.75,
+        "Extreme": 5793.75,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 14
+      },
+      {
+        "Minute": 21,
+        "Anchor": 5793.75,
+        "Extreme": 5808.25,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 24
+      },
+      {
+        "Minute": 39,
+        "Anchor": 5808.25,
+        "Extreme": 5785.75,
+        "Direction": -1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      },
+      {
+        "Minute": 54,
+        "Anchor": 5785.75,
+        "Extreme": 5801.5,
+        "Direction": 1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      }
+    ]
+  },
+  {
+    "Case": "Seed7919",
+    "Arm": "Candidate",
+    "Market": "BG",
+    "Events": [
+      {
+        "Minute": 15,
+        "Anchor": 2394.7000000000003,
+        "Extreme": 2390.5,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 45
+      },
+      {
+        "Minute": 33,
+        "Anchor": 2390.5,
+        "Extreme": 2394.6,
+        "Direction": 1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 45
+      },
+      {
+        "Minute": 42,
+        "Anchor": 2394.6,
+        "Extreme": 2391,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 45
+      },
+      {
+        "Minute": 49,
+        "Anchor": 2391,
+        "Extreme": 2398.9,
+        "Direction": 1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      },
+      {
+        "Minute": 51,
+        "Anchor": 2398.9,
+        "Extreme": 2397.2000000000003,
+        "Direction": -1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 53
+      },
+      {
+        "Minute": 52,
+        "Anchor": 2397.2000000000003,
+        "Extreme": 2398.5,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 53
+      },
+      {
+        "Minute": 56,
+        "Anchor": 2398.5,
+        "Extreme": 2396,
+        "Direction": -1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 59
+      },
+      {
+        "Minute": 58,
+        "Anchor": 2396,
+        "Extreme": 2396.8,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 59
+      }
+    ]
+  },
+  {
+    "Case": "Seed7919",
+    "Arm": "Candidate",
+    "Market": "BT",
+    "Events": [
+      {
+        "Minute": 6,
+        "Anchor": 20495.5,
+        "Extreme": 20508,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 9
+      },
+      {
+        "Minute": 13,
+        "Anchor": 20508,
+        "Extreme": 20480.5,
+        "Direction": -1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 32
+      },
+      {
+        "Minute": 23,
+        "Anchor": 20480.5,
+        "Extreme": 20502.75,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 32
+      },
+      {
+        "Minute": 24,
+        "Anchor": 20502.75,
+        "Extreme": 20485.5,
+        "Direction": -1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 29
+      },
+      {
+        "Minute": 28,
+        "Anchor": 20485.5,
+        "Extreme": 20500.5,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 29
+      },
+      {
+        "Minute": 37,
+        "Anchor": 20500.5,
+        "Extreme": 20471,
+        "Direction": -1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 43
+      },
+      {
+        "Minute": 43,
+        "Anchor": 20471,
+        "Extreme": 20485.75,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 43
+      },
+      {
+        "Minute": 44,
+        "Anchor": 20485.75,
+        "Extreme": 20452.25,
+        "Direction": -1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      },
+      {
+        "Minute": 48,
+        "Anchor": 20452.25,
+        "Extreme": 20483.75,
+        "Direction": 1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      },
+      {
+        "Minute": 51,
+        "Anchor": 20483.75,
+        "Extreme": 20476.25,
+        "Direction": -1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      }
+    ]
+  },
+  {
+    "Case": "Seed7919",
+    "Arm": "Candidate",
+    "Market": "BX",
+    "Events": [
+      {
+        "Minute": 4,
+        "Anchor": 5823.25,
+        "Extreme": 5820.5,
+        "Direction": -1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 5
+      },
+      {
+        "Minute": 5,
+        "Anchor": 5820.5,
+        "Extreme": 5822.5,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 5
+      },
+      {
+        "Minute": 12,
+        "Anchor": 5822.5,
+        "Extreme": 5815.25,
+        "Direction": -1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 14
+      },
+      {
+        "Minute": 14,
+        "Anchor": 5815.25,
+        "Extreme": 5816.75,
+        "Direction": 1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 14
+      },
+      {
+        "Minute": 16,
+        "Anchor": 5816.75,
+        "Extreme": 5815,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 16
+      },
+      {
+        "Minute": 28,
+        "Anchor": 5815,
+        "Extreme": 5829,
+        "Direction": 1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 47
+      },
+      {
+        "Minute": 36,
+        "Anchor": 5829,
+        "Extreme": 5824.25,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 47
+      },
+      {
+        "Minute": 38,
+        "Anchor": 5824.25,
+        "Extreme": 5826.25,
+        "Direction": 1,
+        "Status": "RecoveredPullback",
+        "ResolvedMinute": 40
+      },
+      {
+        "Minute": 40,
+        "Anchor": 5826.25,
+        "Extreme": 5824.5,
+        "Direction": -1,
+        "Status": "FullReversal",
+        "ResolvedMinute": 40
+      },
+      {
+        "Minute": 49,
+        "Anchor": 5824.5,
+        "Extreme": 5830,
+        "Direction": 1,
+        "Status": "Unresolved",
+        "ResolvedMinute": null
+      }
+    ]
+  }
+]

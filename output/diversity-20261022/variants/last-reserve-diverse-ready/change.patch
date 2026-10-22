@@ -1,0 +1,429 @@
+--- original/BotDiversity.luau
++++ last-reserve-diverse-ready/BotDiversity.luau
+@@ -0,0 +1,133 @@
++-- Independent public-price countertrend and portfolio demand styles on existing funded accounts.
++-- No price writes, new accounts, capital transfers, shared direction or shared random draws.
++local D={}
++local function random(s)s.RandomState=s.RandomState*48271%2147483647;return s.RandomState/2147483647 end
++local function range(s,v)return v[1]+(v[2]-v[1])*random(s)end
++local function seed(id,world)
++ local n=math.floor(math.abs(world or 1))%2147483646+1
++ for i=1,#id do n=(n*31+string.byte(id,i))%2147483646 end
++ return n+1
++end
++local function cancelEntries(e,a)
++ local ids={};for id in pairs(e.Accounts[a.Id].OpenOrders)do local o=e.Orders[id];if o and not o.ReduceOnly then table.insert(ids,id)end end
++ table.sort(ids);for _,id in ipairs(ids)do e:Cancel(a.Id,id)end
++end
++local function reserveRole(a)
++ local index=tonumber(a.Id:match(':(%d+)$'))or 1
++ return a.Kind=='Reserve'and index%3==0, index%6==0 and 'Stretch'or 'Portfolio'
++end
++function D.Enabled(p,a)
++ local c=p.Config.BotDiversity
++ return c and p.Config.BotOrderFlow and p.Config.BotPopulation and p.Config.BotMomentum and a.PolicyVersion and ((c.ReserveMode and reserveRole(a))or(c.Stretch and a.Kind=='Reversion')or(c.Portfolio and a.Kind=='Value'))
++end
++function D.Adopt(p,a)
++ local e,c=p.Engine,p.Config.BotDiversity;local s=a.Diversity
++ if s and s.Version==c.Version then return s end
++ cancelEntries(e,a)
++ s={Version=c.Version,RandomState=seed(a.Id,e.Seed),Phase='Waiting'}
++ for _=1,8 do random(s)end
++ local assigned,style=reserveRole(a)
++ s.Style=assigned and style or a.Kind=='Reversion'and 'Stretch'or 'Portfolio'
++ s.Horizon=range(s,c.Horizons[math.min(#c.Horizons,math.floor(random(s)*#c.Horizons)+1)])
++ s.Extension=range(s,c.ExtensionFraction);s.TakeFraction=range(s,c.TakeFraction)
++ s.Hold=range(s,c.HoldSeconds);s.TargetFraction=range(s,c.TargetFraction)
++ s.Build=range(s,c.BuildSeconds);s.Pause=range(s,c.CooldownSeconds)
++ s.ReadyAt=e.Time+range(s,c.StartDelay);s.Recoveries=e.Accounts[a.Id].ParticipationRecoveries or 0
++ local pos=e.Accounts[a.Id].Positions[a.Key]
++ if pos then s.Phase=assigned and 'Reducing'or 'Holding';s.PositionId=pos.Id;s.OpenedAt=e.Time;s.ExitReason=assigned and 'Reallocation'or nil end
++ a.Diversity=s;return s
++end
++function D.Signal(p,a,s)
++ local e,c=p.Engine,p.Config.BotDiversity;local b=e.Books[a.Key];local h=p.Markets[a.Key].MomentumHistory
++ if not h or #h<3 or e.Time-h[#h].Time>p.Config.BotMomentum.SampleSeconds*2 then return nil end
++ local first
++ for i=#h,1,-1 do if h[i].Time<=e.Time-s.Horizon then first=i;break end end
++ if not first then return nil end
++ local total,n=0,0
++ for i=first,#h-1 do total+=h[i].Price;n+=1 end
++ local last=b.Last or b.Reference;local mean=total/math.max(1,n)
++ local bid,ask=e:PublicPrices(a.Key);if not bid or not ask then return nil end
++ local spread=(ask-bid)/b.Spec.Tick;if spread>c.MaxSpreadTicks then return nil end
++ local distance=last-mean
++ local required=math.max(c.MinExtensionTicks,last*s.Extension,spread+c.MaxSlippageTicks+c.ProfitBufferTicks)
++ return {Side=math.abs(distance)>=required and (distance>0 and -1 or 1)or 0,Distance=math.abs(distance),Required=required,Mean=mean,Last=last,Spread=spread}
++end
++local function pause(e,a,s,c,stopped)
++ cancelEntries(e,a);s.Phase='Waiting';s.PositionId=nil;s.OpenedAt=nil;s.Target=nil;s.ProfitTicks=nil;s.ExitReason=nil
++ s.ReadyAt=e.Time+s.Pause*range(s,stopped and c.StopCooldownMultiple or {.75,1.25})
++end
++function D.Capacity(p,a)
++ local e,c=p.Engine,p.Config.BotDiversity;local ac=e.Accounts[a.Id];local b=e.Books[a.Key];local equity=e:Summary(ac).Equity
++ return math.max(0,math.min(a.Limit,ac.Limit,math.floor(equity*ac.Risk*p.Config.BotPopulation.MarginFraction/b.Spec.Margin),
++  math.floor(math.max(0,equity)*c.PositionRiskFraction/(a.Stop*b.Spec.Tick*b.Spec.Multiplier))))
++end
++function D.Step(p,a)
++ if not D.Enabled(p,a)then return end
++ local e,c=p.Engine,p.Config.BotDiversity;local ac=e.Accounts[a.Id];local b=e.Books[a.Key];local s=D.Adopt(p,a)
++ a.DiversityNext=e.Time+range(s,c.SliceSeconds)
++ local pos=ac.Positions[a.Key]
++ if ac.Locked or ac.Liquidating or a.Retiring or b.Spec.CloseOnly or(pos and pos.Triggered)then cancelEntries(e,a);return end
++ if s.Recoveries~=(ac.ParticipationRecoveries or 0)then s.Recoveries=ac.ParticipationRecoveries or 0;pause(e,a,s,c,true);return end
++ if s.PositionId and(not pos or pos.Id~=s.PositionId)then pause(e,a,s,c,true);return end
++ local equity=e:Summary(ac).Equity;local capacity=D.Capacity(p,a)
++ local stressed=equity<=a.Budget*(1-p.Config.BotOrderFlow.MaxDrawdown)
++ if reserveRole(a)and c.ReserveMode=='Withdraw'then
++  cancelEntries(e,a)
++  if not pos then return end
++  s.Phase='Reducing';s.ExitReason='Reallocation'
++ end
++ if pos and not s.PositionId then s.PositionId=pos.Id;s.OpenedAt=e.Time;s.Phase='Holding'end
++ if pos then
++  if stressed or pos.Quantity>capacity then s.Phase='Reducing';s.ExitReason='Risk'
++  elseif e.Time-(s.OpenedAt or e.Time)>=s.Hold then s.Phase='Reducing';s.ExitReason='Time'
++  elseif s.Style=='Stretch'and s.ProfitTicks and not pos.ManualTarget then
++   local bid,ask=e:PublicPrices(a.Key);local touch=pos.Direction==1 and bid or ask
++   if touch and(touch-pos.Entry)*pos.Direction>=s.ProfitTicks*b.Spec.Tick then s.Phase='Reducing';s.ExitReason='Retracement'end
++  end
++ end
++ if s.Phase=='Building'and(e.Time>=s.BuildUntil or pos and pos.Quantity>=math.abs(s.Target))then
++  if pos then s.Phase='Holding'else pause(e,a,s,c,false)end
++ end
++ if s.Phase=='Waiting'then
++  if pos or stressed or capacity<1 or e.Time<s.ReadyAt then return end
++  local side,signal
++  if s.Style=='Stretch'then signal=D.Signal(p,a,s);if not signal or signal.Side==0 then return end;side=signal.Side
++  else side=random(s)<.5 and 1 or -1 end
++  local quantity=math.floor(capacity*s.TargetFraction);if quantity<1 then return end
++  s.Target=side*quantity;s.Phase='Building';s.StartedAt=e.Time;s.BuildUntil=e.Time+s.Build;s.Filled=0;s.ExitReason=nil
++  s.ProfitTicks=signal and math.max(c.MinProfitTicks,math.ceil(signal.Spread+c.MaxSlippageTicks+c.ProfitBufferTicks),math.floor(signal.Distance*s.TakeFraction))or nil
++ end
++ if s.Phase=='Holding'then return end
++ if s.Phase=='Reducing'and not pos then pause(e,a,s,c,false);return end
++ local reducing=s.Phase=='Reducing'
++ local inventory=pos and pos.Quantity*pos.Direction or 0
++ local delta=(reducing and 0 or math.clamp(s.Target,-capacity,capacity))-inventory
++ if delta==0 then s.Phase=pos and 'Holding'or 'Waiting';return end
++ local side=delta>0 and 1 or -1
++ if pos and side~=pos.Direction then reducing=true end
++ local size=math.min(math.abs(delta),math.max(1,math.floor(a.Size*range(s,c.SliceFraction))))
++ if reducing then
++  cancelEntries(e,a)
++  local available=pos.Quantity
++  for id in pairs(ac.OpenOrders)do local o=e.Orders[id];if o and o.Contract==a.Key and o.ReduceOnly then available-=o.Remaining end end
++  size=math.min(size,math.max(0,available))
++ else
++  local due=math.ceil(math.abs(s.Target)*math.clamp((e.Time-s.StartedAt+c.SliceSeconds[2])/s.Build,0,1))
++  size=math.min(size,math.max(0,due-s.Filled));size=p:_fit(a,side,size)
++ end
++ if size<1 then return end
++ local bid,ask=e:PublicPrices(a.Key);local touch=side==1 and ask or bid;if not touch then return end
++ local tick=math.max(1,math.round(touch/b.Spec.Tick)+side*c.MaxSlippageTicks)
++ local ok,result=e:Submit(a.Id,{Contract=a.Key,Direction=side,Quantity=size,Type='Limit',Price=tick*b.Spec.Tick,
++  ReduceOnly=reducing,StopTicks=not reducing and a.Stop or nil,Expires=e.Time+c.SliceSeconds[1]})
++ if ok then
++  if not reducing then s.Filled+=result.Filled end
++  if e.Orders[result.Id]then e:Cancel(a.Id,result.Id)end
++  local held=ac.Positions[a.Key]
++  if held then
++   if not s.PositionId then s.OpenedAt=e.Time end
++   s.PositionId=held.Id
++  elseif reducing then pause(e,a,s,c,false)end
++ end
++end
++return D
+--- original/MarketConfig.luau
++++ last-reserve-diverse-ready/MarketConfig.luau
+@@ -13,7 +13,7 @@
+  DepthLevels = 5, -- Real best levels supplied per side; the UI never pads missing liquidity.
+  MakerQuotePolicyVersion = 8,
+  -- Funded makers occupy staggered quote distances; ticks reflect each market price scale.
+- MakerLanes = {Count=10,SpacingTicks={BX=6,BT=18,BG=6}},
++ MakerLanes = {Count=20,SpacingTicks={BX=6,BT=18,BG=6}},
+  MakerMinRestSeconds = 18, -- Simulated seconds (one wall-clock second at the default speed).
+  MakerRepriceTicks = 3, -- Keep queue priority until fair value moves materially.
+  MakerQuoteSizeMultiplier = 0.45, -- Smaller displayed lots; account capital and inventory limits are unchanged.
+@@ -87,7 +87,12 @@
+   TargetFraction={.45,.85},PositionRiskFraction=.025,Participation={.04,.10},QuietSeconds=30,
+   SliceSeconds={5,12},SliceFraction={.15,.35},RefillSeconds={8,20},QuoteSeconds={25,60},
+   RepriceTicks=4,MinRestSeconds=15,MaxSlippageTicks=3,PriceToleranceStops={.5,1.5},
+-  AggressiveProbability={.10,.35},StartDelay={5,60},CooldownSeconds={60,180},StopCooldownSeconds={90,240}},
++  AggressiveProbability={.30,.65},StartDelay={5,60},CooldownSeconds={60,180},StopCooldownSeconds={90,240}},
++ BotDiversity = {Version=2,ReserveMode="Mixed",Stretch=true,Portfolio=true,
++  Horizons={{40,90},{90,180},{180,420}},ExtensionFraction={.0003,.0008},TakeFraction={.25,.6},
++  HoldSeconds={70,240},BuildSeconds={12,40},TargetFraction={.35,.7},CooldownSeconds={40,140},
++  StartDelay={3,90},SliceSeconds={3,9},SliceFraction={.7,1},StopCooldownMultiple={2,4},
++  PositionRiskFraction=.025,MaxSlippageTicks=3,MinExtensionTicks=8,MinProfitTicks=6,ProfitBufferTicks=2,MaxSpreadTicks=12},
+  BotInformationVersion = 1, -- Trading strategies use public prices and quotes.
+  OrderFlowMarket = {Version=1,SampleSeconds=1,WindowSeconds=60,MinTrades=6,
+   MinMoveTicks=8,MoveFraction=.001,CooldownSeconds=180,DisplaySeconds=90},
+--- original/Participants.luau
++++ last-reserve-diverse-ready/Participants.luau
+@@ -1,5 +1,6 @@
+ -- One deterministic scheduler; participants never own task loops or modify trade prices.
+ local Participants={}
++local Diversity=require(script.Parent.BotDiversity)
+ local BotPopulation=require(script.Parent.BotPopulation)
+ local BotExitRetry=require(script.Parent.BotExitRetry)
+ local Signals=require(script.Parent.BotSignals)
+@@ -273,9 +274,9 @@
+  end
+  local p=account.Positions[a.Key] local inventory=p and p.Quantity*p.Direction or 0
+  local stress=self.Regime.Volatility*self.Config.Volatility+math.min(6,b.Volatility)*0.2
+- -- Quotes follow actual executions; inventory skews each maker's own reservation price.
++ -- Quote prices follow executions without recurrent inventory displacement; inventory affects funded quantities.
+  local reference=OrderFlow.Reference(b)
+- local center=reference-inventory/a.Limit*(5+stress*5)
++ local center=reference
+  -- Spread independently funded makers across depth instead of stacking every bot at the touch.
+  local lanes=self.Config.MakerLanes
+  local lane=lanes and ((tonumber(a.Id:match(":(%d+)$"))or 1)-1)%lanes.Count or 0
+@@ -416,6 +417,7 @@
+  local account=e.Accounts[a.Id]
+  if b.Spec.CloseOnly then e:CancelAll(a.Id,a.Key);return end
+  if account.Locked or account.Liquidating or account.Positions[a.Key] and account.Positions[a.Key].Triggered then return end
++ if Diversity.Enabled(self,a)then Diversity.Step(self,a);return end
+  if Pressure.Enabled(self,a)then Pressure.Step(self,a);return end
+  if r:Next()<0.25 then return end -- varied inactivity
+  local last=b.Last or b.Reference local quote=Signals.Quote(self,a.Key)
+@@ -506,7 +508,7 @@
+   if not a.Retired and e.Time>=a.Next then
+    local repairing=Participation.Step(self,a) or ((a.PolicyVersion or a.Retiring)and self:_repairRisk(a))
+    if not repairing then
+-    if a.Kind=="Maker" then self:_maker(a) elseif a.Kind=="Reserve"then self:_reserve(a)elseif a.Kind=="Scalper" then self:_scalper(a)
++    if a.Kind=="Maker" then self:_maker(a) elseif a.Kind=="Reserve"then if Diversity.Enabled(self,a)then Diversity.Step(self,a)else self:_reserve(a)end elseif a.Kind=="Scalper" then self:_scalper(a)
+     elseif a.Kind=='Liquidity'and self.Config.BotLiquidity then BotLiquidity.Step(self,a)else self:_trader(a) end
+    end
+    local delay=a.Speed*r:Range(0.45,1.65)/self.Regime.Activity
+@@ -514,6 +516,7 @@
+    if a.Kind=='Liquidity'and self.Config.BotLiquidity then delay=math.min(delay,self.Config.BotLiquidity.DecisionSeconds)end
+    if a.Kind=="Whale" then delay=a.Parent>0 and r:Range(1.5,6)*(a.PolicyVersion and self.Config.BotPopulation.WhaleActivityScale or 1) or delay/math.max(0.0001,self.Config.WhaleFrequency) end
+    if Pressure.Enabled(self,a) and a.FlowNextDecision then delay=math.max(self.Config.StepSeconds,a.FlowNextDecision-e.Time)end
++   if Diversity.Enabled(self,a) and a.DiversityNext then delay=math.max(self.Config.StepSeconds,a.DiversityNext-e.Time)end
+    if repairing then delay=r:Range(2,5)end
+    a.Next=e.Time+delay
+    e:ProcessStops()
+--- original/WorldCheckpoint.luau
++++ last-reserve-diverse-ready/WorldCheckpoint.luau
+@@ -45,7 +45,7 @@
+ -- V27 persists patient Whale mandates, child reservations, fill baselines and private RNG.
+ -- V28 versions shorter Momentum horizons and staggered Maker replacement clocks.
+ -- Migration changes policy only; positions, orders, protections and ledgers remain intact.
+-local Checkpoint={Version=28,Readable={[28]=true,[1]=true,[2]=true,[3]=true,[4]=true,[5]=true,[6]=true,[7]=true,[8]=true,[9]=true,[10]=true,[11]=true,[12]=true,[13]=true,[14]=true,[15]=true,[16]=true,[17]=true,[18]=true,[19]=true,[20]=true,[21]=true,[22]=true,[23]=true,[24]=true,[25]=true,[26]=true,[27]=true}}
++local Checkpoint={Version=31,Readable={[31]=true,[28]=true,[1]=true,[2]=true,[3]=true,[4]=true,[5]=true,[6]=true,[7]=true,[8]=true,[9]=true,[10]=true,[11]=true,[12]=true,[13]=true,[14]=true,[15]=true,[16]=true,[17]=true,[18]=true,[19]=true,[20]=true,[21]=true,[22]=true,[23]=true,[24]=true,[25]=true,[26]=true,[27]=true}}
+ local function digest(raw)
+  local bytes=Encoding:ComputeStringHash(raw,Enum.HashAlgorithm.Sha256)
+  return (bytes:gsub(".",function(c)return string.format("%02x",string.byte(c))end))
+@@ -114,10 +114,16 @@
+  -- Preserve saved behavior except explicit, versioned migrations; presentation cadence may change.
+  local config=clone(snapshot.Config)
+  assert((config.MakerQuotePolicyVersion or 0)<=(currentConfig.MakerQuotePolicyVersion or 0),'Cannot downgrade Maker quote policy')
++ local diversity=currentConfig.BotDiversity and currentConfig.BotDiversity.Version or 0
++ local savedDiversity=config.BotDiversity and config.BotDiversity.Version or 0
++ assert(savedDiversity<=diversity,'Cannot downgrade trader diversity policy')
++ if savedDiversity<diversity then config.BotDiversity=clone(currentConfig.BotDiversity)end
+  local whale=currentConfig.BotWhale and currentConfig.BotWhale.Version or 0
+  local savedWhale=config.BotWhale and config.BotWhale.Version or 0
+  assert(savedWhale<=whale,'Cannot downgrade Whale policy')
+  if savedWhale<whale then config.BotWhale=clone(currentConfig.BotWhale)end
++ -- Execution aggressiveness is build policy; preserve saved version-1 profiles, clocks and RNG.
++ if config.BotWhale and currentConfig.BotWhale then config.BotWhale.AggressiveProbability=clone(currentConfig.BotWhale.AggressiveProbability)end
+  local momentum=currentConfig.BotMomentum and currentConfig.BotMomentum.Version or 0
+  local savedMomentum=config.BotMomentum and config.BotMomentum.Version or 0
+  assert(savedMomentum<=momentum,'Cannot downgrade Momentum policy')
+--- original/BotOrderFlowTests.luau
++++ last-reserve-diverse-ready/BotOrderFlowTests.luau
+@@ -137,7 +137,7 @@
+   equal(saved,CP.Capture(rr,pr))
+   for _=1,240 do rp:Step();pr:Step()end
+   equal(CP.Capture(re,rp),CP.Capture(rr,pr));re:Audit();rr:Audit()
+-  assert(CP.Version==28)
++  assert(CP.Version==31)
+   local future=clone(saved);future.Config.BotOrderFlow.Version=C.BotOrderFlow.Version+1
+   assert(not pcall(CP.Restore,future,C),'Newer pressure policy accepted by older reader')
+  end)
+--- original/BotParticipationTests.luau
++++ last-reserve-diverse-ready/BotParticipationTests.luau
+@@ -108,7 +108,7 @@
+   equal(saved,CP.Capture(rr,pr))
+   for _=1,60 do rp:Step();pr:Step()end
+   equal(CP.Capture(re,rp),CP.Capture(rr,pr));re:Audit();rr:Audit()
+-  local down=copy(C);down.BotParticipation=nil;assert(not pcall(CP.Restore,saved,down));assert(CP.Version==28)
++  local down=copy(C);down.BotParticipation=nil;assert(not pcall(CP.Restore,saved,down));assert(CP.Version==31)
+  end)
+  return out
+ end
+--- original/OrderFlowMarketTests.luau
++++ last-reserve-diverse-ready/OrderFlowMarketTests.luau
+@@ -110,7 +110,7 @@
+   for _=1,160 do p:Step()end
+   local snapshot=CP.Capture(e,p);local rr,pr=CP.Restore(CP.Decode(CP.Encode(snapshot)),C);equal(snapshot,CP.Capture(rr,pr))
+   for _=1,240 do p:Step();pr:Step()end
+-  equal(CP.Capture(e,p),CP.Capture(rr,pr));assert(CP.Version==28)
++  equal(CP.Capture(e,p),CP.Capture(rr,pr));assert(CP.Version==31)
+   return 'Observed history, alert state, orders and RNG continue identically'
+  end)
+  return out
+--- original/BotWhaleTests.luau
++++ last-reserve-diverse-ready/BotWhaleTests.luau
+@@ -132,7 +132,7 @@
+   local saved=CP.Capture(e,p);saved.Version=26;local before=copy(saved);local re,rp=CP.Restore(saved,C);equal(saved,before)
+   assert(re.NextTrade==e.NextTrade and re.TotalVolume==e.TotalVolume and re.Time==e.Time)
+   for id,ac in pairs(e.Accounts)do local new=re.Accounts[id];assert(new.Base==ac.Base and new.Balance==ac.Balance and new.Realized==ac.Realized);equal(new.Positions,ac.Positions)end
+-  assert(CP.Version==28 and re.Config.BotMomentum.Version==old.BotMomentum.Version and re.Config.NewsFrequency==0)
++  assert(CP.Version==31 and re.Config.BotMomentum.Version==old.BotMomentum.Version and re.Config.NewsFrequency==0)
+   assert(not pcall(CP.Restore,CP.Capture(re,rp),old));local future=CP.Capture(re,rp);future.Config.BotWhale.Version+=1;assert(not pcall(CP.Restore,future,C));re:Audit()
+  end)
+  test('Checkpoint between passive fill and observation preserves exact remaining parent budget',function()
+--- original/BotSignalsTests.luau
++++ last-reserve-diverse-ready/BotSignalsTests.luau
+@@ -11,7 +11,8 @@
+  for k,v in pairs(a)do equal(v,b[k])end;for k in pairs(b)do assert(a[k]~=nil,'Unexpected state key')end
+ end
+ local function fixture()
+- local e=E.new(clone(C),73521);local p=P.new(e)
++ -- Retained legacy turn-confirmation strategy; new stretch behavior has its own suite.
++ local c=clone(C);c.BotDiversity=nil;local e=E.new(c,73521);local p=P.new(e)
+  for _,id in ipairs(e.AccountOrder)do e:CancelAll(id)end
+  local a;for _,agent in ipairs(p.Agents)do if agent.Kind=='Reversion'and agent.Key=='BX'then a=agent;break end end
+  e.Time=60;a.Next=0;a.Bias=100;a.Size=5;a.Aggression=1;a.EntryThreshold=.5
+--- original/BotDiversityTests.luau
++++ last-reserve-diverse-ready/BotDiversityTests.luau
+@@ -0,0 +1,135 @@
++-- Synthetic signal inputs test decisions; all execution assertions use the real funded engine.
++local C=require(game.ReplicatedStorage.MarketReign.MarketConfig)
++local E=require(script.Parent.MarketEngine)
++local P=require(script.Parent.Participants)
++local D=require(script.Parent.BotDiversity)
++local CP=require(script.Parent.WorldCheckpoint)
++local T={}
++local function copy(v)if type(v)~='table'then return v end;local t={}for k,x in pairs(v)do t[k]=copy(x)end;return t end
++local function equal(a,b,path)
++ path=path or 'state';assert(type(a)==type(b),path..' type')
++ if type(a)~='table'then assert(a==b,path..' differs');return end
++ for k,v in pairs(a)do equal(v,b[k],path..'.'..tostring(k))end;for k in pairs(b)do assert(a[k]~=nil,path..' extra')end
++end
++local function fixture(kind)
++ local c=copy(C);c.BotDiversity.Stretch=true;c.BotDiversity.Portfolio=true
++ local e=E.new(c,123);local p=setmetatable({Engine=e,Config=c,Random=P.RNG.new(123),Agents={},Markets={BX={},BT={},BG={}},Regime={Volatility=1,Liquidity=1,Activity=1}},P)
++ local a=p:_agent('BX',kind or'Reversion',1);a.Size=3;a.Limit=30;a.Stop=30;e.Accounts[a.Id].Limit=30
++ e:AddAccount('buyer',1e8,100000,1,false);e:AddAccount('seller',1e8,100000,1,false)
++ local s=D.Adopt(p,a);s.Horizon=60;s.Extension=.0003;s.ReadyAt=0;s.Hold=90;s.TargetFraction=.5;s.Build=15
++ return e,p,a,e.Books.BX,s
++end
++local function quote(e,b,side,qty,tick)
++ local ok,r=e:Submit(side==1 and'buyer'or'seller',{Contract='BX',Direction=side,Quantity=qty or 100,Type='Limit',Price=(tick or(b.Last or b.Reference)-side)*b.Spec.Tick})
++ assert(ok,tostring(r));return r
++end
++local function history(e,p,b,direction,flat)
++ e:AdvanceClock(100-e.Time);local h={};p.Markets.BX.MomentumHistory=h
++ local last=b.Last or b.Reference
++ for t=0,100,5 do table.insert(h,{Time=t,Price=last-(flat and 0 or direction*(100-t)*1.5)})end
++ quote(e,b,1,100);quote(e,b,-1,100)
++end
++function T.Run()
++ local out={};local function test(name,fn)local ok,r=pcall(fn);table.insert(out,{Name=name,Passed=ok,Detail=ok and'Passed'or tostring(r)})end
++ test('Legacy policy configurations cannot accidentally enable diversity',function()
++  for _,key in ipairs({'BotOrderFlow','BotPopulation','BotMomentum'})do
++   local e,p,a,b,s=fixture();p.Config[key]=nil;assert(not D.Enabled(p,a));D.Step(p,a);assert(e.TotalVolume==0)
++  end
++ end)
++ test('Execution-policy migration retains every saved Whale profile and economic state',function()
++  local old=copy(C);old.BotWhale.AggressiveProbability={.10,.35};local e=E.new(old,7919);local p=P.new(e)
++  for _=1,80 do p:Step()end
++  local before=CP.Capture(e,p);local re,rp=CP.Restore(before,C);local after=CP.Capture(re,rp)
++  equal(before.Engine,after.Engine);equal(before.Population,after.Population)
++  equal(re.Config.BotWhale.AggressiveProbability,C.BotWhale.AggressiveProbability)
++  assert(re.Config.BotWhale.Version==old.BotWhale.Version)
++ end)
++
++ test('Private independent profiles are diverse, persistent and do not draw shared RNG',function()
++  local e,p,a,b,s=fixture();local buckets={};local states={}
++  for i=2,40 do local a=p:_agent('BX','Reversion',i);local n=p.Random.State;local x=D.Adopt(p,a);assert(n==p.Random.State and D.Adopt(p,a)==x);buckets[math.floor(x.Horizon/60)]=true;assert(not states[x.RandomState]);states[x.RandomState]=true end
++  local n=0;for _ in pairs(buckets)do n+=1 end;assert(n>=4)
++ end)
++ test('Stretched prices admit symmetric counterflow before any slowing or reversal',function()
++  for _,side in ipairs({1,-1})do local e,p,a,b,s=fixture();history(e,p,b,side);local x=assert(D.Signal(p,a,s));assert(x.Side==-side and x.Distance>=x.Required)
++   a.Belief=1e12;p.Markets.BX.Fair=-1e12;equal(x,D.Signal(p,a,s))
++  end
++ end)
++ test('Flat, stale, short and one-sided observations cannot create stretch orders',function()
++  local e,p,a,b,s=fixture();history(e,p,b,1,true);assert(D.Signal(p,a,s).Side==0)
++  history(e,p,b,1);e:AdvanceClock(11);assert(not D.Signal(p,a,s));p.Markets.BX.MomentumHistory={};assert(not D.Signal(p,a,s))
++  local e,p,a,b,s=fixture();history(e,p,b,1);e:CancelAll('seller');assert(not D.Signal(p,a,s))
++ end)
++ test('Countertrend entry is matched, stopped and capped by ordinary funding and inventory',function()
++  local e,p,a,b,s=fixture();history(e,p,b,1);local price=b.Last or b.Reference;D.Step(p,a)
++  local pos=assert(e.Accounts[a.Id].Positions.BX);assert(pos.Direction==-1 and pos.Stop and pos.Quantity<=a.Size and pos.Quantity<=D.Capacity(p,a))
++  assert(e.TotalVolume==pos.Quantity and e.Accounts[a.Id].NetCapitalAdjustments==0)
++  assert((b.Last or b.Reference)==price-1);assert(not next(e.Accounts[a.Id].OpenOrders));e:Audit()
++ end)
++ test('Completed inventory mandate stops adding and has a finite holding deadline',function()
++  local e,p,a,b,s=fixture();history(e,p,b,1);D.Step(p,a)
++  for _=1,12 do e:AdvanceClock(3);D.Step(p,a)end
++  local pos=assert(e.Accounts[a.Id].Positions.BX);assert(s.Phase=='Holding' and pos.Quantity<=math.abs(s.Target))
++  local volume=e.TotalVolume;D.Step(p,a);assert(volume==e.TotalVolume)
++  e:AdvanceClock(100);D.Step(p,a);assert(e.TotalVolume>volume and s.ExitReason=='Time');e:Audit()
++ end)
++ test('No quotes yields no synthetic fills and no working IOC remains',function()
++  local e,p,a,b,s=fixture('Value');e:AdvanceClock(100);local n=e.NextTrade;D.Step(p,a);assert(e.NextTrade==n and not e.Accounts[a.Id].Positions.BX and not next(e.Accounts[a.Id].OpenOrders));e:Audit()
++ end)
++ test('Portfolio demand uses private signed mandates and finite funded capacity',function()
++  local e,p,a,b,s=fixture('Value');e:AdvanceClock(100);quote(e,b,1);quote(e,b,-1);D.Step(p,a)
++  local pos=assert(e.Accounts[a.Id].Positions.BX);assert(pos.Quantity<=a.Size and math.abs(s.Target)<=D.Capacity(p,a)and s.Style=='Portfolio');e:Audit()
++ end)
++ test('Locks, liquidation, retirement, trigger ownership and zero buying power block entries',function()
++  for _,condition in ipairs({'Locked','Liquidating','Retiring','Risk'})do local e,p,a,b,s=fixture();history(e,p,b,1)
++   if condition=='Retiring'then a.Retiring=true elseif condition=='Risk'then e.Accounts[a.Id].Risk=0 else e.Accounts[a.Id][condition]=true end
++   D.Step(p,a);assert(e.TotalVolume==0);e:Audit()
++  end
++  local e,p,a,b,s=fixture();history(e,p,b,1);D.Step(p,a);e.Accounts[a.Id].Positions.BX.Triggered='Stop loss';local n=e.NextOrder;D.Step(p,a);assert(e.NextOrder==n)
++ end)
++ test('Externally closed positions end intent and enter cooldown instead of immediate re-entry',function()
++  local e,p,a,b,s=fixture();history(e,p,b,1);D.Step(p,a);local pos=e.Accounts[a.Id].Positions.BX
++  assert(e:Submit(a.Id,{Contract='BX',Direction=-pos.Direction,Quantity=pos.Quantity,Type='Market',ReduceOnly=true}))
++  local n=e.NextOrder;D.Step(p,a);assert(s.Phase=='Waiting' and s.ReadyAt>e.Time and e.NextOrder==n);e:Audit()
++ end)
++ test('Adoption preserves manual exits and explicitly removed manual stops',function()
++  local e,p,a,b,s=fixture();quote(e,b,-1,5);assert(e:Submit(a.Id,{Contract='BX',Direction=1,Quantity=2,Type='Market',StopTicks=20}))
++  local pos=e.Accounts[a.Id].Positions.BX;pos.ManualStop=true;pos.Stop=nil;pos.ManualTarget=true
++  local ok,o=e:Submit(a.Id,{Contract='BX',Direction=-1,Quantity=2,Type='Limit',Price=(b.Last+40)*b.Spec.Tick,ReduceOnly=true});assert(ok)
++  a.Diversity=nil;D.Step(p,a);assert(e.Orders[o.Id] and pos.Stop==nil and pos.ManualStop and pos.ManualTarget)
++  a.Diversity.Hold=0;D.Step(p,a);assert(pos.Quantity==2 and e.Orders[o.Id]);e:Audit()
++ end)
++ test('Strategy adoption preserves restored economic state and refuses downgrade',function()
++  local old=copy(C);old.BotDiversity=nil;local e=E.new(old,7919);local p=P.new(e)
++  for _=1,40 do p:Step()end
++  local saved=CP.Capture(e,p);local before=copy(saved);local re,rp=CP.Restore(saved,C)
++  equal(saved,before);equal(saved.Engine,CP.Capture(re,rp).Engine);equal(saved.Population,CP.Capture(re,rp).Population)
++  assert(not pcall(CP.Restore,CP.Capture(re,rp),old));re:Audit()
++ end)
++ test('Full population profiles, both subtypes and execution clocks serialize and continue exactly',function()
++  local e=E.new(copy(C),7919);local p=P.new(e)
++  for _=1,2000 do p:Step()end
++  local saved=CP.Capture(e,p);local re,rp=CP.Restore(CP.Decode(CP.Encode(saved)),C);equal(saved,CP.Capture(re,rp))
++  for _=1,160 do p:Step();rp:Step()end
++  equal(CP.Capture(e,p),CP.Capture(re,rp));e:Audit();re:Audit()
++ end)
++ if C.BotDiversity.ReserveMode then
++  test('Exactly one third of Reserve accounts receives diverse roles without any funding change',function()
++   local e,p,a,b,s=fixture();local n,styles=0,{}
++   for i=1,18 do local x=p:_agent('BX','Reserve',i);local ac=e.Accounts[x.Id];local before={Base=ac.Base,Balance=ac.Balance,Limit=ac.Limit,Risk=ac.Risk,Capital=ac.StartingCapital}
++    if D.Enabled(p,x)then local q=D.Adopt(p,x);n+=1;styles[q.Style]=(styles[q.Style]or 0)+1 end
++    equal(before,{Base=ac.Base,Balance=ac.Balance,Limit=ac.Limit,Risk=ac.Risk,Capital=ac.StartingCapital})
++   end
++   assert(n==6 and styles.Portfolio==3 and styles.Stretch==3);e:Audit()
++  end)
++  test('Reserve reassignment settles inherited inventory through capped matched exits before new risk',function()
++   local e,p,a,b,s=fixture();a=p:_agent('BX','Reserve',3);local ac=e.Accounts[a.Id];local base=ac.Base
++   quote(e,b,-1,100);assert(e:Submit(a.Id,{Contract='BX',Direction=1,Quantity=4,Type='Market',StopTicks=20}));quote(e,b,1,100)
++   local volume=e.TotalVolume;D.Step(p,a);assert(not ac.Positions.BX and e.TotalVolume==volume+4 and ac.Base==base)
++   local q=assert(a.Diversity);assert(q.Phase=='Waiting'and q.ReadyAt>e.Time);e:Audit()
++   if p.Config.BotDiversity.ReserveMode=='Withdraw'then e:AdvanceClock(500);local n=e.NextOrder;D.Step(p,a);assert(e.NextOrder==n and not ac.Positions.BX)end
++  end)
++ end
++ return out
++end
++return T

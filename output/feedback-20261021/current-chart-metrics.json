@@ -1,0 +1,115 @@
+{
+  "Step": 10799234,
+  "Minutes": 180,
+  "MeaningfulLong8": 0.9722222222222222,
+  "MeaningfulMaxLeg": 23,
+  "MeaningfulCounters": 11,
+  "CounterDepthTicks": 30.272727272727273,
+  "CounterEvents": [
+    {
+      "Minute": 17,
+      "Ticks": 40.0,
+      "PriorLegTicks": 109.0
+    },
+    {
+      "Minute": 25,
+      "Ticks": 17.0,
+      "PriorLegTicks": 42.0
+    },
+    {
+      "Minute": 40,
+      "Ticks": 34.0,
+      "PriorLegTicks": 155.0
+    },
+    {
+      "Minute": 55,
+      "Ticks": 18.0,
+      "PriorLegTicks": 89.0
+    },
+    {
+      "Minute": 73,
+      "Ticks": 31.0,
+      "PriorLegTicks": 152.0
+    },
+    {
+      "Minute": 88,
+      "Ticks": 43.0,
+      "PriorLegTicks": 149.0
+    },
+    {
+      "Minute": 102,
+      "Ticks": 40.0,
+      "PriorLegTicks": 131.0
+    },
+    {
+      "Minute": 107,
+      "Ticks": 11.0,
+      "PriorLegTicks": 41.0
+    },
+    {
+      "Minute": 127,
+      "Ticks": 34.0,
+      "PriorLegTicks": 123.0
+    },
+    {
+      "Minute": 146,
+      "Ticks": 39.0,
+      "PriorLegTicks": 120.0
+    },
+    {
+      "Minute": 169,
+      "Ticks": 26.0,
+      "PriorLegTicks": 126.0
+    }
+  ],
+  "LongRun8CandleShare": 0.8722222222222222,
+  "SignificantLongestRun": 18,
+  "Directional10WindowFraction": 0.5321637426900585,
+  "LongestRun": 18,
+  "Runs": [
+    13,
+    2,
+    5,
+    3,
+    13,
+    3,
+    2,
+    8,
+    1,
+    16,
+    1,
+    1,
+    11,
+    1,
+    2,
+    13,
+    5,
+    18,
+    15,
+    2,
+    1,
+    1,
+    9,
+    1,
+    2,
+    2,
+    7,
+    15
+  ],
+  "Range30": [
+    0.7566773956745158,
+    0.608819345661451,
+    0.8692668420450645,
+    0.8459076360310928,
+    0.7377521613832854,
+    0.9132157831256102
+  ],
+  "WickFraction": 0.3417286880342605,
+  "OneMinuteRV": 0.7552880315365367,
+  "Pullbacks": 2,
+  "PullbackDepthTicks": 3.0,
+  "PullbackDuration": 2.5,
+  "Efficiency10": 0.7783674497081309,
+  "Alternating4Fraction": 0.005649717514124294,
+  "MeanMinuteRangePercent": 0.06225463230075152
+}

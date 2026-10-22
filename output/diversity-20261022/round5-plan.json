@@ -1,0 +1,6 @@
+{
+  "Basis": "All six last-reserve-diverse cases produce 148 meaningful counter events and 33 strict pullbacks; occupancy 61.94%, maximum leg 17.5m, minute RV .343%, mean range .416%. Only spread fails: mean p95 6.389 ticks vs fixed 6-tick floor. Test original 10 Maker lanes with the same independent institutional strategies.",
+  "Variant": "last-reserve-dense",
+  "Change": "Only Maker lane count 20 -> original 10. Same 60 Makers, same quotes sizes, funding, refresh clocks, inventory limits, and new trader role profiles.",
+  "Selection": "Completed development evidence only. Separate validation untouched; spread threshold and all other gates unchanged."
+}

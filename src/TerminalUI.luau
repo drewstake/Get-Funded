@@ -3,6 +3,7 @@ local Market = require(script.Parent.MarketClient)
 local NumberInput = require(script.Parent.NumberInput)
 local TradeProtection = require(script.Parent.TradeProtection)
 local ChartView = require(script.Parent.ChartView)
+local Timeframes = require(script.Parent.ChartTimeframes)
 local Feedback = require(script.Parent.UIFeedback)
 local LeaderboardClient = require(script.Parent.LeaderboardClient)
 local LeaderboardView = require(script.Parent.LeaderboardView)
@@ -358,7 +359,7 @@ function UI.Mount(gui,options)
  fx=not options.Preview and Feedback.new(root,{})or nil
  local feedback=fx
  local marketBanner=MarketEventBanner.new(root)
- local s={Contract=Market.ContractOrder[1],Timeframe="1m",Type="Market",Qty=1,Limit=5820,Stop=5802.5,Target=5842.5,StopOn=true,TargetOn=true,
+ local s={Contract=Market.ContractOrder[1],Timeframe=Timeframes.Default,Type="Market",Qty=1,Limit=5820,Stop=5802.5,Target=5842.5,StopOn=true,TargetOn=true,
   Tab="Positions",Nav="Trade",Sheet=false,ProtectionDraft=nil,StopDollars=500,TargetDollars=1500,Overlay=nil,Guide=1,Tool="Pan",Drawings={},Levels=true,
   Screen=nil,SoundOn=true,SoundLevel="Medium",Calm=false,PendingOrder=nil,PendingClose=nil,Level2Expanded=true}
  -- Comfort settings for this session, shared with the loading screen and the welcome guide through
@@ -1443,11 +1444,11 @@ function UI.Mount(gui,options)
     if selected then local dot=frame(b,"Dot",iw-30,23,12,12,Color3.fromRGB(93,255,83),b.ZIndex+3);round(dot,6);stroke(dot,SC.Ink).Thickness=3 end
    end
   elseif s.Overlay=="Timeframes"then
-   local list={"1m","5m","15m","1h","1D"}
+   local list=Timeframes.Order
    local _,p=popupShell(w,h,pw,#list*56,"Timeframe","Trade","Candle interval")
    for i,tf in ipairs(list)do
-    local b=option(p,"Choose"..tf,pad,(i-1)*56,iw,48,s.Timeframe==tf,function()s.Timeframe=tf;s.Overlay=nil;chartView:CancelPlacement();refresh()end)
-    local t=optionLabel(b,"Label",tf,0,0,iw,48,20);t.TextXAlignment=CENTER
+    local b=option(p,"Choose"..Timeframes.Labels[tf],pad,(i-1)*56,iw,48,s.Timeframe==tf,function()s.Timeframe=tf;s.Overlay=nil;chartView:CancelPlacement();refresh()end)
+    local t=optionLabel(b,"Label",Timeframes.Labels[tf],0,0,iw,48,20);t.TextXAlignment=CENTER
    end
   elseif s.Overlay=="Tools"then
    -- Two columns of touch-size buttons; the active tool and magnet are highlighted.

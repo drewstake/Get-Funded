@@ -1,0 +1,33 @@
+{
+  "Baseline": "Actual Studio export: checkpoint 27, Momentum 1, Whale 1, no Maker candidate, news 0",
+  "DevelopmentCases": [
+    "Seed71",
+    "Seed7919",
+    "Seed104729",
+    "Current",
+    "Older",
+    "Aged"
+  ],
+  "HoldoutCases": [
+    "Seed907",
+    "Seed65537"
+  ],
+  "AdaptSeconds": 1200,
+  "MeasureSeconds": 3600,
+  "NoRecoveryMeasureSeconds": 5400,
+  "PrimaryMetrics": [
+    "Same-color candle run distribution and maximum",
+    "Completed countertrend retracements recovered within 8 minutes",
+    "10-minute net/path efficiency"
+  ],
+  "GuardMetrics": [
+    "Alternating four-candle patterns",
+    "One-second realized volatility",
+    "Minute high-low range",
+    "30-minute total range, target 0.7\u20131.5%",
+    "Spreads and empty-side frequency",
+    "Reversion and other-bot equity excluding transfers, drawdown-floor survival",
+    "Transfers and sustained matched volume"
+  ],
+  "Acceptance": "No new safety or replay failures. Require a material cross-case improvement in pullbacks/streaks without merely flattening movement or creating alternating candles. Confirm improvement on untouched holdout seeds and acceptable funding in transfer-disabled runs with risk pauses active. Do not force the range target."
+}

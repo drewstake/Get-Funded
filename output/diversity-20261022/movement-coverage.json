@@ -1,0 +1,6065 @@
+{
+  "Role": "Descriptive support for existing candle review, not a replacement or relaxation of original gates. Low-change compares adjacent minute closes against the original six-tick/0.025% price floor; it does not classify a pullback.",
+  "Rows": [
+    {
+      "Variant": "control",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.7288135593220338,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.15437275156634211,
+      "LargestFiveVarianceShare": 0.5684428468957528
+    },
+    {
+      "Variant": "control",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8813559322033898,
+      "LongestLowChangeRun": 23,
+      "LargestMinuteVarianceShare": 0.21398500571443688,
+      "LargestFiveVarianceShare": 0.7842364598797673
+    },
+    {
+      "Variant": "control",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4745762711864407,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.06925332472340566,
+      "LargestFiveVarianceShare": 0.3049500537701018
+    },
+    {
+      "Variant": "control",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5423728813559322,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.13522824351780235,
+      "LargestFiveVarianceShare": 0.5036689367322245
+    },
+    {
+      "Variant": "control",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8305084745762712,
+      "LongestLowChangeRun": 12,
+      "LargestMinuteVarianceShare": 0.2953989384442522,
+      "LargestFiveVarianceShare": 0.7722302252372594
+    },
+    {
+      "Variant": "control",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4406779661016949,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.1035215101667676,
+      "LargestFiveVarianceShare": 0.3757101526414638
+    },
+    {
+      "Variant": "control",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5932203389830508,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.14848014413173063,
+      "LargestFiveVarianceShare": 0.5077887380696552
+    },
+    {
+      "Variant": "control",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.9322033898305084,
+      "LongestLowChangeRun": 27,
+      "LargestMinuteVarianceShare": 0.4848511076566941,
+      "LargestFiveVarianceShare": 0.8956351825970207
+    },
+    {
+      "Variant": "control",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5254237288135594,
+      "LongestLowChangeRun": 12,
+      "LargestMinuteVarianceShare": 0.09519423828335413,
+      "LargestFiveVarianceShare": 0.4004712088717086
+    },
+    {
+      "Variant": "control",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.576271186440678,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.11143724113151045,
+      "LargestFiveVarianceShare": 0.4012743395373694
+    },
+    {
+      "Variant": "control",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.9322033898305084,
+      "LongestLowChangeRun": 22,
+      "LargestMinuteVarianceShare": 0.312340421038309,
+      "LargestFiveVarianceShare": 0.770291845150476
+    },
+    {
+      "Variant": "control",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.15083412490858777,
+      "LargestFiveVarianceShare": 0.5203015209994604
+    },
+    {
+      "Variant": "control",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5932203389830508,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.1560661677840439,
+      "LargestFiveVarianceShare": 0.49183894581718146
+    },
+    {
+      "Variant": "control",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.847457627118644,
+      "LongestLowChangeRun": 12,
+      "LargestMinuteVarianceShare": 0.2520979046067381,
+      "LargestFiveVarianceShare": 0.7370474499600348
+    },
+    {
+      "Variant": "control",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5254237288135594,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.12297530820382502,
+      "LargestFiveVarianceShare": 0.45962351640948673
+    },
+    {
+      "Variant": "control",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6949152542372882,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.16371542538422054,
+      "LargestFiveVarianceShare": 0.506490451521542
+    },
+    {
+      "Variant": "control",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.9152542372881356,
+      "LongestLowChangeRun": 18,
+      "LargestMinuteVarianceShare": 0.4951591425628698,
+      "LargestFiveVarianceShare": 0.8260833685559832
+    },
+    {
+      "Variant": "control",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6610169491525424,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.1210428830906789,
+      "LargestFiveVarianceShare": 0.5487466983806355
+    },
+    {
+      "Variant": "diverse-patient-stretch",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.576271186440678,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.23011568966706106,
+      "LargestFiveVarianceShare": 0.5918916559733572
+    },
+    {
+      "Variant": "diverse-patient-stretch",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.711864406779661,
+      "LongestLowChangeRun": 12,
+      "LargestMinuteVarianceShare": 0.5690622959049279,
+      "LargestFiveVarianceShare": 0.9560186927508024
+    },
+    {
+      "Variant": "diverse-patient-stretch",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4915254237288136,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.12025513986933634,
+      "LargestFiveVarianceShare": 0.47966844697142397
+    },
+    {
+      "Variant": "diverse-patient-stretch",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4067796610169492,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.1504251716694127,
+      "LargestFiveVarianceShare": 0.4241889377175457
+    },
+    {
+      "Variant": "diverse-patient-stretch",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7457627118644068,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.6633303349997541,
+      "LargestFiveVarianceShare": 0.910344874127314
+    },
+    {
+      "Variant": "diverse-patient-stretch",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4915254237288136,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.1624335151972273,
+      "LargestFiveVarianceShare": 0.6113692092167418
+    },
+    {
+      "Variant": "diverse-patient-stretch",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4067796610169492,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.09275552139931988,
+      "LargestFiveVarianceShare": 0.33954492658511987
+    },
+    {
+      "Variant": "diverse-patient-stretch",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7457627118644068,
+      "LongestLowChangeRun": 15,
+      "LargestMinuteVarianceShare": 0.1505894117089929,
+      "LargestFiveVarianceShare": 0.5157538086828485
+    },
+    {
+      "Variant": "diverse-patient-stretch",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.16374131951557397,
+      "LargestFiveVarianceShare": 0.5028449159634141
+    },
+    {
+      "Variant": "diverse-patient-stretch",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4915254237288136,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.18386646571615067,
+      "LargestFiveVarianceShare": 0.5113742166050776
+    },
+    {
+      "Variant": "diverse-patient-stretch",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7288135593220338,
+      "LongestLowChangeRun": 14,
+      "LargestMinuteVarianceShare": 0.22806960796848572,
+      "LargestFiveVarianceShare": 0.592814667590481
+    },
+    {
+      "Variant": "diverse-patient-stretch",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.11120363450633594,
+      "LargestFiveVarianceShare": 0.4459746033221882
+    },
+    {
+      "Variant": "diverse-patient-stretch",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.16197980620827357,
+      "LargestFiveVarianceShare": 0.48118642028501996
+    },
+    {
+      "Variant": "diverse-patient-stretch",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7627118644067796,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.15383767500220472,
+      "LargestFiveVarianceShare": 0.5814578805249296
+    },
+    {
+      "Variant": "diverse-patient-stretch",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.1105316547468341,
+      "LargestFiveVarianceShare": 0.4434294135889035
+    },
+    {
+      "Variant": "diverse-patient-stretch",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.09436799639209073,
+      "LargestFiveVarianceShare": 0.34759119521335313
+    },
+    {
+      "Variant": "diverse-patient-stretch",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7457627118644068,
+      "LongestLowChangeRun": 12,
+      "LargestMinuteVarianceShare": 0.21877711543717596,
+      "LargestFiveVarianceShare": 0.6059446188596539
+    },
+    {
+      "Variant": "diverse-patient-stretch",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6610169491525424,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.2765657883206069,
+      "LargestFiveVarianceShare": 0.5377269757156805
+    },
+    {
+      "Variant": "inner-multihorizon",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6779661016949152,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.15779719200063616,
+      "LargestFiveVarianceShare": 0.44318828102027924
+    },
+    {
+      "Variant": "inner-multihorizon",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7288135593220338,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.184925847256354,
+      "LargestFiveVarianceShare": 0.5736498493634978
+    },
+    {
+      "Variant": "inner-multihorizon",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4915254237288136,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.18354226606712876,
+      "LargestFiveVarianceShare": 0.5755660174097414
+    },
+    {
+      "Variant": "inner-multihorizon",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4915254237288136,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.12000645563634856,
+      "LargestFiveVarianceShare": 0.5064397736500553
+    },
+    {
+      "Variant": "inner-multihorizon",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7288135593220338,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.39424659366260556,
+      "LargestFiveVarianceShare": 0.6448068832130284
+    },
+    {
+      "Variant": "inner-multihorizon",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.3634472084813981,
+      "LargestFiveVarianceShare": 0.662097745534402
+    },
+    {
+      "Variant": "inner-multihorizon",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4915254237288136,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.09558268344921654,
+      "LargestFiveVarianceShare": 0.3772842739590995
+    },
+    {
+      "Variant": "inner-multihorizon",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7457627118644068,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.21735268628144783,
+      "LargestFiveVarianceShare": 0.7275639524107994
+    },
+    {
+      "Variant": "inner-multihorizon",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5423728813559322,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.1690745695743118,
+      "LargestFiveVarianceShare": 0.5146694755129378
+    },
+    {
+      "Variant": "inner-multihorizon",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4915254237288136,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.11733567281027296,
+      "LargestFiveVarianceShare": 0.3994262660828441
+    },
+    {
+      "Variant": "inner-multihorizon",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7457627118644068,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.3324127542156437,
+      "LargestFiveVarianceShare": 0.6929385479146609
+    },
+    {
+      "Variant": "inner-multihorizon",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6440677966101694,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.11456983112670252,
+      "LargestFiveVarianceShare": 0.4573490471581481
+    },
+    {
+      "Variant": "inner-multihorizon",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.10505322853045611,
+      "LargestFiveVarianceShare": 0.3874536083749069
+    },
+    {
+      "Variant": "inner-multihorizon",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7796610169491526,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.21604417588745534,
+      "LargestFiveVarianceShare": 0.7074524717184578
+    },
+    {
+      "Variant": "inner-multihorizon",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4915254237288136,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.08618257979517831,
+      "LargestFiveVarianceShare": 0.363621890990394
+    },
+    {
+      "Variant": "inner-multihorizon",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4745762711864407,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.08386846698827694,
+      "LargestFiveVarianceShare": 0.348979433011053
+    },
+    {
+      "Variant": "inner-multihorizon",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8135593220338984,
+      "LongestLowChangeRun": 15,
+      "LargestMinuteVarianceShare": 0.3666865740101805,
+      "LargestFiveVarianceShare": 0.6591476770370448
+    },
+    {
+      "Variant": "inner-multihorizon",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6271186440677966,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.2338804833691629,
+      "LargestFiveVarianceShare": 0.593259131145799
+    },
+    {
+      "Variant": "inner-patient-quote-safe",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6271186440677966,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.19747126723513522,
+      "LargestFiveVarianceShare": 0.5913203161282209
+    },
+    {
+      "Variant": "inner-patient-quote-safe",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7288135593220338,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.18611246663375045,
+      "LargestFiveVarianceShare": 0.6532365826888727
+    },
+    {
+      "Variant": "inner-patient-quote-safe",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4745762711864407,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.12135670498834003,
+      "LargestFiveVarianceShare": 0.4502588688048476
+    },
+    {
+      "Variant": "inner-patient-quote-safe",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4406779661016949,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.1436956701241222,
+      "LargestFiveVarianceShare": 0.40095771442991196
+    },
+    {
+      "Variant": "inner-patient-quote-safe",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.6271186440677966,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.19945544976754817,
+      "LargestFiveVarianceShare": 0.6829234888380323
+    },
+    {
+      "Variant": "inner-patient-quote-safe",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4915254237288136,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.27520641769399007,
+      "LargestFiveVarianceShare": 0.5215879391575848
+    },
+    {
+      "Variant": "inner-patient-quote-safe",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4406779661016949,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.13769828338431525,
+      "LargestFiveVarianceShare": 0.4534306893065631
+    },
+    {
+      "Variant": "inner-patient-quote-safe",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.711864406779661,
+      "LongestLowChangeRun": 17,
+      "LargestMinuteVarianceShare": 0.28698810938443564,
+      "LargestFiveVarianceShare": 0.6736015666125509
+    },
+    {
+      "Variant": "inner-patient-quote-safe",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5932203389830508,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.46775138724568377,
+      "LargestFiveVarianceShare": 0.7194310040132265
+    },
+    {
+      "Variant": "inner-patient-quote-safe",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.423728813559322,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.14787781492245844,
+      "LargestFiveVarianceShare": 0.4895485791264332
+    },
+    {
+      "Variant": "inner-patient-quote-safe",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7288135593220338,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.12085325589815246,
+      "LargestFiveVarianceShare": 0.47549480163018193
+    },
+    {
+      "Variant": "inner-patient-quote-safe",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5254237288135594,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.18013566974538317,
+      "LargestFiveVarianceShare": 0.5460198717000982
+    },
+    {
+      "Variant": "inner-patient-quote-safe",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4745762711864407,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.13050191590273288,
+      "LargestFiveVarianceShare": 0.4178440805113184
+    },
+    {
+      "Variant": "inner-patient-quote-safe",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.711864406779661,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.18796892922503533,
+      "LargestFiveVarianceShare": 0.5794477475771544
+    },
+    {
+      "Variant": "inner-patient-quote-safe",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.15339313892985657,
+      "LargestFiveVarianceShare": 0.5314632935094525
+    },
+    {
+      "Variant": "inner-patient-quote-safe",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.1158437793086466,
+      "LargestFiveVarianceShare": 0.4217190649287092
+    },
+    {
+      "Variant": "inner-patient-quote-safe",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7966101694915254,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.23923596016839868,
+      "LargestFiveVarianceShare": 0.6916072610625041
+    },
+    {
+      "Variant": "inner-patient-quote-safe",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4915254237288136,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.16753864901298374,
+      "LargestFiveVarianceShare": 0.5161088417205284
+    },
+    {
+      "Variant": "inner-patient-stretch",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6271186440677966,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.19747126723513522,
+      "LargestFiveVarianceShare": 0.5913203161282209
+    },
+    {
+      "Variant": "inner-patient-stretch",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7288135593220338,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.18611246663375045,
+      "LargestFiveVarianceShare": 0.6532365826888727
+    },
+    {
+      "Variant": "inner-patient-stretch",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4745762711864407,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.12135670498834003,
+      "LargestFiveVarianceShare": 0.4502588688048476
+    },
+    {
+      "Variant": "inner-patient-stretch",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5932203389830508,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.32633134321884866,
+      "LargestFiveVarianceShare": 0.5369562004601938
+    },
+    {
+      "Variant": "inner-patient-stretch",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7796610169491526,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.8741899064148353,
+      "LargestFiveVarianceShare": 0.9487715027442287
+    },
+    {
+      "Variant": "inner-patient-stretch",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6271186440677966,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.4903405467190205,
+      "LargestFiveVarianceShare": 0.8071505321780275
+    },
+    {
+      "Variant": "inner-patient-stretch",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4915254237288136,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.08996461676240029,
+      "LargestFiveVarianceShare": 0.3983688434435004
+    },
+    {
+      "Variant": "inner-patient-stretch",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.6101694915254238,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.11303173266166448,
+      "LargestFiveVarianceShare": 0.37823722186999803
+    },
+    {
+      "Variant": "inner-patient-stretch",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6271186440677966,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.31029461855856943,
+      "LargestFiveVarianceShare": 0.6482780354344885
+    },
+    {
+      "Variant": "inner-patient-stretch",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5423728813559322,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.15353997666517358,
+      "LargestFiveVarianceShare": 0.5669672829681862
+    },
+    {
+      "Variant": "inner-patient-stretch",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.711864406779661,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.15550257751309318,
+      "LargestFiveVarianceShare": 0.5858662892849238
+    },
+    {
+      "Variant": "inner-patient-stretch",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6101694915254238,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.28579250257203265,
+      "LargestFiveVarianceShare": 0.7347803416757451
+    },
+    {
+      "Variant": "inner-patient-stretch",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5254237288135594,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.13158566486565815,
+      "LargestFiveVarianceShare": 0.421314053237666
+    },
+    {
+      "Variant": "inner-patient-stretch",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.711864406779661,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.19195957901604646,
+      "LargestFiveVarianceShare": 0.5917496372687336
+    },
+    {
+      "Variant": "inner-patient-stretch",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.1768629835867604,
+      "LargestFiveVarianceShare": 0.5068016945263499
+    },
+    {
+      "Variant": "inner-patient-stretch",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4745762711864407,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.11946491984041775,
+      "LargestFiveVarianceShare": 0.4392447079165219
+    },
+    {
+      "Variant": "inner-patient-stretch",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8135593220338984,
+      "LongestLowChangeRun": 18,
+      "LargestMinuteVarianceShare": 0.26044373557253186,
+      "LargestFiveVarianceShare": 0.8000413386320474
+    },
+    {
+      "Variant": "inner-patient-stretch",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6101694915254238,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.17598462676480195,
+      "LargestFiveVarianceShare": 0.5536531918776687
+    },
+    {
+      "Variant": "inner-patient-stretch-ready",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6271186440677966,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.19747126723513522,
+      "LargestFiveVarianceShare": 0.5913203161282209
+    },
+    {
+      "Variant": "inner-patient-stretch-ready",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7288135593220338,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.18611246663375045,
+      "LargestFiveVarianceShare": 0.6532365826888727
+    },
+    {
+      "Variant": "inner-patient-stretch-ready",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4745762711864407,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.12135670498834003,
+      "LargestFiveVarianceShare": 0.4502588688048476
+    },
+    {
+      "Variant": "inner-patient-stretch-ready",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5932203389830508,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.32633134321884866,
+      "LargestFiveVarianceShare": 0.5369562004601938
+    },
+    {
+      "Variant": "inner-patient-stretch-ready",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7796610169491526,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.8741899064148353,
+      "LargestFiveVarianceShare": 0.9487715027442287
+    },
+    {
+      "Variant": "inner-patient-stretch-ready",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6271186440677966,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.4903405467190205,
+      "LargestFiveVarianceShare": 0.8071505321780275
+    },
+    {
+      "Variant": "inner-patient-stretch-ready",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4915254237288136,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.08996461676240029,
+      "LargestFiveVarianceShare": 0.3983688434435004
+    },
+    {
+      "Variant": "inner-patient-stretch-ready",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.6101694915254238,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.11303173266166448,
+      "LargestFiveVarianceShare": 0.37823722186999803
+    },
+    {
+      "Variant": "inner-patient-stretch-ready",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6271186440677966,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.31029461855856943,
+      "LargestFiveVarianceShare": 0.6482780354344885
+    },
+    {
+      "Variant": "inner-patient-stretch-ready",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5423728813559322,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.15353997666517358,
+      "LargestFiveVarianceShare": 0.5669672829681862
+    },
+    {
+      "Variant": "inner-patient-stretch-ready",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.711864406779661,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.15550257751309318,
+      "LargestFiveVarianceShare": 0.5858662892849238
+    },
+    {
+      "Variant": "inner-patient-stretch-ready",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6101694915254238,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.28579250257203265,
+      "LargestFiveVarianceShare": 0.7347803416757451
+    },
+    {
+      "Variant": "inner-patient-stretch-ready",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5254237288135594,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.13158566486565815,
+      "LargestFiveVarianceShare": 0.421314053237666
+    },
+    {
+      "Variant": "inner-patient-stretch-ready",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.711864406779661,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.19195957901604646,
+      "LargestFiveVarianceShare": 0.5917496372687336
+    },
+    {
+      "Variant": "inner-patient-stretch-ready",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.1768629835867604,
+      "LargestFiveVarianceShare": 0.5068016945263499
+    },
+    {
+      "Variant": "inner-patient-stretch-ready",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4745762711864407,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.11946491984041775,
+      "LargestFiveVarianceShare": 0.4392447079165219
+    },
+    {
+      "Variant": "inner-patient-stretch-ready",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8135593220338984,
+      "LongestLowChangeRun": 18,
+      "LargestMinuteVarianceShare": 0.26044373557253186,
+      "LargestFiveVarianceShare": 0.8000413386320474
+    },
+    {
+      "Variant": "inner-patient-stretch-ready",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6101694915254238,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.17598462676480195,
+      "LargestFiveVarianceShare": 0.5536531918776687
+    },
+    {
+      "Variant": "last-reserve-balanced",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4406779661016949,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.14435019318485548,
+      "LargestFiveVarianceShare": 0.43408736204037685
+    },
+    {
+      "Variant": "last-reserve-balanced",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7288135593220338,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.2885439637043067,
+      "LargestFiveVarianceShare": 0.6619139486950347
+    },
+    {
+      "Variant": "last-reserve-balanced",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4576271186440678,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.13882201731542668,
+      "LargestFiveVarianceShare": 0.4544678006885737
+    },
+    {
+      "Variant": "last-reserve-balanced",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5932203389830508,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.1902205389425097,
+      "LargestFiveVarianceShare": 0.6074441507078514
+    },
+    {
+      "Variant": "last-reserve-balanced",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.6949152542372882,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.16030783997304307,
+      "LargestFiveVarianceShare": 0.6454759440945312
+    },
+    {
+      "Variant": "last-reserve-balanced",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6610169491525424,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.2575785314713275,
+      "LargestFiveVarianceShare": 0.6817593310980771
+    },
+    {
+      "Variant": "last-reserve-balanced",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6271186440677966,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.38619033844035594,
+      "LargestFiveVarianceShare": 0.6204226367708153
+    },
+    {
+      "Variant": "last-reserve-balanced",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7457627118644068,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.6355468708034056,
+      "LargestFiveVarianceShare": 0.8539609303348283
+    },
+    {
+      "Variant": "last-reserve-balanced",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6101694915254238,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.1457649460083507,
+      "LargestFiveVarianceShare": 0.504712067823061
+    },
+    {
+      "Variant": "last-reserve-balanced",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.423728813559322,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.13074896327284982,
+      "LargestFiveVarianceShare": 0.5100508446174085
+    },
+    {
+      "Variant": "last-reserve-balanced",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7627118644067796,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.1258832773017602,
+      "LargestFiveVarianceShare": 0.49161532406859987
+    },
+    {
+      "Variant": "last-reserve-balanced",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6779661016949152,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.17302707232254988,
+      "LargestFiveVarianceShare": 0.4523165200013371
+    },
+    {
+      "Variant": "last-reserve-balanced",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.12498986305373293,
+      "LargestFiveVarianceShare": 0.41457836985276014
+    },
+    {
+      "Variant": "last-reserve-balanced",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8135593220338984,
+      "LongestLowChangeRun": 15,
+      "LargestMinuteVarianceShare": 0.18111287977158824,
+      "LargestFiveVarianceShare": 0.5683709667169514
+    },
+    {
+      "Variant": "last-reserve-balanced",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6271186440677966,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.13089954486677527,
+      "LargestFiveVarianceShare": 0.44117026759007155
+    },
+    {
+      "Variant": "last-reserve-balanced",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.15284946129436994,
+      "LargestFiveVarianceShare": 0.4255981496521848
+    },
+    {
+      "Variant": "last-reserve-balanced",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8135593220338984,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.18940479903516638,
+      "LargestFiveVarianceShare": 0.6725920593469875
+    },
+    {
+      "Variant": "last-reserve-balanced",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4406779661016949,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.17872132385291112,
+      "LargestFiveVarianceShare": 0.4576522167266077
+    },
+    {
+      "Variant": "last-reserve-contiguous",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6101694915254238,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.2473689465367832,
+      "LargestFiveVarianceShare": 0.5988812136130651
+    },
+    {
+      "Variant": "last-reserve-contiguous",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.711864406779661,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.9054016054368844,
+      "LargestFiveVarianceShare": 0.9705943817100835
+    },
+    {
+      "Variant": "last-reserve-contiguous",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4745762711864407,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.16543690138614672,
+      "LargestFiveVarianceShare": 0.5006674300915754
+    },
+    {
+      "Variant": "last-reserve-contiguous",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6101694915254238,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.0904137642972956,
+      "LargestFiveVarianceShare": 0.2950640880772529
+    },
+    {
+      "Variant": "last-reserve-contiguous",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7627118644067796,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.8261244604430914,
+      "LargestFiveVarianceShare": 0.9012568721365898
+    },
+    {
+      "Variant": "last-reserve-contiguous",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6610169491525424,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.32444434219506324,
+      "LargestFiveVarianceShare": 0.6525136524311438
+    },
+    {
+      "Variant": "last-reserve-contiguous",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6779661016949152,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.1462787960995343,
+      "LargestFiveVarianceShare": 0.4457991042862609
+    },
+    {
+      "Variant": "last-reserve-contiguous",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8135593220338984,
+      "LongestLowChangeRun": 13,
+      "LargestMinuteVarianceShare": 0.8885459401338139,
+      "LargestFiveVarianceShare": 0.9642096662280752
+    },
+    {
+      "Variant": "last-reserve-contiguous",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.711864406779661,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.07901347218616182,
+      "LargestFiveVarianceShare": 0.3494961210556481
+    },
+    {
+      "Variant": "last-reserve-contiguous",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 12,
+      "LargestMinuteVarianceShare": 0.20527198249652312,
+      "LargestFiveVarianceShare": 0.4850672041729612
+    },
+    {
+      "Variant": "last-reserve-contiguous",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7457627118644068,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.7875192244033131,
+      "LargestFiveVarianceShare": 0.9443772830092719
+    },
+    {
+      "Variant": "last-reserve-contiguous",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.7966101694915254,
+      "LongestLowChangeRun": 17,
+      "LargestMinuteVarianceShare": 0.12192801230294396,
+      "LargestFiveVarianceShare": 0.4475459230079396
+    },
+    {
+      "Variant": "last-reserve-contiguous",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.7627118644067796,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.21763489844903466,
+      "LargestFiveVarianceShare": 0.5684891933452507
+    },
+    {
+      "Variant": "last-reserve-contiguous",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7627118644067796,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.49003009436672273,
+      "LargestFiveVarianceShare": 0.7103062058462619
+    },
+    {
+      "Variant": "last-reserve-contiguous",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6610169491525424,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.08892836815877489,
+      "LargestFiveVarianceShare": 0.34086428858034884
+    },
+    {
+      "Variant": "last-reserve-contiguous",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6610169491525424,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.29034901630599363,
+      "LargestFiveVarianceShare": 0.5549900370613189
+    },
+    {
+      "Variant": "last-reserve-contiguous",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7796610169491526,
+      "LongestLowChangeRun": 14,
+      "LargestMinuteVarianceShare": 0.33971683917360607,
+      "LargestFiveVarianceShare": 0.6990323431467791
+    },
+    {
+      "Variant": "last-reserve-contiguous",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.711864406779661,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.09729671076416327,
+      "LargestFiveVarianceShare": 0.3470320050657269
+    },
+    {
+      "Variant": "last-reserve-dense",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5254237288135594,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.15575986485671023,
+      "LargestFiveVarianceShare": 0.4163882110072679
+    },
+    {
+      "Variant": "last-reserve-dense",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7796610169491526,
+      "LongestLowChangeRun": 13,
+      "LargestMinuteVarianceShare": 0.870984520512496,
+      "LargestFiveVarianceShare": 0.9528943819187061
+    },
+    {
+      "Variant": "last-reserve-dense",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4406779661016949,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.12964324599809282,
+      "LargestFiveVarianceShare": 0.512614391781346
+    },
+    {
+      "Variant": "last-reserve-dense",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.423728813559322,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.14926961563551203,
+      "LargestFiveVarianceShare": 0.5331556506547563
+    },
+    {
+      "Variant": "last-reserve-dense",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7966101694915254,
+      "LongestLowChangeRun": 12,
+      "LargestMinuteVarianceShare": 0.5415740496318165,
+      "LargestFiveVarianceShare": 0.9218873434010814
+    },
+    {
+      "Variant": "last-reserve-dense",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.22149550023821166,
+      "LargestFiveVarianceShare": 0.5268440848785315
+    },
+    {
+      "Variant": "last-reserve-dense",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.576271186440678,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.19695009735052502,
+      "LargestFiveVarianceShare": 0.45977243593299555
+    },
+    {
+      "Variant": "last-reserve-dense",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7966101694915254,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.2115958071792563,
+      "LargestFiveVarianceShare": 0.7037797803312287
+    },
+    {
+      "Variant": "last-reserve-dense",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.1551388642215848,
+      "LargestFiveVarianceShare": 0.40538648195360694
+    },
+    {
+      "Variant": "last-reserve-dense",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.18590941445668746,
+      "LargestFiveVarianceShare": 0.41767016564183074
+    },
+    {
+      "Variant": "last-reserve-dense",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.864406779661017,
+      "LongestLowChangeRun": 22,
+      "LargestMinuteVarianceShare": 0.5690623864233956,
+      "LargestFiveVarianceShare": 0.8694756204035348
+    },
+    {
+      "Variant": "last-reserve-dense",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5254237288135594,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.0989754589965642,
+      "LargestFiveVarianceShare": 0.3917314616704561
+    },
+    {
+      "Variant": "last-reserve-dense",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6440677966101694,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.1980456229869047,
+      "LargestFiveVarianceShare": 0.4748828703165847
+    },
+    {
+      "Variant": "last-reserve-dense",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.864406779661017,
+      "LongestLowChangeRun": 15,
+      "LargestMinuteVarianceShare": 0.2177400757159275,
+      "LargestFiveVarianceShare": 0.7658638180492445
+    },
+    {
+      "Variant": "last-reserve-dense",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.423728813559322,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.16337948640098607,
+      "LargestFiveVarianceShare": 0.4923504405464858
+    },
+    {
+      "Variant": "last-reserve-dense",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6101694915254238,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.2580991806618578,
+      "LargestFiveVarianceShare": 0.5417266134609338
+    },
+    {
+      "Variant": "last-reserve-dense",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.847457627118644,
+      "LongestLowChangeRun": 13,
+      "LargestMinuteVarianceShare": 0.17859511415433416,
+      "LargestFiveVarianceShare": 0.6488656247711467
+    },
+    {
+      "Variant": "last-reserve-dense",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6610169491525424,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.15568632865046256,
+      "LargestFiveVarianceShare": 0.4856156389762502
+    },
+    {
+      "Variant": "last-reserve-diverse",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5254237288135594,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.13718589355290062,
+      "LargestFiveVarianceShare": 0.48056244971661605
+    },
+    {
+      "Variant": "last-reserve-diverse",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8135593220338984,
+      "LongestLowChangeRun": 13,
+      "LargestMinuteVarianceShare": 0.2550610227814467,
+      "LargestFiveVarianceShare": 0.7508203522101292
+    },
+    {
+      "Variant": "last-reserve-diverse",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.1011318908584819,
+      "LargestFiveVarianceShare": 0.3949945562470085
+    },
+    {
+      "Variant": "last-reserve-diverse",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.14786692182623004,
+      "LargestFiveVarianceShare": 0.4898377468290894
+    },
+    {
+      "Variant": "last-reserve-diverse",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.6949152542372882,
+      "LongestLowChangeRun": 14,
+      "LargestMinuteVarianceShare": 0.3130048968266868,
+      "LargestFiveVarianceShare": 0.6957114174965042
+    },
+    {
+      "Variant": "last-reserve-diverse",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.423728813559322,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.33663182523978374,
+      "LargestFiveVarianceShare": 0.5728228353987644
+    },
+    {
+      "Variant": "last-reserve-diverse",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.3728813559322034,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.1348405574400515,
+      "LargestFiveVarianceShare": 0.39734478822898966
+    },
+    {
+      "Variant": "last-reserve-diverse",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7627118644067796,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.17907362683021832,
+      "LargestFiveVarianceShare": 0.6026729962402603
+    },
+    {
+      "Variant": "last-reserve-diverse",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5423728813559322,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.18883645122199394,
+      "LargestFiveVarianceShare": 0.5416542477839931
+    },
+    {
+      "Variant": "last-reserve-diverse",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4406779661016949,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.15987781646623467,
+      "LargestFiveVarianceShare": 0.551012774188162
+    },
+    {
+      "Variant": "last-reserve-diverse",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.864406779661017,
+      "LongestLowChangeRun": 18,
+      "LargestMinuteVarianceShare": 0.216652177390104,
+      "LargestFiveVarianceShare": 0.667039994558822
+    },
+    {
+      "Variant": "last-reserve-diverse",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4406779661016949,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.2381676823460911,
+      "LargestFiveVarianceShare": 0.5796201163898071
+    },
+    {
+      "Variant": "last-reserve-diverse",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.576271186440678,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.09455168771813813,
+      "LargestFiveVarianceShare": 0.34703049185267065
+    },
+    {
+      "Variant": "last-reserve-diverse",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7288135593220338,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.2610533324095393,
+      "LargestFiveVarianceShare": 0.7264938050467923
+    },
+    {
+      "Variant": "last-reserve-diverse",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.3728813559322034,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.14176929195563423,
+      "LargestFiveVarianceShare": 0.4678059716365019
+    },
+    {
+      "Variant": "last-reserve-diverse",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.30179179447096893,
+      "LargestFiveVarianceShare": 0.5126255930331463
+    },
+    {
+      "Variant": "last-reserve-diverse",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7457627118644068,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.1394520050697016,
+      "LargestFiveVarianceShare": 0.5262314089561635
+    },
+    {
+      "Variant": "last-reserve-diverse",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4745762711864407,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.15404824956363752,
+      "LargestFiveVarianceShare": 0.44004215107329364
+    },
+    {
+      "Variant": "last-reserve-diverse-ready",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5254237288135594,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.13718589355290062,
+      "LargestFiveVarianceShare": 0.48056244971661605
+    },
+    {
+      "Variant": "last-reserve-diverse-ready",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8135593220338984,
+      "LongestLowChangeRun": 13,
+      "LargestMinuteVarianceShare": 0.2550610227814467,
+      "LargestFiveVarianceShare": 0.7508203522101292
+    },
+    {
+      "Variant": "last-reserve-diverse-ready",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.1011318908584819,
+      "LargestFiveVarianceShare": 0.3949945562470085
+    },
+    {
+      "Variant": "last-reserve-diverse-ready",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.14786692182623004,
+      "LargestFiveVarianceShare": 0.4898377468290894
+    },
+    {
+      "Variant": "last-reserve-diverse-ready",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.6949152542372882,
+      "LongestLowChangeRun": 14,
+      "LargestMinuteVarianceShare": 0.3130048968266868,
+      "LargestFiveVarianceShare": 0.6957114174965042
+    },
+    {
+      "Variant": "last-reserve-diverse-ready",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.423728813559322,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.33663182523978374,
+      "LargestFiveVarianceShare": 0.5728228353987644
+    },
+    {
+      "Variant": "last-reserve-diverse-ready",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.3728813559322034,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.1348405574400515,
+      "LargestFiveVarianceShare": 0.39734478822898966
+    },
+    {
+      "Variant": "last-reserve-diverse-ready",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7627118644067796,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.17907362683021832,
+      "LargestFiveVarianceShare": 0.6026729962402603
+    },
+    {
+      "Variant": "last-reserve-diverse-ready",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5423728813559322,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.18883645122199394,
+      "LargestFiveVarianceShare": 0.5416542477839931
+    },
+    {
+      "Variant": "last-reserve-diverse-ready",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4406779661016949,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.15987781646623467,
+      "LargestFiveVarianceShare": 0.551012774188162
+    },
+    {
+      "Variant": "last-reserve-diverse-ready",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.864406779661017,
+      "LongestLowChangeRun": 18,
+      "LargestMinuteVarianceShare": 0.216652177390104,
+      "LargestFiveVarianceShare": 0.667039994558822
+    },
+    {
+      "Variant": "last-reserve-diverse-ready",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4406779661016949,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.2381676823460911,
+      "LargestFiveVarianceShare": 0.5796201163898071
+    },
+    {
+      "Variant": "last-reserve-diverse-ready",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.576271186440678,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.09455168771813813,
+      "LargestFiveVarianceShare": 0.34703049185267065
+    },
+    {
+      "Variant": "last-reserve-diverse-ready",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7288135593220338,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.2610533324095393,
+      "LargestFiveVarianceShare": 0.7264938050467923
+    },
+    {
+      "Variant": "last-reserve-diverse-ready",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.3728813559322034,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.14176929195563423,
+      "LargestFiveVarianceShare": 0.4678059716365019
+    },
+    {
+      "Variant": "last-reserve-diverse-ready",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.30179179447096893,
+      "LargestFiveVarianceShare": 0.5126255930331463
+    },
+    {
+      "Variant": "last-reserve-diverse-ready",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7457627118644068,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.1394520050697016,
+      "LargestFiveVarianceShare": 0.5262314089561635
+    },
+    {
+      "Variant": "last-reserve-diverse-ready",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4745762711864407,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.15404824956363752,
+      "LargestFiveVarianceShare": 0.44004215107329364
+    },
+    {
+      "Variant": "last-reserve-faders",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6610169491525424,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.3492554438562956,
+      "LargestFiveVarianceShare": 0.5859065000664414
+    },
+    {
+      "Variant": "last-reserve-faders",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7457627118644068,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.8595254680533876,
+      "LargestFiveVarianceShare": 0.9352601007163123
+    },
+    {
+      "Variant": "last-reserve-faders",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.10666940993013597,
+      "LargestFiveVarianceShare": 0.3744459911766229
+    },
+    {
+      "Variant": "last-reserve-faders",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6610169491525424,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.13580971845431086,
+      "LargestFiveVarianceShare": 0.46257087292317245
+    },
+    {
+      "Variant": "last-reserve-faders",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7457627118644068,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.3045626661408082,
+      "LargestFiveVarianceShare": 0.7338477275826363
+    },
+    {
+      "Variant": "last-reserve-faders",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4576271186440678,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.2235283368296477,
+      "LargestFiveVarianceShare": 0.5421340156903831
+    },
+    {
+      "Variant": "last-reserve-faders",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6271186440677966,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.11887979468980363,
+      "LargestFiveVarianceShare": 0.43559531694939013
+    },
+    {
+      "Variant": "last-reserve-faders",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8135593220338984,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.24067750393432252,
+      "LargestFiveVarianceShare": 0.6687296836861272
+    },
+    {
+      "Variant": "last-reserve-faders",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5932203389830508,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.1294641371581155,
+      "LargestFiveVarianceShare": 0.41622745860069654
+    },
+    {
+      "Variant": "last-reserve-faders",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6271186440677966,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.21925412898690314,
+      "LargestFiveVarianceShare": 0.5561670205873176
+    },
+    {
+      "Variant": "last-reserve-faders",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8135593220338984,
+      "LongestLowChangeRun": 17,
+      "LargestMinuteVarianceShare": 0.12873267406766722,
+      "LargestFiveVarianceShare": 0.5508733213960632
+    },
+    {
+      "Variant": "last-reserve-faders",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.576271186440678,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.4112515714712905,
+      "LargestFiveVarianceShare": 0.6117955976865274
+    },
+    {
+      "Variant": "last-reserve-faders",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6779661016949152,
+      "LongestLowChangeRun": 14,
+      "LargestMinuteVarianceShare": 0.1949111782020125,
+      "LargestFiveVarianceShare": 0.5021971240073141
+    },
+    {
+      "Variant": "last-reserve-faders",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.711864406779661,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.691337494446108,
+      "LargestFiveVarianceShare": 0.8541844282766942
+    },
+    {
+      "Variant": "last-reserve-faders",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.2242773229529601,
+      "LargestFiveVarianceShare": 0.5615379223832839
+    },
+    {
+      "Variant": "last-reserve-faders",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.7627118644067796,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.157055121516351,
+      "LargestFiveVarianceShare": 0.5052568217965776
+    },
+    {
+      "Variant": "last-reserve-faders",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7627118644067796,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.1356500200053766,
+      "LargestFiveVarianceShare": 0.45831752707528306
+    },
+    {
+      "Variant": "last-reserve-faders",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5254237288135594,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.09221866611916504,
+      "LargestFiveVarianceShare": 0.3679320809477294
+    },
+    {
+      "Variant": "last-reserve-inner",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.13239287665735008,
+      "LargestFiveVarianceShare": 0.5412675951273613
+    },
+    {
+      "Variant": "last-reserve-inner",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7457627118644068,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.6395766843206855,
+      "LargestFiveVarianceShare": 0.9509289717706858
+    },
+    {
+      "Variant": "last-reserve-inner",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4745762711864407,
+      "LongestLowChangeRun": 3,
+      "LargestMinuteVarianceShare": 0.14661194388088367,
+      "LargestFiveVarianceShare": 0.5140620858357065
+    },
+    {
+      "Variant": "last-reserve-inner",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4915254237288136,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.1473235848060932,
+      "LargestFiveVarianceShare": 0.5093701243962708
+    },
+    {
+      "Variant": "last-reserve-inner",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.864406779661017,
+      "LongestLowChangeRun": 26,
+      "LargestMinuteVarianceShare": 0.4817754570054054,
+      "LargestFiveVarianceShare": 0.7238425259685777
+    },
+    {
+      "Variant": "last-reserve-inner",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5932203389830508,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.13728896198220286,
+      "LargestFiveVarianceShare": 0.5376306948635186
+    },
+    {
+      "Variant": "last-reserve-inner",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6271186440677966,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.11428346743810991,
+      "LargestFiveVarianceShare": 0.3638894620726045
+    },
+    {
+      "Variant": "last-reserve-inner",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.6610169491525424,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.7845702695158208,
+      "LargestFiveVarianceShare": 0.9100545762916643
+    },
+    {
+      "Variant": "last-reserve-inner",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5932203389830508,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.24339573281284313,
+      "LargestFiveVarianceShare": 0.5794584758180346
+    },
+    {
+      "Variant": "last-reserve-inner",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4576271186440678,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.1147354515458377,
+      "LargestFiveVarianceShare": 0.39726915263006246
+    },
+    {
+      "Variant": "last-reserve-inner",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7796610169491526,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.3610941666340591,
+      "LargestFiveVarianceShare": 0.7317872809726634
+    },
+    {
+      "Variant": "last-reserve-inner",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.31102501683971634,
+      "LargestFiveVarianceShare": 0.5278384409293337
+    },
+    {
+      "Variant": "last-reserve-inner",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5423728813559322,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.0708544777599333,
+      "LargestFiveVarianceShare": 0.33097772427725664
+    },
+    {
+      "Variant": "last-reserve-inner",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7796610169491526,
+      "LongestLowChangeRun": 13,
+      "LargestMinuteVarianceShare": 0.2170232309702498,
+      "LargestFiveVarianceShare": 0.6502349915632913
+    },
+    {
+      "Variant": "last-reserve-inner",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5254237288135594,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.1536213282622857,
+      "LargestFiveVarianceShare": 0.479101268749981
+    },
+    {
+      "Variant": "last-reserve-inner",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5423728813559322,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.17761038235655044,
+      "LargestFiveVarianceShare": 0.5060567070745514
+    },
+    {
+      "Variant": "last-reserve-inner",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7627118644067796,
+      "LongestLowChangeRun": 12,
+      "LargestMinuteVarianceShare": 0.18132812623073147,
+      "LargestFiveVarianceShare": 0.5901440096960356
+    },
+    {
+      "Variant": "last-reserve-inner",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5932203389830508,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.1764172449637864,
+      "LargestFiveVarianceShare": 0.5596694871386008
+    },
+    {
+      "Variant": "last-reserve-tight",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4406779661016949,
+      "LongestLowChangeRun": 12,
+      "LargestMinuteVarianceShare": 0.187010888796666,
+      "LargestFiveVarianceShare": 0.5367655004078151
+    },
+    {
+      "Variant": "last-reserve-tight",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7966101694915254,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.1860785012253893,
+      "LargestFiveVarianceShare": 0.6812662186621693
+    },
+    {
+      "Variant": "last-reserve-tight",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5423728813559322,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.15317565006617426,
+      "LargestFiveVarianceShare": 0.43899429558668357
+    },
+    {
+      "Variant": "last-reserve-tight",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4406779661016949,
+      "LongestLowChangeRun": 3,
+      "LargestMinuteVarianceShare": 0.10037139414849175,
+      "LargestFiveVarianceShare": 0.39655174675296107
+    },
+    {
+      "Variant": "last-reserve-tight",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.711864406779661,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.13484227484909272,
+      "LargestFiveVarianceShare": 0.49163399051314477
+    },
+    {
+      "Variant": "last-reserve-tight",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.10235359390611984,
+      "LargestFiveVarianceShare": 0.4048095497575522
+    },
+    {
+      "Variant": "last-reserve-tight",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4745762711864407,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.11337516100642145,
+      "LargestFiveVarianceShare": 0.4807024733484705
+    },
+    {
+      "Variant": "last-reserve-tight",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.711864406779661,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.8610043814102915,
+      "LargestFiveVarianceShare": 0.9433936352136525
+    },
+    {
+      "Variant": "last-reserve-tight",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4915254237288136,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.14857010239360705,
+      "LargestFiveVarianceShare": 0.5325307377568957
+    },
+    {
+      "Variant": "last-reserve-tight",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4406779661016949,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.15987781646623467,
+      "LargestFiveVarianceShare": 0.551012774188162
+    },
+    {
+      "Variant": "last-reserve-tight",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.864406779661017,
+      "LongestLowChangeRun": 18,
+      "LargestMinuteVarianceShare": 0.216652177390104,
+      "LargestFiveVarianceShare": 0.667039994558822
+    },
+    {
+      "Variant": "last-reserve-tight",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4406779661016949,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.2381676823460911,
+      "LargestFiveVarianceShare": 0.5796201163898071
+    },
+    {
+      "Variant": "last-reserve-tight",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6440677966101694,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.1429245471964254,
+      "LargestFiveVarianceShare": 0.4173475475818023
+    },
+    {
+      "Variant": "last-reserve-tight",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7457627118644068,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.6764538750365635,
+      "LargestFiveVarianceShare": 0.8948874668879835
+    },
+    {
+      "Variant": "last-reserve-tight",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4745762711864407,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.20434981157648635,
+      "LargestFiveVarianceShare": 0.5499283066801242
+    },
+    {
+      "Variant": "last-reserve-tight",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5254237288135594,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.17615801272086373,
+      "LargestFiveVarianceShare": 0.4497661346309779
+    },
+    {
+      "Variant": "last-reserve-tight",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.711864406779661,
+      "LongestLowChangeRun": 12,
+      "LargestMinuteVarianceShare": 0.16926670253495799,
+      "LargestFiveVarianceShare": 0.4783363345354162
+    },
+    {
+      "Variant": "last-reserve-tight",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5932203389830508,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.13931756537714596,
+      "LargestFiveVarianceShare": 0.43546027283180566
+    },
+    {
+      "Variant": "last-reserve-withdraw",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.3728813559322034,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.19026996060575949,
+      "LargestFiveVarianceShare": 0.42178891778387484
+    },
+    {
+      "Variant": "last-reserve-withdraw",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7288135593220338,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.8687394212471217,
+      "LargestFiveVarianceShare": 0.9348057177917893
+    },
+    {
+      "Variant": "last-reserve-withdraw",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.10161139010772505,
+      "LargestFiveVarianceShare": 0.3991581486261222
+    },
+    {
+      "Variant": "last-reserve-withdraw",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.3728813559322034,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.11035337512340858,
+      "LargestFiveVarianceShare": 0.40839821889804123
+    },
+    {
+      "Variant": "last-reserve-withdraw",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.6271186440677966,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.13096848011593556,
+      "LargestFiveVarianceShare": 0.5008206857324687
+    },
+    {
+      "Variant": "last-reserve-withdraw",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4406779661016949,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.13309819633894246,
+      "LargestFiveVarianceShare": 0.45353325349445156
+    },
+    {
+      "Variant": "last-reserve-withdraw",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4067796610169492,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.22026660227131512,
+      "LargestFiveVarianceShare": 0.5188931147812956
+    },
+    {
+      "Variant": "last-reserve-withdraw",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7457627118644068,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.43142837332952216,
+      "LargestFiveVarianceShare": 0.7396397190082054
+    },
+    {
+      "Variant": "last-reserve-withdraw",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4406779661016949,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.2379806628513718,
+      "LargestFiveVarianceShare": 0.6273222051602922
+    },
+    {
+      "Variant": "last-reserve-withdraw",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5254237288135594,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.17710548793197814,
+      "LargestFiveVarianceShare": 0.5349983341057638
+    },
+    {
+      "Variant": "last-reserve-withdraw",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.6949152542372882,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.20442215617938017,
+      "LargestFiveVarianceShare": 0.5724399475055193
+    },
+    {
+      "Variant": "last-reserve-withdraw",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4406779661016949,
+      "LongestLowChangeRun": 3,
+      "LargestMinuteVarianceShare": 0.11075393099710366,
+      "LargestFiveVarianceShare": 0.3949167448295472
+    },
+    {
+      "Variant": "last-reserve-withdraw",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5423728813559322,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.19063483725007133,
+      "LargestFiveVarianceShare": 0.48052039349246733
+    },
+    {
+      "Variant": "last-reserve-withdraw",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8305084745762712,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.17555842194907056,
+      "LargestFiveVarianceShare": 0.639330071809493
+    },
+    {
+      "Variant": "last-reserve-withdraw",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.3559322033898305,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.1448543579215727,
+      "LargestFiveVarianceShare": 0.41614372766818525
+    },
+    {
+      "Variant": "last-reserve-withdraw",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6440677966101694,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.2280046017530694,
+      "LargestFiveVarianceShare": 0.6460003185203141
+    },
+    {
+      "Variant": "last-reserve-withdraw",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8135593220338984,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.24107996623301733,
+      "LargestFiveVarianceShare": 0.702274184835395
+    },
+    {
+      "Variant": "last-reserve-withdraw",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.11361219918844921,
+      "LargestFiveVarianceShare": 0.4588619961586099
+    },
+    {
+      "Variant": "mid-reserve-diverse",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.2176049515388502,
+      "LargestFiveVarianceShare": 0.5196716378580173
+    },
+    {
+      "Variant": "mid-reserve-diverse",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7288135593220338,
+      "LongestLowChangeRun": 20,
+      "LargestMinuteVarianceShare": 0.202014815066747,
+      "LargestFiveVarianceShare": 0.5472858592819541
+    },
+    {
+      "Variant": "mid-reserve-diverse",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.3898305084745763,
+      "LongestLowChangeRun": 3,
+      "LargestMinuteVarianceShare": 0.1759410512922254,
+      "LargestFiveVarianceShare": 0.3895809582062653
+    },
+    {
+      "Variant": "mid-reserve-diverse",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.11188568947440337,
+      "LargestFiveVarianceShare": 0.4242377690549344
+    },
+    {
+      "Variant": "mid-reserve-diverse",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8813559322033898,
+      "LongestLowChangeRun": 26,
+      "LargestMinuteVarianceShare": 0.4276750209904305,
+      "LargestFiveVarianceShare": 0.8021405105148113
+    },
+    {
+      "Variant": "mid-reserve-diverse",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5423728813559322,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.09495166301736246,
+      "LargestFiveVarianceShare": 0.37230177731546643
+    },
+    {
+      "Variant": "mid-reserve-diverse",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6271186440677966,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.10504055576257965,
+      "LargestFiveVarianceShare": 0.4140981382752675
+    },
+    {
+      "Variant": "mid-reserve-diverse",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7627118644067796,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.34313819382232014,
+      "LargestFiveVarianceShare": 0.7793198849488809
+    },
+    {
+      "Variant": "mid-reserve-diverse",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.7627118644067796,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.27263745153582064,
+      "LargestFiveVarianceShare": 0.7053057061201026
+    },
+    {
+      "Variant": "mid-reserve-diverse",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.10755695771201512,
+      "LargestFiveVarianceShare": 0.39326455987439857
+    },
+    {
+      "Variant": "mid-reserve-diverse",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7796610169491526,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.5266478496936631,
+      "LargestFiveVarianceShare": 0.7969540757459187
+    },
+    {
+      "Variant": "mid-reserve-diverse",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.7457627118644068,
+      "LongestLowChangeRun": 20,
+      "LargestMinuteVarianceShare": 0.12790167370175975,
+      "LargestFiveVarianceShare": 0.5062032401378713
+    },
+    {
+      "Variant": "mid-reserve-diverse",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.7288135593220338,
+      "LongestLowChangeRun": 17,
+      "LargestMinuteVarianceShare": 0.3596067954276509,
+      "LargestFiveVarianceShare": 0.7022486562456862
+    },
+    {
+      "Variant": "mid-reserve-diverse",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7796610169491526,
+      "LongestLowChangeRun": 12,
+      "LargestMinuteVarianceShare": 0.15976993636829503,
+      "LargestFiveVarianceShare": 0.6106539667629106
+    },
+    {
+      "Variant": "mid-reserve-diverse",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5423728813559322,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.12053684753585155,
+      "LargestFiveVarianceShare": 0.34986944286822685
+    },
+    {
+      "Variant": "mid-reserve-diverse",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.7288135593220338,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.27065792247924,
+      "LargestFiveVarianceShare": 0.5716693865569248
+    },
+    {
+      "Variant": "mid-reserve-diverse",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7627118644067796,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.8899873978318128,
+      "LargestFiveVarianceShare": 0.9489659936568036
+    },
+    {
+      "Variant": "mid-reserve-diverse",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6779661016949152,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.16065427311684002,
+      "LargestFiveVarianceShare": 0.5766721737934465
+    },
+    {
+      "Variant": "mid-reserve-withdraw",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6440677966101694,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.20663818086811467,
+      "LargestFiveVarianceShare": 0.604707176942171
+    },
+    {
+      "Variant": "mid-reserve-withdraw",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.864406779661017,
+      "LongestLowChangeRun": 26,
+      "LargestMinuteVarianceShare": 0.36430424539327233,
+      "LargestFiveVarianceShare": 0.8760787969273177
+    },
+    {
+      "Variant": "mid-reserve-withdraw",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6610169491525424,
+      "LongestLowChangeRun": 17,
+      "LargestMinuteVarianceShare": 0.1405380848207048,
+      "LargestFiveVarianceShare": 0.4414444039683173
+    },
+    {
+      "Variant": "mid-reserve-withdraw",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.144616826948201,
+      "LargestFiveVarianceShare": 0.4851793533271234
+    },
+    {
+      "Variant": "mid-reserve-withdraw",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7457627118644068,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.2909103885052135,
+      "LargestFiveVarianceShare": 0.6440300269948792
+    },
+    {
+      "Variant": "mid-reserve-withdraw",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6610169491525424,
+      "LongestLowChangeRun": 20,
+      "LargestMinuteVarianceShare": 0.2332025121467936,
+      "LargestFiveVarianceShare": 0.6887516827097417
+    },
+    {
+      "Variant": "mid-reserve-withdraw",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.711864406779661,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.22029576906510465,
+      "LargestFiveVarianceShare": 0.659165019895544
+    },
+    {
+      "Variant": "mid-reserve-withdraw",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.6779661016949152,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.40309955889993326,
+      "LargestFiveVarianceShare": 0.6818874712814907
+    },
+    {
+      "Variant": "mid-reserve-withdraw",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6440677966101694,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.5257260796221263,
+      "LargestFiveVarianceShare": 0.7085244406502698
+    },
+    {
+      "Variant": "mid-reserve-withdraw",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.7288135593220338,
+      "LongestLowChangeRun": 14,
+      "LargestMinuteVarianceShare": 0.2950121501289082,
+      "LargestFiveVarianceShare": 0.577104752937622
+    },
+    {
+      "Variant": "mid-reserve-withdraw",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.847457627118644,
+      "LongestLowChangeRun": 13,
+      "LargestMinuteVarianceShare": 0.28677685821440835,
+      "LargestFiveVarianceShare": 0.7956297057765083
+    },
+    {
+      "Variant": "mid-reserve-withdraw",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6101694915254238,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.18948519969336103,
+      "LargestFiveVarianceShare": 0.5671444326909056
+    },
+    {
+      "Variant": "mid-reserve-withdraw",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.7796610169491526,
+      "LongestLowChangeRun": 16,
+      "LargestMinuteVarianceShare": 0.18642377351985684,
+      "LargestFiveVarianceShare": 0.5961367417467174
+    },
+    {
+      "Variant": "mid-reserve-withdraw",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7966101694915254,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.2920379042619404,
+      "LargestFiveVarianceShare": 0.699194855638626
+    },
+    {
+      "Variant": "mid-reserve-withdraw",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.711864406779661,
+      "LongestLowChangeRun": 14,
+      "LargestMinuteVarianceShare": 0.21609320952497685,
+      "LargestFiveVarianceShare": 0.5161990315596535
+    },
+    {
+      "Variant": "mid-reserve-withdraw",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.7627118644067796,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.3132047056323535,
+      "LargestFiveVarianceShare": 0.6778423194852298
+    },
+    {
+      "Variant": "mid-reserve-withdraw",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8813559322033898,
+      "LongestLowChangeRun": 17,
+      "LargestMinuteVarianceShare": 0.25124560877421537,
+      "LargestFiveVarianceShare": 0.8585632826556474
+    },
+    {
+      "Variant": "mid-reserve-withdraw",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.7457627118644068,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.21907812380333724,
+      "LargestFiveVarianceShare": 0.6289616147068582
+    },
+    {
+      "Variant": "midquote",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6949152542372882,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.16843555936470267,
+      "LargestFiveVarianceShare": 0.561322301761145
+    },
+    {
+      "Variant": "midquote",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.9661016949152542,
+      "LongestLowChangeRun": 53,
+      "LargestMinuteVarianceShare": 0.7273149079785352,
+      "LargestFiveVarianceShare": 0.9363916477081016
+    },
+    {
+      "Variant": "midquote",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6949152542372882,
+      "LongestLowChangeRun": 12,
+      "LargestMinuteVarianceShare": 0.21693072468178046,
+      "LargestFiveVarianceShare": 0.5962869260936107
+    },
+    {
+      "Variant": "midquote",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.847457627118644,
+      "LongestLowChangeRun": 28,
+      "LargestMinuteVarianceShare": 0.35459003955136065,
+      "LargestFiveVarianceShare": 0.723625436796797
+    },
+    {
+      "Variant": "midquote",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.9322033898305084,
+      "LongestLowChangeRun": 34,
+      "LargestMinuteVarianceShare": 0.5797829520998876,
+      "LargestFiveVarianceShare": 0.948151730246611
+    },
+    {
+      "Variant": "midquote",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.9152542372881356,
+      "LongestLowChangeRun": 30,
+      "LargestMinuteVarianceShare": 0.16710476545490718,
+      "LargestFiveVarianceShare": 0.4764273687666694
+    },
+    {
+      "Variant": "midquote",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.8813559322033898,
+      "LongestLowChangeRun": 33,
+      "LargestMinuteVarianceShare": 0.2671183866705159,
+      "LargestFiveVarianceShare": 0.7425065987500258
+    },
+    {
+      "Variant": "midquote",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.9322033898305084,
+      "LongestLowChangeRun": 49,
+      "LargestMinuteVarianceShare": 0.5606879157204961,
+      "LargestFiveVarianceShare": 0.9135833434152456
+    },
+    {
+      "Variant": "midquote",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.9491525423728814,
+      "LongestLowChangeRun": 29,
+      "LargestMinuteVarianceShare": 0.09159686255280058,
+      "LargestFiveVarianceShare": 0.4020002609233083
+    },
+    {
+      "Variant": "midquote",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6949152542372882,
+      "LongestLowChangeRun": 12,
+      "LargestMinuteVarianceShare": 0.17314319284582816,
+      "LargestFiveVarianceShare": 0.5319638250366073
+    },
+    {
+      "Variant": "midquote",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.9152542372881356,
+      "LongestLowChangeRun": 28,
+      "LargestMinuteVarianceShare": 0.3465246552163345,
+      "LargestFiveVarianceShare": 0.8802544299824433
+    },
+    {
+      "Variant": "midquote",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.7966101694915254,
+      "LongestLowChangeRun": 12,
+      "LargestMinuteVarianceShare": 0.29478184920291456,
+      "LargestFiveVarianceShare": 0.6957347709812275
+    },
+    {
+      "Variant": "midquote",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.7796610169491526,
+      "LongestLowChangeRun": 16,
+      "LargestMinuteVarianceShare": 0.28107561348225396,
+      "LargestFiveVarianceShare": 0.6584452298652221
+    },
+    {
+      "Variant": "midquote",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8135593220338984,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.24411657415020915,
+      "LargestFiveVarianceShare": 0.7331465743643159
+    },
+    {
+      "Variant": "midquote",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6440677966101694,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.1481460252038755,
+      "LargestFiveVarianceShare": 0.5084800930217643
+    },
+    {
+      "Variant": "midquote",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.8305084745762712,
+      "LongestLowChangeRun": 21,
+      "LargestMinuteVarianceShare": 0.20564720182161558,
+      "LargestFiveVarianceShare": 0.6316178747774671
+    },
+    {
+      "Variant": "midquote",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8983050847457628,
+      "LongestLowChangeRun": 12,
+      "LargestMinuteVarianceShare": 0.3004165822683721,
+      "LargestFiveVarianceShare": 0.8490035470838604
+    },
+    {
+      "Variant": "midquote",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.8135593220338984,
+      "LongestLowChangeRun": 17,
+      "LargestMinuteVarianceShare": 0.22751388936555098,
+      "LargestFiveVarianceShare": 0.7816186094870236
+    },
+    {
+      "Variant": "midquote-mixed",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.7288135593220338,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.22380507943218841,
+      "LargestFiveVarianceShare": 0.553074941537669
+    },
+    {
+      "Variant": "midquote-mixed",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7288135593220338,
+      "LongestLowChangeRun": 12,
+      "LargestMinuteVarianceShare": 0.354650222781328,
+      "LargestFiveVarianceShare": 0.6839112284250515
+    },
+    {
+      "Variant": "midquote-mixed",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6101694915254238,
+      "LongestLowChangeRun": 17,
+      "LargestMinuteVarianceShare": 0.14551977923365123,
+      "LargestFiveVarianceShare": 0.49853392089677245
+    },
+    {
+      "Variant": "midquote-mixed",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6101694915254238,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.10812436777634722,
+      "LargestFiveVarianceShare": 0.42123169448356323
+    },
+    {
+      "Variant": "midquote-mixed",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7966101694915254,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.2820061318401994,
+      "LargestFiveVarianceShare": 0.8448131252485871
+    },
+    {
+      "Variant": "midquote-mixed",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.11369000684240306,
+      "LargestFiveVarianceShare": 0.4295154407358535
+    },
+    {
+      "Variant": "midquote-mixed",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.7627118644067796,
+      "LongestLowChangeRun": 21,
+      "LargestMinuteVarianceShare": 0.14098942177099447,
+      "LargestFiveVarianceShare": 0.550754043602749
+    },
+    {
+      "Variant": "midquote-mixed",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.847457627118644,
+      "LongestLowChangeRun": 13,
+      "LargestMinuteVarianceShare": 0.41543951669124596,
+      "LargestFiveVarianceShare": 0.8121402881008141
+    },
+    {
+      "Variant": "midquote-mixed",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.7288135593220338,
+      "LongestLowChangeRun": 18,
+      "LargestMinuteVarianceShare": 0.20228033730396042,
+      "LargestFiveVarianceShare": 0.6697164423172711
+    },
+    {
+      "Variant": "midquote-mixed",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6610169491525424,
+      "LongestLowChangeRun": 12,
+      "LargestMinuteVarianceShare": 0.2116114026496898,
+      "LargestFiveVarianceShare": 0.5273914367035575
+    },
+    {
+      "Variant": "midquote-mixed",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8983050847457628,
+      "LongestLowChangeRun": 18,
+      "LargestMinuteVarianceShare": 0.21426902639666226,
+      "LargestFiveVarianceShare": 0.8250811393061228
+    },
+    {
+      "Variant": "midquote-mixed",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.7966101694915254,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.2907833090675335,
+      "LargestFiveVarianceShare": 0.6779468822240876
+    },
+    {
+      "Variant": "midquote-mixed",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.7457627118644068,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.14476924423636758,
+      "LargestFiveVarianceShare": 0.5116277456934155
+    },
+    {
+      "Variant": "midquote-mixed",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8813559322033898,
+      "LongestLowChangeRun": 21,
+      "LargestMinuteVarianceShare": 0.36150524763848674,
+      "LargestFiveVarianceShare": 0.7441303291079576
+    },
+    {
+      "Variant": "midquote-mixed",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.711864406779661,
+      "LongestLowChangeRun": 17,
+      "LargestMinuteVarianceShare": 0.08879015943335869,
+      "LargestFiveVarianceShare": 0.3409659459737686
+    },
+    {
+      "Variant": "midquote-mixed",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6101694915254238,
+      "LongestLowChangeRun": 12,
+      "LargestMinuteVarianceShare": 0.13059000636768253,
+      "LargestFiveVarianceShare": 0.43690671880684917
+    },
+    {
+      "Variant": "midquote-mixed",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7966101694915254,
+      "LongestLowChangeRun": 13,
+      "LargestMinuteVarianceShare": 0.26968323262157595,
+      "LargestFiveVarianceShare": 0.7354052151385928
+    },
+    {
+      "Variant": "midquote-mixed",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.7627118644067796,
+      "LongestLowChangeRun": 15,
+      "LargestMinuteVarianceShare": 0.15067917178694606,
+      "LargestFiveVarianceShare": 0.4532542208671639
+    },
+    {
+      "Variant": "midquote-portfolio",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.576271186440678,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.12137085038490947,
+      "LargestFiveVarianceShare": 0.4339644069947498
+    },
+    {
+      "Variant": "midquote-portfolio",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7457627118644068,
+      "LongestLowChangeRun": 12,
+      "LargestMinuteVarianceShare": 0.2369554555367921,
+      "LargestFiveVarianceShare": 0.6453331398330043
+    },
+    {
+      "Variant": "midquote-portfolio",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6271186440677966,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.21040045673646374,
+      "LargestFiveVarianceShare": 0.6053957534911408
+    },
+    {
+      "Variant": "midquote-portfolio",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.711864406779661,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.18663946462817724,
+      "LargestFiveVarianceShare": 0.5657404177535573
+    },
+    {
+      "Variant": "midquote-portfolio",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.864406779661017,
+      "LongestLowChangeRun": 18,
+      "LargestMinuteVarianceShare": 0.2643598067862261,
+      "LargestFiveVarianceShare": 0.8474936497823783
+    },
+    {
+      "Variant": "midquote-portfolio",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6271186440677966,
+      "LongestLowChangeRun": 16,
+      "LargestMinuteVarianceShare": 0.11161286122590189,
+      "LargestFiveVarianceShare": 0.49517877570665425
+    },
+    {
+      "Variant": "midquote-portfolio",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.576271186440678,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.3085875425806009,
+      "LargestFiveVarianceShare": 0.6080117991912571
+    },
+    {
+      "Variant": "midquote-portfolio",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8135593220338984,
+      "LongestLowChangeRun": 18,
+      "LargestMinuteVarianceShare": 0.27111603014862573,
+      "LargestFiveVarianceShare": 0.783190631705003
+    },
+    {
+      "Variant": "midquote-portfolio",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5932203389830508,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.16489372511388037,
+      "LargestFiveVarianceShare": 0.5658163326813858
+    },
+    {
+      "Variant": "midquote-portfolio",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5932203389830508,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.1639145019954643,
+      "LargestFiveVarianceShare": 0.5460933675814562
+    },
+    {
+      "Variant": "midquote-portfolio",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7627118644067796,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.19949661100672345,
+      "LargestFiveVarianceShare": 0.6675323709876148
+    },
+    {
+      "Variant": "midquote-portfolio",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6610169491525424,
+      "LongestLowChangeRun": 12,
+      "LargestMinuteVarianceShare": 0.14815389506504748,
+      "LargestFiveVarianceShare": 0.5800959860287417
+    },
+    {
+      "Variant": "midquote-portfolio",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.7288135593220338,
+      "LongestLowChangeRun": 14,
+      "LargestMinuteVarianceShare": 0.3286791206047173,
+      "LargestFiveVarianceShare": 0.7693917547845875
+    },
+    {
+      "Variant": "midquote-portfolio",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8305084745762712,
+      "LongestLowChangeRun": 12,
+      "LargestMinuteVarianceShare": 0.3866448386221475,
+      "LargestFiveVarianceShare": 0.7779827589703691
+    },
+    {
+      "Variant": "midquote-portfolio",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.18282063119082612,
+      "LargestFiveVarianceShare": 0.5287804753853526
+    },
+    {
+      "Variant": "midquote-portfolio",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6271186440677966,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.12238114747595047,
+      "LargestFiveVarianceShare": 0.49571283706192804
+    },
+    {
+      "Variant": "midquote-portfolio",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8983050847457628,
+      "LongestLowChangeRun": 14,
+      "LargestMinuteVarianceShare": 0.3375913442597594,
+      "LargestFiveVarianceShare": 0.8792868634369331
+    },
+    {
+      "Variant": "midquote-portfolio",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6440677966101694,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.20258907858400904,
+      "LargestFiveVarianceShare": 0.6444479226616651
+    },
+    {
+      "Variant": "mixed",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.20272181207371898,
+      "LargestFiveVarianceShare": 0.5327710462815769
+    },
+    {
+      "Variant": "mixed",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7796610169491526,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.19709635927091088,
+      "LargestFiveVarianceShare": 0.7049372641652203
+    },
+    {
+      "Variant": "mixed",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4406779661016949,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.1457607156369841,
+      "LargestFiveVarianceShare": 0.48460393386195605
+    },
+    {
+      "Variant": "mixed",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5254237288135594,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.15729165052037208,
+      "LargestFiveVarianceShare": 0.5520333248008604
+    },
+    {
+      "Variant": "mixed",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7966101694915254,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.2895606429249403,
+      "LargestFiveVarianceShare": 0.7683700986448254
+    },
+    {
+      "Variant": "mixed",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4067796610169492,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.09192627940774624,
+      "LargestFiveVarianceShare": 0.32935385981446086
+    },
+    {
+      "Variant": "mixed",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6779661016949152,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.11220094957784432,
+      "LargestFiveVarianceShare": 0.44702513471973815
+    },
+    {
+      "Variant": "mixed",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.711864406779661,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.28587494996520113,
+      "LargestFiveVarianceShare": 0.6148571521179645
+    },
+    {
+      "Variant": "mixed",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6101694915254238,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.18254410829760062,
+      "LargestFiveVarianceShare": 0.45141507727950414
+    },
+    {
+      "Variant": "mixed",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 14,
+      "LargestMinuteVarianceShare": 0.10090591562670168,
+      "LargestFiveVarianceShare": 0.4435186072582159
+    },
+    {
+      "Variant": "mixed",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8135593220338984,
+      "LongestLowChangeRun": 20,
+      "LargestMinuteVarianceShare": 0.19678133495294808,
+      "LargestFiveVarianceShare": 0.6064059388490876
+    },
+    {
+      "Variant": "mixed",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.2493622981090306,
+      "LargestFiveVarianceShare": 0.47704326318925133
+    },
+    {
+      "Variant": "mixed",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4915254237288136,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.09255412426650503,
+      "LargestFiveVarianceShare": 0.38910605137041915
+    },
+    {
+      "Variant": "mixed",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7796610169491526,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.21096893882364573,
+      "LargestFiveVarianceShare": 0.6771030004183692
+    },
+    {
+      "Variant": "mixed",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6101694915254238,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.18411807881863246,
+      "LargestFiveVarianceShare": 0.5674651868426596
+    },
+    {
+      "Variant": "mixed",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6440677966101694,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.17618014009105448,
+      "LargestFiveVarianceShare": 0.43572178067720924
+    },
+    {
+      "Variant": "mixed",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7288135593220338,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.16667494657800025,
+      "LargestFiveVarianceShare": 0.4876840203711849
+    },
+    {
+      "Variant": "mixed",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5932203389830508,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.1362446777653895,
+      "LargestFiveVarianceShare": 0.4732968123330757
+    },
+    {
+      "Variant": "mixed-wide",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.13609221041093258,
+      "LargestFiveVarianceShare": 0.475504650014759
+    },
+    {
+      "Variant": "mixed-wide",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7288135593220338,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.2020461915774204,
+      "LargestFiveVarianceShare": 0.5752766372696646
+    },
+    {
+      "Variant": "mixed-wide",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5423728813559322,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.24426175661784832,
+      "LargestFiveVarianceShare": 0.592567706927784
+    },
+    {
+      "Variant": "mixed-wide",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4745762711864407,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.14677129308059012,
+      "LargestFiveVarianceShare": 0.45802522276945673
+    },
+    {
+      "Variant": "mixed-wide",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.711864406779661,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.16436863256481377,
+      "LargestFiveVarianceShare": 0.4805965725828509
+    },
+    {
+      "Variant": "mixed-wide",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5423728813559322,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.18569748781919534,
+      "LargestFiveVarianceShare": 0.5217005057639985
+    },
+    {
+      "Variant": "mixed-wide",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.14317569613535644,
+      "LargestFiveVarianceShare": 0.5223297566071309
+    },
+    {
+      "Variant": "mixed-wide",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.711864406779661,
+      "LongestLowChangeRun": 15,
+      "LargestMinuteVarianceShare": 0.14799952149925907,
+      "LargestFiveVarianceShare": 0.532446558642428
+    },
+    {
+      "Variant": "mixed-wide",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.07789607510748615,
+      "LargestFiveVarianceShare": 0.36534484724883665
+    },
+    {
+      "Variant": "mixed-wide",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4406779661016949,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.15927339029769613,
+      "LargestFiveVarianceShare": 0.4383994515573961
+    },
+    {
+      "Variant": "mixed-wide",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.864406779661017,
+      "LongestLowChangeRun": 14,
+      "LargestMinuteVarianceShare": 0.2098828308986134,
+      "LargestFiveVarianceShare": 0.6813750679277296
+    },
+    {
+      "Variant": "mixed-wide",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.576271186440678,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.17996142647653982,
+      "LargestFiveVarianceShare": 0.42521958042476443
+    },
+    {
+      "Variant": "mixed-wide",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5932203389830508,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.16036261286901266,
+      "LargestFiveVarianceShare": 0.47260286451348743
+    },
+    {
+      "Variant": "mixed-wide",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7966101694915254,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.2862174588254103,
+      "LargestFiveVarianceShare": 0.6304122148120551
+    },
+    {
+      "Variant": "mixed-wide",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.10882208083186858,
+      "LargestFiveVarianceShare": 0.5157705918376888
+    },
+    {
+      "Variant": "mixed-wide",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6271186440677966,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.21745608556801316,
+      "LargestFiveVarianceShare": 0.5426588595286579
+    },
+    {
+      "Variant": "mixed-wide",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7796610169491526,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.20359517498258492,
+      "LargestFiveVarianceShare": 0.5787249429604624
+    },
+    {
+      "Variant": "mixed-wide",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6271186440677966,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.15130524120599131,
+      "LargestFiveVarianceShare": 0.4688258495207525
+    },
+    {
+      "Variant": "mixed-wide-dense",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5932203389830508,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.13471511147654705,
+      "LargestFiveVarianceShare": 0.3524167260494256
+    },
+    {
+      "Variant": "mixed-wide-dense",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7627118644067796,
+      "LongestLowChangeRun": 14,
+      "LargestMinuteVarianceShare": 0.10388619162079846,
+      "LargestFiveVarianceShare": 0.45334306133302044
+    },
+    {
+      "Variant": "mixed-wide-dense",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6779661016949152,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.38695801384320816,
+      "LargestFiveVarianceShare": 0.6442089558939145
+    },
+    {
+      "Variant": "mixed-wide-dense",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.576271186440678,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.11267228592737759,
+      "LargestFiveVarianceShare": 0.4212778782325361
+    },
+    {
+      "Variant": "mixed-wide-dense",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7796610169491526,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.33005836463262517,
+      "LargestFiveVarianceShare": 0.6361147593100074
+    },
+    {
+      "Variant": "mixed-wide-dense",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.20195221546742634,
+      "LargestFiveVarianceShare": 0.5874026675413483
+    },
+    {
+      "Variant": "mixed-wide-dense",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6779661016949152,
+      "LongestLowChangeRun": 12,
+      "LargestMinuteVarianceShare": 0.15065014415143133,
+      "LargestFiveVarianceShare": 0.5040645400388284
+    },
+    {
+      "Variant": "mixed-wide-dense",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7966101694915254,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.19486461755539633,
+      "LargestFiveVarianceShare": 0.6551196421593611
+    },
+    {
+      "Variant": "mixed-wide-dense",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.17781995162756647,
+      "LargestFiveVarianceShare": 0.5147277343672039
+    },
+    {
+      "Variant": "mixed-wide-dense",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6101694915254238,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.14692950802249394,
+      "LargestFiveVarianceShare": 0.42429234116535564
+    },
+    {
+      "Variant": "mixed-wide-dense",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8135593220338984,
+      "LongestLowChangeRun": 16,
+      "LargestMinuteVarianceShare": 0.22341159100489044,
+      "LargestFiveVarianceShare": 0.7088197808696242
+    },
+    {
+      "Variant": "mixed-wide-dense",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.7288135593220338,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.18812287284056703,
+      "LargestFiveVarianceShare": 0.44912183967795516
+    },
+    {
+      "Variant": "mixed-wide-dense",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.7288135593220338,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.20365994691124684,
+      "LargestFiveVarianceShare": 0.5257964787745186
+    },
+    {
+      "Variant": "mixed-wide-dense",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8135593220338984,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.3146362873426677,
+      "LargestFiveVarianceShare": 0.6712116716885435
+    },
+    {
+      "Variant": "mixed-wide-dense",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6271186440677966,
+      "LongestLowChangeRun": 15,
+      "LargestMinuteVarianceShare": 0.20477906635933552,
+      "LargestFiveVarianceShare": 0.512183681497441
+    },
+    {
+      "Variant": "mixed-wide-dense",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.576271186440678,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.10837305858273907,
+      "LargestFiveVarianceShare": 0.43798559972935525
+    },
+    {
+      "Variant": "mixed-wide-dense",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7796610169491526,
+      "LongestLowChangeRun": 14,
+      "LargestMinuteVarianceShare": 0.16497437493806325,
+      "LargestFiveVarianceShare": 0.5928436240647159
+    },
+    {
+      "Variant": "mixed-wide-dense",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5423728813559322,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.29670648873408345,
+      "LargestFiveVarianceShare": 0.6195713930516241
+    },
+    {
+      "Variant": "portfolio",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.3728813559322034,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.09840515216412532,
+      "LargestFiveVarianceShare": 0.38151776974821083
+    },
+    {
+      "Variant": "portfolio",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7627118644067796,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.21325760618091993,
+      "LargestFiveVarianceShare": 0.6515855087641069
+    },
+    {
+      "Variant": "portfolio",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5423728813559322,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.12003563464579305,
+      "LargestFiveVarianceShare": 0.5136843869038672
+    },
+    {
+      "Variant": "portfolio",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5423728813559322,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.1781011792173754,
+      "LargestFiveVarianceShare": 0.5803207575303521
+    },
+    {
+      "Variant": "portfolio",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7288135593220338,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.3409516485859541,
+      "LargestFiveVarianceShare": 0.6983571762829567
+    },
+    {
+      "Variant": "portfolio",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5254237288135594,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.17328259920600192,
+      "LargestFiveVarianceShare": 0.5301945760201302
+    },
+    {
+      "Variant": "portfolio",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4745762711864407,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.16801332816718353,
+      "LargestFiveVarianceShare": 0.5213838281517582
+    },
+    {
+      "Variant": "portfolio",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7966101694915254,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.3887190190572918,
+      "LargestFiveVarianceShare": 0.7486534341049149
+    },
+    {
+      "Variant": "portfolio",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4067796610169492,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.11260260177927163,
+      "LargestFiveVarianceShare": 0.4399017149393943
+    },
+    {
+      "Variant": "portfolio",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4576271186440678,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.10298186285389858,
+      "LargestFiveVarianceShare": 0.375768875014425
+    },
+    {
+      "Variant": "portfolio",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7796610169491526,
+      "LongestLowChangeRun": 13,
+      "LargestMinuteVarianceShare": 0.16029571436587026,
+      "LargestFiveVarianceShare": 0.5918828033219952
+    },
+    {
+      "Variant": "portfolio",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4745762711864407,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.1986366956019647,
+      "LargestFiveVarianceShare": 0.5713574788033082
+    },
+    {
+      "Variant": "portfolio",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.3898305084745763,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.119092029085545,
+      "LargestFiveVarianceShare": 0.45659986761148974
+    },
+    {
+      "Variant": "portfolio",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.576271186440678,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.2012339317052551,
+      "LargestFiveVarianceShare": 0.5626016468562842
+    },
+    {
+      "Variant": "portfolio",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.13063878514397534,
+      "LargestFiveVarianceShare": 0.4654685429319711
+    },
+    {
+      "Variant": "portfolio",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5423728813559322,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.14202803671288208,
+      "LargestFiveVarianceShare": 0.47256243250370816
+    },
+    {
+      "Variant": "portfolio",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7457627118644068,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.28549428108798647,
+      "LargestFiveVarianceShare": 0.7065687171160242
+    },
+    {
+      "Variant": "portfolio",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6440677966101694,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.17994038345646454,
+      "LargestFiveVarianceShare": 0.5806159701628476
+    },
+    {
+      "Variant": "portfolio-dense",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.3050847457627119,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.12275134922190008,
+      "LargestFiveVarianceShare": 0.47229143770516363
+    },
+    {
+      "Variant": "portfolio-dense",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7796610169491526,
+      "LongestLowChangeRun": 13,
+      "LargestMinuteVarianceShare": 0.42493011788649293,
+      "LargestFiveVarianceShare": 0.8140662217503147
+    },
+    {
+      "Variant": "portfolio-dense",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4067796610169492,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.24752706443445735,
+      "LargestFiveVarianceShare": 0.5552453755347517
+    },
+    {
+      "Variant": "portfolio-dense",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4406779661016949,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.08718633220090746,
+      "LargestFiveVarianceShare": 0.40809974176258274
+    },
+    {
+      "Variant": "portfolio-dense",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7288135593220338,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.2432863724012138,
+      "LargestFiveVarianceShare": 0.6086298991628297
+    },
+    {
+      "Variant": "portfolio-dense",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4406779661016949,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.14009184404493474,
+      "LargestFiveVarianceShare": 0.41159664275976837
+    },
+    {
+      "Variant": "portfolio-dense",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4915254237288136,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.12425938348616349,
+      "LargestFiveVarianceShare": 0.48851800556940433
+    },
+    {
+      "Variant": "portfolio-dense",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.6440677966101694,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.1881174115102121,
+      "LargestFiveVarianceShare": 0.6131192570653423
+    },
+    {
+      "Variant": "portfolio-dense",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4406779661016949,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.17075112375220128,
+      "LargestFiveVarianceShare": 0.5958899469073806
+    },
+    {
+      "Variant": "portfolio-dense",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.17152002213251563,
+      "LargestFiveVarianceShare": 0.5451584174567755
+    },
+    {
+      "Variant": "portfolio-dense",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.847457627118644,
+      "LongestLowChangeRun": 14,
+      "LargestMinuteVarianceShare": 0.2437066295960568,
+      "LargestFiveVarianceShare": 0.6762503699681651
+    },
+    {
+      "Variant": "portfolio-dense",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6779661016949152,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.2139114510036408,
+      "LargestFiveVarianceShare": 0.6052298129221535
+    },
+    {
+      "Variant": "portfolio-dense",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.14008085929337638,
+      "LargestFiveVarianceShare": 0.5110760273840563
+    },
+    {
+      "Variant": "portfolio-dense",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.864406779661017,
+      "LongestLowChangeRun": 16,
+      "LargestMinuteVarianceShare": 0.41012905780659287,
+      "LargestFiveVarianceShare": 0.8481407169561433
+    },
+    {
+      "Variant": "portfolio-dense",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5423728813559322,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.29836437724187154,
+      "LargestFiveVarianceShare": 0.6790989744347824
+    },
+    {
+      "Variant": "portfolio-dense",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6779661016949152,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.15506898027061292,
+      "LargestFiveVarianceShare": 0.5544880486597754
+    },
+    {
+      "Variant": "portfolio-dense",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.9152542372881356,
+      "LongestLowChangeRun": 17,
+      "LargestMinuteVarianceShare": 0.4640204683193406,
+      "LargestFiveVarianceShare": 0.9330860164689861
+    },
+    {
+      "Variant": "portfolio-dense",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5932203389830508,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.25027836851731694,
+      "LargestFiveVarianceShare": 0.5126079696057741
+    },
+    {
+      "Variant": "rolling-cost-aware",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6779661016949152,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.19110227746457686,
+      "LargestFiveVarianceShare": 0.5091687560744956
+    },
+    {
+      "Variant": "rolling-cost-aware",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7288135593220338,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.14502041237598362,
+      "LargestFiveVarianceShare": 0.6305816484814047
+    },
+    {
+      "Variant": "rolling-cost-aware",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.17756070820724323,
+      "LargestFiveVarianceShare": 0.4989070078167474
+    },
+    {
+      "Variant": "rolling-cost-aware",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6101694915254238,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.3448880859217573,
+      "LargestFiveVarianceShare": 0.70633607979202
+    },
+    {
+      "Variant": "rolling-cost-aware",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7627118644067796,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.41900920884860643,
+      "LargestFiveVarianceShare": 0.9903493042558499
+    },
+    {
+      "Variant": "rolling-cost-aware",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4576271186440678,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.3131307400020494,
+      "LargestFiveVarianceShare": 0.6335451098013726
+    },
+    {
+      "Variant": "rolling-cost-aware",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4915254237288136,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.12302151228967828,
+      "LargestFiveVarianceShare": 0.4277927582485222
+    },
+    {
+      "Variant": "rolling-cost-aware",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.6440677966101694,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.716914585927376,
+      "LargestFiveVarianceShare": 0.8989358027565222
+    },
+    {
+      "Variant": "rolling-cost-aware",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4067796610169492,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.25616923338192493,
+      "LargestFiveVarianceShare": 0.6165290227136518
+    },
+    {
+      "Variant": "rolling-cost-aware",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4067796610169492,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.23978876803718102,
+      "LargestFiveVarianceShare": 0.6245419639843856
+    },
+    {
+      "Variant": "rolling-cost-aware",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.5932203389830508,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.38902970207782045,
+      "LargestFiveVarianceShare": 0.9661372183841394
+    },
+    {
+      "Variant": "rolling-cost-aware",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.2819627996442486,
+      "LargestFiveVarianceShare": 0.5692582738830901
+    },
+    {
+      "Variant": "rolling-cost-aware",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4915254237288136,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.1248303345755049,
+      "LargestFiveVarianceShare": 0.5135437530564297
+    },
+    {
+      "Variant": "rolling-cost-aware",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.6271186440677966,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.69076531209982,
+      "LargestFiveVarianceShare": 0.9834158166995816
+    },
+    {
+      "Variant": "rolling-cost-aware",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.3728813559322034,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.1053383192808358,
+      "LargestFiveVarianceShare": 0.3632002506945553
+    },
+    {
+      "Variant": "rolling-cost-aware",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4915254237288136,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.20747621877053435,
+      "LargestFiveVarianceShare": 0.4830853873888719
+    },
+    {
+      "Variant": "rolling-cost-aware",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7457627118644068,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.29213583781140967,
+      "LargestFiveVarianceShare": 0.6819412910805843
+    },
+    {
+      "Variant": "rolling-cost-aware",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5932203389830508,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.7339939785592053,
+      "LargestFiveVarianceShare": 0.8570416643442978
+    },
+    {
+      "Variant": "rolling-patient-depth",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6101694915254238,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.23729594038991955,
+      "LargestFiveVarianceShare": 0.5933524617812392
+    },
+    {
+      "Variant": "rolling-patient-depth",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.576271186440678,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.4329406772695716,
+      "LargestFiveVarianceShare": 0.9828747357328782
+    },
+    {
+      "Variant": "rolling-patient-depth",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.3898305084745763,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.11907499717853945,
+      "LargestFiveVarianceShare": 0.44327502775307165
+    },
+    {
+      "Variant": "rolling-patient-depth",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.3728813559322034,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.1778904197631263,
+      "LargestFiveVarianceShare": 0.559342389024165
+    },
+    {
+      "Variant": "rolling-patient-depth",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.45246529576338523,
+      "LargestFiveVarianceShare": 0.8597829375619653
+    },
+    {
+      "Variant": "rolling-patient-depth",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5423728813559322,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.2062942558040054,
+      "LargestFiveVarianceShare": 0.596560561646572
+    },
+    {
+      "Variant": "rolling-patient-depth",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.3389830508474576,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.11862136129309281,
+      "LargestFiveVarianceShare": 0.43977949767748964
+    },
+    {
+      "Variant": "rolling-patient-depth",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.6101694915254238,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.8138557003044243,
+      "LargestFiveVarianceShare": 0.9120753924039985
+    },
+    {
+      "Variant": "rolling-patient-depth",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4576271186440678,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.22650675873749412,
+      "LargestFiveVarianceShare": 0.6730476769268844
+    },
+    {
+      "Variant": "rolling-patient-depth",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.3050847457627119,
+      "LongestLowChangeRun": 3,
+      "LargestMinuteVarianceShare": 0.10955387711122778,
+      "LargestFiveVarianceShare": 0.40730952121941805
+    },
+    {
+      "Variant": "rolling-patient-depth",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.6949152542372882,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.7791934044410495,
+      "LargestFiveVarianceShare": 0.9885008858251663
+    },
+    {
+      "Variant": "rolling-patient-depth",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.3775890129705432,
+      "LargestFiveVarianceShare": 0.7114262227474197
+    },
+    {
+      "Variant": "rolling-patient-depth",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.423728813559322,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.11411118075465795,
+      "LargestFiveVarianceShare": 0.41372795374289517
+    },
+    {
+      "Variant": "rolling-patient-depth",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.7295204796504665,
+      "LargestFiveVarianceShare": 0.9889583190246392
+    },
+    {
+      "Variant": "rolling-patient-depth",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.3728813559322034,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.17471345964584722,
+      "LargestFiveVarianceShare": 0.5678372555342488
+    },
+    {
+      "Variant": "rolling-patient-depth",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4745762711864407,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.1283065954555955,
+      "LargestFiveVarianceShare": 0.45684441528522346
+    },
+    {
+      "Variant": "rolling-patient-depth",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.6779661016949152,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.6711815459908399,
+      "LargestFiveVarianceShare": 0.8400505111493058
+    },
+    {
+      "Variant": "rolling-patient-depth",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6949152542372882,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.3968933860186977,
+      "LargestFiveVarianceShare": 0.7449705852432275
+    },
+    {
+      "Variant": "rolling-patient-robust",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.3898305084745763,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.11378467550029621,
+      "LargestFiveVarianceShare": 0.46598409048165856
+    },
+    {
+      "Variant": "rolling-patient-robust",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.5254237288135594,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.9543555182991417,
+      "LargestFiveVarianceShare": 0.9759480765627292
+    },
+    {
+      "Variant": "rolling-patient-robust",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.423728813559322,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.2002596403835527,
+      "LargestFiveVarianceShare": 0.4943631624942359
+    },
+    {
+      "Variant": "rolling-patient-robust",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4067796610169492,
+      "LongestLowChangeRun": 3,
+      "LargestMinuteVarianceShare": 0.10767118011122682,
+      "LargestFiveVarianceShare": 0.4523543478759033
+    },
+    {
+      "Variant": "rolling-patient-robust",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.6610169491525424,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.9022177634429812,
+      "LargestFiveVarianceShare": 0.9962680122983991
+    },
+    {
+      "Variant": "rolling-patient-robust",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.3220338983050847,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.11940162912548531,
+      "LargestFiveVarianceShare": 0.44391820912886293
+    },
+    {
+      "Variant": "rolling-patient-robust",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.32028480865229986,
+      "LargestFiveVarianceShare": 0.7066835606109126
+    },
+    {
+      "Variant": "rolling-patient-robust",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.576271186440678,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.5579670351806033,
+      "LargestFiveVarianceShare": 0.9627367673457309
+    },
+    {
+      "Variant": "rolling-patient-robust",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.423728813559322,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.1876230991785382,
+      "LargestFiveVarianceShare": 0.49740023324920635
+    },
+    {
+      "Variant": "rolling-patient-robust",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.3389830508474576,
+      "LongestLowChangeRun": 3,
+      "LargestMinuteVarianceShare": 0.12554536585959286,
+      "LargestFiveVarianceShare": 0.4573244980822179
+    },
+    {
+      "Variant": "rolling-patient-robust",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.6101694915254238,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.5085886312144604,
+      "LargestFiveVarianceShare": 0.9300440057676397
+    },
+    {
+      "Variant": "rolling-patient-robust",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4067796610169492,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.15324979986396012,
+      "LargestFiveVarianceShare": 0.5429741829510656
+    },
+    {
+      "Variant": "rolling-patient-robust",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.3898305084745763,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.12734787768119601,
+      "LargestFiveVarianceShare": 0.39495669266525973
+    },
+    {
+      "Variant": "rolling-patient-robust",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.4745762711864407,
+      "LongestLowChangeRun": 3,
+      "LargestMinuteVarianceShare": 0.5610907649485594,
+      "LargestFiveVarianceShare": 0.9739480239084515
+    },
+    {
+      "Variant": "rolling-patient-robust",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4745762711864407,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.1671397853483187,
+      "LargestFiveVarianceShare": 0.48933294684865164
+    },
+    {
+      "Variant": "rolling-patient-robust",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.3050847457627119,
+      "LongestLowChangeRun": 2,
+      "LargestMinuteVarianceShare": 0.12776275197310386,
+      "LargestFiveVarianceShare": 0.31158780243100165
+    },
+    {
+      "Variant": "rolling-patient-robust",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.711864406779661,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.993336972019673,
+      "LargestFiveVarianceShare": 0.9969798938146781
+    },
+    {
+      "Variant": "rolling-patient-robust",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4576271186440678,
+      "LongestLowChangeRun": 3,
+      "LargestMinuteVarianceShare": 0.10993267488490702,
+      "LargestFiveVarianceShare": 0.47455574216146856
+    },
+    {
+      "Variant": "rolling-patient-safe",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.3898305084745763,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.09599246912508334,
+      "LargestFiveVarianceShare": 0.37862022884323476
+    },
+    {
+      "Variant": "rolling-patient-safe",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.4745762711864407,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.9465898196692002,
+      "LargestFiveVarianceShare": 0.9808521948910985
+    },
+    {
+      "Variant": "rolling-patient-safe",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4745762711864407,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.1489264857871497,
+      "LargestFiveVarianceShare": 0.5302745194492198
+    },
+    {
+      "Variant": "rolling-portfolio-depth",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5932203389830508,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.17873775985503002,
+      "LargestFiveVarianceShare": 0.5487884196925455
+    },
+    {
+      "Variant": "rolling-portfolio-depth",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.6779661016949152,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.7780169971211681,
+      "LargestFiveVarianceShare": 0.9890016800242886
+    },
+    {
+      "Variant": "rolling-portfolio-depth",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4406779661016949,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.1708958175597752,
+      "LargestFiveVarianceShare": 0.5511684536494109
+    },
+    {
+      "Variant": "rolling-portfolio-depth",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5254237288135594,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.239825017598466,
+      "LargestFiveVarianceShare": 0.5185598448592728
+    },
+    {
+      "Variant": "rolling-portfolio-depth",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.9429401328341184,
+      "LargestFiveVarianceShare": 0.9654581303019777
+    },
+    {
+      "Variant": "rolling-portfolio-depth",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.12015870903194083,
+      "LargestFiveVarianceShare": 0.4040867215732648
+    },
+    {
+      "Variant": "rolling-portfolio-depth",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.3898305084745763,
+      "LongestLowChangeRun": 3,
+      "LargestMinuteVarianceShare": 0.264021417809285,
+      "LargestFiveVarianceShare": 0.5621969095448618
+    },
+    {
+      "Variant": "rolling-portfolio-depth",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.5254237288135594,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.6109916380462554,
+      "LargestFiveVarianceShare": 0.9891058627547329
+    },
+    {
+      "Variant": "rolling-portfolio-depth",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.288135593220339,
+      "LongestLowChangeRun": 2,
+      "LargestMinuteVarianceShare": 0.13704962232721146,
+      "LargestFiveVarianceShare": 0.47588120769247655
+    },
+    {
+      "Variant": "rolling-portfolio-depth",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.3898305084745763,
+      "LongestLowChangeRun": 3,
+      "LargestMinuteVarianceShare": 0.12479437206045003,
+      "LargestFiveVarianceShare": 0.4461108400108502
+    },
+    {
+      "Variant": "rolling-portfolio-depth",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.6779661016949152,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.5411392659912836,
+      "LargestFiveVarianceShare": 0.9884981957421337
+    },
+    {
+      "Variant": "rolling-portfolio-depth",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5423728813559322,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.38228983677511547,
+      "LargestFiveVarianceShare": 0.6878815630070308
+    },
+    {
+      "Variant": "rolling-portfolio-depth",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4406779661016949,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.09171536048221335,
+      "LargestFiveVarianceShare": 0.4084810344441016
+    },
+    {
+      "Variant": "rolling-portfolio-depth",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.8280794496809445,
+      "LargestFiveVarianceShare": 0.9661254060080392
+    },
+    {
+      "Variant": "rolling-portfolio-depth",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4745762711864407,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.3663505675325263,
+      "LargestFiveVarianceShare": 0.6635255810495277
+    },
+    {
+      "Variant": "rolling-portfolio-depth",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.20374965305751275,
+      "LargestFiveVarianceShare": 0.6167450821048504
+    },
+    {
+      "Variant": "rolling-portfolio-depth",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.6271186440677966,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.7867813347275557,
+      "LargestFiveVarianceShare": 0.8906401772730386
+    },
+    {
+      "Variant": "rolling-portfolio-depth",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5254237288135594,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.17680624720054852,
+      "LargestFiveVarianceShare": 0.5495851416971274
+    },
+    {
+      "Variant": "rolling-portfolio-robust",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.13173124313922485,
+      "LargestFiveVarianceShare": 0.5196497389912288
+    },
+    {
+      "Variant": "rolling-portfolio-robust",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.5254237288135594,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.8572925875960143,
+      "LargestFiveVarianceShare": 0.9050223751501082
+    },
+    {
+      "Variant": "rolling-portfolio-robust",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4067796610169492,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.12856490467942114,
+      "LargestFiveVarianceShare": 0.4837689950993535
+    },
+    {
+      "Variant": "rolling-portfolio-robust",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.288135593220339,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.2260261257895129,
+      "LargestFiveVarianceShare": 0.5035240829917971
+    },
+    {
+      "Variant": "rolling-portfolio-robust",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.4745762711864407,
+      "LongestLowChangeRun": 3,
+      "LargestMinuteVarianceShare": 0.9536930385079774,
+      "LargestFiveVarianceShare": 0.9737245891300743
+    },
+    {
+      "Variant": "rolling-portfolio-robust",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.3220338983050847,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.12219247819836335,
+      "LargestFiveVarianceShare": 0.4541801350488271
+    },
+    {
+      "Variant": "rolling-portfolio-robust",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4406779661016949,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.10105493351570655,
+      "LargestFiveVarianceShare": 0.4279304666197762
+    },
+    {
+      "Variant": "rolling-portfolio-robust",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.576271186440678,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.8145687993757128,
+      "LargestFiveVarianceShare": 0.9031128966584007
+    },
+    {
+      "Variant": "rolling-portfolio-robust",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4576271186440678,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.16403832673060384,
+      "LargestFiveVarianceShare": 0.5277069758691717
+    },
+    {
+      "Variant": "rolling-portfolio-robust",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4406779661016949,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.19012586215036434,
+      "LargestFiveVarianceShare": 0.5724868933085451
+    },
+    {
+      "Variant": "rolling-portfolio-robust",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.5423728813559322,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.2851359672599446,
+      "LargestFiveVarianceShare": 0.8672363970721544
+    },
+    {
+      "Variant": "rolling-portfolio-robust",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.3559322033898305,
+      "LongestLowChangeRun": 3,
+      "LargestMinuteVarianceShare": 0.11341108781024403,
+      "LargestFiveVarianceShare": 0.4337957860233809
+    },
+    {
+      "Variant": "rolling-portfolio-robust",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.15825724763234258,
+      "LargestFiveVarianceShare": 0.5243238222995651
+    },
+    {
+      "Variant": "rolling-portfolio-robust",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.6610169491525424,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.8735392635233808,
+      "LargestFiveVarianceShare": 0.952570990853583
+    },
+    {
+      "Variant": "rolling-portfolio-robust",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4067796610169492,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.22949670102322728,
+      "LargestFiveVarianceShare": 0.45444502156251604
+    },
+    {
+      "Variant": "rolling-portfolio-robust",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4406779661016949,
+      "LongestLowChangeRun": 3,
+      "LargestMinuteVarianceShare": 0.14707646983648423,
+      "LargestFiveVarianceShare": 0.511360338196128
+    },
+    {
+      "Variant": "rolling-portfolio-robust",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.6610169491525424,
+      "LongestLowChangeRun": 13,
+      "LargestMinuteVarianceShare": 0.5052867470467317,
+      "LargestFiveVarianceShare": 0.771980920200539
+    },
+    {
+      "Variant": "rolling-portfolio-robust",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.3552592787272232,
+      "LargestFiveVarianceShare": 0.6636267859464268
+    },
+    {
+      "Variant": "rolling-portfolio-safe",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4406779661016949,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.14553051875698383,
+      "LargestFiveVarianceShare": 0.43990985293260626
+    },
+    {
+      "Variant": "rolling-portfolio-safe",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.5423728813559322,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.13440669917394962,
+      "LargestFiveVarianceShare": 0.4827826526118816
+    },
+    {
+      "Variant": "rolling-portfolio-safe",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.3898305084745763,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.1904694212777035,
+      "LargestFiveVarianceShare": 0.5523470511538549
+    },
+    {
+      "Variant": "rolling-portfolio-safe",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.3728813559322034,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.17480324866363345,
+      "LargestFiveVarianceShare": 0.5053774549275388
+    },
+    {
+      "Variant": "rolling-portfolio-safe",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.576271186440678,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.4609505675190465,
+      "LargestFiveVarianceShare": 0.9236695325008564
+    },
+    {
+      "Variant": "rolling-portfolio-safe",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.3728813559322034,
+      "LongestLowChangeRun": 3,
+      "LargestMinuteVarianceShare": 0.11175009580199388,
+      "LargestFiveVarianceShare": 0.4275794620289083
+    },
+    {
+      "Variant": "rolling-portfolio-safe",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4576271186440678,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.18180072897094776,
+      "LargestFiveVarianceShare": 0.46411106193691626
+    },
+    {
+      "Variant": "rolling-portfolio-safe",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.6949152542372882,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.516438214467489,
+      "LargestFiveVarianceShare": 0.8924752463940521
+    },
+    {
+      "Variant": "rolling-portfolio-safe",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5423728813559322,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.1554575968596788,
+      "LargestFiveVarianceShare": 0.5155313743387608
+    },
+    {
+      "Variant": "rolling-touch-participation",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6610169491525424,
+      "LongestLowChangeRun": 15,
+      "LargestMinuteVarianceShare": 0.20350444511953752,
+      "LargestFiveVarianceShare": 0.513651642275193
+    },
+    {
+      "Variant": "rolling-touch-participation",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7796610169491526,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.6576439015352034,
+      "LargestFiveVarianceShare": 0.951467011300425
+    },
+    {
+      "Variant": "rolling-touch-participation",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.0998662037709898,
+      "LargestFiveVarianceShare": 0.4250940149364992
+    },
+    {
+      "Variant": "rolling-touch-participation",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5932203389830508,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.48366878244798267,
+      "LargestFiveVarianceShare": 0.7393342390250244
+    },
+    {
+      "Variant": "rolling-touch-participation",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.6949152542372882,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.541924521658424,
+      "LargestFiveVarianceShare": 0.8135961297256694
+    },
+    {
+      "Variant": "rolling-touch-participation",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6271186440677966,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.17975192970503018,
+      "LargestFiveVarianceShare": 0.37938222872741045
+    },
+    {
+      "Variant": "rolling-touch-participation",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5254237288135594,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.15270385280685442,
+      "LargestFiveVarianceShare": 0.5746646111575315
+    },
+    {
+      "Variant": "rolling-touch-participation",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7457627118644068,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.5469481078419929,
+      "LargestFiveVarianceShare": 0.952416005079234
+    },
+    {
+      "Variant": "rolling-touch-participation",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5423728813559322,
+      "LongestLowChangeRun": 4,
+      "LargestMinuteVarianceShare": 0.20716078665491655,
+      "LargestFiveVarianceShare": 0.7020644344650196
+    },
+    {
+      "Variant": "rolling-touch-participation",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4406779661016949,
+      "LongestLowChangeRun": 3,
+      "LargestMinuteVarianceShare": 0.13565919607340568,
+      "LargestFiveVarianceShare": 0.5387338312001158
+    },
+    {
+      "Variant": "rolling-touch-participation",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.6949152542372882,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.6629122140749457,
+      "LargestFiveVarianceShare": 0.9517648965226808
+    },
+    {
+      "Variant": "rolling-touch-participation",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.1501447536784462,
+      "LargestFiveVarianceShare": 0.5412921718708258
+    },
+    {
+      "Variant": "rolling-touch-participation",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6101694915254238,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.35530819616035475,
+      "LargestFiveVarianceShare": 0.6868135122575617
+    },
+    {
+      "Variant": "rolling-touch-participation",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.6271186440677966,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.3158467509681072,
+      "LargestFiveVarianceShare": 0.6412786040906575
+    },
+    {
+      "Variant": "rolling-touch-participation",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.559322033898305,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.30304121831373126,
+      "LargestFiveVarianceShare": 0.6272240283952918
+    },
+    {
+      "Variant": "rolling-touch-participation",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5932203389830508,
+      "LongestLowChangeRun": 13,
+      "LargestMinuteVarianceShare": 0.09671295826681316,
+      "LargestFiveVarianceShare": 0.3384437946569609
+    },
+    {
+      "Variant": "rolling-touch-participation",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8135593220338984,
+      "LongestLowChangeRun": 16,
+      "LargestMinuteVarianceShare": 0.9482898642350112,
+      "LargestFiveVarianceShare": 0.9806028271741951
+    },
+    {
+      "Variant": "rolling-touch-participation",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5254237288135594,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.10472976171088046,
+      "LargestFiveVarianceShare": 0.3405625430109968
+    },
+    {
+      "Variant": "stretch",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6949152542372882,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.11889735652825445,
+      "LargestFiveVarianceShare": 0.42879545243053246
+    },
+    {
+      "Variant": "stretch",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.864406779661017,
+      "LongestLowChangeRun": 17,
+      "LargestMinuteVarianceShare": 0.42213271752958365,
+      "LargestFiveVarianceShare": 0.7940810920578691
+    },
+    {
+      "Variant": "stretch",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6440677966101694,
+      "LongestLowChangeRun": 12,
+      "LargestMinuteVarianceShare": 0.1379248231561461,
+      "LargestFiveVarianceShare": 0.420007245785246
+    },
+    {
+      "Variant": "stretch",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5932203389830508,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.15018852141763997,
+      "LargestFiveVarianceShare": 0.5274985847686637
+    },
+    {
+      "Variant": "stretch",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.7627118644067796,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.1922472109685823,
+      "LargestFiveVarianceShare": 0.5158410416281948
+    },
+    {
+      "Variant": "stretch",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.576271186440678,
+      "LongestLowChangeRun": 6,
+      "LargestMinuteVarianceShare": 0.19615524311209404,
+      "LargestFiveVarianceShare": 0.49507946770220257
+    },
+    {
+      "Variant": "stretch",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5423728813559322,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.08377595637117115,
+      "LargestFiveVarianceShare": 0.3379906685393938
+    },
+    {
+      "Variant": "stretch",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8305084745762712,
+      "LongestLowChangeRun": 12,
+      "LargestMinuteVarianceShare": 0.19763308076946284,
+      "LargestFiveVarianceShare": 0.6220154043186921
+    },
+    {
+      "Variant": "stretch",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5254237288135594,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.11128252679618253,
+      "LargestFiveVarianceShare": 0.42394441813968303
+    },
+    {
+      "Variant": "stretch",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6779661016949152,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.128743159354779,
+      "LargestFiveVarianceShare": 0.4640389858447695
+    },
+    {
+      "Variant": "stretch",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.9322033898305084,
+      "LongestLowChangeRun": 32,
+      "LargestMinuteVarianceShare": 0.2680539925796687,
+      "LargestFiveVarianceShare": 0.6397354227420009
+    },
+    {
+      "Variant": "stretch",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6610169491525424,
+      "LongestLowChangeRun": 14,
+      "LargestMinuteVarianceShare": 0.12384417258734279,
+      "LargestFiveVarianceShare": 0.44619737070904736
+    },
+    {
+      "Variant": "stretch",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6779661016949152,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.12488452060772667,
+      "LargestFiveVarianceShare": 0.40899930924504685
+    },
+    {
+      "Variant": "stretch",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.9152542372881356,
+      "LongestLowChangeRun": 23,
+      "LargestMinuteVarianceShare": 0.23863034523340187,
+      "LargestFiveVarianceShare": 0.7644332148624007
+    },
+    {
+      "Variant": "stretch",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.7457627118644068,
+      "LongestLowChangeRun": 11,
+      "LargestMinuteVarianceShare": 0.13476047005998332,
+      "LargestFiveVarianceShare": 0.42748508542601676
+    },
+    {
+      "Variant": "stretch",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6779661016949152,
+      "LongestLowChangeRun": 7,
+      "LargestMinuteVarianceShare": 0.12509068338355409,
+      "LargestFiveVarianceShare": 0.41304181140007024
+    },
+    {
+      "Variant": "stretch",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.9661016949152542,
+      "LongestLowChangeRun": 41,
+      "LargestMinuteVarianceShare": 0.5602524664123413,
+      "LargestFiveVarianceShare": 0.8139029679126146
+    },
+    {
+      "Variant": "stretch",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.7966101694915254,
+      "LongestLowChangeRun": 25,
+      "LargestMinuteVarianceShare": 0.14296340653260814,
+      "LargestFiveVarianceShare": 0.5513761570363338
+    },
+    {
+      "Variant": "Baseline",
+      "Case": "Aged",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5254237288135594,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.13755272032863433,
+      "LargestFiveVarianceShare": 0.49004565596670485
+    },
+    {
+      "Variant": "Baseline",
+      "Case": "Aged",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.9152542372881356,
+      "LongestLowChangeRun": 15,
+      "LargestMinuteVarianceShare": 0.37301497048227056,
+      "LargestFiveVarianceShare": 0.8910493749755909
+    },
+    {
+      "Variant": "Baseline",
+      "Case": "Aged",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5254237288135594,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.12601841073069314,
+      "LargestFiveVarianceShare": 0.416653422549368
+    },
+    {
+      "Variant": "Baseline",
+      "Case": "CurrentBX",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.5423728813559322,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.17506205484055523,
+      "LargestFiveVarianceShare": 0.48572997336554186
+    },
+    {
+      "Variant": "Baseline",
+      "Case": "CurrentBX",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8813559322033898,
+      "LongestLowChangeRun": 16,
+      "LargestMinuteVarianceShare": 0.230669890373224,
+      "LargestFiveVarianceShare": 0.6016571349387466
+    },
+    {
+      "Variant": "Baseline",
+      "Case": "CurrentBX",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.23728813559322035,
+      "LongestLowChangeRun": 5,
+      "LargestMinuteVarianceShare": 0.058328976030228,
+      "LargestFiveVarianceShare": 0.2563784753645769
+    },
+    {
+      "Variant": "Baseline",
+      "Case": "Older",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6779661016949152,
+      "LongestLowChangeRun": 14,
+      "LargestMinuteVarianceShare": 0.13925147896314524,
+      "LargestFiveVarianceShare": 0.4819378840542132
+    },
+    {
+      "Variant": "Baseline",
+      "Case": "Older",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.847457627118644,
+      "LongestLowChangeRun": 13,
+      "LargestMinuteVarianceShare": 0.21771584277583447,
+      "LargestFiveVarianceShare": 0.6330224684960796
+    },
+    {
+      "Variant": "Baseline",
+      "Case": "Older",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.5084745762711864,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.07879856304838775,
+      "LargestFiveVarianceShare": 0.361369445984869
+    },
+    {
+      "Variant": "Baseline",
+      "Case": "Seed104729",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4576271186440678,
+      "LongestLowChangeRun": 8,
+      "LargestMinuteVarianceShare": 0.12296081721314006,
+      "LargestFiveVarianceShare": 0.3877739901269529
+    },
+    {
+      "Variant": "Baseline",
+      "Case": "Seed104729",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8983050847457628,
+      "LongestLowChangeRun": 24,
+      "LargestMinuteVarianceShare": 0.33265828316465385,
+      "LargestFiveVarianceShare": 0.7268882783135793
+    },
+    {
+      "Variant": "Baseline",
+      "Case": "Seed104729",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.4915254237288136,
+      "LongestLowChangeRun": 9,
+      "LargestMinuteVarianceShare": 0.09805102011955467,
+      "LargestFiveVarianceShare": 0.3492160409134061
+    },
+    {
+      "Variant": "Baseline",
+      "Case": "Seed71",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.6779661016949152,
+      "LongestLowChangeRun": 13,
+      "LargestMinuteVarianceShare": 0.26831700771954203,
+      "LargestFiveVarianceShare": 0.621664754507522
+    },
+    {
+      "Variant": "Baseline",
+      "Case": "Seed71",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.8983050847457628,
+      "LongestLowChangeRun": 12,
+      "LargestMinuteVarianceShare": 0.37876548625398193,
+      "LargestFiveVarianceShare": 0.7467148583082224
+    },
+    {
+      "Variant": "Baseline",
+      "Case": "Seed71",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6271186440677966,
+      "LongestLowChangeRun": 17,
+      "LargestMinuteVarianceShare": 0.2217081740690688,
+      "LargestFiveVarianceShare": 0.49041113343701287
+    },
+    {
+      "Variant": "Baseline",
+      "Case": "Seed7919",
+      "Market": "BG",
+      "Intervals": 59,
+      "LowChangeShare": 0.4915254237288136,
+      "LongestLowChangeRun": 10,
+      "LargestMinuteVarianceShare": 0.14733153607616783,
+      "LargestFiveVarianceShare": 0.45294759374456617
+    },
+    {
+      "Variant": "Baseline",
+      "Case": "Seed7919",
+      "Market": "BT",
+      "Intervals": 59,
+      "LowChangeShare": 0.847457627118644,
+      "LongestLowChangeRun": 13,
+      "LargestMinuteVarianceShare": 0.28532453349878056,
+      "LargestFiveVarianceShare": 0.6010854422229763
+    },
+    {
+      "Variant": "Baseline",
+      "Case": "Seed7919",
+      "Market": "BX",
+      "Intervals": 59,
+      "LowChangeShare": 0.6610169491525424,
+      "LongestLowChangeRun": 14,
+      "LargestMinuteVarianceShare": 0.11669398312348656,
+      "LargestFiveVarianceShare": 0.4624012245215154
+    }
+  ]
+}

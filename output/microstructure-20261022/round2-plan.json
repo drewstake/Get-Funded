@@ -1,0 +1,9 @@
+{
+  "Basis": "Current BX has 2,591 Momentum time-exit contracts but little meaningful retracement; Value closes 1,234 contracts through stops versus 646 ordinary exits; Reserve has 74,884 same-decision replacements in 74,946 total and only 543 filled contracts.",
+  "Variants": {
+    "time-exit-size": "Concentrate existing time-exit flow into full normal child sizes, retaining the same decision cadence, hold deadlines, slippage, funding and risk exits.",
+    "value-exit-gate": "Allow original Value signal to reduce inventory without a new-entry valuation-edge hurdle. New risk still needs the old edge. No profit target or new memory horizon.",
+    "reserve-cost-quote": "Nearest closing-side Reserve quote retains a cost-based limit at entry plus existing depth offset, instead of always following prints. Passive guard and original size remain."
+  },
+  "Selection": "Same fixed development gates. No independent-validation cases inspected. These are isolated probes; no effect attributed to a combination."
+}

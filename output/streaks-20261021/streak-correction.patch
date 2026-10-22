@@ -1,0 +1,246 @@
+--- original/BotMomentumTests.luau
++++ candidate/BotMomentumTests.luau
+@@ -56,7 +56,11 @@
+  test('Building is time-budgeted, funded, IOC and cannot manufacture fills',function()
+   local e,p,a,b,s=fixture();history(e,p,b,1);local base=e.Accounts[a.Id].Base
+   M.Step(p,a);assert(s.Phase=='Building'and s.Filled>0);local filled=s.Filled
+-  for _=1,6 do M.Step(p,a)end;assert(s.Filled==filled and not next(e.Accounts[a.Id].OpenOrders))
++  for _=1,6 do M.Step(p,a)end
++  -- Faster build profiles can have more than one contract due in their first time bucket.
++  -- Repeated calls cannot spend beyond that fixed time budget or leave an IOC remainder.
++  local due=math.ceil(math.abs(s.Target)*math.clamp((e.Time-s.StartedAt+C.BotMomentum.SliceSeconds[2])/s.BuildSeconds,0,1))
++  assert(s.Filled>=filled and s.Filled<=due and not next(e.Accounts[a.Id].OpenOrders));filled=s.Filled
+   assert(e:Exposure(e.Accounts[a.Id],'BX',1,0));assert(e.Accounts[a.Id].Base==base);e:Audit()
+   e:CancelAll('seller');e:CancelAll('buyer');local volume=e.TotalVolume;local last=b.Last;e.Time+=10;M.Step(p,a)
+   assert(e.TotalVolume==volume and b.Last==last and s.Filled==filled);e:Audit()
+--- original/BotOrderFlowTests.luau
++++ candidate/BotOrderFlowTests.luau
+@@ -137,7 +137,7 @@
+   equal(saved,CP.Capture(rr,pr))
+   for _=1,240 do rp:Step();pr:Step()end
+   equal(CP.Capture(re,rp),CP.Capture(rr,pr));re:Audit();rr:Audit()
+-  assert(CP.Version==27)
++  assert(CP.Version==28)
+   local future=clone(saved);future.Config.BotOrderFlow.Version=C.BotOrderFlow.Version+1
+   assert(not pcall(CP.Restore,future,C),'Newer pressure policy accepted by older reader')
+  end)
+--- original/BotParticipationTests.luau
++++ candidate/BotParticipationTests.luau
+@@ -108,7 +108,7 @@
+   equal(saved,CP.Capture(rr,pr))
+   for _=1,60 do rp:Step();pr:Step()end
+   equal(CP.Capture(re,rp),CP.Capture(rr,pr));re:Audit();rr:Audit()
+-  local down=copy(C);down.BotParticipation=nil;assert(not pcall(CP.Restore,saved,down));assert(CP.Version==27)
++  local down=copy(C);down.BotParticipation=nil;assert(not pcall(CP.Restore,saved,down));assert(CP.Version==28)
+  end)
+  return out
+ end
+--- original/BotRefreshTests.luau
++++ candidate/BotRefreshTests.luau
+@@ -203,7 +203,7 @@
+   assert(w.Engine==e and w.Population==p and a==e.Accounts[a.Id]and a.Positions.BX==pos and w.Epoch==epoch)
+   equal(player,e.Accounts.player);near(a.Balance,750000)
+   local restored,rp=CP.Restore(CP.Decode(s.Value.Checkpoint),w.Config)
+-  equal(CP.Capture(e,p),CP.Capture(restored,rp));assert(CP.Version==27)
++  equal(CP.Capture(e,p),CP.Capture(restored,rp));assert(CP.Version==28)
+   close(restored,restored.Accounts[a.Id],3,5010);near(restored.Accounts[a.Id].Realized,0)
+   s.BeforeWrite=function()error("Duplicate must not write")end;assert(w:RefreshBots(1,1))
+  end)
+--- original/BotWhaleTests.luau
++++ candidate/BotWhaleTests.luau
+@@ -132,7 +132,7 @@
+   local saved=CP.Capture(e,p);saved.Version=26;local before=copy(saved);local re,rp=CP.Restore(saved,C);equal(saved,before)
+   assert(re.NextTrade==e.NextTrade and re.TotalVolume==e.TotalVolume and re.Time==e.Time)
+   for id,ac in pairs(e.Accounts)do local new=re.Accounts[id];assert(new.Base==ac.Base and new.Balance==ac.Balance and new.Realized==ac.Realized);equal(new.Positions,ac.Positions)end
+-  assert(CP.Version==27 and re.Config.BotMomentum.Version==old.BotMomentum.Version and re.Config.NewsFrequency==0)
++  assert(CP.Version==28 and re.Config.BotMomentum.Version==old.BotMomentum.Version and re.Config.NewsFrequency==0)
+   assert(not pcall(CP.Restore,CP.Capture(re,rp),old));local future=CP.Capture(re,rp);future.Config.BotWhale.Version+=1;assert(not pcall(CP.Restore,future,C));re:Audit()
+  end)
+  test('Checkpoint between passive fill and observation preserves exact remaining parent budget',function()
+--- original/MakerLiquidityTests.luau
++++ candidate/MakerLiquidityTests.luau
+@@ -49,10 +49,10 @@
+   local bid=e.Orders[bidId];local ask=e.Orders[askId];local qty=ask.Remaining
+   assert(e:Submit("taker",{Contract="BX",Direction=-1,Quantity=bid.Remaining,Type="Market"}))
+   assert(e:Submit("taker",{Contract="BX",Direction=1,Quantity=1,Type="Market"}))
+-  local priority=ask.Priority
++  local priority=ask.Priority;local refill=C.MakerReplenishSeconds*(a.QuoteRefillFactor or 1)
+   p:_maker(a)
+-  assert(not a.Quotes["1:1"] and a.ReplenishAt["1:1"]==e.Time+C.MakerReplenishSeconds)
+-  e:AdvanceClock(C.MakerReplenishSeconds-.25);p:_maker(a)
++  assert(not a.Quotes["1:1"] and a.ReplenishAt["1:1"]==e.Time+refill)
++  e:AdvanceClock(refill-.25);p:_maker(a)
+   assert(not a.Quotes["1:1"],"Replenished before cooldown")
+   e:AdvanceClock(.25);p:_maker(a)
+   assert(a.Quotes["1:1"] and a.Quotes["1:1"]~=bidId,"Depleted slot not replenished")
+@@ -114,6 +114,51 @@
+   assert(migrated==180);restored:Audit();resumed:Audit()
+   return "Restore preserves history and accounts; makers adopt the policy on their next turn; replay remains exact"
+  end)
++ test("Repricing withdraws first and waits for an individual replacement clock",function()
++  local e,p,a=fixture(1);local b=e.Books.BX;local slot='-1:1';local id=a.Quotes[slot]
++  local old=e.Orders[id];local cash=e.Accounts[a.Id].Balance;local volume=e.TotalVolume;local last=b.Last
++  -- A wider quoted spread tests repricing without fabricating a trade or editing the book.
++  p.Regime.Volatility=8;e.Time=C.MakerMinRestSeconds+1
++  p:_maker(a)
++  assert(not e.Orders[id]and not a.Quotes[slot]);local due=a.ReplenishAt[slot];assert(due>e.Time)
++  p:_maker(a);assert(not a.Quotes[slot]);assert(e.TotalVolume==volume and b.Last==last and e.Accounts[a.Id].Balance==cash)
++  e.Time=due;p:_maker(a);assert(a.Quotes[slot]and a.Quotes[slot]~=id);e:Audit()
++ end)
++ test("Maker refill profiles are diverse, repeatable and do not draw shared randomness",function()
++  local e,p,a=fixture(1);local factors={};local n=0
++  for i=2,20 do local agent=p:_agent('BX','Maker',i);local before=p.Random.State;p:_maker(agent);assert(before==p.Random.State)
++   assert(agent.QuoteRefillFactor>=.6 and agent.QuoteRefillFactor<=1.4)
++   local bucket=math.floor(agent.QuoteRefillFactor*10);if not factors[bucket]then factors[bucket]=true;n+=1 end
++   local value=agent.QuoteRefillFactor;agent.QuoteRefillFactor=nil;p:_maker(agent);assert(agent.QuoteRefillFactor==value)
++  end
++  assert(n>=4);e:Audit()
++ end)
++ test("Maker adoption preserves manual exits, stop removal, balances and live inventory",function()
++  local e,p,a=fixture(1);local b=e.Books.BX;local ac=e.Accounts[a.Id]
++  assert(e:Submit('taker',{Contract='BX',Direction=-1,Quantity=2,Type='Market'}))
++  local pos=ac.Positions.BX;assert(pos and pos.Direction==1);pos.Stop=nil;pos.ManualStop=true
++  local ok,result=e:Submit(a.Id,{Contract='BX',Direction=-1,Quantity=1,Type='Limit',Price=(b.Last+50)*b.Spec.Tick,ReduceOnly=true});assert(ok)
++  local before=clone(pos);local cash=ac.Balance;local volume=e.TotalVolume;a.QuotePolicy=7;p:_maker(a)
++  equal(before,pos);assert(e.Orders[result.Id]and ac.Balance==cash and e.TotalVolume==volume);e:Audit()
++ end)
++ test("V27 policy migration is economically read-only and refuses policy downgrade",function()
++  local e=E.new(clone(C),71);local p=P.new(e);local saved=Checkpoint.Capture(e,p)
++  saved.Version=27;saved.Config.MakerQuotePolicyVersion=7;saved.Config.MakerRepricePause=nil;saved.Config.BotMomentum.Version=1
++  local before=clone(saved);local re,rp=Checkpoint.Restore(saved,C)
++  equal(saved,before);equal(saved.Engine,Checkpoint.Capture(re,rp).Engine)
++  assert(re.Config.MakerQuotePolicyVersion==8 and re.Config.BotMomentum.Version==2)
++  local old=clone(C);old.MakerQuotePolicyVersion=7;assert(not pcall(Checkpoint.Restore,Checkpoint.Capture(re,rp),old));re:Audit()
++ end)
++ test("Pending staggered Maker replacements survive a complete checkpoint replay",function()
++  local e=E.new(clone(C),7919);local p=P.new(e)
++  for _,a in ipairs(p.Agents)do if a.Kind=='Maker'then
++   local id=a.Quotes['1:1'];if id then e:Cancel(a.Id,id);p:_maker(a)end
++  end end
++  local saved=Checkpoint.Decode(Checkpoint.Encode(Checkpoint.Capture(e,p)));local re,rp=Checkpoint.Restore(saved,C)
++  for i=1,100 do p:Step();rp:Step()end
++  equal(Checkpoint.Capture(e,p),Checkpoint.Capture(re,rp));e:Audit();re:Audit()
++ end)
++
+  return results
+ end
+ return Tests
+--- original/MarketConfig.luau
++++ candidate/MarketConfig.luau
+@@ -11,13 +11,14 @@
+  BroadcastSeconds = 0.1, -- Ten lightweight market batches per second; GUI motion follows display frames.
+ 
+  DepthLevels = 5, -- Real best levels supplied per side; the UI never pads missing liquidity.
+- MakerQuotePolicyVersion = 7,
++ MakerQuotePolicyVersion = 8,
+  -- Funded makers occupy staggered quote distances; ticks reflect each market price scale.
+  MakerLanes = {Count=10,SpacingTicks={BX=6,BT=18,BG=6}},
+  MakerMinRestSeconds = 18, -- Simulated seconds (one wall-clock second at the default speed).
+  MakerRepriceTicks = 3, -- Keep queue priority until fair value moves materially.
+- MakerQuoteSizeMultiplier = 0.9, -- Per-maker quote sizing; population expansion adds funded depth.
+- MakerReplenishSeconds = 3, -- Delay after discovering a fully consumed/expired quote.
++ MakerQuoteSizeMultiplier = 0.45, -- Smaller displayed lots; account capital and inventory limits are unchanged.
++ MakerRepricePause = true,
++ MakerReplenishSeconds = 12, -- Individual 0.6-1.4x delay after consumption, expiry or repricing.
+  MakerDecisionMultiplier = 0.5, -- Check inventory and depleted slots twice as frequently.
+  -- Additional funded institutions, quoting around executed market prices.
+  ReservePopulationVersion = 4,
+@@ -73,12 +74,12 @@
+   CooldownSeconds=300,StaggerSeconds=180,ResumeStaggerSeconds=90,ExitSliceContracts=4,
+   RecoveryFraction=.9,DonorFloorFraction=1.02},
+  -- Momentum-only policy; independent public-price horizons and position lifecycles.
+- BotMomentum = {Version=1,SampleSeconds=5,RetentionSeconds=1220,
+-  Horizons={{60,180},{180,480},{480,1200}},BreakoutFraction=.25,
++ BotMomentum = {Version=2,SampleSeconds=5,RetentionSeconds=1220,
++  Horizons={{20,90},{90,240},{240,600}},BreakoutFraction=.25,
+   EntryStrength={.8,1.2},ConfirmationSeconds={10,25},ExitStrength=.25,
+   MinMoveTicks=4,BreakoutBufferTicks=2,ProfitBufferTicks=1,MaxSlippageTicks=3,
+-  HoldMultiple={1.5,2.5},MinHoldSeconds=180,MaxHoldSeconds=1800,
+-  TargetFraction={.35,.65},PositionRiskFraction=.025,BuildSeconds={90,240},
++  HoldMultiple={1,2},MinHoldSeconds=60,MaxHoldSeconds=900,
++  TargetFraction={.35,.65},PositionRiskFraction=.025,BuildSeconds={30,120},
+   ReviewSeconds={5,15},SliceSeconds={3,8},SliceFraction={.25,.55},
+   StartDelay={1,30},CooldownSeconds={30,120},StopCooldownSeconds={90,240},TrailActivation=1.5},
+  -- Patient institutional execution; existing capital, margin and recovery limits still apply.
+--- original/OrderFlowMarketTests.luau
++++ candidate/OrderFlowMarketTests.luau
+@@ -110,7 +110,7 @@
+   for _=1,160 do p:Step()end
+   local snapshot=CP.Capture(e,p);local rr,pr=CP.Restore(CP.Decode(CP.Encode(snapshot)),C);equal(snapshot,CP.Capture(rr,pr))
+   for _=1,240 do p:Step();pr:Step()end
+-  equal(CP.Capture(e,p),CP.Capture(rr,pr));assert(CP.Version==27)
++  equal(CP.Capture(e,p),CP.Capture(rr,pr));assert(CP.Version==28)
+   return 'Observed history, alert state, orders and RNG continue identically'
+  end)
+  return out
+--- original/Participants.luau
++++ candidate/Participants.luau
+@@ -265,7 +265,12 @@
+  local e=self.Engine local b=e.Books[a.Key] local r=self.Random local c=b.Spec
+  local account=e.Accounts[a.Id] if account.Locked or account.Liquidating or b.Spec.CloseOnly then e:CancelAll(a.Id,a.Key);return end
+  local policy=self.Config.MakerQuotePolicyVersion or 2
+- if a.QuotePolicy~=policy then e:CancelAll(a.Id,a.Key);a.Quotes={};a.ReplenishAt={};a.QuotePolicy=policy end
++ if a.QuotePolicy~=policy then
++  -- Strategy adoption withdraws entry quotes only. Preserve manual/position-linked exits.
++  local ids={};for id in pairs(account.OpenOrders)do local o=e.Orders[id];if o and o.Contract==a.Key and not o.ReduceOnly then table.insert(ids,id)end end
++  table.sort(ids);for _,id in ipairs(ids)do e:Cancel(a.Id,id)end
++  a.Quotes={};a.ReplenishAt={};a.QuotePolicy=policy
++ end
+  local p=account.Positions[a.Key] local inventory=p and p.Quantity*p.Direction or 0
+  local stress=self.Regime.Volatility*self.Config.Volatility+math.min(6,b.Volatility)*0.2
+  -- Quotes follow actual executions; inventory skews each maker's own reservation price.
+@@ -280,6 +285,16 @@
+  local minRest=self.Config.MakerMinRestSeconds or 18
+  local reprice=self.Config.MakerRepriceTicks or 3
+  local replenish=self.Config.MakerReplenishSeconds or math.max(4,minRest/3)
++ if self.Config.MakerRepricePause then
++  -- Identity-derived latency is independent of scheduling and consumes no shared RNG.
++  if not a.QuoteRefillFactor then
++   local n=math.floor(math.abs(e.Seed))%2147483646+1
++   for i=1,#a.Id do n=(n*31+string.byte(a.Id,i))%2147483646 end
++   for _=1,6 do n=(n+1)*48271%2147483647 end
++   a.QuoteRefillFactor=.6+.8*n/2147483647
++  end
++  replenish*=a.QuoteRefillFactor
++ end
+  local sizeMultiplier=self.Config.MakerQuoteSizeMultiplier or 1
+  local activeDepth=liquidity<.35 and 1 or liquidity<.7 and 2 or 3
+  for depth=1,3 do
+@@ -296,6 +311,7 @@
+    local stale=held and math.abs(held.Price-tick)>=reprice and (held.Price-reference)*side>=math.max(2,spread)
+    if held and (stale or age>=minRest and (not eligible or math.abs(held.Price-tick)>=reprice))then
+     e:Cancel(a.Id,held.Id);held=nil;a.Quotes[slot]=nil
++    if self.Config.MakerRepricePause then a.ReplenishAt[slot]=e.Time+replenish end
+    end
+    if eligible and not held and e.Time>=(a.ReplenishAt[slot]or 0)then
+     local size=math.max(1,math.floor(a.Size*sizeMultiplier*liquidity*(1+(depth-1)*.15)*(1-inventory/a.Limit*side*.8)))
+--- original/WorldCheckpoint.luau
++++ candidate/WorldCheckpoint.luau
+@@ -43,7 +43,9 @@
+ -- V25 preserves participation recovery clocks, fill counters and zero-sum funding transfers.
+ -- V26 persists Momentum profiles, sampled history, independent RNG and lifecycle state.
+ -- V27 persists patient Whale mandates, child reservations, fill baselines and private RNG.
+-local Checkpoint={Version=27,Readable={[1]=true,[2]=true,[3]=true,[4]=true,[5]=true,[6]=true,[7]=true,[8]=true,[9]=true,[10]=true,[11]=true,[12]=true,[13]=true,[14]=true,[15]=true,[16]=true,[17]=true,[18]=true,[19]=true,[20]=true,[21]=true,[22]=true,[23]=true,[24]=true,[25]=true,[26]=true,[27]=true}}
++-- V28 versions shorter Momentum horizons and staggered Maker replacement clocks.
++-- Migration changes policy only; positions, orders, protections and ledgers remain intact.
++local Checkpoint={Version=28,Readable={[28]=true,[1]=true,[2]=true,[3]=true,[4]=true,[5]=true,[6]=true,[7]=true,[8]=true,[9]=true,[10]=true,[11]=true,[12]=true,[13]=true,[14]=true,[15]=true,[16]=true,[17]=true,[18]=true,[19]=true,[20]=true,[21]=true,[22]=true,[23]=true,[24]=true,[25]=true,[26]=true,[27]=true}}
+ local function digest(raw)
+  local bytes=Encoding:ComputeStringHash(raw,Enum.HashAlgorithm.Sha256)
+  return (bytes:gsub(".",function(c)return string.format("%02x",string.byte(c))end))
+@@ -111,6 +113,7 @@
+  for old,name in pairs(map)do if old~=name then snapshot=rename(snapshot,map) break end end
+  -- Preserve saved behavior except explicit, versioned migrations; presentation cadence may change.
+  local config=clone(snapshot.Config)
++ assert((config.MakerQuotePolicyVersion or 0)<=(currentConfig.MakerQuotePolicyVersion or 0),'Cannot downgrade Maker quote policy')
+  local whale=currentConfig.BotWhale and currentConfig.BotWhale.Version or 0
+  local savedWhale=config.BotWhale and config.BotWhale.Version or 0
+  assert(savedWhale<=whale,'Cannot downgrade Whale policy')
+@@ -205,7 +208,7 @@
+   end
+  end
+  -- MaxCandles only bounds chart history (matching never reads candles), so a restored world adopts the current limit.
+- for _,key in ipairs({"BroadcastSeconds","SimulationSpeed","MaxCatchupSteps","MaxCandles","MaxPlayerQuantity","MaxPlayerInventory","MaxPlayerOrders","DepthLevels","MakerQuotePolicyVersion","MakerMinRestSeconds","MakerRepriceTicks","MakerQuoteSizeMultiplier","MakerReplenishSeconds","MakerDecisionMultiplier"})do config[key]=currentConfig[key]end
++ for _,key in ipairs({"BroadcastSeconds","SimulationSpeed","MaxCatchupSteps","MaxCandles","MaxPlayerQuantity","MaxPlayerInventory","MaxPlayerOrders","DepthLevels","MakerQuotePolicyVersion","MakerMinRestSeconds","MakerRepriceTicks","MakerQuoteSizeMultiplier","MakerReplenishSeconds","MakerDecisionMultiplier","MakerRepricePause"})do config[key]=currentConfig[key]end
+  -- Simulated margin is buying-power policy; contract economics and all saved ledgers stay intact.
+  for key,spec in pairs(config.Contracts) do
+   local current=currentConfig.Contracts[key] or currentConfig.LegacyContracts[key]

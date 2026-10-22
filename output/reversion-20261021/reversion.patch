@@ -1,0 +1,420 @@
+--- original/BotOrderFlowTests.luau
++++ candidate/BotOrderFlowTests.luau
+@@ -137,7 +137,7 @@
+   equal(saved,CP.Capture(rr,pr))
+   for _=1,240 do rp:Step();pr:Step()end
+   equal(CP.Capture(re,rp),CP.Capture(rr,pr));re:Audit();rr:Audit()
+-  assert(CP.Version==27)
++  assert(CP.Version==28)
+   local future=clone(saved);future.Config.BotOrderFlow.Version=C.BotOrderFlow.Version+1
+   assert(not pcall(CP.Restore,future,C),'Newer pressure policy accepted by older reader')
+  end)
+--- original/BotParticipationTests.luau
++++ candidate/BotParticipationTests.luau
+@@ -108,7 +108,7 @@
+   equal(saved,CP.Capture(rr,pr))
+   for _=1,60 do rp:Step();pr:Step()end
+   equal(CP.Capture(re,rp),CP.Capture(rr,pr));re:Audit();rr:Audit()
+-  local down=copy(C);down.BotParticipation=nil;assert(not pcall(CP.Restore,saved,down));assert(CP.Version==27)
++  local down=copy(C);down.BotParticipation=nil;assert(not pcall(CP.Restore,saved,down));assert(CP.Version==28)
+  end)
+  return out
+ end
+--- original/BotRefreshTests.luau
++++ candidate/BotRefreshTests.luau
+@@ -203,7 +203,7 @@
+   assert(w.Engine==e and w.Population==p and a==e.Accounts[a.Id]and a.Positions.BX==pos and w.Epoch==epoch)
+   equal(player,e.Accounts.player);near(a.Balance,750000)
+   local restored,rp=CP.Restore(CP.Decode(s.Value.Checkpoint),w.Config)
+-  equal(CP.Capture(e,p),CP.Capture(restored,rp));assert(CP.Version==27)
++  equal(CP.Capture(e,p),CP.Capture(restored,rp));assert(CP.Version==28)
+   close(restored,restored.Accounts[a.Id],3,5010);near(restored.Accounts[a.Id].Realized,0)
+   s.BeforeWrite=function()error("Duplicate must not write")end;assert(w:RefreshBots(1,1))
+  end)
+--- original/BotReversion.luau
++++ candidate/BotReversion.luau
+@@ -0,0 +1,143 @@
++-- Funded, inventory-capped fades of stretched public prices that are losing speed.
++-- All clocks, observations and private random state are checkpointed; no price/cash writes.
++local R={}
++local function random(s)s.RandomState=s.RandomState*48271%2147483647;return s.RandomState/2147483647 end
++local function range(s,v)return v[1]+(v[2]-v[1])*random(s)end
++local function seed(id,world)
++ local n=math.floor(math.abs(world or 1))%2147483646+1
++ for i=1,#id do n=(n*31+string.byte(id,i))%2147483646 end
++ return n+1
++end
++local function cancelEntries(e,a)
++ local ids={};for id in pairs(e.Accounts[a.Id].OpenOrders)do local o=e.Orders[id];if o and not o.ReduceOnly then table.insert(ids,id)end end
++ table.sort(ids);for _,id in ipairs(ids)do e:Cancel(a.Id,id)end
++end
++function R.Enabled(p,a)return a.Kind=='Reversion'and p.Config.BotReversion~=nil and a.PolicyVersion~=nil end
++function R.Sample(p,key)
++ local c=p.Config.BotReversion;if not c then return end
++ local e=p.Engine;local b=e.Books[key];if b.Spec.CloseOnly then return end
++ local h=p.Markets[key].ReversionHistory or {};p.Markets[key].ReversionHistory=h
++ if #h>0 and e.Time-h[#h].Time<c.SampleSeconds then return end
++ table.insert(h,{Time=e.Time,Price=b.Last or b.Reference})
++ while #h>2 and h[2].Time<e.Time-c.RetentionSeconds do table.remove(h,1)end
++end
++function R.Adopt(p,a)
++ local e,c=p.Engine,p.Config.BotReversion;local s=a.Reversion
++ if s and s.Version==c.Version then return s end
++ cancelEntries(e,a)
++ s={Version=c.Version,RandomState=seed(a.Id,e.Seed),Phase='Waiting'}
++ for _=1,6 do random(s)end
++ s.Horizon=range(s,c.LookbackSeconds);s.Recent=range(s,c.SlowingSeconds)
++ s.Extension=range(s,c.ExtensionTicks);s.Deceleration=range(s,c.Deceleration)
++ s.Hold=range(s,c.HoldSeconds);s.Cooldown=range(s,c.CooldownSeconds)
++ s.Aggression=range(s,c.Aggression);s.ProfitFraction=range(s,c.ProfitFraction)
++ s.ReadyAt=e.Time+range(s,c.StartDelay);s.Recoveries=e.Accounts[a.Id].ParticipationRecoveries or 0
++ a.Reversion=s;return s
++end
++function R.Signal(p,a,s)
++ local e,c=p.Engine,p.Config.BotReversion;local h=p.Markets[a.Key].ReversionHistory
++ if not h or #h<4 or e.Time-h[#h].Time>c.SampleSeconds*2 then return nil end
++ local first,recent,prior
++ for i=#h,1,-1 do
++  if not recent and h[i].Time<=e.Time-s.Recent then recent=i end
++  if not prior and h[i].Time<=e.Time-s.Recent*2 then prior=i end
++  if h[i].Time<=e.Time-s.Horizon then first=i;break end
++ end
++ if not first or not recent or not prior or prior<=first or recent<=prior then return nil end
++ local b=e.Books[a.Key];local last=b.Last or b.Reference;local bid,ask=e:PublicPrices(a.Key)
++ if not bid or not ask then return nil end
++ local spread=(ask-bid)/b.Spec.Tick;if spread>c.MaxSpreadTicks then return nil end
++ local total,duration,sum2,n=0,0,0,0
++ for i=first,#h-1 do
++  local dt=h[i+1].Time-h[i].Time;total+=h[i].Price*dt;duration+=dt
++  local d=h[i+1].Price-h[i].Price;sum2+=d*d;n+=1
++ end
++ if duration<=0 then return nil end
++ local mean=total/duration;local extension=last-mean;local direction=extension>=0 and 1 or -1
++ local required=math.max(s.Extension,spread+c.MaxSlippageTicks+c.ProfitBufferTicks,math.sqrt(sum2/math.max(1,n))*c.VolatilityExtension)
++ local recentRate=(last-h[recent].Price)/math.max(c.SampleSeconds,e.Time-h[recent].Time)
++ local priorRate=(h[recent].Price-h[prior].Price)/math.max(c.SampleSeconds,h[recent].Time-h[prior].Time)
++ -- A slowing continuation is enough: a countertrend print is not a prerequisite.
++ -- Flat tape and accelerating moves are not opportunities. Large completed reversals are not chased.
++ local slowing=priorRate*direction>0 and recentRate*direction<=priorRate*direction*s.Deceleration
++ local limitedTurn=recentRate*direction>=-priorRate*direction*c.MaxTurnRatio
++ local side=math.abs(extension)>=required and slowing and limitedTurn and -direction or 0
++ return {Side=side,Mean=mean,Last=last,Distance=math.abs(extension),Required=required,Spread=spread,RecentRate=recentRate,PriorRate=priorRate}
++end
++function R.Capacity(p,a,stop)
++ local e,c=p.Engine,p.Config.BotReversion;local ac=e.Accounts[a.Id];local b=e.Books[a.Key];local equity=e:Summary(ac).Equity
++ return math.max(0,math.min(a.Limit,ac.Limit,c.MaxInventory,a.Size*c.SizeMultiple,
++  math.floor(equity*ac.Risk*p.Config.BotPopulation.MarginFraction/b.Spec.Margin),
++  math.floor(equity*c.PositionRiskFraction/(stop*b.Spec.Tick*b.Spec.Multiplier))))
++end
++local function pause(e,a,s,c,stopped)
++ cancelEntries(e,a);s.ChildId=nil;s.PositionId=nil;s.OpenedAt=nil;s.Phase='Waiting';s.TargetTick=nil
++ s.ReadyAt=e.Time+s.Cooldown*range(s,stopped and c.StopCooldownMultiple or c.CooldownMultiple)
++end
++local function availableExit(e,a,pos)
++ local qty=pos.Quantity
++ for id in pairs(e.Accounts[a.Id].OpenOrders)do local o=e.Orders[id];if o and o.Contract==a.Key and o.ReduceOnly then qty-=o.Remaining end end
++ return math.max(0,qty)
++end
++function R.Step(p,a)
++ if not R.Enabled(p,a)then return end
++ local e,c=p.Engine,p.Config.BotReversion;local ac=e.Accounts[a.Id];local b=e.Books[a.Key];local s=R.Adopt(p,a)
++ local pos=ac.Positions[a.Key]
++ if ac.Locked or ac.Liquidating or a.Retiring or b.Spec.CloseOnly or pos and pos.Triggered then cancelEntries(e,a);return end
++ if s.Recoveries~=(ac.ParticipationRecoveries or 0)then s.Recoveries=ac.ParticipationRecoveries or 0;pause(e,a,s,c,true);return end
++ if s.PositionId and(not pos or pos.Id~=s.PositionId)then pause(e,a,s,c,true);return end
++ local stop=math.clamp(a.Stop,c.MinStopTicks,c.MaxStopTicks);local capacity=R.Capacity(p,a,stop)
++ if pos then
++  if not s.PositionId then
++   cancelEntries(e,a);s.ChildId=nil;s.PositionId=pos.Id;s.OpenedAt=e.Time;s.Phase='Holding'
++   -- Adopt legacy positions without changing existing/manual stops or targets.
++   if not pos.Stop and not pos.ManualStop then pos.Stop=math.max(1,math.round(pos.Entry/b.Spec.Tick)-pos.Direction*stop)*b.Spec.Tick;ac.Revision+=1 end
++   s.TargetTick=s.TargetTick or math.round(pos.Entry/b.Spec.Tick)+pos.Direction*math.max(c.ProfitBufferTicks,math.floor(stop*.5))
++  end
++  if pos.Quantity>capacity or e.Time-s.OpenedAt>=s.Hold then s.Phase='Reducing'end
++  if s.Phase=='Reducing'and s.ExitId then
++   if e.Orders[s.ExitId]then e:Cancel(a.Id,s.ExitId)end;s.ExitId=nil
++  end
++  local bid,ask=e:PublicPrices(a.Key);local touch=pos.Direction==1 and bid or ask
++  if not touch then return end
++  local qty=math.min(availableExit(e,a,pos),a.Size,c.ExitSliceContracts)
++  if qty<1 then return end
++  if s.Phase=='Reducing'then
++   if e.Time<(s.NextExitAt or 0)then return end
++   s.NextExitAt=e.Time+range(s,c.ExitSeconds)
++   local side=-pos.Direction;local tick=math.max(1,math.round(touch/b.Spec.Tick)+side*c.MaxSlippageTicks)
++   local ok,result=e:Submit(a.Id,{Contract=a.Key,Direction=side,Quantity=qty,Type='Limit',Price=tick*b.Spec.Tick,ReduceOnly=true})
++   if ok and e.Orders[result.Id]then e:Cancel(a.Id,result.Id)end
++  elseif not pos.ManualTarget and not pos.Target then
++   -- Rest a funded, position-linked profit exit. Never lower it just to force a fill.
++   local ok,result=e:Submit(a.Id,{Contract=a.Key,Direction=-pos.Direction,Quantity=availableExit(e,a,pos),Type='Limit',Price=math.max(1,s.TargetTick)*b.Spec.Tick,ReduceOnly=true,Expires=s.OpenedAt+s.Hold})
++   if ok and e.Orders[result.Id]then s.ExitId=result.Id end
++  end
++  return
++ end
++ if s.ChildId then
++  if e.Orders[s.ChildId]then return end
++  pause(e,a,s,c,false);return
++ end
++ if e.Time<s.ReadyAt or capacity<1 then return end
++ local signal=R.Signal(p,a,s);if not signal or signal.Side==0 then return end
++ local size=p:_fit(a,signal.Side,capacity);if size<1 then return end
++ local bid,ask=e:PublicPrices(a.Key);local aggressive=random(s)<s.Aggression
++ local touch=aggressive and(signal.Side==1 and ask or bid)or(signal.Side==1 and bid or ask)
++ if not touch then return end
++ local tick=math.max(1,math.round(touch/b.Spec.Tick)+(aggressive and signal.Side*c.MaxSlippageTicks or 0))
++ local profit=math.max(math.ceil(signal.Spread+c.MaxSlippageTicks+c.ProfitBufferTicks),math.floor(math.min(signal.Distance*s.ProfitFraction,stop*c.MaxRewardMultiple)))
++ local ok,result=e:Submit(a.Id,{Contract=a.Key,Direction=signal.Side,Quantity=size,Type='Limit',Price=tick*b.Spec.Tick,StopTicks=stop,Expires=e.Time+range(s,c.EntrySeconds)})
++ s.ReadyAt=e.Time+s.Cooldown*range(s,c.CooldownMultiple)
++ if ok then
++  s.Phase='Entering';s.TargetTick=math.round((signal.Side==1 and ask or bid)/b.Spec.Tick)+signal.Side*profit
++  if aggressive then if e.Orders[result.Id]then e:Cancel(a.Id,result.Id)end
++  elseif e.Orders[result.Id]then s.ChildId=result.Id end
++  local held=ac.Positions[a.Key]
++  if held then
++   cancelEntries(e,a);s.ChildId=nil;s.PositionId=held.Id;s.OpenedAt=e.Time;s.Phase='Holding'
++   s.TargetTick=math.round(held.Entry/b.Spec.Tick)+held.Direction*profit
++  elseif not s.ChildId then pause(e,a,s,c,false)end
++ end
++end
++return R
+--- original/BotReversionTests.luau
++++ candidate/BotReversionTests.luau
+@@ -0,0 +1,137 @@
++local C=require(game.ReplicatedStorage.MarketReign.MarketConfig)
++local E=require(script.Parent.MarketEngine)
++local P=require(script.Parent.Participants)
++local R=require(script.Parent.BotReversion)
++local CP=require(script.Parent.WorldCheckpoint)
++local T={}
++local function copy(v)if type(v)~='table'then return v end;local t={}for k,x in pairs(v)do t[k]=copy(x)end;return t end
++local function equal(a,b,path)
++ path=path or 'state';assert(type(a)==type(b),path..' type')
++ if type(a)~='table'then assert(a==b,path..' differs');return end
++ for k,v in pairs(a)do equal(v,b[k],path..'.'..tostring(k))end;for k in pairs(b)do assert(a[k]~=nil,path..' extra')end
++end
++local function fixture()
++ local c=copy(C);local e=E.new(c,123);local p=setmetatable({Engine=e,Config=c,Random=P.RNG.new(123),Agents={},Markets={BX={},BT={},BG={}},Regime={Volatility=1,Liquidity=1,Activity=1}},P)
++ local a=p:_agent('BX','Reversion',1);a.Size=2;a.Limit=40;a.Stop=24;local ac=e.Accounts[a.Id];ac.Limit=40
++ e:AddAccount('buyer',1e8,100000,1,false);e:AddAccount('seller',1e8,100000,1,false)
++ local s=R.Adopt(p,a);s.Horizon=60;s.Recent=10;s.Extension=6;s.Deceleration=.6;s.Aggression=1;s.ReadyAt=0;s.Hold=90
++ return e,p,a,e.Books.BX,s
++end
++local function quote(e,b,side,qty,tick)
++ local ok,r=e:Submit(side==1 and 'buyer'or 'seller',{Contract='BX',Direction=side,Quantity=qty or 100,Type='Limit',Price=(tick or(b.Last or b.Reference)-side)*b.Spec.Tick});assert(ok,tostring(r));return r
++end
++local function history(e,p,b,direction,mode)
++ e.Time=100;local h={};p.Markets.BX.ReversionHistory=h
++ local anchor=b.Reference
++ for t=0,100,2 do
++  local move=t<=90 and t*.5 or 45+(t-90)*(mode=='Accelerating'and 1 or mode=='Flat'and .5 or .1)
++  if mode=='Flat'then move=0 end
++  table.insert(h,{Time=t,Price=anchor+direction*move})
++ end
++ b.Last=h[#h].Price
++ quote(e,b,1,100,b.Last-1);quote(e,b,-1,100,b.Last+1)
++end
++function T.Run()
++ local out={};local function test(name,fn)local ok,r=pcall(fn);table.insert(out,{Name=name,Passed=ok,Detail=ok and 'Passed'or tostring(r)})end
++ test('Profiles are diverse, stable and do not consume shared RNG',function()
++  local e,p,a,b,s=fixture();local horizons,delays={},{}
++  for i=2,40 do local a=p:_agent('BX','Reversion',i);local before=p.Random.State;local q=R.Adopt(p,a);assert(p.Random.State==before);horizons[math.floor((q.Horizon-p.Config.BotReversion.LookbackSeconds[1])/(p.Config.BotReversion.LookbackSeconds[2]-p.Config.BotReversion.LookbackSeconds[1])*8)]=true;delays[math.floor((q.Cooldown-p.Config.BotReversion.CooldownSeconds[1])/(p.Config.BotReversion.CooldownSeconds[2]-p.Config.BotReversion.CooldownSeconds[1])*8)]=true;assert(R.Adopt(p,a)==q)end
++  local n=0;for _ in pairs(horizons)do n+=1 end;assert(n>=4);local n=0;for _ in pairs(delays)do n+=1 end;assert(n>=4)
++ end)
++ test('A stretched slowing continuation admits a fade before an opposite print, symmetrically',function()
++  for _,direction in ipairs({1,-1})do local e,p,a,b,s=fixture();history(e,p,b,direction,'Slowing');local signal=assert(R.Signal(p,a,s));assert(signal.Side==-direction and signal.RecentRate*direction>0 and signal.PriorRate*direction>signal.RecentRate*direction)
++   p.Markets.BX.Fair=b.Last+100000;a.Belief=b.Last-100000;equal(signal,R.Signal(p,a,s))
++  end
++ end)
++ test('Flat, accelerating, stale and insufficient histories do not create entries',function()
++  for _,mode in ipairs({'Flat','Accelerating'})do local e,p,a,b,s=fixture();history(e,p,b,1,mode);assert(R.Signal(p,a,s).Side==0)end
++  local e,p,a,b,s=fixture();history(e,p,b,1,'Slowing');e.Time+=5;assert(not R.Signal(p,a,s));p.Markets.BX.ReversionHistory={};assert(not R.Signal(p,a,s))
++ end)
++ test('Sampling follows simulation time, is bounded and does not read execution count',function()
++  local e,p,a,b,s=fixture();for i=0,400 do e.Time=i;R.Sample(p,'BX');R.Sample(p,'BX')end
++  local h=p.Markets.BX.ReversionHistory;assert(#h<=102);assert(h[#h].Time==400);local n=#h;b.Recent=table.create(1000,b.Reference);R.Sample(p,'BX');assert(#h==n)
++ end)
++ test('Entry fills are funded and capped, with stops and no pyramiding',function()
++  local e,p,a,b,s=fixture();history(e,p,b,1,'Slowing');local before=e.TotalVolume;R.Step(p,a)
++  local pos=assert(e.Accounts[a.Id].Positions.BX);assert(pos.Direction==-1 and pos.Quantity<=R.Capacity(p,a,math.clamp(a.Stop,p.Config.BotReversion.MinStopTicks,p.Config.BotReversion.MaxStopTicks))and pos.Stop)
++  assert(e.TotalVolume-before==pos.Quantity and e.Accounts[a.Id].NetCapitalAdjustments==0)
++  local qty=pos.Quantity;R.Step(p,a);assert(e.Accounts[a.Id].Positions.BX.Quantity==qty);e:Audit()
++ end)
++ test('Passive entries expire and cannot be instantly replenished',function()
++  local e,p,a,b,s=fixture();history(e,p,b,1,'Slowing');s.Aggression=0;R.Step(p,a);local id=assert(s.ChildId);local o=e.Orders[id];assert(o and not e.Accounts[a.Id].Positions.BX)
++  R.Step(p,a);assert(s.ChildId==id);e:AdvanceClock(o.Expires-e.Time);R.Step(p,a);assert(not s.ChildId and s.ReadyAt>e.Time);local orders=e.NextOrder;R.Step(p,a);assert(e.NextOrder==orders);e:Audit()
++ end)
++ test('Partial entry fills cancel the remaining entry at the next observation',function()
++  local e,p,a,b,s=fixture();history(e,p,b,1,'Slowing');s.Aggression=0;R.Step(p,a);local id=assert(s.ChildId)
++  e:CancelAll('seller');assert(e:Submit('buyer',{Contract='BX',Direction=1,Quantity=1,Type='Market'}));assert(e.Accounts[a.Id].Positions.BX)
++  R.Step(p,a);assert(not e.Orders[id]and not s.ChildId);assert(e.Accounts[a.Id].Positions.BX.Quantity==1);e:Audit()
++ end)
++ test('Profit exits are reduce-only, retain FIFO, and cannot reverse inventory',function()
++  local e,p,a,b,s=fixture();history(e,p,b,1,'Slowing');R.Step(p,a);R.Step(p,a);local id=assert(s.ExitId);local o=e.Orders[id];assert(o.ReduceOnly);local priority=o.Priority;R.Step(p,a);assert(e.Orders[id].Priority==priority)
++  e:CancelAll('buyer');assert(e:Submit('seller',{Contract='BX',Direction=-1,Quantity=100,Type='Market'}));assert(not e.Accounts[a.Id].Positions.BX);R.Step(p,a);assert(s.Phase=='Waiting'and s.ReadyAt>e.Time);e:Audit()
++ end)
++ test('Timed exits cancel only their own target and use capped genuine matches',function()
++  local e,p,a,b,s=fixture();history(e,p,b,1,'Slowing');R.Step(p,a);R.Step(p,a);local target=assert(s.ExitId);local qty=e.Accounts[a.Id].Positions.BX.Quantity;local volume=e.TotalVolume
++  e:AdvanceClock(s.Hold+1);R.Step(p,a);assert(not e.Orders[target]);local pos=e.Accounts[a.Id].Positions.BX
++  assert(not pos or pos.Quantity<qty);assert(e.TotalVolume>volume);e:Audit()
++ end)
++ test('Manual exits and protection survive adoption and share the closing inventory budget',function()
++  local e,p,a,b,s=fixture();quote(e,b,-1,5);assert(e:Submit(a.Id,{Contract='BX',Direction=1,Quantity=2,Type='Market',StopTicks=20}));local pos=e.Accounts[a.Id].Positions.BX;pos.ManualStop=true
++  local stop=pos.Stop;local ok,o=e:Submit(a.Id,{Contract='BX',Direction=-1,Quantity=2,Type='Limit',Price=(b.Last+40)*b.Spec.Tick,ReduceOnly=true});assert(ok)
++  a.Reversion=nil;R.Step(p,a);assert(e.Orders[o.Id]and pos.Stop==stop and pos.ManualStop)
++  local count=0;for id in pairs(e.Accounts[a.Id].OpenOrders)do if e.Orders[id].ReduceOnly then count+=e.Orders[id].Remaining end end;assert(count==2);e:Audit()
++  pos.Stop=nil;pos.ManualStop=true;a.Reversion=nil;R.Step(p,a);assert(pos.Stop==nil and pos.ManualStop and e.Orders[o.Id]);e:Audit()
++ end)
++ test('Locks, liquidation, retirement, triggered protection and no buying power block entry',function()
++  for _,condition in ipairs({'Locked','Liquidating','Retiring','Risk'})do local e,p,a,b,s=fixture();history(e,p,b,1,'Slowing')
++   if condition=='Retiring'then a.Retiring=true elseif condition=='Risk'then e.Accounts[a.Id].Risk=0 else e.Accounts[a.Id][condition]=true end
++   R.Step(p,a);assert(e.TotalVolume==0 and not next(e.Accounts[a.Id].OpenOrders));e:Audit()
++  end
++  local e,p,a,b,s=fixture();history(e,p,b,1,'Slowing');R.Step(p,a);e.Accounts[a.Id].Positions.BX.Triggered='Stop loss';local n=e.NextOrder;R.Step(p,a);assert(e.NextOrder==n)
++ end)
++ test('V27 adoption is read-only for economic state; policy downgrades fail closed',function()
++  local old=copy(C);old.BotReversion=nil;local e=E.new(old,7919);local p=P.new(e);for _=1,40 do p:Step()end
++  local saved=CP.Capture(e,p);saved.Version=27;local before=copy(saved);local re,rp=CP.Restore(saved,C);equal(saved,before);equal(saved.Engine,CP.Capture(re,rp).Engine);equal(saved.Population,CP.Capture(re,rp).Population)
++  assert(CP.Version==28 and re.Config.NewsFrequency==0 and re.Config.BotMomentum.Version==old.BotMomentum.Version and re.Config.BotWhale.Version==old.BotWhale.Version)
++  assert(not pcall(CP.Restore,CP.Capture(re,rp),old));local future=CP.Capture(re,rp);future.Config.BotReversion.Version+=1;assert(not pcall(CP.Restore,future,C));re:Audit()
++ end)
++ test('Full population profiles and sample windows serialize exactly',function()
++  local e=E.new(copy(C),7919);local p=P.new(e)
++  for _=1,900 do p:Step()end
++  local saved=CP.Capture(e,p);local re,rp=CP.Restore(CP.Decode(CP.Encode(saved)),C);equal(saved,CP.Capture(re,rp))
++  for _=1,160 do p:Step();rp:Step()end
++  equal(CP.Capture(e,p),CP.Capture(re,rp));e:Audit();re:Audit()
++ end)
++ test('Pending, unobserved-partial, holding and reducing checkpoints resume exactly',function()
++  for _,phase in ipairs({'Pending','Partial','Holding','Reducing'})do
++   local e=E.new(copy(C),123);local p=P.new(e);local a
++   for _,agent in ipairs(p.Agents)do if agent.Kind=='Reversion'and agent.Key=='BX'then a=agent;break end end
++   for _,id in ipairs(e.AccountOrder)do e:CancelAll(id)end
++   e:AddAccount('buyer',1e8,100000,1,false);e:AddAccount('seller',1e8,100000,1,false)
++   a.Size=2;a.Stop=24;local b=e.Books.BX;local s=R.Adopt(p,a)
++   s.Horizon=60;s.Recent=10;s.Extension=6;s.Deceleration=.6;s.ReadyAt=0;s.Hold=90;s.Aggression=(phase=='Pending'or phase=='Partial')and 0 or 1
++   history(e,p,b,1,'Slowing');R.Step(p,a)
++   if phase=='Pending'then assert(s.ChildId and e.Orders[s.ChildId]and not e.Accounts[a.Id].Positions.BX)
++   elseif phase=='Partial'then e:CancelAll('seller');assert(e:Submit('buyer',{Contract='BX',Direction=1,Quantity=1,Type='Market'}));assert(not s.PositionId and e.Accounts[a.Id].Positions.BX)
++   else
++    assert(s.Phase=='Holding'and s.PositionId)
++    if phase=='Reducing'then e:CancelAll('seller');e:AdvanceClock(91);R.Step(p,a);assert(s.Phase=='Reducing'and e.Accounts[a.Id].Positions.BX)end
++   end
++   local saved=CP.Capture(e,p);local re,rp=CP.Restore(CP.Decode(CP.Encode(saved)),C);equal(saved,CP.Capture(re,rp))
++   for _=1,80 do p:Step();rp:Step()end
++   equal(CP.Capture(e,p),CP.Capture(re,rp));e:Audit();re:Audit()
++  end
++ end)
++ test('A passive entry filled and stopped between decisions cannot restart immediately',function()
++  local e,p,a,b,s=fixture();history(e,p,b,1,'Slowing');s.Aggression=0;R.Step(p,a);local id=assert(s.ChildId)
++  e:CancelAll('seller');local qty=e.Orders[id].Remaining;assert(e:Submit('buyer',{Contract='BX',Direction=1,Quantity=qty,Type='Market'}));local pos=assert(e.Accounts[a.Id].Positions.BX);assert(not s.PositionId)
++  while b.Last*b.Spec.Tick<pos.Stop do
++   local nextTick=math.min(math.round(pos.Stop/b.Spec.Tick),b.Last+10)
++   quote(e,b,-1,1,nextTick);assert(e:Submit('buyer',{Contract='BX',Direction=1,Quantity=1,Type='Market'}))
++  end
++  quote(e,b,-1,10,b.Last+1);e:ProcessStops();assert(not e.Accounts[a.Id].Positions.BX)
++  local volume=e.TotalVolume;R.Step(p,a);assert(s.Phase=='Waiting'and s.ReadyAt>e.Time and e.TotalVolume==volume);e:Audit()
++ end)
++ return out
++end
++return T
+--- original/BotSignalsTests.luau
++++ candidate/BotSignalsTests.luau
+@@ -11,7 +11,9 @@
+  for k,v in pairs(a)do equal(v,b[k])end;for k in pairs(b)do assert(a[k]~=nil,'Unexpected state key')end
+ end
+ local function fixture()
+- local e=E.new(clone(C),73521);local p=P.new(e)
++ -- These fixtures exercise the legacy public-signal policy; BotReversionTests covers the new executor.
++ local config=clone(C);config.BotReversion=nil
++ local e=E.new(config,73521);local p=P.new(e)
+  for _,id in ipairs(e.AccountOrder)do e:CancelAll(id)end
+  local a;for _,agent in ipairs(p.Agents)do if agent.Kind=='Reversion'and agent.Key=='BX'then a=agent;break end end
+  e.Time=60;a.Next=0;a.Bias=100;a.Size=5;a.Aggression=1;a.EntryThreshold=.5
+--- original/BotWhaleTests.luau
++++ candidate/BotWhaleTests.luau
+@@ -132,7 +132,7 @@
+   local saved=CP.Capture(e,p);saved.Version=26;local before=copy(saved);local re,rp=CP.Restore(saved,C);equal(saved,before)
+   assert(re.NextTrade==e.NextTrade and re.TotalVolume==e.TotalVolume and re.Time==e.Time)
+   for id,ac in pairs(e.Accounts)do local new=re.Accounts[id];assert(new.Base==ac.Base and new.Balance==ac.Balance and new.Realized==ac.Realized);equal(new.Positions,ac.Positions)end
+-  assert(CP.Version==27 and re.Config.BotMomentum.Version==old.BotMomentum.Version and re.Config.NewsFrequency==0)
++  assert(CP.Version==28 and re.Config.BotMomentum.Version==old.BotMomentum.Version and re.Config.NewsFrequency==0)
+   assert(not pcall(CP.Restore,CP.Capture(re,rp),old));local future=CP.Capture(re,rp);future.Config.BotWhale.Version+=1;assert(not pcall(CP.Restore,future,C));re:Audit()
+  end)
+  test('Checkpoint between passive fill and observation preserves exact remaining parent budget',function()
+--- original/MarketConfig.luau
++++ candidate/MarketConfig.luau
+@@ -11,6 +11,14 @@
+  BroadcastSeconds = 0.1, -- Ten lightweight market batches per second; GUI motion follows display frames.
+ 
+  DepthLevels = 5, -- Real best levels supplied per side; the UI never pads missing liquidity.
++ -- Reversion-only policy; fixed in the saved world for deterministic continuation.
++ BotReversion = {Version=1,SampleSeconds=2,RetentionSeconds=200,
++  LookbackSeconds={45,180},SlowingSeconds={4,12},ExtensionTicks={6,16},Deceleration={.25,.75},
++  VolatilityExtension=3,MaxTurnRatio=1,MaxSpreadTicks=6,MaxSlippageTicks=2,ProfitBufferTicks=2,
++  HoldSeconds={45,150},CooldownSeconds={20,70},StartDelay={2,35},CooldownMultiple={.75,1.5},StopCooldownMultiple={1.5,2.5},
++  MaxInventory=6,SizeMultiple=1,PositionRiskFraction=.005,MinStopTicks=12,MaxStopTicks=32,
++  Aggression={.55,.85},ProfitFraction={.35,.65},MaxRewardMultiple=1.25,EntrySeconds={4,10},
++  ExitSeconds={4,10},ExitSliceContracts=2},
+  MakerQuotePolicyVersion = 7,
+  -- Funded makers occupy staggered quote distances; ticks reflect each market price scale.
+  MakerLanes = {Count=10,SpacingTicks={BX=6,BT=18,BG=6}},
+--- original/OrderFlowMarketTests.luau
++++ candidate/OrderFlowMarketTests.luau
+@@ -110,7 +110,7 @@
+   for _=1,160 do p:Step()end
+   local snapshot=CP.Capture(e,p);local rr,pr=CP.Restore(CP.Decode(CP.Encode(snapshot)),C);equal(snapshot,CP.Capture(rr,pr))
+   for _=1,240 do p:Step();pr:Step()end
+-  equal(CP.Capture(e,p),CP.Capture(rr,pr));assert(CP.Version==27)
++  equal(CP.Capture(e,p),CP.Capture(rr,pr));assert(CP.Version==28)
+   return 'Observed history, alert state, orders and RNG continue identically'
+  end)
+  return out
+--- original/Participants.luau
++++ candidate/Participants.luau
+@@ -8,6 +8,7 @@
+ local Pressure=require(script.Parent.BotOrderFlow)
+ local Participation=require(script.Parent.BotParticipation)
+ local Momentum=require(script.Parent.BotMomentum)
++local Reversion=require(script.Parent.BotReversion)
+ Participants.__index=Participants
+ local RNG={} RNG.__index=RNG
+ function RNG.new(seed) return setmetatable({State=math.floor(math.abs(seed))%2147483646+1},RNG) end
+@@ -400,6 +401,7 @@
+  local account=e.Accounts[a.Id]
+  if b.Spec.CloseOnly then e:CancelAll(a.Id,a.Key);return end
+  if account.Locked or account.Liquidating or account.Positions[a.Key] and account.Positions[a.Key].Triggered then return end
++ if Reversion.Enabled(self,a)then Reversion.Step(self,a);return end
+  if Pressure.Enabled(self,a)then Pressure.Step(self,a);return end
+  if r:Next()<0.25 then return end -- varied inactivity
+  local last=b.Last or b.Reference local quote=Signals.Quote(self,a.Key)
+@@ -484,6 +486,7 @@
+  if e.Time>=self.NextRegime then self:_regime() end
+  if self.Config.BotSignals then for _,key in ipairs(self.Config.ContractOrder)do Signals.Sample(self,key)end end
+  if self.Config.BotMomentum then for _,key in ipairs(self.Config.ContractOrder)do Momentum.Sample(self,key)end end
++ if self.Config.BotReversion then for _,key in ipairs(self.Config.ContractOrder)do Reversion.Sample(self,key)end end
+  for _,a in ipairs(self.Agents) do
+   if e.Books[a.Key].Spec.CloseOnly then continue end
+   if not a.Retiring then self:_observe(a)end
+--- original/WorldCheckpoint.luau
++++ candidate/WorldCheckpoint.luau
+@@ -43,7 +43,8 @@
+ -- V25 preserves participation recovery clocks, fill counters and zero-sum funding transfers.
+ -- V26 persists Momentum profiles, sampled history, independent RNG and lifecycle state.
+ -- V27 persists patient Whale mandates, child reservations, fill baselines and private RNG.
+-local Checkpoint={Version=27,Readable={[1]=true,[2]=true,[3]=true,[4]=true,[5]=true,[6]=true,[7]=true,[8]=true,[9]=true,[10]=true,[11]=true,[12]=true,[13]=true,[14]=true,[15]=true,[16]=true,[17]=true,[18]=true,[19]=true,[20]=true,[21]=true,[22]=true,[23]=true,[24]=true,[25]=true,[26]=true,[27]=true}}
++-- V28 persists Reversion profiles, observed-price windows and position lifecycle clocks.
++local Checkpoint={Version=28,Readable={[1]=true,[2]=true,[3]=true,[4]=true,[5]=true,[6]=true,[7]=true,[8]=true,[9]=true,[10]=true,[11]=true,[12]=true,[13]=true,[14]=true,[15]=true,[16]=true,[17]=true,[18]=true,[19]=true,[20]=true,[21]=true,[22]=true,[23]=true,[24]=true,[25]=true,[26]=true,[27]=true,[28]=true}}
+ local function digest(raw)
+  local bytes=Encoding:ComputeStringHash(raw,Enum.HashAlgorithm.Sha256)
+  return (bytes:gsub(".",function(c)return string.format("%02x",string.byte(c))end))
+@@ -111,6 +112,10 @@
+  for old,name in pairs(map)do if old~=name then snapshot=rename(snapshot,map) break end end
+  -- Preserve saved behavior except explicit, versioned migrations; presentation cadence may change.
+  local config=clone(snapshot.Config)
++ local reversion=currentConfig.BotReversion and currentConfig.BotReversion.Version or 0
++ local savedReversion=config.BotReversion and config.BotReversion.Version or 0
++ assert(savedReversion<=reversion,'Cannot downgrade Reversion policy')
++ if savedReversion<reversion then config.BotReversion=clone(currentConfig.BotReversion)end
+  local whale=currentConfig.BotWhale and currentConfig.BotWhale.Version or 0
+  local savedWhale=config.BotWhale and config.BotWhale.Version or 0
+  assert(savedWhale<=whale,'Cannot downgrade Whale policy')

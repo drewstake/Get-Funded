@@ -1,0 +1,20 @@
+{
+  "Issue": "A fast profile can have Confirmation >= Horizon and never signal",
+  "Fix": "Only if Confirmation >= Horizon, set Confirmation to Horizon minus one sample interval. Preserve every valid profile exactly.",
+  "Policy": 3,
+  "Checkpoint": 28,
+  "RetestCases": [
+    "Seed71",
+    "Seed7919",
+    "Seed104729",
+    "Current",
+    "Older",
+    "Aged",
+    "Seed907",
+    "Seed65537",
+    "CurrentLater",
+    "OlderLater"
+  ],
+  "Retuning": false,
+  "BroadCorrectionRejected": true
+}

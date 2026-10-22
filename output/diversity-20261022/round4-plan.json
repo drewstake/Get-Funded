@@ -1,0 +1,9 @@
+{
+  "Basis": "All six portfolio cases pass numerical development gates but chart review shows quiet stretches and abrupt jumps. All six mixed-wide cases pass every numerical gate except spread. Test restoring the original 10 Maker lanes (six Makers per lane), now that independent demand replaces the removed inventory-price feedback.",
+  "Variants": {
+    "portfolio-dense": "portfolio",
+    "mixed-wide-dense": "mixed-wide"
+  },
+  "Change": "Only lane count 20 -> original 10; same 60 Makers, same finite capital, quote sizes, refresh clocks, risk, and all trader behaviors.",
+  "Selection": "Completed development only; no holdouts opened; thresholds unchanged."
+}

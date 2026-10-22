@@ -1,0 +1,1597 @@
+{
+  "Case": "CurrentBX",
+  "Markets": {
+    "BX": {
+      "Flows": {
+        "Momentum/Opening/Building": {
+          "AlignedTicks": 1987,
+          "Buy": 997,
+          "Sell": 1426,
+          "OpenContracts": 2423,
+          "CloseContracts": 0,
+          "Trades": 2377,
+          "Passive": {
+            "Liquidity": 506,
+            "Maker": 805,
+            "Protective": 122,
+            "Scalper": 422,
+            "Value": 192,
+            "Whale": 324,
+            "Reserve": 33,
+            "Reversion": 19
+          }
+        },
+        "Scalper/Opening/": {
+          "AlignedTicks": 265,
+          "Buy": 814,
+          "Sell": 888,
+          "OpenContracts": 1702,
+          "CloseContracts": 0,
+          "Trades": 1436,
+          "Passive": {
+            "Maker": 597,
+            "Protective": 79,
+            "Scalper": 279,
+            "Value": 69,
+            "Liquidity": 416,
+            "Whale": 241,
+            "Reversion": 6,
+            "Reserve": 15
+          }
+        },
+        "Reversion/Closing/": {
+          "AlignedTicks": 93,
+          "Buy": 62,
+          "Sell": 53,
+          "OpenContracts": 0,
+          "CloseContracts": 115,
+          "Trades": 98,
+          "Passive": {
+            "Maker": 40,
+            "Protective": 6,
+            "Scalper": 15,
+            "Value": 8,
+            "Liquidity": 27,
+            "Whale": 17,
+            "Reversion": 2
+          }
+        },
+        "Momentum/Thesis/Reducing": {
+          "AlignedTicks": 82,
+          "Buy": 62,
+          "Sell": 78,
+          "OpenContracts": 0,
+          "CloseContracts": 140,
+          "Trades": 131,
+          "Passive": {
+            "Maker": 49,
+            "Scalper": 28,
+            "Value": 12,
+            "Protective": 9,
+            "Whale": 18,
+            "Liquidity": 24
+          }
+        },
+        "Protective/Opening/": {
+          "AlignedTicks": 29,
+          "Buy": 805,
+          "Sell": 988,
+          "OpenContracts": 1793,
+          "CloseContracts": 0,
+          "Trades": 1370,
+          "Passive": {
+            "Liquidity": 541,
+            "Maker": 574,
+            "Scalper": 199,
+            "Value": 47,
+            "Whale": 336,
+            "Protective": 90,
+            "Reversion": 3,
+            "Reserve": 3
+          }
+        },
+        "Whale/Stop loss/Building": {
+          "AlignedTicks": 26,
+          "Buy": 66,
+          "Sell": 516,
+          "OpenContracts": 0,
+          "CloseContracts": 582,
+          "Trades": 328,
+          "Passive": {
+            "Maker": 133,
+            "Protective": 27,
+            "Reserve": 164,
+            "Scalper": 42,
+            "Liquidity": 205,
+            "Value": 10,
+            "Reversion": 1
+          }
+        },
+        "Whale/Time/Reducing": {
+          "AlignedTicks": 26,
+          "Buy": 152,
+          "Sell": 249,
+          "OpenContracts": 0,
+          "CloseContracts": 401,
+          "Trades": 239,
+          "Passive": {
+            "Liquidity": 94,
+            "Maker": 166,
+            "Protective": 8,
+            "Value": 17,
+            "Scalper": 58,
+            "Whale": 58
+          }
+        },
+        "Scalper/Stop loss/": {
+          "AlignedTicks": 24,
+          "Buy": 316,
+          "Sell": 325,
+          "OpenContracts": 0,
+          "CloseContracts": 641,
+          "Trades": 526,
+          "Passive": {
+            "Liquidity": 81,
+            "Maker": 219,
+            "Scalper": 178,
+            "Value": 51,
+            "Protective": 34,
+            "Reserve": 73,
+            "Whale": 5
+          }
+        },
+        "Value/Stop loss/": {
+          "AlignedTicks": 23,
+          "Buy": 201,
+          "Sell": 396,
+          "OpenContracts": 0,
+          "CloseContracts": 597,
+          "Trades": 352,
+          "Passive": {
+            "Maker": 148,
+            "Protective": 18,
+            "Scalper": 122,
+            "Value": 31,
+            "Liquidity": 149,
+            "Reserve": 118,
+            "Reversion": 3,
+            "Whale": 8
+          }
+        },
+        "Whale/Stop loss/Holding": {
+          "AlignedTicks": 19,
+          "Buy": 348,
+          "Sell": 71,
+          "OpenContracts": 0,
+          "CloseContracts": 419,
+          "Trades": 185,
+          "Passive": {
+            "Liquidity": 79,
+            "Maker": 78,
+            "Protective": 12,
+            "Reserve": 174,
+            "Scalper": 49,
+            "Value": 27
+          }
+        },
+        "Protective/Stop loss/": {
+          "AlignedTicks": 12,
+          "Buy": 208,
+          "Sell": 135,
+          "OpenContracts": 0,
+          "CloseContracts": 343,
+          "Trades": 199,
+          "Passive": {
+            "Maker": 125,
+            "Reserve": 49,
+            "Value": 13,
+            "Liquidity": 61,
+            "Protective": 14,
+            "Reversion": 6,
+            "Scalper": 67,
+            "Whale": 8
+          }
+        },
+        "Liquidity/Stop loss/": {
+          "AlignedTicks": 8,
+          "Buy": 254,
+          "Sell": 150,
+          "OpenContracts": 0,
+          "CloseContracts": 404,
+          "Trades": 404,
+          "Passive": {
+            "Maker": 135,
+            "Scalper": 124,
+            "Liquidity": 61,
+            "Value": 19,
+            "Protective": 20,
+            "Reserve": 43,
+            "Reversion": 2
+          }
+        },
+        "Maker/Closing/": {
+          "AlignedTicks": 6,
+          "Buy": 41,
+          "Sell": 0,
+          "OpenContracts": 0,
+          "CloseContracts": 41,
+          "Trades": 27,
+          "Passive": {
+            "Liquidity": 11,
+            "Maker": 14,
+            "Protective": 2,
+            "Scalper": 8,
+            "Value": 6
+          }
+        },
+        "Whale/Stop loss/Reducing": {
+          "AlignedTicks": 4,
+          "Buy": 0,
+          "Sell": 93,
+          "OpenContracts": 0,
+          "CloseContracts": 93,
+          "Trades": 42,
+          "Passive": {
+            "Liquidity": 18,
+            "Maker": 55,
+            "Protective": 4,
+            "Scalper": 11,
+            "Value": 5
+          }
+        },
+        "Momentum/Stop loss/Reducing": {
+          "AlignedTicks": 2,
+          "Buy": 0,
+          "Sell": 34,
+          "OpenContracts": 0,
+          "CloseContracts": 34,
+          "Trades": 18,
+          "Passive": {
+            "Maker": 18,
+            "Scalper": 12,
+            "Liquidity": 1,
+            "Protective": 3
+          }
+        },
+        "Liquidity/Closing/": {
+          "AlignedTicks": 1,
+          "Buy": 3,
+          "Sell": 3,
+          "OpenContracts": 0,
+          "CloseContracts": 6,
+          "Trades": 6,
+          "Passive": {
+            "Maker": 1,
+            "Scalper": 2,
+            "Liquidity": 1,
+            "Value": 2
+          }
+        },
+        "Momentum/Stop loss/Holding": {
+          "AlignedTicks": 0,
+          "Buy": 11,
+          "Sell": 26,
+          "OpenContracts": 0,
+          "CloseContracts": 37,
+          "Trades": 25,
+          "Passive": {
+            "Liquidity": 17,
+            "Maker": 15,
+            "Scalper": 5
+          }
+        },
+        "Reversion/Stop loss/": {
+          "AlignedTicks": 0,
+          "Buy": 3,
+          "Sell": 0,
+          "OpenContracts": 0,
+          "CloseContracts": 3,
+          "Trades": 3,
+          "Passive": {
+            "Liquidity": 2,
+            "Maker": 1
+          }
+        },
+        "Value/Take profit/": {
+          "AlignedTicks": -3,
+          "Buy": 0,
+          "Sell": 25,
+          "OpenContracts": 0,
+          "CloseContracts": 25,
+          "Trades": 21,
+          "Passive": {
+            "Liquidity": 18,
+            "Maker": 7
+          }
+        },
+        "Reversion/Opening/": {
+          "AlignedTicks": -7,
+          "Buy": 50,
+          "Sell": 42,
+          "OpenContracts": 92,
+          "CloseContracts": 0,
+          "Trades": 81,
+          "Passive": {
+            "Liquidity": 39,
+            "Maker": 27,
+            "Scalper": 19,
+            "Whale": 7
+          }
+        },
+        "Whale/Opening/Building": {
+          "AlignedTicks": -9,
+          "Buy": 313,
+          "Sell": 127,
+          "OpenContracts": 440,
+          "CloseContracts": 0,
+          "Trades": 311,
+          "Passive": {
+            "Liquidity": 142,
+            "Maker": 132,
+            "Protective": 30,
+            "Scalper": 49,
+            "Value": 8,
+            "Whale": 78,
+            "Reversion": 1
+          }
+        },
+        "Scalper/Closing/": {
+          "AlignedTicks": -10,
+          "Buy": 254,
+          "Sell": 261,
+          "OpenContracts": 0,
+          "CloseContracts": 515,
+          "Trades": 434,
+          "Passive": {
+            "Maker": 243,
+            "Reversion": 1,
+            "Scalper": 22,
+            "Whale": 116,
+            "Protective": 20,
+            "Liquidity": 109,
+            "Value": 4
+          }
+        },
+        "Protective/Closing/": {
+          "AlignedTicks": -126,
+          "Buy": 805,
+          "Sell": 755,
+          "OpenContracts": 48,
+          "CloseContracts": 1512,
+          "Trades": 1189,
+          "Passive": {
+            "Liquidity": 459,
+            "Maker": 535,
+            "Scalper": 171,
+            "Whale": 276,
+            "Reversion": 9,
+            "Protective": 60,
+            "Value": 41,
+            "Reserve": 9
+          }
+        },
+        "Value/Closing/": {
+          "AlignedTicks": -182,
+          "Buy": 159,
+          "Sell": 199,
+          "OpenContracts": 6,
+          "CloseContracts": 352,
+          "Trades": 289,
+          "Passive": {
+            "Maker": 144,
+            "Protective": 16,
+            "Scalper": 36,
+            "Liquidity": 98,
+            "Whale": 59,
+            "Reversion": 1,
+            "Value": 4
+          }
+        },
+        "Value/Opening/": {
+          "AlignedTicks": -658,
+          "Buy": 526,
+          "Sell": 397,
+          "OpenContracts": 923,
+          "CloseContracts": 0,
+          "Trades": 747,
+          "Passive": {
+            "Maker": 408,
+            "Protective": 21,
+            "Whale": 125,
+            "Scalper": 108,
+            "Liquidity": 255,
+            "Reversion": 3,
+            "Reserve": 3
+          }
+        },
+        "Momentum/Time/Reducing": {
+          "AlignedTicks": -1188,
+          "Buy": 1079,
+          "Sell": 1027,
+          "OpenContracts": 0,
+          "CloseContracts": 2106,
+          "Trades": 2024,
+          "Passive": {
+            "Liquidity": 525,
+            "Maker": 1000,
+            "Protective": 72,
+            "Whale": 310,
+            "Scalper": 170,
+            "Reversion": 6,
+            "Value": 21,
+            "Reserve": 2
+          }
+        }
+      },
+      "QuoteEvents": {
+        "Liquidity": {
+          "Age": 375998.0,
+          "Cancels": 67060,
+          "NewBuy": 35683,
+          "NewSell": 35285,
+          "RepriceDown": 0,
+          "RepriceUp": 0,
+          "WithdrawBuy": 33781,
+          "WithdrawSell": 33279,
+          "AlignedSlotTicks": 0
+        },
+        "Maker": {
+          "Age": 666371.75,
+          "Cancels": 23342,
+          "NewBuy": 35040,
+          "NewSell": 34248,
+          "RepriceDown": 0,
+          "RepriceUp": 0,
+          "SlotDown": 12298,
+          "SlotLifetime": 1295099.0,
+          "SlotPriceChange": -14634,
+          "SlotReplacements": 25617,
+          "SlotUp": 12148,
+          "WithdrawBuy": 32155,
+          "WithdrawSell": 31651,
+          "AlignedSlotTicks": 135959
+        },
+        "Reserve": {
+          "Age": 647959.5,
+          "Cancels": 75567,
+          "NewBuy": 742862,
+          "NewSell": 747215,
+          "RepriceDown": 0,
+          "RepriceUp": 0,
+          "SlotDown": 38114,
+          "SlotLifetime": 648782.5,
+          "SlotPriceChange": -9010,
+          "SlotReplacements": 75651,
+          "SlotUp": 37537,
+          "WithdrawBuy": 742410,
+          "WithdrawSell": 746991,
+          "AlignedSlotTicks": 75260
+        }
+      },
+      "Cycles": {
+        "Momentum": {
+          "Entries": 256,
+          "RepeatObserved": 220,
+          "SameDirectionRepeats": 121,
+          "MedianRepeatSeconds": 448.375
+        },
+        "Whale": {
+          "Entries": 7,
+          "RepeatObserved": 2,
+          "SameDirectionRepeats": 0,
+          "MedianRepeatSeconds": 1411.25
+        }
+      },
+      "InventoryRange": {
+        "Liquidity": [
+          -66,
+          70
+        ],
+        "Maker": [
+          -261,
+          202
+        ],
+        "Momentum": [
+          -272,
+          273
+        ],
+        "Protective": [
+          -68,
+          12
+        ],
+        "Reserve": [
+          -68,
+          245
+        ],
+        "Reversion": [
+          -15,
+          10
+        ],
+        "Scalper": [
+          -27,
+          25
+        ],
+        "Value": [
+          -279,
+          129
+        ],
+        "Whale": [
+          -208,
+          244
+        ]
+      },
+      "MeanValueGapTicks": 0.5317767038696315
+    },
+    "BT": {
+      "Flows": {
+        "Momentum/Opening/Building": {
+          "AlignedTicks": 2701,
+          "Buy": 750,
+          "Sell": 2029,
+          "OpenContracts": 2779,
+          "CloseContracts": 0,
+          "Trades": 2745,
+          "Passive": {
+            "Liquidity": 834,
+            "Maker": 741,
+            "Protective": 65,
+            "Scalper": 315,
+            "Value": 438,
+            "Whale": 335,
+            "Reversion": 34,
+            "Reserve": 17
+          }
+        },
+        "Momentum/Thesis/Reducing": {
+          "AlignedTicks": 276,
+          "Buy": 156,
+          "Sell": 134,
+          "OpenContracts": 0,
+          "CloseContracts": 290,
+          "Trades": 288,
+          "Passive": {
+            "Liquidity": 83,
+            "Maker": 80,
+            "Reversion": 1,
+            "Value": 39,
+            "Whale": 43,
+            "Scalper": 35,
+            "Protective": 9
+          }
+        },
+        "Value/Stop loss/": {
+          "AlignedTicks": 201,
+          "Buy": 596,
+          "Sell": 537,
+          "OpenContracts": 0,
+          "CloseContracts": 1133,
+          "Trades": 415,
+          "Passive": {
+            "Reserve": 638,
+            "Value": 232,
+            "Liquidity": 117,
+            "Maker": 84,
+            "Scalper": 46,
+            "Protective": 15,
+            "Reversion": 1
+          }
+        },
+        "Scalper/Opening/": {
+          "AlignedTicks": 131,
+          "Buy": 325,
+          "Sell": 538,
+          "OpenContracts": 863,
+          "CloseContracts": 0,
+          "Trades": 863,
+          "Passive": {
+            "Maker": 288,
+            "Scalper": 91,
+            "Value": 97,
+            "Whale": 146,
+            "Liquidity": 220,
+            "Protective": 15,
+            "Reserve": 2,
+            "Reversion": 4
+          }
+        },
+        "Whale/Stop loss/Reducing": {
+          "AlignedTicks": 119,
+          "Buy": 0,
+          "Sell": 500,
+          "OpenContracts": 0,
+          "CloseContracts": 500,
+          "Trades": 169,
+          "Passive": {
+            "Reserve": 289,
+            "Maker": 82,
+            "Protective": 9,
+            "Scalper": 21,
+            "Value": 71,
+            "Liquidity": 27,
+            "Reversion": 1
+          }
+        },
+        "Momentum/Stop loss/Holding": {
+          "AlignedTicks": 104,
+          "Buy": 75,
+          "Sell": 213,
+          "OpenContracts": 0,
+          "CloseContracts": 288,
+          "Trades": 148,
+          "Passive": {
+            "Liquidity": 44,
+            "Maker": 51,
+            "Scalper": 22,
+            "Value": 28,
+            "Protective": 6,
+            "Reserve": 137
+          }
+        },
+        "Whale/Stop loss/Holding": {
+          "AlignedTicks": 94,
+          "Buy": 193,
+          "Sell": 405,
+          "OpenContracts": 0,
+          "CloseContracts": 598,
+          "Trades": 112,
+          "Passive": {
+            "Maker": 30,
+            "Reserve": 510,
+            "Value": 57,
+            "Protective": 1
+          }
+        },
+        "Whale/Stop loss/Building": {
+          "AlignedTicks": 87,
+          "Buy": 233,
+          "Sell": 260,
+          "OpenContracts": 0,
+          "CloseContracts": 493,
+          "Trades": 134,
+          "Passive": {
+            "Maker": 77,
+            "Reserve": 292,
+            "Value": 70,
+            "Liquidity": 32,
+            "Scalper": 15,
+            "Protective": 7
+          }
+        },
+        "Reversion/Closing/": {
+          "AlignedTicks": 55,
+          "Buy": 28,
+          "Sell": 63,
+          "OpenContracts": 0,
+          "CloseContracts": 91,
+          "Trades": 82,
+          "Passive": {
+            "Liquidity": 28,
+            "Maker": 25,
+            "Scalper": 10,
+            "Value": 10,
+            "Whale": 10,
+            "Reversion": 5,
+            "Protective": 3
+          }
+        },
+        "Whale/Time/Reducing": {
+          "AlignedTicks": 54,
+          "Buy": 27,
+          "Sell": 203,
+          "OpenContracts": 0,
+          "CloseContracts": 230,
+          "Trades": 193,
+          "Passive": {
+            "Value": 33,
+            "Liquidity": 92,
+            "Maker": 44,
+            "Scalper": 22,
+            "Protective": 8,
+            "Reversion": 5,
+            "Whale": 26
+          }
+        },
+        "Liquidity/Stop loss/": {
+          "AlignedTicks": 38,
+          "Buy": 262,
+          "Sell": 680,
+          "OpenContracts": 0,
+          "CloseContracts": 942,
+          "Trades": 942,
+          "Passive": {
+            "Maker": 102,
+            "Scalper": 36,
+            "Liquidity": 21,
+            "Protective": 42,
+            "Reserve": 591,
+            "Value": 149,
+            "Reversion": 1
+          }
+        },
+        "Maker/Closing/": {
+          "AlignedTicks": 34,
+          "Buy": 0,
+          "Sell": 66,
+          "OpenContracts": 0,
+          "CloseContracts": 66,
+          "Trades": 57,
+          "Passive": {
+            "Liquidity": 27,
+            "Maker": 18,
+            "Protective": 3,
+            "Scalper": 10,
+            "Value": 8
+          }
+        },
+        "Momentum/Stop loss/Reducing": {
+          "AlignedTicks": 7,
+          "Buy": 37,
+          "Sell": 31,
+          "OpenContracts": 0,
+          "CloseContracts": 68,
+          "Trades": 28,
+          "Passive": {
+            "Maker": 3,
+            "Reserve": 59,
+            "Reversion": 1,
+            "Scalper": 3,
+            "Value": 2
+          }
+        },
+        "Protective/Margin liquidation/": {
+          "AlignedTicks": 1,
+          "Buy": 0,
+          "Sell": 10,
+          "OpenContracts": 0,
+          "CloseContracts": 10,
+          "Trades": 6,
+          "Passive": {
+            "Maker": 7,
+            "Scalper": 3
+          }
+        },
+        "Reversion/Stop loss/": {
+          "AlignedTicks": 1,
+          "Buy": 0,
+          "Sell": 9,
+          "OpenContracts": 0,
+          "CloseContracts": 9,
+          "Trades": 4,
+          "Passive": {
+            "Reserve": 8,
+            "Value": 1
+          }
+        },
+        "Liquidity/Closing/": {
+          "AlignedTicks": 0,
+          "Buy": 1,
+          "Sell": 0,
+          "OpenContracts": 0,
+          "CloseContracts": 1,
+          "Trades": 1,
+          "Passive": {
+            "Liquidity": 1
+          }
+        },
+        "Momentum/Stop loss/Building": {
+          "AlignedTicks": 0,
+          "Buy": 4,
+          "Sell": 27,
+          "OpenContracts": 0,
+          "CloseContracts": 31,
+          "Trades": 18,
+          "Passive": {
+            "Liquidity": 12,
+            "Reserve": 19
+          }
+        },
+        "Value/Take profit/": {
+          "AlignedTicks": -1,
+          "Buy": 62,
+          "Sell": 0,
+          "OpenContracts": 0,
+          "CloseContracts": 62,
+          "Trades": 53,
+          "Passive": {
+            "Maker": 11,
+            "Scalper": 2,
+            "Whale": 4,
+            "Liquidity": 39,
+            "Value": 5,
+            "Reversion": 1
+          }
+        },
+        "Protective/Closing/": {
+          "AlignedTicks": -5,
+          "Buy": 226,
+          "Sell": 242,
+          "OpenContracts": 16,
+          "CloseContracts": 452,
+          "Trades": 401,
+          "Passive": {
+            "Scalper": 35,
+            "Value": 51,
+            "Maker": 153,
+            "Whale": 114,
+            "Liquidity": 100,
+            "Reserve": 2,
+            "Reversion": 4,
+            "Protective": 9
+          }
+        },
+        "Whale/Opening/Building": {
+          "AlignedTicks": -8,
+          "Buy": 301,
+          "Sell": 162,
+          "OpenContracts": 463,
+          "CloseContracts": 0,
+          "Trades": 327,
+          "Passive": {
+            "Liquidity": 129,
+            "Maker": 151,
+            "Whale": 120,
+            "Scalper": 32,
+            "Value": 29,
+            "Protective": 2
+          }
+        },
+        "Reversion/Opening/": {
+          "AlignedTicks": -14,
+          "Buy": 52,
+          "Sell": 14,
+          "OpenContracts": 66,
+          "CloseContracts": 0,
+          "Trades": 65,
+          "Passive": {
+            "Maker": 14,
+            "Liquidity": 35,
+            "Scalper": 12,
+            "Whale": 5
+          }
+        },
+        "Scalper/Stop loss/": {
+          "AlignedTicks": -23,
+          "Buy": 66,
+          "Sell": 173,
+          "OpenContracts": 0,
+          "CloseContracts": 239,
+          "Trades": 239,
+          "Passive": {
+            "Liquidity": 30,
+            "Maker": 67,
+            "Scalper": 82,
+            "Reversion": 3,
+            "Value": 44,
+            "Reserve": 9,
+            "Protective": 4
+          }
+        },
+        "Protective/Opening/": {
+          "AlignedTicks": -78,
+          "Buy": 303,
+          "Sell": 333,
+          "OpenContracts": 636,
+          "CloseContracts": 0,
+          "Trades": 552,
+          "Passive": {
+            "Maker": 211,
+            "Whale": 145,
+            "Scalper": 57,
+            "Value": 59,
+            "Liquidity": 145,
+            "Reserve": 4,
+            "Protective": 12,
+            "Reversion": 3
+          }
+        },
+        "Protective/Stop loss/": {
+          "AlignedTicks": -88,
+          "Buy": 64,
+          "Sell": 86,
+          "OpenContracts": 0,
+          "CloseContracts": 150,
+          "Trades": 80,
+          "Passive": {
+            "Maker": 12,
+            "Reserve": 89,
+            "Value": 36,
+            "Liquidity": 2,
+            "Scalper": 7,
+            "Protective": 3,
+            "Reversion": 1
+          }
+        },
+        "Scalper/Closing/": {
+          "AlignedTicks": -264,
+          "Buy": 254,
+          "Sell": 248,
+          "OpenContracts": 0,
+          "CloseContracts": 502,
+          "Trades": 502,
+          "Passive": {
+            "Scalper": 26,
+            "Liquidity": 67,
+            "Maker": 241,
+            "Reserve": 7,
+            "Whale": 118,
+            "Protective": 10,
+            "Value": 33
+          }
+        },
+        "Value/Closing/": {
+          "AlignedTicks": -547,
+          "Buy": 398,
+          "Sell": 248,
+          "OpenContracts": 20,
+          "CloseContracts": 626,
+          "Trades": 537,
+          "Passive": {
+            "Maker": 219,
+            "Whale": 140,
+            "Scalper": 52,
+            "Value": 41,
+            "Liquidity": 157,
+            "Protective": 22,
+            "Reserve": 14,
+            "Reversion": 1
+          }
+        },
+        "Value/Opening/": {
+          "AlignedTicks": -818,
+          "Buy": 661,
+          "Sell": 1203,
+          "OpenContracts": 1864,
+          "CloseContracts": 0,
+          "Trades": 1599,
+          "Passive": {
+            "Liquidity": 366,
+            "Maker": 697,
+            "Scalper": 183,
+            "Value": 126,
+            "Whale": 437,
+            "Reserve": 15,
+            "Protective": 34,
+            "Reversion": 6
+          }
+        },
+        "Momentum/Time/Reducing": {
+          "AlignedTicks": -1414,
+          "Buy": 1586,
+          "Sell": 502,
+          "OpenContracts": 0,
+          "CloseContracts": 2088,
+          "Trades": 2053,
+          "Passive": {
+            "Maker": 882,
+            "Scalper": 151,
+            "Value": 137,
+            "Whale": 386,
+            "Liquidity": 477,
+            "Protective": 34,
+            "Reversion": 13,
+            "Reserve": 8
+          }
+        }
+      },
+      "QuoteEvents": {
+        "Liquidity": {
+          "Age": 344421.75,
+          "Cancels": 64348,
+          "NewBuy": 33277,
+          "NewSell": 34146,
+          "RepriceDown": 0,
+          "RepriceUp": 0,
+          "WithdrawBuy": 31531,
+          "WithdrawSell": 32817,
+          "AlignedSlotTicks": 0
+        },
+        "Maker": {
+          "Age": 681076.5,
+          "Cancels": 21165,
+          "NewBuy": 22488,
+          "NewSell": 21542,
+          "RepriceDown": 0,
+          "RepriceUp": 0,
+          "SlotDown": 15479,
+          "SlotLifetime": 1289684.75,
+          "SlotPriceChange": -91625,
+          "SlotReplacements": 23560,
+          "SlotUp": 6933,
+          "WithdrawBuy": 20276,
+          "WithdrawSell": 19497,
+          "AlignedSlotTicks": 152663
+        },
+        "Reserve": {
+          "Age": 644434.0,
+          "Cancels": 75752,
+          "NewBuy": 596547,
+          "NewSell": 596404,
+          "RepriceDown": 0,
+          "RepriceUp": 0,
+          "SlotDown": 44042,
+          "SlotLifetime": 647697.5,
+          "SlotPriceChange": -46260,
+          "SlotReplacements": 76119,
+          "SlotUp": 32075,
+          "WithdrawBuy": 595039,
+          "WithdrawSell": 595271,
+          "AlignedSlotTicks": 112989
+        }
+      },
+      "Cycles": {
+        "Momentum": {
+          "Entries": 249,
+          "RepeatObserved": 213,
+          "SameDirectionRepeats": 73,
+          "MedianRepeatSeconds": 495.75
+        },
+        "Whale": {
+          "Entries": 5,
+          "RepeatObserved": 0,
+          "SameDirectionRepeats": 0,
+          "MedianRepeatSeconds": null
+        }
+      },
+      "InventoryRange": {
+        "Liquidity": [
+          -72,
+          70
+        ],
+        "Maker": [
+          -296,
+          -30
+        ],
+        "Momentum": [
+          -292,
+          303
+        ],
+        "Protective": [
+          -7,
+          32
+        ],
+        "Reserve": [
+          -296,
+          299
+        ],
+        "Reversion": [
+          -15,
+          24
+        ],
+        "Scalper": [
+          -20,
+          23
+        ],
+        "Value": [
+          -185,
+          135
+        ],
+        "Whale": [
+          -75,
+          456
+        ]
+      },
+      "MeanValueGapTicks": 0.002860267111538792
+    },
+    "BG": {
+      "Flows": {
+        "Momentum/Opening/Building": {
+          "AlignedTicks": 1715,
+          "Buy": 1667,
+          "Sell": 1354,
+          "OpenContracts": 3021,
+          "CloseContracts": 0,
+          "Trades": 2938,
+          "Passive": {
+            "Maker": 885,
+            "Protective": 200,
+            "Whale": 413,
+            "Liquidity": 685,
+            "Scalper": 468,
+            "Value": 289,
+            "Reserve": 63,
+            "Reversion": 18
+          }
+        },
+        "Scalper/Opening/": {
+          "AlignedTicks": 139,
+          "Buy": 770,
+          "Sell": 677,
+          "OpenContracts": 1447,
+          "CloseContracts": 0,
+          "Trades": 1226,
+          "Passive": {
+            "Liquidity": 396,
+            "Maker": 448,
+            "Whale": 254,
+            "Protective": 63,
+            "Scalper": 195,
+            "Value": 75,
+            "Reserve": 15,
+            "Reversion": 1
+          }
+        },
+        "Momentum/Thesis/Reducing": {
+          "AlignedTicks": 127,
+          "Buy": 180,
+          "Sell": 88,
+          "OpenContracts": 0,
+          "CloseContracts": 268,
+          "Trades": 257,
+          "Passive": {
+            "Whale": 46,
+            "Liquidity": 63,
+            "Maker": 61,
+            "Protective": 20,
+            "Scalper": 54,
+            "Value": 23,
+            "Reserve": 1
+          }
+        },
+        "Value/Stop loss/": {
+          "AlignedTicks": 29,
+          "Buy": 424,
+          "Sell": 187,
+          "OpenContracts": 0,
+          "CloseContracts": 611,
+          "Trades": 324,
+          "Passive": {
+            "Liquidity": 140,
+            "Maker": 93,
+            "Protective": 22,
+            "Reserve": 237,
+            "Scalper": 79,
+            "Value": 33,
+            "Reversion": 7
+          }
+        },
+        "Whale/Stop loss/Building": {
+          "AlignedTicks": 26,
+          "Buy": 369,
+          "Sell": 82,
+          "OpenContracts": 0,
+          "CloseContracts": 451,
+          "Trades": 238,
+          "Passive": {
+            "Liquidity": 120,
+            "Maker": 64,
+            "Protective": 27,
+            "Scalper": 70,
+            "Reserve": 160,
+            "Value": 10
+          }
+        },
+        "Whale/Stop loss/Reducing": {
+          "AlignedTicks": 16,
+          "Buy": 0,
+          "Sell": 309,
+          "OpenContracts": 0,
+          "CloseContracts": 309,
+          "Trades": 118,
+          "Passive": {
+            "Liquidity": 34,
+            "Maker": 88,
+            "Protective": 3,
+            "Reserve": 136,
+            "Scalper": 44,
+            "Value": 4
+          }
+        },
+        "Scalper/Stop loss/": {
+          "AlignedTicks": 14,
+          "Buy": 319,
+          "Sell": 177,
+          "OpenContracts": 0,
+          "CloseContracts": 496,
+          "Trades": 419,
+          "Passive": {
+            "Liquidity": 46,
+            "Maker": 152,
+            "Scalper": 141,
+            "Reserve": 77,
+            "Value": 58,
+            "Protective": 21,
+            "Whale": 1
+          }
+        },
+        "Protective/Stop loss/": {
+          "AlignedTicks": 13,
+          "Buy": 183,
+          "Sell": 107,
+          "OpenContracts": 0,
+          "CloseContracts": 290,
+          "Trades": 148,
+          "Passive": {
+            "Maker": 74,
+            "Reserve": 97,
+            "Value": 38,
+            "Liquidity": 27,
+            "Scalper": 40,
+            "Protective": 12,
+            "Reversion": 2
+          }
+        },
+        "Whale/Stop loss/Holding": {
+          "AlignedTicks": 13,
+          "Buy": 179,
+          "Sell": 101,
+          "OpenContracts": 0,
+          "CloseContracts": 280,
+          "Trades": 122,
+          "Passive": {
+            "Liquidity": 51,
+            "Maker": 44,
+            "Protective": 7,
+            "Scalper": 31,
+            "Value": 15,
+            "Reversion": 1,
+            "Reserve": 131
+          }
+        },
+        "Reversion/Closing/": {
+          "AlignedTicks": 11,
+          "Buy": 37,
+          "Sell": 14,
+          "OpenContracts": 0,
+          "CloseContracts": 51,
+          "Trades": 47,
+          "Passive": {
+            "Liquidity": 15,
+            "Maker": 16,
+            "Scalper": 9,
+            "Protective": 4,
+            "Whale": 5,
+            "Value": 2
+          }
+        },
+        "Liquidity/Stop loss/": {
+          "AlignedTicks": 6,
+          "Buy": 237,
+          "Sell": 128,
+          "OpenContracts": 0,
+          "CloseContracts": 365,
+          "Trades": 365,
+          "Passive": {
+            "Liquidity": 26,
+            "Maker": 86,
+            "Protective": 18,
+            "Reserve": 132,
+            "Scalper": 44,
+            "Value": 59
+          }
+        },
+        "Value/Take profit/": {
+          "AlignedTicks": 6,
+          "Buy": 17,
+          "Sell": 0,
+          "OpenContracts": 0,
+          "CloseContracts": 17,
+          "Trades": 16,
+          "Passive": {
+            "Liquidity": 11,
+            "Maker": 2,
+            "Value": 4
+          }
+        },
+        "Momentum/Stop loss/Reducing": {
+          "AlignedTicks": 3,
+          "Buy": 20,
+          "Sell": 32,
+          "OpenContracts": 0,
+          "CloseContracts": 52,
+          "Trades": 36,
+          "Passive": {
+            "Liquidity": 7,
+            "Maker": 15,
+            "Scalper": 12,
+            "Value": 10,
+            "Protective": 8
+          }
+        },
+        "Reversion/Stop loss/": {
+          "AlignedTicks": 2,
+          "Buy": 3,
+          "Sell": 0,
+          "OpenContracts": 0,
+          "CloseContracts": 3,
+          "Trades": 3,
+          "Passive": {
+            "Scalper": 1,
+            "Protective": 1,
+            "Reserve": 1
+          }
+        },
+        "Liquidity/Closing/": {
+          "AlignedTicks": 1,
+          "Buy": 7,
+          "Sell": 0,
+          "OpenContracts": 0,
+          "CloseContracts": 7,
+          "Trades": 7,
+          "Passive": {
+            "Reserve": 5,
+            "Liquidity": 2
+          }
+        },
+        "Momentum/Stop loss/Holding": {
+          "AlignedTicks": 1,
+          "Buy": 0,
+          "Sell": 22,
+          "OpenContracts": 0,
+          "CloseContracts": 22,
+          "Trades": 17,
+          "Passive": {
+            "Maker": 4,
+            "Reversion": 1,
+            "Scalper": 9,
+            "Liquidity": 7,
+            "Value": 1
+          }
+        },
+        "Whale/Time/Reducing": {
+          "AlignedTicks": -4,
+          "Buy": 199,
+          "Sell": 238,
+          "OpenContracts": 0,
+          "CloseContracts": 437,
+          "Trades": 282,
+          "Passive": {
+            "Maker": 140,
+            "Whale": 95,
+            "Liquidity": 112,
+            "Scalper": 48,
+            "Value": 17,
+            "Protective": 25
+          }
+        },
+        "Reversion/Opening/": {
+          "AlignedTicks": -5,
+          "Buy": 10,
+          "Sell": 33,
+          "OpenContracts": 43,
+          "CloseContracts": 0,
+          "Trades": 36,
+          "Passive": {
+            "Liquidity": 20,
+            "Maker": 8,
+            "Scalper": 8,
+            "Protective": 1,
+            "Whale": 6
+          }
+        },
+        "Whale/Opening/Building": {
+          "AlignedTicks": -21,
+          "Buy": 283,
+          "Sell": 149,
+          "OpenContracts": 432,
+          "CloseContracts": 0,
+          "Trades": 297,
+          "Passive": {
+            "Liquidity": 153,
+            "Maker": 97,
+            "Whale": 104,
+            "Scalper": 48,
+            "Value": 6,
+            "Protective": 23,
+            "Reversion": 1
+          }
+        },
+        "Protective/Opening/": {
+          "AlignedTicks": -47,
+          "Buy": 935,
+          "Sell": 891,
+          "OpenContracts": 1826,
+          "CloseContracts": 0,
+          "Trades": 1408,
+          "Passive": {
+            "Maker": 564,
+            "Scalper": 206,
+            "Whale": 385,
+            "Liquidity": 492,
+            "Value": 60,
+            "Protective": 102,
+            "Reversion": 9,
+            "Reserve": 8
+          }
+        },
+        "Scalper/Closing/": {
+          "AlignedTicks": -61,
+          "Buy": 326,
+          "Sell": 345,
+          "OpenContracts": 0,
+          "CloseContracts": 671,
+          "Trades": 564,
+          "Passive": {
+            "Liquidity": 131,
+            "Maker": 262,
+            "Whale": 168,
+            "Protective": 30,
+            "Value": 9,
+            "Scalper": 69,
+            "Reversion": 2
+          }
+        },
+        "Protective/Closing/": {
+          "AlignedTicks": -139,
+          "Buy": 874,
+          "Sell": 902,
+          "OpenContracts": 62,
+          "CloseContracts": 1714,
+          "Trades": 1359,
+          "Passive": {
+            "Maker": 567,
+            "Protective": 138,
+            "Scalper": 207,
+            "Whale": 335,
+            "Liquidity": 478,
+            "Value": 41,
+            "Reserve": 8,
+            "Reversion": 2
+          }
+        },
+        "Value/Closing/": {
+          "AlignedTicks": -306,
+          "Buy": 167,
+          "Sell": 130,
+          "OpenContracts": 10,
+          "CloseContracts": 287,
+          "Trades": 232,
+          "Passive": {
+            "Maker": 115,
+            "Whale": 30,
+            "Liquidity": 99,
+            "Scalper": 34,
+            "Protective": 8,
+            "Value": 2,
+            "Reserve": 8,
+            "Reversion": 1
+          }
+        },
+        "Momentum/Time/Reducing": {
+          "AlignedTicks": -469,
+          "Buy": 1239,
+          "Sell": 1450,
+          "OpenContracts": 0,
+          "CloseContracts": 2689,
+          "Trades": 2585,
+          "Passive": {
+            "Maker": 1078,
+            "Whale": 490,
+            "Liquidity": 731,
+            "Protective": 105,
+            "Scalper": 239,
+            "Value": 37,
+            "Reserve": 4,
+            "Reversion": 5
+          }
+        },
+        "Value/Opening/": {
+          "AlignedTicks": -645,
+          "Buy": 243,
+          "Sell": 489,
+          "OpenContracts": 732,
+          "CloseContracts": 0,
+          "Trades": 600,
+          "Passive": {
+            "Maker": 213,
+            "Protective": 47,
+            "Whale": 104,
+            "Liquidity": 247,
+            "Scalper": 109,
+            "Reserve": 10,
+            "Value": 2
+          }
+        }
+      },
+      "QuoteEvents": {
+        "Liquidity": {
+          "Age": 319447.75,
+          "Cancels": 57244,
+          "NewBuy": 34361,
+          "NewSell": 26965,
+          "RepriceDown": 0,
+          "RepriceUp": 0,
+          "WithdrawBuy": 32378,
+          "WithdrawSell": 24866,
+          "AlignedSlotTicks": 0
+        },
+        "Maker": {
+          "Age": 680117.5,
+          "Cancels": 21718,
+          "NewBuy": 32657,
+          "NewSell": 33036,
+          "RepriceDown": 0,
+          "RepriceUp": 0,
+          "SlotDown": 10549,
+          "SlotLifetime": 1294272.75,
+          "SlotPriceChange": 31192,
+          "SlotReplacements": 24338,
+          "SlotUp": 12303,
+          "WithdrawBuy": 30226,
+          "WithdrawSell": 30530,
+          "AlignedSlotTicks": 106952
+        },
+        "Reserve": {
+          "Age": 648133.75,
+          "Cancels": 78506,
+          "NewBuy": 953448,
+          "NewSell": 948391,
+          "RepriceDown": 0,
+          "RepriceUp": 0,
+          "SlotDown": 38141,
+          "SlotLifetime": 649350.0,
+          "SlotPriceChange": 15200,
+          "SlotReplacements": 78627,
+          "SlotUp": 40481,
+          "WithdrawBuy": 953215,
+          "WithdrawSell": 947659,
+          "AlignedSlotTicks": 72275
+        }
+      },
+      "Cycles": {
+        "Momentum": {
+          "Entries": 326,
+          "RepeatObserved": 291,
+          "SameDirectionRepeats": 137,
+          "MedianRepeatSeconds": 330.25
+        },
+        "Whale": {
+          "Entries": 5,
+          "RepeatObserved": 1,
+          "SameDirectionRepeats": 1,
+          "MedianRepeatSeconds": 1351.75
+        }
+      },
+      "InventoryRange": {
+        "Liquidity": [
+          -72,
+          69
+        ],
+        "Maker": [
+          -126,
+          268
+        ],
+        "Momentum": [
+          -255,
+          264
+        ],
+        "Protective": [
+          -51,
+          69
+        ],
+        "Reserve": [
+          -284,
+          106
+        ],
+        "Reversion": [
+          -18,
+          6
+        ],
+        "Scalper": [
+          -23,
+          27
+        ],
+        "Value": [
+          -263,
+          33
+        ],
+        "Whale": [
+          -129,
+          534
+        ]
+      },
+      "MeanValueGapTicks": -0.7759291621257944
+    }
+  },
+  "Audit": {
+    "CashError": 1.0603107511997223e-06,
+    "EquityError": -2.2402964532375336e-06,
+    "Hash": 88458916,
+    "Inventory": {
+      "BG": 0,
+      "BT": 0,
+      "BX": 0
+    },
+    "Trades": 32084192,
+    "Volume": 76016395
+  }
+}

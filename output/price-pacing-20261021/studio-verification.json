@@ -1,0 +1,59 @@
+{
+  "MakerLanes": {
+    "Count": 10,
+    "SpacingTicks": {
+      "BT": 18,
+      "BX": 6,
+      "BG": 6
+    }
+  },
+  "Audit": {
+    "Inventory": {
+      "BT": 0,
+      "BX": 0,
+      "BG": 0
+    },
+    "CashError": 0.0000010603107511997223,
+    "Volume": 70531864,
+    "EquityError": -7.371418178081512e-7,
+    "Trades": 28312549,
+    "Hash": 1861931674
+  },
+  "Step": 9967157,
+  "NewsFrequency": 0,
+  "ReserveVersion": 4,
+  "Time": 2491789.25,
+  "Books": {
+    "BT": {
+      "Candles": 1200,
+      "Last": 17896.5,
+      "Volume": 9423943,
+      "Bids": 135,
+      "Up": 665064,
+      "Down": 670899,
+      "Asks": 104
+    },
+    "BX": {
+      "Candles": 1200,
+      "Last": 4855.75,
+      "Volume": 6465116,
+      "Bids": 63,
+      "Up": 412408,
+      "Down": 415891,
+      "Asks": 54
+    },
+    "BG": {
+      "Candles": 1200,
+      "Last": 1993.9,
+      "Volume": 6864549,
+      "Bids": 54,
+      "Up": 383589,
+      "Down": 387608,
+      "Asks": 67
+    }
+  },
+  "Status": "SHARED · SAVED",
+  "Mode": "Shared",
+  "FlowVersion": 2,
+  "Ready": true
+}

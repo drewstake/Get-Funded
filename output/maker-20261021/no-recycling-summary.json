@@ -1,0 +1,157 @@
+[
+  {
+    "Case": "Current",
+    "Arm": "Baseline",
+    "InitialMakerEquity": 124315536.17000031,
+    "FinalMakerEquity": 123306366.17000036,
+    "EquityChange": -1009169.9999999553,
+    "AboveFloor": [
+      180,
+      164
+    ],
+    "PositiveEquity": 180,
+    "States": {
+      "Quoting": 139,
+      "Risk paused": 16,
+      "Trading": 25
+    },
+    "MatchedVolume": 75539,
+    "BlockVolume": [
+      28045,
+      23952,
+      23542
+    ],
+    "MakerPassiveVolume": 33721,
+    "Transfers": 0.0,
+    "Replay": true,
+    "Audit": {
+      "CashError": 1.0603107511997223e-06,
+      "EquityError": -1.7392449080944061e-06,
+      "Hash": 1527625763,
+      "Inventory": {
+        "BG": 0,
+        "BT": 0,
+        "BX": 0
+      },
+      "Trades": 30743706,
+      "Volume": 74289617
+    }
+  },
+  {
+    "Case": "Current",
+    "Arm": "Candidate",
+    "InitialMakerEquity": 123685521.17000036,
+    "FinalMakerEquity": 119831433.6700004,
+    "EquityChange": -3854087.4999999553,
+    "AboveFloor": [
+      179,
+      161
+    ],
+    "PositiveEquity": 180,
+    "States": {
+      "Holding": 7,
+      "Quoting": 117,
+      "Recovering": 1,
+      "Risk paused": 19,
+      "Trading": 35,
+      "Waiting": 1
+    },
+    "MatchedVolume": 79903,
+    "BlockVolume": [
+      26476,
+      27954,
+      25473
+    ],
+    "MakerPassiveVolume": 29526,
+    "Transfers": 0.0,
+    "Replay": true,
+    "Audit": {
+      "CashError": 9.932555258274078e-07,
+      "EquityError": -1.6517005860805511e-06,
+      "Hash": 917074705,
+      "Inventory": {
+        "BG": 0,
+        "BT": 0,
+        "BX": 0
+      },
+      "Trades": 30748362,
+      "Volume": 74292921
+    }
+  },
+  {
+    "Case": "Seed71",
+    "Arm": "Baseline",
+    "InitialMakerEquity": 133970890.00000004,
+    "FinalMakerEquity": 131213132.50000007,
+    "EquityChange": -2757757.49999997,
+    "AboveFloor": [
+      180,
+      180
+    ],
+    "PositiveEquity": 180,
+    "States": {
+      "Quoting": 118,
+      "Trading": 62
+    },
+    "MatchedVolume": 65395,
+    "BlockVolume": [
+      23454,
+      21731,
+      20210
+    ],
+    "MakerPassiveVolume": 32322,
+    "Transfers": 0,
+    "Replay": true,
+    "Audit": {
+      "CashError": 0,
+      "EquityError": 9.11823008209467e-08,
+      "Hash": 1054382532,
+      "Inventory": {
+        "BG": 0,
+        "BT": 0,
+        "BX": 0
+      },
+      "Trades": 73514,
+      "Volume": 96617
+    }
+  },
+  {
+    "Case": "Seed71",
+    "Arm": "Candidate",
+    "InitialMakerEquity": 134240612.5,
+    "FinalMakerEquity": 132106222.50000003,
+    "EquityChange": -2134389.99999997,
+    "AboveFloor": [
+      180,
+      180
+    ],
+    "PositiveEquity": 180,
+    "States": {
+      "Holding": 2,
+      "Quoting": 141,
+      "Trading": 33,
+      "Waiting": 4
+    },
+    "MatchedVolume": 65295,
+    "BlockVolume": [
+      22693,
+      22554,
+      20048
+    ],
+    "MakerPassiveVolume": 29109,
+    "Transfers": 0,
+    "Replay": true,
+    "Audit": {
+      "CashError": -4.656612873077393e-10,
+      "EquityError": 4.6566128730773926e-09,
+      "Hash": 2057930427,
+      "Inventory": {
+        "BG": 0,
+        "BT": 0,
+        "BX": 0
+      },
+      "Trades": 74308,
+      "Volume": 97601
+    }
+  }
+]

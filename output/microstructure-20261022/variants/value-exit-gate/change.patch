@@ -1,0 +1,33 @@
+--- original/Participants.luau
++++ value-exit-gate/Participants.luau
+@@ -439,7 +439,7 @@
+  elseif a.Kind=="Value" then
+   if a.PolicyVersion then
+    local bid,ask=quote.Bid,quote.Ask;if not bid or not ask then return end
+-   if math.abs(a.Belief-last)<(ask-bid)/2+a.EntryBuffer then return end
++   if not p and math.abs(a.Belief-last)<(ask-bid)/2+a.EntryBuffer then return end
+    signal=edge*a.SignalWeight+a.Bias*.2+r:Noise()*.2-inventory/a.Limit*1.8
+   else signal+=edge*r:Range(0.6,1.5)end
+  elseif a.Kind=="Reversion" then signal-=momentum*r:Range(0.6,1.6) signal+=edge*0.3
+@@ -447,6 +447,10 @@
+  if math.abs(signal)<(a.EntryThreshold or r:Range(0.1,0.55)) then return end
+  local side=signal>0 and 1 or -1 local size=r:Int(1,a.Size)
+  local reducing=false
++ if a.Kind=='Value'and a.PolicyVersion then
++  if p and side==-p.Direction then size=math.min(size,p.Quantity);reducing=true
++  elseif math.abs(a.Belief-last)<(quote.Ask-quote.Bid)/2+a.EntryBuffer then return end
++ end
+  if signals and a.Kind=="Reversion"then
+   if p and side==-p.Direction then
+    -- Confirmation applies to new risk, never to an exit; an unconfirmed exit cannot reverse.
+--- original/WorldCheckpoint.luau
++++ value-exit-gate/WorldCheckpoint.luau
+@@ -45,7 +45,7 @@
+ -- V27 persists patient Whale mandates, child reservations, fill baselines and private RNG.
+ -- V28 versions shorter Momentum horizons and staggered Maker replacement clocks.
+ -- Migration changes policy only; positions, orders, protections and ledgers remain intact.
+-local Checkpoint={Version=28,Readable={[28]=true,[1]=true,[2]=true,[3]=true,[4]=true,[5]=true,[6]=true,[7]=true,[8]=true,[9]=true,[10]=true,[11]=true,[12]=true,[13]=true,[14]=true,[15]=true,[16]=true,[17]=true,[18]=true,[19]=true,[20]=true,[21]=true,[22]=true,[23]=true,[24]=true,[25]=true,[26]=true,[27]=true}}
++local Checkpoint={Version=29,Readable={[29]=true,[28]=true,[1]=true,[2]=true,[3]=true,[4]=true,[5]=true,[6]=true,[7]=true,[8]=true,[9]=true,[10]=true,[11]=true,[12]=true,[13]=true,[14]=true,[15]=true,[16]=true,[17]=true,[18]=true,[19]=true,[20]=true,[21]=true,[22]=true,[23]=true,[24]=true,[25]=true,[26]=true,[27]=true}}
+ local function digest(raw)
+  local bytes=Encoding:ComputeStringHash(raw,Enum.HashAlgorithm.Sha256)
+  return (bytes:gsub(".",function(c)return string.format("%02x",string.byte(c))end))

@@ -1,0 +1,2615 @@
+{
+  "Aggregate": {
+    "Baseline": {
+      "MeaningfulLong8": 0.9268518518518518,
+      "MeaningfulMaxLeg": 23.166666666666668,
+      "MeaningfulCounters": 3.388888888888889,
+      "CounterDepthTicks": 29.255555555555482,
+      "MeaningfulPullbacks": 0,
+      "Directional10WindowFraction": 0.4596949891067538,
+      "LongRun8CandleShare": 0.6907407407407408,
+      "SignificantLongestRun": 16.944444444444443,
+      "LongestRun": 13,
+      "Pullbacks": 0.8888888888888888,
+      "OneSecondRV": 0.36891592084771346,
+      "FifteenSecondMidpointRV": 0.1687768597967825,
+      "OneMinuteRV": 0.25684043659546524,
+      "MeanMinuteRangePercent": 0.03654954341253561,
+      "MeanRange30": 0.4651568810809584,
+      "Alternating4Fraction": 0.00682261208576998,
+      "SpreadP95": 4.000000000000303,
+      "NoQuoteFraction": 1.54320987654321e-05,
+      "Volume": 15745.777777777777,
+      "Recovery": 5627840.03999999,
+      "Replay": true,
+      "Insolvent": 0,
+      "TargetWindows": 1
+    },
+    "Candidate": {
+      "MeaningfulLong8": 0.8731481481481481,
+      "MeaningfulMaxLeg": 21.944444444444443,
+      "MeaningfulCounters": 3.8333333333333335,
+      "CounterDepthTicks": 22.960185185185104,
+      "MeaningfulPullbacks": 0.3888888888888889,
+      "Directional10WindowFraction": 0.31590413943355117,
+      "LongRun8CandleShare": 0.6157407407407407,
+      "SignificantLongestRun": 15.333333333333334,
+      "LongestRun": 13.277777777777779,
+      "Pullbacks": 1.3888888888888888,
+      "OneSecondRV": 0.339544588312,
+      "FifteenSecondMidpointRV": 0.14770296985671458,
+      "OneMinuteRV": 0.21936644057383162,
+      "MeanMinuteRangePercent": 0.030687091184051288,
+      "MeanRange30": 0.34863408529878787,
+      "Alternating4Fraction": 0.016569200779727095,
+      "SpreadP95": 3.8888888888890656,
+      "NoQuoteFraction": 0,
+      "Volume": 14029.555555555555,
+      "Recovery": 2959472.5299999807,
+      "Replay": true,
+      "Insolvent": 0,
+      "TargetWindows": 0
+    }
+  },
+  "Gates": {
+    "MeaningfulLong8": false,
+    "MeaningfulMaxLeg": false,
+    "Directional10WindowFraction": true,
+    "MeaningfulCounters": false,
+    "OneMinuteRV": false,
+    "MeanMinuteRangePercent": false,
+    "FifteenSecondMidpointRV": false,
+    "CaseWins": true,
+    "Recovery": true,
+    "Alternation": true,
+    "Quotes": true,
+    "Spread": true,
+    "Replay": true,
+    "Solvent": true,
+    "CompletedStrictPullbacks": true,
+    "RangeRetention": false,
+    "CurrentBX": true,
+    "CurrentBXMovement": false
+  },
+  "Pass": false,
+  "ShapeWins": [
+    "CurrentBX",
+    "Older",
+    "Seed104729",
+    "Seed71"
+  ],
+  "Markets": [
+    {
+      "Case": "Aged",
+      "Arm": "Baseline",
+      "Market": "BG",
+      "LongestRun": 10,
+      "Runs": [
+        1,
+        4,
+        1,
+        7,
+        2,
+        5,
+        1,
+        1,
+        4,
+        10,
+        1,
+        2,
+        3,
+        8,
+        1,
+        1,
+        1
+      ],
+      "Range30": [
+        0.47457969404755207,
+        0.6436689128029747
+      ],
+      "WickFraction": 0.46067414999950806,
+      "OneMinuteRV": 0.31291221146309567,
+      "Pullbacks": 0,
+      "PullbackDepthTicks": 0,
+      "PullbackDuration": 0,
+      "Efficiency10": 0.6344793263217297,
+      "Alternating4Fraction": 0.0,
+      "MeanMinuteRangePercent": 0.04842000575966734,
+      "LongRun8CandleShare": 0.75,
+      "SignificantLongestRun": 18,
+      "Directional10WindowFraction": 0.29411764705882354,
+      "MeaningfulLong8": 0.8333333333333334,
+      "MeaningfulMaxLeg": 21,
+      "MeaningfulCounters": 5,
+      "CounterDepthTicks": 15.599999999999454,
+      "CounterEvents": [
+        {
+          "Minute": 9,
+          "Ticks": 12.999999999999545,
+          "PriorLegTicks": 15.0
+        },
+        {
+          "Minute": 20,
+          "Ticks": 17.999999999999545,
+          "PriorLegTicks": 66.99999999999818
+        },
+        {
+          "Minute": 27,
+          "Ticks": 12.999999999999545,
+          "PriorLegTicks": 20.99999999999909
+        },
+        {
+          "Minute": 30,
+          "Ticks": 7.999999999999545,
+          "PriorLegTicks": 37.000000000000455
+        },
+        {
+          "Minute": 51,
+          "Ticks": 25.99999999999909,
+          "PriorLegTicks": 120.0
+        }
+      ],
+      "MeaningfulPullbacks": 0,
+      "MeaningfulPullbackEvents": [],
+      "OneSecondRV": 0.5076685942162734,
+      "FifteenSecondMidpointRV": 0.20316113116098483,
+      "NoQuoteFraction": 0,
+      "Volume": 15379,
+      "SpreadP95": 4.0000000000009095,
+      "MeanRange30": 0.5591243034252633
+    },
+    {
+      "Case": "Aged",
+      "Arm": "Baseline",
+      "Market": "BT",
+      "LongestRun": 7,
+      "Runs": [
+        1,
+        7,
+        2,
+        2,
+        5,
+        1,
+        3,
+        2,
+        2,
+        7,
+        1,
+        1,
+        1,
+        1,
+        7,
+        7,
+        1,
+        3,
+        1
+      ],
+      "Range30": [
+        0.2446439934950152,
+        0.28411098703831966
+      ],
+      "WickFraction": 0.46345053707140854,
+      "OneMinuteRV": 0.20609215040655426,
+      "Pullbacks": 1,
+      "PullbackDepthTicks": 4.0,
+      "PullbackDuration": 3,
+      "Efficiency10": 0.6795011478504294,
+      "Alternating4Fraction": 0.0,
+      "MeanMinuteRangePercent": 0.021118180883971896,
+      "LongRun8CandleShare": 0.3333333333333333,
+      "SignificantLongestRun": 11,
+      "Directional10WindowFraction": 0.3137254901960784,
+      "MeaningfulLong8": 0.8833333333333333,
+      "MeaningfulMaxLeg": 16,
+      "MeaningfulCounters": 4,
+      "CounterDepthTicks": 65.0,
+      "CounterEvents": [
+        {
+          "Minute": 16,
+          "Ticks": 100.0,
+          "PriorLegTicks": 64.0
+        },
+        {
+          "Minute": 30,
+          "Ticks": 65.0,
+          "PriorLegTicks": 113.0
+        },
+        {
+          "Minute": 41,
+          "Ticks": 65.0,
+          "PriorLegTicks": 75.0
+        },
+        {
+          "Minute": 48,
+          "Ticks": 30.0,
+          "PriorLegTicks": 95.0
+        }
+      ],
+      "MeaningfulPullbacks": 0,
+      "MeaningfulPullbackEvents": [],
+      "OneSecondRV": 0.24872730131470883,
+      "FifteenSecondMidpointRV": 0.17556258512770154,
+      "NoQuoteFraction": 0,
+      "Volume": 15319,
+      "SpreadP95": 4,
+      "MeanRange30": 0.26437749026666746
+    },
+    {
+      "Case": "Aged",
+      "Arm": "Baseline",
+      "Market": "BX",
+      "LongestRun": 13,
+      "Runs": [
+        4,
+        1,
+        1,
+        3,
+        3,
+        3,
+        1,
+        1,
+        6,
+        6,
+        13,
+        1,
+        11
+      ],
+      "Range30": [
+        0.5859375,
+        0.5687058100215187
+      ],
+      "WickFraction": 0.3680457412146009,
+      "OneMinuteRV": 0.3325229476604884,
+      "Pullbacks": 1,
+      "PullbackDepthTicks": 2.0,
+      "PullbackDuration": 2,
+      "Efficiency10": 0.7910842012401389,
+      "Alternating4Fraction": 0.0,
+      "MeanMinuteRangePercent": 0.048140287535798354,
+      "LongRun8CandleShare": 0.8833333333333333,
+      "SignificantLongestRun": 19,
+      "Directional10WindowFraction": 0.5490196078431373,
+      "MeaningfulLong8": 1.0,
+      "MeaningfulMaxLeg": 23,
+      "MeaningfulCounters": 3,
+      "CounterDepthTicks": 25.0,
+      "CounterEvents": [
+        {
+          "Minute": 23,
+          "Ticks": 31.0,
+          "PriorLegTicks": 91.0
+        },
+        {
+          "Minute": 37,
+          "Ticks": 21.0,
+          "PriorLegTicks": 82.0
+        },
+        {
+          "Minute": 52,
+          "Ticks": 23.0,
+          "PriorLegTicks": 106.0
+        }
+      ],
+      "MeaningfulPullbacks": 0,
+      "MeaningfulPullbackEvents": [],
+      "OneSecondRV": 0.46598639451442686,
+      "FifteenSecondMidpointRV": 0.2188834343794323,
+      "NoQuoteFraction": 0,
+      "Volume": 15854,
+      "SpreadP95": 4,
+      "MeanRange30": 0.5773216550107594
+    },
+    {
+      "Case": "Aged",
+      "Arm": "Candidate",
+      "Market": "BG",
+      "LongestRun": 9,
+      "Runs": [
+        1,
+        2,
+        1,
+        3,
+        1,
+        3,
+        4,
+        1,
+        1,
+        1,
+        6,
+        4,
+        4,
+        4,
+        9,
+        6,
+        1,
+        1,
+        2,
+        1
+      ],
+      "Range30": [
+        0.28129395218003495,
+        0.36235530951182915
+      ],
+      "WickFraction": 0.44915364863892615,
+      "OneMinuteRV": 0.22739161450539502,
+      "Pullbacks": 3,
+      "PullbackDepthTicks": 10.333333333332272,
+      "PullbackDuration": 5.666666666666667,
+      "Efficiency10": 0.5061759815398997,
+      "Alternating4Fraction": 0.03508771929824561,
+      "MeanMinuteRangePercent": 0.035332555100933125,
+      "LongRun8CandleShare": 0.48333333333333334,
+      "SignificantLongestRun": 11,
+      "Directional10WindowFraction": 0.0392156862745098,
+      "MeaningfulLong8": 0.9,
+      "MeaningfulMaxLeg": 18,
+      "MeaningfulCounters": 5,
+      "CounterDepthTicks": 11.999999999999545,
+      "CounterEvents": [
+        {
+          "Minute": 18,
+          "Ticks": 7.000000000000455,
+          "PriorLegTicks": 10.0
+        },
+        {
+          "Minute": 22,
+          "Ticks": 7.999999999999545,
+          "PriorLegTicks": 7.000000000000455
+        },
+        {
+          "Minute": 38,
+          "Ticks": 18.999999999998636,
+          "PriorLegTicks": 67.99999999999955
+        },
+        {
+          "Minute": 40,
+          "Ticks": 7.999999999999545,
+          "PriorLegTicks": 18.999999999998636
+        },
+        {
+          "Minute": 49,
+          "Ticks": 17.999999999999545,
+          "PriorLegTicks": 55.99999999999909
+        }
+      ],
+      "MeaningfulPullbacks": 2,
+      "MeaningfulPullbackEvents": [
+        {
+          "Ticks": 7.999999999999545,
+          "Duration": 6
+        },
+        {
+          "Ticks": 18.999999999998636,
+          "Duration": 8
+        }
+      ],
+      "OneSecondRV": 0.3985304414709134,
+      "FifteenSecondMidpointRV": 0.13849642676428495,
+      "NoQuoteFraction": 0,
+      "Volume": 12439,
+      "SpreadP95": 3.9999999999986358,
+      "MeanRange30": 0.32182463084593205
+    },
+    {
+      "Case": "Aged",
+      "Arm": "Candidate",
+      "Market": "BT",
+      "LongestRun": 18,
+      "Runs": [
+        9,
+        2,
+        1,
+        3,
+        1,
+        1,
+        1,
+        8,
+        1,
+        2,
+        18,
+        4,
+        5
+      ],
+      "Range30": [
+        0.16981772897090455,
+        0.2590453541702056
+      ],
+      "WickFraction": 0.44487970136725663,
+      "OneMinuteRV": 0.12906421028188814,
+      "Pullbacks": 2,
+      "PullbackDepthTicks": 2.5,
+      "PullbackDuration": 4.5,
+      "Efficiency10": 0.6852175602175602,
+      "Alternating4Fraction": 0.03508771929824561,
+      "MeanMinuteRangePercent": 0.016080569481783425,
+      "LongRun8CandleShare": 0.7333333333333333,
+      "SignificantLongestRun": 26,
+      "Directional10WindowFraction": 0.6078431372549019,
+      "MeaningfulLong8": 0.9666666666666667,
+      "MeaningfulMaxLeg": 24,
+      "MeaningfulCounters": 3,
+      "CounterDepthTicks": 30.0,
+      "CounterEvents": [
+        {
+          "Minute": 23,
+          "Ticks": 36.0,
+          "PriorLegTicks": 105.0
+        },
+        {
+          "Minute": 34,
+          "Ticks": 21.0,
+          "PriorLegTicks": 88.0
+        },
+        {
+          "Minute": 58,
+          "Ticks": 33.0,
+          "PriorLegTicks": 149.0
+        }
+      ],
+      "MeaningfulPullbacks": 0,
+      "MeaningfulPullbackEvents": [],
+      "OneSecondRV": 0.15806027938541678,
+      "FifteenSecondMidpointRV": 0.12508608112700073,
+      "NoQuoteFraction": 0,
+      "Volume": 14896,
+      "SpreadP95": 4,
+      "MeanRange30": 0.21443154157055505
+    },
+    {
+      "Case": "Aged",
+      "Arm": "Candidate",
+      "Market": "BX",
+      "LongestRun": 16,
+      "Runs": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        7,
+        1,
+        1,
+        6,
+        4,
+        16,
+        3,
+        1,
+        1
+      ],
+      "Range30": [
+        0.36885245901639346,
+        0.6371717794563486
+      ],
+      "WickFraction": 0.4891067837391367,
+      "OneMinuteRV": 0.2593419384321498,
+      "Pullbacks": 1,
+      "PullbackDepthTicks": 2.0,
+      "PullbackDuration": 2,
+      "Efficiency10": 0.7119630836861364,
+      "Alternating4Fraction": 0.017543859649122806,
+      "MeanMinuteRangePercent": 0.035523417943272205,
+      "LongRun8CandleShare": 0.8,
+      "SignificantLongestRun": 17,
+      "Directional10WindowFraction": 0.43137254901960786,
+      "MeaningfulLong8": 1.0,
+      "MeaningfulMaxLeg": 31,
+      "MeaningfulCounters": 2,
+      "CounterDepthTicks": 23.0,
+      "CounterEvents": [
+        {
+          "Minute": 31,
+          "Ticks": 29.0,
+          "PriorLegTicks": 66.0
+        },
+        {
+          "Minute": 40,
+          "Ticks": 17.0,
+          "PriorLegTicks": 52.0
+        }
+      ],
+      "MeaningfulPullbacks": 0,
+      "MeaningfulPullbackEvents": [],
+      "OneSecondRV": 0.4010039181397211,
+      "FifteenSecondMidpointRV": 0.15360390876941868,
+      "NoQuoteFraction": 0,
+      "Volume": 13053,
+      "SpreadP95": 3,
+      "MeanRange30": 0.503012119236371
+    },
+    {
+      "Case": "CurrentBX",
+      "Arm": "Baseline",
+      "Market": "BG",
+      "LongestRun": 8,
+      "Runs": [
+        4,
+        1,
+        4,
+        5,
+        1,
+        3,
+        2,
+        1,
+        1,
+        4,
+        3,
+        1,
+        8,
+        2,
+        2,
+        1,
+        4,
+        7,
+        3
+      ],
+      "Range30": [
+        0.6415676132690152,
+        0.6201627307005358
+      ],
+      "WickFraction": 0.39993042836790627,
+      "OneMinuteRV": 0.3565618301749498,
+      "Pullbacks": 0,
+      "PullbackDepthTicks": 0,
+      "PullbackDuration": 0,
+      "Efficiency10": 0.7669500761631889,
+      "Alternating4Fraction": 0.017543859649122806,
+      "MeanMinuteRangePercent": 0.04908679367837236,
+      "LongRun8CandleShare": 0.55,
+      "SignificantLongestRun": 16,
+      "Directional10WindowFraction": 0.2549019607843137,
+      "MeaningfulLong8": 0.9666666666666667,
+      "MeaningfulMaxLeg": 21,
+      "MeaningfulCounters": 4,
+      "CounterDepthTicks": 21.999999999999886,
+      "CounterEvents": [
+        {
+          "Minute": 10,
+          "Ticks": 20.0,
+          "PriorLegTicks": 55.99999999999909
+        },
+        {
+          "Minute": 31,
+          "Ticks": 27.999999999999545,
+          "PriorLegTicks": 126.99999999999818
+        },
+        {
+          "Minute": 48,
+          "Ticks": 24.00000000000091,
+          "PriorLegTicks": 92.99999999999955
+        },
+        {
+          "Minute": 50,
+          "Ticks": 15.99999999999909,
+          "PriorLegTicks": 27.999999999999545
+        }
+      ],
+      "MeaningfulPullbacks": 0,
+      "MeaningfulPullbackEvents": [],
+      "OneSecondRV": 0.49222131657461565,
+      "FifteenSecondMidpointRV": 0.22334244190359356,
+      "NoQuoteFraction": 0,
+      "Volume": 16789,
+      "SpreadP95": 4.0000000000009095,
+      "MeanRange30": 0.6308651719847755
+    },
+    {
+      "Case": "CurrentBX",
+      "Arm": "Baseline",
+      "Market": "BT",
+      "LongestRun": 16,
+      "Runs": [
+        13,
+        16,
+        1,
+        4,
+        16,
+        1,
+        1,
+        3,
+        1
+      ],
+      "Range30": [
+        0.4195982705531358,
+        0.1933463296155444
+      ],
+      "WickFraction": 0.4333329506807288,
+      "OneMinuteRV": 0.14301720243609584,
+      "Pullbacks": 1,
+      "PullbackDepthTicks": 2.0,
+      "PullbackDuration": 3,
+      "Efficiency10": 0.8609436239766886,
+      "Alternating4Fraction": 0.0,
+      "MeanMinuteRangePercent": 0.02514320788637685,
+      "LongRun8CandleShare": 0.85,
+      "SignificantLongestRun": 22,
+      "Directional10WindowFraction": 0.6078431372549019,
+      "MeaningfulLong8": 0.95,
+      "MeaningfulMaxLeg": 25,
+      "MeaningfulCounters": 3,
+      "CounterDepthTicks": 43.0,
+      "CounterEvents": [
+        {
+          "Minute": 17,
+          "Ticks": 28.0,
+          "PriorLegTicks": 78.0
+        },
+        {
+          "Minute": 42,
+          "Ticks": 48.0,
+          "PriorLegTicks": 228.0
+        },
+        {
+          "Minute": 57,
+          "Ticks": 53.0,
+          "PriorLegTicks": 100.0
+        }
+      ],
+      "MeaningfulPullbacks": 0,
+      "MeaningfulPullbackEvents": [],
+      "OneSecondRV": 0.20195848887523304,
+      "FifteenSecondMidpointRV": 0.10406075034280463,
+      "NoQuoteFraction": 0.0002777777777777778,
+      "Volume": 15981,
+      "SpreadP95": 4,
+      "MeanRange30": 0.3064723000843401
+    },
+    {
+      "Case": "CurrentBX",
+      "Arm": "Baseline",
+      "Market": "BX",
+      "LongestRun": 17,
+      "Runs": [
+        1,
+        17,
+        11,
+        16,
+        1,
+        3,
+        7
+      ],
+      "Range30": [
+        0.9978208510150247,
+        1.6645547747955305
+      ],
+      "WickFraction": 0.29869519245318477,
+      "OneMinuteRV": 0.47820620912048173,
+      "Pullbacks": 0,
+      "PullbackDepthTicks": 0,
+      "PullbackDuration": 0,
+      "Efficiency10": 0.9775421796625627,
+      "Alternating4Fraction": 0.0,
+      "MeanMinuteRangePercent": 0.06770918978247281,
+      "LongRun8CandleShare": 0.95,
+      "SignificantLongestRun": 28,
+      "Directional10WindowFraction": 0.9019607843137255,
+      "MeaningfulLong8": 1.0,
+      "MeaningfulMaxLeg": 36,
+      "MeaningfulCounters": 1,
+      "CounterDepthTicks": 35.0,
+      "CounterEvents": [
+        {
+          "Minute": 24,
+          "Ticks": 35.0,
+          "PriorLegTicks": 166.0
+        }
+      ],
+      "MeaningfulPullbacks": 0,
+      "MeaningfulPullbackEvents": [],
+      "OneSecondRV": 0.5850197162527614,
+      "FifteenSecondMidpointRV": 0.2789453448184616,
+      "NoQuoteFraction": 0,
+      "Volume": 18010,
+      "SpreadP95": 4,
+      "MeanRange30": 1.3311878129052777
+    },
+    {
+      "Case": "CurrentBX",
+      "Arm": "Candidate",
+      "Market": "BG",
+      "LongestRun": 8,
+      "Runs": [
+        8,
+        7,
+        3,
+        1,
+        1,
+        1,
+        3,
+        6,
+        1,
+        3,
+        2,
+        1,
+        1,
+        1,
+        1,
+        4,
+        1,
+        1,
+        2,
+        4,
+        1
+      ],
+      "Range30": [
+        0.3934262948207103,
+        0.38438498402556137
+      ],
+      "WickFraction": 0.4192263634484806,
+      "OneMinuteRV": 0.2719968090558023,
+      "Pullbacks": 3,
+      "PullbackDepthTicks": 4.999999999999242,
+      "PullbackDuration": 3,
+      "Efficiency10": 0.7364572709992,
+      "Alternating4Fraction": 0.03508771929824561,
+      "MeanMinuteRangePercent": 0.04189638061085817,
+      "LongRun8CandleShare": 0.5666666666666667,
+      "SignificantLongestRun": 13,
+      "Directional10WindowFraction": 0.09803921568627451,
+      "MeaningfulLong8": 0.7833333333333333,
+      "MeaningfulMaxLeg": 21,
+      "MeaningfulCounters": 6,
+      "CounterDepthTicks": 11.833333333333181,
+      "CounterEvents": [
+        {
+          "Minute": 10,
+          "Ticks": 16.000000000001364,
+          "PriorLegTicks": 72.00000000000045
+        },
+        {
+          "Minute": 26,
+          "Ticks": 22.999999999999545,
+          "PriorLegTicks": 47.000000000000455
+        },
+        {
+          "Minute": 29,
+          "Ticks": 8.999999999998636,
+          "PriorLegTicks": 30.99999999999909
+        },
+        {
+          "Minute": 34,
+          "Ticks": 7.999999999999545,
+          "PriorLegTicks": 38.999999999998636
+        },
+        {
+          "Minute": 35,
+          "Ticks": 7.999999999999545,
+          "PriorLegTicks": 7.999999999999545
+        },
+        {
+          "Minute": 39,
+          "Ticks": 7.000000000000455,
+          "PriorLegTicks": 34.00000000000091
+        }
+      ],
+      "MeaningfulPullbacks": 1,
+      "MeaningfulPullbackEvents": [
+        {
+          "Ticks": 7.999999999999545,
+          "Duration": 2
+        }
+      ],
+      "OneSecondRV": 0.4827056669663466,
+      "FifteenSecondMidpointRV": 0.187979756778264,
+      "NoQuoteFraction": 0,
+      "Volume": 15431,
+      "SpreadP95": 4.0000000000009095,
+      "MeanRange30": 0.38890563942313583
+    },
+    {
+      "Case": "CurrentBX",
+      "Arm": "Candidate",
+      "Market": "BT",
+      "LongestRun": 17,
+      "Runs": [
+        5,
+        1,
+        1,
+        17,
+        1,
+        1,
+        1,
+        2,
+        3,
+        11,
+        8,
+        1,
+        1,
+        5
+      ],
+      "Range30": [
+        0.34119897959183676,
+        0.33835546475995915
+      ],
+      "WickFraction": 0.39246081959555,
+      "OneMinuteRV": 0.21471171505580694,
+      "Pullbacks": 1,
+      "PullbackDepthTicks": 4.0,
+      "PullbackDuration": 3,
+      "Efficiency10": 0.6809087704760903,
+      "Alternating4Fraction": 0.05263157894736842,
+      "MeanMinuteRangePercent": 0.02731920858128162,
+      "LongRun8CandleShare": 0.6333333333333333,
+      "SignificantLongestRun": 20,
+      "Directional10WindowFraction": 0.45098039215686275,
+      "MeaningfulLong8": 0.9,
+      "MeaningfulMaxLeg": 25,
+      "MeaningfulCounters": 3,
+      "CounterDepthTicks": 35.333333333333336,
+      "CounterEvents": [
+        {
+          "Minute": 6,
+          "Ticks": 39.0,
+          "PriorLegTicks": 107.0
+        },
+        {
+          "Minute": 31,
+          "Ticks": 42.0,
+          "PriorLegTicks": 185.0
+        },
+        {
+          "Minute": 40,
+          "Ticks": 25.0,
+          "PriorLegTicks": 101.0
+        }
+      ],
+      "MeaningfulPullbacks": 0,
+      "MeaningfulPullbackEvents": [],
+      "OneSecondRV": 0.29337015600990046,
+      "FifteenSecondMidpointRV": 0.19057375861088707,
+      "NoQuoteFraction": 0,
+      "Volume": 16097,
+      "SpreadP95": 4,
+      "MeanRange30": 0.33977722217589795
+    },
+    {
+      "Case": "CurrentBX",
+      "Arm": "Candidate",
+      "Market": "BX",
+      "LongestRun": 19,
+      "Runs": [
+        6,
+        3,
+        1,
+        1,
+        4,
+        19,
+        1,
+        10,
+        1,
+        1,
+        8
+      ],
+      "Range30": [
+        0.5927716390423572,
+        0.44941230698317586
+      ],
+      "WickFraction": 0.4174625660287425,
+      "OneMinuteRV": 0.3763539047141143,
+      "Pullbacks": 0,
+      "PullbackDepthTicks": 0,
+      "PullbackDuration": 0,
+      "Efficiency10": 0.896988475755599,
+      "Alternating4Fraction": 0.0,
+      "MeanMinuteRangePercent": 0.05508858808924638,
+      "LongRun8CandleShare": 0.9,
+      "SignificantLongestRun": 19,
+      "Directional10WindowFraction": 0.45098039215686275,
+      "MeaningfulLong8": 0.9166666666666666,
+      "MeaningfulMaxLeg": 21,
+      "MeaningfulCounters": 3,
+      "CounterDepthTicks": 25.0,
+      "CounterEvents": [
+        {
+          "Minute": 21,
+          "Ticks": 12.0,
+          "PriorLegTicks": 60.0
+        },
+        {
+          "Minute": 42,
+          "Ticks": 40.0,
+          "PriorLegTicks": 168.0
+        },
+        {
+          "Minute": 55,
+          "Ticks": 23.0,
+          "PriorLegTicks": 76.0
+        }
+      ],
+      "MeaningfulPullbacks": 0,
+      "MeaningfulPullbackEvents": [],
+      "OneSecondRV": 0.5777488607158056,
+      "FifteenSecondMidpointRV": 0.2372319956086165,
+      "NoQuoteFraction": 0,
+      "Volume": 16143,
+      "SpreadP95": 4,
+      "MeanRange30": 0.5210919730127666
+    },
+    {
+      "Case": "Older",
+      "Arm": "Baseline",
+      "Market": "BG",
+      "LongestRun": 8,
+      "Runs": [
+        3,
+        1,
+        4,
+        3,
+        1,
+        4,
+        1,
+        8,
+        1,
+        1,
+        2,
+        1,
+        8,
+        1,
+        2,
+        4,
+        8,
+        1
+      ],
+      "Range30": [
+        0.2911500426685499,
+        0.562418399116202
+      ],
+      "WickFraction": 0.46380888160690636,
+      "OneMinuteRV": 0.29618334588688355,
+      "Pullbacks": 1,
+      "PullbackDepthTicks": 5.9999999999990905,
+      "PullbackDuration": 8,
+      "Efficiency10": 0.7355685708626942,
+      "Alternating4Fraction": 0.0,
+      "MeanMinuteRangePercent": 0.04224821538835433,
+      "LongRun8CandleShare": 0.6,
+      "SignificantLongestRun": 23,
+      "Directional10WindowFraction": 0.47058823529411764,
+      "MeaningfulLong8": 1.0,
+      "MeaningfulMaxLeg": 26,
+      "MeaningfulCounters": 2,
+      "CounterDepthTicks": 24.500000000000455,
+      "CounterEvents": [
+        {
+          "Minute": 22,
+          "Ticks": 19.00000000000091,
+          "PriorLegTicks": 53.00000000000182
+        },
+        {
+          "Minute": 48,
+          "Ticks": 30.0,
+          "PriorLegTicks": 130.0
+        }
+      ],
+      "MeaningfulPullbacks": 0,
+      "MeaningfulPullbackEvents": [],
+      "OneSecondRV": 0.47635900560543615,
+      "FifteenSecondMidpointRV": 0.196340938924818,
+      "NoQuoteFraction": 0,
+      "Volume": 14338,
+      "SpreadP95": 4.0000000000009095,
+      "MeanRange30": 0.4267842208923759
+    },
+    {
+      "Case": "Older",
+      "Arm": "Baseline",
+      "Market": "BT",
+      "LongestRun": 14,
+      "Runs": [
+        3,
+        14,
+        1,
+        1,
+        10,
+        1,
+        1,
+        1,
+        2,
+        1,
+        7,
+        3,
+        1,
+        12
+      ],
+      "Range30": [
+        0.1943525103865925,
+        0.22663607314292147
+      ],
+      "WickFraction": 0.44184156596036456,
+      "OneMinuteRV": 0.1508355507021301,
+      "Pullbacks": 1,
+      "PullbackDepthTicks": 4.0,
+      "PullbackDuration": 5,
+      "Efficiency10": 0.6807106949103712,
+      "Alternating4Fraction": 0.03508771929824561,
+      "MeanMinuteRangePercent": 0.020354966715302104,
+      "LongRun8CandleShare": 0.9,
+      "SignificantLongestRun": 16,
+      "Directional10WindowFraction": 0.5490196078431373,
+      "MeaningfulLong8": 0.9,
+      "MeaningfulMaxLeg": 18,
+      "MeaningfulCounters": 4,
+      "CounterDepthTicks": 30.0,
+      "CounterEvents": [
+        {
+          "Minute": 6,
+          "Ticks": 19.0,
+          "PriorLegTicks": 33.0
+        },
+        {
+          "Minute": 24,
+          "Ticks": 28.0,
+          "PriorLegTicks": 116.0
+        },
+        {
+          "Minute": 38,
+          "Ticks": 38.0,
+          "PriorLegTicks": 107.0
+        },
+        {
+          "Minute": 49,
+          "Ticks": 35.0,
+          "PriorLegTicks": 108.0
+        }
+      ],
+      "MeaningfulPullbacks": 0,
+      "MeaningfulPullbackEvents": [],
+      "OneSecondRV": 0.21203074595732177,
+      "FifteenSecondMidpointRV": 0.11715980011343759,
+      "NoQuoteFraction": 0,
+      "Volume": 15964,
+      "SpreadP95": 4,
+      "MeanRange30": 0.21049429176475698
+    },
+    {
+      "Case": "Older",
+      "Arm": "Baseline",
+      "Market": "BX",
+      "LongestRun": 13,
+      "Runs": [
+        6,
+        13,
+        1,
+        1,
+        2,
+        1,
+        8,
+        11,
+        13,
+        1
+      ],
+      "Range30": [
+        0.4444444444444444,
+        0.6230529595015576
+      ],
+      "WickFraction": 0.34704136549724784,
+      "OneMinuteRV": 0.3467041617066512,
+      "Pullbacks": 1,
+      "PullbackDepthTicks": 2.0,
+      "PullbackDuration": 2,
+      "Efficiency10": 0.6043372757908195,
+      "Alternating4Fraction": 0.0,
+      "MeanMinuteRangePercent": 0.0470430941258676,
+      "LongRun8CandleShare": 0.8333333333333334,
+      "SignificantLongestRun": 14,
+      "Directional10WindowFraction": 0.5490196078431373,
+      "MeaningfulLong8": 0.9,
+      "MeaningfulMaxLeg": 21,
+      "MeaningfulCounters": 4,
+      "CounterDepthTicks": 22.25,
+      "CounterEvents": [
+        {
+          "Minute": 6,
+          "Ticks": 6.0,
+          "PriorLegTicks": 27.0
+        },
+        {
+          "Minute": 27,
+          "Ticks": 29.0,
+          "PriorLegTicks": 80.0
+        },
+        {
+          "Minute": 37,
+          "Ticks": 26.0,
+          "PriorLegTicks": 63.0
+        },
+        {
+          "Minute": 49,
+          "Ticks": 28.0,
+          "PriorLegTicks": 109.0
+        }
+      ],
+      "MeaningfulPullbacks": 0,
+      "MeaningfulPullbackEvents": [],
+      "OneSecondRV": 0.45573342532699024,
+      "FifteenSecondMidpointRV": 0.20649868528480925,
+      "NoQuoteFraction": 0,
+      "Volume": 15445,
+      "SpreadP95": 4,
+      "MeanRange30": 0.533748701973001
+    },
+    {
+      "Case": "Older",
+      "Arm": "Candidate",
+      "Market": "BG",
+      "LongestRun": 8,
+      "Runs": [
+        2,
+        1,
+        2,
+        4,
+        1,
+        3,
+        4,
+        1,
+        4,
+        1,
+        1,
+        6,
+        8,
+        1,
+        1,
+        5,
+        1,
+        1,
+        4,
+        3,
+        3
+      ],
+      "Range30": [
+        0.40253597665291335,
+        0.2963483851524367
+      ],
+      "WickFraction": 0.38005045880047233,
+      "OneMinuteRV": 0.29590165602033164,
+      "Pullbacks": 2,
+      "PullbackDepthTicks": 6.499999999999773,
+      "PullbackDuration": 4.5,
+      "Efficiency10": 0.3670626179891701,
+      "Alternating4Fraction": 0.03508771929824561,
+      "MeanMinuteRangePercent": 0.04126144080989286,
+      "LongRun8CandleShare": 0.0,
+      "SignificantLongestRun": 6,
+      "Directional10WindowFraction": 0.0196078431372549,
+      "MeaningfulLong8": 0.3333333333333333,
+      "MeaningfulMaxLeg": 11,
+      "MeaningfulCounters": 10,
+      "CounterDepthTicks": 8.700000000000045,
+      "CounterEvents": [
+        {
+          "Minute": 5,
+          "Ticks": 5.9999999999990905,
+          "PriorLegTicks": 7.999999999999545
+        },
+        {
+          "Minute": 9,
+          "Ticks": 7.000000000000455,
+          "PriorLegTicks": 28.999999999998636
+        },
+        {
+          "Minute": 10,
+          "Ticks": 9.00000000000091,
+          "PriorLegTicks": 7.000000000000455
+        },
+        {
+          "Minute": 14,
+          "Ticks": 11.000000000001364,
+          "PriorLegTicks": 36.000000000001364
+        },
+        {
+          "Minute": 20,
+          "Ticks": 7.999999999999545,
+          "PriorLegTicks": 12.999999999999545
+        },
+        {
+          "Minute": 27,
+          "Ticks": 7.999999999999545,
+          "PriorLegTicks": 33.999999999998636
+        },
+        {
+          "Minute": 32,
+          "Ticks": 6.999999999998181,
+          "PriorLegTicks": 33.999999999998636
+        },
+        {
+          "Minute": 43,
+          "Ticks": 8.000000000001819,
+          "PriorLegTicks": 40.0
+        },
+        {
+          "Minute": 49,
+          "Ticks": 10.0,
+          "PriorLegTicks": 40.0
+        },
+        {
+          "Minute": 58,
+          "Ticks": 12.999999999999545,
+          "PriorLegTicks": 52.999999999999545
+        }
+      ],
+      "MeaningfulPullbacks": 1,
+      "MeaningfulPullbackEvents": [
+        {
+          "Ticks": 7.000000000000455,
+          "Duration": 2
+        }
+      ],
+      "OneSecondRV": 0.44579322749674566,
+      "FifteenSecondMidpointRV": 0.18259333738148265,
+      "NoQuoteFraction": 0,
+      "Volume": 14428,
+      "SpreadP95": 4.0000000000009095,
+      "MeanRange30": 0.34944218090267504
+    },
+    {
+      "Case": "Older",
+      "Arm": "Candidate",
+      "Market": "BT",
+      "LongestRun": 10,
+      "Runs": [
+        9,
+        1,
+        3,
+        2,
+        6,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        5,
+        10,
+        2,
+        1,
+        4,
+        2,
+        1
+      ],
+      "Range30": [
+        0.17889591638376695,
+        0.23410286423444132
+      ],
+      "WickFraction": 0.46043528702974895,
+      "OneMinuteRV": 0.14309431568498027,
+      "Pullbacks": 1,
+      "PullbackDepthTicks": 2.0,
+      "PullbackDuration": 2,
+      "Efficiency10": 0.6446490202467432,
+      "Alternating4Fraction": 0.017543859649122806,
+      "MeanMinuteRangePercent": 0.015741410470790054,
+      "LongRun8CandleShare": 0.6333333333333333,
+      "SignificantLongestRun": 14,
+      "Directional10WindowFraction": 0.3333333333333333,
+      "MeaningfulLong8": 0.9333333333333333,
+      "MeaningfulMaxLeg": 24,
+      "MeaningfulCounters": 3,
+      "CounterDepthTicks": 42.666666666666664,
+      "CounterEvents": [
+        {
+          "Minute": 20,
+          "Ticks": 34.0,
+          "PriorLegTicks": 114.0
+        },
+        {
+          "Minute": 44,
+          "Ticks": 30.0,
+          "PriorLegTicks": 110.0
+        },
+        {
+          "Minute": 56,
+          "Ticks": 64.0,
+          "PriorLegTicks": 50.0
+        }
+      ],
+      "MeaningfulPullbacks": 0,
+      "MeaningfulPullbackEvents": [],
+      "OneSecondRV": 0.1770678643731043,
+      "FifteenSecondMidpointRV": 0.11950853655941186,
+      "NoQuoteFraction": 0,
+      "Volume": 13946,
+      "SpreadP95": 4,
+      "MeanRange30": 0.20649939030910414
+    },
+    {
+      "Case": "Older",
+      "Arm": "Candidate",
+      "Market": "BX",
+      "LongestRun": 9,
+      "Runs": [
+        3,
+        2,
+        1,
+        4,
+        6,
+        3,
+        1,
+        8,
+        1,
+        7,
+        1,
+        3,
+        2,
+        2,
+        9,
+        1
+      ],
+      "Range30": [
+        0.38962370552650466,
+        0.5162807340387465
+      ],
+      "WickFraction": 0.44509153114983424,
+      "OneMinuteRV": 0.23823603706300878,
+      "Pullbacks": 2,
+      "PullbackDepthTicks": 3.5,
+      "PullbackDuration": 3.5,
+      "Efficiency10": 0.5667101571268238,
+      "Alternating4Fraction": 0.0,
+      "MeanMinuteRangePercent": 0.03407947365692406,
+      "LongRun8CandleShare": 0.4666666666666667,
+      "SignificantLongestRun": 10,
+      "Directional10WindowFraction": 0.17647058823529413,
+      "MeaningfulLong8": 0.9,
+      "MeaningfulMaxLeg": 25,
+      "MeaningfulCounters": 4,
+      "CounterDepthTicks": 10.75,
+      "CounterEvents": [
+        {
+          "Minute": 9,
+          "Ticks": 9.0,
+          "PriorLegTicks": 7.0
+        },
+        {
+          "Minute": 15,
+          "Ticks": 10.0,
+          "PriorLegTicks": 21.0
+        },
+        {
+          "Minute": 23,
+          "Ticks": 8.0,
+          "PriorLegTicks": 21.0
+        },
+        {
+          "Minute": 35,
+          "Ticks": 16.0,
+          "PriorLegTicks": 75.0
+        }
+      ],
+      "MeaningfulPullbacks": 0,
+      "MeaningfulPullbackEvents": [],
+      "OneSecondRV": 0.4061960175385162,
+      "FifteenSecondMidpointRV": 0.14165795138691484,
+      "NoQuoteFraction": 0,
+      "Volume": 12079,
+      "SpreadP95": 3,
+      "MeanRange30": 0.45295221978262556
+    },
+    {
+      "Case": "Seed104729",
+      "Arm": "Baseline",
+      "Market": "BG",
+      "LongestRun": 13,
+      "Runs": [
+        8,
+        1,
+        6,
+        1,
+        6,
+        9,
+        2,
+        13,
+        13
+      ],
+      "Range30": [
+        0.5425867507886474,
+        0.5137274717870901
+      ],
+      "WickFraction": 0.37052917491265863,
+      "OneMinuteRV": 0.3003458950415155,
+      "Pullbacks": 0,
+      "PullbackDepthTicks": 0,
+      "PullbackDuration": 0,
+      "Efficiency10": 0.901427811954126,
+      "Alternating4Fraction": 0.0,
+      "MeanMinuteRangePercent": 0.04570414440362478,
+      "LongRun8CandleShare": 0.8833333333333333,
+      "SignificantLongestRun": 15,
+      "Directional10WindowFraction": 0.6274509803921569,
+      "MeaningfulLong8": 1.0,
+      "MeaningfulMaxLeg": 24,
+      "MeaningfulCounters": 3,
+      "CounterDepthTicks": 30.33333333333303,
+      "CounterEvents": [
+        {
+          "Minute": 24,
+          "Ticks": 25.99999999999909,
+          "PriorLegTicks": 120.0
+        },
+        {
+          "Minute": 37,
+          "Ticks": 34.00000000000091,
+          "PriorLegTicks": 110.0
+        },
+        {
+          "Minute": 51,
+          "Ticks": 30.99999999999909,
+          "PriorLegTicks": 119.00000000000091
+        }
+      ],
+      "MeaningfulPullbacks": 0,
+      "MeaningfulPullbackEvents": [],
+      "OneSecondRV": 0.4773071881077539,
+      "FifteenSecondMidpointRV": 0.18952727509731643,
+      "NoQuoteFraction": 0,
+      "Volume": 16315,
+      "SpreadP95": 4.0000000000009095,
+      "MeanRange30": 0.5281571112878687
+    },
+    {
+      "Case": "Seed104729",
+      "Arm": "Baseline",
+      "Market": "BT",
+      "LongestRun": 21,
+      "Runs": [
+        21,
+        2,
+        1,
+        1,
+        1,
+        9,
+        16,
+        1,
+        1,
+        3,
+        1
+      ],
+      "Range30": [
+        0.33109346365302383,
+        0.3099312761083412
+      ],
+      "WickFraction": 0.3608707443194287,
+      "OneMinuteRV": 0.14418180493949928,
+      "Pullbacks": 0,
+      "PullbackDepthTicks": 0,
+      "PullbackDuration": 0,
+      "Efficiency10": 0.6527544351073763,
+      "Alternating4Fraction": 0.05263157894736842,
+      "MeanMinuteRangePercent": 0.018452122008898186,
+      "LongRun8CandleShare": 0.8333333333333334,
+      "SignificantLongestRun": 22,
+      "Directional10WindowFraction": 0.6274509803921569,
+      "MeaningfulLong8": 0.9,
+      "MeaningfulMaxLeg": 31,
+      "MeaningfulCounters": 2,
+      "CounterDepthTicks": 38.5,
+      "CounterEvents": [
+        {
+          "Minute": 31,
+          "Ticks": 55.0,
+          "PriorLegTicks": 245.0
+        },
+        {
+          "Minute": 37,
+          "Ticks": 22.0,
+          "PriorLegTicks": 84.0
+        }
+      ],
+      "MeaningfulPullbacks": 0,
+      "MeaningfulPullbackEvents": [],
+      "OneSecondRV": 0.1519518993219325,
+      "FifteenSecondMidpointRV": 0.09548625628221685,
+      "NoQuoteFraction": 0,
+      "Volume": 17968,
+      "SpreadP95": 4,
+      "MeanRange30": 0.32051236988068255
+    },
+    {
+      "Case": "Seed104729",
+      "Arm": "Baseline",
+      "Market": "BX",
+      "LongestRun": 15,
+      "Runs": [
+        10,
+        2,
+        1,
+        10,
+        15,
+        1,
+        4,
+        1,
+        2,
+        11,
+        1
+      ],
+      "Range30": [
+        0.3403998621165116,
+        0.4559532002752925
+      ],
+      "WickFraction": 0.35646534429622667,
+      "OneMinuteRV": 0.26005564910049545,
+      "Pullbacks": 2,
+      "PullbackDepthTicks": 3.0,
+      "PullbackDuration": 2,
+      "Efficiency10": 0.7501023057889442,
+      "Alternating4Fraction": 0.0,
+      "MeanMinuteRangePercent": 0.03845211079035927,
+      "LongRun8CandleShare": 0.7833333333333333,
+      "SignificantLongestRun": 15,
+      "Directional10WindowFraction": 0.47058823529411764,
+      "MeaningfulLong8": 1.0,
+      "MeaningfulMaxLeg": 22,
+      "MeaningfulCounters": 3,
+      "CounterDepthTicks": 23.666666666666668,
+      "CounterEvents": [
+        {
+          "Minute": 15,
+          "Ticks": 21.0,
+          "PriorLegTicks": 63.0
+        },
+        {
+          "Minute": 27,
+          "Ticks": 20.0,
+          "PriorLegTicks": 73.0
+        },
+        {
+          "Minute": 49,
+          "Ticks": 30.0,
+          "PriorLegTicks": 142.0
+        }
+      ],
+      "MeaningfulPullbacks": 0,
+      "MeaningfulPullbackEvents": [],
+      "OneSecondRV": 0.3821156870225576,
+      "FifteenSecondMidpointRV": 0.15989095441303916,
+      "NoQuoteFraction": 0,
+      "Volume": 15561,
+      "SpreadP95": 4,
+      "MeanRange30": 0.398176531195902
+    },
+    {
+      "Case": "Seed104729",
+      "Arm": "Candidate",
+      "Market": "BG",
+      "LongestRun": 12,
+      "Runs": [
+        4,
+        2,
+        1,
+        6,
+        2,
+        6,
+        5,
+        1,
+        2,
+        1,
+        2,
+        1,
+        3,
+        1,
+        12
+      ],
+      "Range30": [
+        0.35289669369405685,
+        0.18879798615481436
+      ],
+      "WickFraction": 0.5955486488819108,
+      "OneMinuteRV": 0.18341538776859967,
+      "Pullbacks": 1,
+      "PullbackDepthTicks": 7.9999999999972715,
+      "PullbackDuration": 6,
+      "Efficiency10": 0.5984621531532854,
+      "Alternating4Fraction": 0.0,
+      "MeanMinuteRangePercent": 0.02932236165359449,
+      "LongRun8CandleShare": 0.3333333333333333,
+      "SignificantLongestRun": 12,
+      "Directional10WindowFraction": 0.0784313725490196,
+      "MeaningfulLong8": 0.8833333333333333,
+      "MeaningfulMaxLeg": 29,
+      "MeaningfulCounters": 3,
+      "CounterDepthTicks": 13.000000000000304,
+      "CounterEvents": [
+        {
+          "Minute": 14,
+          "Ticks": 15.0,
+          "PriorLegTicks": 29.00000000000091
+        },
+        {
+          "Minute": 43,
+          "Ticks": 18.00000000000182,
+          "PriorLegTicks": 78.00000000000182
+        },
+        {
+          "Minute": 50,
+          "Ticks": 5.9999999999990905,
+          "PriorLegTicks": 30.0
+        }
+      ],
+      "MeaningfulPullbacks": 1,
+      "MeaningfulPullbackEvents": [
+        {
+          "Ticks": 7.9999999999972715,
+          "Duration": 6
+        }
+      ],
+      "OneSecondRV": 0.3928495850806016,
+      "FifteenSecondMidpointRV": 0.12267927714907395,
+      "NoQuoteFraction": 0,
+      "Volume": 11529,
+      "SpreadP95": 4.0000000000009095,
+      "MeanRange30": 0.2708473399244356
+    },
+    {
+      "Case": "Seed104729",
+      "Arm": "Candidate",
+      "Market": "BT",
+      "LongestRun": 10,
+      "Runs": [
+        2,
+        10,
+        7,
+        1,
+        4,
+        1,
+        2,
+        5,
+        1,
+        2,
+        8,
+        1,
+        8,
+        4
+      ],
+      "Range30": [
+        0.18228752492690148,
+        0.21037953936665973
+      ],
+      "WickFraction": 0.41607024063820675,
+      "OneMinuteRV": 0.15918784658235402,
+      "Pullbacks": 1,
+      "PullbackDepthTicks": 4.0,
+      "PullbackDuration": 2,
+      "Efficiency10": 0.7514039607425729,
+      "Alternating4Fraction": 0.0,
+      "MeanMinuteRangePercent": 0.018058471214970624,
+      "LongRun8CandleShare": 0.6333333333333333,
+      "SignificantLongestRun": 11,
+      "Directional10WindowFraction": 0.5098039215686274,
+      "MeaningfulLong8": 0.95,
+      "MeaningfulMaxLeg": 18,
+      "MeaningfulCounters": 4,
+      "CounterDepthTicks": 43.75,
+      "CounterEvents": [
+        {
+          "Minute": 18,
+          "Ticks": 82.0,
+          "PriorLegTicks": 131.0
+        },
+        {
+          "Minute": 32,
+          "Ticks": 24.0,
+          "PriorLegTicks": 117.0
+        },
+        {
+          "Minute": 41,
+          "Ticks": 23.0,
+          "PriorLegTicks": 73.0
+        },
+        {
+          "Minute": 57,
+          "Ticks": 46.0,
+          "PriorLegTicks": 143.0
+        }
+      ],
+      "MeaningfulPullbacks": 0,
+      "MeaningfulPullbackEvents": [],
+      "OneSecondRV": 0.19436181531068794,
+      "FifteenSecondMidpointRV": 0.14185475444377427,
+      "NoQuoteFraction": 0,
+      "Volume": 17010,
+      "SpreadP95": 4,
+      "MeanRange30": 0.19633353214678062
+    },
+    {
+      "Case": "Seed104729",
+      "Arm": "Candidate",
+      "Market": "BX",
+      "LongestRun": 18,
+      "Runs": [
+        1,
+        2,
+        1,
+        6,
+        1,
+        2,
+        1,
+        18,
+        11,
+        3,
+        9
+      ],
+      "Range30": [
+        0.3910950661853189,
+        0.44200317555679525
+      ],
+      "WickFraction": 0.37193068505568505,
+      "OneMinuteRV": 0.2576008777489529,
+      "Pullbacks": 0,
+      "PullbackDepthTicks": 0,
+      "PullbackDuration": 0,
+      "Efficiency10": 0.6103952991452991,
+      "Alternating4Fraction": 0.0,
+      "MeanMinuteRangePercent": 0.03652380230023809,
+      "LongRun8CandleShare": 0.8833333333333333,
+      "SignificantLongestRun": 19,
+      "Directional10WindowFraction": 0.49019607843137253,
+      "MeaningfulLong8": 1.0,
+      "MeaningfulMaxLeg": 21,
+      "MeaningfulCounters": 3,
+      "CounterDepthTicks": 24.666666666666668,
+      "CounterEvents": [
+        {
+          "Minute": 19,
+          "Ticks": 18.0,
+          "PriorLegTicks": 53.0
+        },
+        {
+          "Minute": 40,
+          "Ticks": 30.0,
+          "PriorLegTicks": 118.0
+        },
+        {
+          "Minute": 52,
+          "Ticks": 26.0,
+          "PriorLegTicks": 100.0
+        }
+      ],
+      "MeaningfulPullbacks": 0,
+      "MeaningfulPullbackEvents": [],
+      "OneSecondRV": 0.38495335805811715,
+      "FifteenSecondMidpointRV": 0.1475810122061835,
+      "NoQuoteFraction": 0,
+      "Volume": 14048,
+      "SpreadP95": 4,
+      "MeanRange30": 0.4165491208710571
+    },
+    {
+      "Case": "Seed71",
+      "Arm": "Baseline",
+      "Market": "BG",
+      "LongestRun": 15,
+      "Runs": [
+        7,
+        1,
+        4,
+        9,
+        5,
+        1,
+        1,
+        5,
+        15,
+        2,
+        4,
+        1
+      ],
+      "Range30": [
+        0.4430141680946173,
+        0.36336298709436043
+      ],
+      "WickFraction": 0.42290940214472206,
+      "OneMinuteRV": 0.27389080694662393,
+      "Pullbacks": 0,
+      "PullbackDepthTicks": 0,
+      "PullbackDuration": 0,
+      "Efficiency10": 0.761829169258425,
+      "Alternating4Fraction": 0.0,
+      "MeanMinuteRangePercent": 0.039225858226239106,
+      "LongRun8CandleShare": 0.65,
+      "SignificantLongestRun": 15,
+      "Directional10WindowFraction": 0.39215686274509803,
+      "MeaningfulLong8": 0.8833333333333333,
+      "MeaningfulMaxLeg": 19,
+      "MeaningfulCounters": 4,
+      "CounterDepthTicks": 26.249999999998863,
+      "CounterEvents": [
+        {
+          "Minute": 15,
+          "Ticks": 15.99999999999909,
+          "PriorLegTicks": 70.0
+        },
+        {
+          "Minute": 34,
+          "Ticks": 35.0,
+          "PriorLegTicks": 101.99999999999818
+        },
+        {
+          "Minute": 38,
+          "Ticks": 10.99999999999909,
+          "PriorLegTicks": 40.99999999999909
+        },
+        {
+          "Minute": 57,
+          "Ticks": 42.99999999999727,
+          "PriorLegTicks": 82.99999999999727
+        }
+      ],
+      "MeaningfulPullbacks": 0,
+      "MeaningfulPullbackEvents": [],
+      "OneSecondRV": 0.43115201784259044,
+      "FifteenSecondMidpointRV": 0.16565904649225835,
+      "NoQuoteFraction": 0,
+      "Volume": 13986,
+      "SpreadP95": 4.0000000000009095,
+      "MeanRange30": 0.4031885775944889
+    },
+    {
+      "Case": "Seed71",
+      "Arm": "Baseline",
+      "Market": "BT",
+      "LongestRun": 7,
+      "Runs": [
+        4,
+        1,
+        1,
+        3,
+        1,
+        4,
+        1,
+        5,
+        1,
+        6,
+        2,
+        5,
+        1,
+        1,
+        1,
+        3,
+        2,
+        1,
+        2,
+        7,
+        4
+      ],
+      "Range30": [
+        0.16232379325074753,
+        0.1781030802073803
+      ],
+      "WickFraction": 0.4733227693547355,
+      "OneMinuteRV": 0.134768792548008,
+      "Pullbacks": 2,
+      "PullbackDepthTicks": 7.0,
+      "PullbackDuration": 4,
+      "Efficiency10": 0.642165708812523,
+      "Alternating4Fraction": 0.0,
+      "MeanMinuteRangePercent": 0.017891751642639404,
+      "LongRun8CandleShare": 0.4,
+      "SignificantLongestRun": 13,
+      "Directional10WindowFraction": 0.2549019607843137,
+      "MeaningfulLong8": 0.8666666666666667,
+      "MeaningfulMaxLeg": 32,
+      "MeaningfulCounters": 4,
+      "CounterDepthTicks": 27.25,
+      "CounterEvents": [
+        {
+          "Minute": 9,
+          "Ticks": 21.0,
+          "PriorLegTicks": 35.0
+        },
+        {
+          "Minute": 20,
+          "Ticks": 27.0,
+          "PriorLegTicks": 86.0
+        },
+        {
+          "Minute": 52,
+          "Ticks": 37.0,
+          "PriorLegTicks": 176.0
+        },
+        {
+          "Minute": 59,
+          "Ticks": 24.0,
+          "PriorLegTicks": 118.0
+        }
+      ],
+      "MeaningfulPullbacks": 0,
+      "MeaningfulPullbackEvents": [],
+      "OneSecondRV": 0.193911254778356,
+      "FifteenSecondMidpointRV": 0.1328545363992907,
+      "NoQuoteFraction": 0,
+      "Volume": 17189,
+      "SpreadP95": 4,
+      "MeanRange30": 0.17021343672906392
+    },
+    {
+      "Case": "Seed71",
+      "Arm": "Baseline",
+      "Market": "BX",
+      "LongestRun": 17,
+      "Runs": [
+        1,
+        9,
+        1,
+        1,
+        2,
+        1,
+        1,
+        9,
+        1,
+        4,
+        1,
+        2,
+        2,
+        1,
+        17
+      ],
+      "Range30": [
+        0.28874332011722115,
+        0.6715454154111064
+      ],
+      "WickFraction": 0.4436724444888745,
+      "OneMinuteRV": 0.22854511656769166,
+      "Pullbacks": 0,
+      "PullbackDepthTicks": 0,
+      "PullbackDuration": 0,
+      "Efficiency10": 0.7765488991295443,
+      "Alternating4Fraction": 0.017543859649122806,
+      "MeanMinuteRangePercent": 0.03336055687328465,
+      "LongRun8CandleShare": 0.7166666666666667,
+      "SignificantLongestRun": 17,
+      "Directional10WindowFraction": 0.49019607843137253,
+      "MeaningfulLong8": 1.0,
+      "MeaningfulMaxLeg": 21,
+      "MeaningfulCounters": 3,
+      "CounterDepthTicks": 12.333333333333334,
+      "CounterEvents": [
+        {
+          "Minute": 21,
+          "Ticks": 9.0,
+          "PriorLegTicks": 32.0
+        },
+        {
+          "Minute": 33,
+          "Ticks": 19.0,
+          "PriorLegTicks": 65.0
+        },
+        {
+          "Minute": 43,
+          "Ticks": 9.0,
+          "PriorLegTicks": 29.0
+        }
+      ],
+      "MeaningfulPullbacks": 0,
+      "MeaningfulPullbackEvents": [],
+      "OneSecondRV": 0.3678035700234839,
+      "FifteenSecondMidpointRV": 0.15316385508497551,
+      "NoQuoteFraction": 0,
+      "Volume": 12832,
+      "SpreadP95": 4,
+      "MeanRange30": 0.48014436776416375
+    },
+    {
+      "Case": "Seed71",
+      "Arm": "Candidate",
+      "Market": "BG",
+      "LongestRun": 16,
+      "Runs": [
+        4,
+        5,
+        14,
+        16,
+        10,
+        7,
+        2,
+        1
+      ],
+      "Range30": [
+        0.6536221561151342,
+        0.3299778622446697
+      ],
+      "WickFraction": 0.3097103359603272,
+      "OneMinuteRV": 0.3009583735908946,
+      "Pullbacks": 0,
+      "PullbackDepthTicks": 0,
+      "PullbackDuration": 0,
+      "Efficiency10": 0.7921373754707343,
+      "Alternating4Fraction": 0.0,
+      "MeanMinuteRangePercent": 0.04266500153506046,
+      "LongRun8CandleShare": 0.8,
+      "SignificantLongestRun": 16,
+      "Directional10WindowFraction": 0.37254901960784315,
+      "MeaningfulLong8": 0.8166666666666667,
+      "MeaningfulMaxLeg": 16,
+      "MeaningfulCounters": 5,
+      "CounterDepthTicks": 24.0,
+      "CounterEvents": [
+        {
+          "Minute": 6,
+          "Ticks": 15.0,
+          "PriorLegTicks": 7.9999999999972715
+        },
+        {
+          "Minute": 11,
+          "Ticks": 16.99999999999818,
+          "PriorLegTicks": 42.99999999999727
+        },
+        {
+          "Minute": 27,
+          "Ticks": 32.00000000000273,
+          "PriorLegTicks": 149.0000000000009
+        },
+        {
+          "Minute": 43,
+          "Ticks": 30.0,
+          "PriorLegTicks": 110.0
+        },
+        {
+          "Minute": 52,
+          "Ticks": 25.99999999999909,
+          "PriorLegTicks": 77.99999999999727
+        }
+      ],
+      "MeaningfulPullbacks": 0,
+      "MeaningfulPullbackEvents": [],
+      "OneSecondRV": 0.4075288134576521,
+      "FifteenSecondMidpointRV": 0.17656328573987803,
+      "NoQuoteFraction": 0,
+      "Volume": 14802,
+      "SpreadP95": 4.0000000000009095,
+      "MeanRange30": 0.49180000917990196
+    },
+    {
+      "Case": "Seed71",
+      "Arm": "Candidate",
+      "Market": "BT",
+      "LongestRun": 10,
+      "Runs": [
+        1,
+        2,
+        1,
+        2,
+        10,
+        3,
+        2,
+        6,
+        2,
+        4,
+        1,
+        2,
+        1,
+        3,
+        2,
+        7,
+        4,
+        3
+      ],
+      "Range30": [
+        0.1500695444230253,
+        0.11719751443604799
+      ],
+      "WickFraction": 0.43480080120479675,
+      "OneMinuteRV": 0.07132021922011374,
+      "Pullbacks": 3,
+      "PullbackDepthTicks": 3.3333333333333335,
+      "PullbackDuration": 3.6666666666666665,
+      "Efficiency10": 0.5192297539858516,
+      "Alternating4Fraction": 0.0,
+      "MeanMinuteRangePercent": 0.01143382351266094,
+      "LongRun8CandleShare": 0.45,
+      "SignificantLongestRun": 11,
+      "Directional10WindowFraction": 0.11764705882352941,
+      "MeaningfulLong8": 0.9166666666666666,
+      "MeaningfulMaxLeg": 30,
+      "MeaningfulCounters": 2,
+      "CounterDepthTicks": 25.5,
+      "CounterEvents": [
+        {
+          "Minute": 25,
+          "Ticks": 30.0,
+          "PriorLegTicks": 74.0
+        },
+        {
+          "Minute": 55,
+          "Ticks": 21.0,
+          "PriorLegTicks": 98.0
+        }
+      ],
+      "MeaningfulPullbacks": 0,
+      "MeaningfulPullbackEvents": [],
+      "OneSecondRV": 0.11120402919238359,
+      "FifteenSecondMidpointRV": 0.05507445937719119,
+      "NoQuoteFraction": 0,
+      "Volume": 13488,
+      "SpreadP95": 4,
+      "MeanRange30": 0.13363352942953666
+    },
+    {
+      "Case": "Seed71",
+      "Arm": "Candidate",
+      "Market": "BX",
+      "LongestRun": 18,
+      "Runs": [
+        1,
+        1,
+        4,
+        2,
+        9,
+        3,
+        1,
+        1,
+        18,
+        14,
+        4
+      ],
+      "Range30": [
+        0.4213422761081732,
+        0.5173974906221704
+      ],
+      "WickFraction": 0.35005922318422317,
+      "OneMinuteRV": 0.23241860018119237,
+      "Pullbacks": 1,
+      "PullbackDepthTicks": 17.0,
+      "PullbackDuration": 8,
+      "Efficiency10": 0.8339454452357679,
+      "Alternating4Fraction": 0.017543859649122806,
+      "MeanMinuteRangePercent": 0.03526384904799914,
+      "LongRun8CandleShare": 0.8333333333333334,
+      "SignificantLongestRun": 19,
+      "Directional10WindowFraction": 0.5882352941176471,
+      "MeaningfulLong8": 0.8166666666666667,
+      "MeaningfulMaxLeg": 17,
+      "MeaningfulCounters": 4,
+      "CounterDepthTicks": 17.25,
+      "CounterEvents": [
+        {
+          "Minute": 7,
+          "Ticks": 17.0,
+          "PriorLegTicks": 21.0
+        },
+        {
+          "Minute": 11,
+          "Ticks": 9.0,
+          "PriorLegTicks": 17.0
+        },
+        {
+          "Minute": 28,
+          "Ticks": 23.0,
+          "PriorLegTicks": 77.0
+        },
+        {
+          "Minute": 45,
+          "Ticks": 20.0,
+          "PriorLegTicks": 85.0
+        }
+      ],
+      "MeaningfulPullbacks": 1,
+      "MeaningfulPullbackEvents": [
+        {
+          "Ticks": 17.0,
+          "Duration": 8
+        }
+      ],
+      "OneSecondRV": 0.370189544678039,
+      "FifteenSecondMidpointRV": 0.1503277705385424,
+      "NoQuoteFraction": 0,
+      "Volume": 13523,
+      "SpreadP95": 4,
+      "MeanRange30": 0.4693698833651718
+    },
+    {
+      "Case": "Seed7919",
+      "Arm": "Baseline",
+      "Market": "BG",
+      "LongestRun": 19,
+      "Runs": [
+        12,
+        1,
+        5,
+        3,
+        6,
+        19,
+        4,
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      "Range30": [
+        0.6971404717177966,
+        0.6591376632100538
+      ],
+      "WickFraction": 0.33925683249215366,
+      "OneMinuteRV": 0.2946825613637823,
+      "Pullbacks": 2,
+      "PullbackDepthTicks": 3.9999999999986358,
+      "PullbackDuration": 3,
+      "Efficiency10": 0.6308650632905901,
+      "Alternating4Fraction": 0.0,
+      "MeanMinuteRangePercent": 0.04123771388166137,
+      "LongRun8CandleShare": 0.5166666666666667,
+      "SignificantLongestRun": 19,
+      "Directional10WindowFraction": 0.37254901960784315,
+      "MeaningfulLong8": 0.8166666666666667,
+      "MeaningfulMaxLeg": 30,
+      "MeaningfulCounters": 3,
+      "CounterDepthTicks": 29.66666666666697,
+      "CounterEvents": [
+        {
+          "Minute": 30,
+          "Ticks": 39.00000000000091,
+          "PriorLegTicks": 159.0000000000009
+        },
+        {
+          "Minute": 49,
+          "Ticks": 40.99999999999909,
+          "PriorLegTicks": 180.0
+        },
+        {
+          "Minute": 54,
+          "Ticks": 9.00000000000091,
+          "PriorLegTicks": 40.99999999999909
+        }
+      ],
+      "MeaningfulPullbacks": 0,
+      "MeaningfulPullbackEvents": [],
+      "OneSecondRV": 0.4239374755851387,
+      "FifteenSecondMidpointRV": 0.17111212100453577,
+      "NoQuoteFraction": 0,
+      "Volume": 14395,
+      "SpreadP95": 4.0000000000009095,
+      "MeanRange30": 0.6781390674639252
+    },
+    {
+      "Case": "Seed7919",
+      "Arm": "Baseline",
+      "Market": "BT",
+      "LongestRun": 10,
+      "Runs": [
+        6,
+        9,
+        2,
+        8,
+        2,
+        2,
+        8,
+        2,
+        1,
+        6,
+        2,
+        1,
+        10
+      ],
+      "Range30": [
+        0.2102432465468769,
+        0.19941033263600882
+      ],
+      "WickFraction": 0.45783399015911475,
+      "OneMinuteRV": 0.1235758911535301,
+      "Pullbacks": 2,
+      "PullbackDepthTicks": 4.0,
+      "PullbackDuration": 2.5,
+      "Efficiency10": 0.6807902486729231,
+      "Alternating4Fraction": 0.0,
+      "MeanMinuteRangePercent": 0.01980543185437625,
+      "LongRun8CandleShare": 0.4666666666666667,
+      "SignificantLongestRun": 10,
+      "Directional10WindowFraction": 0.27450980392156865,
+      "MeaningfulLong8": 0.8833333333333333,
+      "MeaningfulMaxLeg": 13,
+      "MeaningfulCounters": 5,
+      "CounterDepthTicks": 41.0,
+      "CounterEvents": [
+        {
+          "Minute": 8,
+          "Ticks": 32.0,
+          "PriorLegTicks": 39.0
+        },
+        {
+          "Minute": 19,
+          "Ticks": 66.0,
+          "PriorLegTicks": 76.0
+        },
+        {
+          "Minute": 31,
+          "Ticks": 40.0,
+          "PriorLegTicks": 109.0
+        },
+        {
+          "Minute": 44,
+          "Ticks": 32.0,
+          "PriorLegTicks": 86.0
+        },
+        {
+          "Minute": 53,
+          "Ticks": 35.0,
+          "PriorLegTicks": 58.0
+        }
+      ],
+      "MeaningfulPullbacks": 0,
+      "MeaningfulPullbackEvents": [],
+      "OneSecondRV": 0.17042118316491095,
+      "FifteenSecondMidpointRV": 0.10150316899215704,
+      "NoQuoteFraction": 0,
+      "Volume": 18947,
+      "SpreadP95": 4,
+      "MeanRange30": 0.20482678959144285
+    },
+    {
+      "Case": "Seed7919",
+      "Arm": "Baseline",
+      "Market": "BX",
+      "LongestRun": 11,
+      "Runs": [
+        6,
+        11,
+        10,
+        2,
+        5,
+        10,
+        4,
+        2,
+        7
+      ],
+      "Range30": [
+        0.4174017814880159,
+        0.28077753779697623
+      ],
+      "WickFraction": 0.43093922538228635,
+      "OneMinuteRV": 0.24004573149989739,
+      "Pullbacks": 2,
+      "PullbackDepthTicks": 8.0,
+      "PullbackDuration": 5,
+      "Efficiency10": 0.5676252282289433,
+      "Alternating4Fraction": 0.0,
+      "MeanMinuteRangePercent": 0.03449814998837426,
+      "LongRun8CandleShare": 0.5333333333333333,
+      "SignificantLongestRun": 12,
+      "Directional10WindowFraction": 0.27450980392156865,
+      "MeaningfulLong8": 0.9,
+      "MeaningfulMaxLeg": 18,
+      "MeaningfulCounters": 4,
+      "CounterDepthTicks": 15.25,
+      "CounterEvents": [
+        {
+          "Minute": 8,
+          "Ticks": 11.0,
+          "PriorLegTicks": 48.0
+        },
+        {
+          "Minute": 21,
+          "Ticks": 19.0,
+          "PriorLegTicks": 58.0
+        },
+        {
+          "Minute": 39,
+          "Ticks": 18.0,
+          "PriorLegTicks": 90.0
+        },
+        {
+          "Minute": 54,
+          "Ticks": 13.0,
+          "PriorLegTicks": 63.0
+        }
+      ],
+      "MeaningfulPullbacks": 0,
+      "MeaningfulPullbackEvents": [],
+      "OneSecondRV": 0.39618131077435076,
+      "FifteenSecondMidpointRV": 0.14483115052025183,
+      "NoQuoteFraction": 0,
+      "Volume": 13152,
+      "SpreadP95": 4,
+      "MeanRange30": 0.34908965964249605
+    },
+    {
+      "Case": "Seed7919",
+      "Arm": "Candidate",
+      "Market": "BG",
+      "LongestRun": 13,
+      "Runs": [
+        2,
+        8,
+        1,
+        2,
+        1,
+        2,
+        7,
+        2,
+        1,
+        1,
+        2,
+        5,
+        1,
+        1,
+        13,
+        1,
+        4,
+        1,
+        1,
+        3
+      ],
+      "Range30": [
+        0.24167673653069632,
+        0.5628517823639775
+      ],
+      "WickFraction": 0.3628742722243598,
+      "OneMinuteRV": 0.23961073986195824,
+      "Pullbacks": 1,
+      "PullbackDepthTicks": 5.9999999999990905,
+      "PullbackDuration": 6,
+      "Efficiency10": 0.7572275414477858,
+      "Alternating4Fraction": 0.05263157894736842,
+      "MeanMinuteRangePercent": 0.031553391017944264,
+      "LongRun8CandleShare": 0.8333333333333334,
+      "SignificantLongestRun": 20,
+      "Directional10WindowFraction": 0.3333333333333333,
+      "MeaningfulLong8": 1.0,
+      "MeaningfulMaxLeg": 19,
+      "MeaningfulCounters": 3,
+      "CounterDepthTicks": 11.33333333333212,
+      "CounterEvents": [
+        {
+          "Minute": 18,
+          "Ticks": 10.99999999999909,
+          "PriorLegTicks": 52.99999999999727
+        },
+        {
+          "Minute": 31,
+          "Ticks": 10.99999999999909,
+          "PriorLegTicks": 38.99999999999636
+        },
+        {
+          "Minute": 41,
+          "Ticks": 11.999999999998181,
+          "PriorLegTicks": 56.99999999999818
+        }
+      ],
+      "MeaningfulPullbacks": 0,
+      "MeaningfulPullbackEvents": [],
+      "OneSecondRV": 0.3879759204771065,
+      "FifteenSecondMidpointRV": 0.14519422764178314,
+      "NoQuoteFraction": 0,
+      "Volume": 11860,
+      "SpreadP95": 4.0000000000009095,
+      "MeanRange30": 0.4022642594473369
+    },
+    {
+      "Case": "Seed7919",
+      "Arm": "Candidate",
+      "Market": "BT",
+      "LongestRun": 12,
+      "Runs": [
+        3,
+        1,
+        5,
+        3,
+        4,
+        12,
+        9,
+        1,
+        4,
+        1,
+        4,
+        1,
+        1,
+        4,
+        3
+      ],
+      "Range30": [
+        0.15493662238163208,
+        0.1660784720780569
+      ],
+      "WickFraction": 0.39540799469616744,
+      "OneMinuteRV": 0.10655157846210549,
+      "Pullbacks": 1,
+      "PullbackDepthTicks": 5.0,
+      "PullbackDuration": 3,
+      "Efficiency10": 0.6925351032798898,
+      "Alternating4Fraction": 0.0,
+      "MeanMinuteRangePercent": 0.01265040476046734,
+      "LongRun8CandleShare": 0.5,
+      "SignificantLongestRun": 12,
+      "Directional10WindowFraction": 0.17647058823529413,
+      "MeaningfulLong8": 0.7833333333333333,
+      "MeaningfulMaxLeg": 17,
+      "MeaningfulCounters": 4,
+      "CounterDepthTicks": 26.5,
+      "CounterEvents": [
+        {
+          "Minute": 17,
+          "Ticks": 24.0,
+          "PriorLegTicks": 29.0
+        },
+        {
+          "Minute": 23,
+          "Ticks": 28.0,
+          "PriorLegTicks": 58.0
+        },
+        {
+          "Minute": 38,
+          "Ticks": 30.0,
+          "PriorLegTicks": 109.0
+        },
+        {
+          "Minute": 45,
+          "Ticks": 24.0,
+          "PriorLegTicks": 108.0
+        }
+      ],
+      "MeaningfulPullbacks": 0,
+      "MeaningfulPullbackEvents": [],
+      "OneSecondRV": 0.14039037168859048,
+      "FifteenSecondMidpointRV": 0.1005802839119194,
+      "NoQuoteFraction": 0,
+      "Volume": 14700,
+      "SpreadP95": 4,
+      "MeanRange30": 0.1605075472298445
+    },
+    {
+      "Case": "Seed7919",
+      "Arm": "Candidate",
+      "Market": "BX",
+      "LongestRun": 16,
+      "Runs": [
+        2,
+        11,
+        5,
+        2,
+        1,
+        2,
+        2,
+        16,
+        1,
+        3,
+        2,
+        2,
+        2,
+        6
+      ],
+      "Range30": [
+        0.2795338235926547,
+        0.5928089694574509
+      ],
+      "WickFraction": 0.3554533758152179,
+      "OneMinuteRV": 0.24144010609932087,
+      "Pullbacks": 2,
+      "PullbackDepthTicks": 6.5,
+      "PullbackDuration": 7,
+      "Efficiency10": 0.7279435125174736,
+      "Alternating4Fraction": 0.0,
+      "MeanMinuteRangePercent": 0.03257349152500593,
+      "LongRun8CandleShare": 0.6,
+      "SignificantLongestRun": 20,
+      "Directional10WindowFraction": 0.4117647058823529,
+      "MeaningfulLong8": 0.9166666666666666,
+      "MeaningfulMaxLeg": 28,
+      "MeaningfulCounters": 2,
+      "CounterDepthTicks": 28.0,
+      "CounterEvents": [
+        {
+          "Minute": 28,
+          "Ticks": 17.0,
+          "PriorLegTicks": 64.0
+        },
+        {
+          "Minute": 55,
+          "Ticks": 39.0,
+          "PriorLegTicks": 163.0
+        }
+      ],
+      "MeaningfulPullbacks": 1,
+      "MeaningfulPullbackEvents": [
+        {
+          "Ticks": 9.0,
+          "Duration": 7
+        }
+      ],
+      "OneSecondRV": 0.3818727195763524,
+      "FifteenSecondMidpointRV": 0.14206663342623504,
+      "NoQuoteFraction": 0,
+      "Volume": 13060,
+      "SpreadP95": 4,
+      "MeanRange30": 0.43617139652505277
+    }
+  ]
+}

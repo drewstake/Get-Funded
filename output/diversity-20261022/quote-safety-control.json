@@ -1,0 +1,7 @@
+{
+  "Variant": "inner-patient-quote-safe",
+  "Parent": "inner-patient-stretch",
+  "Purpose": "Isolate the one-sided execution correction and integration from new rolling allocations. Same default neighboring Maker lane, patient Stretch and finite Portfolio behavior; explicit required-side quote handling prevents fallback and nil errors. Compare with rolling-patient-robust rather than attributing every difference to allocation lifetimes.",
+  "Configuration": "Same compatibility integrations and guarded quote selectors as rolling-patient-robust; no new timing, sizing, risk or capital changes.",
+  "ValidationConsumed": false
+}

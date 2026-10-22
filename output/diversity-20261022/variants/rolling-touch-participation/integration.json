@@ -1,0 +1,5 @@
+{
+  "Parent": "rolling-portfolio-depth",
+  "Checkpoint": 31,
+  "Change": "Bound rolling risk-entry spread plus allowed slippage to 25% of existing stop distance. Reductions remain unrestricted by this guard. Also bound child quantity to 25% of existing opposite touch, rounded down."
+}

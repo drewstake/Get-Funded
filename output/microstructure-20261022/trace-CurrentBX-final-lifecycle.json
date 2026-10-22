@@ -1,0 +1,402 @@
+{
+  "BX": {
+    "Lifecycle": {
+      "Momentum": {
+        "MatchedSides": 5385,
+        "IncomingContracts": 5385,
+        "OpeningContracts": 2656,
+        "ClosingContracts": 2729,
+        "Exit/Time": 2591,
+        "ClosedEpisodes": 306,
+        "NewEpisodes": 302,
+        "Exit/Thesis": 50,
+        "Exit/Stop loss": 88
+      },
+      "Maker": {
+        "MatchedSides": 7623,
+        "PassiveContracts": 7425,
+        "OpeningContracts": 3852,
+        "ClosingContracts": 3771,
+        "Exit/Ordinary": 3573,
+        "NewEpisodes": 43,
+        "ClosedEpisodes": 53,
+        "IncomingContracts": 198,
+        "Exit/RecoveryRisk": 198
+      },
+      "Scalper": {
+        "MatchedSides": 6193,
+        "IncomingContracts": 3196,
+        "OpeningContracts": 3090,
+        "ClosingContracts": 3103,
+        "Exit/OtherReduction": 2231,
+        "ClosedEpisodes": 2021,
+        "NewEpisodes": 2012,
+        "PassiveContracts": 2997,
+        "Exit/Stop loss": 872
+      },
+      "Whale": {
+        "MatchedSides": 2616,
+        "PassiveContracts": 1330,
+        "OpeningContracts": 1326,
+        "ClosingContracts": 1290,
+        "NewEpisodes": 38,
+        "Exit/Time": 673,
+        "IncomingContracts": 1286,
+        "ClosedEpisodes": 36,
+        "Exit/Stop loss": 617
+      },
+      "Protective": {
+        "MatchedSides": 4670,
+        "IncomingContracts": 3868,
+        "OpeningContracts": 2355,
+        "ClosingContracts": 2315,
+        "Exit/Ordinary": 1589,
+        "ClosedEpisodes": 347,
+        "PassiveContracts": 802,
+        "NewEpisodes": 299,
+        "Exit/Stop loss": 624,
+        "Exit/Take profit": 75,
+        "Exit/RecoveryRisk": 27
+      },
+      "Liquidity": {
+        "MatchedSides": 4723,
+        "IncomingContracts": 649,
+        "OpeningContracts": 2358,
+        "ClosingContracts": 2365,
+        "Exit/Stop loss": 638,
+        "ClosedEpisodes": 2365,
+        "PassiveContracts": 4074,
+        "Exit/OtherReduction": 1702,
+        "NewEpisodes": 2358,
+        "Exit/RecoveryRisk": 11,
+        "Exit/Ordinary": 14
+      },
+      "Value": {
+        "MatchedSides": 3746,
+        "PassiveContracts": 701,
+        "OpeningContracts": 1702,
+        "ClosingContracts": 2044,
+        "Exit/Ordinary": 338,
+        "IncomingContracts": 3045,
+        "NewEpisodes": 145,
+        "ClosedEpisodes": 163,
+        "Exit/Take profit": 164,
+        "Exit/Stop loss": 1234,
+        "Exit/RecoveryRisk": 308
+      },
+      "Reversion": {
+        "MatchedSides": 521,
+        "IncomingContracts": 383,
+        "OpeningContracts": 257,
+        "ClosingContracts": 264,
+        "Exit/OtherReduction": 248,
+        "ClosedEpisodes": 109,
+        "PassiveContracts": 138,
+        "NewEpisodes": 107,
+        "Exit/Stop loss": 16
+      },
+      "Reserve": {
+        "MatchedSides": 543,
+        "PassiveContracts": 543,
+        "OpeningContracts": 222,
+        "ClosingContracts": 321,
+        "Exit/Ordinary": 321,
+        "ClosedEpisodes": 1
+      }
+    },
+    "MedianObservedEpisodeSeconds": {
+      "Liquidity": 45.75,
+      "Scalper": 33.75,
+      "Protective": 108.875,
+      "Maker": 145.0,
+      "Momentum": 235.875,
+      "Whale": 947.875,
+      "Reversion": 85.5,
+      "Value": 323.875
+    },
+    "Quotes": {
+      "Maker": {
+        "Replacements": 29861,
+        "SameDecision": 0,
+        "SameDecisionFraction": 0.0,
+        "MeanPlacementInterval": 43.50815444894679,
+        "MeanCancelAge": 27.2701967465377
+      },
+      "Reserve": {
+        "Replacements": 74946,
+        "SameDecision": 74884,
+        "SameDecisionFraction": 0.9991727377044806,
+        "MeanPlacementInterval": 8.626310943879593,
+        "MeanCancelAge": 8.624629426846857
+      }
+    }
+  },
+  "BT": {
+    "Lifecycle": {
+      "Value": {
+        "MatchedSides": 5226,
+        "IncomingContracts": 3622,
+        "OpeningContracts": 2606,
+        "ClosingContracts": 2620,
+        "Exit/Ordinary": 674,
+        "PassiveContracts": 1604,
+        "Exit/Take profit": 595,
+        "NewEpisodes": 213,
+        "ClosedEpisodes": 234,
+        "Exit/Stop loss": 1313,
+        "Exit/RecoveryRisk": 24,
+        "Exit/Margin liquidation": 14
+      },
+      "Maker": {
+        "MatchedSides": 5582,
+        "PassiveContracts": 5515,
+        "OpeningContracts": 2886,
+        "ClosingContracts": 2696,
+        "NewEpisodes": 57,
+        "Exit/Ordinary": 2629,
+        "ClosedEpisodes": 66,
+        "IncomingContracts": 67,
+        "Exit/RecoveryRisk": 67
+      },
+      "Protective": {
+        "MatchedSides": 1446,
+        "IncomingContracts": 1173,
+        "OpeningContracts": 719,
+        "ClosingContracts": 727,
+        "Exit/Ordinary": 514,
+        "ClosedEpisodes": 199,
+        "PassiveContracts": 273,
+        "NewEpisodes": 180,
+        "Exit/Stop loss": 175,
+        "Exit/Take profit": 38
+      },
+      "Reversion": {
+        "MatchedSides": 228,
+        "IncomingContracts": 164,
+        "OpeningContracts": 108,
+        "ClosingContracts": 120,
+        "Exit/OtherReduction": 112,
+        "ClosedEpisodes": 66,
+        "PassiveContracts": 64,
+        "NewEpisodes": 60,
+        "Exit/Stop loss": 8
+      },
+      "Momentum": {
+        "MatchedSides": 6246,
+        "IncomingContracts": 6246,
+        "OpeningContracts": 3065,
+        "ClosingContracts": 3181,
+        "Exit/Time": 2653,
+        "ClosedEpisodes": 279,
+        "NewEpisodes": 273,
+        "Exit/Thesis": 309,
+        "Exit/Stop loss": 219
+      },
+      "Scalper": {
+        "MatchedSides": 2977,
+        "IncomingContracts": 1657,
+        "OpeningContracts": 1489,
+        "ClosingContracts": 1488,
+        "Exit/OtherReduction": 1234,
+        "ClosedEpisodes": 1488,
+        "PassiveContracts": 1320,
+        "NewEpisodes": 1489,
+        "Exit/Stop loss": 254
+      },
+      "Whale": {
+        "MatchedSides": 4149,
+        "IncomingContracts": 2088,
+        "OpeningContracts": 2210,
+        "ClosingContracts": 1939,
+        "PassiveContracts": 2061,
+        "NewEpisodes": 43,
+        "Exit/Time": 666,
+        "ClosedEpisodes": 40,
+        "Exit/Stop loss": 1273
+      },
+      "Liquidity": {
+        "MatchedSides": 3695,
+        "PassiveContracts": 2731,
+        "OpeningContracts": 1827,
+        "ClosingContracts": 1868,
+        "Exit/OtherReduction": 856,
+        "ClosedEpisodes": 1868,
+        "NewEpisodes": 1827,
+        "IncomingContracts": 964,
+        "Exit/Stop loss": 963,
+        "Exit/Ordinary": 48,
+        "Exit/RecoveryRisk": 1
+      },
+      "Reserve": {
+        "MatchedSides": 2413,
+        "PassiveContracts": 2413,
+        "OpeningContracts": 1236,
+        "ClosingContracts": 1177,
+        "Exit/Ordinary": 1177,
+        "ClosedEpisodes": 27,
+        "NewEpisodes": 10
+      }
+    },
+    "MedianObservedEpisodeSeconds": {
+      "Scalper": 46.75,
+      "Maker": 45.875,
+      "Protective": 64.25,
+      "Momentum": 182.5,
+      "Liquidity": 37.5,
+      "Value": 331.375,
+      "Reversion": 71.625,
+      "Whale": 743.75,
+      "Reserve": 956.625
+    },
+    "Quotes": {
+      "Maker": {
+        "Replacements": 27821,
+        "SameDecision": 0,
+        "SameDecisionFraction": 0.0,
+        "MeanPlacementInterval": 46.62447431796125,
+        "MeanCancelAge": 30.67725413903998
+      },
+      "Reserve": {
+        "Replacements": 77315,
+        "SameDecision": 77025,
+        "SameDecisionFraction": 0.996249110780573,
+        "MeanPlacementInterval": 8.405904416995408,
+        "MeanCancelAge": 8.40397222041929
+      }
+    }
+  },
+  "BG": {
+    "Lifecycle": {
+      "Scalper": {
+        "MatchedSides": 4789,
+        "IncomingContracts": 2718,
+        "OpeningContracts": 2393,
+        "ClosingContracts": 2396,
+        "NewEpisodes": 1543,
+        "Exit/OtherReduction": 1901,
+        "ClosedEpisodes": 1543,
+        "PassiveContracts": 2071,
+        "Exit/Stop loss": 495
+      },
+      "Maker": {
+        "MatchedSides": 6137,
+        "PassiveContracts": 6116,
+        "OpeningContracts": 3070,
+        "ClosingContracts": 3067,
+        "Exit/Ordinary": 3046,
+        "ClosedEpisodes": 113,
+        "NewEpisodes": 94,
+        "IncomingContracts": 21,
+        "Exit/RecoveryRisk": 21
+      },
+      "Protective": {
+        "MatchedSides": 4582,
+        "IncomingContracts": 3679,
+        "OpeningContracts": 2306,
+        "ClosingContracts": 2276,
+        "Exit/Ordinary": 1827,
+        "NewEpisodes": 220,
+        "PassiveContracts": 903,
+        "ClosedEpisodes": 268,
+        "Exit/Stop loss": 362,
+        "Exit/Take profit": 75,
+        "Exit/RecoveryRisk": 12
+      },
+      "Whale": {
+        "MatchedSides": 3912,
+        "PassiveContracts": 2120,
+        "OpeningContracts": 2056,
+        "ClosingContracts": 1856,
+        "Exit/Time": 939,
+        "IncomingContracts": 1792,
+        "ClosedEpisodes": 34,
+        "NewEpisodes": 35,
+        "Exit/Stop loss": 917
+      },
+      "Momentum": {
+        "MatchedSides": 6147,
+        "IncomingContracts": 6147,
+        "OpeningContracts": 3109,
+        "ClosingContracts": 3038,
+        "Exit/Time": 2645,
+        "ClosedEpisodes": 323,
+        "Exit/Thesis": 284,
+        "NewEpisodes": 342,
+        "Exit/Stop loss": 109
+      },
+      "Value": {
+        "MatchedSides": 2942,
+        "PassiveContracts": 1016,
+        "OpeningContracts": 1362,
+        "ClosingContracts": 1580,
+        "IncomingContracts": 1926,
+        "NewEpisodes": 101,
+        "Exit/Ordinary": 478,
+        "ClosedEpisodes": 113,
+        "Exit/Take profit": 268,
+        "Exit/Stop loss": 819,
+        "Exit/RecoveryRisk": 15
+      },
+      "Liquidity": {
+        "MatchedSides": 4059,
+        "PassiveContracts": 3702,
+        "OpeningContracts": 2032,
+        "ClosingContracts": 2027,
+        "NewEpisodes": 2032,
+        "Exit/OtherReduction": 1652,
+        "ClosedEpisodes": 2027,
+        "IncomingContracts": 357,
+        "Exit/Stop loss": 352,
+        "Exit/Ordinary": 18,
+        "Exit/RecoveryRisk": 5
+      },
+      "Reversion": {
+        "MatchedSides": 214,
+        "IncomingContracts": 149,
+        "OpeningContracts": 109,
+        "ClosingContracts": 105,
+        "Exit/OtherReduction": 104,
+        "ClosedEpisodes": 49,
+        "NewEpisodes": 52,
+        "PassiveContracts": 65,
+        "Exit/Stop loss": 1
+      },
+      "Reserve": {
+        "MatchedSides": 796,
+        "PassiveContracts": 796,
+        "OpeningContracts": 390,
+        "ClosingContracts": 406,
+        "Exit/Ordinary": 406,
+        "ClosedEpisodes": 3,
+        "NewEpisodes": 1
+      }
+    },
+    "MedianObservedEpisodeSeconds": {
+      "Maker": 21.25,
+      "Scalper": 39.25,
+      "Liquidity": 34.0,
+      "Momentum": 161.75,
+      "Protective": 84.5,
+      "Reversion": 66.75,
+      "Value": 537.25,
+      "Reserve": 483.75,
+      "Whale": 946.0
+    },
+    "Quotes": {
+      "Maker": {
+        "Replacements": 27482,
+        "SameDecision": 0,
+        "SameDecisionFraction": 0.0,
+        "MeanPlacementInterval": 47.3919747471072,
+        "MeanCancelAge": 31.82549874808174
+      },
+      "Reserve": {
+        "Replacements": 70638,
+        "SameDecision": 70554,
+        "SameDecisionFraction": 0.9988108383589569,
+        "MeanPlacementInterval": 9.176010079560577,
+        "MeanCancelAge": 9.174448018819795
+      }
+    }
+  }
+}

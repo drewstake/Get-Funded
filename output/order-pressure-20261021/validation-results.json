@@ -1,0 +1,1080 @@
+{
+  "date": "2026-10-21",
+  "studioPlaceId": "137759823569682",
+  "newsDisabled": true,
+  "checkpointVersion": 24,
+  "changes": [
+    "Participants",
+    "MarketConfig",
+    "WorldCheckpoint",
+    "BotOrderFlow",
+    "MakerLiquidityTests",
+    "DepthRealismTests",
+    "OrderFlowMarketTests",
+    "BotRefreshTests",
+    "BotOrderFlowTests"
+  ],
+  "baseline": {
+    "Seconds": 1800,
+    "Seed": 20261021,
+    "Audit": true,
+    "MeasuredSeconds": 1500,
+    "Markets": {
+      "BT": {
+        "MedianSpread": 1,
+        "OneTickMinutes": 8,
+        "Up": 68,
+        "RangeTicks": 8,
+        "Minutes": 25,
+        "MaxSpread": 2,
+        "MeanMinuteRange": 1.88,
+        "Trades": 5028,
+        "NoQuote": 0,
+        "P95Spread": 1,
+        "Volume": 7721,
+        "MidpointRangeTicks": 7,
+        "Down": 72,
+        "ByAggressor": {
+          "Scalper": 544,
+          "Whale": 3592,
+          "Value": 1184,
+          "Momentum": 1272,
+          "Protective": 1129
+        }
+      },
+      "BX": {
+        "MedianSpread": 1,
+        "OneTickMinutes": 17,
+        "Up": 3,
+        "RangeTicks": 5,
+        "Minutes": 25,
+        "MaxSpread": 2,
+        "MeanMinuteRange": 1.36,
+        "Trades": 3738,
+        "NoQuote": 0,
+        "P95Spread": 1,
+        "Volume": 8558,
+        "MidpointRangeTicks": 4,
+        "Down": 7,
+        "ByAggressor": {
+          "Scalper": 846,
+          "Whale": 3239,
+          "Value": 438,
+          "Protective": 1344,
+          "Momentum": 2691
+        }
+      },
+      "BG": {
+        "MedianSpread": 1,
+        "OneTickMinutes": 11,
+        "Up": 42,
+        "RangeTicks": 10,
+        "Minutes": 26,
+        "MaxSpread": 2,
+        "MeanMinuteRange": 1.884615384616644,
+        "Trades": 4451,
+        "NoQuote": 0,
+        "P95Spread": 1,
+        "Volume": 8326,
+        "MidpointRangeTicks": 9,
+        "Down": 45,
+        "ByAggressor": {
+          "Scalper": 747,
+          "Whale": 3909,
+          "Value": 313,
+          "Momentum": 1874,
+          "Protective": 1483
+        }
+      }
+    },
+    "Depleted": 0
+  },
+  "candidate20261021": {
+    "Seconds": 1800,
+    "Seed": 20261021,
+    "Audit": true,
+    "MeasuredSeconds": 1500,
+    "Markets": {
+      "BT": {
+        "MedianSpread": 1,
+        "OneTickMinutes": 4,
+        "Up": 145,
+        "RangeTicks": 45,
+        "Minutes": 26,
+        "MaxSpread": 3,
+        "MeanMinuteRange": 3.3461538461538463,
+        "Trades": 7854,
+        "NoQuote": 0,
+        "P95Spread": 2,
+        "Volume": 10782,
+        "MidpointRangeTicks": 44,
+        "Down": 94,
+        "ByAggressor": {
+          "Scalper": 541,
+          "Whale": 5399,
+          "Value": 1227,
+          "Momentum": 2607,
+          "Protective": 1008
+        }
+      },
+      "BX": {
+        "MedianSpread": 1,
+        "OneTickMinutes": 4,
+        "Up": 120,
+        "RangeTicks": 21,
+        "Minutes": 25,
+        "MaxSpread": 3,
+        "MeanMinuteRange": 2.96,
+        "Trades": 8009,
+        "NoQuote": 0,
+        "P95Spread": 2,
+        "Volume": 13046,
+        "MidpointRangeTicks": 20,
+        "Down": 143,
+        "ByAggressor": {
+          "Scalper": 894,
+          "Whale": 7213,
+          "Value": 401,
+          "Reversion": 14,
+          "Protective": 1185,
+          "Momentum": 3339
+        }
+      },
+      "BG": {
+        "MedianSpread": 1,
+        "OneTickMinutes": 4,
+        "Up": 128,
+        "RangeTicks": 41,
+        "Minutes": 25,
+        "MaxSpread": 3,
+        "MeanMinuteRange": 4.280000000000473,
+        "Trades": 8301,
+        "NoQuote": 0,
+        "P95Spread": 2,
+        "Volume": 13294,
+        "MidpointRangeTicks": 40,
+        "Down": 124,
+        "ByAggressor": {
+          "Scalper": 796,
+          "Whale": 7683,
+          "Reversion": 9,
+          "Value": 490,
+          "Liquidity": 23,
+          "Protective": 1216,
+          "Momentum": 3077
+        }
+      }
+    },
+    "Depleted": 0
+  },
+  "candidate73": {
+    "Seconds": 1800,
+    "Seed": 73,
+    "Audit": true,
+    "MeasuredSeconds": 1500,
+    "Markets": {
+      "BT": {
+        "MedianSpread": 1,
+        "OneTickMinutes": 1,
+        "Up": 155,
+        "RangeTicks": 26,
+        "Minutes": 25,
+        "MaxSpread": 3,
+        "MeanMinuteRange": 3.04,
+        "Trades": 7687,
+        "NoQuote": 0,
+        "P95Spread": 2,
+        "Volume": 11841,
+        "MidpointRangeTicks": 25.5,
+        "Down": 132,
+        "ByAggressor": {
+          "Scalper": 518,
+          "Whale": 6883,
+          "Value": 1194,
+          "Protective": 646,
+          "Momentum": 2600
+        }
+      },
+      "BX": {
+        "MedianSpread": 1,
+        "OneTickMinutes": 2,
+        "Up": 143,
+        "RangeTicks": 26,
+        "Minutes": 26,
+        "MaxSpread": 3,
+        "MeanMinuteRange": 2.8846153846153846,
+        "Trades": 7678,
+        "NoQuote": 0,
+        "P95Spread": 2,
+        "Volume": 13729,
+        "MidpointRangeTicks": 25,
+        "Down": 101,
+        "ByAggressor": {
+          "Scalper": 840,
+          "Whale": 8086,
+          "Value": 500,
+          "Protective": 1194,
+          "Momentum": 3109
+        }
+      },
+      "BG": {
+        "MedianSpread": 1,
+        "OneTickMinutes": 6,
+        "Up": 116,
+        "RangeTicks": 20,
+        "Minutes": 25,
+        "MaxSpread": 3,
+        "MeanMinuteRange": 2.719999999999345,
+        "Trades": 7544,
+        "NoQuote": 0,
+        "P95Spread": 2,
+        "Volume": 13030,
+        "MidpointRangeTicks": 19.000000000007276,
+        "Down": 100,
+        "ByAggressor": {
+          "Scalper": 931,
+          "Whale": 7424,
+          "Value": 428,
+          "Protective": 1293,
+          "Momentum": 2954
+        }
+      }
+    },
+    "Depleted": 0
+  },
+  "stress": {
+    "Markets": {
+      "BT": {
+        "Trades": 34052,
+        "NoQuote": 0,
+        "Minutes": 115,
+        "MaxSpread": 3,
+        "RangeTicks": 56,
+        "OneTickMinutes": 14,
+        "Volume": 52041,
+        "MeanMinuteRange": 3.0695652173913044
+      },
+      "BX": {
+        "Trades": 35490,
+        "NoQuote": 0,
+        "Minutes": 116,
+        "MaxSpread": 3,
+        "RangeTicks": 54,
+        "OneTickMinutes": 22,
+        "Volume": 60423,
+        "MeanMinuteRange": 2.7844827586206895
+      },
+      "BG": {
+        "Trades": 35927,
+        "NoQuote": 0,
+        "Minutes": 115,
+        "MaxSpread": 3,
+        "RangeTicks": 47,
+        "OneTickMinutes": 19,
+        "Volume": 60504,
+        "MeanMinuteRange": 2.9652173913041424
+      }
+    },
+    "SimSeconds": 7200,
+    "Seed": 591,
+    "Audit": true,
+    "Done": true,
+    "Depleted": 0
+  },
+  "correctedTests": [
+    {
+      "Loaded": true,
+      "Suite": "BotOrderFlowTests",
+      "Results": [
+        {
+          "Passed": true,
+          "Name": "Independent goals persist through actual buys and sells without funding bots",
+          "Detail": "nil"
+        },
+        {
+          "Passed": true,
+          "Name": "An empty book cannot move price, manufacture fills or consume an objective",
+          "Detail": "nil"
+        },
+        {
+          "Passed": true,
+          "Name": "Partial child orders count fills only and cancel their unfilled remainder",
+          "Detail": "nil"
+        },
+        {
+          "Passed": true,
+          "Name": "Slices respect the price cap and cannot jump to distant liquidity",
+          "Detail": "nil"
+        },
+        {
+          "Passed": true,
+          "Name": "Goals respect funded inventory limits and close before reversing",
+          "Detail": "nil"
+        },
+        {
+          "Passed": true,
+          "Name": "Locked, liquidating and triggered accounts do not submit new pressure",
+          "Detail": "nil"
+        },
+        {
+          "Passed": true,
+          "Name": "Expired goals pause and drawdown protection only reduces exposure",
+          "Detail": "nil"
+        },
+        {
+          "Passed": true,
+          "Name": "Strategy adoption preserves inventory, funding and reduce-only exits",
+          "Detail": "nil"
+        },
+        {
+          "Passed": true,
+          "Name": "V23 migration preserves accounts and tape; goals continue exactly through serialization",
+          "Detail": "nil"
+        },
+        {
+          "Passed": true,
+          "Name": "Legacy configurations without funded population policy keep their existing strategy",
+          "Detail": "nil"
+        },
+        {
+          "Passed": true,
+          "Name": "Consumed reserve quotes wait before refilling their slot",
+          "Detail": "nil"
+        }
+      ]
+    },
+    {
+      "Loaded": true,
+      "Suite": "MakerLiquidityTests",
+      "Results": [
+        {
+          "Passed": true,
+          "Name": "Larger real quotes fill a 143-contract market order in both directions",
+          "Detail": [
+            {
+              "Before": 57,
+              "Direction": 1,
+              "After": 143
+            },
+            {
+              "Before": 57,
+              "Direction": -1,
+              "After": 143
+            }
+          ]
+        },
+        {
+          "Passed": true,
+          "Name": "Consumed quotes replenish after a short delay; partial quotes retain priority",
+          "Detail": "3-second refill delay; existing partial quote preserved"
+        },
+        {
+          "Passed": true,
+          "Name": "Larger quotes fit available inventory and capital without resetting balances",
+          "Detail": "Quotes capped at five per side; no quotes with zero buying power"
+        },
+        {
+          "Passed": true,
+          "Name": "Thin liquidity regimes retain smaller finite depth",
+          "Detail": "Stress still reduces size and depth"
+        },
+        {
+          "Passed": true,
+          "Name": "Old worlds adopt tuning without altering accounts, tape or resting orders during restore",
+          "Detail": "Restore preserves history and accounts; makers adopt the policy on their next turn; replay remains exact"
+        }
+      ]
+    },
+    {
+      "Loaded": true,
+      "Suite": "DepthRealismTests",
+      "Results": [
+        {
+          "Passed": true,
+          "Name": "Production reserve quotes vary by instrument and occupy configured outer levels",
+          "Detail": {
+            "BT": {
+              "Bids": [
+                45,
+                50,
+                59,
+                68,
+                78
+              ],
+              "Asks": [
+                48,
+                55,
+                59,
+                66,
+                74
+              ]
+            },
+            "BX": {
+              "Bids": [
+                204,
+                252,
+                271,
+                308,
+                298
+              ],
+              "Asks": [
+                207,
+                243,
+                279,
+                303,
+                345
+              ]
+            },
+            "BG": {
+              "Bids": [
+                45,
+                50,
+                59,
+                69,
+                74
+              ],
+              "Asks": [
+                46,
+                50,
+                61,
+                74,
+                84
+              ]
+            }
+          }
+        },
+        {
+          "Passed": true,
+          "Name": "Cancelling and resubmitting cannot drain smaller production books",
+          "Detail": {
+            "BT": {
+              "RemainingContracts": 272,
+              "FilledAcross100Clicks": 30,
+              "InitialContracts": 302
+            },
+            "BX": {
+              "RemainingContracts": 1240,
+              "FilledAcross100Clicks": 137,
+              "InitialContracts": 1377
+            },
+            "BG": {
+              "RemainingContracts": 284,
+              "FilledAcross100Clicks": 31,
+              "InitialContracts": 315
+            }
+          }
+        },
+        {
+          "Passed": true,
+          "Name": "Thirty-two waiting players share the smaller production allowance",
+          "Detail": "All 32 players receive fills without exhausting displayed depth"
+        },
+        {
+          "Passed": true,
+          "Name": "Small quotes replenish through new finite orders after consumption",
+          "Detail": "Consumed quotes are replaced with small real orders; large capital stays off the displayed book"
+        },
+        {
+          "Passed": true,
+          "Name": "Old enormous quotes are withdrawn on restore without resetting positions or balances",
+          "Detail": "Balances, existing positions, player orders and trade history preserved; obsolete bot walls removed once"
+        },
+        {
+          "Passed": true,
+          "Name": "Actual production simulation remains finite, varied and deterministic",
+          "Detail": [
+            {
+              "Depth": {
+                "BT": {
+                  "Total": 101040,
+                  "Mean": 252.6,
+                  "Max": 694,
+                  "Empty": 0,
+                  "Samples": 400
+                },
+                "BX": {
+                  "Total": 166616,
+                  "Mean": 416.5,
+                  "Max": 929,
+                  "Empty": 0,
+                  "Samples": 400
+                },
+                "BG": {
+                  "Total": 131470,
+                  "Mean": 328.6,
+                  "Max": 913,
+                  "Empty": 0,
+                  "Samples": 400
+                }
+              },
+              "Seed": 4141
+            },
+            {
+              "Depth": {
+                "BT": {
+                  "Total": 92665,
+                  "Mean": 231.6,
+                  "Max": 631,
+                  "Empty": 0,
+                  "Samples": 400
+                },
+                "BX": {
+                  "Total": 145716,
+                  "Mean": 364.2,
+                  "Max": 870,
+                  "Empty": 0,
+                  "Samples": 400
+                },
+                "BG": {
+                  "Total": 108395,
+                  "Mean": 270.9,
+                  "Max": 740,
+                  "Empty": 0,
+                  "Samples": 400
+                }
+              },
+              "Seed": 73521
+            },
+            {
+              "Depth": {
+                "BT": {
+                  "Total": 83566,
+                  "Mean": 208.9,
+                  "Max": 622,
+                  "Empty": 0,
+                  "Samples": 400
+                },
+                "BX": {
+                  "Total": 152925,
+                  "Mean": 382.3,
+                  "Max": 1016,
+                  "Empty": 0,
+                  "Samples": 400
+                },
+                "BG": {
+                  "Total": 120544,
+                  "Mean": 301.3,
+                  "Max": 828,
+                  "Empty": 0,
+                  "Samples": 400
+                }
+              },
+              "Seed": 90871
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Loaded": true,
+      "Suite": "BotPopulationTests",
+      "Results": [
+        {
+          "Passed": true,
+          "Name": "Exact capital, counts, styles, diversity and reproducibility",
+          "Detail": "Three seeds: 1170 bots, $612M, 36/36 scalpers per market; independent reproducible schedules"
+        },
+        {
+          "Passed": true,
+          "Name": "Sizing reserves pending orders and reduces unaffordable requests",
+          "Detail": "Downsizes to 2 then 1 with a pending entry; zero capacity sends no order"
+        },
+        {
+          "Passed": true,
+          "Name": "Value observations follow elapsed time with noisy independent estimates",
+          "Detail": "Half-life updates on observation clocks; no future data or forced prices"
+        },
+        {
+          "Passed": true,
+          "Name": "Scalpers reject flat/noisy signals but can size down a qualified entry",
+          "Detail": "Flat tape cannot trigger an entry; qualified two-contract request fits one contract"
+        },
+        {
+          "Passed": true,
+          "Name": "Migration retains players, positions, exits and P&L; records funding; resumes exactly",
+          "Detail": "V14→V23 migration is pure on input, no trades on restore, idempotent funding and exact replay"
+        },
+        {
+          "Passed": true,
+          "Name": "Surplus bots retire with obligations; oversized reserve reduces through matching",
+          "Detail": "Surplus accounts preserved; no fake fills; reserve closes exactly excess inventory"
+        },
+        {
+          "Passed": true,
+          "Name": "Duplicate agents and unsupported policy downgrade fail closed",
+          "Detail": "No duplicate population or unrecognized policy accepted"
+        }
+      ]
+    }
+  ],
+  "regressionTests": [
+    {
+      "Loaded": true,
+      "Suite": "MakerLiquidityTests",
+      "Results": [
+        {
+          "Passed": true,
+          "Name": "Larger real quotes fill a 143-contract market order in both directions",
+          "Detail": [
+            {
+              "Before": 57,
+              "Direction": 1,
+              "After": 143
+            },
+            {
+              "Before": 57,
+              "Direction": -1,
+              "After": 143
+            }
+          ]
+        },
+        {
+          "Passed": true,
+          "Name": "Consumed quotes replenish after a short delay; partial quotes retain priority",
+          "Detail": "1.5-second refill delay; existing partial quote preserved"
+        },
+        {
+          "Passed": true,
+          "Name": "Larger quotes fit available inventory and capital without resetting balances",
+          "Detail": "Quotes capped at five per side; no quotes with zero buying power"
+        },
+        {
+          "Passed": true,
+          "Name": "Thin liquidity regimes retain smaller finite depth",
+          "Detail": "Stress still reduces size and depth"
+        },
+        {
+          "Passed": false,
+          "Name": "Old worlds adopt tuning without altering accounts, tape or resting orders during restore",
+          "Detail": "ServerStorage.OrderPressurePreview.MakerLiquidityTests:93: assertion failed!"
+        }
+      ]
+    },
+    {
+      "Loaded": true,
+      "Suite": "DepthRealismTests",
+      "Results": [
+        {
+          "Passed": false,
+          "Name": "Production reserve quotes vary by instrument and occupy consecutive ticks",
+          "Detail": "ServerStorage.OrderPressurePreview.DepthRealismTests:28: Reserve ladder skipped ticks"
+        },
+        {
+          "Passed": true,
+          "Name": "Cancelling and resubmitting cannot drain smaller production books",
+          "Detail": {
+            "BT": {
+              "RemainingContracts": 272,
+              "FilledAcross100Clicks": 30,
+              "InitialContracts": 302
+            },
+            "BX": {
+              "RemainingContracts": 1240,
+              "FilledAcross100Clicks": 137,
+              "InitialContracts": 1377
+            },
+            "BG": {
+              "RemainingContracts": 284,
+              "FilledAcross100Clicks": 31,
+              "InitialContracts": 315
+            }
+          }
+        },
+        {
+          "Passed": true,
+          "Name": "Thirty-two waiting players share the smaller production allowance",
+          "Detail": "All 32 players receive fills without exhausting displayed depth"
+        },
+        {
+          "Passed": false,
+          "Name": "Small quotes replenish through new finite orders after consumption",
+          "Detail": "ServerStorage.OrderPressurePreview.DepthRealismTests:74: assertion failed!"
+        },
+        {
+          "Passed": true,
+          "Name": "Old enormous quotes are withdrawn on restore without resetting positions or balances",
+          "Detail": "Balances, existing positions, player orders and trade history preserved; obsolete bot walls removed once"
+        },
+        {
+          "Passed": true,
+          "Name": "Actual production simulation remains finite, varied and deterministic",
+          "Detail": [
+            {
+              "Depth": {
+                "BT": {
+                  "Total": 101040,
+                  "Mean": 252.6,
+                  "Max": 694,
+                  "Empty": 0,
+                  "Samples": 400
+                },
+                "BX": {
+                  "Total": 166616,
+                  "Mean": 416.5,
+                  "Max": 929,
+                  "Empty": 0,
+                  "Samples": 400
+                },
+                "BG": {
+                  "Total": 131470,
+                  "Mean": 328.6,
+                  "Max": 913,
+                  "Empty": 0,
+                  "Samples": 400
+                }
+              },
+              "Seed": 4141
+            },
+            {
+              "Depth": {
+                "BT": {
+                  "Total": 92665,
+                  "Mean": 231.6,
+                  "Max": 631,
+                  "Empty": 0,
+                  "Samples": 400
+                },
+                "BX": {
+                  "Total": 145716,
+                  "Mean": 364.2,
+                  "Max": 870,
+                  "Empty": 0,
+                  "Samples": 400
+                },
+                "BG": {
+                  "Total": 108395,
+                  "Mean": 270.9,
+                  "Max": 740,
+                  "Empty": 0,
+                  "Samples": 400
+                }
+              },
+              "Seed": 73521
+            },
+            {
+              "Depth": {
+                "BT": {
+                  "Total": 83566,
+                  "Mean": 208.9,
+                  "Max": 622,
+                  "Empty": 0,
+                  "Samples": 400
+                },
+                "BX": {
+                  "Total": 152925,
+                  "Mean": 382.3,
+                  "Max": 1016,
+                  "Empty": 0,
+                  "Samples": 400
+                },
+                "BG": {
+                  "Total": 120544,
+                  "Mean": 301.3,
+                  "Max": 828,
+                  "Empty": 0,
+                  "Samples": 400
+                }
+              },
+              "Seed": 90871
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Loaded": true,
+      "Suite": "BotFairnessTests",
+      "Results": [
+        {
+          "Passed": true,
+          "Name": "Liquidity quotes passively, retains FIFO and cannot reverse through an exit",
+          "Detail": "Entries do not pay the spread; existing quotes keep priority; inventory exits are reduce-only"
+        },
+        {
+          "Passed": true,
+          "Name": "Liquidity pauses before depletion and waits for real exit liquidity",
+          "Detail": "Underfunded bots reduce to flat and stay paused; only explicit restored equity permits new risk"
+        },
+        {
+          "Passed": true,
+          "Name": "Paused liquidity preserves a triggered protective exit and its priority",
+          "Detail": "Pausing cancels entry risk without cancelling or reprioritizing a pending protective exit"
+        },
+        {
+          "Passed": true,
+          "Name": "Legacy liquidity inventory receives stops without widening existing protection",
+          "Detail": "Legacy positions gain bounded protection on a decision; tighter stops survive"
+        },
+        {
+          "Passed": true,
+          "Name": "Bot scale-ins and partial fills never loosen stops in either direction",
+          "Detail": "Long and short averaging-down preserves the original stop"
+        },
+        {
+          "Passed": true,
+          "Name": "Makers withdraw stale execution-price risk before minimum rest and never take liquidity",
+          "Detail": "Materially stale quotes cancel immediately; replacements remain passive"
+        },
+        {
+          "Passed": true,
+          "Name": "Public time-weighted signal cannot see hidden fair value",
+          "Detail": "Duration weighting is exact; hidden generator changes cannot change reversal decisions"
+        },
+        {
+          "Passed": true,
+          "Name": "V19 upgrade preserves economic state and current format resumes deterministically",
+          "Detail": "No funding or trades at migration; exact replay retains quotes, stops, signal history and RNG"
+        },
+        {
+          "Passed": true,
+          "Name": "Earlier liquidity policies acquire new sizing settings without funding; version bump leaves fresh trading identical",
+          "Detail": "V1 acquires V2 fields with no balance change; version-only changes produce identical trades and RNG"
+        }
+      ]
+    },
+    {
+      "Loaded": true,
+      "Suite": "BotExitRetryTests",
+      "Results": [
+        {
+          "Passed": true,
+          "Name": "55 blocked exits behind a 13000-contract bid create no repeated orders or full-book scans",
+          "Detail": "Passed"
+        },
+        {
+          "Passed": true,
+          "Name": "New executable quote wakes a blocked exit and fills only available contracts",
+          "Detail": "Passed"
+        },
+        {
+          "Passed": true,
+          "Name": "Fair-value change wakes eligible player liquidity before retry deadline",
+          "Detail": "Passed"
+        },
+        {
+          "Passed": true,
+          "Name": "Blocked retry state survives checkpoint round trip and resumes identically",
+          "Detail": "Passed"
+        },
+        {
+          "Passed": true,
+          "Name": "Bot risk repair does not submit a second exit while a stop owns the position",
+          "Detail": "Passed"
+        },
+        {
+          "Passed": true,
+          "Name": "Timed scalper exits reuse retry controls while the only ask is blocked",
+          "Detail": "Passed"
+        },
+        {
+          "Passed": true,
+          "Name": "Bot take-profit limits still rest without opposing liquidity",
+          "Detail": "Passed"
+        },
+        {
+          "Passed": true,
+          "Name": "Guard-blocked bot target retains one queued order and recovers without reversing",
+          "Detail": "Passed"
+        },
+        {
+          "Passed": true,
+          "Name": "Time budget yields after atomic steps and carries every unprocessed step",
+          "Detail": "Passed"
+        },
+        {
+          "Passed": true,
+          "Name": "One slow atomic step cannot trigger a 32-step catch-up batch",
+          "Detail": "Passed"
+        },
+        {
+          "Passed": true,
+          "Name": "Unavailable exchange preserves backlog and never reports a completed step",
+          "Detail": "Passed"
+        },
+        {
+          "Passed": true,
+          "Name": "Partial tick and maximum catch-up limits remain intact",
+          "Detail": "Passed"
+        }
+      ]
+    },
+    {
+      "Loaded": true,
+      "Suite": "BotPopulationTests",
+      "Results": [
+        {
+          "Passed": true,
+          "Name": "Exact capital, counts, styles, diversity and reproducibility",
+          "Detail": "Three seeds: 1170 bots, $612M, 36/36 scalpers per market; independent reproducible schedules"
+        },
+        {
+          "Passed": true,
+          "Name": "Sizing reserves pending orders and reduces unaffordable requests",
+          "Detail": "Downsizes to 2 then 1 with a pending entry; zero capacity sends no order"
+        },
+        {
+          "Passed": true,
+          "Name": "Value observations follow elapsed time with noisy independent estimates",
+          "Detail": "Half-life updates on observation clocks; no future data or forced prices"
+        },
+        {
+          "Passed": true,
+          "Name": "Scalpers reject flat/noisy signals but can size down a qualified entry",
+          "Detail": "Flat tape cannot trigger an entry; qualified two-contract request fits one contract"
+        },
+        {
+          "Passed": false,
+          "Name": "Migration retains players, positions, exits and P&L; records funding; resumes exactly",
+          "Detail": "ServerStorage.OrderPressurePreview.BotOrderFlow:35: attempt to index nil with 'MarginFraction'"
+        },
+        {
+          "Passed": true,
+          "Name": "Surplus bots retire with obligations; oversized reserve reduces through matching",
+          "Detail": "Surplus accounts preserved; no fake fills; reserve closes exactly excess inventory"
+        },
+        {
+          "Passed": true,
+          "Name": "Duplicate agents and unsupported policy downgrade fail closed",
+          "Detail": "No duplicate population or unrecognized policy accepted"
+        }
+      ]
+    },
+    {
+      "Loaded": true,
+      "Suite": "BotRefreshTests",
+      "Results": [
+        {
+          "Passed": true,
+          "Name": "Open long and short winners/losers reset to allocation; flat-price closes earn zero",
+          "Detail": "Passed"
+        },
+        {
+          "Passed": true,
+          "Name": "Partial closes release only post-refresh P&L, including after checkpoint restore",
+          "Detail": "Passed"
+        },
+        {
+          "Passed": true,
+          "Name": "A partially filled entry keeps its order and averages the new accounting basis",
+          "Detail": "Passed"
+        },
+        {
+          "Passed": true,
+          "Name": "Scaling and reversal use independent cost bases without leaking old unrealized P&L",
+          "Detail": "Passed"
+        },
+        {
+          "Passed": true,
+          "Name": "Working protections, stops, queued exits and retry deadlines retain identity and priority",
+          "Detail": "Passed"
+        },
+        {
+          "Passed": true,
+          "Name": "Negative equity is recapitalized without dropping pending liquidation exposure",
+          "Detail": "Passed"
+        },
+        {
+          "Passed": true,
+          "Name": "Retiring bots and closed markets receive no funding; players and clearing excluded",
+          "Detail": "Passed"
+        },
+        {
+          "Passed": true,
+          "Name": "Repeat receipts are idempotent forever; deliberate later refresh creates a new baseline",
+          "Detail": "Passed"
+        },
+        {
+          "Passed": true,
+          "Name": "Invalid allocation fails before touching any bot or market",
+          "Detail": "Passed"
+        },
+        {
+          "Passed": true,
+          "Name": "Owner-only parsing and queued boundary reject unauthorized and duplicate callbacks",
+          "Detail": "Passed"
+        },
+        {
+          "Passed": true,
+          "Name": "Group ownership fails closed and an unavailable world never queues a refresh",
+          "Detail": "Passed"
+        },
+        {
+          "Passed": true,
+          "Name": "Queued chat applies at one scheduler boundary and holds the step until saving finishes",
+          "Detail": "Passed"
+        },
+        {
+          "Passed": true,
+          "Name": "Durable commit is atomic, excludes overlaps, preserves live identity and restores exactly",
+          "Detail": "Passed"
+        },
+        {
+          "Passed": true,
+          "Name": "Encode rejection leaves the original world untouched and runnable",
+          "Detail": "Passed"
+        },
+        {
+          "Passed": true,
+          "Name": "Failed or ambiguous saves pause, reload the durable outcome and never double-apply",
+          "Detail": "Passed"
+        }
+      ]
+    },
+    {
+      "Loaded": true,
+      "Suite": "ProtectionScaleTests",
+      "Results": [
+        {
+          "Passed": false,
+          "Name": "BX 1: protections survive adds, partial fills and reductions; reversal gets new levels",
+          "Detail": "ServerStorage.OrderPressurePreview.ProtectionScaleTests:16: assertion failed!"
+        },
+        {
+          "Passed": false,
+          "Name": "BX -1: protections survive adds, partial fills and reductions; reversal gets new levels",
+          "Detail": "ServerStorage.OrderPressurePreview.ProtectionScaleTests:16: assertion failed!"
+        },
+        {
+          "Passed": false,
+          "Name": "BT 1: protections survive adds, partial fills and reductions; reversal gets new levels",
+          "Detail": "ServerStorage.OrderPressurePreview.ProtectionScaleTests:16: assertion failed!"
+        },
+        {
+          "Passed": false,
+          "Name": "BT -1: protections survive adds, partial fills and reductions; reversal gets new levels",
+          "Detail": "ServerStorage.OrderPressurePreview.ProtectionScaleTests:16: assertion failed!"
+        },
+        {
+          "Passed": false,
+          "Name": "BG 1: protections survive adds, partial fills and reductions; reversal gets new levels",
+          "Detail": "ServerStorage.OrderPressurePreview.ProtectionScaleTests:16: assertion failed!"
+        },
+        {
+          "Passed": false,
+          "Name": "BG -1: protections survive adds, partial fills and reductions; reversal gets new levels",
+          "Detail": "ServerStorage.OrderPressurePreview.ProtectionScaleTests:16: assertion failed!"
+        },
+        {
+          "Passed": true,
+          "Name": "Entry-label replacement rejects stale quantity and stale price atomically",
+          "Detail": "Passed"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "totalUniqueChecks": 118,
+    "passedAfterCorrections": 112,
+    "preExistingFailures": 6,
+    "preExistingFailureSuite": "ProtectionScaleTests",
+    "preExistingFailureLine": 16,
+    "unchangedFailureReproducedAgainstOriginal": true
+  },
+  "notes": [
+    "All measurements use isolated fresh simulations, not the user's persistent world.",
+    "Initial aggressive calibration rejected; reported candidate is the revised conservative tuning.",
+    "Bot funding, population counts and matching engine unchanged.",
+    "Regression raw results include initial failures; correctedTests supersedes overlapping suites.",
+    "Original six ProtectionScaleTests failures reproduced on untouched game and left unchanged."
+  ]
+}

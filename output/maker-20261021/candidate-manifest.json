@@ -1,0 +1,13 @@
+{
+  "BotMaker.luau": "ede86010dc9e55dcc39c0c262dace3b3451cf095b41eb4efa2e900a57fe68e05",
+  "BotMakerTests.luau": "68f03e9c4f830040b1057f627700d83d52fc0d39e16ca917086d3900fb77431b",
+  "BotOrderFlowTests.luau": "5dad7aaf39a84d8100b782008c9b701b40839ff2fdcf38ea273c3717f16f33a1",
+  "BotParticipationTests.luau": "15e9d00b650797b96d43ccfa07d8a496ba52549c59ecd3ef5bba9f9cbc1ff5c4",
+  "BotRefreshTests.luau": "bebc5d2da58d771211df0f5db6728d040dd7ff0fcc7caf7a68819f8b67c4e517",
+  "BotWhaleTests.luau": "111f1fd83dd27def77f0962b4cce8e2765e5630334628dd33e367f7162378185",
+  "MakerLiquidityTests.luau": "bd03b0dd622f2cfcc9666e106aad981b7f7e8671d27cf67b70c1b4f7aa7cee27",
+  "MarketConfig.luau": "4265453f09fcfd4937541dc94c51e8e513cdd644f9ea7e980821485954c51e89",
+  "OrderFlowMarketTests.luau": "2c512ef77f086fe3fc85e315af67176a327bad85b0ad30e55ca2bf25d2bea923",
+  "Participants.luau": "adf925eb83d7eefe8ff5590280691bb461c87c36f77ae5f624e233731af2f902",
+  "WorldCheckpoint.luau": "a6cfa993542ce7fc96a385f172c38d09c004a65003ea946d1cad8d5626637534"
+}

@@ -1,0 +1,13 @@
+{
+  "Basis": "Existing no-skew/sparse/Whale control removes Maker reservation displacement but misses pullbacks and useful movement. Prior Reversion waits for turn/slowing. Test proactive heterogeneous stretch fades and independent portfolio demand using existing funded groups, separately then crossed.",
+  "Variants": {
+    "control": "Previous no-skew-sparse-whale mechanism unchanged; experimental CP30 barrier only",
+    "stretch": "Reversion accounts adopt public-window stretch fades before turn, with finite staged entry, risk cap, staggered horizons and profit/time exits",
+    "portfolio": "Value accounts adopt independent signed finite portfolio mandates with staged entry and time exits; no shared direction or last-price signal",
+    "mixed": "Both independently tested styles on the same book",
+    "mixed-wide": "Same combination but broader countertrend horizons"
+  },
+  "Funding": "All existing bot identities, a.Kind, allocations, cash, limits and population counts preserved. Behavioral subtypes use dedicated saved state; no added accounts or capital.",
+  "Safety": "Exact replay each run; restore preserves Engine/Population. News off. Stops, pauses and manual protections retain authority.",
+  "Gates": "Unchanged from prior investigation; unused holdouts not opened."
+}

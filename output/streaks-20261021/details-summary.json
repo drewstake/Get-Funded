@@ -1,0 +1,131 @@
+{
+  "Cases": [
+    "CurrentLater",
+    "Seed907"
+  ],
+  "MatchesOriginalExecution": true,
+  "Aggregate": {
+    "Baseline": {
+      "OneSecondRV": 0.2770492133662773,
+      "OneSecondMidpointRV": 0.11017746574490883,
+      "FifteenSecondRV": 0.1436627478428331,
+      "FifteenSecondMidpointRV": 0.1307930580944044
+    },
+    "Candidate": {
+      "OneSecondRV": 0.3627951236498944,
+      "OneSecondMidpointRV": 0.13026808169644338,
+      "FifteenSecondRV": 0.17992869841373765,
+      "FifteenSecondMidpointRV": 0.16264131459124523
+    }
+  },
+  "Rows": [
+    {
+      "Case": "CurrentLater",
+      "Arm": "Baseline",
+      "Market": "BG",
+      "OneSecondRV": 0.3789394105370492,
+      "OneSecondMidpointRV": 0.142676647424529,
+      "FifteenSecondRV": 0.2224854534043264,
+      "FifteenSecondMidpointRV": 0.2071478318832943
+    },
+    {
+      "Case": "CurrentLater",
+      "Arm": "Baseline",
+      "Market": "BT",
+      "OneSecondRV": 0.13695562721142088,
+      "OneSecondMidpointRV": 0.06970307173262807,
+      "FifteenSecondRV": 0.0872029101607461,
+      "FifteenSecondMidpointRV": 0.0857483856492713
+    },
+    {
+      "Case": "CurrentLater",
+      "Arm": "Baseline",
+      "Market": "BX",
+      "OneSecondRV": 0.34559639344459653,
+      "OneSecondMidpointRV": 0.13149695887915483,
+      "FifteenSecondRV": 0.19163402016369643,
+      "FifteenSecondMidpointRV": 0.17587852605230594
+    },
+    {
+      "Case": "CurrentLater",
+      "Arm": "Candidate",
+      "Market": "BG",
+      "OneSecondRV": 0.5229770763103451,
+      "OneSecondMidpointRV": 0.1803356851258452,
+      "FifteenSecondRV": 0.2677594316019775,
+      "FifteenSecondMidpointRV": 0.2430165366284296
+    },
+    {
+      "Case": "CurrentLater",
+      "Arm": "Candidate",
+      "Market": "BT",
+      "OneSecondRV": 0.21071597431424563,
+      "OneSecondMidpointRV": 0.10787789834331893,
+      "FifteenSecondRV": 0.09795527641690877,
+      "FifteenSecondMidpointRV": 0.09658708605894412
+    },
+    {
+      "Case": "CurrentLater",
+      "Arm": "Candidate",
+      "Market": "BX",
+      "OneSecondRV": 0.5876199170663182,
+      "OneSecondMidpointRV": 0.19621842494763625,
+      "FifteenSecondRV": 0.28490025692787485,
+      "FifteenSecondMidpointRV": 0.2653703954478088
+    },
+    {
+      "Case": "Seed907",
+      "Arm": "Baseline",
+      "Market": "BG",
+      "OneSecondRV": 0.2825339818516821,
+      "OneSecondMidpointRV": 0.10897750881672982,
+      "FifteenSecondRV": 0.13422285559749017,
+      "FifteenSecondMidpointRV": 0.11675313262798376
+    },
+    {
+      "Case": "Seed907",
+      "Arm": "Baseline",
+      "Market": "BT",
+      "OneSecondRV": 0.25465470901675435,
+      "OneSecondMidpointRV": 0.10934218580790413,
+      "FifteenSecondRV": 0.08730683086046268,
+      "FifteenSecondMidpointRV": 0.07382608738405469
+    },
+    {
+      "Case": "Seed907",
+      "Arm": "Baseline",
+      "Market": "BX",
+      "OneSecondRV": 0.26361515813616077,
+      "OneSecondMidpointRV": 0.09886842180850716,
+      "FifteenSecondRV": 0.1391244168702768,
+      "FifteenSecondMidpointRV": 0.12540438496951636
+    },
+    {
+      "Case": "Seed907",
+      "Arm": "Candidate",
+      "Market": "BG",
+      "OneSecondRV": 0.3434761108715893,
+      "OneSecondMidpointRV": 0.10240485121732675,
+      "FifteenSecondRV": 0.15868582095521405,
+      "FifteenSecondMidpointRV": 0.13239779283709302
+    },
+    {
+      "Case": "Seed907",
+      "Arm": "Candidate",
+      "Market": "BT",
+      "OneSecondRV": 0.19052401968766708,
+      "OneSecondMidpointRV": 0.11040514420967112,
+      "FifteenSecondRV": 0.14371886892726166,
+      "FifteenSecondMidpointRV": 0.1420749507182027
+    },
+    {
+      "Case": "Seed907",
+      "Arm": "Candidate",
+      "Market": "BX",
+      "OneSecondRV": 0.3214576436492011,
+      "OneSecondMidpointRV": 0.08436648633486202,
+      "FifteenSecondRV": 0.12655253565318916,
+      "FifteenSecondMidpointRV": 0.09640112585699318
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "Installed": {
+    "Checkpoint": 28,
+    "Momentum": 2,
+    "Whale": 1,
+    "Maker": 8,
+    "Manifest": "candidate-manifest.json",
+    "Gate": "v2-installation-gates.json"
+  },
+  "RejectedProfileCorrection": {
+    "Momentum": 3,
+    "Gate": "installation-gates-v3-extended.json",
+    "Reason": "Cross-case pullback consistency failed",
+    "KnownInstalledLimitation": "Some fast Momentum profiles have Confirmation >= Horizon and cannot enter"
+  },
+  "Published": false,
+  "FinalReadback": "source-readback-final.json",
+  "LiveVerification": "live-verification-followup.json"
+}

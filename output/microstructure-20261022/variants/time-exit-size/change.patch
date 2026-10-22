@@ -1,0 +1,21 @@
+--- original/BotMomentum.luau
++++ time-exit-size/BotMomentum.luau
+@@ -150,6 +150,7 @@
+  -- An entry mandate may never reverse an inherited position.
+  if pos and side~=pos.Direction then reducing=true end
+  local size=math.min(math.abs(delta),math.max(1,math.floor(a.Size*range(s,c.SliceFraction))))
++ if reducing and s.ExitReason=='Time'then size=math.min(math.abs(delta),a.Size)end
+  if reducing then size=math.min(size,pos.Quantity);cancelEntries(e,a)
+  else
+   local due=math.ceil(math.abs(s.Target)*math.clamp((e.Time-s.StartedAt+c.SliceSeconds[2])/s.BuildSeconds,0,1))
+--- original/WorldCheckpoint.luau
++++ time-exit-size/WorldCheckpoint.luau
+@@ -45,7 +45,7 @@
+ -- V27 persists patient Whale mandates, child reservations, fill baselines and private RNG.
+ -- V28 versions shorter Momentum horizons and staggered Maker replacement clocks.
+ -- Migration changes policy only; positions, orders, protections and ledgers remain intact.
+-local Checkpoint={Version=28,Readable={[28]=true,[1]=true,[2]=true,[3]=true,[4]=true,[5]=true,[6]=true,[7]=true,[8]=true,[9]=true,[10]=true,[11]=true,[12]=true,[13]=true,[14]=true,[15]=true,[16]=true,[17]=true,[18]=true,[19]=true,[20]=true,[21]=true,[22]=true,[23]=true,[24]=true,[25]=true,[26]=true,[27]=true}}
++local Checkpoint={Version=29,Readable={[29]=true,[28]=true,[1]=true,[2]=true,[3]=true,[4]=true,[5]=true,[6]=true,[7]=true,[8]=true,[9]=true,[10]=true,[11]=true,[12]=true,[13]=true,[14]=true,[15]=true,[16]=true,[17]=true,[18]=true,[19]=true,[20]=true,[21]=true,[22]=true,[23]=true,[24]=true,[25]=true,[26]=true,[27]=true}}
+ local function digest(raw)
+  local bytes=Encoding:ComputeStringHash(raw,Enum.HashAlgorithm.Sha256)
+  return (bytes:gsub(".",function(c)return string.format("%02x",string.byte(c))end))

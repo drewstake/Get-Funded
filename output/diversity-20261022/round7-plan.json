@@ -1,0 +1,6 @@
+{
+  "Basis": "Last-reserve-diverse passes every development numerical gate except spread. Increasing same-lane maker count to 4 or 6 loses movement/shape. Test the separate volatility-dependent requested spread mechanism.",
+  "Variant": "last-reserve-tight",
+  "Change": "Cap each maker requested half-spread at three ticks; actual funded executable book can still be wider. Same staggered lanes, quote lots, repricing/refill deadlines, accounts and risk. Only legal resting order prices change.",
+  "Selection": "Unchanged six-case gates and chart review. Reserved validation untouched. Must inspect funding adverse selection and no-recovery endurance if promising."
+}

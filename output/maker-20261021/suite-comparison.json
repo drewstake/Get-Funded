@@ -1,0 +1,397 @@
+{
+  "Baseline": {
+    "Passed": 240,
+    "Failed": 38,
+    "Failures": [
+      [
+        "SecurityTests",
+        "S1: missing liquidity never fabricates fills, balances, or round-trip profit",
+        "MakerBaselineLab.SecurityTests:67: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "Below $5K the five-contract minimum remains; $0 equity still stops new entries",
+        "MakerBaselineLab.TradeLimitsTests:88: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "BX wide stops allow entry and dragging; depletion still liquidates 1",
+        "MakerBaselineLab.TradeLimitsTests:116: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "BX wide stops allow entry and dragging; depletion still liquidates -1",
+        "MakerBaselineLab.TradeLimitsTests:116: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "BT wide stops allow entry and dragging; depletion still liquidates 1",
+        "MakerBaselineLab.TradeLimitsTests:116: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "BT wide stops allow entry and dragging; depletion still liquidates -1",
+        "MakerBaselineLab.TradeLimitsTests:116: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "BG wide stops allow entry and dragging; depletion still liquidates 1",
+        "MakerBaselineLab.TradeLimitsTests:116: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "BG wide stops allow entry and dragging; depletion still liquidates -1",
+        "MakerBaselineLab.TradeLimitsTests:116: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "A stop triggers on the trade that reaches it, fills at market with SL/TP, and reports once",
+        "MakerBaselineLab.TradeLimitsTests:185: Stop did not become a protected market entry"
+      ],
+      [
+        "TradeLimitsTests",
+        "A sliced stop waits for executable liquidity and never fabricates a fill",
+        "MakerBaselineLab.TradeLimitsTests:197: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "Triggered stops re-validate the balance-based cap after closed losses",
+        "MakerBaselineLab.TradeLimitsTests:212: Low balance blocked a stop within the limit"
+      ],
+      [
+        "TradeLimitsTests",
+        "Armed stops survive a checkpoint round trip off-book and still trigger",
+        "MakerBaselineLab.TradeLimitsTests:231: Restored stop did not trigger"
+      ],
+      [
+        "TradeLimitsTests",
+        "Waiting player limits execute against incoming quantity and re-check capacity",
+        "MakerBaselineLab.TradeLimitsTests:22: Account contract limit (10 total), including working orders. Maximum currently available: 5 BT."
+      ],
+      [
+        "TradeLimitsTests",
+        "$10000 allows 10 BX contracts on side 1",
+        "MakerBaselineLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$10000 allows 10 BX contracts on side -1",
+        "MakerBaselineLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$10000 allows 10 BT contracts on side 1",
+        "MakerBaselineLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$10000 allows 10 BT contracts on side -1",
+        "MakerBaselineLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$10000 allows 10 BG contracts on side 1",
+        "MakerBaselineLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$10000 allows 10 BG contracts on side -1",
+        "MakerBaselineLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$50000 allows 50 BX contracts on side 1",
+        "MakerBaselineLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$50000 allows 50 BX contracts on side -1",
+        "MakerBaselineLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$50000 allows 50 BT contracts on side 1",
+        "MakerBaselineLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$50000 allows 50 BT contracts on side -1",
+        "MakerBaselineLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$50000 allows 50 BG contracts on side 1",
+        "MakerBaselineLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$50000 allows 50 BG contracts on side -1",
+        "MakerBaselineLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$101000 allows 101 BX contracts on side 1",
+        "MakerBaselineLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$101000 allows 101 BX contracts on side -1",
+        "MakerBaselineLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$101000 allows 101 BT contracts on side 1",
+        "MakerBaselineLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$101000 allows 101 BT contracts on side -1",
+        "MakerBaselineLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$101000 allows 101 BG contracts on side 1",
+        "MakerBaselineLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$101000 allows 101 BG contracts on side -1",
+        "MakerBaselineLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$250000 allows 250 BX contracts on side 1",
+        "MakerBaselineLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$250000 allows 250 BX contracts on side -1",
+        "MakerBaselineLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$250000 allows 250 BT contracts on side 1",
+        "MakerBaselineLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$250000 allows 250 BT contracts on side -1",
+        "MakerBaselineLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$250000 allows 250 BG contracts on side 1",
+        "MakerBaselineLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$250000 allows 250 BG contracts on side -1",
+        "MakerBaselineLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "Realized profit/loss changes the cap immediately; open P&L does not",
+        "MakerBaselineLab.TradeLimitsTests:308: assertion failed!"
+      ]
+    ],
+    "Crashed": []
+  },
+  "Candidate": {
+    "Passed": 256,
+    "Failed": 38,
+    "Failures": [
+      [
+        "SecurityTests",
+        "S1: missing liquidity never fabricates fills, balances, or round-trip profit",
+        "MakerCandidateLab.SecurityTests:67: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "Below $5K the five-contract minimum remains; $0 equity still stops new entries",
+        "MakerCandidateLab.TradeLimitsTests:88: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "BX wide stops allow entry and dragging; depletion still liquidates 1",
+        "MakerCandidateLab.TradeLimitsTests:116: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "BX wide stops allow entry and dragging; depletion still liquidates -1",
+        "MakerCandidateLab.TradeLimitsTests:116: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "BT wide stops allow entry and dragging; depletion still liquidates 1",
+        "MakerCandidateLab.TradeLimitsTests:116: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "BT wide stops allow entry and dragging; depletion still liquidates -1",
+        "MakerCandidateLab.TradeLimitsTests:116: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "BG wide stops allow entry and dragging; depletion still liquidates 1",
+        "MakerCandidateLab.TradeLimitsTests:116: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "BG wide stops allow entry and dragging; depletion still liquidates -1",
+        "MakerCandidateLab.TradeLimitsTests:116: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "A stop triggers on the trade that reaches it, fills at market with SL/TP, and reports once",
+        "MakerCandidateLab.TradeLimitsTests:185: Stop did not become a protected market entry"
+      ],
+      [
+        "TradeLimitsTests",
+        "A sliced stop waits for executable liquidity and never fabricates a fill",
+        "MakerCandidateLab.TradeLimitsTests:197: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "Triggered stops re-validate the balance-based cap after closed losses",
+        "MakerCandidateLab.TradeLimitsTests:212: Low balance blocked a stop within the limit"
+      ],
+      [
+        "TradeLimitsTests",
+        "Armed stops survive a checkpoint round trip off-book and still trigger",
+        "MakerCandidateLab.TradeLimitsTests:231: Restored stop did not trigger"
+      ],
+      [
+        "TradeLimitsTests",
+        "Waiting player limits execute against incoming quantity and re-check capacity",
+        "MakerCandidateLab.TradeLimitsTests:22: Account contract limit (10 total), including working orders. Maximum currently available: 5 BT."
+      ],
+      [
+        "TradeLimitsTests",
+        "$10000 allows 10 BX contracts on side 1",
+        "MakerCandidateLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$10000 allows 10 BX contracts on side -1",
+        "MakerCandidateLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$10000 allows 10 BT contracts on side 1",
+        "MakerCandidateLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$10000 allows 10 BT contracts on side -1",
+        "MakerCandidateLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$10000 allows 10 BG contracts on side 1",
+        "MakerCandidateLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$10000 allows 10 BG contracts on side -1",
+        "MakerCandidateLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$50000 allows 50 BX contracts on side 1",
+        "MakerCandidateLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$50000 allows 50 BX contracts on side -1",
+        "MakerCandidateLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$50000 allows 50 BT contracts on side 1",
+        "MakerCandidateLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$50000 allows 50 BT contracts on side -1",
+        "MakerCandidateLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$50000 allows 50 BG contracts on side 1",
+        "MakerCandidateLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$50000 allows 50 BG contracts on side -1",
+        "MakerCandidateLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$101000 allows 101 BX contracts on side 1",
+        "MakerCandidateLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$101000 allows 101 BX contracts on side -1",
+        "MakerCandidateLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$101000 allows 101 BT contracts on side 1",
+        "MakerCandidateLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$101000 allows 101 BT contracts on side -1",
+        "MakerCandidateLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$101000 allows 101 BG contracts on side 1",
+        "MakerCandidateLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$101000 allows 101 BG contracts on side -1",
+        "MakerCandidateLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$250000 allows 250 BX contracts on side 1",
+        "MakerCandidateLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$250000 allows 250 BX contracts on side -1",
+        "MakerCandidateLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$250000 allows 250 BT contracts on side 1",
+        "MakerCandidateLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$250000 allows 250 BT contracts on side -1",
+        "MakerCandidateLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$250000 allows 250 BG contracts on side 1",
+        "MakerCandidateLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$250000 allows 250 BG contracts on side -1",
+        "MakerCandidateLab.TradeLimitsTests:297: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "Realized profit/loss changes the cap immediately; open P&L does not",
+        "MakerCandidateLab.TradeLimitsTests:308: assertion failed!"
+      ]
+    ],
+    "Crashed": []
+  },
+  "NewFailures": []
+}

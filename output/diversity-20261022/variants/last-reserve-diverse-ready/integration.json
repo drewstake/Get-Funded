@@ -1,0 +1,12 @@
+{
+  "Parent": "last-reserve-diverse",
+  "Purpose": "Configuration compatibility and versioned integration; default economic trajectories must match parent before promotion.",
+  "Checkpoint": 31,
+  "ReadableResearchCheckpoints": false,
+  "Changes": [
+    "Diversity guard when legacy policy dependencies are absent",
+    "Whale aggressiveness honors configuration; default .30-.65 as parent, migrated without new profiles",
+    "Legacy Reversion tests explicitly disable new strategy; old assertions retained",
+    "Checkpoint assertions updated; new migration/dependency coverage"
+  ]
+}

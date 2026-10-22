@@ -1,0 +1,10 @@
+{
+  "Basis": "Complete six-case rolling runs increase mean range30 to .824% and1.201% but fail spread (6.944/7.111), quote availability and recovery ($12.319m/$31.472m versus $5.628m baseline). They sustain more inventory and order flow than finite Portfolio mandates. Current BX rolling/patient RV is .742/.881%, with 32.2% low-change intervals instead of the 62.7% in the rejected quiet candidate.",
+  "Variants": {
+    "rolling-portfolio-depth": "rolling-portfolio-robust",
+    "rolling-patient-depth": "rolling-patient-robust"
+  },
+  "Change": "Restore original 10 Maker lanes, six independently funded makers per lane. Keep current individual quote quantities and finite rest/refill delays. Keep the neighboring-lane bridge and every trader policy. No capital, inventory allowance or recovery-policy change.",
+  "Hypothesis": "Restored supply can absorb the newly persistent demand and prevent empty-book/stop-walk cascades without losing the movement that prior finite-mandate depth experiments lacked. Patient versus original Stretch remains the isolated comparison.",
+  "Selection": "Unchanged full development gates, actual candle coverage review, finite no-recovery endurance, native/migration/parity before any untouched validation."
+}

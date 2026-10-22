@@ -1,0 +1,25 @@
+{
+  "Passed": [
+    "Flat tape is not movement or counterflow",
+    "Tiny opposite closes do not reset a meaningful leg",
+    "Substantial pullback recognized",
+    "Recovered pullback is not a full reversal",
+    "Full reversal crosses original anchor",
+    "Right edge stays unresolved",
+    "20% threshold does not bypass six-tick floor",
+    "Price-relative floor blocks smaller retracements",
+    "Price and tick scaling invariant",
+    "Legacy strict completed pullback needs recovery",
+    "Legacy strict pullback excludes full reversal"
+  ],
+  "Notes": [
+    "OHLC uses dollars; book internals and trace movement use ticks.",
+    "Legacy leg durations start at confirmation and include quiet minutes, with boundaries truncated.",
+    "Legacy strict pullbacks use three prior minutes and recovery within eight samples. This differs from full-leg recovery classification.",
+    "One-minute RV uses 59 close-to-close returns for 60 candles; first open-to-close omitted consistently.",
+    "Ten-minute directional metric actually uses ten closes (nine intervals); retained label and definition for comparison.",
+    "Original benchmark Depth container is unused; quote depth is obtained separately from trace samples.",
+    "Recovery baseline/terminal deltas omit adaptation; endurance disables recovery for adaptation too.",
+    "One-second and 15-second midpoint RV are sampled only with two-sided quotes; missing-side rate reported separately."
+  ]
+}

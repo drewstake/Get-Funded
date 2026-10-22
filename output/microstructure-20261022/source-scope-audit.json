@@ -1,0 +1,427 @@
+{
+  "inventory-delta": {
+    "Files": [
+      {
+        "File": "Participants.luau",
+        "SHA256": "0c5645bfd64e3bf2abbd395502e157d2c1f41f0996e40b1ca7686af9d522b728",
+        "DiffLines": 16
+      },
+      {
+        "File": "WorldCheckpoint.luau",
+        "SHA256": "b2564768300a10121c599e2f04151d355e7d35f7c9dcb24fb4aa38991aedddae",
+        "DiffLines": 11
+      }
+    ],
+    "PreservedModules": [
+      "MarketEngine",
+      "PlayerExecution",
+      "ProtectiveOrders",
+      "BotParticipation",
+      "BotExitRetry",
+      "TradeProtection",
+      "ContractLimits",
+      "BotPopulation",
+      "WorldService"
+    ],
+    "SnapshotBarrier": 29
+  },
+  "maker-no-skew": {
+    "Files": [
+      {
+        "File": "Participants.luau",
+        "SHA256": "5eb17ae870831b1e1b02f14be5252bcabe05b835f4ec0f43733f7ffaaa45af90",
+        "DiffLines": 11
+      },
+      {
+        "File": "WorldCheckpoint.luau",
+        "SHA256": "b2564768300a10121c599e2f04151d355e7d35f7c9dcb24fb4aa38991aedddae",
+        "DiffLines": 11
+      }
+    ],
+    "PreservedModules": [
+      "MarketEngine",
+      "PlayerExecution",
+      "ProtectiveOrders",
+      "BotParticipation",
+      "BotExitRetry",
+      "TradeProtection",
+      "ContractLimits",
+      "BotPopulation",
+      "WorldService"
+    ],
+    "SnapshotBarrier": 29
+  },
+  "maker-rest": {
+    "Files": [
+      {
+        "File": "Participants.luau",
+        "SHA256": "9786ebe11ebe75dab94ca3735dfe2ec08fde990fdd0a2d397dde0f9c767520c4",
+        "DiffLines": 11
+      },
+      {
+        "File": "WorldCheckpoint.luau",
+        "SHA256": "b2564768300a10121c599e2f04151d355e7d35f7c9dcb24fb4aa38991aedddae",
+        "DiffLines": 11
+      }
+    ],
+    "PreservedModules": [
+      "MarketEngine",
+      "PlayerExecution",
+      "ProtectiveOrders",
+      "BotParticipation",
+      "BotExitRetry",
+      "TradeProtection",
+      "ContractLimits",
+      "BotPopulation",
+      "WorldService"
+    ],
+    "SnapshotBarrier": 29
+  },
+  "no-skew-reserve-delay": {
+    "Files": [
+      {
+        "File": "Participants.luau",
+        "SHA256": "ac26dffa79d367da3cddcac75729b45de00be1c1a12c080a7dfcedb3a3299959",
+        "DiffLines": 20
+      },
+      {
+        "File": "WorldCheckpoint.luau",
+        "SHA256": "b2564768300a10121c599e2f04151d355e7d35f7c9dcb24fb4aa38991aedddae",
+        "DiffLines": 11
+      }
+    ],
+    "PreservedModules": [
+      "MarketEngine",
+      "PlayerExecution",
+      "ProtectiveOrders",
+      "BotParticipation",
+      "BotExitRetry",
+      "TradeProtection",
+      "ContractLimits",
+      "BotPopulation",
+      "WorldService"
+    ],
+    "SnapshotBarrier": 29
+  },
+  "no-skew-sparse-time": {
+    "Files": [
+      {
+        "File": "BotMomentum.luau",
+        "SHA256": "797e4820c85f1faa64a95a647f05404307c74ab73814edcfc11f1dc3e3a5ddcb",
+        "DiffLines": 10
+      },
+      {
+        "File": "Participants.luau",
+        "SHA256": "5eb17ae870831b1e1b02f14be5252bcabe05b835f4ec0f43733f7ffaaa45af90",
+        "DiffLines": 11
+      },
+      {
+        "File": "MarketConfig.luau",
+        "SHA256": "589da6762875c9db22b4fab942333b4c076c03a2c748770e226907187e377174",
+        "DiffLines": 11
+      },
+      {
+        "File": "WorldCheckpoint.luau",
+        "SHA256": "b2564768300a10121c599e2f04151d355e7d35f7c9dcb24fb4aa38991aedddae",
+        "DiffLines": 11
+      }
+    ],
+    "PreservedModules": [
+      "MarketEngine",
+      "PlayerExecution",
+      "ProtectiveOrders",
+      "BotParticipation",
+      "BotExitRetry",
+      "TradeProtection",
+      "ContractLimits",
+      "BotPopulation",
+      "WorldService"
+    ],
+    "SnapshotBarrier": 29
+  },
+  "no-skew-sparse-touch": {
+    "Files": [
+      {
+        "File": "MarketConfig.luau",
+        "SHA256": "589da6762875c9db22b4fab942333b4c076c03a2c748770e226907187e377174",
+        "DiffLines": 11
+      },
+      {
+        "File": "Participants.luau",
+        "SHA256": "5eb17ae870831b1e1b02f14be5252bcabe05b835f4ec0f43733f7ffaaa45af90",
+        "DiffLines": 11
+      },
+      {
+        "File": "WorldCheckpoint.luau",
+        "SHA256": "b2564768300a10121c599e2f04151d355e7d35f7c9dcb24fb4aa38991aedddae",
+        "DiffLines": 11
+      }
+    ],
+    "PreservedModules": [
+      "MarketEngine",
+      "PlayerExecution",
+      "ProtectiveOrders",
+      "BotParticipation",
+      "BotExitRetry",
+      "TradeProtection",
+      "ContractLimits",
+      "BotPopulation",
+      "WorldService"
+    ],
+    "SnapshotBarrier": 29
+  },
+  "no-skew-sparse-whale": {
+    "Files": [
+      {
+        "File": "BotWhale.luau",
+        "SHA256": "1266bdcf9c79872e1848d3afca8f8c7d63ddf448647c4f13a6481396ea7fa9f4",
+        "DiffLines": 11
+      },
+      {
+        "File": "Participants.luau",
+        "SHA256": "5eb17ae870831b1e1b02f14be5252bcabe05b835f4ec0f43733f7ffaaa45af90",
+        "DiffLines": 11
+      },
+      {
+        "File": "MarketConfig.luau",
+        "SHA256": "589da6762875c9db22b4fab942333b4c076c03a2c748770e226907187e377174",
+        "DiffLines": 11
+      },
+      {
+        "File": "WorldCheckpoint.luau",
+        "SHA256": "b2564768300a10121c599e2f04151d355e7d35f7c9dcb24fb4aa38991aedddae",
+        "DiffLines": 11
+      }
+    ],
+    "PreservedModules": [
+      "MarketEngine",
+      "PlayerExecution",
+      "ProtectiveOrders",
+      "BotParticipation",
+      "BotExitRetry",
+      "TradeProtection",
+      "ContractLimits",
+      "BotPopulation",
+      "WorldService"
+    ],
+    "SnapshotBarrier": 29
+  },
+  "no-skew-sparse30-whale": {
+    "Files": [
+      {
+        "File": "BotWhale.luau",
+        "SHA256": "1266bdcf9c79872e1848d3afca8f8c7d63ddf448647c4f13a6481396ea7fa9f4",
+        "DiffLines": 11
+      },
+      {
+        "File": "MarketConfig.luau",
+        "SHA256": "b00a0fbc4010ba38b194aa1f587a1bd013d48cb851431c1bb3cf73e2a4672835",
+        "DiffLines": 11
+      },
+      {
+        "File": "Participants.luau",
+        "SHA256": "5eb17ae870831b1e1b02f14be5252bcabe05b835f4ec0f43733f7ffaaa45af90",
+        "DiffLines": 11
+      },
+      {
+        "File": "WorldCheckpoint.luau",
+        "SHA256": "b2564768300a10121c599e2f04151d355e7d35f7c9dcb24fb4aa38991aedddae",
+        "DiffLines": 11
+      }
+    ],
+    "PreservedModules": [
+      "MarketEngine",
+      "PlayerExecution",
+      "ProtectiveOrders",
+      "BotParticipation",
+      "BotExitRetry",
+      "TradeProtection",
+      "ContractLimits",
+      "BotPopulation",
+      "WorldService"
+    ],
+    "SnapshotBarrier": 29
+  },
+  "reserve-cost-quote": {
+    "Files": [
+      {
+        "File": "Participants.luau",
+        "SHA256": "613464bbfc0233b48e9636d218f532313e13fa1e5f10463c3892e0ccf373e9ae",
+        "DiffLines": 15
+      },
+      {
+        "File": "WorldCheckpoint.luau",
+        "SHA256": "b2564768300a10121c599e2f04151d355e7d35f7c9dcb24fb4aa38991aedddae",
+        "DiffLines": 11
+      }
+    ],
+    "PreservedModules": [
+      "MarketEngine",
+      "PlayerExecution",
+      "ProtectiveOrders",
+      "BotParticipation",
+      "BotExitRetry",
+      "TradeProtection",
+      "ContractLimits",
+      "BotPopulation",
+      "WorldService"
+    ],
+    "SnapshotBarrier": 29
+  },
+  "reserve-delay": {
+    "Files": [
+      {
+        "File": "Participants.luau",
+        "SHA256": "dbffefac2349a1b6e28f706bb79a50673714c3334393c2a8fb5de0cd652ad621",
+        "DiffLines": 11
+      },
+      {
+        "File": "WorldCheckpoint.luau",
+        "SHA256": "b2564768300a10121c599e2f04151d355e7d35f7c9dcb24fb4aa38991aedddae",
+        "DiffLines": 11
+      }
+    ],
+    "PreservedModules": [
+      "MarketEngine",
+      "PlayerExecution",
+      "ProtectiveOrders",
+      "BotParticipation",
+      "BotExitRetry",
+      "TradeProtection",
+      "ContractLimits",
+      "BotPopulation",
+      "WorldService"
+    ],
+    "SnapshotBarrier": 29
+  },
+  "reserve-rest": {
+    "Files": [
+      {
+        "File": "Participants.luau",
+        "SHA256": "758beba3aef9217f30cf7c7c81e5e34c0e700715ed5c01f667ae5abf0565a889",
+        "DiffLines": 11
+      },
+      {
+        "File": "WorldCheckpoint.luau",
+        "SHA256": "b2564768300a10121c599e2f04151d355e7d35f7c9dcb24fb4aa38991aedddae",
+        "DiffLines": 11
+      }
+    ],
+    "PreservedModules": [
+      "MarketEngine",
+      "PlayerExecution",
+      "ProtectiveOrders",
+      "BotParticipation",
+      "BotExitRetry",
+      "TradeProtection",
+      "ContractLimits",
+      "BotPopulation",
+      "WorldService"
+    ],
+    "SnapshotBarrier": 29
+  },
+  "sparse-touch": {
+    "Files": [
+      {
+        "File": "MarketConfig.luau",
+        "SHA256": "589da6762875c9db22b4fab942333b4c076c03a2c748770e226907187e377174",
+        "DiffLines": 11
+      },
+      {
+        "File": "WorldCheckpoint.luau",
+        "SHA256": "b2564768300a10121c599e2f04151d355e7d35f7c9dcb24fb4aa38991aedddae",
+        "DiffLines": 11
+      }
+    ],
+    "PreservedModules": [
+      "MarketEngine",
+      "PlayerExecution",
+      "ProtectiveOrders",
+      "BotParticipation",
+      "BotExitRetry",
+      "TradeProtection",
+      "ContractLimits",
+      "BotPopulation",
+      "WorldService"
+    ],
+    "SnapshotBarrier": 29
+  },
+  "time-exit-size": {
+    "Files": [
+      {
+        "File": "BotMomentum.luau",
+        "SHA256": "797e4820c85f1faa64a95a647f05404307c74ab73814edcfc11f1dc3e3a5ddcb",
+        "DiffLines": 10
+      },
+      {
+        "File": "WorldCheckpoint.luau",
+        "SHA256": "b2564768300a10121c599e2f04151d355e7d35f7c9dcb24fb4aa38991aedddae",
+        "DiffLines": 11
+      }
+    ],
+    "PreservedModules": [
+      "MarketEngine",
+      "PlayerExecution",
+      "ProtectiveOrders",
+      "BotParticipation",
+      "BotExitRetry",
+      "TradeProtection",
+      "ContractLimits",
+      "BotPopulation",
+      "WorldService"
+    ],
+    "SnapshotBarrier": 29
+  },
+  "value-exit-gate": {
+    "Files": [
+      {
+        "File": "Participants.luau",
+        "SHA256": "cb68bc356c1565690f7185d0458c37ddedb78f0afa03261c14dfe191e3bfe1ea",
+        "DiffLines": 22
+      },
+      {
+        "File": "WorldCheckpoint.luau",
+        "SHA256": "b2564768300a10121c599e2f04151d355e7d35f7c9dcb24fb4aa38991aedddae",
+        "DiffLines": 11
+      }
+    ],
+    "PreservedModules": [
+      "MarketEngine",
+      "PlayerExecution",
+      "ProtectiveOrders",
+      "BotParticipation",
+      "BotExitRetry",
+      "TradeProtection",
+      "ContractLimits",
+      "BotPopulation",
+      "WorldService"
+    ],
+    "SnapshotBarrier": 29
+  },
+  "whale-urgency": {
+    "Files": [
+      {
+        "File": "BotWhale.luau",
+        "SHA256": "1266bdcf9c79872e1848d3afca8f8c7d63ddf448647c4f13a6481396ea7fa9f4",
+        "DiffLines": 11
+      },
+      {
+        "File": "WorldCheckpoint.luau",
+        "SHA256": "b2564768300a10121c599e2f04151d355e7d35f7c9dcb24fb4aa38991aedddae",
+        "DiffLines": 11
+      }
+    ],
+    "PreservedModules": [
+      "MarketEngine",
+      "PlayerExecution",
+      "ProtectiveOrders",
+      "BotParticipation",
+      "BotExitRetry",
+      "TradeProtection",
+      "ContractLimits",
+      "BotPopulation",
+      "WorldService"
+    ],
+    "SnapshotBarrier": 29
+  }
+}

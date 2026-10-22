@@ -1,0 +1,5 @@
+{
+  "Parent": "rolling-patient-robust",
+  "Checkpoint": 31,
+  "Change": "Only Maker lane count 20 to original 10. All source compatibility, nil-preserving quote selection and focused tests retained. Same sixty funded makers and per-order size, delayed replenishment, risk capacity and allocated capital."
+}

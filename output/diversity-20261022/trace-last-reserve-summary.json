@@ -1,0 +1,102 @@
+{
+  "Scalper/": {
+    "Open": 2568,
+    "Close": 2570,
+    "Reasons": {
+      "OtherReduction": 1782,
+      "Stop loss": 788
+    }
+  },
+  "Maker/": {
+    "Open": 2306,
+    "Close": 2323,
+    "Reasons": {
+      "Ordinary": 2323
+    }
+  },
+  "Momentum/": {
+    "Open": 2628,
+    "Close": 2658,
+    "Reasons": {
+      "Time": 2028,
+      "Thesis": 323,
+      "Stop loss": 307
+    }
+  },
+  "Value/Portfolio": {
+    "Open": 1937,
+    "Close": 1923,
+    "Reasons": {
+      "Time": 1748,
+      "Stop loss": 167,
+      "Risk": 8
+    }
+  },
+  "Protective/": {
+    "Open": 2416,
+    "Close": 2401,
+    "Reasons": {
+      "Ordinary": 1824,
+      "Stop loss": 501,
+      "Take profit": 62,
+      "RecoveryRisk": 14
+    }
+  },
+  "Reversion/Stretch": {
+    "Open": 813,
+    "Close": 776,
+    "Reasons": {
+      "Time": 535,
+      "Stop loss": 219,
+      "Retracement": 20,
+      "Risk": 2
+    }
+  },
+  "Liquidity/": {
+    "Open": 7265,
+    "Close": 7294,
+    "Reasons": {
+      "OtherReduction": 6519,
+      "Ordinary": 391,
+      "Stop loss": 383,
+      "RecoveryRisk": 1
+    }
+  },
+  "Whale/": {
+    "Open": 1787,
+    "Close": 2033,
+    "Reasons": {
+      "Time": 1070,
+      "Stop loss": 963
+    }
+  },
+  "Reserve/Portfolio": {
+    "Open": 1513,
+    "Close": 1540,
+    "Reasons": {
+      "Time": 1483,
+      "Stop loss": 57
+    }
+  },
+  "Reserve/Stretch": {
+    "Open": 1350,
+    "Close": 1225,
+    "Reasons": {
+      "Time": 1225
+    }
+  },
+  "Reserve/": {
+    "Open": 1187,
+    "Close": 1033,
+    "Reasons": {
+      "Ordinary": 1033
+    }
+  },
+  "Value/": {
+    "Open": 0,
+    "Close": 14,
+    "Reasons": {
+      "Take profit": 14
+    }
+  }
+}

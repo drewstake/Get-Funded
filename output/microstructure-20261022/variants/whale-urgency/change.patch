@@ -1,0 +1,22 @@
+--- original/BotWhale.luau
++++ whale-urgency/BotWhale.luau
+@@ -120,7 +120,7 @@
+  if e.Time<(s.NextChildAt or 0)then return end
+  local budget=W.Budget(p,a,s)
+  local urgency=math.clamp((e.Time-s.StartedAt)/s.Duration,0,1)
+- local aggressive=s.ExitReason=='Risk'or random(s)<c.AggressiveProbability[1]+urgency*(c.AggressiveProbability[2]-c.AggressiveProbability[1])
++ local aggressive=s.ExitReason=='Risk'or random(s)<.30+urgency*(.65-.30)
+  local touch=aggressive and opposite or ownTouch
+  if not touch then return end
+  local tick=math.round(touch/b.Spec.Tick)+(aggressive and s.Side*c.MaxSlippageTicks or 0)
+--- original/WorldCheckpoint.luau
++++ whale-urgency/WorldCheckpoint.luau
+@@ -45,7 +45,7 @@
+ -- V27 persists patient Whale mandates, child reservations, fill baselines and private RNG.
+ -- V28 versions shorter Momentum horizons and staggered Maker replacement clocks.
+ -- Migration changes policy only; positions, orders, protections and ledgers remain intact.
+-local Checkpoint={Version=28,Readable={[28]=true,[1]=true,[2]=true,[3]=true,[4]=true,[5]=true,[6]=true,[7]=true,[8]=true,[9]=true,[10]=true,[11]=true,[12]=true,[13]=true,[14]=true,[15]=true,[16]=true,[17]=true,[18]=true,[19]=true,[20]=true,[21]=true,[22]=true,[23]=true,[24]=true,[25]=true,[26]=true,[27]=true}}
++local Checkpoint={Version=29,Readable={[29]=true,[28]=true,[1]=true,[2]=true,[3]=true,[4]=true,[5]=true,[6]=true,[7]=true,[8]=true,[9]=true,[10]=true,[11]=true,[12]=true,[13]=true,[14]=true,[15]=true,[16]=true,[17]=true,[18]=true,[19]=true,[20]=true,[21]=true,[22]=true,[23]=true,[24]=true,[25]=true,[26]=true,[27]=true}}
+ local function digest(raw)
+  local bytes=Encoding:ComputeStringHash(raw,Enum.HashAlgorithm.Sha256)
+  return (bytes:gsub(".",function(c)return string.format("%02x",string.byte(c))end))

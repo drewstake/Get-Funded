@@ -1,0 +1,10 @@
+{
+  "Basis": "Sparse touch alone retains range/volatility and improves max leg but fails occupancy. No-skew+sparse retains minute and midpoint movement and improves counters but still has long legs and insufficient range. Existing time exits and independent Whale mandates may have different impact after the inventory repricing recurrence is removed.",
+  "Variants": {
+    "whale-urgency": "Isolated existing 0.30\u20130.65 aggression probability, otherwise identical Whale policy, private RNG stream, mandates, participation budget, sizes and timing. No profile reset.",
+    "no-skew-sparse-whale": "Cross the same Whale intervention with the frozen no-skew+sparse book.",
+    "no-skew-sparse-time": "Cross the already isolated existing-time-exit concentration with the frozen no-skew+sparse book."
+  },
+  "PriorFailure": "Earlier whale-urgency lengthened streaks with inventory-shifted quoting. This is explicitly a conditional interaction test motivated by the new balanced-flow causal fixture, not an assertion that the failed standalone policy is now good.",
+  "Gates": "Unchanged; no unseen validation cases accessed; no new bot, capital, limits, forced reversal, news or price writers."
+}

@@ -1,0 +1,427 @@
+{
+  "Baseline": {
+    "Suites": 21,
+    "Crashes": [
+      [
+        "BotRefreshTests",
+        "C:\\Users\\drews\\Development\\Roblox Dev\\Get Funded!\\output\\diversity-20261022\\LocalLab:57: Unsupported service in offline lab: RunService"
+      ],
+      [
+        "WorldTests",
+        "C:\\Users\\drews\\Development\\Roblox Dev\\Get Funded!\\output\\diversity-20261022\\LocalLab:57: Unsupported service in offline lab: RunService"
+      ]
+    ],
+    "Passed": 226,
+    "Failures": [
+      [
+        "ExecutionChoiceTests",
+        "Client forwards selection and defaults to standard",
+        "[string \"Baseline.MarketClient\"]:45: attempt to index nil with 'new'"
+      ],
+      [
+        "SecurityTests",
+        "S1: missing liquidity never fabricates fills, balances, or round-trip profit",
+        "[string \"Baseline.SecurityTests\"]:68: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "Below $5K the five-contract minimum remains; $0 equity still stops new entries",
+        "[string \"Baseline.TradeLimitsTests\"]:89: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "BX wide stops allow entry and dragging; depletion still liquidates 1",
+        "[string \"Baseline.TradeLimitsTests\"]:117: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "BX wide stops allow entry and dragging; depletion still liquidates -1",
+        "[string \"Baseline.TradeLimitsTests\"]:117: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "BT wide stops allow entry and dragging; depletion still liquidates 1",
+        "[string \"Baseline.TradeLimitsTests\"]:117: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "BT wide stops allow entry and dragging; depletion still liquidates -1",
+        "[string \"Baseline.TradeLimitsTests\"]:117: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "BG wide stops allow entry and dragging; depletion still liquidates 1",
+        "[string \"Baseline.TradeLimitsTests\"]:117: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "BG wide stops allow entry and dragging; depletion still liquidates -1",
+        "[string \"Baseline.TradeLimitsTests\"]:117: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "A stop triggers on the trade that reaches it, fills at market with SL/TP, and reports once",
+        "[string \"Baseline.TradeLimitsTests\"]:186: Stop did not become a protected market entry"
+      ],
+      [
+        "TradeLimitsTests",
+        "A sliced stop waits for executable liquidity and never fabricates a fill",
+        "[string \"Baseline.TradeLimitsTests\"]:198: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "Triggered stops re-validate the balance-based cap after closed losses",
+        "[string \"Baseline.TradeLimitsTests\"]:213: Low balance blocked a stop within the limit"
+      ],
+      [
+        "TradeLimitsTests",
+        "Armed stops survive a checkpoint round trip off-book and still trigger",
+        "[string \"Baseline.TradeLimitsTests\"]:232: Restored stop did not trigger"
+      ],
+      [
+        "TradeLimitsTests",
+        "Waiting player limits execute against incoming quantity and re-check capacity",
+        "[string \"Baseline.TradeLimitsTests\"]:23: Account contract limit (10 total), including working orders. Maximum currently available: 5 BT."
+      ],
+      [
+        "TradeLimitsTests",
+        "$10000 allows 10 BX contracts on side 1",
+        "[string \"Baseline.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$10000 allows 10 BX contracts on side -1",
+        "[string \"Baseline.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$10000 allows 10 BT contracts on side 1",
+        "[string \"Baseline.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$10000 allows 10 BT contracts on side -1",
+        "[string \"Baseline.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$10000 allows 10 BG contracts on side 1",
+        "[string \"Baseline.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$10000 allows 10 BG contracts on side -1",
+        "[string \"Baseline.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$50000 allows 50 BX contracts on side 1",
+        "[string \"Baseline.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$50000 allows 50 BX contracts on side -1",
+        "[string \"Baseline.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$50000 allows 50 BT contracts on side 1",
+        "[string \"Baseline.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$50000 allows 50 BT contracts on side -1",
+        "[string \"Baseline.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$50000 allows 50 BG contracts on side 1",
+        "[string \"Baseline.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$50000 allows 50 BG contracts on side -1",
+        "[string \"Baseline.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$101000 allows 101 BX contracts on side 1",
+        "[string \"Baseline.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$101000 allows 101 BX contracts on side -1",
+        "[string \"Baseline.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$101000 allows 101 BT contracts on side 1",
+        "[string \"Baseline.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$101000 allows 101 BT contracts on side -1",
+        "[string \"Baseline.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$101000 allows 101 BG contracts on side 1",
+        "[string \"Baseline.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$101000 allows 101 BG contracts on side -1",
+        "[string \"Baseline.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$250000 allows 250 BX contracts on side 1",
+        "[string \"Baseline.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$250000 allows 250 BX contracts on side -1",
+        "[string \"Baseline.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$250000 allows 250 BT contracts on side 1",
+        "[string \"Baseline.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$250000 allows 250 BT contracts on side -1",
+        "[string \"Baseline.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$250000 allows 250 BG contracts on side 1",
+        "[string \"Baseline.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$250000 allows 250 BG contracts on side -1",
+        "[string \"Baseline.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "Realized profit/loss changes the cap immediately; open P&L does not",
+        "[string \"Baseline.TradeLimitsTests\"]:309: assertion failed!"
+      ]
+    ]
+  },
+  "Candidate": {
+    "Suites": 22,
+    "Crashes": [
+      [
+        "BotRefreshTests",
+        "C:\\Users\\drews\\Development\\Roblox Dev\\Get Funded!\\output\\diversity-20261022\\LocalLab:57: Unsupported service in offline lab: RunService"
+      ],
+      [
+        "WorldTests",
+        "C:\\Users\\drews\\Development\\Roblox Dev\\Get Funded!\\output\\diversity-20261022\\LocalLab:57: Unsupported service in offline lab: RunService"
+      ]
+    ],
+    "Passed": 255,
+    "Failures": [
+      [
+        "ExecutionChoiceTests",
+        "Client forwards selection and defaults to standard",
+        "[string \"Candidate.MarketClient\"]:45: attempt to index nil with 'new'"
+      ],
+      [
+        "SecurityTests",
+        "S1: missing liquidity never fabricates fills, balances, or round-trip profit",
+        "[string \"Candidate.SecurityTests\"]:68: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "Below $5K the five-contract minimum remains; $0 equity still stops new entries",
+        "[string \"Candidate.TradeLimitsTests\"]:89: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "BX wide stops allow entry and dragging; depletion still liquidates 1",
+        "[string \"Candidate.TradeLimitsTests\"]:117: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "BX wide stops allow entry and dragging; depletion still liquidates -1",
+        "[string \"Candidate.TradeLimitsTests\"]:117: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "BT wide stops allow entry and dragging; depletion still liquidates 1",
+        "[string \"Candidate.TradeLimitsTests\"]:117: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "BT wide stops allow entry and dragging; depletion still liquidates -1",
+        "[string \"Candidate.TradeLimitsTests\"]:117: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "BG wide stops allow entry and dragging; depletion still liquidates 1",
+        "[string \"Candidate.TradeLimitsTests\"]:117: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "BG wide stops allow entry and dragging; depletion still liquidates -1",
+        "[string \"Candidate.TradeLimitsTests\"]:117: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "A stop triggers on the trade that reaches it, fills at market with SL/TP, and reports once",
+        "[string \"Candidate.TradeLimitsTests\"]:186: Stop did not become a protected market entry"
+      ],
+      [
+        "TradeLimitsTests",
+        "A sliced stop waits for executable liquidity and never fabricates a fill",
+        "[string \"Candidate.TradeLimitsTests\"]:198: assertion failed!"
+      ],
+      [
+        "TradeLimitsTests",
+        "Triggered stops re-validate the balance-based cap after closed losses",
+        "[string \"Candidate.TradeLimitsTests\"]:213: Low balance blocked a stop within the limit"
+      ],
+      [
+        "TradeLimitsTests",
+        "Armed stops survive a checkpoint round trip off-book and still trigger",
+        "[string \"Candidate.TradeLimitsTests\"]:232: Restored stop did not trigger"
+      ],
+      [
+        "TradeLimitsTests",
+        "Waiting player limits execute against incoming quantity and re-check capacity",
+        "[string \"Candidate.TradeLimitsTests\"]:23: Account contract limit (10 total), including working orders. Maximum currently available: 5 BT."
+      ],
+      [
+        "TradeLimitsTests",
+        "$10000 allows 10 BX contracts on side 1",
+        "[string \"Candidate.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$10000 allows 10 BX contracts on side -1",
+        "[string \"Candidate.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$10000 allows 10 BT contracts on side 1",
+        "[string \"Candidate.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$10000 allows 10 BT contracts on side -1",
+        "[string \"Candidate.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$10000 allows 10 BG contracts on side 1",
+        "[string \"Candidate.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$10000 allows 10 BG contracts on side -1",
+        "[string \"Candidate.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$50000 allows 50 BX contracts on side 1",
+        "[string \"Candidate.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$50000 allows 50 BX contracts on side -1",
+        "[string \"Candidate.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$50000 allows 50 BT contracts on side 1",
+        "[string \"Candidate.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$50000 allows 50 BT contracts on side -1",
+        "[string \"Candidate.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$50000 allows 50 BG contracts on side 1",
+        "[string \"Candidate.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$50000 allows 50 BG contracts on side -1",
+        "[string \"Candidate.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$101000 allows 101 BX contracts on side 1",
+        "[string \"Candidate.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$101000 allows 101 BX contracts on side -1",
+        "[string \"Candidate.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$101000 allows 101 BT contracts on side 1",
+        "[string \"Candidate.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$101000 allows 101 BT contracts on side -1",
+        "[string \"Candidate.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$101000 allows 101 BG contracts on side 1",
+        "[string \"Candidate.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$101000 allows 101 BG contracts on side -1",
+        "[string \"Candidate.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$250000 allows 250 BX contracts on side 1",
+        "[string \"Candidate.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$250000 allows 250 BX contracts on side -1",
+        "[string \"Candidate.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$250000 allows 250 BT contracts on side 1",
+        "[string \"Candidate.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$250000 allows 250 BT contracts on side -1",
+        "[string \"Candidate.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$250000 allows 250 BG contracts on side 1",
+        "[string \"Candidate.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "$250000 allows 250 BG contracts on side -1",
+        "[string \"Candidate.TradeLimitsTests\"]:298: Large positions can still close in full"
+      ],
+      [
+        "TradeLimitsTests",
+        "Realized profit/loss changes the cap immediately; open P&L does not",
+        "[string \"Candidate.TradeLimitsTests\"]:309: assertion failed!"
+      ]
+    ]
+  },
+  "NewFailures": [],
+  "NewCrashes": [],
+  "Complete": true
+}

@@ -3,6 +3,7 @@
 local root=script.Parent
 
 local Config=require(root.MarketConfig)
+local Timeframes=require(root.ChartTimeframes)
 
 local Progression=require(root.ProgressionConfig)
 
@@ -39,7 +40,7 @@ function Market.New(base,preview,previewData)
 
  local self=setmetatable({Base=base,Prices={},Quotes={},Positions={},Orders={},History={},Fills={},Cache={},
   ProtectionPreferences=Protection.Preferences(),ClosedEvents={},ClosedEventOrder={},
-  Time=0,Regime="Connecting",EventBacklog={},Speed=Config.SimulationSpeed,Ready=false,CanTrade=false,NextId=0,Pending={},Contract=Config.ContractOrder[1],Timeframe="1m",
+  Time=0,Regime="Connecting",EventBacklog={},Speed=Config.SimulationSpeed,Ready=false,CanTrade=false,NextId=0,Pending={},Contract=Config.ContractOrder[1],Timeframe=Timeframes.Default,
 
   Changed=Instance.new("BindableEvent"),Replies=Instance.new("BindableEvent"),Events=Instance.new("BindableEvent"),Preview=preview},Session)
 
@@ -166,7 +167,7 @@ function Market.New(base,preview,previewData)
   self:_flushPreferences();self.Changed:Fire()
  end)
 
- self:Subscribe(Config.ContractOrder[1],"1m")
+ self:Subscribe(Config.ContractOrder[1],Timeframes.Default)
 
  local start=os.clock() while not self.Ready and not self.ConnectionStatus and os.clock()-start<45 do task.wait(0.1) end
 

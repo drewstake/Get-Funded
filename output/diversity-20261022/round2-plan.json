@@ -1,0 +1,10 @@
+{
+  "Basis": "Initial four completed control/stretch/portfolio cases show that portfolio demand restores CurrentBX movement but still yields smooth segments and jumps. Maker no-skew still recenters new quotes on last execution at the spread edge. Test executable midpoint instead to remove this separate quote recentering term.",
+  "SelectionTiming": "Round 1 is still finishing all six cases; this hypothesis uses already completed development cases only, not holdouts.",
+  "Variants": {
+    "midquote": "Same as control except Maker center uses executable public midpoint (last execution fallback only without two-sided quotes)",
+    "midquote-portfolio": "Same as portfolio except Maker center uses executable public midpoint (last execution fallback only without two-sided quotes)",
+    "midquote-mixed": "Same as mixed except Maker center uses executable public midpoint (last execution fallback only without two-sided quotes)"
+  },
+  "Preserved": "Same inventory-sensitive quantities, finite quote funding, resting/refill clocks, all risk/accounting modules and unchanged gates. No direct price, candle or cash writes."
+}

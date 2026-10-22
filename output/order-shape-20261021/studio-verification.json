@@ -1,0 +1,140 @@
+{
+  "First": {
+    "Books": {
+      "BT": {
+        "Candles": 1200,
+        "Last": 17829.25,
+        "Volume": 9775507,
+        "Bids": 81,
+        "Up": 703353,
+        "Down": 709259,
+        "Asks": 84
+      },
+      "BX": {
+        "Candles": 1200,
+        "Last": 4818,
+        "Volume": 6817627,
+        "Bids": 52,
+        "Up": 434449,
+        "Down": 438034,
+        "Asks": 57
+      },
+      "BG": {
+        "Candles": 1200,
+        "Last": 1988.2,
+        "Volume": 7268503,
+        "Bids": 57,
+        "Up": 411856,
+        "Down": 415916,
+        "Asks": 57
+      }
+    },
+    "Audit": {
+      "Inventory": {
+        "BT": 0,
+        "BX": 0,
+        "BG": 0
+      },
+      "CashError": 0.0000010379590094089508,
+      "Volume": 71639893,
+      "EquityError": 1.2712553143501282e-7,
+      "Trades": 28957410,
+      "Hash": 1387709943
+    },
+    "Step": 10013982,
+    "NewsFrequency": 0,
+    "Time": 2503495.5,
+    "Status": "SHARED · SAVED",
+    "Mode": "Shared",
+    "OrderFlow": {
+      "StopPauseSeconds": {
+        "1": 90,
+        "2": 240
+      },
+      "SliceSeconds": {
+        "1": 2,
+        "2": 5
+      },
+      "MaxSlippageTicks": 3,
+      "SliceFraction": {
+        "1": 0.25,
+        "2": 0.55
+      },
+      "MaxDrawdown": 0.35,
+      "Kinds": {
+        "Whale": true,
+        "Momentum": true
+      },
+      "DurationSeconds": {
+        "1": 120,
+        "2": 360
+      },
+      "StartDelay": {
+        "1": 1,
+        "2": 30
+      },
+      "Version": 3,
+      "FollowMoveTicks": 2,
+      "PauseSeconds": {
+        "1": 15,
+        "2": 45
+      },
+      "TargetFraction": {
+        "1": 0.45,
+        "2": 0.85
+      },
+      "LookbackSeconds": 30,
+      "FollowProbability": 0.65
+    },
+    "Ready": true
+  },
+  "Second": {
+    "Time": 2503840.5,
+    "Books": {
+      "BT": {
+        "Candles": 1200,
+        "Last": 17823.75,
+        "Volume": 9776759,
+        "Bids": 107,
+        "Up": 703583,
+        "Down": 709517,
+        "Asks": 106
+      },
+      "BX": {
+        "Candles": 1200,
+        "Last": 4821,
+        "Volume": 6818497,
+        "Bids": 47,
+        "Up": 434569,
+        "Down": 438138,
+        "Asks": 57
+      },
+      "BG": {
+        "Candles": 1200,
+        "Last": 1994.8000000000002,
+        "Volume": 7270991,
+        "Bids": 58,
+        "Up": 412194,
+        "Down": 416170,
+        "Asks": 52
+      }
+    },
+    "Status": "SHARED · SAVED",
+    "Audit": {
+      "Inventory": {
+        "BT": 0,
+        "BX": 0,
+        "BG": 0
+      },
+      "CashError": 0.0000010528601706027985,
+      "Volume": 71644503,
+      "EquityError": 2.314336597919464e-7,
+      "Trades": 28960973,
+      "Hash": 1691760082
+    },
+    "Step": 10015362,
+    "Ready": true
+  },
+  "AdvancedSteps": 1380,
+  "AdditionalTrades": 3563
+}

@@ -1,0 +1,10 @@
+{
+  "Basis": "Patient Stretch plus nearest-lane bridge passes all numerical gates (149 counter events,38 strict pullbacks), but current BX chart has a quiet middle and a late jump. Reject by chart review. Portfolio and countertrend time exits create inventory cycles; longer Portfolio cycles restored movement but produced a 41-minute leg.",
+  "Variants": {
+    "rolling-portfolio": "last-reserve-inner",
+    "rolling-patient": "inner-patient-stretch"
+  },
+  "Change": "Existing Portfolio accounts instead review a bounded private inventory allocation every 30-90 seconds, with independent jitter. Each review moves the existing target by 15-35% of the same funded capacity. They can add or trim existing holdings without forced zero inventory at each review. Opposite objectives close first and cool down; maximum episode 600-1200 seconds then mandatory bounded reduction. All real stops, manual protections, child caps, risk limits and IOC execution remain.",
+  "Ablation": "Rolling allocations with original versus patient Stretch policy, same neighboring Maker lane. No new accounts or capital and no public/hidden future price targets.",
+  "Selection": "Complete six-case development and comparable actual OHLC review. Frozen before testing. Holdouts still ungenerated and gates unchanged."
+}

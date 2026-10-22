@@ -1,0 +1,108 @@
+{
+  "Baseline": {
+    "Cases": 6,
+    "MarketHours": 18,
+    "LongestRun": 19.944444444444443,
+    "Pullbacks": 0.3333333333333333,
+    "PullbackDepthTicks": 0.8611111111111869,
+    "PullbackDuration": 0.7222222222222222,
+    "Efficiency10": 0.8598782931704081,
+    "Alternating4Fraction": 0.008771929824561403,
+    "WickFraction": 0.30928846404464555,
+    "MeanMinuteRangePercent": 0.03393432856659165,
+    "FlipRate": 0.0972357170632549,
+    "SpreadP95": 3.2777777777778536,
+    "NoQuoteFraction": 0,
+    "OneSecondRV": 0.29709345042191576,
+    "MedianLongestRun": 20.0,
+    "RunP95": 22,
+    "MeanRange30": 0.5584321693242906,
+    "TargetWindows": 13,
+    "Windows30": 36,
+    "Volume": 289054,
+    "ReversionBuys": 2787,
+    "ReversionSells": 2769,
+    "Transfers": 4477580.030000018,
+    "Recoveries": 47,
+    "Replay": true,
+    "Kinds": {
+      "Reversion": {
+        "EquityChangeExTransfers": -650822.5,
+        "Recoveries": 0,
+        "InitialAboveFloor": 648,
+        "FinalAboveFloor": 646
+      },
+      "Maker": {
+        "EquityChangeExTransfers": -9392484.999999762,
+        "Recoveries": 9,
+        "InitialAboveFloor": 1080,
+        "FinalAboveFloor": 1080
+      },
+      "Momentum": {
+        "EquityChangeExTransfers": 10982869.999999965,
+        "Recoveries": 0,
+        "InitialAboveFloor": 648,
+        "FinalAboveFloor": 648
+      },
+      "Whale": {
+        "EquityChangeExTransfers": 3195047.500000015,
+        "Recoveries": 0,
+        "InitialAboveFloor": 216,
+        "FinalAboveFloor": 216
+      }
+    }
+  },
+  "Candidate": {
+    "Cases": 6,
+    "MarketHours": 18,
+    "LongestRun": 22,
+    "Pullbacks": 0.3333333333333333,
+    "PullbackDepthTicks": 1.6111111111111616,
+    "PullbackDuration": 1.2222222222222223,
+    "Efficiency10": 0.8368074557041096,
+    "Alternating4Fraction": 0.007797270955165692,
+    "WickFraction": 0.3259741264575131,
+    "MeanMinuteRangePercent": 0.03145710122494092,
+    "FlipRate": 0.10387363538217259,
+    "SpreadP95": 3.2222222222221717,
+    "NoQuoteFraction": 0,
+    "OneSecondRV": 0.28906400540747007,
+    "MedianLongestRun": 21.5,
+    "RunP95": 22,
+    "MeanRange30": 0.5212684333296008,
+    "TargetWindows": 9,
+    "Windows30": 36,
+    "Volume": 290207,
+    "ReversionBuys": 13338,
+    "ReversionSells": 12992,
+    "Transfers": 7097514.890000014,
+    "Recoveries": 54,
+    "Replay": true,
+    "Kinds": {
+      "Reversion": {
+        "EquityChangeExTransfers": -1600005.0000000037,
+        "Recoveries": 1,
+        "InitialAboveFloor": 648,
+        "FinalAboveFloor": 648
+      },
+      "Maker": {
+        "EquityChangeExTransfers": -8637410.000000108,
+        "Recoveries": 17,
+        "InitialAboveFloor": 1079,
+        "FinalAboveFloor": 1080
+      },
+      "Momentum": {
+        "EquityChangeExTransfers": 10634615.00000003,
+        "Recoveries": 0,
+        "InitialAboveFloor": 648,
+        "FinalAboveFloor": 648
+      },
+      "Whale": {
+        "EquityChangeExTransfers": 2959620.000000201,
+        "Recoveries": 0,
+        "InitialAboveFloor": 216,
+        "FinalAboveFloor": 216
+      }
+    }
+  }
+}

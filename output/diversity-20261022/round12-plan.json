@@ -1,0 +1,10 @@
+{
+  "Basis": "Longer independent Portfolio cohorts restore current BX movement (.496% RV), but leave a 41-minute leg and 100% long-leg occupancy; reject. Existing trace shows all institution Stretch closures were timed. Saved profiles expose a timing mismatch: one uses a 403-second signal horizon but stops building after 25 seconds and exits after 83 seconds, often far short of its existing funded target.",
+  "Variants": {
+    "inner-patient-stretch": "last-reserve-inner",
+    "diverse-patient-stretch": "last-reserve-diverse"
+  },
+  "Change": "Stretch build lasts at least half its private signal horizon, capped at 120 seconds; hold deadline at least that horizon (max420 seconds here). Stop building immediately if public extension no longer supports the fixed direction. Profit exits, original stops, manual protections, caps, target fractions and child sizes remain authoritative. Portfolio durations return to original policy.",
+  "Ablation": "The same patient countertrend policy is tested with and without the nearest-Maker-lane bridge. All other input data/policies fixed within each parent comparison.",
+  "Selection": "Original six-case development gates and candle review. Separate validation checkpoints remain ungenerated. No grid of durations or random seeds."
+}

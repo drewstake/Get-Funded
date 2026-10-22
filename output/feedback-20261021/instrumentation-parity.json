@@ -1,0 +1,6 @@
+{
+  "FullStateEqual": true,
+  "Step": 10818480,
+  "TradeHash": 88458916,
+  "Compared": "Entire terminal checkpoint: traced versus uninstrumented current-world replay"
+}

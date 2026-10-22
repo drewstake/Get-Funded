@@ -1,0 +1,1638 @@
+{
+  "UniqueDevelopmentRuns": 96,
+  "MeasuredMarketHours": 288,
+  "Checks": [
+    {
+      "Variant": "baseline",
+      "Case": "Aged",
+      "Audit": {
+        "CashError": 1.1050142347812653e-06,
+        "EquityError": -1.0835938155651093e-06,
+        "Hash": 270742361,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 27730656,
+        "Volume": 69523794
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "baseline",
+      "Case": "CurrentBX",
+      "Audit": {
+        "CashError": 1.026783138513565e-06,
+        "EquityError": -2.7245841920375824e-06,
+        "Hash": 356445687,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 32458680,
+        "Volume": 76469529
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "baseline",
+      "Case": "Older",
+      "Audit": {
+        "CashError": 1.0156072676181793e-06,
+        "EquityError": -1.2363307178020477e-06,
+        "Hash": 177767589,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 28008249,
+        "Volume": 69999419
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "baseline",
+      "Case": "Seed104729",
+      "Audit": {
+        "CashError": 7.450580596923828e-09,
+        "EquityError": 2.852175384759903e-08,
+        "Hash": 456751203,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 66493,
+        "Volume": 82731
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "baseline",
+      "Case": "Seed71",
+      "Audit": {
+        "CashError": -9.313225746154785e-10,
+        "EquityError": -1.0360963642597198e-08,
+        "Hash": 1795349041,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 62900,
+        "Volume": 77981
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "baseline",
+      "Case": "Seed7919",
+      "Audit": {
+        "CashError": 0,
+        "EquityError": -3.899913281202316e-08,
+        "Hash": 1679609092,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 62940,
+        "Volume": 77627
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "reserve-delay",
+      "Case": "Aged",
+      "Audit": {
+        "CashError": 1.0603107511997223e-06,
+        "EquityError": -8.172355592250824e-07,
+        "Hash": 1832683470,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 27737149,
+        "Volume": 69530688
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "reserve-delay",
+      "Case": "CurrentBX",
+      "Audit": {
+        "CashError": 1.0603107511997223e-06,
+        "EquityError": -2.73948535323143e-06,
+        "Hash": 1779835058,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 32463318,
+        "Volume": 76474038
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "reserve-delay",
+      "Case": "Older",
+      "Audit": {
+        "CashError": 1.0528601706027985e-06,
+        "EquityError": -1.3015232980251312e-06,
+        "Hash": 352218202,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 28014756,
+        "Volume": 70007716
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "reserve-delay",
+      "Case": "Seed104729",
+      "Audit": {
+        "CashError": 0,
+        "EquityError": -8.447386790066957e-08,
+        "Hash": 575546417,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 60768,
+        "Volume": 76119
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "reserve-delay",
+      "Case": "Seed71",
+      "Audit": {
+        "CashError": 2.7939677238464355e-09,
+        "EquityError": 5.640322342514992e-08,
+        "Hash": 1139626828,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 62861,
+        "Volume": 79120
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "reserve-delay",
+      "Case": "Seed7919",
+      "Audit": {
+        "CashError": 0,
+        "EquityError": -7.788185030221939e-08,
+        "Hash": 2078725430,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 60474,
+        "Volume": 75629
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "reserve-rest",
+      "Case": "Aged",
+      "Audit": {
+        "CashError": 1.07521191239357e-06,
+        "EquityError": -8.265487849712372e-07,
+        "Hash": 1299519773,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 27723402,
+        "Volume": 69515902
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "reserve-rest",
+      "Case": "CurrentBX",
+      "Audit": {
+        "CashError": 1.0603107511997223e-06,
+        "EquityError": -2.8065405786037445e-06,
+        "Hash": 1186227881,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 32447477,
+        "Volume": 76455886
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "reserve-rest",
+      "Case": "Older",
+      "Audit": {
+        "CashError": 1.0603107511997223e-06,
+        "EquityError": -1.2456439435482025e-06,
+        "Hash": 358723090,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 28003779,
+        "Volume": 69992733
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "reserve-rest",
+      "Case": "Seed104729",
+      "Audit": {
+        "CashError": 0,
+        "EquityError": 2.5072949938476086e-08,
+        "Hash": 1222620915,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 56097,
+        "Volume": 70093
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "reserve-rest",
+      "Case": "Seed71",
+      "Audit": {
+        "CashError": 0,
+        "EquityError": 4.7963112592697144e-08,
+        "Hash": 1561052418,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 55982,
+        "Volume": 70205
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "reserve-rest",
+      "Case": "Seed7919",
+      "Audit": {
+        "CashError": -4.6566128730773926e-09,
+        "EquityError": 8.33679223433137e-08,
+        "Hash": 1803601133,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 53806,
+        "Volume": 66803
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "maker-rest",
+      "Case": "Aged",
+      "Audit": {
+        "CashError": 1.07521191239357e-06,
+        "EquityError": -9.364448487758636e-07,
+        "Hash": 1985803315,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 27717871,
+        "Volume": 69509372
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "maker-rest",
+      "Case": "CurrentBX",
+      "Audit": {
+        "CashError": 1.0603107511997223e-06,
+        "EquityError": -2.8996728360652924e-06,
+        "Hash": 39289167,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 32447268,
+        "Volume": 76455075
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "maker-rest",
+      "Case": "Older",
+      "Audit": {
+        "CashError": 1.119915395975113e-06,
+        "EquityError": -1.310836523771286e-06,
+        "Hash": 2024238592,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 27998338,
+        "Volume": 69987089
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "maker-rest",
+      "Case": "Seed104729",
+      "Audit": {
+        "CashError": 0,
+        "EquityError": 1.3166572898626328e-07,
+        "Hash": 1028542543,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 53752,
+        "Volume": 65974
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "maker-rest",
+      "Case": "Seed71",
+      "Audit": {
+        "CashError": 0,
+        "EquityError": -1.3684621080756187e-07,
+        "Hash": 1094597766,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 50314,
+        "Volume": 61782
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "maker-rest",
+      "Case": "Seed7919",
+      "Audit": {
+        "CashError": -9.313225746154785e-10,
+        "EquityError": -3.3818650990724564e-08,
+        "Hash": 1561015531,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 52446,
+        "Volume": 65537
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "maker-no-skew",
+      "Case": "Aged",
+      "Audit": {
+        "CashError": 1.0621733963489532e-06,
+        "EquityError": -1.0426156222820282e-06,
+        "Hash": 1481851809,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 27729208,
+        "Volume": 69522061
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "maker-no-skew",
+      "Case": "CurrentBX",
+      "Audit": {
+        "CashError": 1.0454095900058746e-06,
+        "EquityError": -2.7674250304698944e-06,
+        "Hash": 1724634328,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 32449512,
+        "Volume": 76458023
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "maker-no-skew",
+      "Case": "Older",
+      "Audit": {
+        "CashError": 1.030508428812027e-06,
+        "EquityError": -1.2530945241451263e-06,
+        "Hash": 1676567399,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 27993302,
+        "Volume": 69982049
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "maker-no-skew",
+      "Case": "Seed104729",
+      "Audit": {
+        "CashError": 0,
+        "EquityError": 8.527422323822975e-08,
+        "Hash": 1545188803,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 55175,
+        "Volume": 68840
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "maker-no-skew",
+      "Case": "Seed71",
+      "Audit": {
+        "CashError": 1.1641532182693481e-09,
+        "EquityError": 5.908077582716942e-08,
+        "Hash": 211919766,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 49644,
+        "Volume": 62838
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "maker-no-skew",
+      "Case": "Seed7919",
+      "Audit": {
+        "CashError": -1.3969838619232178e-09,
+        "EquityError": -2.1766754798591137e-07,
+        "Hash": 1199621623,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 49288,
+        "Volume": 61805
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "time-exit-size",
+      "Case": "Aged",
+      "Audit": {
+        "CashError": 1.0584481060504913e-06,
+        "EquityError": -9.718351066112518e-07,
+        "Hash": 2087507504,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 27731352,
+        "Volume": 69525860
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "time-exit-size",
+      "Case": "CurrentBX",
+      "Audit": {
+        "CashError": 1.0007061064243317e-06,
+        "EquityError": -2.566259354352951e-06,
+        "Hash": 795646821,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 32462303,
+        "Volume": 76475121
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "time-exit-size",
+      "Case": "Older",
+      "Audit": {
+        "CashError": 1.0603107511997223e-06,
+        "EquityError": -1.3350509107112885e-06,
+        "Hash": 668093029,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 28012691,
+        "Volume": 70006612
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "time-exit-size",
+      "Case": "Seed104729",
+      "Audit": {
+        "CashError": 0,
+        "EquityError": -7.728522177785635e-08,
+        "Hash": 1882235843,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 69450,
+        "Volume": 88165
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "time-exit-size",
+      "Case": "Seed71",
+      "Audit": {
+        "CashError": 2.7939677238464355e-09,
+        "EquityError": 8.993083611130714e-09,
+        "Hash": 1797655843,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 61195,
+        "Volume": 77798
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "time-exit-size",
+      "Case": "Seed7919",
+      "Audit": {
+        "CashError": 1.1641532182693481e-09,
+        "EquityError": -6.024492904543877e-08,
+        "Hash": 182778356,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 60463,
+        "Volume": 77410
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "value-exit-gate",
+      "Case": "Aged",
+      "Audit": {
+        "CashError": 1.028645783662796e-06,
+        "EquityError": -9.085051715373993e-07,
+        "Hash": 321829460,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 27730284,
+        "Volume": 69524156
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "value-exit-gate",
+      "Case": "CurrentBX",
+      "Audit": {
+        "CashError": 1.030508428812027e-06,
+        "EquityError": -2.735760062932968e-06,
+        "Hash": 427528955,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 32462232,
+        "Volume": 76472788
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "value-exit-gate",
+      "Case": "Older",
+      "Audit": {
+        "CashError": 1.0603107511997223e-06,
+        "EquityError": -1.1618249118328094e-06,
+        "Hash": 1036254414,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 28010986,
+        "Volume": 70003089
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "value-exit-gate",
+      "Case": "Seed104729",
+      "Audit": {
+        "CashError": 0,
+        "EquityError": 1.2456439435482025e-07,
+        "Hash": 1088339393,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 63269,
+        "Volume": 79469
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "value-exit-gate",
+      "Case": "Seed71",
+      "Audit": {
+        "CashError": -5.587935447692871e-09,
+        "EquityError": 1.076841726899147e-08,
+        "Hash": 642514464,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 62124,
+        "Volume": 76430
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "value-exit-gate",
+      "Case": "Seed7919",
+      "Audit": {
+        "CashError": 0,
+        "EquityError": 5.0597009249031544e-08,
+        "Hash": 138908770,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 59049,
+        "Volume": 73385
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "reserve-cost-quote",
+      "Case": "Aged",
+      "Audit": {
+        "CashError": 1.0603107511997223e-06,
+        "EquityError": -1.1264346539974213e-06,
+        "Hash": 211536053,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 27722072,
+        "Volume": 69515535
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "reserve-cost-quote",
+      "Case": "CurrentBX",
+      "Audit": {
+        "CashError": 1.0435469448566437e-06,
+        "EquityError": -2.746935933828354e-06,
+        "Hash": 577058994,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 32457649,
+        "Volume": 76468319
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "reserve-cost-quote",
+      "Case": "Older",
+      "Audit": {
+        "CashError": 1.071486622095108e-06,
+        "EquityError": -1.2866221368312836e-06,
+        "Hash": 2069341529,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 27999785,
+        "Volume": 69989440
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "reserve-cost-quote",
+      "Case": "Seed104729",
+      "Audit": {
+        "CashError": 1.5133991837501526e-09,
+        "EquityError": -5.116453394293785e-08,
+        "Hash": 924359056,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 58159,
+        "Volume": 72988
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "reserve-cost-quote",
+      "Case": "Seed71",
+      "Audit": {
+        "CashError": -1.1641532182693481e-10,
+        "EquityError": 2.561137080192566e-09,
+        "Hash": 594404909,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 58698,
+        "Volume": 73084
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "reserve-cost-quote",
+      "Case": "Seed7919",
+      "Audit": {
+        "CashError": 0,
+        "EquityError": 5.328911356627941e-08,
+        "Hash": 320389923,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 58556,
+        "Volume": 72090
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "inventory-delta",
+      "Case": "Aged",
+      "Audit": {
+        "CashError": 1.119915395975113e-06,
+        "EquityError": -1.0668300092220306e-06,
+        "Hash": 1231656681,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 27725028,
+        "Volume": 69517139
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "inventory-delta",
+      "Case": "CurrentBX",
+      "Audit": {
+        "CashError": 9.969808161258698e-07,
+        "EquityError": -2.834480255842209e-06,
+        "Hash": 1847430097,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 32446399,
+        "Volume": 76454932
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "inventory-delta",
+      "Case": "Older",
+      "Audit": {
+        "CashError": 1.0603107511997223e-06,
+        "EquityError": -1.176726073026657e-06,
+        "Hash": 573353488,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 28001274,
+        "Volume": 69990020
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "inventory-delta",
+      "Case": "Seed104729",
+      "Audit": {
+        "CashError": -1.862645149230957e-09,
+        "EquityError": 8.346978574991226e-08,
+        "Hash": 438761738,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 53531,
+        "Volume": 67691
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "inventory-delta",
+      "Case": "Seed71",
+      "Audit": {
+        "CashError": 0,
+        "EquityError": 1.2485543265938759e-08,
+        "Hash": 770911740,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 52302,
+        "Volume": 65511
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "inventory-delta",
+      "Case": "Seed7919",
+      "Audit": {
+        "CashError": 4.656612873077393e-10,
+        "EquityError": 2.6775524020195007e-09,
+        "Hash": 644793724,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 52781,
+        "Volume": 66098
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "no-skew-reserve-delay",
+      "Case": "Aged",
+      "Audit": {
+        "CashError": 1.030508428812027e-06,
+        "EquityError": -9.532086551189423e-07,
+        "Hash": 2131307512,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 27722364,
+        "Volume": 69514041
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "no-skew-reserve-delay",
+      "Case": "CurrentBX",
+      "Audit": {
+        "CashError": 1.030508428812027e-06,
+        "EquityError": -2.825167030096054e-06,
+        "Hash": 1709794605,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 32446455,
+        "Volume": 76455551
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "no-skew-reserve-delay",
+      "Case": "Older",
+      "Audit": {
+        "CashError": 1.0901130735874176e-06,
+        "EquityError": -1.1525116860866547e-06,
+        "Hash": 545430120,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 27997315,
+        "Volume": 69986514
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "no-skew-reserve-delay",
+      "Case": "Seed104729",
+      "Audit": {
+        "CashError": 7.450580596923828e-09,
+        "EquityError": -7.962808012962341e-08,
+        "Hash": 1627360948,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 49759,
+        "Volume": 64295
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "no-skew-reserve-delay",
+      "Case": "Seed71",
+      "Audit": {
+        "CashError": 0,
+        "EquityError": -3.777677193284035e-08,
+        "Hash": 1380070687,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 57245,
+        "Volume": 70663
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "no-skew-reserve-delay",
+      "Case": "Seed7919",
+      "Audit": {
+        "CashError": 0,
+        "EquityError": 7.078051567077637e-08,
+        "Hash": 2012645172,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 51098,
+        "Volume": 64216
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "sparse-touch",
+      "Case": "Aged",
+      "Audit": {
+        "CashError": 1.073349267244339e-06,
+        "EquityError": -8.004717528820038e-07,
+        "Hash": 1750068442,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 27734738,
+        "Volume": 69527453
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "sparse-touch",
+      "Case": "CurrentBX",
+      "Audit": {
+        "CashError": 1.0603107511997223e-06,
+        "EquityError": -2.789776772260666e-06,
+        "Hash": 372427334,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 32458164,
+        "Volume": 76468907
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "sparse-touch",
+      "Case": "Older",
+      "Audit": {
+        "CashError": 1.0230578482151031e-06,
+        "EquityError": -1.1916272342205048e-06,
+        "Hash": 1381181812,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 28010556,
+        "Volume": 70001719
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "sparse-touch",
+      "Case": "Seed104729",
+      "Audit": {
+        "CashError": 0,
+        "EquityError": 1.0762596502900124e-07,
+        "Hash": 638547120,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 66406,
+        "Volume": 82255
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "sparse-touch",
+      "Case": "Seed71",
+      "Audit": {
+        "CashError": 3.725290298461914e-09,
+        "EquityError": 1.0809162631630898e-07,
+        "Hash": 617150029,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 59358,
+        "Volume": 73747
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "sparse-touch",
+      "Case": "Seed7919",
+      "Audit": {
+        "CashError": -1.3969838619232178e-09,
+        "EquityError": 1.792795956134796e-08,
+        "Hash": 649653021,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 60274,
+        "Volume": 74231
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "no-skew-sparse-touch",
+      "Case": "Aged",
+      "Audit": {
+        "CashError": 1.0603107511997223e-06,
+        "EquityError": -9.774230420589447e-07,
+        "Hash": 612532041,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 27725551,
+        "Volume": 69517389
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "no-skew-sparse-touch",
+      "Case": "CurrentBX",
+      "Audit": {
+        "CashError": 1.0565854609012604e-06,
+        "EquityError": -2.705957740545273e-06,
+        "Hash": 72938877,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 32452957,
+        "Volume": 76463089
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "no-skew-sparse-touch",
+      "Case": "Older",
+      "Audit": {
+        "CashError": 1.0491348803043365e-06,
+        "EquityError": -1.1562369763851166e-06,
+        "Hash": 1832253106,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 28002223,
+        "Volume": 69992611
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "no-skew-sparse-touch",
+      "Case": "Seed104729",
+      "Audit": {
+        "CashError": -7.450580596923828e-09,
+        "EquityError": -6.746267899870872e-08,
+        "Hash": 1239276631,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 59421,
+        "Volume": 74540
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "no-skew-sparse-touch",
+      "Case": "Seed71",
+      "Audit": {
+        "CashError": 6.752088665962219e-09,
+        "EquityError": -5.2241375669837e-08,
+        "Hash": 1822846900,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 54608,
+        "Volume": 68416
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "no-skew-sparse-touch",
+      "Case": "Seed7919",
+      "Audit": {
+        "CashError": 0,
+        "EquityError": -1.9150320440530777e-07,
+        "Hash": 1482144400,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 51086,
+        "Volume": 64495
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "whale-urgency",
+      "Case": "Aged",
+      "Audit": {
+        "CashError": 1.0901130735874176e-06,
+        "EquityError": -8.712522685527802e-07,
+        "Hash": 813440740,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 27738126,
+        "Volume": 69532399
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "whale-urgency",
+      "Case": "CurrentBX",
+      "Audit": {
+        "CashError": 1.0603107511997223e-06,
+        "EquityError": -2.6891939342021942e-06,
+        "Hash": 211131447,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 32464204,
+        "Volume": 76475614
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "whale-urgency",
+      "Case": "Older",
+      "Audit": {
+        "CashError": 1.0901130735874176e-06,
+        "EquityError": -1.2475065886974335e-06,
+        "Hash": 772241824,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 28017089,
+        "Volume": 70009229
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "whale-urgency",
+      "Case": "Seed104729",
+      "Audit": {
+        "CashError": -1.5133991837501526e-09,
+        "EquityError": 5.529727786779404e-08,
+        "Hash": 884226310,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 68229,
+        "Volume": 84924
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "whale-urgency",
+      "Case": "Seed71",
+      "Audit": {
+        "CashError": 9.313225746154785e-10,
+        "EquityError": -7.622293196618557e-08,
+        "Hash": 1622726931,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 72669,
+        "Volume": 88792
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "whale-urgency",
+      "Case": "Seed7919",
+      "Audit": {
+        "CashError": 0,
+        "EquityError": 3.899913281202316e-08,
+        "Hash": 1036942223,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 67995,
+        "Volume": 84942
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "no-skew-sparse-whale",
+      "Case": "Aged",
+      "Audit": {
+        "CashError": 1.0901130735874176e-06,
+        "EquityError": -8.284114301204681e-07,
+        "Hash": 1550710890,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 27732072,
+        "Volume": 69524260
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "no-skew-sparse-whale",
+      "Case": "CurrentBX",
+      "Audit": {
+        "CashError": 1.0565854609012604e-06,
+        "EquityError": -2.9387883841991425e-06,
+        "Hash": 451358670,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 32458700,
+        "Volume": 76470112
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "no-skew-sparse-whale",
+      "Case": "Older",
+      "Audit": {
+        "CashError": 1.028645783662796e-06,
+        "EquityError": -1.1972151696681976e-06,
+        "Hash": 831453884,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 28008795,
+        "Volume": 69999899
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "no-skew-sparse-whale",
+      "Case": "Seed104729",
+      "Audit": {
+        "CashError": 5.587935447692871e-09,
+        "EquityError": -7.12461769580841e-08,
+        "Hash": 354473566,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 66231,
+        "Volume": 82353
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "no-skew-sparse-whale",
+      "Case": "Seed71",
+      "Audit": {
+        "CashError": 7.450580596923828e-09,
+        "EquityError": -1.3096723705530167e-07,
+        "Hash": 1367852563,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 64153,
+        "Volume": 79756
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "no-skew-sparse-whale",
+      "Case": "Seed7919",
+      "Audit": {
+        "CashError": 3.3760443329811096e-09,
+        "EquityError": -1.0969233699142933e-07,
+        "Hash": 413053351,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 60884,
+        "Volume": 77025
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "no-skew-sparse-time",
+      "Case": "Aged",
+      "Audit": {
+        "CashError": 1.030508428812027e-06,
+        "EquityError": -8.954666554927826e-07,
+        "Hash": 2108029552,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 27731681,
+        "Volume": 69525743
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "no-skew-sparse-time",
+      "Case": "CurrentBX",
+      "Audit": {
+        "CashError": 1.0789372026920319e-06,
+        "EquityError": -2.648215740919113e-06,
+        "Hash": 1276168005,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 32455637,
+        "Volume": 76466936
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "no-skew-sparse-time",
+      "Case": "Older",
+      "Audit": {
+        "CashError": 1.07521191239357e-06,
+        "EquityError": -1.1599622666835785e-06,
+        "Hash": 1931522396,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 28004571,
+        "Volume": 69996174
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "no-skew-sparse-time",
+      "Case": "Seed104729",
+      "Audit": {
+        "CashError": 7.450580596923828e-09,
+        "EquityError": 8.629285730421543e-08,
+        "Hash": 931554295,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 59764,
+        "Volume": 76414
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "no-skew-sparse-time",
+      "Case": "Seed71",
+      "Audit": {
+        "CashError": 9.313225746154785e-10,
+        "EquityError": 9.190989658236504e-08,
+        "Hash": 1222243991,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 57400,
+        "Volume": 71308
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "no-skew-sparse-time",
+      "Case": "Seed7919",
+      "Audit": {
+        "CashError": 0,
+        "EquityError": -6.149639375507832e-08,
+        "Hash": 2106250135,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 54639,
+        "Volume": 69651
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "no-skew-sparse30-whale",
+      "Case": "Aged",
+      "Audit": {
+        "CashError": 1.030508428812027e-06,
+        "EquityError": -9.085051715373993e-07,
+        "Hash": 969273654,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 27733276,
+        "Volume": 69526435
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "no-skew-sparse30-whale",
+      "Case": "CurrentBX",
+      "Audit": {
+        "CashError": 1.0603107511997223e-06,
+        "EquityError": -2.7283094823360443e-06,
+        "Hash": 654801459,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 32458662,
+        "Volume": 76468601
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "no-skew-sparse30-whale",
+      "Case": "Older",
+      "Audit": {
+        "CashError": 1.0603107511997223e-06,
+        "EquityError": -1.0351650416851044e-06,
+        "Hash": 188302338,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 28011171,
+        "Volume": 70002620
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "no-skew-sparse30-whale",
+      "Case": "Seed104729",
+      "Audit": {
+        "CashError": 0,
+        "EquityError": 1.979060471057892e-09,
+        "Hash": 1676093584,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 62875,
+        "Volume": 77594
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "no-skew-sparse30-whale",
+      "Case": "Seed71",
+      "Audit": {
+        "CashError": 2.648448571562767e-09,
+        "EquityError": 2.7474015951156616e-08,
+        "Hash": 230864907,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 63314,
+        "Volume": 78003
+      },
+      "Replay": true
+    },
+    {
+      "Variant": "no-skew-sparse30-whale",
+      "Case": "Seed7919",
+      "Audit": {
+        "CashError": -9.313225746154785e-10,
+        "EquityError": 4.9942173063755035e-08,
+        "Hash": 1290620628,
+        "Inventory": {
+          "BG": 0,
+          "BT": 0,
+          "BX": 0
+        },
+        "Trades": 64049,
+        "Volume": 77980
+      },
+      "Replay": true
+    }
+  ]
+}
