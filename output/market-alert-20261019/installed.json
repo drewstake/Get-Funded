@@ -1,8 +1,0 @@
-{
-  "Installed": {
-    "ServerScriptService.MarketReign.MarketServer": "f0fdac8fedad0f05dd13f83464aed9648296b96058005650149c4f4099302b97",
-    "ReplicatedStorage.MarketReign.TerminalUI": "26b0300c033dda335c2e431c38e9a2249b537c63e9880d5e3492854ec8e8590c",
-    "ReplicatedStorage.MarketReign.MarketEventBanner": "cdf97afbbd631363c64640dc7aad098e4b1a38c078ab34b79e0d11a70685067a",
-    "ReplicatedStorage.MarketReign.MarketClient": "12380903c68387e8311301dec2e646f0183479ecafdeaaf94f8585e38f4f76d9"
-  }
-}

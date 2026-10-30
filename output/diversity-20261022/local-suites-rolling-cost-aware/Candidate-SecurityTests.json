@@ -1,1 +1,0 @@
-{"Ok":true,"Results":[{"Detail":"Passed","Name":"F3: reply queues stay bounded by count and age for clients that never subscribe","Passed":true},{"Detail":"[string \"Candidate.SecurityTests\"]:68: assertion failed!","Name":"S1: missing liquidity never fabricates fills, balances, or round-trip profit","Passed":false}],"Suite":"SecurityTests"}

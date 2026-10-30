@@ -1,5 +1,0 @@
-{
-  "Decision": "Aborted implementation error; do not evaluate or promote",
-  "Reason": "Rolling initialization overwrote an inherited Reserve reducing phase. Found by code review before benchmark completion; root process and child Lune jobs stopped. Preserve source manifest and partial evidence.",
-  "ValidationConsumed": false
-}

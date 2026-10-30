@@ -1,8 +1,0 @@
-{
-  "Basis": "Balanced funded-order fixture proves constant-inventory price skew is repeatedly reapplied to endogenous last price (40\u2013160 ticks/40 balanced cycles). No-skew four completed development charts have much smaller waves but weaker movement. Reserve delay alone preserves/increases movement but fails shape gates across all six cases.",
-  "Variants": {
-    "inventory-delta": "Apply changes in rounded own inventory reservation discount, rather than repeatedly applying its full level to last. Persist last discount without additional RNG. All other baseline mechanisms remain.",
-    "no-skew-reserve-delay": "Factorial interaction: combine independently tested no-skew and existing Reserve refill-delay semantics. Tests whether changed depth availability restores useful movement after removing recurrence."
-  },
-  "Gates": "All original and added gates unchanged; independent holdouts still untouched."
-}

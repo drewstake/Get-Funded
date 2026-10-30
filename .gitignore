@@ -1,0 +1,19 @@
+# Local generated evidence, snapshots and recovery material.
+/output/
+/tmp/
+/backups/
+
+# Local environments and tool caches.
+.venv*/
+__pycache__/
+*.py[cod]
+node_modules/
+
+# Studio/build transient files; the current place and scene input stay tracked.
+*.rbxl.lock
+/build/.place-build-*/
+/build/current-verification.json
+
+# Reproducible media dependencies and render logs.
+/assets/video/tools/
+/assets/video/source/encode.log

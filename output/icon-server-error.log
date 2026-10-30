@@ -1,4 +1,0 @@
-127.0.0.1 - - [28/Sep/2026 10:32:13] "GET /funded-balance.png HTTP/1.1" 200 -
-127.0.0.1 - - [28/Sep/2026 10:32:18] "GET /account-equity.png HTTP/1.1" 200 -
-127.0.0.1 - - [28/Sep/2026 10:32:24] "GET /profit-arrow.png HTTP/1.1" 200 -
-127.0.0.1 - - [28/Sep/2026 10:32:29] "GET /unlock-trophy.png HTTP/1.1" 200 -

@@ -1,8 +1,0 @@
-{
-  "Touch": "Enum.DevTouchMovementMode.UserChoice",
-  "JumpPower": 50,
-  "Speed": 16,
-  "Computer": "Enum.DevComputerMovementMode.UserChoice",
-  "AutoJump": true,
-  "JumpHeight": 7.199999809265137
-}

@@ -1,7 +1,0 @@
-127.0.0.1 - - [28/Sep/2026 10:42:30] "GET /trade.png HTTP/1.1" 200 -
-127.0.0.1 - - [28/Sep/2026 10:42:30] "GET /accounts.png HTTP/1.1" 200 -
-127.0.0.1 - - [28/Sep/2026 10:42:31] "GET /positions.png HTTP/1.1" 200 -
-127.0.0.1 - - [28/Sep/2026 10:42:37] "GET /review.png HTTP/1.1" 200 -
-127.0.0.1 - - [28/Sep/2026 10:42:43] "GET /learn.png HTTP/1.1" 200 -
-127.0.0.1 - - [28/Sep/2026 10:42:50] "GET /settings.png HTTP/1.1" 200 -
-127.0.0.1 - - [28/Sep/2026 10:42:56] "GET /help.png HTTP/1.1" 200 -

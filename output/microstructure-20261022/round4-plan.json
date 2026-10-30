@@ -1,9 +1,0 @@
-{
-  "Basis": "Removing repeated Maker skew cuts minute volatility by 21% and 30-minute range by 47%, while much directional ten-close concentration disappears. The first lane has six of the 60 Makers. Doubling the number of lanes keeps all capital/agents/size limits but places three in each lane, reducing near-touch depth without injecting directional flow.",
-  "Variants": [
-    "sparse-touch",
-    "no-skew-sparse-touch"
-  ],
-  "Selection": "Isolated depth effect and factorial interaction with previously tested no-skew. Same fixed gates. This is a frozen research config; no ConfigService enrollment, live testing override or live refresh is used because exact checkpoint replay and one shared exchange are required.",
-  "Limits": "Count20 is one predeclared discrete depth intervention, not a sweep. Lane spacing, all other config fields, recovery, capital, safeguards and margins are unchanged. A promoted release would require versioned adoption and renewed validation."
-}

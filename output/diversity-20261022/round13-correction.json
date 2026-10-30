@@ -1,9 +1,0 @@
-{
-  "Originals": "rolling-portfolio and rolling-patient aborted for implementation error, not tuned market performance",
-  "Variants": [
-    "rolling-portfolio-safe",
-    "rolling-patient-safe"
-  ],
-  "Correction": "Preserve inherited reducing phases during allocator initialization; withdrawal-only Reserve mode takes precedence. All intent, funding and risk parameters unchanged. Focused tests must pass before benchmarks.",
-  "Holdouts": "Untouched"
-}

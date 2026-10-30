@@ -1,5 +1,0 @@
-{
-  "Decision": "Runtime failure; no complete six-case comparison",
-  "Reason": "One-sided public quote caused existing Whale and/or fallback error; preserve partial successes and failure logs. Refreeze corrected candidate before rerunning.",
-  "ValidationConsumed": false
-}

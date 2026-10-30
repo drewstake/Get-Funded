@@ -1,0 +1,21 @@
+Implemented 2026-10-01 with built-in Roblox Studio tools.
+
+Source: src/shared/ChartView.luau and src/shared/TerminalUI.luau.
+Seven uploaded image IDs are recorded in roblox-assets.json.
+Desktop toolbar uses larger responsive buttons and ImageLabels; the tools menu uses the same icons beside text labels. Delete selected shares the trash icon with Clear drawings.
+Normal, hover, selected, and magnet states retain the existing glossy button styling and command handlers.
+
+Verification in Roblox Studio:
+- Both edited modules compile and were installed in ReplicatedStorage.MarketReign.
+- Edit preview regenerated successfully.
+- All seven desktop assets fetched successfully and rendered.
+- Real clicks selected Crosshair, Trend, Line, Rect, and Pan.
+- Magnet toggled on and off.
+- Rectangle placement created one drawing; Clear removed it.
+- iPhone 17 Pro landscape tools menu rendered; scrolling exposed Delete, Clear, and Auto.
+- Mobile magnet click toggled state and closed the tools menu.
+- Console reported no runtime errors.
+- Device simulation restored to default; test drawing removed and Pan restored.
+
+Backups: backups/chart-tool-icons-20261001/ (local and pre-change Studio sources).
+The running Studio session and source files are updated. No experience publish was performed.
