@@ -1,4 +1,0 @@
-Studio sources before this change (line count : whole-file hash, CR stripped):
-DepletionTests=136:60dd8ece FundedAccounts=580:2b709cb2 TerminalUI=2515:6ce667c1
-Studio TerminalUI equals local src/TerminalUI.luau except 2 extra blank lines (1464, 1466).
-Studio FundedAccounts is the pre-security-fix version (security fixes were never synced to Studio).

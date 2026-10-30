@@ -1,8 +1,0 @@
-@@ ServerScriptService.MarketReign.TradeLimitsTests
-    assert(math.abs(a.Balance+beyond)<1e-5 and #a.History==1 and math.abs(a.Realized+a.Base+beyond)<1e-5)
-@@==
-    -- The exit is tick-rounded, so on a 0.1-tick market (BG) the loss can differ from Base+beyond by under a tick per contract.
-    local loss=(p.Entry-exit)*side*qty*spec.Multiplier
-    assert(loss>=a.Base and math.abs(loss-(a.Base+beyond))<=qty*spec.Tick*spec.Multiplier and #a.History==1)
-    assert(math.abs(a.Realized+loss)<1e-5 and math.abs(a.Balance-(a.Base-loss))<1e-5)
-@@end

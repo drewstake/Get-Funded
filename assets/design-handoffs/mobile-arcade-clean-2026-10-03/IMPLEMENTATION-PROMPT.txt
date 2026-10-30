@@ -1,0 +1,72 @@
+Implement the approved mobile "Arcade Clean" design for the Roblox game Get Funded!.
+
+Workspace:
+C:\Users\drews\Development\Roblox Dev\Get Funded!
+
+Handoff folder:
+C:\Users\drews\Development\Roblox Dev\Get Funded!\design-handoffs\mobile-arcade-clean-2026-10-03
+
+Read approved-mobile-design.png in this folder before editing. It is the final approved visual reference and contains both portrait and landscape. The specific final revision removes the portrait "Position • None / You have no open position" card and gives its entire space to the chart. current-portrait.png and current-landscape.png show the user's starting screens for context; they are not the target design.
+
+Implement the design in the existing game, then verify it. Do not stop at a plan or create more design alternatives.
+
+Scope and priorities
+- This is a phone presentation/layout change to the existing trading game. Keep its identity and all existing gameplay, screens, feature access, and live data behavior.
+- Follow the approved mockup for the mobile Trade screen's structure, proportions, visual hierarchy, colors, and compact controls.
+- Preserve desktop presentation and behavior unless a narrowly scoped shared fix is essential. Do not restyle Progress, Stats, Leaderboard, or Shop interiors as part of this task.
+- Treat the image as a visual specification, not as a feature inventory. Existing functionality must remain reachable even when it is not shown in the static mockup.
+- Use native Roblox GUI elements and the existing UI components/assets. Do not implement the screen as a single image or fake an interactive chart with a texture.
+- No changes to account balances, progression, trading rules, order semantics, persistence, entitlements, or the market engine.
+
+Approved mobile layout
+Portrait:
+1. Compact game header and a single shallow account strip showing live Balance, Open P&L, and Next Goal/progress.
+2. Chart header with the existing instrument selector, live price/change, and chart-control access; compact timeframe controls underneath.
+3. A large actual candlestick plotting area. There must be NO "Position • None" card, no "You have no open position" filler, and no spacer reserving that card's old height. Extend the plot, grid, candles, and right axis into the recovered space; do not just enlarge a wrapper or add padding.
+4. Beneath the chart, a compact Quantity minus/value/plus control beside a clearly labeled Risk controls affordance.
+5. Equal, prominent BUY and SELL buttons side by side.
+6. Compact bottom navigation.
+
+Landscape:
+1. Reflow into the wide layout shown in the approved image: compact header/account summary, a dominant chart on the left, and a narrow trade-control column on the right.
+2. Right column contains quantity, Risk controls, and stacked BUY/SELL actions.
+3. Compact navigation at the bottom. Do not simply scale down the portrait layout or distort the chart.
+
+Keep the rich navy/blue surfaces, purple selected controls, mint-green BUY, pink SELL, rounded typography, and recognizable existing game icons. Match the approved image rather than the superseded Matte Navy or Trade Drawer proposals. Avoid oversized borders, large redundant headings, and decorative padding that consumes the recovered chart space.
+
+The reference board's captions, phone framing, clock, battery/wireless indicators, and Roblox system controls are presentation/context, not custom game widgets to recreate. Respect Roblox/device safe areas through the existing platform mechanisms.
+
+Preserve functionality while using the compact layout
+- The mockup shows Trade, Progress, Stats, More. If implementing that mobile navigation, More must expose the existing Leaderboard and Shop destinations plus relevant existing menu actions, with clear labels and working return navigation. Do not silently drop either destination.
+- Risk controls must open the existing stop-loss/take-profit settings, preserving enabled/off states, values, validation, Save/Cancel behavior, preference persistence, and the distinction between settings for a new order and amendments to an existing position.
+- Keep Level 2 and its existing entitlement/loading/unavailable states accessible through an appropriate existing secondary menu or order-settings surface. Preserve Market/Limit controls and working-order management.
+- Preserve current-position details, P&L, closing, cancellation, and relevant activity/history access. The user's removal concerns the EMPTY position placeholder, not the position-management feature. Use the existing activity/position surface or a compact entry point when a position actually exists; do not reintroduce a permanent empty strip.
+- Keep chart tools, Auto/reset behavior, symbol/timeframe switching, touch pan/zoom, drawing tools, and stop/target interactions reachable and functional.
+- Reuse current order handlers, pending states, rejection feedback, and double-submit protections. BUY/SELL must remain stable under presses, rejections, fills, and position changes.
+- Never hardcode the mockup's $750.00, +$0.00, 16/100, prices, candle pattern, or stop/target values. Bind to actual current session/configuration data.
+- Keep chart rendering live during appropriate popup states, while preserving input blocking beneath overlays.
+
+Repository starting points (reinspect current versions before changing them)
+- src/shared/TerminalUI.luau: main UI assembly and responsive layout. Relevant existing helpers include nav, navigate, accountCards, chart, mobileDock, quantity, tradeButtons, openProtection/protectionPopup, orderOptions, level2, updateTicketPosition, and renderNow.
+- src/shared/ChartView.luau: BuildChrome, BuildControls, Paint, chart geometry and input mapping.
+- src/shared/ChartViewport.luau and src/shared/ChartPaintPool.luau: preserve viewport behavior and rendering efficiency.
+- src/shared/UIFeedback.luau: preserve feedback lifecycle and stable action geometry.
+- src/client/TradingClient.client.luau: client mount and Roblox controls.
+- The current project uses ReplicatedStorage.MarketReign for shared modules and StarterGui.MarketReign for the GUI. Confirm the actual open place before syncing changes.
+- Relevant existing helpers include tools/studio/RefreshStudioPreview.luau, tools/experiments/CompileSources.luau, tools/studio/ValidateTradingUIFixes.luau, tools/studio/ValidateTradeControls.luau, tools/studio/ValidateTradePreferences.luau, tools/studio/ValidateChartInteractions.luau, and tools/experiments/AuditColorfulUI.luau.
+- Read existing source and applicable AGENTS.md instructions. Historical validation scripts may assume older layouts or account fixtures; inspect them before use and adapt only the affected expectations. Do not treat old reports as evidence for the new change.
+- "Position • None" originated in the design concept and may not exist verbatim in source. Do not remove unrelated real position-handling code to satisfy a text search.
+
+Implementation and verification
+1. Inspect the repository, local edits, current Studio state, and existing responsive logic. Preserve unrelated work and back up files/place data before updating the Studio copy. Use scoped mobile layout/style changes.
+2. Derive sizes from the available content area after safe insets and navigation. Give remaining height to the actual plot. Do not solve fitting by shrinking every touch target/text uniformly. Primary touch controls should be comfortably tappable (aim for at least 44 logical pixels, around 48-52 for BUY/SELL).
+3. Keep geometry consistent between initial layout, resize/orientation changes, retained ticket refreshes, and chart repaint/input mapping. Do not introduce per-frame GUI rebuilds or duplicate event connections.
+4. Validate at 390x844 portrait and 844x390 landscape, plus 320x568 and another taller phone. Check desktop regressions at 1280x720 and 1920x1080. Account for the distinction between device viewport and usable GUI area.
+5. Inspect real rendered screenshots in both orientations against approved-mobile-design.png. Check clipping, text fit, all touch controls, chart/price-axis bounds, safe areas, keyboard behavior for editable fields, and working popup navigation.
+6. Exercise no position, open long/short position, pending order, successful order, rejection, closing, and changes in symbol/timeframe. Verify risk settings save/cancel, navigation to all five existing destinations, and Level 2 access. Use isolated fixtures/sandbox data for order tests.
+7. Run available compilation and relevant UI/chart/interaction checks. Do not claim a test passed when its runtime or Studio connection was unavailable; report exact limitations.
+8. When Studio access is available, synchronize the changed source into the correct open local place, refresh the preview using the existing workflow, and save a local place artifact. Verify local source and Studio are consistent. Do not publish a live release or modify saved player data.
+9. Save before/after or final portrait/landscape screenshots and a concise verification report under this handoff folder (for example implementation-results/).
+
+Finish with the files changed, what was implemented, screenshots, checks actually run, and any remaining limitation. The result should be a functioning phone UI matching the approved concept, with the reclaimed chart space and existing game capabilities preserved.
+

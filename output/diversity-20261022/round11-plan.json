@@ -1,7 +1,0 @@
-{
-  "Basis": "Nearest-lane bridge passes all aggregate gates but CurrentBX minute RV .357% fails the fixed .430% floor. Its current chart still has a prolonged small-motion section. Reassignment traces show portfolio mandates mostly time-limited; all currently share one 70-240 second hold range.",
-  "Variant": "inner-multihorizon",
-  "Change": "Portfolio accounts independently select short (.5x), existing (1x) or longer (3x) build/hold/cooldown durations from private saved RNG. Hold range is now 35-720 seconds across cohorts. Start delays remain private and unchanged. Stretch accounts, signal thresholds, maximum target, child size, execution cap and funding remain unchanged.",
-  "Hypothesis": "Overlapping inventory demand on distinct horizons preserves finite persistent movement without a shared directional clock or direct price control. Longer builds may fill larger portions of the existing funded objective, so funding/endurance must be rechecked.",
-  "Selection": "Same six development cases and unchanged gates/chart review. No independent validation data has been generated or read."
-}

@@ -1,7 +1,0 @@
-{
-  "Basis": "Read-only CurrentBX quote statistics show half-spread <=3 for every BX/BG sampled second and 99.5% of BT seconds, while actual spreads repeatedly reach 9/27 ticks. Requested-width cap failed. This points to gaps after depletion, not ordinary requested widths.",
-  "Variant": "last-reserve-contiguous",
-  "Change": "Place successive independent Maker lanes one tick apart in BX/BG and three ticks in BT (same price-scale ratio). Keep 20 lanes and three funded Makers per lane, all quantities and refill delays. The book may still be empty or wide; no forced quotes, price writes or refill.",
-  "Hypothesis": "Nearby independently funded next levels absorb depletion without increasing the number at the best quote. Observe the movement/liquidity tradeoff under identical institutional order flow policies.",
-  "Selection": "Unchanged six-case development gates and chart review. Holdouts remain untouched."
-}

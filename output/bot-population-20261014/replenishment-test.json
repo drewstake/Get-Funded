@@ -1,4 +1,0 @@
-{
-  "Detail": "Manual deposits preserve trading P&L, record funding, skip retiring agents and retry idempotently.",
-  "Passed": true
-}

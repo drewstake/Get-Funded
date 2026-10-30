@@ -1,0 +1,674 @@
+{
+  "version": 1,
+  "base": {
+    "file": "build/scene-input.zip",
+    "member": "Get Funded!.rbxl",
+    "sha256": "eb0b956350996b41836842a1c26af5db8b41f5c6d00b363d4928b926cdde4c13",
+    "archiveSha256": "4d610b907f736c5ed9563a79faa61a152258b8fd2115288799ca24b487bc59f7"
+  },
+  "containers": {
+    "ReplicatedFirst": "ReplicatedFirst",
+    "ReplicatedStorage.MarketReign": "Folder",
+    "ServerScriptService.MarketReign": "Folder",
+    "StarterGui.MarketReign": "ScreenGui",
+    "StarterPlayer.StarterPlayerScripts": "StarterPlayerScripts"
+  },
+  "scripts": [
+    {
+      "file": "src/server/AbsenceSummary.luau",
+      "path": "ServerScriptService.MarketReign.AbsenceSummary",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/AccountAdmission.luau",
+      "path": "ServerScriptService.MarketReign.AccountAdmission",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/AccountUpgradeTests.luau",
+      "path": "ServerScriptService.MarketReign.AccountUpgradeTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/AmountInputTests.luau",
+      "path": "ServerScriptService.MarketReign.AmountInputTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/AwayView.luau",
+      "path": "ReplicatedStorage.MarketReign.AwayView",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/BXExpansionTests.luau",
+      "path": "ServerScriptService.MarketReign.BXExpansionTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/BXOnlyTests.luau",
+      "path": "ServerScriptService.MarketReign.BXOnlyTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/BadgeArt.luau",
+      "path": "ReplicatedStorage.MarketReign.BadgeArt",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/BotExitRetry.luau",
+      "path": "ServerScriptService.MarketReign.BotExitRetry",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/BotExitRetryTests.luau",
+      "path": "ServerScriptService.MarketReign.BotExitRetryTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/BotFairnessTests.luau",
+      "path": "ServerScriptService.MarketReign.BotFairnessTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/BotInventory.luau",
+      "path": "ServerScriptService.MarketReign.BotInventory",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/BotInventoryTests.luau",
+      "path": "ServerScriptService.MarketReign.BotInventoryTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/BotLiquidity.luau",
+      "path": "ServerScriptService.MarketReign.BotLiquidity",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/BotMomentum.luau",
+      "path": "ServerScriptService.MarketReign.BotMomentum",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/BotMomentumTests.luau",
+      "path": "ServerScriptService.MarketReign.BotMomentumTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/BotOrderFlow.luau",
+      "path": "ServerScriptService.MarketReign.BotOrderFlow",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/BotOrderFlowTests.luau",
+      "path": "ServerScriptService.MarketReign.BotOrderFlowTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/BotParticipation.luau",
+      "path": "ServerScriptService.MarketReign.BotParticipation",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/BotParticipationTests.luau",
+      "path": "ServerScriptService.MarketReign.BotParticipationTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/BotPopulation.luau",
+      "path": "ServerScriptService.MarketReign.BotPopulation",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/BotPopulationTests.luau",
+      "path": "ServerScriptService.MarketReign.BotPopulationTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/BotPublicInformationTests.luau",
+      "path": "ServerScriptService.MarketReign.BotPublicInformationTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/BotRefresh.luau",
+      "path": "ServerScriptService.MarketReign.BotRefresh",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/BotRefreshTests.luau",
+      "path": "ServerScriptService.MarketReign.BotRefreshTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/BotSignals.luau",
+      "path": "ServerScriptService.MarketReign.BotSignals",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/BotSignalsTests.luau",
+      "path": "ServerScriptService.MarketReign.BotSignalsTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/BotStats.luau",
+      "path": "ServerScriptService.MarketReign.BotStats",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/BotStatsTests.luau",
+      "path": "ServerScriptService.MarketReign.BotStatsTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/BotStatsView.luau",
+      "path": "ReplicatedStorage.MarketReign.BotStatsView",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/BotValue.luau",
+      "path": "ServerScriptService.MarketReign.BotValue",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/BotWhale.luau",
+      "path": "ServerScriptService.MarketReign.BotWhale",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/BotWhaleTests.luau",
+      "path": "ServerScriptService.MarketReign.BotWhaleTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/CapacityTests.luau",
+      "path": "ServerScriptService.MarketReign.CapacityTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/ChartPaintPool.luau",
+      "path": "ReplicatedStorage.MarketReign.ChartPaintPool",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/ChartPaintPoolTests.luau",
+      "path": "ReplicatedStorage.MarketReign.ChartPaintPoolTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/ChartTimeframes.luau",
+      "path": "ReplicatedStorage.MarketReign.ChartTimeframes",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/ChartTools.luau",
+      "path": "ReplicatedStorage.MarketReign.ChartTools",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/ChartToolsTests.luau",
+      "path": "ReplicatedStorage.MarketReign.ChartToolsTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/ChartView.luau",
+      "path": "ReplicatedStorage.MarketReign.ChartView",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/ChartViewport.luau",
+      "path": "ReplicatedStorage.MarketReign.ChartViewport",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/ChartViewportTests.luau",
+      "path": "ReplicatedStorage.MarketReign.ChartViewportTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/CheckpointCompatibilityTests.luau",
+      "path": "ServerScriptService.MarketReign.CheckpointCompatibilityTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/ClosedTradePnlTests.luau",
+      "path": "ServerScriptService.MarketReign.ClosedTradePnlTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/Confetti.luau",
+      "path": "ReplicatedStorage.MarketReign.Confetti",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/ConnectionPanel.luau",
+      "path": "ReplicatedStorage.MarketReign.ConnectionPanel",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/ConnectionStatus.luau",
+      "path": "ReplicatedStorage.MarketReign.ConnectionStatus",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/ConnectionTests.luau",
+      "path": "ServerScriptService.MarketReign.ConnectionTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/ContractLimits.luau",
+      "path": "ReplicatedStorage.MarketReign.ContractLimits",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/DemoMarket.luau",
+      "path": "ReplicatedStorage.MarketReign.DemoMarket",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/DepthPurchase.luau",
+      "path": "ReplicatedStorage.MarketReign.DepthPurchase",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/DepthRealismTests.luau",
+      "path": "ServerScriptService.MarketReign.DepthRealismTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/ExchangeRouter.luau",
+      "path": "ServerScriptService.MarketReign.ExchangeRouter",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/ExecutionChoiceTests.luau",
+      "path": "ServerScriptService.MarketReign.ExecutionChoiceTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/ExecutionIntegrityTests.luau",
+      "path": "ServerScriptService.MarketReign.ExecutionIntegrityTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/ExitLifecycleTests.luau",
+      "path": "ServerScriptService.MarketReign.ExitLifecycleTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/FundedAccounts.luau",
+      "path": "ServerScriptService.MarketReign.FundedAccounts",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/LatencyTests.luau",
+      "path": "ServerScriptService.MarketReign.LatencyTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/LeaderboardClient.luau",
+      "path": "ReplicatedStorage.MarketReign.LeaderboardClient",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/LeaderboardRanking.luau",
+      "path": "ServerScriptService.MarketReign.LeaderboardRanking",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/LeaderboardService.luau",
+      "path": "ServerScriptService.MarketReign.LeaderboardService",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/LeaderboardView.luau",
+      "path": "ReplicatedStorage.MarketReign.LeaderboardView",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/LegacyRetirement.luau",
+      "path": "ServerScriptService.MarketReign.LegacyRetirement",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/LegacyRetirementTests.luau",
+      "path": "ServerScriptService.MarketReign.LegacyRetirementTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/Level2View.luau",
+      "path": "ReplicatedStorage.MarketReign.Level2View",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/client/LoadingScreen.client.luau",
+      "path": "ReplicatedFirst.LoadingScreen",
+      "class": "LocalScript"
+    },
+    {
+      "file": "src/tests/MakerLiquidityTests.luau",
+      "path": "ServerScriptService.MarketReign.MakerLiquidityTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/MarketClient.luau",
+      "path": "ReplicatedStorage.MarketReign.MarketClient",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/MarketConfig.luau",
+      "path": "ReplicatedStorage.MarketReign.MarketConfig",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/MarketDepthAccess.luau",
+      "path": "ServerScriptService.MarketReign.MarketDepthAccess",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/MarketEngine.luau",
+      "path": "ServerScriptService.MarketReign.MarketEngine",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/MarketEventBanner.luau",
+      "path": "ReplicatedStorage.MarketReign.MarketEventBanner",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/MarketPacket.luau",
+      "path": "ReplicatedStorage.MarketReign.MarketPacket",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/MarketSafety.luau",
+      "path": "ServerScriptService.MarketReign.MarketSafety",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/MarketSafetyTests.luau",
+      "path": "ServerScriptService.MarketReign.MarketSafetyTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/MarketServer.server.luau",
+      "path": "ServerScriptService.MarketReign.MarketServer",
+      "class": "Script"
+    },
+    {
+      "file": "src/tests/MarketTests.luau",
+      "path": "ServerScriptService.MarketReign.MarketTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/Mascot.luau",
+      "path": "ReplicatedStorage.MarketReign.Mascot",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/NumberInput.luau",
+      "path": "ReplicatedStorage.MarketReign.NumberInput",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/OrderFlowMarket.luau",
+      "path": "ServerScriptService.MarketReign.OrderFlowMarket",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/OrderFlowMarketTests.luau",
+      "path": "ServerScriptService.MarketReign.OrderFlowMarketTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/OwnerBotsCommand.luau",
+      "path": "ServerScriptService.MarketReign.OwnerBotsCommand",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/OwnerGiveCommand.luau",
+      "path": "ServerScriptService.MarketReign.OwnerGiveCommand",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/OwnerGiveTests.luau",
+      "path": "ServerScriptService.MarketReign.OwnerGiveTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/OwnerResetCommand.luau",
+      "path": "ServerScriptService.MarketReign.OwnerResetCommand",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/OwnerResetTests.luau",
+      "path": "ServerScriptService.MarketReign.OwnerResetTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/ParticipantExpansionTests.luau",
+      "path": "ServerScriptService.MarketReign.ParticipantExpansionTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/Participants.luau",
+      "path": "ServerScriptService.MarketReign.Participants",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/PlayerExecution.luau",
+      "path": "ServerScriptService.MarketReign.PlayerExecution",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/ProgressView.luau",
+      "path": "ReplicatedStorage.MarketReign.ProgressView",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/ProgressionConfig.luau",
+      "path": "ReplicatedStorage.MarketReign.ProgressionConfig",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/ProgressionRules.luau",
+      "path": "ReplicatedStorage.MarketReign.ProgressionRules",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/ProtectionSafetyTests.luau",
+      "path": "ServerScriptService.MarketReign.ProtectionSafetyTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/ProtectionScaleTests.luau",
+      "path": "ServerScriptService.MarketReign.ProtectionScaleTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/ProtectiveOrders.luau",
+      "path": "ServerScriptService.MarketReign.ProtectiveOrders",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/ProtectiveOrdersTests.luau",
+      "path": "ServerScriptService.MarketReign.ProtectiveOrdersTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/RankBadgeTests.luau",
+      "path": "ServerScriptService.MarketReign.RankBadgeTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/ReplyBuffer.luau",
+      "path": "ServerScriptService.MarketReign.ReplyBuffer",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/RequestJournal.luau",
+      "path": "ServerScriptService.MarketReign.RequestJournal",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/RequestJournalTests.luau",
+      "path": "ServerScriptService.MarketReign.RequestJournalTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/RequestQueue.luau",
+      "path": "ServerScriptService.MarketReign.RequestQueue",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/ResetLiquidationTests.luau",
+      "path": "ServerScriptService.MarketReign.ResetLiquidationTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/ScalperTests.luau",
+      "path": "ServerScriptService.MarketReign.ScalperTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/SecurityTests.luau",
+      "path": "ServerScriptService.MarketReign.SecurityTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/SharedDepthTests.luau",
+      "path": "ServerScriptService.MarketReign.SharedDepthTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/ShopView.luau",
+      "path": "ReplicatedStorage.MarketReign.ShopView",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/SimulationScheduler.luau",
+      "path": "ServerScriptService.MarketReign.SimulationScheduler",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/SingleAccountTests.luau",
+      "path": "ServerScriptService.MarketReign.SingleAccountTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/StatsCharts.luau",
+      "path": "ReplicatedStorage.MarketReign.StatsCharts",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/StatsPieces.luau",
+      "path": "ReplicatedStorage.MarketReign.StatsPieces",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/StatsView.luau",
+      "path": "ReplicatedStorage.MarketReign.StatsView",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/TerminalUI.luau",
+      "path": "ReplicatedStorage.MarketReign.TerminalUI",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/TestDataStore.luau",
+      "path": "ServerScriptService.MarketReign.TestDataStore",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/TestLiquidity.luau",
+      "path": "ServerScriptService.MarketReign.TestLiquidity",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/TestLiquidityTests.luau",
+      "path": "ServerScriptService.MarketReign.TestLiquidityTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/TestMarkets.luau",
+      "path": "ServerScriptService.MarketReign.TestMarkets",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/TradeAmendmentTests.luau",
+      "path": "ServerScriptService.MarketReign.TradeAmendmentTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/TradeLimitsTests.luau",
+      "path": "ServerScriptService.MarketReign.TradeLimitsTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/TradePreferencesTests.luau",
+      "path": "ServerScriptService.MarketReign.TradePreferencesTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/TradeProtection.luau",
+      "path": "ReplicatedStorage.MarketReign.TradeProtection",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/TradeStats.luau",
+      "path": "ServerScriptService.MarketReign.TradeStats",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/TradingCharacter.server.luau",
+      "path": "ServerScriptService.MarketReign.TradingCharacter",
+      "class": "Script"
+    },
+    {
+      "file": "src/client/TradingClient.client.luau",
+      "path": "StarterPlayer.StarterPlayerScripts.TradingClient",
+      "previousPath": "StarterGui.MarketReign.TradingClient",
+      "class": "LocalScript"
+    },
+    {
+      "file": "src/shared/UIFeedback.luau",
+      "path": "ReplicatedStorage.MarketReign.UIFeedback",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/shared/WelcomeGuide.luau",
+      "path": "ReplicatedStorage.MarketReign.WelcomeGuide",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/WorldCheckpoint.luau",
+      "path": "ServerScriptService.MarketReign.WorldCheckpoint",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/WorldConfig.luau",
+      "path": "ServerScriptService.MarketReign.WorldConfig",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/WorldLease.luau",
+      "path": "ServerScriptService.MarketReign.WorldLease",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/server/WorldService.luau",
+      "path": "ServerScriptService.MarketReign.WorldService",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/WorldStorageTests.luau",
+      "path": "ServerScriptService.MarketReign.WorldStorageTests",
+      "class": "ModuleScript"
+    },
+    {
+      "file": "src/tests/WorldTests.luau",
+      "path": "ServerScriptService.MarketReign.WorldTests",
+      "class": "ModuleScript"
+    }
+  ]
+}

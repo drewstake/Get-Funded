@@ -1,1 +1,0 @@
-{"BotPurchasePrice":5848.5,"HistoricalReplay":false,"InternalFairValue":5838,"PlayerContractsStillHeld":1,"PlayerSellLimit":5848,"PlayerSellStillWorking":true,"Reproduction":true,"Rule":"Resting player ask skipped above fair + 20 ticks; bot ask has no equivalent guard."}

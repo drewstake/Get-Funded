@@ -1,9 +1,0 @@
-{
-  "date": "2026-10-01",
-  "studioSuites": {"PermanentShopTests":"10/10","WorldTests":"6/6","TradeLimitsTests":"36/36","TradeAmendmentTests":"140 checks","LeaderboardTests":"13/13","FundedTests":"11/11","DepletionTests":"7/7","ProgressionTests":"11/11","StatsTests":"12/12","MarketTests":"12/12","ReearnTests":"10/10","ChartToolsTests":"33","ChartViewportTests":"39","ChartPaintPoolTests":"10","failures":0},
-  "luneLocalSrc": {"suites":12,"namedScenarios":148,"assertions":140,"failures":0,"includes":"SecurityTests"},
-  "copyTradingUIValidator": {"checks":1954,"layouts":72,"sizes":["1920x1080","1440x900","1280x720","1024x600","844x390","390x844","360x640","320x568"],"issues":["transient TextFits on Copy popup header at 320x568 during open animation (unchanged code; direct probe fits)"]},
-  "nextUnlockHover": {"1920x1080 live":"\"$100K FUNDED\\nACCOUNT\" size 19, bounds 120x38 at rest and at hover scale 1.015","fixture":{"1920x1080":"size 19, 112x38","1440x900":"size 19, 112x38","1280x720":"size 15, 86x30","1024x600":"size 15, 86x30"}},
-  "liveTpSl": {"account":"F10K:2 (follower, no copies)","open":"BX long 1 @ 5464.75, SL 5424.75, TP 5504.75","moved":"SL 5392.5, TP 5492.5 (ManualStop/ManualTarget true)","added":"buy 1 @ 5444.5","result":"Long 2 @ 5454.625, SL 5392.5, TP 5492.5, protective orders qty 2","closed":"exit 5438.5, -1612.50"},
-  "studioExchangeMigration": "Studio-scope save (step 2.2M, 8 saved books) restored as BX, BT, BG + retired books; 396 participants; history ES->BX, NQ->BT"
-}

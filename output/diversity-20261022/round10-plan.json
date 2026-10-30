@@ -1,7 +1,0 @@
-{
-  "Basis": "All-lane compaction fixes spread (4.833 ticks) but sacrifices range/current BX movement. All institutional faders fix spread too but leave longer legs than mixed demand. Retain the strongest mixed demand and distant supply, moving only the first neighboring lane.",
-  "Variant": "last-reserve-inner",
-  "Change": "Only lane index 1 offset divided by three (6->2 BX/BG,18->6 BT). Every other lane, quantity, funding allowance, three-per-lane count, and withdrawal/refill clock remains unchanged.",
-  "Hypothesis": "Bridge the immediate depletion gap with three existing independent funded makers per market, without moving all sixty makers closer or increasing best-lane count.",
-  "Selection": "Original development gates, untouched reserved validation, and actual candle review."
-}
